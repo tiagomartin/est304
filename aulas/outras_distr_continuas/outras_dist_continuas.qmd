@@ -1,0 +1,881 @@
+---
+title: "Outras Distribuições Contínuas"
+format: 
+  revealjs:
+    width: 1600
+    height: 900
+    footer: ""
+    theme: quartomonothemer.scss
+    slide-number: c/t
+    show-slide-number: all
+    preview-links: auto
+    self-contained: false
+    embed-resources: false
+incremental: false
+code-link: true
+bibliography: references.bib
+title-slide-attributes:
+    data-background-image: /images/back.png
+    data-background-size: cover
+    data-background-opacity: "0.3"
+execute:
+  echo: true
+  freeze: auto
+---
+
+## Função Gamma 
+
+A *função Gamma* é uma das funções especiais mais importantes em probabilidade e estatística. Ela aparece naturalmente em várias distribuições contínuas fundamentais:
+
+- Distribuição Gamma
+
+$$f(x |\alpha, \lambda) = \dfrac{\lambda e^{-\lambda x}(\lambda x)^{\alpha-1}}{\Gamma(\alpha)}$$
+
+
+- Distribuição Qui-quadrado
+
+$$f(x | n) = \frac{1}{2^{n/2} \Gamma(n/2)} x^{\frac{n}{2} -1} e^{- \frac{x}{2}}$$
+
+
+## Função Gamma 
+
+- Distribuição Beta
+
+$$f(x |\alpha, \beta) = \frac{\Gamma(\alpha+\beta)}{\Gamma(\alpha)\Gamma(\beta)}x^{\alpha-1} (1-x)^{\beta-1} $$
+
+- Distribuição t de Student
+
+$$ f(x |\nu) = \frac{\Gamma [(\nu+1)/2]}{\Gamma (\nu/2)} \frac{1}{\sqrt{\nu\pi}} \left( 1 + \frac{x^2}{\nu} \right)^{-(\nu+1)/2} $$
+
+
+## Função Gamma 
+
+
+
+
+- Distribuição F de Snedecor
+
+$$ f(x |\nu_1, \nu_2) = \frac{\Gamma [(\nu_1+\nu_2)/2] }{\Gamma \left( \frac{\nu_1}{2} \right) \Gamma \left( \frac{\nu_2}{2} \right) } \left( \frac{\nu_1}{\nu_2} \right)^{\nu_1/2} \frac{x^{(\nu_1-2)/2}}{[1+(\nu_1/\nu_2)x]^{(\nu_1+\nu_2)/2}} $$
+
+## Função Gamma 
+
+
+Definimos a *função gamma* como
+
+$$\Gamma(\alpha) = \int_{0}^{\infty} e^{-y} \, y^{\alpha-1} \, dy, \,\,\,\,\,\,\,\ \alpha > 0$$
+
+Vale destacar os seguintes resultados:
+
+i) $\Gamma(\alpha) = (\alpha - 1)\Gamma(\alpha - 1)$;
+ii) $\Gamma(n) = (n-1)!$, $n$ inteiro positivo;
+iii) $\Gamma(1/2) = \sqrt{(\pi)}$
+
+
+## Função Gamma 
+
+### Demonstração
+
+i) Resolvendo a integral por partes, fazendo $u = y^{\alpha - 1}$ e $dv = e^{-y} dy$, temos
+
+$$
+\begin{eqnarray}
+\Gamma(\alpha) &=& - e^{-y} y^{\alpha-1}\Big|_0^\infty + \int_0^\infty e^{-y} (\alpha - 1) y^{\alpha-2} \, dy \\ &=& (\alpha - 1)\int_0^\infty e^{-y} y^{\alpha-2} \, dy \\ &=& (\alpha - 1)\Gamma(\alpha - 1) 
+\end{eqnarray}
+$$
+
+## Função Gamma 
+
+ii) Para valores inteiros positivos de $\alpha$, por exemplo $\alpha = n$, temos
+
+
+$$
+\begin{eqnarray}
+\Gamma(n) &=& (n-1)\Gamma(n-1) \\ &=& (n-1)(n-2)\Gamma(n-2) \\ &=& \cdots \\ &=& (n-1)(n-2)\cdots 3\cdot 2\cdot \Gamma(1)
+\end{eqnarray}
+$$
+
+Como 
+
+$$
+\begin{eqnarray}
+\Gamma(1) &=& \int_{0}^{\infty} e^{-y} \, y^{1-1} \, dy = \int_{0}^{\infty} e^{-y} dy = \lim_{t \to +\infty} \int_{0}^{t} e^{-t} dt = \lim_{t \to +\infty} (-e^{-t} + e^0) = 1
+\end{eqnarray}
+$$
+
+
+temos que $\Gamma(n) = (n-1)!$.
+
+
+
+## Função Gamma 
+
+iii) Uma forma alternativa de definir a função gamma, às vezes útil, é dada por:
+
+$$ \Gamma(\alpha) = 2\int_0^\infty e^{-y^2} y^{2\alpha-1} dy$$
+Temos que $\Gamma(\alpha) = \int_{0}^{\infty} e^{-y} \, y^{\alpha-1} \, dy$. Fazendo $y = u^2$, temos que $dy = 2udu$. Assim,
+
+
+$$
+\begin{eqnarray}
+\Gamma(\alpha) &=& \int_{0}^{\infty} e^{-y} \, y^{\alpha-1} \, dy = \int_{0}^{\infty} e^{-u^2} \, u^{2\alpha-2} \, 2udu = 2\int_{0}^{\infty} e^{-u^2}u^{2\alpha-1}du
+\end{eqnarray}
+$$
+
+
+Se provarmos que $\left[ \Gamma\left( \frac{1}{2}\right) \right]^2 = \pi$, então segue que $\Gamma\left( \frac{1}{2}\right) = \sqrt{\pi}$. 
+
+
+## Função Gamma 
+
+
+Partindo de:
+
+$$ \left[ \Gamma(\alpha) \right]^2 = 2\int_0^\infty x^{2\alpha-1}e^{-x^2} dx\quad 2\int_0^\infty y^{2\alpha-1}e^{-y^2} dy$$
+
+o que resulta,
+
+
+$$ \left[ \Gamma(\alpha) \right]^2 = 4\int_0^\infty\int_0^\infty x^{2\alpha-1}  y^{2\alpha-1} e^{-(x^2+y^2)} dx dy$$ 
+
+
+## Função Gamma 
+
+
+Tomando $\alpha = \dfrac{1}{2}$, temos $2 \alpha - 1 = 0$ e assim,
+
+$$
+\begin{eqnarray}
+\displaystyle \left[ \Gamma \left({\frac {1}{2}}\right) \right]^2 = 4\int_0^\infty\int_0^\infty  e^{-(x^2+y^2)} dx dy
+\end{eqnarray}
+$$
+
+
+. . .
+
+
+Para resolvermos esta integral dupla, podemos recorrer à técnica de coordenadas polares, na qual pontos $(x,y)$ são referenciados no sitema de coordenadas $(r,\theta)$, sendo \emph{r} não negativo e $\theta$ variando de 0 a $2\pi$. 
+
+
+. . .
+
+Assim, tomamos $x=r \cos\theta$ e $y=r \text{ sen}\,\,\theta$, de forma que, 
+
+$$x^2+y^2 = r^2 \cos^2\theta +r^2 \text{ sen}^2\theta = r^2$$
+
+
+
+## Função Gamma 
+
+A unidade infinitesimal de área $dx\text{ }dy$ corresponde à unidade infinitesimal de área $r\text{ }dr\text{ }d\theta$ no sistema de coordenadas polares.
+
+. . .
+
+Além disso, integrar com tanto \emph{x} como \emph{y} variando de zero a infinito corresponde a integrar no primeiro quadrante, que, no sistema de coordenadas polares, consiste em integrar com $\theta$ variando de 0 a $\pi /2$ e \emph{r} variando de 0 a infinito. 
+
+
+. . .
+
+Assim,
+
+
+$$ 
+\begin{eqnarray}
+\left[ \Gamma\left( \frac{1}{2}\right) \right]^2 &=& 4\int_0^{\pi/2}\int_0^\infty e^{-r^2} r\text{ } dr d\theta = 4\int_0^{\pi/2} d\theta \int_0^\infty e^{-r^2} r\text{ } dr = 4\int_0^{\pi/2} d\theta  \left[ -\frac{e^{-r^2}}{2} \right]_0^\infty \\ &=& 4\int_0^{\pi/2} d\theta \left( \frac{1}{2} \right)  = 2\int_0^{\pi/2}1\text{ } d\theta   = 2 \left. \theta \right|_0^{\pi/2} = \pi
+\end{eqnarray}
+$$
+
+
+
+## Função Gamma
+
+```{r, echo=FALSE}
+x <- seq(0,4,by=0.1)
+y <- gamma(x)
+
+plot(x,y,type = "l", ylim = c(0,6), main = "Gráfico da função Gamma")
+abline(h=1,lty=2)
+
+dados=data.frame(x=x,y=y)
+```
+
+
+
+
+## Distribuição Gamma
+
+Dizemos que $X$ segue uma distribuição Gamma com parâmetros $\alpha > 0$ e $\lambda > 0$ se sua função densidade é dada por  
+
+$$
+f(x | \alpha, \lambda)=
+\begin{cases}
+\dfrac{\lambda e^{-\lambda x}(\lambda x)^{\alpha-1}}{\Gamma(\alpha)}, & x\ge0\\[6pt]
+0, & x<0
+\end{cases}
+$$
+
+
+
+Notação: $X \sim Gamma(\alpha, \lambda)$. Nessa parametrização:
+
+
+- $\alpha$ = parâmetro de forma 
+
+- $\dfrac{1}{\lambda}$ = parâmetro de escala
+
+
+
+## Distribuição Gamma
+
+Se $X \sim Gamma(\alpha, \lambda)$, então
+
+
+$$
+\begin{eqnarray}
+E[X] &=& \frac{1}{\Gamma(\alpha)} \int_0^\infty x \lambda  e^{-\lambda x} (\lambda x)^{\alpha-1}\,dx \\ &=& \frac{1}{\Gamma(\alpha)} \int_0^\infty e^{-\lambda x} (\lambda x)^{\alpha}\, dx \\ &=& \frac{1}{\lambda \Gamma(\alpha)} \int_0^\infty e^{-u} (u)^{\alpha}\, du \\ &=& \frac{\Gamma(\alpha+1)}{\lambda \,\Gamma(\alpha)} = \frac{\alpha \Gamma(\alpha)}{\lambda \,\Gamma(\alpha)} = \dfrac{\alpha}{\lambda}
+\end{eqnarray}
+$$
+
+
+
+## Distribuição Gamma
+
+
+
+
+
+$$
+\begin{eqnarray}
+E[X^2] &=& \frac{1}{\Gamma(\alpha)} \int_0^\infty x^2 \lambda  e^{-\lambda x} (\lambda x)^{\alpha-1}\,dx = \frac{1}{\Gamma(\alpha)} \int_0^\infty x^2 \lambda e^{-\lambda x} \lambda^{\alpha -1} x^{\alpha-1}\, dx \\ &=& \frac{1}{\Gamma(\alpha)} \int_0^\infty e^{-\lambda x} \lambda^{\alpha}x^{\alpha+1}\, dx = \frac{\lambda^{\alpha}}{\Gamma(\alpha)} \int_0^\infty e^{-\lambda x} x^{\alpha+1}\, dx \\ &=& \frac{\lambda^{\alpha}}{\Gamma(\alpha)} \int_0^\infty e^{-u} \left(\dfrac{u}{\lambda}\right)^{\alpha+1}\,\left(\dfrac{1}{\lambda}\right) du  = \frac{\lambda^{\alpha}}{\lambda^{\alpha +2}\Gamma(\alpha)} \int_0^\infty e^{-u} u^{\alpha+1}\, du \\ &=& \frac{\lambda^{\alpha}\Gamma(\alpha+2)}{\lambda^{\alpha +2} \,\Gamma(\alpha)} = \frac{(\alpha+1) \Gamma(\alpha+1)}{\lambda^2 \,\Gamma(\alpha)} =  \frac{(\alpha+1)\alpha \Gamma(\alpha)}{\lambda^2 \,\Gamma(\alpha)} =  \dfrac{\alpha (\alpha+1)}{\lambda^2} 
+\end{eqnarray}
+$$
+
+
+## Distribuição Gamma
+
+De forma que,
+
+
+$$
+\begin{eqnarray}
+Var(X) &=& E(X^2) - \left[E(X)\right]^2 \\ &=& \dfrac{\alpha (\alpha+1)}{\lambda^2} - \left[\dfrac{\alpha}{\lambda}\right]^2 \\ &=& \dfrac{\alpha^2 + \alpha}{\lambda^2} - \dfrac{\alpha^2}{\lambda^2} \\ &=& \dfrac{\alpha^2 + \alpha - \alpha^2}{\lambda^2} = \dfrac{\alpha}{\lambda^2}
+\end{eqnarray}
+$$
+
+
+## Distribuição Gamma
+
+Logo, se $X \sim Gamma(\alpha, \lambda)$, então
+
+$$
+f(x | \alpha, \lambda)=
+\begin{cases}
+\dfrac{\lambda e^{-\lambda x}(\lambda x)^{\alpha-1}}{\Gamma(\alpha)}, & x\ge0\\[6pt]
+0, & x<0
+\end{cases}
+$$
+
+com 
+
+
+$$E(X) =  \dfrac{\alpha}{\lambda} \,\,\,\,\,\,\,\,\,\,\,\, \text{       e       } \,\,\,\,\,\,\,\,\,\,\,\,Var(X) = \dfrac{\alpha}{\lambda^2}$$
+
+
+
+## Distribução Gamma
+
+```{r, echo=FALSE}
+#| label: fig-gamma-formas
+#| fig-cap: "Distribuição Gama — variação do shape (α) com λ fixo."
+#| warning: false
+#| message: false
+
+library(ggplot2)
+
+# 1) Varia α, mantém λ fixo
+alphas <- c(0.5, 1, 2, 5)
+lambda_fixed <- 1
+
+x1 <- seq(0, qgamma(0.999, shape = max(alphas), rate = lambda_fixed), length.out = 500)
+df1 <- do.call(rbind, lapply(alphas, function(a) {
+  data.frame(
+    x = x1,
+    dens = dgamma(x1, shape = a, rate = lambda_fixed),
+    curva = paste0("α=", a, ", λ=", lambda_fixed)
+  )
+}))
+
+ggplot(df1, aes(x, dens, color = curva)) +
+  geom_line(linewidth = 1) +
+  labs(x = "x", y = "f(x)", color = "Parâmetros",
+       title = "Gamma(α, λ) com λ fixo") +
+  coord_cartesian(ylim = c(0, 1)) +
+  theme_minimal()
+
+```
+
+
+
+## Distribução Gamma
+
+```{r, echo=FALSE}
+#| label: fig-gamma-taxas
+#| fig-cap: "Distribuição Gama — variação da taxa (λ) com α fixo."
+#| warning: false
+#| message: false
+
+# 2) Varia λ, mantém α fixo
+lambdas <- c(0.5, 1, 2, 4)
+alpha_fixed <- 2
+
+x2 <- seq(0, qgamma(0.999, shape = alpha_fixed, rate = min(lambdas)), length.out = 500)
+df2 <- do.call(rbind, lapply(lambdas, function(lmb) {
+  data.frame(
+    x = x2,
+    dens = dgamma(x2, shape = alpha_fixed, rate = lmb),
+    curva = paste0("α=", alpha_fixed, ", λ=", lmb)
+  )
+}))
+
+ggplot(df2, aes(x, dens, color = curva)) +
+  geom_line(linewidth = 1) +
+  labs(x = "x", y = "f(x)", color = "Parâmetros",
+       title = "Gamma(α, λ) com α fixo") +
+  coord_cartesian(ylim = c(0, 1.5)) +
+  theme_minimal()
+
+
+```
+
+
+
+## Distribuição Gamma
+
+A distribuição Gamma tem muitas aplicações reais, especialmente quando estudamos **tempos até ocorrência de eventos**.
+
+. . .
+
+
+1) **Tempo até falha / confiabilidade de sistemas:** modelagem do tempo de vida de componentes mecânicos, eletrônicos, etc.
+
+. . .
+
+2) **Tempo até ocorrência de eventos em Poisson:** Se eventos acontecem segundo um processo de Poisson com taxa $\lambda$:
+    - o tempo até o primeiro evento é Exponencial (Gamma(1, $\lambda$))
+    - o tempo até o $k$-ésimo evento é Gamma(k,$\lambda$)
+
+
+. . . 
+
+
+3) **Modelagem de tempos de espera em filas:** em teoria de filas (M/M/1, G/G/1 etc.), tempos de serviço ou tempos de atendimento podem ser modelados como Gamma.
+
+
+## Distribuição Gamma
+
+4) **Priori conjugada em Bayesiana:** é priori conjugada para o parâmetro de taxa de uma Exponencial ou Poisson. Então em inferência Bayesiana, a Gamma aparece o tempo todo como priori para $\lambda$
+
+. . .
+
+5) **Hidrologia / clima:** modelagem de chuvas acumuladas (precipitação) ao longo de certo intervalo: o total acumulado de chuva frequentemente é bem modelado por Gamma.
+
+. . .
+
+6) **Biologia / Epidemiologia:** tempo até infecção, tempo até recuperação, duração de hospitalização, tempos de permanência podem ser modelados por Gamma (ou Weibull, que é próxima).
+
+. . .
+
+7) **Análise de risco / Seguros:** valores positivos e assimétricos (como sinistros) podem ser modelados com Gamma.
+
+
+## Distribuição Qui-Quadrado
+
+Um caso particular da distribuição Gamma, quando tomamos $\alpha = \dfrac{n}{2}$ e $\lambda = \dfrac{1}{2}$, onde $n$ é um inteiro positivo.
+
+. . .
+
+
+Assim, para $\alpha = \dfrac{n}{2}$ e $\lambda = \dfrac{1}{2}$,
+
+
+$$
+\begin{eqnarray}
+f(x) = \dfrac{\frac{1}{2} e^{-\frac{x}{2}}\left(\frac{x}{2}\right)^{\frac{n}{2}-1}}{\Gamma \left(\frac{n}{2}\right)} =  \dfrac{\frac{e^{-\frac{x}{2}}}{2} \left(\frac{x ^{\frac{n}{2}-1}}{2^{\frac{n}{2}-1}}\right)}{\Gamma \left(\frac{n}{2}\right)} = \dfrac{\frac{e^{-\frac{x}{2}} x ^{\frac{n}{2}-1}}{2^{\frac{n}{2}}}}{\Gamma \left(\frac{n}{2}\right)} = \dfrac{1}{2^{\frac{n}{2}} \Gamma \left(\frac{n}{2}\right)} e^{-\frac{x}{2}} x ^{\frac{n}{2}-1}
+\end{eqnarray}
+$$
+
+
+
+## Distribuição Qui-Quadrado
+
+Logo, se $X \sim \chi^2_n$, então
+
+$$
+f(x | \alpha, \lambda)=
+\begin{cases}
+\dfrac{1}{2^{\frac{n}{2}} \Gamma \left(\frac{n}{2}\right)} e^{-\frac{x}{2}} x ^{\frac{n}{2}-1}, & x\ge0\\[6pt]
+0, & x<0
+\end{cases}
+$$
+
+
+
+
+com 
+
+
+$$E(X) =  n \,\,\,\,\,\,\,\,\,\,\,\, \text{       e       } \,\,\,\,\,\,\,\,\,\,\,\,Var(X) = 2n$$
+
+
+## Distribuição Qui-Quadrado
+
+```{r, echo=FALSE}
+#| label: fig-chisq-multicurves
+#| fig-cap: "Densidades qui-quadrado para vários graus de liberdade n."
+#| warning: false
+#| message: false
+
+library(ggplot2)
+
+# densidade na parametrização do enunciado
+dchisq_param <- function(x, n) {
+  ifelse(
+    x < 0, 0,
+    (1 / (2^(n/2) * gamma(n/2))) * exp(-x/2) * x^(n/2 - 1)
+  )
+}
+
+ns <- c(1, 2, 3, 5, 10, 20)  # graus de liberdade a comparar
+xmax <- qchisq(0.999, df = max(ns))  # limite x adequado
+x <- seq(0, xmax, length.out = 800)
+
+df_plot <- do.call(rbind, lapply(ns, function(n) {
+  data.frame(
+    x = x,
+    dens = dchisq_param(x, n),
+    curva = paste0("n = ", n)
+  )
+}))
+
+ggplot(df_plot, aes(x, dens, color = curva)) +
+  geom_line(linewidth = 1) +
+  labs(x = "x", y = "f(x)", color = "Graus de liberdade") +
+  coord_cartesian(ylim = c(0, 0.5)) +
+  theme_minimal()
+
+```
+
+
+
+## Distribuição Qui-Quadrado
+
+
+A distribuição qui-quadrado é central em inferência estatística porque ela surge naturalmente quando somamos quadrados de variáveis Normais padrão:
+
+$$\chi^2_n = \displaystyle{\sum_{i=1}^n} Z_i^2, \,\,\,\,\, Z_i \sim N(0,1)$$
+
+. . .
+
+
+Logo, ela está por trás dos testes mais usados com dados categóricos, ANOVA, variâncias e na estruturação das distribuições t e F.
+
+
+## Distribuição Beta
+
+Diz-se que uma variável aleatória tem distribução Beta, se sua função densidade é dada por
+
+
+$$
+f(x \mid a,b)=
+\begin{cases}
+\dfrac{1}{B(a,b)} x^{\,a-1} (1-x)^{\,b-1}, & 0<x<1\\[6pt]
+0, & \text{caso contrário}
+\end{cases}
+$$
+
+em que a função Beta é dada por
+
+$$B(a,b)=\int_0^1 x^{\,a-1} (1-x)^{\,b-1}\,dx$$
+
+
+## Distribuição Beta
+
+Além disso, a função Beta tem uma conexão muito importante com a função Gamma
+
+$$B(a,b) = \dfrac{\Gamma(a) \Gamma(b)}{\Gamma(a+b)}$$
+
+## Distribuição Beta
+
+Se $X \sim Beta(a, b)$, então
+
+$$
+\begin{eqnarray}
+E[X] &=& \int_0^1 x \dfrac{1}{B(a,b)} x^{\,a-1} (1-x)^{\,b-1} &=& \dfrac{1}{B(a,b)}  \int_0^1 x^a(1-x)^{b-1} = \dfrac{B(a+1,b)}{B(a,b)}
+\end{eqnarray}
+$$
+
+Usando a relação $B(a,b) = \dfrac{\Gamma(a) \Gamma(b)}{\Gamma(a+b)}$, temos
+
+$$
+\begin{eqnarray}
+\dfrac{B(a+1,b)}{B(a,b)} &=& \dfrac{\dfrac{\Gamma(a+1)\Gamma(b)}{\Gamma(a+b + 1)}}{\dfrac{\Gamma(a)\Gamma(b)}{\Gamma(a+b)}} = \dfrac{\Gamma(a+1)\Gamma(b)}{\Gamma(a+b + 1)} \times \dfrac{\Gamma(a+b)}{\Gamma(a)\Gamma(b)} = \dfrac{\Gamma(a+1)\Gamma(a+b)}{\Gamma(a+b + 1)\Gamma(a)}=
+\end{eqnarray}
+$$
+
+
+## Distribuição Beta
+
+$= \dfrac{a\Gamma(a)\Gamma(a+b)}{(a+b)\Gamma(a+b)\Gamma(a)} = \dfrac{a}{a+b}$
+
+. . .
+
+
+$$
+\begin{eqnarray}
+E[X^2] &=& \int_0^1 x^2 \dfrac{1}{B(a,b)} x^{\,a-1} (1-x)^{\,b-1} = \dfrac{1}{B(a,b)}  \int_0^1 x^{a+1}(1-x)^{b-1} = \dfrac{B(a+2,b)}{B(a,b)} \\ &=& \dfrac{\dfrac{\Gamma(a+2)\Gamma(b)}{\Gamma(a+b + 2)}}{\dfrac{\Gamma(a)\Gamma(b)}{\Gamma(a+b)}} = \dfrac{\Gamma(a+2)\Gamma(b)\Gamma(a+b)}{\Gamma(a+b + 2)\Gamma(a)\Gamma(b)} = \dfrac{(a+1)\Gamma(a+1)\Gamma(a+b)}{(a+b+1)\Gamma(a+b + 1)\Gamma(a)} \\ &=& \dfrac{(a+1)a\Gamma(a)\Gamma(a+b)}{(a+b+1)(a+b)\Gamma(a+b)\Gamma(a)} = \dfrac{(a+1)a}{(a+b+1)(a+b)}
+\end{eqnarray}
+$$
+
+
+## Distribuição Beta
+
+De forma que,
+
+
+$$
+\begin{eqnarray}
+Var(X) &=& E(X^2) - \left[E(X)\right]^2 \\ &=& \dfrac{(a+1)a}{(a+b+1)(a+b)}-\left[\dfrac{a}{a+b}\right]^2 = \dfrac{a^2 + a}{(a+b+1)(a+b)}-\dfrac{a^2}{(a+b)^2} \\ &=& \dfrac{(a^2 + a)(a+b) - a^2(a+b+1)}{(a+b+1)(a+b)^2} = \dfrac{a^3 + a^2b+a^2 +ab- a^3-a^2b-a^2}{(a+b+1)(a+b)^2} \\ &=& \dfrac{ab}{(a+b+1)(a+b)^2}
+\end{eqnarray}
+$$
+
+
+
+## Distribuição Beta
+
+Logo, se $X \sim Beta(a,b)$, então
+
+$$
+f(x \mid a,b)=
+\begin{cases}
+\dfrac{1}{B(a,b)} x^{\,a-1} (1-x)^{\,b-1}, & 0<x<1\\[6pt]
+0, & \text{caso contrário}
+\end{cases}
+$$
+
+
+
+
+com 
+
+
+$$E(X) =  \dfrac{a}{a+b} \,\,\,\,\,\,\,\,\,\,\,\, \text{       e       } \,\,\,\,\,\,\,\,\,\,\,\,Var(X) = \dfrac{ab}{(a+b+1)(a+b)^2}$$
+
+
+
+## Distribuição Beta
+
+
+```{r, echo=FALSE}
+#| label: fig-beta-varia-a
+#| fig-cap: "Distribuição Beta — variação de a (shape1) com b fixo."
+#| warning: false
+#| message: false
+
+library(ggplot2)
+
+# 1) Varia a (shape1), mantém b (shape2) fixo
+a_vals <- c(0.5, 1, 2, 5, 10)
+b_fixed <- 2
+
+x1 <- seq(0, 1, length.out = 800)
+df1 <- do.call(rbind, lapply(a_vals, function(a) {
+  data.frame(
+    x = x1,
+    dens = dbeta(x1, shape1 = a, shape2 = b_fixed),
+    curva = paste0("a=", a, ", b=", b_fixed)
+  )
+}))
+
+ggplot(df1, aes(x, dens, color = curva)) +
+  geom_line(linewidth = 1) +
+  labs(x = "x", y = "f(x)", color = "Parâmetros",
+       title = "Beta(a,b) com b fixo") +
+  coord_cartesian(ylim = c(0, 5)) +
+  theme_minimal()
+
+```
+
+## Distribuição Beta
+
+
+```{r, echo=FALSE}
+#| label: fig-beta-varia-b
+#| fig-cap: "Distribuição Beta — variação de b (shape2) com a fixo."
+#| warning: false
+#| message: false
+
+# 2) Varia b (shape2), mantém a (shape1) fixo
+b_vals <- c(0.5, 1, 2, 5, 10)
+a_fixed <- 2
+
+x2 <- seq(0, 1, length.out = 800)
+df2 <- do.call(rbind, lapply(b_vals, function(b) {
+  data.frame(
+    x = x2,
+    dens = dbeta(x2, shape1 = a_fixed, shape2 = b),
+    curva = paste0("a=", a_fixed, ", b=", b)
+  )
+}))
+
+ggplot(df2, aes(x, dens, color = curva)) +
+  geom_line(linewidth = 1) +
+  labs(x = "x", y = "f(x)", color = "Parâmetros",
+       title = "Beta(a,b) com a fixo") +
+  coord_cartesian(ylim = c(0, 5)) +
+  theme_minimal()
+
+```
+
+
+
+## Distribuição Beta
+
+A distribuição Beta é usada para modelar proporções (variáveis contínuas entre 0 e 1). É uma das distribuições mais importantes em estatística aplicada.
+
+
+. . .
+
+1) **Modelagem de proporções:** proporção de sucesso, taxa de clique (CTR) em marketing digital, fração de tempo ativo de um equipamento, percentual de umidade, pureza, concentração, etc.
+
+. . .
+
+2) **Inferência Bayesiana:** é a prior conjugada da Bernoulli e da Binomial → se o parâmetro de interesse é uma probabilidade $p$, a priori Beta é natural.
+
+
+. . .
+
+3) **Modelo para incerteza em probabilidades:** incerteza sobre $p$ em “probabilidade de sucesso” antes de observar dados, nossa crença sobre $p$ é Beta
+
+
+
+
+## Distribuição Weibull
+
+Uma variável aleatória tem distribuição de Weibull com parâmetros $\beta > 0$ e $\alpha > 0$ se sua função densidade para $x \geq 0$ é dada por
+
+$$
+f(x|\alpha, \beta) =
+\begin{cases}
+\dfrac{\beta}{\alpha}
+\left(\dfrac{x}{\alpha}\right)^{\beta - 1}
+\exp\!\left[-\left(\dfrac{x}{\alpha}\right)^{\beta}\right],
+& x\geq0\\[10pt]
+0, & x<0
+\end{cases}
+$$
+
+
+
+## Distribuição Weibull
+
+Se $X \sim Weibull(\alpha, \beta)$, então
+
+$$
+\begin{eqnarray}
+E[X] &=& \int_0^\infty x \dfrac{\beta}{\alpha} \left(\dfrac{x}{\alpha}\right)^{\beta - 1} \exp\!\left[-\left(\dfrac{x}{\alpha}\right)^{\beta}\right]dx = \int_0^\infty \alpha u \dfrac{\beta}{\alpha} \left(\dfrac{\alpha u}{\alpha}\right)^{\beta - 1} \exp\!\left[-\left(\dfrac{\alpha u}{\alpha}\right)^{\beta}\right] \alpha  \,\,\,du \\&=& \int_0^\infty  u \,\,\beta \,\, u^{\beta - 1} \exp\!\left[-u^{\beta}\right] \alpha \,\,\,du = \int_0^\infty  \beta \,\, u^{\beta } \exp\!\left[-u^{\beta}\right] \alpha \,\,\,du \\ &=& \int_0^\infty  \beta \,\, v \exp\!\left[-v\right] \alpha \,\,\,\dfrac{1}{\beta} v^{\frac{1}{\beta}-1} dv = \alpha \int_0^\infty  \exp\!\left[-v\right] v^{\frac{1}{\beta}} \,\, dv = \alpha \Gamma\left( \dfrac{1}{\beta} + 1\right)
+\end{eqnarray}
+$$
+
+
+
+## Distribuição Weibull
+
+
+$$
+\small
+\begin{eqnarray}
+E[X^2] &=& \int_0^\infty x^2 \dfrac{\beta}{\alpha} \left(\dfrac{x}{\alpha}\right)^{\beta - 1} \exp\!\left[-\left(\dfrac{x}{\alpha}\right)^{\beta}\right]dx = \int_0^\infty (\alpha u)^2 \dfrac{\beta}{\alpha} \left(\dfrac{\alpha u}{\alpha}\right)^{\beta - 1} \exp\!\left[-\left(\dfrac{\alpha u}{\alpha}\right)^{\beta}\right] \alpha  \,\,\,du \\&=& \int_0^\infty  \alpha^2u^2 \,\,\dfrac{\beta}{\alpha} \,\, u^{\beta - 1} \exp\!\left[-u^{\beta}\right] \alpha \,\,\,du = \int_0^\infty  \alpha^2 \,\,\beta \,\, u^{\beta +1} \exp\!\left[-u^{\beta}\right]\,\,\,du \\ &=& \int_0^\infty  \alpha^2 \,\,\beta \,\, u^{\beta} \,\, u \,\, \exp\!\left[-u^{\beta}\right]\,\,\,du = \int_0^\infty \alpha^2 \beta \,\, v \,\, v^{\frac{1}{\beta}}\exp\!\left[-v\right] \,\,\dfrac{1}{\beta} v^{\frac{1}{\beta}-1} dv \\ &=& \alpha^2 \int_0^\infty  v^{\frac{1}{\beta} + 1} \exp\!\left[-v\right] v^{\frac{1}{\beta}-1} \,\, dv = \alpha^2 \int_0^\infty  v^{\frac{2}{\beta}} \exp\!\left[-v\right] \,\, dv = \alpha^2 \Gamma\left( \dfrac{2}{\beta} + 1\right)
+\end{eqnarray}
+$$
+
+
+
+## Distribuição Weibull
+
+De forma que,
+
+
+$$
+\begin{eqnarray}
+Var(X) &=& E(X^2) - \left[E(X)\right]^2 \\ &=& \alpha^2 \Gamma\left( \dfrac{2}{\beta} + 1\right)-\left[\alpha \Gamma\left( \dfrac{1}{\beta} + 1\right)\right]^2 = \alpha^2 \Gamma\left( \dfrac{2}{\beta} + 1\right)- \alpha^2\left[ \Gamma\left( \dfrac{1}{\beta} + 1\right)\right]^2\\ &=& \alpha^2\left\{\Gamma\left( \dfrac{2}{\beta} + 1\right) - \left[\Gamma\left( \dfrac{1}{\beta} + 1\right)\right]^2\right\}
+\end{eqnarray}
+$$
+
+
+
+
+
+## Distribuição Weibull
+
+Se $X \sim Weibull(\alpha, \beta)$, então
+
+$$
+f(x|\alpha, \beta) =
+\begin{cases}
+\dfrac{\beta}{\alpha}
+\left(\dfrac{x}{\alpha}\right)^{\beta - 1}
+\exp\!\left[-\left(\dfrac{x}{\alpha}\right)^{\beta}\right],
+& x\geq0\\[10pt]
+0, & x<0
+\end{cases}
+$$
+
+
+
+
+com 
+
+
+$$E(X) = \alpha \Gamma\left( \dfrac{1}{\beta} + 1\right) \,\,\,\,\,\,\,\,\,\,\,\, \text{       e       } \,\,\,\,\,\,\,\,\,\,\,\,Var(X) = \alpha^2\left\{\Gamma\left( \dfrac{2}{\beta} + 1\right) - \left[\Gamma\left( \dfrac{1}{\beta} + 1\right)\right]^2\right\}$$
+
+
+
+
+
+## Distribuição Weibull
+
+**Observação:** Se $X \sim Weibull(\alpha, 1)$, ou seja, fazendo $\beta = 1$, temos
+
+
+$$f(x) = \dfrac{1}{\alpha} \left(\dfrac{x}{\alpha}\right)^{1 - 1} \exp\!\left[-\left(\dfrac{x}{\alpha}\right)^{1}\right] = \dfrac{1}{\alpha}  \exp\!\left(-\dfrac{x}{\alpha}\right), \,\,\,\,\,\, x\geq 0$$
+
+
+Fazendo $\lambda = \dfrac{1}{\lambda}$, temos $f(x) = \lambda e^{-\lambda x}$. Logo $X \sim Exp(\lambda)$.
+
+
+
+## Distribuição Weibull
+
+```{r, echo=FALSE}
+#| label: fig-weibull-var
+#| fig-cap: "Distribuição Weibull — variação de β (forma) com α fixo."
+#| warning: false
+#| message: false
+
+library(ggplot2)
+
+# densidade Weibull 2-parâmetros com nu=0
+dweibull_ab <- function(x, alpha, beta){
+  ifelse(
+    x <= 0, 0,
+    (beta/alpha)*(x/alpha)^(beta-1)*exp(-(x/alpha)^beta)
+  )
+}
+
+alpha_fixed <- 2      # escala fixa
+betas <- c(0.5, 1, 2, 5) # diferentes formas
+
+x <- seq(0, 10, length.out = 800)
+
+df <- do.call(rbind, lapply(betas, function(b){
+  data.frame(
+    x = x,
+    dens = dweibull_ab(x, alpha = alpha_fixed, beta = b),
+    curva = paste0("β = ", b)
+  )
+}))
+
+ggplot(df, aes(x, dens, color = curva)) +
+  geom_line(linewidth = 1) +
+  labs(x = "x", y = "f(x)", color = "Forma (β)",
+       title = paste0("Weibull com α = ", alpha_fixed)) +
+  theme_minimal()
+
+
+```
+
+
+
+## Distribuição Weibull
+
+```{r, echo=FALSE}
+#| label: fig-weibull-var-alpha
+#| fig-cap: "Distribuição Weibull — variação de α (escala) com β fixo."
+#| warning: false
+#| message: false
+
+library(ggplot2)
+
+# densidade Weibull 2-parâmetros com nu=0
+dweibull_ab <- function(x, alpha, beta){
+  ifelse(
+    x <= 0, 0,
+    (beta/alpha)*(x/alpha)^(beta-1)*exp(-(x/alpha)^beta)
+  )
+}
+
+beta_fixed <- 2           # forma fixa
+alphas <- c(0.5, 1, 2, 4) # diferentes escalas
+
+x <- seq(0, 12, length.out = 800)
+
+df2 <- do.call(rbind, lapply(alphas, function(a){
+  data.frame(
+    x = x,
+    dens = dweibull_ab(x, alpha = a, beta = beta_fixed),
+    curva = paste0("α = ", a)
+  )
+}))
+
+ggplot(df2, aes(x, dens, color = curva)) +
+  geom_line(linewidth = 1) +
+  labs(x = "x", y = "f(x)", color = "Escala (α)",
+       title = paste0("Weibull com β = ", beta_fixed)) +
+  theme_minimal()
+
+```
+
+
+## Distribuição Weibull
+
+A Weibull é uma das distribuições mais usadas em engenharia para modelar tempo até falha/tempo de vida. Ela é extremamente flexível porque o parâmetro de forma $\beta$ permite que o risco aumente, diminua ou seja constante ao longo do tempo.
+
+. . .
+
+
+1) **Engenharia de Confiabilidade:**
+    - vida útil de componentes mecânicos e eletrônicos]
+    - fadiga de materiais
+    - tempo até quebra de peças, motores, rolamentos, cabos, soldas
+
+
+. . .
+
+
+2) **Análise de Risco/Manutenção:** 
+    - planejamento de manutenção preventiva
+    - prever quando um equipamento deve ser substituído
+
+
+## Distribuição Weibull
+
+
+3) **Análise de sobrevivência/biomedicina:**
+    - tempo até ocorrência de um evento (recorrência de doença, óbito, falha de tratamento)
+    - alternativa mais flexível que exponencial
+
+
+
+. . .
+
+
+4) **Meteorologia e Clima:**
+    - distribuição de vento (velocidade do vento normalmente é modelada por Weibull)
+
+
+. . .
+
+
+5) **Pesquisa operacional:**
+    - tempo até falha em sistemas complexos
+    - modelagem em teoria de filas com tempos de serviço não-exponenciais
+    
