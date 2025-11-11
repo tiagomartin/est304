@@ -179,6 +179,7 @@ Assim,
 
 
 $$ 
+\small
 \begin{eqnarray}
 \left[ \Gamma\left( \frac{1}{2}\right) \right]^2 &=& 4\int_0^{\pi/2}\int_0^\infty e^{-r^2} r\text{ } dr d\theta = 4\int_0^{\pi/2} d\theta \int_0^\infty e^{-r^2} r\text{ } dr = 4\int_0^{\pi/2} d\theta  \left[ -\frac{e^{-r^2}}{2} \right]_0^\infty \\ &=& 4\int_0^{\pi/2} d\theta \left( \frac{1}{2} \right)  = 2\int_0^{\pi/2}1\text{ } d\theta   = 2 \left. \theta \right|_0^{\pi/2} = \pi
 \end{eqnarray}
