@@ -557,6 +557,307 @@
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla",
     "title": "Outras Distribuições Contínuas",
     "section": "Distribuição Exponencial Dupla",
-    "text": "Distribuição Exponencial Dupla"
+    "text": "Distribuição Exponencial Dupla\nTambém conhecida como Distribuição de Laplace, é formada por reflexão da distribuição exponencial em torno da média.\n\nSe \\(X \\sim Laplace(a, b)\\), então sua função densidade é dada por\n\\[\nf(x)= \\frac{1}{2b}\\, \\exp\\!\\left(-\\frac{|x-a|}{b}\\right), \\qquad -\\infty &lt; x &lt; \\infty,\\; -\\infty &lt; a &lt; \\infty,\\; b &gt; 0.\n\\]\nNesta parametrização:\n\n\\(a\\): parâmetro de localização (a média e mediana da distribuição).\n\\(b\\): parâmetro de escala (controla a dispersão; quanto maior \\(b\\), mais “achatada” é a curva)."
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-1",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-1",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Exponencial Dupla",
+    "text": "Distribuição Exponencial Dupla\n\nPara \\(x \\ge a\\), exponencial decaindo para a direita\n\n\\[\nf(x)= \\frac{1}{2b}\\, \\exp\\!\\left(-\\frac{x-a}{b}\\right)\n\\]\n\nPara \\(x &lt; a\\), exponencial decaindo para a esquerda\n\n\\[\nf(x)= \\frac{1}{2b}\\, \\exp\\!\\left(\\frac{x-a}{b}\\right)\n\\]"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-2",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-2",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Exponencial Dupla",
+    "text": "Distribuição Exponencial Dupla\nVamos encontrar \\(E(X)\\). Para isso, tomamos \\(Z = X-a\\). Logo, \\(Z \\sim Laplace(0,b)\\) com\n\\[\nf_Z(z)= \\dfrac{1}{2b}\\, \\exp\\!\\left(-\\frac{|z|}{b}\\right)\n\\] e \\(E(X) = E(Z + a) = E(Z) + a\\)\n\\[\n\\begin{eqnarray}\nE(Z) &=& \\int_{-\\infty}^{\\infty} z\\,f_Z(z)\\,dz =\\frac{1}{2b}\\int_{-\\infty}^{\\infty} z\\,e^{-|z|/b}\\,dz \\\\ &=& \\frac{1}{2b}\\left(\\int_{-\\infty}^{0} z\\,e^{z/b}\\,dz+\\int_{0}^{\\infty} z\\,e^{-z/b}\\,dz\\right)\n\\end{eqnarray}\n\\]"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-3",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-3",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Exponencial Dupla",
+    "text": "Distribuição Exponencial Dupla\nNote que o integrando \\(z\\,e^{-|z|/b}\\) é ímpar, portanto as áreas se cancelam:\n\\[E(Z)=0\\]\nde forma que,\n\\[E(X)= E(Z+a) = E(Z) + a = a\\]\nLogo,\n\\[\\boxed{E(X)=a}\\]"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-4",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-4",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Exponencial Dupla",
+    "text": "Distribuição Exponencial Dupla\nCálculo de \\(Var(Z)=E(Z^2)\\) (pois \\((E(Z)=0\\)):\n\\[\n\\begin{eqnarray}\nE(Z^2)&=&\\int_{-\\infty}^{\\infty} z^{2}\\,f_Z(z)\\,dz=\\int_{-\\infty}^{\\infty} z^{2}\\,\\frac{1}{2b} \\,e^{-|z|/b}\\,dz\n\\end{eqnarray}\n\\]\nComo o integrando é par,\n\\[\n\\begin{eqnarray}\nE(Z^2)&=&\\int_{0}^{\\infty} z^{2} \\frac{1}{b} e^{-z/b}\\,dz\n\\end{eqnarray}\n\\]\nFaça a mudança \\(y=z/b\\Rightarrow z=by,\\ dz=b\\,dy\\)"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#aparte-funções-pares-e-ímpares",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#aparte-funções-pares-e-ímpares",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Aparte: Funções Pares e Ímpares",
+    "text": "Aparte: Funções Pares e Ímpares\nDefinições:\n\nUma função \\(f(x)\\) é par se\n\n\\[  f(-x) = f(x), \\quad \\forall x\\]\n→ Gráfico simétrico em relação ao eixo y. Exemplos: \\(f(x) = x^2, \\cos x, e^{-x^2}\\)\n\nUma função \\(f(x)\\) é ímpar se\n\n\\[f(-x) = -f(x), \\quad \\forall x\\] → Gráfico simétrico em relação à origem. Exemplos: \\(f(x) = x^3, \\sin x, x e^{-x^2}\\)"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#aparte-funções-pares-e-ímpares-1",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#aparte-funções-pares-e-ímpares-1",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Aparte: Funções Pares e Ímpares",
+    "text": "Aparte: Funções Pares e Ímpares\nPara integrais em intervalos simétricos \\([-a, a]\\):\n\nSe \\(f(x)\\) é par:\n\n\\[\\int_{-a}^{a} f(x)\\,dx = 2\\int_{0}^{a} f(x)\\,dx\\]\n\nSe \\(f(x)\\) é ímpar:\n\n\\[\\int_{-a}^{a} f(x)\\,dx = 0\\]"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-5",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-5",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Exponencial Dupla",
+    "text": "Distribuição Exponencial Dupla\n\\[\n\\begin{eqnarray}\nE(Z^2)&=&\\int_{0}^{\\infty} z^{2} \\,\\frac{1}{b}\\ e^{-z/b}\\,dz \\\\ &=&\\int_{0}^{\\infty}  (b y)^{2}\\,\\frac{1}{b}\\, e^{-y}\\,b\\,dy\n= b^{2}\\int_{0}^{\\infty} y^{2} e^{-y}\\,dy\n\\end{eqnarray}\n\\]\nPela definição da função Gama,\n\\[\\int_{0}^{\\infty} y^{2} e^{-y}\\,dy=\\Gamma(3)=2!\\]\nPortanto,\n\\[E(Z^2)=b^{2}\\cdot 2 = 2b^{2}\\]"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-6",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-6",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Exponencial Dupla",
+    "text": "Distribuição Exponencial Dupla\nComo \\(Var(X)=Var(Z)=E(Z^2)\\),\n\\[\\boxed{Var(X)=2b^{2}}\\]"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-7",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-7",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Exponencial Dupla",
+    "text": "Distribuição Exponencial Dupla\nSe \\(X \\sim Laplace(a, b)\\), então\n\\[\nf(x)= \\frac{1}{2b}\\, \\exp\\!\\left(-\\frac{|x-a|}{b}\\right), \\qquad -\\infty &lt; x &lt; \\infty,\\; -\\infty &lt; a &lt; \\infty,\\; b &gt; 0.\n\\]\ncom\n\\[E(X) = a \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\, \\text{       e       } \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,Var(X) = 2b^{2}\\]"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-8",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-8",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Exponencial Dupla",
+    "text": "Distribuição Exponencial Dupla\nSe \\(X \\sim Laplace(a,b)\\), então,\n\\[F(x)=P(X\\le x)=\\int_{-\\infty}^{x} f(t)\\,dt = \\int_{-\\infty}^{x} \\frac{1}{2b}e^{-\\frac{|t-a|}{b}}\\,dt\\]\nComo a função é definida por módulos, dividimos o cálculo em dois casos.\n\nCaso 1: \\(x &lt; a\\)\nNeste intervalo, \\(|t-a|=a-t\\). Logo\n\\[F(x)=\\int_{-\\infty}^{x}\\frac{1}{2b}e^{-(a-t)/b}\\,dt\n=\\frac{1}{2b}e^{-a/b}\\int_{-\\infty}^{x}e^{t/b}\\,dt\\]"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-9",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-9",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Exponencial Dupla",
+    "text": "Distribuição Exponencial Dupla\nCalculando a integral:\n\\[\\int_{-\\infty}^{x} e^{t/b}\\,dt = \\Big[b\\,e^{t/b}\\Big]_{-\\infty}^{x} = b\\,e^{x/b} - b\\,\\lim_{t\\to -\\infty} e^{t/b} = b\\,e^{x/b}\\]\nUma vez que \\(\\lim_{t\\to -\\infty} e^{t/b}=0\\). Então:\n\\[F(x)=\\frac{1}{2b}e^{-a/b}\\,b\\,e^{x/b} =\\dfrac{1}{2} e^{\\Big({\\dfrac{x-a}{b}}\\Big)}, \\qquad x&lt;a\\]"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-10",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-10",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Exponencial Dupla",
+    "text": "Distribuição Exponencial Dupla\nCaso 2: \\(x \\ge a\\)\nAqui \\(|t-a|=t-a\\). Assim:\n\\[F(x)=\\int_{-\\infty}^{a}\\frac{1}{2b}e^{-(a-t)/b}\\,dt + \\int_{a}^{x}\\frac{1}{2b}e^{-(t-a)/b}\\,dt\\]\nA primeira integral resulta em:\n\\[\\small\\int_{-\\infty}^{a} \\frac{1}{2b}\\, e^{-(a-t)/b}\\,dt = \\frac{e^{-a/b}}{2b}\\int_{-\\infty}^{a} e^{t/b}\\,dt = \\frac{e^{-a/b}}{2b}\\,\\Big[b\\,e^{t/b}\\Big]_{-\\infty}^{a} = \\frac{e^{-a/b}}{2b}\\,\\Big(b\\,e^{a/b}-0\\Big) = \\frac{1}{2}\\,e^{-a/b}e^{a/b} = \\frac{1}{2}\\]"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-11",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-11",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Exponencial Dupla",
+    "text": "Distribuição Exponencial Dupla\nPara a segunda integral, fazemos a substituição \\(u = t - a  \\Rightarrow  du = dt\\). Quando \\(t = a \\Rightarrow u = 0\\) e quando \\(t = x \\Rightarrow u = x - a\\).\n\\[\n\\begin{eqnarray}\n\\int_{a}^{x}\\dfrac{1}{2b}e^{-(t-a)/b}\\,dt &=& \\dfrac{1}{2b}\\int_{0}^{x-a} e^{-u/b}\\,du = \\dfrac{1}{2b}\\Big[-b\\,e^{-u/b}\\Big]_{0}^{x-a}\\\\\n&=& \\dfrac{1}{2b}\\Big[-b\\,e^{-(x-a)/b} + b\\Big] = \\dfrac{1}{2b}\\cdot b(1 - e^{-(x-a)/b}) \\\\&=& \\dfrac{1}{2}\\left(1 - e^{-\\dfrac{x-a}{b}}\\right)\n\\end{eqnarray}\n\\]"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-12",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-12",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Exponencial Dupla",
+    "text": "Distribuição Exponencial Dupla\nSomando:\n\\[ F(x)=\\frac{1}{2}+\\frac{1}{2}(1-e^{-(x-a)/b}) =1 - \\dfrac{1}{2} e^{-\\Big(\\dfrac{x-a}{b}\\Big)}, \\qquad x\\ge a\\] Logo, se \\(X \\sim Laplace(a,b)\\), então\n\\[\nF(x)=\n\\begin{cases}\n\\dfrac{1}{2} e^{\\Big({\\dfrac{x-a}{b}}\\Big)}, & x&lt;a, \\\\[8pt]\n1 - \\dfrac{1}{2} e^{-\\Big(\\dfrac{x-a}{b}\\Big)}, & x\\ge a.\n\\end{cases}\n\\]"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-13",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-13",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Exponencial Dupla",
+    "text": "Distribuição Exponencial Dupla\n\n\nFigure 13: Distribuição Laplace — diferentes parâmetros (função densidade)"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-14",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-14",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Exponencial Dupla",
+    "text": "Distribuição Exponencial Dupla\n\n\nFigure 14: Distribuição Laplace — diferentes parâmetros (função de distribuição acumulada)"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-15",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-15",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Exponencial Dupla",
+    "text": "Distribuição Exponencial Dupla\nA distribuição Laplace (também chamada de exponencial dupla) aparece em diversas áreas onde há simetria, mas com caudas mais pesadas que a normal.\n\n\nFigure 15: Comparação lado a lado: Laplace(0, 1/√2) vs Normal(0,1)"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-16",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-16",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Exponencial Dupla",
+    "text": "Distribuição Exponencial Dupla\n\n\nNo painel esquerdo (escala linear): a Laplace tem pico mais alto e mais pontudo no centro.\nNo painel direito (escala log): as caudas da Laplace decaem mais lentamente que as da Normal — ou seja, a Laplace tem caudas mais pesadas."
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-17",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-17",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Exponencial Dupla",
+    "text": "Distribuição Exponencial Dupla\n\n\nFigure 16: CDF: Normal(0,1) vs Laplace(0, 1/√2)"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-18",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-18",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Exponencial Dupla",
+    "text": "Distribuição Exponencial Dupla\n\nModelagem de Erros e Ruídos: Em muitos fenômenos, os erros são simétricos, mas com maior probabilidade de valores extremos do que uma normal permitiria.\n\n\n\nEconomia e Finanças: Em séries de retornos de ativos financeiros, é comum observar distribuições simétricas com caudas longas.\n\n\n\n\nEngenharia de Processos e Controle: Modelagem de diferenças entre medições ou resíduos em sistemas físicos. Muito usada em filtros robustos e em controle adaptativo, pois é menos sensível a outliers do que a Normal.\n\n\n\n\nProcessamento de Sinais e Imagens: Em processamento de imagem, a distribuição Laplace descreve coeficientes de transformadas, especialmente onde há bordas ou ruídos bruscos. Também aparece em compressão de imagem e remoção de ruído impulsivo."
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-19",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-19",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Exponencial Dupla",
+    "text": "Distribuição Exponencial Dupla\n\nCiência de Dados e Estatística Robusta: O modelo Laplace é base para a Regressão de Mínima Soma de Desvios Absolutos (LAD), também chamada regressão mediana. O estimador de máxima verossimilhança sob erro Laplace é o estimador da mediana, o que torna a Laplace uma escolha natural para modelos robustos a outliers.\n\n\n\nPrivacidade Diferencial: Em Ciência de Dados, o Mecanismo Laplace é usado para adicionar ruído calibrado e proteger dados sensíveis. A distribuição Laplace permite controlar a quantidade de ruído adicionada de acordo com o parâmetro de privacidade \\(\\epsilon\\)."
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-20",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-20",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Exponencial Dupla",
+    "text": "Distribuição Exponencial Dupla\nExemplo 09: Considere que o retorno financeiro de dado investimento possa ser modelado de acordo com um distribuição de Laplace, com parâmetros \\(a = \\, R\\$ \\, 1 \\text{milhão}\\) e \\(b = 20 \\, \\text{mil}\\).\n\nCalcule a probabilidade do retorno ser superior a \\(R\\$ \\, 1.020.000,00\\). R: \\(0,1839\\)\nCalcule a probabilidade do retorno ser inferior a \\(R\\$ \\, 940.000,00\\). R: \\(0,0249\\)\nCalcule a probabilidade do retorno ficar entre \\(R\\$ \\, 940.000,00\\) e \\(R\\$ \\, 1.020.000,00\\). R: \\(0,7912\\)"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-21",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-21",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Exponencial Dupla",
+    "text": "Distribuição Exponencial Dupla\nExemplo 10: Uma câmera digital utilizada em um ambiente industrial está sujeita a reflexos de luz intensa e interferências elétricas, que produzem ruído impulsivo nas imagens. Esse ruído pode ser modelado pela distribuição de Laplace, cuja função densidade de probabilidade é dada por:\n\\[f(x) = \\frac{1}{2b}\\, e^{-\\frac{|x - a|}{b}}, \\quad -\\infty &lt; x &lt; \\infty,\\]\nonde: - \\(a\\) é o valor médio (esperado) do ruído, - \\(b\\) é o parâmetro de escala que controla a dispersão.\nEm uma determinada medição, assume-se que:\n\\[a = 0, \\quad b = 10\\]"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-22",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-22",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Exponencial Dupla",
+    "text": "Distribuição Exponencial Dupla\n\nCalcule a probabilidade de que a perturbação no brilho de um pixel seja maior que 20 unidades em valor absoluto (ou seja, (|X| &gt; 20)). R: \\(0,1353\\)\nCalcule a probabilidade de que a variação do brilho esteja entre -15 e 15 unidades. R: \\(0,7769\\)\nCompare esse comportamento com o ruído Gaussiano \\(N(0, 10^2)\\). O ruído Laplaciano gera mais ou menos pixels “fora da faixa normal” (\\(|X| &gt; 20\\))? Explique o motivo, relacionando ao formato das caudas."
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#section",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#section",
+    "title": "Outras Distribuições Contínuas",
+    "section": "",
+    "text": "Ruído Laplaciano (a=0, b=10) e comparação com Normal(0,10)"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-23",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-23",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Exponencial Dupla",
+    "text": "Distribuição Exponencial Dupla\n\nRuído Laplaciano (a=0, b=10) e comparação com Normal(0,10)"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-de-valores-extremos",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-de-valores-extremos",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição de Valores Extremos",
+    "text": "Distribuição de Valores Extremos\nEm muitas situações práticas, não estamos interessados na média ou no comportamento típico dos dados, mas sim nos eventos extremos, os maiores ou menores valores observados.\nAssim, temos duas possibilidades:\n\nDistribuição do Menor Valor Extremo\nDistribuição do Maior Valor Extremo"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-de-valores-extremos-1",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-de-valores-extremos-1",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição de Valores Extremos",
+    "text": "Distribuição de Valores Extremos\nA Distribuição de Gumbel é um caso particular da teoria dos valores extremos. Ela descreve o comportamento assintótico de máximos ou mínimos em grandes amostras.\n\n\nDistribuição do Maior Valor Extremo (Gumbel Máximo)\n\nUsada para modelar valores máximos observados, por exemplo:\n\na maior temperatura anual,\na maior cheia de um rio,\no maior prejuízo financeiro."
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-de-valores-extremos-2",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-de-valores-extremos-2",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição de Valores Extremos",
+    "text": "Distribuição de Valores Extremos\nA função de distribuição acumulada (FDC) é:\n\\[F(x) = \\exp\\!\\left[-\\,e^{-\\Big(\\dfrac{x-\\mu}{\\sigma}\\Big)}\\right], \\qquad x \\in \\mathbb{R},\\]\nonde:\n\n\\(\\mu\\) é o parâmetro de localização,\n\\(\\sigma &gt; 0\\) é o parâmetro de escala."
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-de-valores-extremos-3",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-de-valores-extremos-3",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição de Valores Extremos",
+    "text": "Distribuição de Valores Extremos\nA função densidade é:\n\\[\\small f(x \\mid \\mu, \\sigma)\n= \\frac{1}{\\sigma}\n\\exp\\!\\left[\n-\\left(\n\\frac{x - \\mu}{\\sigma}\n\\right)\n- \\exp\\!\\left(\n-\\frac{x - \\mu}{\\sigma}\n\\right)\n\\right],\n\\qquad\n-\\infty &lt; x &lt; \\infty,\\;\n-\\infty &lt; \\mu &lt; \\infty,\\;\n\\sigma &gt; 0\\]\nÉ possível demonstrar que,\n\\[E(X) = \\mu + \\gamma\\sigma,\\]\nonde \\(\\gamma = 0.57721566\\) é conhecida como constante de Euler–Mascheroni.\ne,\n\\[Var(X) = \\dfrac{\\pi^2}{6}\\sigma^2\\]"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-de-valores-extremos-4",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-de-valores-extremos-4",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição de Valores Extremos",
+    "text": "Distribuição de Valores Extremos\nSe \\(X \\sim Gumbel_{\\text{max}}(\\mu, \\sigma)\\), então\n\\[\nf(x) = \\frac{1}{\\sigma} \\exp\\!\\left[-\\left(\\frac{x - \\mu}{\\sigma}\\right)- \\exp\\!\\left(-\\frac{x - \\mu}{\\sigma}\\right)\\right]\n\\]\ncom\n\\[E(X) = \\mu + \\gamma\\sigma \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\, \\text{       e       } \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,Var(X) = \\dfrac{\\pi^2}{6}\\sigma^2\\]"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-de-valores-extremos-5",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-de-valores-extremos-5",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição de Valores Extremos",
+    "text": "Distribuição de Valores Extremos\n\n\nFigure 17: Gumbel — Maior Valor Extremo: diferentes parâmetros"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-de-valores-extremos-6",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-de-valores-extremos-6",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição de Valores Extremos",
+    "text": "Distribuição de Valores Extremos\n\nDistribuição do Menor Valor Extremo (Gumbel Mínimo)\n\nUsada para modelar valores mínimos, por exemplo:\n\na menor temperatura do inverno,\na menor resistência de um material antes da falha,\no menor tempo até um evento extremo."
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-de-valores-extremos-7",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-de-valores-extremos-7",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição de Valores Extremos",
+    "text": "Distribuição de Valores Extremos\nA função de distribuição acumulada é:\n\\[F(x) = 1 - \\exp\\!\\left[-\\,e^{\\Big(\\dfrac{x-\\mu}{\\sigma}\\Big)}\\right], \\qquad x \\in \\mathbb{R}\\] A função densidade correspondente é:\n\\[f(x|\\mu, \\sigma) = \\dfrac{1}{\\sigma}\\exp\\!\\left[\\Big(\\dfrac{x - \\mu}{\\sigma}\\Big)- \\exp\\!\\left(\\dfrac{x - \\mu}{\\sigma}\\right)\\right],\n\\qquad\n-\\infty &lt; x &lt; \\infty,\\;\n-\\infty &lt; \\mu &lt; \\infty,\\;\n\\sigma &gt; 0\\]"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-de-valores-extremos-8",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-de-valores-extremos-8",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição de Valores Extremos",
+    "text": "Distribuição de Valores Extremos\nÉ possível demonstrar que,\n\\[E(X) = \\mu - \\gamma\\sigma,\\]\nonde \\(\\gamma = 0.57721566\\) é a constante de Euler–Mascheroni.\ne,\n\\[Var(X) = \\dfrac{\\pi^2}{6}\\sigma^2\\]\n\nObserve que a variância é a mesma; apenas o sinal da média muda."
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-de-valores-extremos-9",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-de-valores-extremos-9",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição de Valores Extremos",
+    "text": "Distribuição de Valores Extremos\nSe \\(X \\sim Gumbel_{\\text{min}}(\\mu, \\sigma)\\), então\n\\[\nf(x) = \\dfrac{1}{\\sigma}\\exp\\!\\left[\\Big(\\dfrac{x - \\mu}{\\sigma}\\Big)- \\exp\\!\\left(\\dfrac{x - \\mu}{\\sigma}\\right)\\right]\n\\]\ncom\n\\[E(X) = \\mu - \\gamma\\sigma \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\, \\text{       e       } \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,Var(X) = \\dfrac{\\pi^2}{6}\\sigma^2\\]"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-de-valores-extremos-10",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-de-valores-extremos-10",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição de Valores Extremos",
+    "text": "Distribuição de Valores Extremos\n\n\nFigure 18: Gumbel — Menor Valor Extremo: diferentes parâmetros"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-de-valores-extremos-11",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-de-valores-extremos-11",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição de Valores Extremos",
+    "text": "Distribuição de Valores Extremos\nRelação entre as duas formas\nNote que o Gumbel do mínimo é obtido invertendo o sinal de \\(x\\):\n\\[\nX_{\\text{mínimo}} \\sim \\text{Gumbel Mínimo}(\\mu, \\sigma)\n\\quad \\Leftrightarrow \\quad\n-Y \\sim \\text{Gumbel Máximo}(-\\mu, \\sigma),\n\\]\nou seja, o Gumbel mínimo é simplesmente o reflexo do Gumbel máximo em torno do eixo vertical."
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-de-valores-extremos-12",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-de-valores-extremos-12",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição de Valores Extremos",
+    "text": "Distribuição de Valores Extremos\n\n\nFigure 19: Comparação entre Gumbel Máximo e Gumbel Mínimo"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-de-valores-extremos-13",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-de-valores-extremos-13",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição de Valores Extremos",
+    "text": "Distribuição de Valores Extremos\n\n\nO Gumbel Máximo tem cauda longa à direita → eventos de máximos (chuvas, enchentes, picos).\nO Gumbel Mínimo tem cauda longa à esquerda → eventos de mínimos (temperaturas mínimas, falhas).\nParâmetro \\(\\mu\\): define o centro.\nParâmetro \\(\\sigma\\): define a dispersão e intensidade dos extremos."
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-de-valores-extremos-14",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-de-valores-extremos-14",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição de Valores Extremos",
+    "text": "Distribuição de Valores Extremos\nExemplo 11: Considere que a temperatura de operação para um determinado processo industrial possa ser modelada através de uma distribuição do Menor Valor Extremo, com parâmetros \\(\\mu = 30^o \\,C\\) e \\(\\sigma = 2\\). Valores de temperatura abaixo de \\(20^o\\,C\\) são raros, porém quando acontecem, inviabilizam o processo. Determine a probabilidade disso ocorrer, bem como a temperatura média do processo. R: \\(0,0067\\) \\(E(X) = 28,85\\)"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-de-valores-extremos-15",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-de-valores-extremos-15",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição de Valores Extremos",
+    "text": "Distribuição de Valores Extremos\nExemplo 12: Uma equipe de engenheiros hidrólogos está estudando o nível máximo anual do Rio Paraopeba (em metros acima do leito) para dimensionar obras de contenção. Com base em 30 anos de registros históricos, o nível máximo anual pode ser modelado por uma Distribuição de Gumbel do Máximo com parâmetros:\n\\[\\mu = 6 \\,\\,\\text{m} \\,\\,\\,\\text{       e       } \\,\\,\\,\\sigma = 0,4\\]\nQuer-se saber:\n\nQual é a probabilidade de o nível máximo anual ultrapassar 7 metros? R: \\(0,0789\\)\nQual é o nível esperado (médio) das cheias anuais?R: \\(6,23 \\, \\text{m}\\)"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-de-valores-extremos-16",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-de-valores-extremos-16",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição de Valores Extremos",
+    "text": "Distribuição de Valores Extremos\n\n\n\n\nFigure 20: Distribuição de Gumbel (Maior Valor Extremo) — Exemplo: nível máximo anual do Rio Paraopeba"
   }
 ]

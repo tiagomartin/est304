@@ -1473,3 +1473,911 @@ b) Calcule $P(1 \le X \le 3)$. **R:** $0,5625$
 
 
 ## Distribuição Exponencial Dupla
+
+Também conhecida como *Distribuição de Laplace*, é formada por reflexão da distribuição exponencial em torno da média.
+
+. . . 
+
+Se $X \sim Laplace(a, b)$, então sua função densidade é dada por
+
+$$
+f(x)= \frac{1}{2b}\, \exp\!\left(-\frac{|x-a|}{b}\right), \qquad -\infty < x < \infty,\; -\infty < a < \infty,\; b > 0.
+$$
+
+
+Nesta parametrização:
+
+- $a$: parâmetro de localização (a média e mediana da distribuição).
+
+- $b$: parâmetro de escala (controla a dispersão; quanto maior $b$, mais “achatada” é a curva).
+
+
+## Distribuição Exponencial Dupla
+
+
+- Para $x \ge a$, exponencial decaindo para a direita
+
+
+$$
+f(x)= \frac{1}{2b}\, \exp\!\left(-\frac{x-a}{b}\right)
+$$
+
+- Para $x < a$, exponencial decaindo para a esquerda
+
+
+$$
+f(x)= \frac{1}{2b}\, \exp\!\left(\frac{x-a}{b}\right)
+$$
+
+
+## Aparte: Funções Pares e Ímpares
+
+**Definições:**
+
+- Uma função $f(x)$ é **par** se  
+
+$$  f(-x) = f(x), \quad \forall x$$
+
+→ Gráfico **simétrico em relação ao eixo y**. Exemplos: $f(x) = x^2, \cos x, e^{-x^2}$
+
+- Uma função $f(x)$ é **ímpar** se  
+
+$$f(-x) = -f(x), \quad \forall x$$
+→ Gráfico **simétrico em relação à origem**. Exemplos: $f(x) = x^3, \sin x, x e^{-x^2}$
+
+
+## Aparte: Funções Pares e Ímpares
+
+
+
+Para integrais **em intervalos simétricos** $[-a, a]$:
+
+- Se $f(x)$ é **par**:
+
+$$\int_{-a}^{a} f(x)\,dx = 2\int_{0}^{a} f(x)\,dx$$
+
+- Se $f(x)$ é **ímpar**:
+
+$$\int_{-a}^{a} f(x)\,dx = 0$$
+
+
+## Distribuição Exponencial Dupla
+
+
+Vamos encontrar $E(X)$. Para isso, tomamos $Z = X-a$. Logo, $Z \sim Laplace(0,b)$ com
+
+$$
+f_Z(z)= \dfrac{1}{2b}\, \exp\!\left(-\frac{|z|}{b}\right)
+$$
+e $E(X) = E(Z + a) = E(Z) + a$
+
+$$
+\begin{eqnarray}
+E(Z) &=& \int_{-\infty}^{\infty} z\,f_Z(z)\,dz =\frac{1}{2b}\int_{-\infty}^{\infty} z\,e^{-|z|/b}\,dz \\ &=& \frac{1}{2b}\left(\int_{-\infty}^{0} z\,e^{z/b}\,dz+\int_{0}^{\infty} z\,e^{-z/b}\,dz\right)
+\end{eqnarray}
+$$
+
+
+## Distribuição Exponencial Dupla
+
+Note que o integrando $z\,e^{-|z|/b}$ é **ímpar**, portanto as áreas se cancelam:
+
+$$E(Z)=0$$
+
+de forma que,
+
+$$E(X)= E(Z+a) = E(Z) + a = a$$
+
+Logo, 
+
+$$\boxed{E(X)=a}$$
+
+
+## Distribuição Exponencial Dupla
+
+
+Cálculo de $Var(Z)=E(Z^2)$ (pois $(E(Z)=0$):
+
+$$
+\begin{eqnarray}
+E(Z^2)&=&\int_{-\infty}^{\infty} z^{2}\,f_Z(z)\,dz=\int_{-\infty}^{\infty} z^{2}\,\frac{1}{2b} \,e^{-|z|/b}\,dz
+\end{eqnarray}
+$$
+
+Como o integrando é **par**,
+
+
+$$
+\begin{eqnarray}
+E(Z^2)&=&\int_{0}^{\infty} z^{2} \frac{1}{b} e^{-z/b}\,dz
+\end{eqnarray}
+$$
+
+Faça a mudança $y=z/b\Rightarrow z=by,\ dz=b\,dy$
+
+
+## Distribuição Exponencial Dupla
+
+
+$$
+\begin{eqnarray}
+E(Z^2)&=&\int_{0}^{\infty} z^{2} \,\frac{1}{b}\ e^{-z/b}\,dz \\ &=&\int_{0}^{\infty}  (b y)^{2}\,\frac{1}{b}\, e^{-y}\,b\,dy
+= b^{2}\int_{0}^{\infty} y^{2} e^{-y}\,dy
+\end{eqnarray}
+$$
+
+Pela definição da função Gama,
+
+$$\int_{0}^{\infty} y^{2} e^{-y}\,dy=\Gamma(3)=2!$$
+
+Portanto,
+
+$$E(Z^2)=b^{2}\cdot 2 = 2b^{2}$$
+
+
+## Distribuição Exponencial Dupla
+
+Como $Var(X)=Var(Z)=E(Z^2)$,
+
+$$\boxed{Var(X)=2b^{2}}$$
+
+
+## Distribuição Exponencial Dupla
+
+Se $X \sim Laplace(a, b)$, então
+
+$$
+f(x)= \frac{1}{2b}\, \exp\!\left(-\frac{|x-a|}{b}\right), \qquad -\infty < x < \infty,\; -\infty < a < \infty,\; b > 0.
+$$
+
+
+
+
+com 
+
+
+$$E(X) = a \,\,\,\,\,\,\,\,\,\,\,\, \text{       e       } \,\,\,\,\,\,\,\,\,\,\,\,Var(X) = 2b^{2}$$
+
+
+## Distribuição Exponencial Dupla
+
+
+Se $X \sim Laplace(a,b)$, então,
+
+$$F(x)=P(X\le x)=\int_{-\infty}^{x} f(t)\,dt = \int_{-\infty}^{x} \frac{1}{2b}e^{-\frac{|t-a|}{b}}\,dt$$
+
+
+Como a função é definida por módulos, dividimos o cálculo em **dois casos**.
+
+
+. . .
+
+
+**Caso 1:** $x < a$
+
+Neste intervalo, $|t-a|=a-t$. Logo
+
+$$F(x)=\int_{-\infty}^{x}\frac{1}{2b}e^{-(a-t)/b}\,dt
+=\frac{1}{2b}e^{-a/b}\int_{-\infty}^{x}e^{t/b}\,dt$$
+
+
+
+## Distribuição Exponencial Dupla
+
+Calculando a integral:
+
+
+$$\int_{-\infty}^{x} e^{t/b}\,dt = \Big[b\,e^{t/b}\Big]_{-\infty}^{x} = b\,e^{x/b} - b\,\lim_{t\to -\infty} e^{t/b} = b\,e^{x/b}$$
+
+Uma vez que $\lim_{t\to -\infty} e^{t/b}=0$. Então:
+
+
+$$F(x)=\frac{1}{2b}e^{-a/b}\,b\,e^{x/b} =\dfrac{1}{2} e^{\Big({\dfrac{x-a}{b}}\Big)}, \qquad x<a$$
+
+
+## Distribuição Exponencial Dupla
+
+**Caso 2:** $x \ge a$
+
+Aqui $|t-a|=t-a$. Assim:
+
+
+$$F(x)=\int_{-\infty}^{a}\frac{1}{2b}e^{-(a-t)/b}\,dt + \int_{a}^{x}\frac{1}{2b}e^{-(t-a)/b}\,dt$$
+
+A primeira integral resulta em:
+
+
+$$\small\int_{-\infty}^{a} \frac{1}{2b}\, e^{-(a-t)/b}\,dt = \frac{e^{-a/b}}{2b}\int_{-\infty}^{a} e^{t/b}\,dt = \frac{e^{-a/b}}{2b}\,\Big[b\,e^{t/b}\Big]_{-\infty}^{a} = \frac{e^{-a/b}}{2b}\,\Big(b\,e^{a/b}-0\Big) = \frac{1}{2}\,e^{-a/b}e^{a/b} = \frac{1}{2}$$
+
+
+## Distribuição Exponencial Dupla
+
+Para a segunda integral, fazemos a substituição $u = t - a  \Rightarrow  du = dt$. Quando $t = a \Rightarrow u = 0$ e quando $t = x \Rightarrow u = x - a$.
+
+
+
+
+$$
+\begin{eqnarray}
+\int_{a}^{x}\dfrac{1}{2b}e^{-(t-a)/b}\,dt &=& \dfrac{1}{2b}\int_{0}^{x-a} e^{-u/b}\,du = \dfrac{1}{2b}\Big[-b\,e^{-u/b}\Big]_{0}^{x-a}\\
+&=& \dfrac{1}{2b}\Big[-b\,e^{-(x-a)/b} + b\Big] = \dfrac{1}{2b}\cdot b(1 - e^{-(x-a)/b}) \\&=& \dfrac{1}{2}\left(1 - e^{-\dfrac{x-a}{b}}\right)
+\end{eqnarray}
+$$
+
+
+## Distribuição Exponencial Dupla
+
+
+Somando:
+
+$$ F(x)=\frac{1}{2}+\frac{1}{2}(1-e^{-(x-a)/b}) =1 - \dfrac{1}{2} e^{-\Big(\dfrac{x-a}{b}\Big)}, \qquad x\ge a$$
+Logo, se $X \sim Laplace(a,b)$, então
+
+$$
+F(x)=
+\begin{cases}
+\dfrac{1}{2} e^{\Big({\dfrac{x-a}{b}}\Big)}, & x<a, \\[8pt]
+1 - \dfrac{1}{2} e^{-\Big(\dfrac{x-a}{b}\Big)}, & x\ge a.
+\end{cases}
+$$
+
+
+
+## Distribuição Exponencial Dupla
+
+```{r, echo=FALSE}
+#| label: fig-laplace-densidades
+#| fig-cap: "Distribuição Laplace — diferentes parâmetros (função densidade)"
+#| warning: false
+#| message: false
+
+library(ggplot2)
+
+dlaplace <- function(x, a, b) (1/(2*b)) * exp(-abs(x - a)/b)
+
+x <- seq(-8, 8, length.out = 1000)
+params <- expand.grid(a = c(0, 1, -2),
+                      b = c(0.5, 1, 2))
+
+df <- do.call(rbind, apply(params, 1, function(p){
+  data.frame(
+    x = x,
+    dens = dlaplace(x, p[1], p[2]),
+    curva = paste0("a=", p[1], ", b=", p[2])
+  )
+}))
+
+ggplot(df, aes(x, dens, color = curva)) +
+  geom_line(linewidth = 1) +
+  labs(x = "x", y = "f(x)", color = "Parâmetros",
+       title = "Função densidade — Laplace(a,b)") +
+  theme_minimal() +
+  theme(legend.position = "bottom")
+
+```
+
+
+
+## Distribuição Exponencial Dupla
+
+```{r, echo=FALSE}
+#| label: fig-laplace-fdc
+#| fig-cap: "Distribuição Laplace — diferentes parâmetros (função de distribuição acumulada)"
+#| warning: false
+#| message: false
+
+plaplace <- function(x, a, b) {
+  ifelse(x < a,
+         0.5 * exp((x - a)/b),
+         1 - 0.5 * exp(-(x - a)/b))
+}
+
+df_cdf <- do.call(rbind, apply(params, 1, function(p){
+  data.frame(
+    x = x,
+    cdf = plaplace(x, p[1], p[2]),
+    curva = paste0("a=", p[1], ", b=", p[2])
+  )
+}))
+
+ggplot(df_cdf, aes(x, cdf, color = curva)) +
+  geom_line(linewidth = 1) +
+  labs(x = "x", y = "F(x)", color = "Parâmetros",
+       title = "Função de distribuição acumulada — Laplace(a,b)") +
+  theme_minimal() +
+  theme(legend.position = "bottom")
+```
+
+
+## Distribuição Exponencial Dupla
+
+A distribuição Laplace (também chamada de exponencial dupla) aparece em diversas áreas onde há simetria, mas com caudas mais pesadas que a normal.
+
+```{r, echo=FALSE}
+#| label: fig-laplace-vs-normal-side
+#| fig-cap: "Comparação lado a lado: Laplace(0, 1/√2) vs Normal(0,1)"
+#| warning: false
+#| message: false
+
+library(ggplot2)
+library(patchwork)  # para colocar gráficos lado a lado
+
+# Parâmetros
+a <- 0
+b <- 1/sqrt(2)  # Var(Laplace)=2b² -> b=1/sqrt(2) => Var=1
+
+# Funções
+dlaplace <- function(x, a, b) (1/(2*b)) * exp(-abs(x - a)/b)
+
+x <- seq(-5, 5, length.out = 1500)
+
+df <- data.frame(
+  x = x,
+  Normal = dnorm(x, mean = 0, sd = 1),
+  Laplace = dlaplace(x, a, b)
+)
+
+# Gráfico 1: escala linear
+p_linear <- ggplot(df, aes(x)) +
+  geom_line(aes(y = Normal, color = "Normal(0,1)"), linewidth = 1) +
+  geom_line(aes(y = Laplace, color = "Laplace(0, 1/√2)"), linewidth = 1) +
+  labs(title = "Densidade (escala linear)",
+       x = "x", y = "f(x)", color = "Distribuição") +
+  theme_minimal() +
+  theme(legend.position = "bottom")
+
+# Gráfico 2: escala logarítmica (para ver caudas)
+p_log <- ggplot(df, aes(x)) +
+  geom_line(aes(y = Normal, color = "Normal(0,1)"), linewidth = 1) +
+  geom_line(aes(y = Laplace, color = "Laplace(0, 1/√2)"), linewidth = 1) +
+  scale_y_log10() +
+  labs(title = "Densidade (escala logarítmica)",
+       x = "x", y = "f(x)", color = "Distribuição") +
+  theme_minimal() +
+  theme(legend.position = "bottom")
+
+# Juntar lado a lado
+p_linear + p_log
+
+
+```
+
+
+## Distribuição Exponencial Dupla
+
+<br>
+
+- No painel esquerdo (escala linear): a Laplace tem pico mais alto e mais pontudo no centro.
+
+- No painel direito (escala log): as caudas da Laplace decaem mais lentamente que as da Normal — ou seja, a Laplace tem caudas mais pesadas.
+
+
+## Distribuição Exponencial Dupla
+
+
+```{r, echo=FALSE}
+#| label: fig-norm-vs-laplace-cdf
+#| fig-cap: "CDF: Normal(0,1) vs Laplace(0, 1/√2)"
+#| warning: false
+#| message: false
+
+# CDF Laplace
+plaplace <- function(x, a, b) ifelse(x < a, 0.5*exp((x-a)/b), 1 - 0.5*exp(-(x-a)/b))
+
+df_cdf <- data.frame(
+  x   = rep(x, 2),
+  cdf = c(pnorm(x, 0, 1), plaplace(x, a, b)),
+  dist= factor(rep(c("Normal(0,1)", "Laplace(0, 1/√2)"), each = length(x)))
+)
+
+ggplot(df_cdf, aes(x, cdf, color = dist)) +
+  geom_line(linewidth = 1) +
+  labs(x = "x", y = "F(x)", color = "Distribuição",
+       title = "CDF — Normal vs Laplace") +
+  theme_minimal()
+
+```
+
+
+
+## Distribuição Exponencial Dupla 
+
+1. **Modelagem de Erros e Ruídos:** Em muitos fenômenos, os erros são simétricos, mas com maior probabilidade de valores extremos do que uma normal permitiria. 
+
+. . .
+
+2. **Economia e Finanças:** Em séries de retornos de ativos financeiros, é comum observar distribuições simétricas com caudas longas.
+
+. . .
+
+3. **Engenharia de Processos e Controle:** Modelagem de diferenças entre medições ou resíduos em sistemas físicos. Muito usada em filtros robustos e em controle adaptativo, pois é menos sensível a outliers do que a Normal.
+
+. . .
+
+4. **Processamento de Sinais e Imagens:** Em processamento de imagem, a distribuição Laplace descreve coeficientes de transformadas, especialmente onde há bordas ou ruídos bruscos. Também aparece em compressão de imagem e remoção de ruído impulsivo.
+
+
+## Distribuição Exponencial Dupla 
+
+5. **Ciência de Dados e Estatística Robusta:** O modelo Laplace é base para a Regressão de Mínima Soma de Desvios Absolutos (LAD), também chamada regressão mediana. O estimador de máxima verossimilhança sob erro Laplace é o estimador da mediana, o que torna a Laplace uma escolha natural para modelos robustos a outliers.
+
+
+. . .
+
+
+6. **Privacidade Diferencial:** Em Ciência de Dados, o **Mecanismo Laplace** é usado para adicionar ruído calibrado e proteger dados sensíveis. A distribuição Laplace permite controlar a quantidade de ruído adicionada de acordo com o parâmetro de privacidade $\epsilon$.
+
+
+
+## Distribuição Exponencial Dupla 
+
+
+**Exemplo 09:** Considere que o retorno financeiro de dado investimento possa ser modelado de acordo com um distribuição de Laplace, com parâmetros $a = \, R\$ \, 1 \text{milhão}$ e $b = 20 \, \text{mil}$. 
+
+a) Calcule a probabilidade do retorno ser superior a $R\$ \, 1.020.000,00$. **R:** $0,1839$
+b) Calcule a probabilidade do retorno ser inferior a $R\$ \, 940.000,00$. **R:** $0,0249$
+c) Calcule a probabilidade do retorno ficar entre $R\$ \, 940.000,00$ e $R\$ \, 1.020.000,00$. **R:** $0,7912$
+
+
+
+## Distribuição Exponencial Dupla 
+
+
+**Exemplo 10:** Uma câmera digital utilizada em um ambiente industrial está sujeita a **reflexos de luz intensa** e **interferências elétricas**, que produzem **ruído impulsivo** nas imagens. Esse ruído pode ser modelado pela **distribuição de Laplace**, cuja função densidade de probabilidade é dada por:
+
+$$f(x) = \frac{1}{2b}\, e^{-\frac{|x - a|}{b}}, \quad -\infty < x < \infty,$$
+
+onde:
+- $a$ é o valor médio (esperado) do ruído,
+- $b$ é o parâmetro de escala que controla a dispersão.
+
+Em uma determinada medição, assume-se que:
+
+$$a = 0, \quad b = 10$$
+
+
+## Distribuição Exponencial Dupla 
+
+a) Calcule a probabilidade de que a perturbação no brilho de um pixel seja **maior que 20 unidades** em valor absoluto (ou seja, \(|X| > 20\)). **R:** $0,1353$
+
+b) Calcule a probabilidade de que a variação do brilho esteja **entre -15 e 15 unidades**. **R:** $0,7769$
+
+c) Compare esse comportamento com o ruído Gaussiano $N(0, 10^2)$. O ruído Laplaciano gera mais ou menos pixels “fora da faixa normal” ($|X| > 20$)? Explique o motivo, relacionando ao formato das caudas.
+
+
+
+## Distribuição Exponencial Dupla 
+
+```{r, echo=FALSE}
+#| label: laplace-noise-exercise
+#| fig-cap: "Ruído Laplaciano (a=0, b=10) e comparação com Normal(0,10)"
+#| warning: false
+#| message: false
+
+library(ggplot2)
+
+dlaplace <- function(x, a, b) (1/(2*b)) * exp(-abs(x - a)/b)
+
+x <- seq(-60, 60, length.out = 1000)
+df <- data.frame(
+  x = x,
+  Laplace = dlaplace(x, 0, 10),
+  Normal = dnorm(x, 0, 10)
+)
+
+ggplot(df) +
+  geom_line(aes(x, Laplace, color = "Laplace(0,10)"), linewidth = 1.1) +
+  geom_line(aes(x, Normal, color = "Normal(0,10²)"), linewidth = 1.1, linetype = "dashed") +
+  labs(title = "Comparação das distribuições — ruído Laplaciano vs Gaussiano",
+       x = "Intensidade do ruído", y = "f(x)", color = "Distribuição") +
+  theme_minimal() +
+  theme(legend.position = "bottom")
+```
+
+
+## Distribuição de Valores Extremos
+
+Em muitas situações práticas, não estamos interessados na média ou no comportamento típico dos dados, mas sim nos eventos extremos, os maiores ou menores valores observados. 
+
+
+Assim, temos duas possibilidades:
+
+
+
+- Distribuição do Menor Valor Extremo
+- Distribuição do Maior Valor Extremo
+
+
+## Distribuição de Valores Extremos
+
+
+A **Distribuição de Gumbel** é um caso particular da teoria dos valores extremos. Ela descreve o comportamento assintótico de **máximos** ou **mínimos** em grandes amostras.
+
+
+. . .
+
+
+1. Distribuição do **Maior Valor Extremo** (Gumbel Máximo)
+
+Usada para modelar **valores máximos** observados, por exemplo:
+
+- a maior temperatura anual,
+- a maior cheia de um rio,
+- o maior prejuízo financeiro.
+
+
+
+## Distribuição de Valores Extremos
+
+
+A função de distribuição acumulada (FDC) é:
+
+
+$$F(x) = \exp\!\left[-\,e^{-\Big(\dfrac{x-\mu}{\sigma}\Big)}\right], \qquad x \in \mathbb{R},$$
+
+
+onde:
+
+- $\mu$ é o **parâmetro de localização**,
+- $\sigma > 0$ é o **parâmetro de escala**.
+
+## Distribuição de Valores Extremos
+
+A função densidade é:
+
+
+$$\small f(x \mid \mu, \sigma)
+= \frac{1}{\sigma}
+\exp\!\left[
+-\left(
+\frac{x - \mu}{\sigma}
+\right)
+- \exp\!\left(
+-\frac{x - \mu}{\sigma}
+\right)
+\right],
+\qquad
+-\infty < x < \infty,\;
+-\infty < \mu < \infty,\;
+\sigma > 0$$
+
+
+É possível demonstrar que,
+
+$$E(X) = \mu + \gamma\sigma,$$
+
+
+onde $\gamma = 0.57721566$ é conhecida como **constante de Euler–Mascheroni**.
+
+e,
+
+
+$$Var(X) = \dfrac{\pi^2}{6}\sigma^2$$
+
+
+## Distribuição de Valores Extremos
+
+Se $X \sim Gumbel_{\text{max}}(\mu, \sigma)$, então
+
+$$
+f(x) = \frac{1}{\sigma} \exp\!\left[-\left(\frac{x - \mu}{\sigma}\right)- \exp\!\left(-\frac{x - \mu}{\sigma}\right)\right]
+$$
+
+
+
+
+com 
+
+
+$$E(X) = \mu + \gamma\sigma \,\,\,\,\,\,\,\,\,\,\,\, \text{       e       } \,\,\,\,\,\,\,\,\,\,\,\,Var(X) = \dfrac{\pi^2}{6}\sigma^2$$
+
+## Distribuição de Valores Extremos
+
+```{r, echo=FALSE}
+#| label: fig-gumbel-max-multiplas
+#| fig-cap: "Gumbel — Maior Valor Extremo: diferentes parâmetros"
+#| warning: false
+#| message: false
+
+library(ggplot2)
+
+# fdp Gumbel (máximo)
+dgumbel_max <- function(x, mu, sigma){
+  z <- (x - mu)/sigma
+  (1/sigma) * exp(-z - exp(-z))
+}
+
+# parâmetros (ajuste como quiser)
+mus    <- c(0, 2, 5)
+sigmas <- c(1, 2)
+
+# grade de x adaptada ao conjunto de parâmetros
+xmin <- min(mus) - 6*max(sigmas)
+xmax <- max(mus) + 6*max(sigmas)
+x <- seq(xmin, xmax, length.out = 1000)
+
+# construir data.frame com todas as curvas
+params <- expand.grid(mu = mus, sigma = sigmas)
+df_max <- do.call(rbind, apply(params, 1, function(p){
+  data.frame(
+    x    = x,
+    dens = dgumbel_max(x, p[1], p[2]),
+    curva = paste0("μ=", p[1], ", σ=", p[2])
+  )
+}))
+
+ggplot(df_max, aes(x, dens, color = curva)) +
+  geom_line(linewidth = 1.1) +
+  labs(title = "Distribuição de Gumbel — Maior Valor Extremo",
+       x = "x", y = "f(x)", color = "Parâmetros") +
+  theme_minimal(base_size = 13) +
+  theme(legend.position = "bottom")
+
+```
+
+
+
+
+## Distribuição de Valores Extremos
+
+2. Distribuição do **Menor Valor Extremo** (Gumbel Mínimo)
+
+Usada para modelar **valores mínimos**, por exemplo:
+
+- a menor temperatura do inverno,
+- a menor resistência de um material antes da falha,
+- o menor tempo até um evento extremo.
+
+
+
+## Distribuição de Valores Extremos
+
+
+A função de distribuição acumulada é:
+
+$$F(x) = 1 - \exp\!\left[-\,e^{\Big(\dfrac{x-\mu}{\sigma}\Big)}\right], \qquad x \in \mathbb{R}$$
+A função densidade correspondente é:
+
+
+$$f(x|\mu, \sigma) = \dfrac{1}{\sigma}\exp\!\left[\Big(\dfrac{x - \mu}{\sigma}\Big)- \exp\!\left(\dfrac{x - \mu}{\sigma}\right)\right],
+\qquad
+-\infty < x < \infty,\;
+-\infty < \mu < \infty,\;
+\sigma > 0$$
+
+
+
+## Distribuição de Valores Extremos
+
+É possível demonstrar que,
+
+$$E(X) = \mu - \gamma\sigma,$$
+
+
+onde $\gamma = 0.57721566$ é a **constante de Euler–Mascheroni**.
+
+e,
+
+
+$$Var(X) = \dfrac{\pi^2}{6}\sigma^2$$
+
+
+- Observe que a variância é a mesma; apenas o sinal da média muda.
+
+
+
+## Distribuição de Valores Extremos
+
+Se $X \sim Gumbel_{\text{min}}(\mu, \sigma)$, então
+
+$$
+f(x) = \dfrac{1}{\sigma}\exp\!\left[\Big(\dfrac{x - \mu}{\sigma}\Big)- \exp\!\left(\dfrac{x - \mu}{\sigma}\right)\right]
+$$
+
+
+
+
+com 
+
+
+$$E(X) = \mu - \gamma\sigma \,\,\,\,\,\,\,\,\,\,\,\, \text{       e       } \,\,\,\,\,\,\,\,\,\,\,\,Var(X) = \dfrac{\pi^2}{6}\sigma^2$$
+
+
+
+## Distribuição de Valores Extremos
+
+
+```{r, echo=FALSE}
+#| label: fig-gumbel-min-multiplas
+#| fig-cap: "Gumbel — Menor Valor Extremo: diferentes parâmetros"
+#| warning: false
+#| message: false
+
+library(ggplot2)
+
+# fdp Gumbel (mínimo)
+dgumbel_min <- function(x, mu, sigma){
+  z <- (x - mu)/sigma
+  (1/sigma) * exp(z - exp(z))
+}
+
+# use os mesmos conjuntos (ou altere):
+mus    <- c(0, 2, 5)
+sigmas <- c(1, 2)
+
+xmin <- min(mus) - 6*max(sigmas)
+xmax <- max(mus) + 6*max(sigmas)
+x <- seq(xmin, xmax, length.out = 1000)
+
+params <- expand.grid(mu = mus, sigma = sigmas)
+df_min <- do.call(rbind, apply(params, 1, function(p){
+  data.frame(
+    x    = x,
+    dens = dgumbel_min(x, p[1], p[2]),
+    curva = paste0("μ=", p[1], ", σ=", p[2])
+  )
+}))
+
+ggplot(df_min, aes(x, dens, color = curva)) +
+  geom_line(linewidth = 1.1) +
+  labs(title = "Distribuição de Gumbel — Menor Valor Extremo",
+       x = "x", y = "f(x)", color = "Parâmetros") +
+  theme_minimal(base_size = 13) +
+  theme(legend.position = "bottom")
+
+```
+
+
+
+
+## Distribuição de Valores Extremos
+
+**Relação entre as duas formas**
+
+Note que o **Gumbel do mínimo** é obtido invertendo o sinal de $x$:
+
+$$
+X_{\text{mínimo}} \sim \text{Gumbel Mínimo}(\mu, \sigma)
+\quad \Leftrightarrow \quad
+-Y \sim \text{Gumbel Máximo}(-\mu, \sigma),
+$$
+
+ou seja, o Gumbel mínimo é simplesmente o reflexo do Gumbel máximo em torno do eixo vertical.
+
+
+## Distribuição de Valores Extremos
+
+```{r, echo=FALSE}
+#| label: fig-gumbel-comparison
+#| fig-cap: "Comparação entre Gumbel Máximo e Gumbel Mínimo"
+#| warning: false
+#| message: false
+
+library(ggplot2)
+
+dgumbel_max <- function(x, mu, sigma){
+  z <- (x - mu)/sigma
+  (1/sigma) * exp(-z - exp(-z))
+}
+
+dgumbel_min <- function(x, mu, sigma){
+  z <- (x - mu)/sigma
+  (1/sigma) * exp(z - exp(z))
+}
+
+x <- seq(-10, 15, length.out = 1000)
+mu <- 2; sigma <- 2
+
+df <- data.frame(
+  x = rep(x, 2),
+  dens = c(dgumbel_max(x, mu, sigma), dgumbel_min(x, mu, sigma)),
+  tipo = rep(c("Gumbel Máximo", "Gumbel Mínimo"), each = length(x))
+)
+
+ggplot(df, aes(x, dens, color = tipo)) +
+  geom_line(linewidth = 1) +
+  labs(x = "x", y = "f(x)",
+       title = "Distribuições de Gumbel — Máximo vs Mínimo",
+       color = "Tipo") +
+  theme_minimal() +
+  theme(legend.position = "bottom")
+```
+
+
+## Distribuição de Valores Extremos
+
+<br>
+
+- O Gumbel Máximo tem cauda longa à direita → eventos de máximos (chuvas, enchentes, picos).
+
+- O Gumbel Mínimo tem cauda longa à esquerda → eventos de mínimos (temperaturas mínimas, falhas).
+
+- Parâmetro $\mu$: define o centro.
+
+- Parâmetro $\sigma$: define a dispersão e intensidade dos extremos.
+
+
+
+## Distribuição de Valores Extremos
+
+**Exemplo 11:** Considere que a temperatura de operação para um determinado processo industrial possa ser modelada através de uma distribuição do Menor Valor Extremo, com parâmetros $\mu = 30^o \,C$ e $\sigma = 2$. Valores de temperatura abaixo de $20^o\,C$ são raros, porém quando acontecem, inviabilizam o processo. Determine a probabilidade disso ocorrer, bem como a temperatura média do processo. **R:** $0,0067$ $E(X) = 28,85$
+
+
+## Distribuição de Valores Extremos
+
+**Exemplo 12:** Uma equipe de engenheiros hidrólogos está estudando o nível máximo anual do Rio Paraopeba (em metros acima do leito) para dimensionar obras de contenção.
+Com base em 30 anos de registros históricos, o nível máximo anual pode ser modelado por uma Distribuição de Gumbel do Máximo com parâmetros:
+
+$$\mu = 6 \,\,\text{m} \,\,\,\text{       e       } \,\,\,\sigma = 0,4$$
+
+Quer-se saber:
+
+a) Qual é a probabilidade de o nível máximo anual ultrapassar 7 metros? **R:** $0,0789$ 
+b) Qual é o nível esperado (médio) das cheias anuais?**R:** $6,23 \, \text{m}$ 
+
+
+
+
+## Distribuição de Valores Extremos
+
+
+```{r, echo=FALSE}
+#| label: fig-gumbel-max-exemplo
+#| fig-cap: "Distribuição de Gumbel (Maior Valor Extremo) — Exemplo: nível máximo anual do Rio Paraopeba"
+#| warning: false
+#| message: false
+
+library(ggplot2)
+
+# Parâmetros
+mu <- 6.0
+sigma <- 0.4
+x <- seq(4, 8, length.out = 1000)
+
+# Funções
+dgumbel_max <- function(x, mu, sigma){
+  z <- (x - mu)/sigma
+  (1/sigma) * exp(-z - exp(-z))
+}
+
+pgumbel_max <- function(x, mu, sigma){
+  exp(-exp(-(x - mu)/sigma))
+}
+
+# Calcular densidade e FDC
+dens <- dgumbel_max(x, mu, sigma)
+cdf  <- pgumbel_max(x, mu, sigma)
+cut  <- 7
+
+# --- Gráfico 1: Densidade com área P(X > 7) ---
+p1 <- ggplot(data.frame(x, dens), aes(x, dens)) +
+  geom_line(color = "firebrick", linewidth = 1.2) +
+  geom_area(data = subset(data.frame(x, dens), x > cut),
+            aes(y = dens), fill = "firebrick", alpha = 0.3) +
+  geom_vline(xintercept = cut, linetype = "dashed", color = "black") +
+  annotate("text", x = cut + 0.1, y = 0.5, label = "x = 7", hjust = 0, vjust = 1.5) +
+  labs(title = "Função densidade de probabilidade (fdp)",
+       subtitle = expression(X %~% Gumbel[max](mu==6.0, sigma==0.4)),
+       x = "Nível máximo (m)", y = "f(x)") +
+  theme_minimal(base_size = 13)
+
+# --- Gráfico 2: Função de distribuição acumulada ---
+p2 <- ggplot(data.frame(x, cdf), aes(x, cdf)) +
+  geom_line(color = "steelblue", linewidth = 1.2) +
+  geom_vline(xintercept = cut, linetype = "dashed", color = "black") +
+  geom_hline(yintercept = pgumbel_max(cut, mu, sigma),
+             linetype = "dashed", color = "gray40") +
+  annotate("text", x = cut + 0.1, y = 0.08,
+           label = paste0("P(X > 7) = ",
+                          round(1 - pgumbel_max(cut, mu, sigma), 3)),
+           hjust = 0, vjust = 0, color = "gray20", size = 4.2) +
+  labs(title = "Função de distribuição acumulada (FDC)",
+       x = "Nível máximo (m)", y = "F(x)") +
+  theme_minimal(base_size = 13)
+
+# Mostrar lado a lado
+library(patchwork)
+p1 + p2
+
+```
+
