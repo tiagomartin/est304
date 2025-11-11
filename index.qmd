@@ -34,7 +34,7 @@ Função Característica; Integrais Multiplas; Vetores Aleatórios; Distribuiç�
 1. **Outras Distribuições Contínuas:** Gama, Qui-Quadrado, Beta. Weibull, Log-Normal e Exponencial Dupla. Distribuição de Valores Extremos.
 
 
-2. **Transformação de Variáveis Unidimencionais:** Caso Discreto. Caso Contínuo. A Transformação Integral. Aplicações: Geração de Amostras Aleatórias.
+2. **Transformação de Variáveis Unidimensionais:** Caso Discreto. Caso Contínuo. A Transformação Integral. Aplicações: Geração de Amostras Aleatórias.
 
 
 3. **Função Geradora de Momentos:**  Função Característica.

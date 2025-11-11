@@ -1,0 +1,8 @@
+---
+title: "Semana 06"
+---
+
+
+## Slides
+
+{{< fa file-powerpoint size=lg >}} [Outras Distribuições Contínuas](/aulas/outras_distr_continuas/outras_dist_continuas.html#/title-slide "Outras Distribuições Contínuas"){aria-label="Outras Distribuições Contínuas"}

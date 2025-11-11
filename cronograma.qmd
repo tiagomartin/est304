@@ -1,0 +1,61 @@
+---
+title: "Cronograma da Disciplina"
+tbl-colwidths: [5,10,30,5,5,5,5,5,5,5]
+---
+
+Esta página contém um esboço dos tópicos, conteúdos e tarefas para o semestre. Este cronograma será atualizado conforme o semestre avança.
+
+<!-- https://fontawesome.com/search?o=r&m=free -->
+
+<!-- https://jpswalsh.github.io/academicons/ -->
+
+<!-- [{{< fa file-pdf size=2xl >}}](/weeks/week-1.html#prepare){aria-label="Week 1 summary"}  |  [️](/slides/lec-1.html "Lecture slides"){aria-label="Lecture 1 slides"}  |       [{{< fa laptop-file size=2xl >}}](/ae/ae-0-movies.html "Application exercise"){aria-label="Application Exercise 0 instructions"} -->
+
+<!-- {{< fa brands r-project size=2xl >}}  -  scripts -->
+
+<!-- {{< fa file-powerpoint size=2xl >}}   -  slides -->
+
+<!-- {{< fa laptop-file size=2xl >}}  -  estudo de caso -->
+
+<!-- {{< fa file-pdf size=2xl >}}  -  artigo -->
+
+<!-- {{< fa table size=2xl >}}  -  tabelas estatisticas -->
+
+<!-- {{< fa file-lines size=2xl >}}  -  exercicios -->
+
+<!-- {{< fa folder size=2xl >}}  -  material complementar -->
+
+<!-- {{< fa list-check size=2xl >}}  -  projeto -->
+
+::: column-screen-inset-right
+| Semana | Data | Tópico | Artigo | Slides | EC | LE | Script | MC | Projeto |
+|:------:|--------|--------|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+| [6](programacao/semana-6.html) | Ter, 11/11 | Outras Distribuições Contínuas |  | [{{< fa file-powerpoint size=2xl >}}](/aulas/outras_distr_continuas/outras_dist_continuas.html#/title-slide "Outras Distribuições Contínuas"){aria-label="Outras Distribuições Contínuas"} |  |  |  |  |  |
+|  | Qui, 13/11 | Outras Distribuições Contínuas |  | [{{< fa file-powerpoint size=2xl >}}](/aulas/outras_distr_continuas/outras_dist_continuas.html#/title-slide "Outras Distribuições Contínuas"){aria-label="Outras Distribuições Contínuas"} |  |  |  |  |  |
+<!-- | [7](programacao/semana-7.html) | Ter, 17/06 | Análise Preditiva |  | [{{< fa file-powerpoint size=2xl >}}](/aulas/Analise_preditiva/preditiva.html#/algoritmo-naive-bayes "Algoritmo Naive Bayes"){aria-label="Algoritmo Naive Bayes"} |  |  |  | [{{< fa folder size=2xl >}}](/material_complementar/vazamento.html "Vazamento de dados"){aria-label="Vazamento de dados"} |  | -->
+<!-- |  | Qui, 19/06 | Feriado: não haverá aula |  |  |  |  |  |  |  | -->
+<!-- | [8](programacao/semana-8.html) | Ter, 24/06 | Análise Preditiva |  | [{{< fa file-powerpoint size=2xl >}}](/aulas/Analise_preditiva/preditiva.html#/random-forests "Algoritmo Random Forests"){aria-label="Algoritmo Random Forests"} |  |  |  |  |  | -->
+<!-- |  | Qui, 26/06 | Análise Preditiva |  | [{{< fa file-powerpoint size=2xl >}}](/aulas/Analise_preditiva/preditiva.html#/redes-neurais-artificiais "Redes Neurais Artificiais"){aria-label="Redes Neurais Artificiais"} |  |  |  |  |  | -->
+<!-- | [9](programacao/semana-9.html) | Ter, 01/07 | Construindo workflows preditivos usando a base de dados Space Titanic |  |  |  |  | [{{< fa brands r-project size=2xl >}}](/analise_dados/space_titanic_workflow.html "Script análise de dados"){aria-label="Script análise de dados"} |  | [{{< fa list-check size=2xl >}}](/projeto/projeto_avaliativo.html#fase-3-construção-e-avaliação-de-modelos-preditivos "Projeto: fase 3"){aria-label="Projeto: fase 3"} | -->
+<!-- |  | Qui, 03/07 | Construindo workflows preditivos usando a base de dados Space Titanic |  |  |  |  | [{{< fa brands r-project size=2xl >}}](/analise_dados/space_titanic_workflow.html#visualizando-resultados "Script análise de dados"){aria-label="Script análise de dados"} |  |  | -->
+<!-- | [10](programacao/semana-10.html) | Ter, 08/07 | Feriado: Não haverá aula |  |  |  |  |  |  |  | -->
+<!-- |  | Qui, 10/07 | Reconhecimento de Padrões |  | [{{< fa file-powerpoint size=2xl >}}](/aulas/Reconhecimento_padroes/padroes.html "Reconhecimento de Padrões"){aria-label="Reconhecimento de Padrões"} |  |  |  |  |  | -->
+<!-- | [11](programacao/semana-11.html) | Ter, 15/07 | Não haverá aula |  |  |  |  |  |  |  | -->
+<!-- |  | Qui, 17/07 | Não haverá aula |  |  |  |  |  |  |  | -->
+<!-- | [12](programacao/semana-12.html) | Ter, 22/07 | Recesso Acadêmico |  |  |  |  |  |  |  | -->
+<!-- |  | Qui, 24/07 | Recesso Acadêmico |  |  |  |  |  |  |  | -->
+<!-- | [13](programacao/semana-13.html) | Ter, 29/07 | Não haverá aula |  |  |  |  |  |  |  | -->
+<!-- |  | Qui, 31/07 | Reconhecimento de Padrões |  | [{{< fa file-powerpoint size=2xl >}}](/aulas/Reconhecimento_padroes/padroes.html#/métodos-não-hierárquicos "Métodos não hierárquicos"){aria-label="Métodos não hierárquicos"} |  |  |  |  |  | -->
+<!-- | [14](programacao/semana-14.html) | Ter, 05/08 | Reconhecimento de Padrões |  | [{{< fa file-powerpoint size=2xl >}}](/aulas/Reconhecimento_padroes/padroes.html#/método-mean-shift "Método Mean Shift"){aria-label="Método Mean Shift"} |  |  |  |  |  | -->
+<!-- |  | Qui, 07/08 | Reconhecendo padrões usando a base de dados Space Titanic |  |  |  |  | [{{< fa brands r-project size=2xl >}}](analise_dados/space_titanic_cluster.html "Script análise de dados"){aria-label="Script análise de dados"} |  | [{{< fa list-check size=2xl >}}](/projeto/projeto_avaliativo.html#fase-4-reconhecimento-de-padrões-e-segmentação-de-clientes "Projeto: fase 4"){aria-label="Projeto: fase 4"} | -->
+<!-- | [15](programacao/semana-15.html) | Ter, 12/08 | Regras de Associação |  | [{{< fa file-powerpoint size=2xl >}}](/aulas/Regras_associacao/associacao.html "Regras de associação"){aria-label="Regras de associação"} |  |  |  |  |  | -->
+<!-- |  | Qui, 14/08 | Regras de Associação |  | [{{< fa file-powerpoint size=2xl >}}](/aulas/Regras_associacao/associacao.html#/algoritmo-apriori "Algoritmo Apriori"){aria-label="Algoritmo Apriori"} |  |  |  |  |  | -->
+<!-- | [16](programacao/semana-16.html) | Ter, 19/08 | Regras de Associação |  | [{{< fa file-powerpoint size=2xl >}}](/aulas/Regras_associacao/associacao.html#/exemplo-de-regras-de-associação-com-a-base-de-dados-groceries "Exemplo Groceries"){aria-label="Exemplo Groceries"} |  |  | [{{< fa brands r-project size=2xl >}}](analise_dados/space_titanic_regras.html "Script análise de dados"){aria-label="Script análise de dados"} |  | [{{< fa list-check size=2xl >}}](/projeto/projeto_avaliativo.html#fase-5-construção-de-um-sistema-de-recomendação "Projeto: fase 5"){aria-label="Projeto: fase 5"} | -->
+
+<!-- |                           | Qui, 14/08 | Regras de Associação | | [{{< fa file-powerpoint size=2xl >}}](/aulas/Regras_associacao/associacao.html#/algoritmo-apriori "Algoritmo Apriori"){aria-label="Algoritmo Apriori"} | | || | | -->
+:::
+
+```{r echo = FALSE}
+knitr::knit_exit()
+```
+

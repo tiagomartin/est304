@@ -1,0 +1,13 @@
+---
+title: "Aulas"
+---
+
+- [Outras Distribuições Contínuas](/aulas/outras_distr_continuas/outras_dist_continuas.html#/title-slide)
+
+- Transformação de Variáveis Unidimensionais
+
+- Função Geradora de Momentos
+
+- Integral Dupla e Tripla
+
+- Vetores Aleatórios

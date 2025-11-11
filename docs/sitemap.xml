@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>http://professortp.com.br/est304/index.html</loc>
-    <lastmod>2025-11-09T15:49:01.240Z</lastmod>
+    <lastmod>2025-11-11T19:23:04.065Z</lastmod>
   </url>
   <url>
     <loc>http://professortp.com.br/est304/about.html</loc>
@@ -11,5 +11,17 @@
   <url>
     <loc>http://professortp.com.br/est304/aulas/outras_distr_continuas/outras_dist_continuas.html</loc>
     <lastmod>2025-11-11T19:16:52.773Z</lastmod>
+  </url>
+  <url>
+    <loc>http://professortp.com.br/est304/aulas.html</loc>
+    <lastmod>2025-11-11T19:23:01.569Z</lastmod>
+  </url>
+  <url>
+    <loc>http://professortp.com.br/est304/cronograma.html</loc>
+    <lastmod>2025-11-11T19:38:26.515Z</lastmod>
+  </url>
+  <url>
+    <loc>http://professortp.com.br/est304/programacao/semana-6.html</loc>
+    <lastmod>2025-11-11T19:40:21.075Z</lastmod>
   </url>
 </urlset>
