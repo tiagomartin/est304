@@ -1,0 +1,7 @@
+---
+title: "Plano de Ensino"
+---
+
+Leia com atenção o **plano de ensino da disciplina** que será oferecida neste período. Nele estão as regras do jogo.
+
+-   [Plano de ensino](https://github.com/tiagomartin/est304/blob/main/documentos/25_2_Est%20304%20prob%202.pdf)
