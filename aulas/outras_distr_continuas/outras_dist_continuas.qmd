@@ -1688,7 +1688,7 @@ $$F(x)=\int_{-\infty}^{a}\frac{1}{2b}e^{-(a-t)/b}\,dt + \int_{a}^{x}\frac{1}{2b}
 A primeira integral resulta em:
 
 
-$$\small\int_{-\infty}^{a} \frac{1}{2b}\, e^{-(a-t)/b}\,dt = \frac{e^{-a/b}}{2b}\int_{-\infty}^{a} e^{t/b}\,dt = \frac{e^{-a/b}}{2b}\,\Big[b\,e^{t/b}\Big]_{-\infty}^{a} = \frac{e^{-a/b}}{2b}\,\Big(b\,e^{a/b}-0\Big) = \frac{1}{2}\,e^{-a/b}e^{a/b} = \frac{1}{2}$$
+$$\scriptsize\int_{-\infty}^{a} \frac{1}{2b}\, e^{-(a-t)/b}\,dt = \frac{e^{-a/b}}{2b}\int_{-\infty}^{a} e^{t/b}\,dt = \frac{e^{-a/b}}{2b}\,\Big[b\,e^{t/b}\Big]_{-\infty}^{a} = \frac{e^{-a/b}}{2b}\,\Big(b\,e^{a/b}-0\Big) = \frac{1}{2}\,e^{-a/b}e^{a/b} = \frac{1}{2}$$
 
 
 ## Distribuição Exponencial Dupla
@@ -2140,11 +2140,14 @@ $$F(x) = 1 - \exp\!\left[-\,e^{\Big(\dfrac{x-\mu}{\sigma}\Big)}\right], \qquad x
 A função densidade correspondente é:
 
 
-$$f(x|\mu, \sigma) = \dfrac{1}{\sigma}\exp\!\left[\Big(\dfrac{x - \mu}{\sigma}\Big)- \exp\!\left(\dfrac{x - \mu}{\sigma}\right)\right],
+$$
+\small
+f(x|\mu, \sigma) = \dfrac{1}{\sigma}\exp\!\left[\Big(\dfrac{x - \mu}{\sigma}\Big)- \exp\!\left(\dfrac{x - \mu}{\sigma}\right)\right],
 \qquad
 -\infty < x < \infty,\;
 -\infty < \mu < \infty,\;
-\sigma > 0$$
+\sigma > 0
+$$
 
 
 

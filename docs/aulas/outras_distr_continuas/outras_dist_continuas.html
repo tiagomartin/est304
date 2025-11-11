@@ -1116,7 +1116,7 @@ f(x)= \frac{1}{2b}\, \exp\!\left(-\frac{|x-a|}{b}\right), \qquad -\infty &lt; x 
 <p>Aqui <span class="math inline">\(|t-a|=t-a\)</span>. Assim:</p>
 <p><span class="math display">\[F(x)=\int_{-\infty}^{a}\frac{1}{2b}e^{-(a-t)/b}\,dt + \int_{a}^{x}\frac{1}{2b}e^{-(t-a)/b}\,dt\]</span></p>
 <p>A primeira integral resulta em:</p>
-<p><span class="math display">\[\small\int_{-\infty}^{a} \frac{1}{2b}\, e^{-(a-t)/b}\,dt = \frac{e^{-a/b}}{2b}\int_{-\infty}^{a} e^{t/b}\,dt = \frac{e^{-a/b}}{2b}\,\Big[b\,e^{t/b}\Big]_{-\infty}^{a} = \frac{e^{-a/b}}{2b}\,\Big(b\,e^{a/b}-0\Big) = \frac{1}{2}\,e^{-a/b}e^{a/b} = \frac{1}{2}\]</span></p>
+<p><span class="math display">\[\scriptsize\int_{-\infty}^{a} \frac{1}{2b}\, e^{-(a-t)/b}\,dt = \frac{e^{-a/b}}{2b}\int_{-\infty}^{a} e^{t/b}\,dt = \frac{e^{-a/b}}{2b}\,\Big[b\,e^{t/b}\Big]_{-\infty}^{a} = \frac{e^{-a/b}}{2b}\,\Big(b\,e^{a/b}-0\Big) = \frac{1}{2}\,e^{-a/b}e^{a/b} = \frac{1}{2}\]</span></p>
 </section>
 <section id="distribuição-exponencial-dupla-11" class="slide level2">
 <h2>Distribuição Exponencial Dupla</h2>
@@ -1322,11 +1322,14 @@ Figure&nbsp;17: Gumbel — Maior Valor Extremo: diferentes parâmetros
 <h2>Distribuição de Valores Extremos</h2>
 <p>A função de distribuição acumulada é:</p>
 <p><span class="math display">\[F(x) = 1 - \exp\!\left[-\,e^{\Big(\dfrac{x-\mu}{\sigma}\Big)}\right], \qquad x \in \mathbb{R}\]</span> A função densidade correspondente é:</p>
-<p><span class="math display">\[f(x|\mu, \sigma) = \dfrac{1}{\sigma}\exp\!\left[\Big(\dfrac{x - \mu}{\sigma}\Big)- \exp\!\left(\dfrac{x - \mu}{\sigma}\right)\right],
+<p><span class="math display">\[
+\small
+f(x|\mu, \sigma) = \dfrac{1}{\sigma}\exp\!\left[\Big(\dfrac{x - \mu}{\sigma}\Big)- \exp\!\left(\dfrac{x - \mu}{\sigma}\right)\right],
 \qquad
 -\infty &lt; x &lt; \infty,\;
 -\infty &lt; \mu &lt; \infty,\;
-\sigma &gt; 0\]</span></p>
+\sigma &gt; 0
+\]</span></p>
 </section>
 <section id="distribuição-de-valores-extremos-8" class="slide level2">
 <h2>Distribuição de Valores Extremos</h2>
