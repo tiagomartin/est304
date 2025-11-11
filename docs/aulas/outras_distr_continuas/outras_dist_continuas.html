@@ -315,6 +315,33 @@ f(x | \alpha, \lambda)=
 <p>com</p>
 <p><span class="math display">\[E(X) =  \dfrac{\alpha}{\lambda} \,\,\,\,\,\,\,\,\,\,\,\, \text{       e       } \,\,\,\,\,\,\,\,\,\,\,\,Var(X) = \dfrac{\alpha}{\lambda^2}\]</span></p>
 </section>
+<section id="distribuição-gamma-5" class="slide level2">
+<h2>Distribuição Gamma</h2>
+<p>A Função de Distribuição Acumulada da distribuição gamma é intratável analiticamente.</p>
+<p><span class="math display">\[
+F(x\mid\alpha,\lambda)
+= \int_{0}^{x} \frac{\lambda e^{-\lambda u}(\lambda u)^{\alpha-1}}{\Gamma(\alpha)}\,du,
+\qquad x\ge 0.
+\]</span></p>
+<!-- $$ -->
+<!-- F(x\mid\alpha,\lambda) -->
+<!-- = \frac{1}{\Gamma(\alpha)}\,\gamma\!\left(\alpha,\,\lambda x\right) -->
+<!-- = P\!\left(\alpha,\,\lambda x\right), -->
+<!-- $$ -->
+<!-- $$ -->
+<!-- \bar F(x\mid\alpha,\lambda)=1-F(x\mid\alpha,\lambda) -->
+<!-- =\frac{1}{\Gamma(\alpha)}\,\Gamma\!\left(\alpha,\,\lambda x\right), -->
+<!-- $$ -->
+<p>Para <span class="math inline">\(\alpha\)</span> inteiro positivo, a equação acima pode ser integrada por partes, resultando em</p>
+<p><span class="math display">\[
+F(x\mid\alpha,\lambda) =
+\begin{cases}
+1 - \sum_{k=0}^{\alpha-1}\frac{\lambda^k}{k!} x^k e^{-\lambda x}, &amp; x &gt; 0\\[6pt]
+0, &amp; x \leq 0
+\end{cases}
+\]</span></p>
+<p>A expressão acima é a soma de termos da Poisson com média <span class="math inline">\(\lambda x\)</span>.</p>
+</section>
 <section id="distribução-gamma" class="slide level2">
 <h2>Distribução Gamma</h2>
 
@@ -327,7 +354,7 @@ Figure&nbsp;1: Distribuição Gama — variação do shape (α) com λ fixo.
 <img data-src="outras_dist_continuas_files/figure-revealjs/fig-gamma-taxas-1.png" width="960" class="r-stretch quarto-figure-center" id="fig-gamma-taxas"><p class="caption">
 Figure&nbsp;2: Distribuição Gama — variação da taxa (λ) com α fixo.
 </p></section>
-<section id="distribuição-gamma-5" class="slide level2">
+<section id="distribuição-gamma-6" class="slide level2">
 <h2>Distribuição Gamma</h2>
 <p>A distribuição Gamma tem muitas aplicações reais, especialmente quando estudamos <strong>tempos até ocorrência de eventos</strong>.</p>
 <div class="fragment">
@@ -350,7 +377,7 @@ Figure&nbsp;2: Distribuição Gama — variação da taxa (λ) com α fixo.
 </ol>
 </div>
 </section>
-<section id="distribuição-gamma-6" class="slide level2">
+<section id="distribuição-gamma-7" class="slide level2">
 <h2>Distribuição Gamma</h2>
 <ol start="4" type="1">
 <li><strong>Priori conjugada em Bayesiana:</strong> é priori conjugada para o parâmetro de taxa de uma Exponencial ou Poisson. Então em inferência Bayesiana, a Gamma aparece o tempo todo como priori para <span class="math inline">\(\lambda\)</span></li>
@@ -370,6 +397,24 @@ Figure&nbsp;2: Distribuição Gama — variação da taxa (λ) com α fixo.
 <li><strong>Análise de risco / Seguros:</strong> valores positivos e assimétricos (como sinistros) podem ser modelados com Gamma.</li>
 </ol>
 </div>
+</section>
+<section id="distribuição-gamma-8" class="slide level2">
+<h2>Distribuição Gamma</h2>
+<p><strong>Exemplo 01:</strong> Suponha que o tempo gasto por um estagiário selecionado aleatoriamente para realizar uma tarefa em uma empresa tem uma distribuição gamma com média <span class="math inline">\(20\,\, \text{minutos}\)</span> e variância de <span class="math inline">\(80\,\, \text{minutos}^2\)</span></p>
+<ol type="a">
+<li>Quais são os parâmetros da distribuição gamma utilizada? <strong>R:</strong> <span class="math inline">\(\lambda = 0,25\)</span> e <span class="math inline">\(\alpha = 5\)</span></li>
+<li>Qual é a probabilidade de um estagiário realizar a tarefa em no máximo 24 minutos? <strong>R:</strong> <span class="math inline">\(0,7149\)</span></li>
+<li>Qual é a probabilidade de um estagiário passar entre 20 e 40 minutos realizando a tarefa? <strong>R:</strong> <span class="math inline">\(0,5595\)</span></li>
+</ol>
+</section>
+<section id="distribuição-gamma-9" class="slide level2">
+<h2>Distribuição Gamma</h2>
+<p><strong>Exemplo 02:</strong> A duração do atendimento de cada cliente no caixa de um supermercado tem distribuição Gamma com parâmetro de forma <span class="math inline">\(\alpha = 12\)</span> e parâmetro de taxa <span class="math inline">\(\lambda = 2\)</span></p>
+<ol type="a">
+<li><p>Qual a média e variância da duração dos atendimentos? <strong>R:</strong> <span class="math inline">\(E(x) = 6\)</span> e <span class="math inline">\(Var(X) = 3\)</span></p></li>
+<li><p>Qual a probabilidade de um atendimento durar menos de 5 minutos? <strong>R:</strong> <span class="math inline">\(0,3032\)</span></p></li>
+</ol>
+<!-- c) Se um cliente entra na fila tendo 4 clientes antes dele, considerando independência entre os atendimentos, qual a probabilidade de ser atendido antes de 20 minutos? -->
 </section>
 <section id="distribuição-qui-quadrado" class="slide level2">
 <h2>Distribuição Qui-Quadrado</h2>
@@ -398,11 +443,34 @@ f(x | \alpha, \lambda)=
 </section>
 <section id="distribuição-qui-quadrado-2" class="slide level2">
 <h2>Distribuição Qui-Quadrado</h2>
+<p>A Função de Distribuição Acumulada da distribuição qui-quadrado é intratável analiticamente.</p>
+<p><span class="math display">\[
+F(x\mid n)
+= \int_{0}^{x} \dfrac{1}{2^{\frac{n}{2}} \Gamma \left(\frac{n}{2}\right)} e^{-\frac{x}{2}} x ^{\frac{n}{2}-1} \,dx,
+\qquad x\ge 0.
+\]</span></p>
+<!-- $$ -->
+<!-- F(x\mid\alpha,\lambda) -->
+<!-- = \frac{1}{\Gamma(\alpha)}\,\gamma\!\left(\alpha,\,\lambda x\right) -->
+<!-- = P\!\left(\alpha,\,\lambda x\right), -->
+<!-- $$ -->
+<!-- $$ -->
+<!-- \bar F(x\mid\alpha,\lambda)=1-F(x\mid\alpha,\lambda) -->
+<!-- =\frac{1}{\Gamma(\alpha)}\,\Gamma\!\left(\alpha,\,\lambda x\right), -->
+<!-- $$ -->
+<p>Para <span class="math inline">\(n\)</span> inteiro positivo par, então existe forma como série finita:</p>
+<p><span class="math display">\[
+F(x\mid n) = 1 - e^{-x/2}\sum_{k=0}^{\frac{n}{2}-1}\frac{\left(\frac{x}{2}\right)^k}{k!}
+\]</span></p>
+<p>ou seja, quando <span class="math inline">\(n\)</span> é par, ela pode ser escrita como uma soma finita de termos tipo Poisson.</p>
+</section>
+<section id="distribuição-qui-quadrado-3" class="slide level2">
+<h2>Distribuição Qui-Quadrado</h2>
 
 <img data-src="outras_dist_continuas_files/figure-revealjs/fig-chisq-multicurves-1.png" width="960" class="r-stretch quarto-figure-center" id="fig-chisq-multicurves"><p class="caption">
 Figure&nbsp;3: Densidades qui-quadrado para vários graus de liberdade n.
 </p></section>
-<section id="distribuição-qui-quadrado-3" class="slide level2">
+<section id="distribuição-qui-quadrado-4" class="slide level2">
 <h2>Distribuição Qui-Quadrado</h2>
 <p>A distribuição qui-quadrado é central em inferência estatística porque ela surge naturalmente quando somamos quadrados de variáveis Normais padrão:</p>
 <p><span class="math display">\[\chi^2_n = \displaystyle{\sum_{i=1}^n} Z_i^2, \,\,\,\,\, Z_i \sim N(0,1)\]</span></p>
@@ -478,17 +546,31 @@ f(x \mid a,b)=
 </section>
 <section id="distribuição-beta-6" class="slide level2">
 <h2>Distribuição Beta</h2>
+<p>A Função de Distribuição Acumulada da distribuição Beta é intratável analiticamente.</p>
+<p><span class="math display">\[
+F(x| a,b)=\dfrac{1}{B(a,b)}\int_0^x t^{a-1}(1-t)^{b-1}dt.
+\qquad 0&lt; x &lt; 1.
+\]</span></p>
+</section>
+<section id="distribuição-beta-7" class="slide level2">
+<h2>Distribuição Beta</h2>
 
 <img data-src="outras_dist_continuas_files/figure-revealjs/fig-beta-varia-a-1.png" width="960" class="r-stretch quarto-figure-center" id="fig-beta-varia-a"><p class="caption">
 Figure&nbsp;4: Distribuição Beta — variação de a (shape1) com b fixo.
 </p></section>
-<section id="distribuição-beta-7" class="slide level2">
+<section id="distribuição-beta-8" class="slide level2">
 <h2>Distribuição Beta</h2>
 
 <img data-src="outras_dist_continuas_files/figure-revealjs/fig-beta-varia-b-1.png" width="960" class="r-stretch quarto-figure-center" id="fig-beta-varia-b"><p class="caption">
 Figure&nbsp;5: Distribuição Beta — variação de b (shape2) com a fixo.
 </p></section>
-<section id="distribuição-beta-8" class="slide level2">
+<section id="distribuição-beta-9" class="slide level2">
+<h2>Distribuição Beta</h2>
+
+<img data-src="outras_dist_continuas_files/figure-revealjs/fig-beta-simetria-1.png" width="960" class="r-stretch quarto-figure-center" id="fig-beta-simetria"><p class="caption">
+Figure&nbsp;6: Distribuição Beta — simetria quando α = β.
+</p></section>
+<section id="distribuição-beta-10" class="slide level2">
 <h2>Distribuição Beta</h2>
 <p>A distribuição Beta é usada para modelar proporções (variáveis contínuas entre 0 e 1). É uma das distribuições mais importantes em estatística aplicada.</p>
 <div class="fragment">
@@ -507,6 +589,23 @@ Figure&nbsp;5: Distribuição Beta — variação de b (shape2) com a fixo.
 </ol>
 </div>
 </section>
+<section id="distribuição-beta-11" class="slide level2">
+<h2>Distribuição Beta</h2>
+<p><strong>Exemplo 03:</strong> A porcentagem de impurezas por lote, em determinado produto químico, é uma variável aleatória com distribuição Beta com parâmetros <span class="math inline">\(a = 3\)</span> e <span class="math inline">\(b = 2\)</span>. Um lote com mais de <span class="math inline">\(40\%\)</span> de impurezas não pode ser vendido.</p>
+<ol type="a">
+<li>Qual é a probabilidade de que um lote, selecionado ao acaso, não possa ser vendido por causa do excesso de impurezas? <strong>R:</strong> <span class="math inline">\(0,8208\)</span></li>
+<li>Quantos lotes, em média, são selecionados, ao acaso, até que se encontre um que não pode ser vendido por causa do excesso de impurezas? <strong>R:</strong> <span class="math inline">\(1,2183\)</span></li>
+<li>Qual é a porcentagem média de impurezas nos lotes desse produto químico? <strong>R:</strong> <span class="math inline">\(0,60\)</span></li>
+</ol>
+</section>
+<section id="distribuição-beta-12" class="slide level2">
+<h2>Distribuição Beta</h2>
+<p><strong>Exemplo 04:</strong> O teor de gordura no leite de um rebanho bovino é uma variável com distribuição Beta com parâmetros <span class="math inline">\(a = 2\)</span> e <span class="math inline">\(b = 5\)</span>.</p>
+<ol type="a">
+<li>Qual o teor médio de gordura no leite? <strong>R:</strong> <span class="math inline">\(0,2857\)</span></li>
+<li>Qual o percentual de amostras que terá teor de gordura menor que <span class="math inline">\(10\%\)</span>? <strong>R:</strong> <span class="math inline">\(0,1143\)</span></li>
+</ol>
+</section>
 <section id="distribuição-weibull" class="slide level2">
 <h2>Distribuição Weibull</h2>
 <p>Uma variável aleatória tem distribuição de Weibull com parâmetros <span class="math inline">\(\beta &gt; 0\)</span> e <span class="math inline">\(\alpha &gt; 0\)</span> se sua função densidade para <span class="math inline">\(x \geq 0\)</span> é dada por</p>
@@ -520,6 +619,11 @@ f(x|\alpha, \beta) =
 0, &amp; x&lt;0
 \end{cases}
 \]</span></p>
+<p>Nesta parametrização,</p>
+<ul>
+<li><span class="math inline">\(\beta\)</span> - parâmetro de forma</li>
+<li><span class="math inline">\(\alpha\)</span> - parâmetro de escala</li>
+</ul>
 </section>
 <section id="distribuição-weibull-1" class="slide level2">
 <h2>Distribuição Weibull</h2>
@@ -572,17 +676,41 @@ f(x|\alpha, \beta) =
 </section>
 <section id="distribuição-weibull-6" class="slide level2">
 <h2>Distribuição Weibull</h2>
+<p>Uma das vantagens da distribuição Weibull é a possibilidade de encontrar a sua função de distribuição parametrizada por <span class="math inline">\(\alpha\)</span> e <span class="math inline">\(\beta\)</span>. Dessa forma fica fácil fazer cálculos de probabilidades.</p>
+<div class="fragment">
+<p>Por definição, <span class="math inline">\(F(x) = P(X ≤ x)\)</span>. Para <span class="math inline">\(x \leq 0\)</span> claramente <span class="math inline">\(F(x) = 0\)</span>. Para <span class="math inline">\(x &gt; 0\)</span>, temos:</p>
+<p><span class="math display">\[F(x) = \int_0^x \dfrac{\beta}{\alpha}\left(\dfrac{t}{\alpha}\right)^{\beta - 1} \exp\!\left[-\left(\dfrac{t}{\alpha}\right)^{\beta}\right] \,\,dt\]</span></p>
+<p>Mudança de variável: <span class="math inline">\(u=\left(\frac{t}{\alpha}\right)^{\beta} \;\;\Rightarrow\;\; du=\frac{\beta}{\alpha}\left(\frac{t}{\alpha}\right)^{\beta-1}dt.\)</span> Quando <span class="math inline">\(t=0\)</span>, <span class="math inline">\(u=0\)</span>; quando <span class="math inline">\(t=x\)</span>, <span class="math inline">\(u=(x/\alpha)^{\beta}\)</span>.</p>
+</div>
+</section>
+<section id="distribuição-weibull-7" class="slide level2">
+<h2>Distribuição Weibull</h2>
+<p>Logo,</p>
+<p><span class="math display">\[
+F(x)=\int_{0}^{(x/\alpha)^{\beta}} e^{-u}\,du = \Big[-e^{-u}\Big]_{0}^{(x/\alpha)^{\beta}} = 1-\exp\!\left[-\left(\frac{x}{\alpha}\right)^{\beta}\right]
+\]</span></p>
+<p>Portanto,</p>
+<p><span class="math display">\[
+F(x|\alpha, \beta)=
+\begin{cases}
+1-\exp\!\left[-\left(\dfrac{x}{\alpha}\right)^{\beta}\right], &amp; x&gt; 0,\\[8pt]
+0, &amp; x\le0.
+\end{cases}
+\]</span></p>
+</section>
+<section id="distribuição-weibull-8" class="slide level2">
+<h2>Distribuição Weibull</h2>
 
 <img data-src="outras_dist_continuas_files/figure-revealjs/fig-weibull-var-1.png" width="960" class="r-stretch quarto-figure-center" id="fig-weibull-var"><p class="caption">
-Figure&nbsp;6: Distribuição Weibull — variação de β (forma) com α fixo.
+Figure&nbsp;7: Distribuição Weibull — variação de β (forma) com α fixo.
 </p></section>
-<section id="distribuição-weibull-7" class="slide level2">
+<section id="distribuição-weibull-9" class="slide level2">
 <h2>Distribuição Weibull</h2>
 
 <img data-src="outras_dist_continuas_files/figure-revealjs/fig-weibull-var-alpha-1.png" width="960" class="r-stretch quarto-figure-center" id="fig-weibull-var-alpha"><p class="caption">
-Figure&nbsp;7: Distribuição Weibull — variação de α (escala) com β fixo.
+Figure&nbsp;8: Distribuição Weibull — variação de α (escala) com β fixo.
 </p></section>
-<section id="distribuição-weibull-8" class="slide level2">
+<section id="distribuição-weibull-10" class="slide level2">
 <h2>Distribuição Weibull</h2>
 <p>A Weibull é uma das distribuições mais usadas em engenharia para modelar tempo até falha/tempo de vida. Ela é extremamente flexível porque o parâmetro de forma <span class="math inline">\(\beta\)</span> permite que o risco aumente, diminua ou seja constante ao longo do tempo.</p>
 <div class="fragment">
@@ -605,7 +733,7 @@ Figure&nbsp;7: Distribuição Weibull — variação de α (escala) com β fixo.
 </ol>
 </div>
 </section>
-<section id="distribuição-weibull-9" class="slide level2">
+<section id="distribuição-weibull-11" class="slide level2">
 <h2>Distribuição Weibull</h2>
 <ol start="3" type="1">
 <li><strong>Análise de sobrevivência/biomedicina:</strong>
@@ -630,9 +758,223 @@ Figure&nbsp;7: Distribuição Weibull — variação de α (escala) com β fixo.
 <li>modelagem em teoria de filas com tempos de serviço não-exponenciais</li>
 </ul></li>
 </ol>
-
-
 </div>
+</section>
+<section id="distribuição-weibull-12" class="slide level2">
+<h2>Distribuição Weibull</h2>
+<p><strong>Exemplo 05:</strong> Uma empresa realiza treinamentos periódicos com seus funcionários. Em cada grupo de treinamento é passado uma tarefa desafio individual e os funcionários do grupo podem fazê-la durante o tempo que precisarem. O tempo que dura a tarefa desafio, em horas, pode ser considerada uma variável aleatória de Weibull com <span class="math inline">\(\alpha = 2\)</span> e <span class="math inline">\(\beta = 0,4\)</span>.</p>
+<ol type="a">
+<li>Em média, quanto tempo dura a tarefa desafio em um treinamento? <strong>R:</strong> <span class="math inline">\(6,6467\)</span> <span class="math inline">\((\approx 6h38min)\)</span></li>
+<li>Qual a probabilidade da tarefa desafio durar menos de 8 horas? <strong>R:</strong> <span class="math inline">\(0,8247\)</span></li>
+<li>A tarefa desafio já está sendo realizada há 2 horas. Qual a probabilidade dela acabar nas próximas 2 horas? <strong>R:</strong> <span class="math inline">\(0,2735\)</span></li>
+<li>Qual o menor tempo <span class="math inline">\(t\)</span>, em horas, para o qual podemos dizer que <span class="math inline">\(95\%\)</span> das tarefas desafio duram menos que <span class="math inline">\(t\)</span>? <strong>R:</strong> <span class="math inline">\(31,06615\)</span> <span class="math inline">\((\approx 31h04min)\)</span></li>
+</ol>
+</section>
+<section id="distribuição-weibull-13" class="slide level2">
+<h2>Distribuição Weibull</h2>
+<p><strong>Exemplo 06:</strong> Uma loja quer saber quanto tempo suas lâmpadas LED duram, para decidir garantia. Ela testa várias lâmpadas funcionando 24 horas por dia e anota o tempo até queimarem. Os dados mostram que quanto mais antiga a lâmpada, mais chance ela tem de queimar a qualquer momento, ou seja, os dados seguem uma distribuição de Weibull com parâmetros <span class="math inline">\(\alpha = 200\)</span> e <span class="math inline">\(\beta = 1,4\)</span>.</p>
+<ol type="a">
+<li>Qual a probabilidade de uma lâmpada queimar antes de 150 dias? <strong>R:</strong> <span class="math inline">\(0,4875\)</span></li>
+<li>Qual a probabilidade de uma lâmpada queimar entre 100 e 250 dias? <strong>R:</strong> <span class="math inline">\(0,4296\)</span></li>
+</ol>
+</section>
+<section id="distribuição-log-normal" class="slide level2">
+<h2>Distribuição Log-Normal</h2>
+<p>Uma variável <span class="math inline">\(X\)</span> tem distribuição Log-Normal quando</p>
+<p><span class="math display">\[\ln(X) \sim N(\mu, \sigma^2)\]</span></p>
+<p>Assim, <span class="math inline">\(X \sim Log-Normal(\mu, \sigma^2)\)</span> se sua função densidade é dada por</p>
+<p><span class="math display">\[
+f(x|\mu, \sigma) =
+\begin{cases}
+\dfrac{1}{x\, \sigma\, \sqrt{2\pi}} \,\exp\!\left[-\dfrac{1}{2}\left(\dfrac{\ln x - \mu}{\sigma}\right)^2\right],
+&amp; x&gt;0\\[10pt]
+0, &amp; x\leq 0
+\end{cases}
+\]</span></p>
+</section>
+<section id="distribuição-log-normal-1" class="slide level2">
+<h2>Distribuição Log-Normal</h2>
+<p><span class="math display">\[
+\begin{eqnarray}
+E(X) &amp;=&amp; \int_{-\infty}^{\infty} x \,\dfrac{1}{x\, \sigma\, \sqrt{2\pi}} \,\exp\!\left[-\dfrac{1}{2}\left(\dfrac{\ln x - \mu}{\sigma}\right)^2\right]\,dx \\&amp;=&amp; \int_{0}^{\infty}  \,\dfrac{1}{\sigma \,\sqrt{2\pi}}\exp\!\left[-\dfrac{1}{2}\left(\dfrac{\ln x - \mu}{\sigma}\right)^2\right]\,dx
+\end{eqnarray}
+\]</span> Mudança de variável: <span class="math inline">\(z = \ln(x) \Rightarrow x = e^z, dx = e^z \, dz\)</span>. Quando <span class="math inline">\(x \in (0, \infty) \Rightarrow z \in (-\infty,\infty)\)</span></p>
+<p><span class="math display">\[
+\begin{eqnarray}
+&amp;=&amp; \int_{-\infty}^{\infty} \dfrac{1}{\sigma\, \sqrt{2\pi}} \,\exp\!\left[-\dfrac{1}{2}\left(\dfrac{z - \mu}{\sigma}\right)^2\right]\, e^z \,dz \\&amp;=&amp; \int_{-\infty}^{\infty}  \,\dfrac{1}{\sigma \,\sqrt{2\pi}}\exp\!\left[-\dfrac{1}{2}\left(\dfrac{z - \mu}{\sigma}\right)^2 + z\right]\,dz
+\end{eqnarray}
+\]</span></p>
+</section>
+<section id="distribuição-log-normal-2" class="slide level2">
+<h2>Distribuição Log-Normal</h2>
+<p><strong>Completando o quadrado</strong> do expoente:</p>
+<p><span class="math display">\[
+\begin{eqnarray}
+z-\dfrac{(z-\mu)^2}{2\sigma^2} &amp;=&amp; -\dfrac{1}{2\sigma^2}\Big[(z-\mu)^2-2\sigma^2 z\Big] = -\dfrac{1}{2\sigma^2}\Big[z^2-2(\mu+\sigma^2)z+\mu^2\Big] \\ &amp;=&amp;  -\dfrac{1}{2\sigma^2}\big[\big(z-(\mu+\sigma^2)\big)^2 - (\mu+\sigma^2)^2+\mu^2\big] \\ &amp;=&amp; -\dfrac{\big(z-(\mu+\sigma^2)\big)^2}{2\sigma^2} +\dfrac{(\mu+\sigma^2)^2-\mu^2}{2\sigma^2} \\ &amp;=&amp; -\dfrac{\big(z-(\mu+\sigma^2)\big)^2}{2\sigma^2} +\mu+\dfrac{\sigma^2}{2}
+\end{eqnarray}
+\]</span></p>
+</section>
+<section id="distribuição-log-normal-3" class="slide level2">
+<h2>Distribuição Log-Normal</h2>
+<p>Assim,</p>
+<p><span class="math display">\[\small
+\begin{eqnarray}
+\int_{-\infty}^{\infty}  \,\dfrac{1}{\sigma \,\sqrt{2\pi}}\exp\!\left[-\dfrac{1}{2}\left(\dfrac{z - \mu}{\sigma}\right)^2 + z\right]\,dz &amp;=&amp; \int_{-\infty}^{\infty}  \,\dfrac{1}{\sigma \,\sqrt{2\pi}}\exp\!\left[-\dfrac{\big(z-(\mu+\sigma^2)\big)^2}{2\sigma^2} +\mu+\dfrac{\sigma^2}{2}\right]\,dz \\&amp;=&amp; e^{\mu+\dfrac{\sigma^2}{2}}
+\int_{-\infty}^{\infty} \dfrac{1}{\sigma \,\sqrt{2\pi}} \exp\!\left[-\frac{\big(z-(\mu+\sigma^2)\big)^2}{2\sigma^2}\right]\,dz
+\end{eqnarray}
+\]</span></p>
+<p>A integral é 1 (é uma densidade Normal). Logo,</p>
+<p><span class="math display">\[
+\boxed{E(X)=\exp\!\left(\mu+\frac{\sigma^2}{2}\right)}
+\]</span></p>
+</section>
+<section id="distribuição-log-normal-4" class="slide level2">
+<h2>Distribuição Log-Normal</h2>
+<p>Da mesma forma,</p>
+<p><span class="math display">\[
+\begin{eqnarray}
+E(X^2) &amp;=&amp; \int_{-\infty}^{\infty} x^2 \,\dfrac{1}{x\, \sigma\, \sqrt{2\pi}} \,\exp\!\left[-\dfrac{1}{2}\left(\dfrac{\ln x - \mu}{\sigma}\right)^2\right]\,dx \\&amp;=&amp; \int_{0}^{\infty}  \,\dfrac{x}{\sigma \,\sqrt{2\pi}}\exp\!\left[-\dfrac{1}{2}\left(\dfrac{\ln x - \mu}{\sigma}\right)^2\right]\,dx
+\end{eqnarray}
+\]</span></p>
+<p>Mudança de variável: <span class="math inline">\(z = \ln(x) \Rightarrow x = e^z, dx = e^z \, dz\)</span>. Quando <span class="math inline">\(x \in (0, \infty) \Rightarrow z \in (-\infty,\infty)\)</span></p>
+</section>
+<section id="distribuição-log-normal-5" class="slide level2">
+<h2>Distribuição Log-Normal</h2>
+<p><span class="math display">\[
+\begin{eqnarray}
+&amp;=&amp; \int_{-\infty}^{\infty} \dfrac{e^z}{\sigma\, \sqrt{2\pi}} \,\exp\!\left[-\dfrac{1}{2}\left(\dfrac{z - \mu}{\sigma}\right)^2\right]\, e^z \,dz \\&amp;=&amp; \int_{-\infty}^{\infty} \dfrac{1}{\sigma\, \sqrt{2\pi}} \,\exp\!\left[-\dfrac{1}{2}\left(\dfrac{z - \mu}{\sigma}\right)^2\right]\, e^{2z} \,dz \\&amp;=&amp; \int_{-\infty}^{\infty}  \,\dfrac{1}{\sigma \,\sqrt{2\pi}}\exp\!\left[-\dfrac{1}{2}\left(\dfrac{z - \mu}{\sigma}\right)^2 + 2z\right]\,dz
+\end{eqnarray}
+\]</span></p>
+</section>
+<section id="distribuição-log-normal-6" class="slide level2">
+<h2>Distribuição Log-Normal</h2>
+<p><strong>Completando o quadrado</strong> do expoente:</p>
+<p><span class="math display">\[
+\begin{eqnarray}
+2z-\dfrac{(z-\mu)^2}{2\sigma^2} &amp;=&amp; -\dfrac{1}{2\sigma^2}\Big[(z-\mu)^2-4\sigma^2 z\Big] = -\dfrac{1}{2\sigma^2}\Big[z^2-2(\mu+2\sigma^2)z+\mu^2\Big] \\ &amp;=&amp;  -\dfrac{1}{2\sigma^2}\big[\big(z-(\mu+2\sigma^2)\big)^2 - (\mu+2\sigma^2)^2+\mu^2\big] \\ &amp;=&amp; -\dfrac{\big(z-(\mu+2\sigma^2)\big)^2}{2\sigma^2} +\dfrac{(\mu+2\sigma^2)^2-\mu^2}{2\sigma^2} \\ &amp;=&amp; -\dfrac{\big(z-(\mu+2\sigma^2)\big)^2}{2\sigma^2} +2\mu+ 2\sigma^2
+\end{eqnarray}
+\]</span></p>
+</section>
+<section id="distribuição-log-normal-7" class="slide level2">
+<h2>Distribuição Log-Normal</h2>
+<p>Assim,</p>
+<p><span class="math display">\[\small
+\begin{eqnarray}
+\int_{-\infty}^{\infty}  \,\dfrac{1}{\sigma \,\sqrt{2\pi}}\exp\!\left[-\dfrac{1}{2}\left(\dfrac{z - \mu}{\sigma}\right)^2 + 2z\right]\,dz &amp;=&amp; \int_{-\infty}^{\infty}  \,\dfrac{1}{\sigma \,\sqrt{2\pi}}\exp\!\left[-\dfrac{\big(z-(\mu+ 2\sigma^2)\big)^2}{2\sigma^2} +2\mu+2\sigma^2\right]\,dz \\&amp;=&amp; e^{2\mu+2\sigma^2}
+\int_{-\infty}^{\infty} \dfrac{1}{\sigma \,\sqrt{2\pi}} \exp\!\left[-\frac{\big(z-(\mu+2\sigma^2)\big)^2}{2\sigma^2}\right]\,dz
+\end{eqnarray}
+\]</span></p>
+<p>A integral é 1 (é uma densidade Normal). Logo,</p>
+<p><span class="math display">\[
+\boxed{E(X^2)=\exp\!\left(2\mu+2\sigma^2\right)}
+\]</span></p>
+</section>
+<section id="distribuição-log-normal-8" class="slide level2">
+<h2>Distribuição Log-Normal</h2>
+<p>De forma que,</p>
+<p><span class="math display">\[
+\begin{eqnarray}
+Var(X) &amp;=&amp; E(X^2) - \left[E(X)\right]^2 \\ &amp;=&amp; \exp\!\left( 2\mu+2\sigma^2 \right) - \left[\exp\!\left(\mu+\frac{\sigma^2}{2}\right)\right]^2 \\ &amp;=&amp; \exp\!\left(\,2\mu+\sigma^2\right)\big(e^{\sigma^2}-1\big)
+\end{eqnarray}
+\]</span></p>
+<p>Assim,</p>
+<p><span class="math display">\[
+\boxed{Var(X)=\exp\!\left(\,2\mu+\sigma^2\right)\big(e^{\sigma^2}-1\big)}
+\]</span></p>
+</section>
+<section id="distribuição-log-normal-9" class="slide level2">
+<h2>Distribuição Log-Normal</h2>
+<p>Se <span class="math inline">\(X \sim Log-Normal(\mu, \sigma^2)\)</span>, então</p>
+<p><span class="math display">\[
+f(x|\mu, \sigma) =
+\begin{cases}
+\dfrac{1}{x\, \sigma\, \sqrt{2\pi}} \,\exp\!\left[-\dfrac{1}{2}\left(\dfrac{\ln x - \mu}{\sigma}\right)^2\right],
+&amp; x&gt;0\\[10pt]
+0, &amp; x\leq 0
+\end{cases}
+\]</span></p>
+<p>com</p>
+<p><span class="math display">\[E(X) = \exp\!\left(\mu+\frac{\sigma^2}{2}\right) \,\,\,\,\,\,\,\,\,\,\,\, \text{       e       } \,\,\,\,\,\,\,\,\,\,\,\,Var(X) = \exp\!\left(\,2\mu+\sigma^2\right)\big(e^{\sigma^2}-1\big)\]</span></p>
+</section>
+<section id="distribuição-log-normal-10" class="slide level2">
+<h2>Distribuição Log-Normal</h2>
+<p>A distribuição Log-Normal não possui forma fechada para a função de distribuição acumulada. No entanto,</p>
+<p><span class="math display">\[F_X(x)=P(X\le x)=\Phi\!\left(\frac{\ln x - \mu}{\sigma}\right), \quad x&gt;0,\]</span></p>
+<p>onde <span class="math inline">\(\Phi(\cdot)\)</span> é a FDA da Normal padrão.</p>
+</section>
+<section id="distribuição-log-normal-11" class="slide level2">
+<h2>Distribuição Log-Normal</h2>
+
+<img data-src="outras_dist_continuas_files/figure-revealjs/fig-lognormal-mu-1.png" width="960" class="r-stretch quarto-figure-center" id="fig-lognormal-mu"><p class="caption">
+Figure&nbsp;9: Distribuição Lognormal — variação de μ (com σ fixo)
+</p></section>
+<section id="distribuição-log-normal-12" class="slide level2">
+<h2>Distribuição Log-Normal</h2>
+
+<img data-src="outras_dist_continuas_files/figure-revealjs/fig-lognormal-sigma-1.png" width="960" class="r-stretch quarto-figure-center" id="fig-lognormal-sigma"><p class="caption">
+Figure&nbsp;10: Distribuição Lognormal — variação de σ (com μ fixo)
+</p></section>
+<section id="distribuição-log-normal-13" class="slide level2">
+<h2>Distribuição Log-Normal</h2>
+
+<img data-src="outras_dist_continuas_files/figure-revealjs/fig-lnorm-cdf-mu-1.png" width="960" class="r-stretch quarto-figure-center" id="fig-lnorm-cdf-mu"><p class="caption">
+Figure&nbsp;11: Distribuição Lognormal — FDC variando μ (σ fixo)
+</p></section>
+<section id="distribuição-log-normal-14" class="slide level2">
+<h2>Distribuição Log-Normal</h2>
+
+<img data-src="outras_dist_continuas_files/figure-revealjs/fig-lnorm-cdf-sigma-1.png" width="960" class="r-stretch quarto-figure-center" id="fig-lnorm-cdf-sigma"><p class="caption">
+Figure&nbsp;12: Distribuição Lognormal — FDC variando σ (μ fixo)
+</p></section>
+<section id="distribuição-log-normal-15" class="slide level2">
+<h2>Distribuição Log-Normal</h2>
+<p>A distribuição Lognormal aparece quando um <strong>processo multiplicativo</strong> gera a variável observada. Como <span class="math inline">\(\ln(X)\)</span> é Normal, isso quer dizer que <span class="math inline">\(X\)</span> nasce como produto de vários pequenos fatores aleatórios. Por isso, a Lognormal é muito comum em:</p>
+<div class="fragment">
+<ol type="1">
+<li><strong>Economia e Finanças:</strong> distribuição de valores de ações, tempo até certos eventos econômicos, modelos de volatilidade e retornos acumulados</li>
+</ol>
+</div>
+<div class="fragment">
+<ol start="2" type="1">
+<li><strong>Biologia e Medicina:</strong> tempos de incubação de doenças, tempos de sobrevivência em certos contextos, concentração (positiva) de substâncias em fluidos biológicos</li>
+</ol>
+</div>
+</section>
+<section id="distribuição-log-normal-16" class="slide level2">
+<h2>Distribuição Log-Normal</h2>
+<ol start="3" type="1">
+<li><strong>Engenharias/Confiabilidade:</strong> vida útil de componentes quando o desgaste é multiplicativo, dureza de materiais, diâmetro de partículas (tamanho de grãos)</li>
+</ol>
+<div class="fragment">
+<ol start="4" type="1">
+<li><strong>Ciências Ambientais:</strong> distribuição de poluentes positivos (<span class="math inline">\(CO_2\)</span>, etc.), precipitação acumulada em certos modelos</li>
+</ol>
+</div>
+</section>
+<section id="distribuição-log-normal-17" class="slide level2">
+<h2>Distribuição Log-Normal</h2>
+<p><strong>Exemplo 07:</strong> A duração do atendimento de cada cliente no caixa de um supermercado tem distribuição Lognormal com parâmetro de locação <span class="math inline">\(\mu = 1,5\)</span> e parâmetro de dispersão <span class="math inline">\(\sigma = 0,5\)</span>.</p>
+<ol type="a">
+<li>Qual a média e variância da duração dos atendimentos? <strong>R:</strong> <span class="math inline">\(E(X) = 5,0784\)</span> e <span class="math inline">\(Var(x) = 7,3251\)</span></li>
+<li>Qual a probabilidade de um atendimento durar menos de 5 minutos? <strong>R:</strong> <span class="math inline">\(0,5871\)</span></li>
+</ol>
+</section>
+<section id="distribuição-log-normal-18" class="slide level2">
+<h2>Distribuição Log-Normal</h2>
+<p><strong>Exemplo 08:</strong> Considere o tempo de reparo <span class="math inline">\(X\)</span> (em horas) de equipamentos. Admita que <span class="math display">\[
+\ln(X) \sim N(\mu,\sigma^2), \qquad \mu=0,2\,\,\,\,\text{e}\,\,\,\, \sigma=0,6.
+\]</span></p>
+<p>Responda:</p>
+<ol type="a">
+<li>Calcule <span class="math inline">\(P(X \le 1,5)\)</span>. <strong>R:</strong> <span class="math inline">\(0,6331\)</span><br>
+</li>
+<li>Calcule <span class="math inline">\(P(1 \le X \le 3)\)</span>. <strong>R:</strong> <span class="math inline">\(0,5625\)</span></li>
+</ol>
+</section>
+<section id="distribuição-exponencial-dupla" class="slide level2">
+<h2>Distribuição Exponencial Dupla</h2>
+
+
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">

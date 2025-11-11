@@ -281,6 +281,44 @@ $$E(X) =  \dfrac{\alpha}{\lambda} \,\,\,\,\,\,\,\,\,\,\,\, \text{       e       
 
 
 
+
+## Distribuição Gamma
+
+A Função de Distribuição Acumulada da distribuição gamma é intratável analiticamente.
+
+$$
+F(x\mid\alpha,\lambda)
+= \int_{0}^{x} \frac{\lambda e^{-\lambda u}(\lambda u)^{\alpha-1}}{\Gamma(\alpha)}\,du,
+\qquad x\ge 0.
+$$
+
+<!-- $$ -->
+<!-- F(x\mid\alpha,\lambda) -->
+<!-- = \frac{1}{\Gamma(\alpha)}\,\gamma\!\left(\alpha,\,\lambda x\right) -->
+<!-- = P\!\left(\alpha,\,\lambda x\right), -->
+<!-- $$ -->
+
+<!-- $$ -->
+<!-- \bar F(x\mid\alpha,\lambda)=1-F(x\mid\alpha,\lambda) -->
+<!-- =\frac{1}{\Gamma(\alpha)}\,\Gamma\!\left(\alpha,\,\lambda x\right), -->
+<!-- $$ -->
+
+Para $\alpha$ inteiro positivo, a equação acima pode ser integrada por partes, resultando em
+
+
+
+$$
+F(x\mid\alpha,\lambda) =
+\begin{cases}
+1 - \sum_{k=0}^{\alpha-1}\frac{\lambda^k}{k!} x^k e^{-\lambda x}, & x > 0\\[6pt]
+0, & x \leq 0
+\end{cases}
+$$
+
+
+A expressão acima é a soma de termos da Poisson com média $\lambda x$.
+
+
 ## Distribução Gamma
 
 ```{r, echo=FALSE}
@@ -387,6 +425,29 @@ A distribuição Gamma tem muitas aplicações reais, especialmente quando estud
 7) **Análise de risco / Seguros:** valores positivos e assimétricos (como sinistros) podem ser modelados com Gamma.
 
 
+
+
+
+ 
+## Distribuição Gamma
+
+**Exemplo 01:** Suponha que o tempo gasto por um estagiário selecionado aleatoriamente para realizar uma tarefa em uma empresa tem uma distribuição gamma com média $20\,\, \text{minutos}$ e variância de $80\,\, \text{minutos}^2$
+
+a) Quais são os parâmetros da distribuição gamma utilizada? **R:** $\lambda = 0,25$ e $\alpha = 5$
+b) Qual é a probabilidade de um estagiário realizar a tarefa em no máximo 24 minutos? **R:** $0,7149$
+c) Qual é a probabilidade de um estagiário passar entre 20 e 40 minutos realizando a tarefa? **R:** $0,5595$
+
+## Distribuição Gamma
+
+**Exemplo 02:** A duração do atendimento de cada cliente no caixa de um supermercado tem distribuição Gamma com parâmetro de forma $\alpha = 12$ e parâmetro de taxa $\lambda = 2$
+
+a) Qual a média e variância da duração dos atendimentos? **R:** $E(x) = 6$ e $Var(X) = 3$
+
+b) Qual a probabilidade de um atendimento durar menos de 5 minutos? **R:** $0,3032$
+
+<!-- c) Se um cliente entra na fila tendo 4 clientes antes dele, considerando independência entre os atendimentos, qual a probabilidade de ser atendido antes de 20 minutos? -->
+
+
 ## Distribuição Qui-Quadrado
 
 Um caso particular da distribuição Gamma, quando tomamos $\alpha = \dfrac{n}{2}$ e $\lambda = \dfrac{1}{2}$, onde $n$ é um inteiro positivo.
@@ -424,6 +485,39 @@ com
 
 
 $$E(X) =  n \,\,\,\,\,\,\,\,\,\,\,\, \text{       e       } \,\,\,\,\,\,\,\,\,\,\,\,Var(X) = 2n$$
+
+## Distribuição Qui-Quadrado
+
+A Função de Distribuição Acumulada da distribuição qui-quadrado é intratável analiticamente.
+
+$$
+F(x\mid n)
+= \int_{0}^{x} \dfrac{1}{2^{\frac{n}{2}} \Gamma \left(\frac{n}{2}\right)} e^{-\frac{x}{2}} x ^{\frac{n}{2}-1} \,dx,
+\qquad x\ge 0.
+$$
+
+<!-- $$ -->
+<!-- F(x\mid\alpha,\lambda) -->
+<!-- = \frac{1}{\Gamma(\alpha)}\,\gamma\!\left(\alpha,\,\lambda x\right) -->
+<!-- = P\!\left(\alpha,\,\lambda x\right), -->
+<!-- $$ -->
+
+<!-- $$ -->
+<!-- \bar F(x\mid\alpha,\lambda)=1-F(x\mid\alpha,\lambda) -->
+<!-- =\frac{1}{\Gamma(\alpha)}\,\Gamma\!\left(\alpha,\,\lambda x\right), -->
+<!-- $$ -->
+
+Para $n$ inteiro positivo par, então existe forma como série finita:
+
+
+
+$$
+F(x\mid n) = 1 - e^{-x/2}\sum_{k=0}^{\frac{n}{2}-1}\frac{\left(\frac{x}{2}\right)^k}{k!}
+$$
+
+
+ou seja, quando $n$ é par, ela pode ser escrita como uma soma finita de termos tipo Poisson.
+
 
 
 ## Distribuição Qui-Quadrado
@@ -573,6 +667,16 @@ $$E(X) =  \dfrac{a}{a+b} \,\,\,\,\,\,\,\,\,\,\,\, \text{       e       } \,\,\,\
 
 ## Distribuição Beta
 
+A Função de Distribuição Acumulada da distribuição Beta é intratável analiticamente.
+
+$$
+F(x| a,b)=\dfrac{1}{B(a,b)}\int_0^x t^{a-1}(1-t)^{b-1}dt.
+\qquad 0< x < 1.
+$$
+
+
+## Distribuição Beta
+
 
 ```{r, echo=FALSE}
 #| label: fig-beta-varia-a
@@ -639,6 +743,54 @@ ggplot(df2, aes(x, dens, color = curva)) +
 
 ## Distribuição Beta
 
+
+```{r, echo=FALSE}
+#| label: fig-beta-simetria
+#| fig-cap: "Distribuição Beta — simetria quando α = β."
+#| warning: false
+#| message: false
+
+library(ggplot2)
+
+# valores (simétricos): α = β
+ab_vals <- c(0.2, 0.5, 2, 3, 6)
+
+# grade no suporte (0,1)
+x <- seq(0, 1, length.out = 1200)
+
+# monta data frame com as curvas
+df <- do.call(rbind, lapply(ab_vals, function(a){
+  data.frame(
+    x = x,
+    dens = dbeta(x, shape1 = a, shape2 = a),
+    curva = paste0("α = ", a, "; β = ", a)
+  )
+}))
+
+ggplot(df, aes(x, dens, color = curva)) +
+  geom_line(linewidth = 1.2) +
+  # segmentos fora do suporte (densidade zero)
+  geom_segment(aes(x = -0.2, xend = 0, y = 0, yend = 0),
+               inherit.aes = FALSE, linewidth = 0.6) +
+  geom_segment(aes(x = 1, xend = 1.2, y = 0, yend = 0),
+               inherit.aes = FALSE, linewidth = 0.6) +
+  # bordas do suporte
+  geom_vline(xintercept = 0, linetype = 3, linewidth = 0.5) +
+  geom_vline(xintercept = 1, linetype = 3, linewidth = 0.5) +
+  coord_cartesian(xlim = c(-0.2, 1.2)) +
+  coord_cartesian(ylim = c(0, 3)) +
+  labs(x = "x", y = "f(x)", color = "Parâmetros",
+       subtitle = "Simetria se α = β") +
+  theme_minimal(base_size = 12) +
+  theme(legend.position = "right")
+
+```
+
+
+
+
+## Distribuição Beta
+
 A distribuição Beta é usada para modelar proporções (variáveis contínuas entre 0 e 1). É uma das distribuições mais importantes em estatística aplicada.
 
 
@@ -655,6 +807,25 @@ A distribuição Beta é usada para modelar proporções (variáveis contínuas 
 
 3) **Modelo para incerteza em probabilidades:** incerteza sobre $p$ em “probabilidade de sucesso” antes de observar dados, nossa crença sobre $p$ é Beta
 
+
+## Distribuição Beta
+
+**Exemplo 03:** A porcentagem de impurezas por lote, em determinado produto químico, é uma variável aleatória com
+distribuição Beta com parâmetros $a = 3$ e $b = 2$. Um lote com mais de $40\%$ de impurezas não pode ser vendido.
+
+a) Qual é a probabilidade de que um lote, selecionado ao acaso, não possa ser vendido por causa do excesso de impurezas? **R:** $0,8208$
+b) Quantos lotes, em média, são selecionados, ao acaso, até que se encontre um que não pode ser vendido por causa do excesso de impurezas? **R:** $1,2183$
+c) Qual é a porcentagem média de impurezas nos lotes desse produto químico? **R:** $0,60$
+
+
+
+## Distribuição Beta
+
+**Exemplo 04:** O teor de gordura no leite de um rebanho bovino é uma variável com distribuição Beta com parâmetros $a = 2$ e $b = 5$.
+
+
+a) Qual o teor médio de gordura no leite? **R:** $0,2857$
+b) Qual o percentual de amostras que terá teor de gordura menor que $10\%$? **R:** $0,1143$
 
 
 
@@ -673,7 +844,10 @@ f(x|\alpha, \beta) =
 \end{cases}
 $$
 
+Nesta parametrização, 
 
+- $\beta$ - parâmetro de forma
+- $\alpha$ - parâmetro de escala
 
 ## Distribuição Weibull
 
@@ -750,6 +924,42 @@ $$f(x) = \dfrac{1}{\alpha} \left(\dfrac{x}{\alpha}\right)^{1 - 1} \exp\!\left[-\
 
 
 Fazendo $\lambda = \dfrac{1}{\lambda}$, temos $f(x) = \lambda e^{-\lambda x}$. Logo $X \sim Exp(\lambda)$.
+
+
+
+## Distribuição Weibull
+
+
+Uma das vantagens da distribuição Weibull é a possibilidade de encontrar a sua função de distribuição parametrizada por $\alpha$ e $\beta$. Dessa forma fica fácil fazer cálculos de probabilidades.
+
+. . .
+
+
+Por definição, $F(x) = P(X ≤ x)$. Para $x \leq 0$ claramente $F(x) = 0$. Para $x > 0$, temos:
+
+
+$$F(x) = \int_0^x \dfrac{\beta}{\alpha}\left(\dfrac{t}{\alpha}\right)^{\beta - 1} \exp\!\left[-\left(\dfrac{t}{\alpha}\right)^{\beta}\right] \,\,dt$$
+
+Mudança de variável: $u=\left(\frac{t}{\alpha}\right)^{\beta} \;\;\Rightarrow\;\; du=\frac{\beta}{\alpha}\left(\frac{t}{\alpha}\right)^{\beta-1}dt.$ Quando $t=0$, $u=0$; quando $t=x$, $u=(x/\alpha)^{\beta}$.
+
+
+## Distribuição Weibull
+
+Logo,
+
+$$
+F(x)=\int_{0}^{(x/\alpha)^{\beta}} e^{-u}\,du = \Big[-e^{-u}\Big]_{0}^{(x/\alpha)^{\beta}} = 1-\exp\!\left[-\left(\frac{x}{\alpha}\right)^{\beta}\right]
+$$
+
+Portanto,
+
+$$
+F(x|\alpha, \beta)=
+\begin{cases}
+1-\exp\!\left[-\left(\dfrac{x}{\alpha}\right)^{\beta}\right], & x> 0,\\[8pt]
+0, & x\le0.
+\end{cases}
+$$
 
 
 
@@ -879,3 +1089,387 @@ A Weibull é uma das distribuições mais usadas em engenharia para modelar temp
     - tempo até falha em sistemas complexos
     - modelagem em teoria de filas com tempos de serviço não-exponenciais
     
+
+
+## Distribuição Weibull
+
+**Exemplo 05:** Uma empresa realiza treinamentos periódicos com seus funcionários. Em cada grupo de treinamento é passado uma tarefa desafio individual e os funcionários do grupo podem fazê-la durante o tempo que precisarem. O tempo que dura a tarefa desafio, em horas, pode ser considerada uma variável aleatória de Weibull com $\alpha = 2$ e $\beta = 0,4$.
+
+
+a) Em média, quanto tempo dura a tarefa desafio em um treinamento? **R:** $6,6467$ $(\approx 6h38min)$
+b) Qual a probabilidade da tarefa desafio durar menos de 8 horas? **R:** $0,8247$
+c) A tarefa desafio já está sendo realizada há 2 horas. Qual a probabilidade dela acabar nas próximas 2 horas? **R:** $0,2735$
+d) Qual o menor tempo $t$, em horas, para o qual podemos dizer que $95\%$ das tarefas desafio duram menos que $t$? **R:**  $31,06615$ $(\approx 31h04min)$
+
+
+## Distribuição Weibull
+
+**Exemplo 06:** Uma loja quer saber quanto tempo suas lâmpadas LED duram, para decidir garantia. Ela testa várias lâmpadas funcionando 24 horas por dia e anota o tempo até queimarem. Os dados mostram que quanto mais antiga a lâmpada, mais chance ela tem de queimar a qualquer momento, ou seja, os dados seguem uma distribuição de Weibull com parâmetros $\alpha = 200$ e $\beta = 1,4$.
+
+a) Qual a probabilidade de uma lâmpada queimar antes de 150 dias? **R:** $0,4875$
+b) Qual a probabilidade de uma lâmpada queimar entre 100 e 250 dias? **R:** $0,4296$
+
+
+## Distribuição Log-Normal
+
+
+Uma variável $X$ tem distribuição Log-Normal quando
+
+$$\ln(X) \sim N(\mu, \sigma^2)$$
+
+
+Assim, $X \sim Log-Normal(\mu, \sigma^2)$ se sua função densidade é dada por
+
+
+$$
+f(x|\mu, \sigma) =
+\begin{cases}
+\dfrac{1}{x\, \sigma\, \sqrt{2\pi}} \,\exp\!\left[-\dfrac{1}{2}\left(\dfrac{\ln x - \mu}{\sigma}\right)^2\right],
+& x>0\\[10pt]
+0, & x\leq 0
+\end{cases}
+$$
+
+
+
+## Distribuição Log-Normal
+
+$$
+\begin{eqnarray}
+E(X) &=& \int_{-\infty}^{\infty} x \,\dfrac{1}{x\, \sigma\, \sqrt{2\pi}} \,\exp\!\left[-\dfrac{1}{2}\left(\dfrac{\ln x - \mu}{\sigma}\right)^2\right]\,dx \\&=& \int_{0}^{\infty}  \,\dfrac{1}{\sigma \,\sqrt{2\pi}}\exp\!\left[-\dfrac{1}{2}\left(\dfrac{\ln x - \mu}{\sigma}\right)^2\right]\,dx 
+\end{eqnarray}
+$$
+Mudança de variável: $z = \ln(x) \Rightarrow x = e^z, dx = e^z \, dz$. Quando $x \in (0, \infty) \Rightarrow z \in (-\infty,\infty)$
+
+
+$$
+\begin{eqnarray}
+&=& \int_{-\infty}^{\infty} \dfrac{1}{\sigma\, \sqrt{2\pi}} \,\exp\!\left[-\dfrac{1}{2}\left(\dfrac{z - \mu}{\sigma}\right)^2\right]\, e^z \,dz \\&=& \int_{-\infty}^{\infty}  \,\dfrac{1}{\sigma \,\sqrt{2\pi}}\exp\!\left[-\dfrac{1}{2}\left(\dfrac{z - \mu}{\sigma}\right)^2 + z\right]\,dz 
+\end{eqnarray}
+$$
+
+
+## Distribuição Log-Normal
+
+**Completando o quadrado** do expoente:
+
+$$
+\begin{eqnarray}
+z-\dfrac{(z-\mu)^2}{2\sigma^2} &=& -\dfrac{1}{2\sigma^2}\Big[(z-\mu)^2-2\sigma^2 z\Big] = -\dfrac{1}{2\sigma^2}\Big[z^2-2(\mu+\sigma^2)z+\mu^2\Big] \\ &=&  -\dfrac{1}{2\sigma^2}\big[\big(z-(\mu+\sigma^2)\big)^2 - (\mu+\sigma^2)^2+\mu^2\big] \\ &=& -\dfrac{\big(z-(\mu+\sigma^2)\big)^2}{2\sigma^2} +\dfrac{(\mu+\sigma^2)^2-\mu^2}{2\sigma^2} \\ &=& -\dfrac{\big(z-(\mu+\sigma^2)\big)^2}{2\sigma^2} +\mu+\dfrac{\sigma^2}{2}
+\end{eqnarray}
+$$
+
+
+## Distribuição Log-Normal
+
+
+Assim,
+
+
+$$\small
+\begin{eqnarray}
+\int_{-\infty}^{\infty}  \,\dfrac{1}{\sigma \,\sqrt{2\pi}}\exp\!\left[-\dfrac{1}{2}\left(\dfrac{z - \mu}{\sigma}\right)^2 + z\right]\,dz &=& \int_{-\infty}^{\infty}  \,\dfrac{1}{\sigma \,\sqrt{2\pi}}\exp\!\left[-\dfrac{\big(z-(\mu+\sigma^2)\big)^2}{2\sigma^2} +\mu+\dfrac{\sigma^2}{2}\right]\,dz \\&=& e^{\mu+\dfrac{\sigma^2}{2}}
+\int_{-\infty}^{\infty} \dfrac{1}{\sigma \,\sqrt{2\pi}} \exp\!\left[-\frac{\big(z-(\mu+\sigma^2)\big)^2}{2\sigma^2}\right]\,dz
+\end{eqnarray}
+$$
+
+
+
+A integral é 1 (é uma densidade Normal). Logo,
+
+$$
+\boxed{E(X)=\exp\!\left(\mu+\frac{\sigma^2}{2}\right)}
+$$
+
+
+
+## Distribuição Log-Normal
+
+Da mesma forma,
+
+$$
+\begin{eqnarray}
+E(X^2) &=& \int_{-\infty}^{\infty} x^2 \,\dfrac{1}{x\, \sigma\, \sqrt{2\pi}} \,\exp\!\left[-\dfrac{1}{2}\left(\dfrac{\ln x - \mu}{\sigma}\right)^2\right]\,dx \\&=& \int_{0}^{\infty}  \,\dfrac{x}{\sigma \,\sqrt{2\pi}}\exp\!\left[-\dfrac{1}{2}\left(\dfrac{\ln x - \mu}{\sigma}\right)^2\right]\,dx 
+\end{eqnarray}
+$$
+
+
+Mudança de variável: $z = \ln(x) \Rightarrow x = e^z, dx = e^z \, dz$. Quando $x \in (0, \infty) \Rightarrow z \in (-\infty,\infty)$
+
+
+## Distribuição Log-Normal
+
+
+$$
+\begin{eqnarray}
+&=& \int_{-\infty}^{\infty} \dfrac{e^z}{\sigma\, \sqrt{2\pi}} \,\exp\!\left[-\dfrac{1}{2}\left(\dfrac{z - \mu}{\sigma}\right)^2\right]\, e^z \,dz \\&=& \int_{-\infty}^{\infty} \dfrac{1}{\sigma\, \sqrt{2\pi}} \,\exp\!\left[-\dfrac{1}{2}\left(\dfrac{z - \mu}{\sigma}\right)^2\right]\, e^{2z} \,dz \\&=& \int_{-\infty}^{\infty}  \,\dfrac{1}{\sigma \,\sqrt{2\pi}}\exp\!\left[-\dfrac{1}{2}\left(\dfrac{z - \mu}{\sigma}\right)^2 + 2z\right]\,dz 
+\end{eqnarray}
+$$
+
+
+## Distribuição Log-Normal
+
+**Completando o quadrado** do expoente:
+
+$$
+\begin{eqnarray}
+2z-\dfrac{(z-\mu)^2}{2\sigma^2} &=& -\dfrac{1}{2\sigma^2}\Big[(z-\mu)^2-4\sigma^2 z\Big] = -\dfrac{1}{2\sigma^2}\Big[z^2-2(\mu+2\sigma^2)z+\mu^2\Big] \\ &=&  -\dfrac{1}{2\sigma^2}\big[\big(z-(\mu+2\sigma^2)\big)^2 - (\mu+2\sigma^2)^2+\mu^2\big] \\ &=& -\dfrac{\big(z-(\mu+2\sigma^2)\big)^2}{2\sigma^2} +\dfrac{(\mu+2\sigma^2)^2-\mu^2}{2\sigma^2} \\ &=& -\dfrac{\big(z-(\mu+2\sigma^2)\big)^2}{2\sigma^2} +2\mu+ 2\sigma^2
+\end{eqnarray}
+$$
+
+
+
+## Distribuição Log-Normal
+
+
+Assim,
+
+
+$$\small
+\begin{eqnarray}
+\int_{-\infty}^{\infty}  \,\dfrac{1}{\sigma \,\sqrt{2\pi}}\exp\!\left[-\dfrac{1}{2}\left(\dfrac{z - \mu}{\sigma}\right)^2 + 2z\right]\,dz &=& \int_{-\infty}^{\infty}  \,\dfrac{1}{\sigma \,\sqrt{2\pi}}\exp\!\left[-\dfrac{\big(z-(\mu+ 2\sigma^2)\big)^2}{2\sigma^2} +2\mu+2\sigma^2\right]\,dz \\&=& e^{2\mu+2\sigma^2}
+\int_{-\infty}^{\infty} \dfrac{1}{\sigma \,\sqrt{2\pi}} \exp\!\left[-\frac{\big(z-(\mu+2\sigma^2)\big)^2}{2\sigma^2}\right]\,dz
+\end{eqnarray}
+$$
+
+A integral é 1 (é uma densidade Normal). Logo,
+
+$$
+\boxed{E(X^2)=\exp\!\left(2\mu+2\sigma^2\right)}
+$$
+
+
+## Distribuição Log-Normal
+
+
+De forma que,
+
+
+$$
+\begin{eqnarray}
+Var(X) &=& E(X^2) - \left[E(X)\right]^2 \\ &=& \exp\!\left( 2\mu+2\sigma^2 \right) - \left[\exp\!\left(\mu+\frac{\sigma^2}{2}\right)\right]^2 \\ &=& \exp\!\left(\,2\mu+\sigma^2\right)\big(e^{\sigma^2}-1\big)
+\end{eqnarray}
+$$
+
+Assim,
+
+$$
+\boxed{Var(X)=\exp\!\left(\,2\mu+\sigma^2\right)\big(e^{\sigma^2}-1\big)}
+$$
+
+
+## Distribuição Log-Normal
+
+Se $X \sim Log-Normal(\mu, \sigma^2)$, então
+
+$$
+f(x|\mu, \sigma) =
+\begin{cases}
+\dfrac{1}{x\, \sigma\, \sqrt{2\pi}} \,\exp\!\left[-\dfrac{1}{2}\left(\dfrac{\ln x - \mu}{\sigma}\right)^2\right],
+& x>0\\[10pt]
+0, & x\leq 0
+\end{cases}
+$$
+
+
+
+
+com 
+
+
+$$E(X) = \exp\!\left(\mu+\frac{\sigma^2}{2}\right) \,\,\,\,\,\,\,\,\,\,\,\, \text{       e       } \,\,\,\,\,\,\,\,\,\,\,\,Var(X) = \exp\!\left(\,2\mu+\sigma^2\right)\big(e^{\sigma^2}-1\big)$$
+
+
+## Distribuição Log-Normal
+
+A distribuição Log-Normal não possui forma fechada para a função de distribuição acumulada. No entanto,
+
+$$F_X(x)=P(X\le x)=\Phi\!\left(\frac{\ln x - \mu}{\sigma}\right), \quad x>0,$$
+
+
+onde $\Phi(\cdot)$ é a FDA da Normal padrão.
+
+
+## Distribuição Log-Normal
+
+```{r, echo=FALSE}
+#| label: fig-lognormal-mu
+#| fig-cap: "Distribuição Lognormal — variação de μ (com σ fixo)"
+#| warning: false
+#| message: false
+
+library(ggplot2)
+
+mus <- c(-1, 0, 1, 2)
+sigma_fixed <- 0.5
+
+x <- seq(0.001, 10, length.out = 800)
+
+df1 <- do.call(rbind, lapply(mus, function(mu){
+  data.frame(
+    x = x,
+    dens = dlnorm(x, meanlog = mu, sdlog = sigma_fixed),
+    curva = paste0("μ = ", mu)
+  )
+}))
+
+ggplot(df1, aes(x, dens, color = curva)) +
+  geom_line(linewidth = 1) +
+  labs(x = "x", y = "f(x)", color = "Parâmetros",
+       title = paste0("Lognormal (σ = ", sigma_fixed, ")")) +
+  theme_minimal()
+```
+
+
+
+
+## Distribuição Log-Normal
+
+
+```{r, echo=FALSE}
+#| label: fig-lognormal-sigma
+#| fig-cap: "Distribuição Lognormal — variação de σ (com μ fixo)"
+#| warning: false
+#| message: false
+
+mus_fixed <- 0
+sigmas <- c(0.25, 0.5, 1, 1.5)
+
+x <- seq(0.001, 10, length.out = 800)
+
+df2 <- do.call(rbind, lapply(sigmas, function(s){
+  data.frame(
+    x = x,
+    dens = dlnorm(x, meanlog = mus_fixed, sdlog = s),
+    curva = paste0("σ = ", s)
+  )
+}))
+
+ggplot(df2, aes(x, dens, color = curva)) +
+  geom_line(linewidth = 1) +
+  labs(x = "x", y = "f(x)", color = "Parâmetros",
+       title = paste0("Lognormal (μ = ", mus_fixed, ")")) +
+  theme_minimal()
+
+```
+
+
+
+## Distribuição Log-Normal
+
+
+```{r, echo=FALSE}
+#| label: fig-lnorm-cdf-mu
+#| fig-cap: "Distribuição Lognormal — FDC variando μ (σ fixo)"
+#| warning: false
+#| message: false
+
+library(ggplot2)
+
+mus <- c(-1, 0, 1, 2)
+sigma_fixed <- 0.5
+
+x <- seq(0.001, 10, length.out = 800)
+
+df1 <- do.call(rbind, lapply(mus, function(mu){
+  data.frame(
+    x = x,
+    cdf = plnorm(x, meanlog = mu, sdlog = sigma_fixed),
+    curva = paste0("μ = ", mu)
+  )
+}))
+
+ggplot(df1, aes(x, cdf, color = curva)) +
+  geom_line(linewidth = 1) +
+  labs(x = "x", y = "F(x)", color = "Parâmetros",
+       title = paste0("Lognormal CDF — σ = ", sigma_fixed)) +
+  theme_minimal()
+
+```
+
+
+
+
+## Distribuição Log-Normal
+
+
+```{r, echo=FALSE}
+#| label: fig-lnorm-cdf-sigma
+#| fig-cap: "Distribuição Lognormal — FDC variando σ (μ fixo)"
+#| warning: false
+#| message: false
+
+mu_fixed <- 0
+sigmas <- c(0.25, 0.5, 1, 1.5)
+
+x <- seq(0.001, 10, length.out = 800)
+
+df2 <- do.call(rbind, lapply(sigmas, function(s){
+  data.frame(
+    x = x,
+    cdf = plnorm(x, meanlog = mu_fixed, sdlog = s),
+    curva = paste0("σ = ", s)
+  )
+}))
+
+ggplot(df2, aes(x, cdf, color = curva)) +
+  geom_line(linewidth = 1) +
+  labs(x = "x", y = "F(x)", color = "Parâmetros",
+       title = paste0("Lognormal CDF — μ = ", mu_fixed)) +
+  theme_minimal()
+
+```
+
+
+
+
+## Distribuição Log-Normal
+
+A distribuição Lognormal aparece quando um **processo multiplicativo** gera a variável observada. Como $\ln(X)$ é Normal, isso quer dizer que 
+$X$ nasce como produto de vários pequenos fatores aleatórios. Por isso, a Lognormal é muito comum em:
+
+. . .
+
+1) **Economia e Finanças:** distribuição de valores de ações, tempo até certos eventos econômicos, modelos de volatilidade e retornos acumulados
+
+
+. . .
+
+
+2) **Biologia e Medicina:**  tempos de incubação de doenças, tempos de sobrevivência em certos contextos, concentração (positiva) de substâncias em fluidos biológicos
+
+
+## Distribuição Log-Normal
+
+3) **Engenharias/Confiabilidade:**  vida útil de componentes quando o desgaste é multiplicativo, dureza de materiais, diâmetro de partículas (tamanho de grãos)
+
+. . .
+
+4) **Ciências Ambientais:** distribuição de poluentes positivos ($CO_2$, etc.), precipitação acumulada em certos modelos
+
+
+
+
+## Distribuição Log-Normal
+
+**Exemplo 07:** A duração do atendimento de cada cliente no caixa de um supermercado tem distribuição Lognormal com parâmetro de locação $\mu = 1,5$ e parâmetro de dispersão $\sigma = 0,5$.
+
+a) Qual a média e variância da duração dos atendimentos? **R:** $E(X) = 5,0784$ e $Var(x) = 7,3251$
+b) Qual a probabilidade de um atendimento durar menos de 5 minutos? **R:** $0,5871$
+
+
+
+## Distribuição Log-Normal
+
+**Exemplo 08:** Considere o tempo de reparo $X$ (em horas) de equipamentos. Admita que
+$$
+\ln(X) \sim N(\mu,\sigma^2), \qquad \mu=0,2\,\,\,\,\text{e}\,\,\,\, \sigma=0,6.
+$$
+
+Responda:
+
+a) Calcule $P(X \le 1,5)$. **R:** $0,6331$  
+b) Calcule $P(1 \le X \le 3)$. **R:** $0,5625$
+
+
+## Distribuição Exponencial Dupla

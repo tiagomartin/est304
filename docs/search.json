@@ -151,21 +151,21 @@
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-gamma-5",
     "title": "Outras Distribuições Contínuas",
     "section": "Distribuição Gamma",
-    "text": "Distribuição Gamma\nA distribuição Gamma tem muitas aplicações reais, especialmente quando estudamos tempos até ocorrência de eventos.\n\n\nTempo até falha / confiabilidade de sistemas: modelagem do tempo de vida de componentes mecânicos, eletrônicos, etc.\n\n\n\n\nTempo até ocorrência de eventos em Poisson: Se eventos acontecem segundo um processo de Poisson com taxa \\(\\lambda\\):\n\no tempo até o primeiro evento é Exponencial (Gamma(1, \\(\\lambda\\)))\no tempo até o \\(k\\)-ésimo evento é Gamma(k,\\(\\lambda\\))\n\n\n\n\n\nModelagem de tempos de espera em filas: em teoria de filas (M/M/1, G/G/1 etc.), tempos de serviço ou tempos de atendimento podem ser modelados como Gamma."
+    "text": "Distribuição Gamma\nA Função de Distribuição Acumulada da distribuição gamma é intratável analiticamente.\n\\[\nF(x\\mid\\alpha,\\lambda)\n= \\int_{0}^{x} \\frac{\\lambda e^{-\\lambda u}(\\lambda u)^{\\alpha-1}}{\\Gamma(\\alpha)}\\,du,\n\\qquad x\\ge 0.\n\\]\n\n\n\n\n\n\n\n\n\nPara \\(\\alpha\\) inteiro positivo, a equação acima pode ser integrada por partes, resultando em\n\\[\nF(x\\mid\\alpha,\\lambda) =\n\\begin{cases}\n1 - \\sum_{k=0}^{\\alpha-1}\\frac{\\lambda^k}{k!} x^k e^{-\\lambda x}, & x &gt; 0\\\\[6pt]\n0, & x \\leq 0\n\\end{cases}\n\\]\nA expressão acima é a soma de termos da Poisson com média \\(\\lambda x\\)."
   },
   {
     "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-gamma-6",
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-gamma-6",
     "title": "Outras Distribuições Contínuas",
     "section": "Distribuição Gamma",
-    "text": "Distribuição Gamma\n\nPriori conjugada em Bayesiana: é priori conjugada para o parâmetro de taxa de uma Exponencial ou Poisson. Então em inferência Bayesiana, a Gamma aparece o tempo todo como priori para \\(\\lambda\\)\n\n\n\nHidrologia / clima: modelagem de chuvas acumuladas (precipitação) ao longo de certo intervalo: o total acumulado de chuva frequentemente é bem modelado por Gamma.\n\n\n\n\nBiologia / Epidemiologia: tempo até infecção, tempo até recuperação, duração de hospitalização, tempos de permanência podem ser modelados por Gamma (ou Weibull, que é próxima).\n\n\n\n\nAnálise de risco / Seguros: valores positivos e assimétricos (como sinistros) podem ser modelados com Gamma."
+    "text": "Distribuição Gamma\nA distribuição Gamma tem muitas aplicações reais, especialmente quando estudamos tempos até ocorrência de eventos.\n\n\nTempo até falha / confiabilidade de sistemas: modelagem do tempo de vida de componentes mecânicos, eletrônicos, etc.\n\n\n\n\nTempo até ocorrência de eventos em Poisson: Se eventos acontecem segundo um processo de Poisson com taxa \\(\\lambda\\):\n\no tempo até o primeiro evento é Exponencial (Gamma(1, \\(\\lambda\\)))\no tempo até o \\(k\\)-ésimo evento é Gamma(k,\\(\\lambda\\))\n\n\n\n\n\nModelagem de tempos de espera em filas: em teoria de filas (M/M/1, G/G/1 etc.), tempos de serviço ou tempos de atendimento podem ser modelados como Gamma."
   },
   {
     "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-gamma-7",
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-gamma-7",
     "title": "Outras Distribuições Contínuas",
     "section": "Distribuição Gamma",
-    "text": "Distribuição Gamma"
+    "text": "Distribuição Gamma\n\nPriori conjugada em Bayesiana: é priori conjugada para o parâmetro de taxa de uma Exponencial ou Poisson. Então em inferência Bayesiana, a Gamma aparece o tempo todo como priori para \\(\\lambda\\)\n\n\n\nHidrologia / clima: modelagem de chuvas acumuladas (precipitação) ao longo de certo intervalo: o total acumulado de chuva frequentemente é bem modelado por Gamma.\n\n\n\n\nBiologia / Epidemiologia: tempo até infecção, tempo até recuperação, duração de hospitalização, tempos de permanência podem ser modelados por Gamma (ou Weibull, que é próxima).\n\n\n\n\nAnálise de risco / Seguros: valores positivos e assimétricos (como sinistros) podem ser modelados com Gamma."
   },
   {
     "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-qui-quadrado",
@@ -186,14 +186,14 @@
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-qui-quadrado-2",
     "title": "Outras Distribuições Contínuas",
     "section": "Distribuição Qui-Quadrado",
-    "text": "Distribuição Qui-Quadrado\n\n\nFigure 3: Densidades qui-quadrado para vários graus de liberdade n."
+    "text": "Distribuição Qui-Quadrado\nA Função de Distribuição Acumulada da distribuição qui-quadrado é intratável analiticamente.\n\\[\nF(x\\mid n)\n= \\int_{0}^{x} \\dfrac{1}{2^{\\frac{n}{2}} \\Gamma \\left(\\frac{n}{2}\\right)} e^{-\\frac{x}{2}} x ^{\\frac{n}{2}-1} \\,dx,\n\\qquad x\\ge 0.\n\\]\n\n\n\n\n\n\n\n\n\nPara \\(n\\) inteiro positivo par, então existe forma como série finita:\n\\[\nF(x\\mid n) = 1 - e^{-x/2}\\sum_{k=0}^{\\frac{n}{2}-1}\\frac{\\left(\\frac{x}{2}\\right)^k}{k!}\n\\]\nou seja, quando \\(n\\) é par, ela pode ser escrita como uma soma finita de termos tipo Poisson."
   },
   {
     "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-qui-quadrado-3",
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-qui-quadrado-3",
     "title": "Outras Distribuições Contínuas",
     "section": "Distribuição Qui-Quadrado",
-    "text": "Distribuição Qui-Quadrado\nA distribuição qui-quadrado é central em inferência estatística porque ela surge naturalmente quando somamos quadrados de variáveis Normais padrão:\n\\[\\chi^2_n = \\displaystyle{\\sum_{i=1}^n} Z_i^2, \\,\\,\\,\\,\\, Z_i \\sim N(0,1)\\]\n\nLogo, ela está por trás dos testes mais usados com dados categóricos, ANOVA, variâncias e na estruturação das distribuições t e F."
+    "text": "Distribuição Qui-Quadrado\n\n\nFigure 3: Densidades qui-quadrado para vários graus de liberdade n."
   },
   {
     "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-beta",
@@ -242,28 +242,28 @@
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-beta-6",
     "title": "Outras Distribuições Contínuas",
     "section": "Distribuição Beta",
-    "text": "Distribuição Beta\n\n\nFigure 4: Distribuição Beta — variação de a (shape1) com b fixo."
+    "text": "Distribuição Beta\nA Função de Distribuição Acumulada da distribuição Beta é intratável analiticamente.\n\\[\nF(x| a,b)=\\dfrac{1}{B(a,b)}\\int_0^x t^{a-1}(1-t)^{b-1}dt.\n\\qquad 0&lt; x &lt; 1.\n\\]"
   },
   {
     "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-beta-7",
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-beta-7",
     "title": "Outras Distribuições Contínuas",
     "section": "Distribuição Beta",
-    "text": "Distribuição Beta\n\n\nFigure 5: Distribuição Beta — variação de b (shape2) com a fixo."
+    "text": "Distribuição Beta\n\n\nFigure 4: Distribuição Beta — variação de a (shape1) com b fixo."
   },
   {
     "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-beta-8",
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-beta-8",
     "title": "Outras Distribuições Contínuas",
     "section": "Distribuição Beta",
-    "text": "Distribuição Beta\nA distribuição Beta é usada para modelar proporções (variáveis contínuas entre 0 e 1). É uma das distribuições mais importantes em estatística aplicada.\n\n\nModelagem de proporções: proporção de sucesso, taxa de clique (CTR) em marketing digital, fração de tempo ativo de um equipamento, percentual de umidade, pureza, concentração, etc.\n\n\n\n\nInferência Bayesiana: é a prior conjugada da Bernoulli e da Binomial → se o parâmetro de interesse é uma probabilidade \\(p\\), a priori Beta é natural.\n\n\n\n\nModelo para incerteza em probabilidades: incerteza sobre \\(p\\) em “probabilidade de sucesso” antes de observar dados, nossa crença sobre \\(p\\) é Beta"
+    "text": "Distribuição Beta\n\n\nFigure 5: Distribuição Beta — variação de b (shape2) com a fixo."
   },
   {
     "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-weibull",
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-weibull",
     "title": "Outras Distribuições Contínuas",
     "section": "Distribuição Weibull",
-    "text": "Distribuição Weibull\nUma variável aleatória tem distribuição de Weibull com parâmetros \\(\\beta &gt; 0\\) e \\(\\alpha &gt; 0\\) se sua função densidade para \\(x \\geq 0\\) é dada por\n\\[\nf(x|\\alpha, \\beta) =\n\\begin{cases}\n\\dfrac{\\beta}{\\alpha}\n\\left(\\dfrac{x}{\\alpha}\\right)^{\\beta - 1}\n\\exp\\!\\left[-\\left(\\dfrac{x}{\\alpha}\\right)^{\\beta}\\right],\n& x\\geq0\\\\[10pt]\n0, & x&lt;0\n\\end{cases}\n\\]"
+    "text": "Distribuição Weibull\nUma variável aleatória tem distribuição de Weibull com parâmetros \\(\\beta &gt; 0\\) e \\(\\alpha &gt; 0\\) se sua função densidade para \\(x \\geq 0\\) é dada por\n\\[\nf(x|\\alpha, \\beta) =\n\\begin{cases}\n\\dfrac{\\beta}{\\alpha}\n\\left(\\dfrac{x}{\\alpha}\\right)^{\\beta - 1}\n\\exp\\!\\left[-\\left(\\dfrac{x}{\\alpha}\\right)^{\\beta}\\right],\n& x\\geq0\\\\[10pt]\n0, & x&lt;0\n\\end{cases}\n\\]\nNesta parametrização,\n\n\\(\\beta\\) - parâmetro de forma\n\\(\\alpha\\) - parâmetro de escala"
   },
   {
     "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-weibull-1",
@@ -305,27 +305,258 @@
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-weibull-6",
     "title": "Outras Distribuições Contínuas",
     "section": "Distribuição Weibull",
-    "text": "Distribuição Weibull\n\n\nFigure 6: Distribuição Weibull — variação de β (forma) com α fixo."
+    "text": "Distribuição Weibull\nUma das vantagens da distribuição Weibull é a possibilidade de encontrar a sua função de distribuição parametrizada por \\(\\alpha\\) e \\(\\beta\\). Dessa forma fica fácil fazer cálculos de probabilidades.\n\nPor definição, \\(F(x) = P(X ≤ x)\\). Para \\(x \\leq 0\\) claramente \\(F(x) = 0\\). Para \\(x &gt; 0\\), temos:\n\\[F(x) = \\int_0^x \\dfrac{\\beta}{\\alpha}\\left(\\dfrac{t}{\\alpha}\\right)^{\\beta - 1} \\exp\\!\\left[-\\left(\\dfrac{t}{\\alpha}\\right)^{\\beta}\\right] \\,\\,dt\\]\nMudança de variável: \\(u=\\left(\\frac{t}{\\alpha}\\right)^{\\beta} \\;\\;\\Rightarrow\\;\\; du=\\frac{\\beta}{\\alpha}\\left(\\frac{t}{\\alpha}\\right)^{\\beta-1}dt.\\) Quando \\(t=0\\), \\(u=0\\); quando \\(t=x\\), \\(u=(x/\\alpha)^{\\beta}\\)."
   },
   {
     "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-weibull-7",
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-weibull-7",
     "title": "Outras Distribuições Contínuas",
     "section": "Distribuição Weibull",
-    "text": "Distribuição Weibull\n\n\nFigure 7: Distribuição Weibull — variação de α (escala) com β fixo."
+    "text": "Distribuição Weibull\nLogo,\n\\[\nF(x)=\\int_{0}^{(x/\\alpha)^{\\beta}} e^{-u}\\,du = \\Big[-e^{-u}\\Big]_{0}^{(x/\\alpha)^{\\beta}} = 1-\\exp\\!\\left[-\\left(\\frac{x}{\\alpha}\\right)^{\\beta}\\right]\n\\]\nPortanto,\n\\[\nF(x|\\alpha, \\beta)=\n\\begin{cases}\n1-\\exp\\!\\left[-\\left(\\dfrac{x}{\\alpha}\\right)^{\\beta}\\right], & x&gt; 0,\\\\[8pt]\n0, & x\\le0.\n\\end{cases}\n\\]"
   },
   {
     "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-weibull-8",
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-weibull-8",
     "title": "Outras Distribuições Contínuas",
     "section": "Distribuição Weibull",
-    "text": "Distribuição Weibull\nA Weibull é uma das distribuições mais usadas em engenharia para modelar tempo até falha/tempo de vida. Ela é extremamente flexível porque o parâmetro de forma \\(\\beta\\) permite que o risco aumente, diminua ou seja constante ao longo do tempo.\n\n\nEngenharia de Confiabilidade:\n\nvida útil de componentes mecânicos e eletrônicos]\nfadiga de materiais\ntempo até quebra de peças, motores, rolamentos, cabos, soldas\n\n\n\n\n\nAnálise de Risco/Manutenção:\n\nplanejamento de manutenção preventiva\nprever quando um equipamento deve ser substituído"
+    "text": "Distribuição Weibull\n\n\nFigure 7: Distribuição Weibull — variação de β (forma) com α fixo."
   },
   {
     "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-weibull-9",
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-weibull-9",
     "title": "Outras Distribuições Contínuas",
     "section": "Distribuição Weibull",
+    "text": "Distribuição Weibull\n\n\nFigure 8: Distribuição Weibull — variação de α (escala) com β fixo."
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-log-normal",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-log-normal",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Log-Normal",
+    "text": "Distribuição Log-Normal\nUma variável \\(X\\) tem distribuição Log-Normal quando\n\\[\\ln(X) \\sim N(\\mu, \\sigma^2)\\]\nAssim, \\(X \\sim Log-Normal(\\mu, \\sigma^2)\\) se sua função densidade é dada por\n\\[\nf(x|\\mu, \\sigma) =\n\\begin{cases}\n\\dfrac{1}{x\\, \\sigma\\, \\sqrt{2\\pi}} \\,\\exp\\!\\left[-\\dfrac{1}{2}\\left(\\dfrac{\\ln x - \\mu}{\\sigma}\\right)^2\\right],\n& x&gt;0\\\\[10pt]\n0, & x\\leq 0\n\\end{cases}\n\\]"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribução-gamma-2",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribução-gamma-2",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribução Gamma",
+    "text": "Distribução Gamma\n\nExemplo 01: Suponha que o tempo gasto por um estagiário selecionado aleatoriamente para realizar uma tarefa em uma empresa tem uma distribuição gamma com média \\(20\\,\\, \\text{minutos}\\) e variância de \\(80\\,\\, \\text{minutos}^2\\)\n\n\nQuais são os parâmetros da distribuição gamma utilizada?\nQual é a probabilidade de um estagiário realizar a tarefa em no máximo 24 minutos?\nQual é a probabilidade de um estagiário passar entre 20 e 40 minutos realizando a tarefa?"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-gamma-8",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-gamma-8",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Gamma",
+    "text": "Distribuição Gamma\nExemplo 01: Suponha que o tempo gasto por um estagiário selecionado aleatoriamente para realizar uma tarefa em uma empresa tem uma distribuição gamma com média \\(20\\,\\, \\text{minutos}\\) e variância de \\(80\\,\\, \\text{minutos}^2\\)\n\nQuais são os parâmetros da distribuição gamma utilizada? R: \\(\\lambda = 0,25\\) e \\(\\alpha = 5\\)\nQual é a probabilidade de um estagiário realizar a tarefa em no máximo 24 minutos? R: \\(0,7149\\)\nQual é a probabilidade de um estagiário passar entre 20 e 40 minutos realizando a tarefa? R: \\(0,5595\\)"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-gamma-9",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-gamma-9",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Gamma",
+    "text": "Distribuição Gamma\nExemplo 02: A duração do atendimento de cada cliente no caixa de um supermercado tem distribuição Gamma com parâmetro de forma \\(\\alpha = 12\\) e parâmetro de taxa \\(\\lambda = 2\\)\n\nQual a média e variância da duração dos atendimentos? R: \\(E(x) = 6\\) e \\(Var(X) = 3\\)\nQual a probabilidade de um atendimento durar menos de 5 minutos? R: \\(0,3032\\)"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-beta-9",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-beta-9",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Beta",
+    "text": "Distribuição Beta\n\n\nFigure 6: Distribuição Beta — simetria quando α = β."
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-beta-10",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-beta-10",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Beta",
+    "text": "Distribuição Beta\nA distribuição Beta é usada para modelar proporções (variáveis contínuas entre 0 e 1). É uma das distribuições mais importantes em estatística aplicada.\n\n\nModelagem de proporções: proporção de sucesso, taxa de clique (CTR) em marketing digital, fração de tempo ativo de um equipamento, percentual de umidade, pureza, concentração, etc.\n\n\n\n\nInferência Bayesiana: é a prior conjugada da Bernoulli e da Binomial → se o parâmetro de interesse é uma probabilidade \\(p\\), a priori Beta é natural.\n\n\n\n\nModelo para incerteza em probabilidades: incerteza sobre \\(p\\) em “probabilidade de sucesso” antes de observar dados, nossa crença sobre \\(p\\) é Beta"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-beta-11",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-beta-11",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Beta",
+    "text": "Distribuição Beta\nExemplo 03: A porcentagem de impurezas por lote, em determinado produto químico, é uma variável aleatória com distribuição Beta com parâmetros \\(a = 3\\) e \\(b = 2\\). Um lote com mais de \\(40\\%\\) de impurezas não pode ser vendido.\n\nQual é a probabilidade de que um lote, selecionado ao acaso, não possa ser vendido por causa do excesso de impurezas? R: \\(0,8208\\)\nQuantos lotes, em média, são selecionados, ao acaso, até que se encontre um que não pode ser vendido por causa do excesso de impurezas? R: \\(1,2183\\)\nQual é a porcentagem média de impurezas nos lotes desse produto químico? R: \\(0,60\\)"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-beta-12",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-beta-12",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Beta",
+    "text": "Distribuição Beta\nExemplo 04: O teor de gordura no leite de um rebanho bovino é uma variável com distribuição Beta com parâmetros \\(a = 2\\) e \\(b = 5\\).\n\nQual o teor médio de gordura no leite? R: \\(0,2857\\)\nQual o percentual de amostras que terá teor de gordura menor que \\(10\\%\\)? R: \\(0,1143\\)"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-qui-quadrado-4",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-qui-quadrado-4",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Qui-Quadrado",
+    "text": "Distribuição Qui-Quadrado\nA distribuição qui-quadrado é central em inferência estatística porque ela surge naturalmente quando somamos quadrados de variáveis Normais padrão:\n\\[\\chi^2_n = \\displaystyle{\\sum_{i=1}^n} Z_i^2, \\,\\,\\,\\,\\, Z_i \\sim N(0,1)\\]\n\nLogo, ela está por trás dos testes mais usados com dados categóricos, ANOVA, variâncias e na estruturação das distribuições t e F."
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-weibull-10",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-weibull-10",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Weibull",
+    "text": "Distribuição Weibull\nA Weibull é uma das distribuições mais usadas em engenharia para modelar tempo até falha/tempo de vida. Ela é extremamente flexível porque o parâmetro de forma \\(\\beta\\) permite que o risco aumente, diminua ou seja constante ao longo do tempo.\n\n\nEngenharia de Confiabilidade:\n\nvida útil de componentes mecânicos e eletrônicos]\nfadiga de materiais\ntempo até quebra de peças, motores, rolamentos, cabos, soldas\n\n\n\n\n\nAnálise de Risco/Manutenção:\n\nplanejamento de manutenção preventiva\nprever quando um equipamento deve ser substituído"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-weibull-11",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-weibull-11",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Weibull",
     "text": "Distribuição Weibull\n\nAnálise de sobrevivência/biomedicina:\n\ntempo até ocorrência de um evento (recorrência de doença, óbito, falha de tratamento)\nalternativa mais flexível que exponencial\n\n\n\n\nMeteorologia e Clima:\n\ndistribuição de vento (velocidade do vento normalmente é modelada por Weibull)\n\n\n\n\n\nPesquisa operacional:\n\ntempo até falha em sistemas complexos\nmodelagem em teoria de filas com tempos de serviço não-exponenciais"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-weibull-12",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-weibull-12",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Weibull",
+    "text": "Distribuição Weibull\nExemplo 05: Uma empresa realiza treinamentos periódicos com seus funcionários. Em cada grupo de treinamento é passado uma tarefa desafio individual e os funcionários do grupo podem fazê-la durante o tempo que precisarem. O tempo que dura a tarefa desafio, em horas, pode ser considerada uma variável aleatória de Weibull com \\(\\alpha = 2\\) e \\(\\beta = 0,4\\).\n\nEm média, quanto tempo dura a tarefa desafio em um treinamento? R: \\(6,6467\\) \\((\\approx 6h38min)\\)\nQual a probabilidade da tarefa desafio durar menos de 8 horas? R: \\(0,8247\\)\nA tarefa desafio já está sendo realizada há 2 horas. Qual a probabilidade dela acabar nas próximas 2 horas? R: \\(0,2735\\)\nQual o menor tempo \\(t\\), em horas, para o qual podemos dizer que \\(95\\%\\) das tarefas desafio duram menos que \\(t\\)? R: \\(31,06615\\) \\((\\approx 31h04min)\\)"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-weibull-13",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-weibull-13",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Weibull",
+    "text": "Distribuição Weibull\nExemplo 06: Uma loja quer saber quanto tempo suas lâmpadas LED duram, para decidir garantia. Ela testa várias lâmpadas funcionando 24 horas por dia e anota o tempo até queimarem. Os dados mostram que quanto mais antiga a lâmpada, mais chance ela tem de queimar a qualquer momento, ou seja, os dados seguem uma distribuição de Weibull com parâmetros \\(\\alpha = 200\\) e \\(\\beta = 1,4\\).\n\nQual a probabilidade de uma lâmpada queimar antes de 150 dias? R: \\(0,4875\\)\nQual a probabilidade de uma lâmpada queimar entre 100 e 250 dias? R: \\(0,4296\\)"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-log-normal-1",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-log-normal-1",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Log-Normal",
+    "text": "Distribuição Log-Normal\n\\[\n\\begin{eqnarray}\nE(X) &=& \\int_{-\\infty}^{\\infty} x \\,\\dfrac{1}{x\\, \\sigma\\, \\sqrt{2\\pi}} \\,\\exp\\!\\left[-\\dfrac{1}{2}\\left(\\dfrac{\\ln x - \\mu}{\\sigma}\\right)^2\\right]\\,dx \\\\&=& \\int_{0}^{\\infty}  \\,\\dfrac{1}{\\sigma \\,\\sqrt{2\\pi}}\\exp\\!\\left[-\\dfrac{1}{2}\\left(\\dfrac{\\ln x - \\mu}{\\sigma}\\right)^2\\right]\\,dx\n\\end{eqnarray}\n\\] Mudança de variável: \\(z = \\ln(x) \\Rightarrow x = e^z, dx = e^z \\, dz\\). Quando \\(x \\in (0, \\infty) \\Rightarrow z \\in (-\\infty,\\infty)\\)\n\\[\n\\begin{eqnarray}\n&=& \\int_{-\\infty}^{\\infty} \\dfrac{1}{\\sigma\\, \\sqrt{2\\pi}} \\,\\exp\\!\\left[-\\dfrac{1}{2}\\left(\\dfrac{z - \\mu}{\\sigma}\\right)^2\\right]\\, e^z \\,dz \\\\&=& \\int_{-\\infty}^{\\infty}  \\,\\dfrac{1}{\\sigma \\,\\sqrt{2\\pi}}\\exp\\!\\left[-\\dfrac{1}{2}\\left(\\dfrac{z - \\mu}{\\sigma}\\right)^2 + z\\right]\\,dz\n\\end{eqnarray}\n\\]"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-log-normal-2",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-log-normal-2",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Log-Normal",
+    "text": "Distribuição Log-Normal\nCompletando o quadrado do expoente:\n\\[\n\\begin{eqnarray}\nz-\\dfrac{(z-\\mu)^2}{2\\sigma^2} &=& -\\dfrac{1}{2\\sigma^2}\\Big[(z-\\mu)^2-2\\sigma^2 z\\Big] = -\\dfrac{1}{2\\sigma^2}\\Big[z^2-2(\\mu+\\sigma^2)z+\\mu^2\\Big] \\\\ &=&  -\\dfrac{1}{2\\sigma^2}\\big[\\big(z-(\\mu+\\sigma^2)\\big)^2 - (\\mu+\\sigma^2)^2+\\mu^2\\big] \\\\ &=& -\\dfrac{\\big(z-(\\mu+\\sigma^2)\\big)^2}{2\\sigma^2} +\\dfrac{(\\mu+\\sigma^2)^2-\\mu^2}{2\\sigma^2} \\\\ &=& -\\dfrac{\\big(z-(\\mu+\\sigma^2)\\big)^2}{2\\sigma^2} +\\mu+\\dfrac{\\sigma^2}{2}\n\\end{eqnarray}\n\\]"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-log-normal-3",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-log-normal-3",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Log-Normal",
+    "text": "Distribuição Log-Normal\nAssim,\n\\[\\small\n\\begin{eqnarray}\n\\int_{-\\infty}^{\\infty}  \\,\\dfrac{1}{\\sigma \\,\\sqrt{2\\pi}}\\exp\\!\\left[-\\dfrac{1}{2}\\left(\\dfrac{z - \\mu}{\\sigma}\\right)^2 + z\\right]\\,dz &=& \\int_{-\\infty}^{\\infty}  \\,\\dfrac{1}{\\sigma \\,\\sqrt{2\\pi}}\\exp\\!\\left[-\\dfrac{\\big(z-(\\mu+\\sigma^2)\\big)^2}{2\\sigma^2} +\\mu+\\dfrac{\\sigma^2}{2}\\right]\\,dz \\\\&=& e^{\\mu+\\dfrac{\\sigma^2}{2}}\n\\int_{-\\infty}^{\\infty} \\dfrac{1}{\\sigma \\,\\sqrt{2\\pi}} \\exp\\!\\left[-\\frac{\\big(z-(\\mu+\\sigma^2)\\big)^2}{2\\sigma^2}\\right]\\,dz\n\\end{eqnarray}\n\\]\nA integral é 1 (é uma densidade Normal). Logo,\n\\[\n\\boxed{E(X)=\\exp\\!\\left(\\mu+\\frac{\\sigma^2}{2}\\right)}\n\\]"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-log-normal-4",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-log-normal-4",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Log-Normal",
+    "text": "Distribuição Log-Normal\nDa mesma forma,\n\\[\n\\begin{eqnarray}\nE(X^2) &=& \\int_{-\\infty}^{\\infty} x^2 \\,\\dfrac{1}{x\\, \\sigma\\, \\sqrt{2\\pi}} \\,\\exp\\!\\left[-\\dfrac{1}{2}\\left(\\dfrac{\\ln x - \\mu}{\\sigma}\\right)^2\\right]\\,dx \\\\&=& \\int_{0}^{\\infty}  \\,\\dfrac{x}{\\sigma \\,\\sqrt{2\\pi}}\\exp\\!\\left[-\\dfrac{1}{2}\\left(\\dfrac{\\ln x - \\mu}{\\sigma}\\right)^2\\right]\\,dx\n\\end{eqnarray}\n\\]\nMudança de variável: \\(z = \\ln(x) \\Rightarrow x = e^z, dx = e^z \\, dz\\). Quando \\(x \\in (0, \\infty) \\Rightarrow z \\in (-\\infty,\\infty)\\)"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-log-normal-5",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-log-normal-5",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Log-Normal",
+    "text": "Distribuição Log-Normal\n\\[\n\\begin{eqnarray}\n&=& \\int_{-\\infty}^{\\infty} \\dfrac{e^z}{\\sigma\\, \\sqrt{2\\pi}} \\,\\exp\\!\\left[-\\dfrac{1}{2}\\left(\\dfrac{z - \\mu}{\\sigma}\\right)^2\\right]\\, e^z \\,dz \\\\&=& \\int_{-\\infty}^{\\infty} \\dfrac{1}{\\sigma\\, \\sqrt{2\\pi}} \\,\\exp\\!\\left[-\\dfrac{1}{2}\\left(\\dfrac{z - \\mu}{\\sigma}\\right)^2\\right]\\, e^{2z} \\,dz \\\\&=& \\int_{-\\infty}^{\\infty}  \\,\\dfrac{1}{\\sigma \\,\\sqrt{2\\pi}}\\exp\\!\\left[-\\dfrac{1}{2}\\left(\\dfrac{z - \\mu}{\\sigma}\\right)^2 + 2z\\right]\\,dz\n\\end{eqnarray}\n\\]"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-log-normal-6",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-log-normal-6",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Log-Normal",
+    "text": "Distribuição Log-Normal\nCompletando o quadrado do expoente:\n\\[\n\\begin{eqnarray}\n2z-\\dfrac{(z-\\mu)^2}{2\\sigma^2} &=& -\\dfrac{1}{2\\sigma^2}\\Big[(z-\\mu)^2-4\\sigma^2 z\\Big] = -\\dfrac{1}{2\\sigma^2}\\Big[z^2-2(\\mu+2\\sigma^2)z+\\mu^2\\Big] \\\\ &=&  -\\dfrac{1}{2\\sigma^2}\\big[\\big(z-(\\mu+2\\sigma^2)\\big)^2 - (\\mu+2\\sigma^2)^2+\\mu^2\\big] \\\\ &=& -\\dfrac{\\big(z-(\\mu+2\\sigma^2)\\big)^2}{2\\sigma^2} +\\dfrac{(\\mu+2\\sigma^2)^2-\\mu^2}{2\\sigma^2} \\\\ &=& -\\dfrac{\\big(z-(\\mu+2\\sigma^2)\\big)^2}{2\\sigma^2} +2\\mu+ 2\\sigma^2\n\\end{eqnarray}\n\\]"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-log-normal-7",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-log-normal-7",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Log-Normal",
+    "text": "Distribuição Log-Normal\nAssim,\n\\[\\small\n\\begin{eqnarray}\n\\int_{-\\infty}^{\\infty}  \\,\\dfrac{1}{\\sigma \\,\\sqrt{2\\pi}}\\exp\\!\\left[-\\dfrac{1}{2}\\left(\\dfrac{z - \\mu}{\\sigma}\\right)^2 + 2z\\right]\\,dz &=& \\int_{-\\infty}^{\\infty}  \\,\\dfrac{1}{\\sigma \\,\\sqrt{2\\pi}}\\exp\\!\\left[-\\dfrac{\\big(z-(\\mu+ 2\\sigma^2)\\big)^2}{2\\sigma^2} +2\\mu+2\\sigma^2\\right]\\,dz \\\\&=& e^{2\\mu+2\\sigma^2}\n\\int_{-\\infty}^{\\infty} \\dfrac{1}{\\sigma \\,\\sqrt{2\\pi}} \\exp\\!\\left[-\\frac{\\big(z-(\\mu+2\\sigma^2)\\big)^2}{2\\sigma^2}\\right]\\,dz\n\\end{eqnarray}\n\\]\nA integral é 1 (é uma densidade Normal). Logo,\n\\[\n\\boxed{E(X^2)=\\exp\\!\\left(2\\mu+2\\sigma^2\\right)}\n\\]"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-log-normal-8",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-log-normal-8",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Log-Normal",
+    "text": "Distribuição Log-Normal\nDe forma que,\n\\[\n\\begin{eqnarray}\nVar(X) &=& E(X^2) - \\left[E(X)\\right]^2 \\\\ &=& \\exp\\!\\left( 2\\mu+2\\sigma^2 \\right) - \\left[\\exp\\!\\left(\\mu+\\frac{\\sigma^2}{2}\\right)\\right]^2 \\\\ &=& \\exp\\!\\left(\\,2\\mu+\\sigma^2\\right)\\big(e^{\\sigma^2}-1\\big)\n\\end{eqnarray}\n\\]\nAssim,\n\\[\n\\boxed{Var(X)=\\exp\\!\\left(\\,2\\mu+\\sigma^2\\right)\\big(e^{\\sigma^2}-1\\big)}\n\\]"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-log-normal-9",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-log-normal-9",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Log-Normal",
+    "text": "Distribuição Log-Normal\nSe \\(X \\sim Log-Normal(\\mu, \\sigma^2)\\), então\n\\[\nf(x|\\mu, \\sigma) =\n\\begin{cases}\n\\dfrac{1}{x\\, \\sigma\\, \\sqrt{2\\pi}} \\,\\exp\\!\\left[-\\dfrac{1}{2}\\left(\\dfrac{\\ln x - \\mu}{\\sigma}\\right)^2\\right],\n& x&gt;0\\\\[10pt]\n0, & x\\leq 0\n\\end{cases}\n\\]\ncom\n\\[E(X) = \\exp\\!\\left(\\mu+\\frac{\\sigma^2}{2}\\right) \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\, \\text{       e       } \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,Var(X) = \\exp\\!\\left(\\,2\\mu+\\sigma^2\\right)\\big(e^{\\sigma^2}-1\\big)\\]"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-log-normal-10",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-log-normal-10",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Log-Normal",
+    "text": "Distribuição Log-Normal\nA distribuição Log-Normal não possui forma fechada para a função de distribuição acumulada. No entanto,\n\\[F_X(x)=P(X\\le x)=\\Phi\\!\\left(\\frac{\\ln x - \\mu}{\\sigma}\\right), \\quad x&gt;0,\\]\nonde \\(\\Phi(\\cdot)\\) é a FDA da Normal padrão."
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-log-normal-11",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-log-normal-11",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Log-Normal",
+    "text": "Distribuição Log-Normal\n\n\nFigure 9: Distribuição Lognormal — variação de μ (com σ fixo)"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-log-normal-12",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-log-normal-12",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Log-Normal",
+    "text": "Distribuição Log-Normal\n\n\nFigure 10: Distribuição Lognormal — variação de σ (com μ fixo)"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-log-normal-13",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-log-normal-13",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Log-Normal",
+    "text": "Distribuição Log-Normal\n\n\nFigure 11: Distribuição Lognormal — FDC variando μ (σ fixo)"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-log-normal-14",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-log-normal-14",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Log-Normal",
+    "text": "Distribuição Log-Normal\n\n\nFigure 12: Distribuição Lognormal — FDC variando σ (μ fixo)"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-log-normal-15",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-log-normal-15",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Log-Normal",
+    "text": "Distribuição Log-Normal\nA distribuição Lognormal aparece quando um processo multiplicativo gera a variável observada. Como \\(\\ln(X)\\) é Normal, isso quer dizer que \\(X\\) nasce como produto de vários pequenos fatores aleatórios. Por isso, a Lognormal é muito comum em:\n\n\nEconomia e Finanças: distribuição de valores de ações, tempo até certos eventos econômicos, modelos de volatilidade e retornos acumulados\n\n\n\n\nBiologia e Medicina: tempos de incubação de doenças, tempos de sobrevivência em certos contextos, concentração (positiva) de substâncias em fluidos biológicos"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-log-normal-16",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-log-normal-16",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Log-Normal",
+    "text": "Distribuição Log-Normal\n\nEngenharias/Confiabilidade: vida útil de componentes quando o desgaste é multiplicativo, dureza de materiais, diâmetro de partículas (tamanho de grãos)\n\n\n\nCiências Ambientais: distribuição de poluentes positivos (\\(CO_2\\), etc.), precipitação acumulada em certos modelos"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-log-normal-17",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-log-normal-17",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Log-Normal",
+    "text": "Distribuição Log-Normal\nExemplo 07: A duração do atendimento de cada cliente no caixa de um supermercado tem distribuição Lognormal com parâmetro de locação \\(\\mu = 1,5\\) e parâmetro de dispersão \\(\\sigma = 0,5\\).\n\nQual a média e variância da duração dos atendimentos? R: \\(E(X) = 5,0784\\) e \\(Var(x) = 7,3251\\)\nQual a probabilidade de um atendimento durar menos de 5 minutos? R: \\(0,5871\\)"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-log-normal-18",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-log-normal-18",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Log-Normal",
+    "text": "Distribuição Log-Normal\nExemplo 08: Considere o tempo de reparo \\(X\\) (em horas) de equipamentos. Admita que \\[\n\\ln(X) \\sim N(\\mu,\\sigma^2), \\qquad \\mu=0,2\\,\\,\\,\\,\\text{e}\\,\\,\\,\\, \\sigma=0,6.\n\\]\nResponda:\n\nCalcule \\(P(X \\le 1,5)\\). R: \\(0,6331\\)\n\nCalcule \\(P(1 \\le X \\le 3)\\). R: \\(0,5625\\)"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-lo",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-lo",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição lo",
+    "text": "Distribuição lo"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Exponencial Dupla",
+    "text": "Distribuição Exponencial Dupla"
   }
 ]
