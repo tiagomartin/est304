@@ -1,0 +1,11 @@
+---
+title: "Listas de exercícios"
+---
+
+-   [Lista de exercícios 01 - Data de entrega: 25/11/2025](exercicios/lista01.html "Lista de exercícios 01"){aria-label="Lista de exercícios 01"}
+
+<!-- -   [Lista de exercícios 02](exercicios/lista02.html "Lista de exercícios 02"){aria-label="Lista de exercícios 02"} -->
+
+<!-- -   [Lista de exercícios 03](exercicios/lista03.html "Lista de exercícios 03"){aria-label="Lista de exercícios 03"} -->
+
+<!-- -   [Lista de exercícios 04](exercicios/lista04.html "Lista de exercícios 04"){aria-label="Lista de exercícios 04"} -->

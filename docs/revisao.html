@@ -1,0 +1,2872 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.29">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Revisão Probabilidade I – EST304 - Probabilidade II</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./cronograma.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-0815c480559380816a4d1ea211a47e91.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-748b535e376f14d4692bf2b2e5fd6380.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-0815c480559380816a4d1ea211a47e91.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-b09848b6287391c45069fed345a57cb2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-e9f3ba5fbee03b112b18b9666ab66a2c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-b09848b6287391c45069fed345a57cb2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="Revisão Probabilidade I – EST304 - Probabilidade II">
+<meta property="og:description" content="Homepage da disciplina EST304 - Probabilidade II, 2025/2">
+<meta property="og:image" content="http://professortp.com.br/est304/revisao_files/figure-html/bernoulli-plot-1.png">
+<meta property="og:site_name" content="EST304 - Probabilidade II">
+<meta property="og:image:height" content="672">
+<meta property="og:image:width" content="960">
+</head>
+
+<body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./revisao.html">Revisão Probabilidade I</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./images/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      <div class="sidebar-tools-main">
+    <a href="https://github.com/tiagomartin/est304" title="github" class="quarto-navigation-tool px-1" aria-label="github"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./aulas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Aulas</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./exercicios.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Listas de exercícios</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./plano.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Plano de Ensino</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./cronograma.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cronograma da Disciplina</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./revisao.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Revisão Probabilidade I</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#variáveis-aleatórias-vas" id="toc-variáveis-aleatórias-vas" class="nav-link active" data-scroll-target="#variáveis-aleatórias-vas"><span class="header-section-number">1</span> Variáveis Aleatórias (VAs)</a></li>
+  <li><a href="#momentos" id="toc-momentos" class="nav-link" data-scroll-target="#momentos"><span class="header-section-number">2</span> Momentos</a></li>
+  <li><a href="#distribuições-discretas" id="toc-distribuições-discretas" class="nav-link" data-scroll-target="#distribuições-discretas"><span class="header-section-number">3</span> Distribuições Discretas</a>
+  <ul class="collapse">
+  <li><a href="#bernoulli-p" id="toc-bernoulli-p" class="nav-link" data-scroll-target="#bernoulli-p"><span class="header-section-number">3.1</span> Bernoulli <span class="math inline">\((p)\)</span></a></li>
+  <li><a href="#binomial-np" id="toc-binomial-np" class="nav-link" data-scroll-target="#binomial-np"><span class="header-section-number">3.2</span> Binomial <span class="math inline">\((n,p)\)</span></a></li>
+  <li><a href="#geométrica-p" id="toc-geométrica-p" class="nav-link" data-scroll-target="#geométrica-p"><span class="header-section-number">3.3</span> Geométrica <span class="math inline">\((p)\)</span></a></li>
+  <li><a href="#pascal-binomial-negativa-rp" id="toc-pascal-binomial-negativa-rp" class="nav-link" data-scroll-target="#pascal-binomial-negativa-rp"><span class="header-section-number">3.4</span> Pascal / Binomial Negativa <span class="math inline">\((r,p)\)</span></a></li>
+  <li><a href="#hipergeométrica-nkn" id="toc-hipergeométrica-nkn" class="nav-link" data-scroll-target="#hipergeométrica-nkn"><span class="header-section-number">3.5</span> Hipergeométrica <span class="math inline">\((N,K,n)\)</span></a></li>
+  <li><a href="#poisson-lambda" id="toc-poisson-lambda" class="nav-link" data-scroll-target="#poisson-lambda"><span class="header-section-number">3.6</span> Poisson <span class="math inline">\((\lambda)\)</span></a></li>
+  </ul></li>
+  <li><a href="#distribuições-contínuas" id="toc-distribuições-contínuas" class="nav-link" data-scroll-target="#distribuições-contínuas"><span class="header-section-number">4</span> Distribuições Contínuas</a>
+  <ul class="collapse">
+  <li><a href="#uniforme-ab" id="toc-uniforme-ab" class="nav-link" data-scroll-target="#uniforme-ab"><span class="header-section-number">4.1</span> Uniforme <span class="math inline">\((a,b)\)</span></a></li>
+  <li><a href="#exponencial-lambda" id="toc-exponencial-lambda" class="nav-link" data-scroll-target="#exponencial-lambda"><span class="header-section-number">4.2</span> Exponencial <span class="math inline">\((\lambda)\)</span></a></li>
+  <li><a href="#normal-musigma2" id="toc-normal-musigma2" class="nav-link" data-scroll-target="#normal-musigma2"><span class="header-section-number">4.3</span> Normal <span class="math inline">\((\mu,\sigma^2)\)</span></a></li>
+  </ul></li>
+  <li><a href="#aproximações-clássicas" id="toc-aproximações-clássicas" class="nav-link" data-scroll-target="#aproximações-clássicas"><span class="header-section-number">5</span> Aproximações Clássicas</a>
+  <ul class="collapse">
+  <li><a href="#hipergeométrica-approx-binomial" id="toc-hipergeométrica-approx-binomial" class="nav-link" data-scroll-target="#hipergeométrica-approx-binomial"><span class="header-section-number">5.1</span> Hipergeométrica <span class="math inline">\(\approx\)</span> Binomial</a></li>
+  <li><a href="#binomial-approx-poisson" id="toc-binomial-approx-poisson" class="nav-link" data-scroll-target="#binomial-approx-poisson"><span class="header-section-number">5.2</span> Binomial <span class="math inline">\(\approx\)</span> Poisson</a></li>
+  <li><a href="#binomial-approx-normal" id="toc-binomial-approx-normal" class="nav-link" data-scroll-target="#binomial-approx-normal"><span class="header-section-number">5.3</span> Binomial <span class="math inline">\(\approx\)</span> Normal</a></li>
+  <li><a href="#poisson-approx-normal" id="toc-poisson-approx-normal" class="nav-link" data-scroll-target="#poisson-approx-normal"><span class="header-section-number">5.4</span> Poisson <span class="math inline">\(\approx\)</span> Normal</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul class="collapse"><li><a href="https://github.com/tiagomartin/est304/edit/main/revisao.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/tiagomartin/est304/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="revisao.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Revisão Probabilidade I</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="variáveis-aleatórias-vas" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Variáveis Aleatórias (VAs)</h1>
+<p><strong>Definição.</strong> Uma variável aleatória é uma função que associa a cada resultado do experimento um número real.</p>
+<ul>
+<li><p><strong>Discretas:</strong> suporte finito/enumerável (ex.: 0,1,2,…). Caracterizam-se por <strong>função de probabilidade</strong> <span class="math inline">\(P(X=x_i) =p(x_i) =p_i\)</span>. Uma função de probabilidade satisfaz <span class="math inline">\(0 \le p_i \le 1\)</span> e <span class="math inline">\(\sum_{i=1} p_i = 1\)</span></p></li>
+<li><p><strong>Contínuas:</strong> suporte intervalar. Caracterizam-se por <strong>densidade</strong> <span class="math inline">\(f(x)\)</span> tal que <span class="math inline">\(P(a&lt;X&lt; b)=\int_a^b f(x)\,dx\)</span>. Uma função densidade satisfaz <span class="math inline">\(f(x) \ge 0\)</span> e <span class="math inline">\(\int_{-\infty}^{\infty} f(x)\, dx = 1\)</span>.</p></li>
+</ul>
+<p>A <strong>função de distribuição</strong> é <span class="math inline">\(F(x)=P(X\le x)\)</span>. Em ambos os casos, <span class="math inline">\(F(x)\)</span> é não-decrescente e <span class="math inline">\(\lim_{x\to-\infty}F(x)=0\)</span>, <span class="math inline">\(\lim_{x\to\infty}F(x)=1\)</span>.</p>
+</section>
+<section id="momentos" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Momentos</h1>
+<p>Seja <span class="math inline">\(X\)</span> uma varável aleatória.</p>
+<ul>
+<li><strong>Esperança:</strong> <span class="math inline">\(E[X]=\sum_x x\,p(x)\)</span> (discreta) ou <span class="math inline">\(E[X]=\int_{-\infty}^{\infty} x f(x)\,dx\)</span> (contínua).<br>
+</li>
+<li><strong>Variância:</strong> <span class="math inline">\(Var(X)=E\!\left[(X-E[X])^2\right]=E[X^2]-E[X]^2\)</span>.<br>
+</li>
+<li><strong>Desigualdade de Jensen (convexa <span class="math inline">\(\phi\)</span>):</strong> <span class="math inline">\(\phi(E[X])\le E[\phi(X)]\)</span>.<br>
+</li>
+<li><strong>Propriedades úteis:</strong> linearidade <span class="math inline">\(E[aX+b]=aE[X]+b\)</span>; <span class="math inline">\(Var(aX+b)=a^2 Var(X)\)</span>.</li>
+</ul>
+</section>
+<section id="distribuições-discretas" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Distribuições Discretas</h1>
+<section id="bernoulli-p" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="bernoulli-p"><span class="header-section-number">3.1</span> Bernoulli <span class="math inline">\((p)\)</span></h2>
+<p><strong>Interpretação:</strong> 1 sucesso/fracasso em único ensaio.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Item</th>
+<th>Expressão</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Suporte</td>
+<td><span class="math inline">\(x\in\{0,1\}\)</span></td>
+</tr>
+<tr class="even">
+<td>Parâmetro</td>
+<td><span class="math inline">\(0&lt;p&lt;1\)</span></td>
+</tr>
+<tr class="odd">
+<td>Função de probabilidade <span class="math inline">\(p(x)\)</span></td>
+<td><span class="math inline">\(p^x(1-p)^{1-x}\)</span></td>
+</tr>
+<tr class="even">
+<td>Distribuição <span class="math inline">\(F(x)\)</span></td>
+<td><span class="math inline">\(0\)</span> se <span class="math inline">\(x&lt;0\)</span>; <span class="math inline">\(1-p\)</span> se <span class="math inline">\(0\le x&lt;1\)</span>; <span class="math inline">\(1\)</span> se <span class="math inline">\(x\ge1\)</span></td>
+</tr>
+<tr class="odd">
+<td>Esperança <span class="math inline">\(E[X]\)</span></td>
+<td><span class="math inline">\(p\)</span></td>
+</tr>
+<tr class="even">
+<td>Variância <span class="math inline">\(Var(X)\)</span></td>
+<td><span class="math inline">\(p(1-p)\)</span></td>
+</tr>
+</tbody>
+</table>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="revisao_files/figure-html/bernoulli-plot-1.png" class="img-fluid figure-img" width="480"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Mostrar demonstração">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Mostrar demonstração
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>A variável Bernoulli assume valores <span class="math inline">\(0\)</span> e <span class="math inline">\(1\)</span>, com <span class="math inline">\(P(X=1)=p\)</span> e <span class="math inline">\(P(X=0)=1-p\)</span>.</p>
+<p><strong>Esperança</strong></p>
+<p><span class="math display">\[
+E(X)=0(1-p)+1\cdot p = p.
+\]</span></p>
+<p><strong>Segundo momento</strong></p>
+<p><span class="math display">\[
+E(X^2)=0^2(1-p)+1^2\cdot p = p.
+\]</span></p>
+<p><strong>Variância</strong></p>
+<p><span class="math display">\[
+\mathrm{Var}(X)=E(X^2)-[E(X)]^2
+= p - p^2 = p(1-p).
+\]</span></p>
+</div>
+</div>
+</div>
+<p><strong>Exemplo:</strong> Um alarme dispara corretamente com probabilidade <span class="math inline">\(p = 0{,}92\)</span>. Seja <span class="math inline">\(X\)</span> = 1 se o alarme dispara corretamente, 0 caso contrário.</p>
+<ol type="a">
+<li>Calcule <span class="math inline">\(P(X=1)\)</span> e <span class="math inline">\(P(X=0)\)</span>.<br>
+</li>
+<li>Calcule <span class="math inline">\(E[X]\)</span> e interprete.</li>
+</ol>
+<p><strong>Solução:</strong></p>
+<ul>
+<li><span class="math inline">\(P(X=1)=0{,}92\)</span><br>
+</li>
+<li><span class="math inline">\(P(X=0)=0{,}08\)</span></li>
+</ul>
+<p><span class="math display">\[
+E[X]=p=0{,}92
+\]</span></p>
+<p>Interpretação: o alarme funciona corretamente em <strong>92% dos acionamentos</strong>.</p>
+<hr>
+</section>
+<section id="binomial-np" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="binomial-np"><span class="header-section-number">3.2</span> Binomial <span class="math inline">\((n,p)\)</span></h2>
+<p><strong>Interpretação:</strong> número de sucessos em <span class="math inline">\(n\)</span> ensaios independentes, prob. <span class="math inline">\(p\)</span>.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Item</th>
+<th>Expressão</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Suporte</td>
+<td><span class="math inline">\(k=0,1,\dots,n\)</span></td>
+</tr>
+<tr class="even">
+<td>Parâmetros</td>
+<td><span class="math inline">\(n\in\mathbb{N}\)</span>, <span class="math inline">\(0&lt;p&lt;1\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(p(k)\)</span></td>
+<td><span class="math inline">\(\binom{n}{k}p^k(1-p)^{n-k}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(F(k)\)</span></td>
+<td><span class="math inline">\(\sum_{j=0}^{k}\binom{n}{j}p^j(1-p)^{n-j}\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(E[X]\)</span></td>
+<td><span class="math inline">\(np\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(Var(X)\)</span></td>
+<td><span class="math inline">\(np(1-p)\)</span></td>
+</tr>
+</tbody>
+</table>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="revisao_files/figure-html/binomial-plot-1.png" class="img-fluid figure-img" width="624"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Mostrar demonstração">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Mostrar demonstração
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Considere <span class="math inline">\(X \sim \text{Binomial}(n,p)\)</span>, isto é, <span class="math display">\[
+P(X = k) = \binom{n}{k} p^k (1-p)^{n-k}, \quad k = 0,1,\dots,n.
+\]</span></p>
+<p>Vamos demonstrar:</p>
+<ul>
+<li><span class="math inline">\(E(X) = np\)</span></li>
+<li><span class="math inline">\(\mathrm{Var}(X) = np(1-p)\)</span></li>
+</ul>
+<p>usando</p>
+<p><span class="math display">\[
+E(X) = \sum_{k=0}^n k\,P(X=k),
+\qquad
+\mathrm{Var}(X) = E(X^2) - [E(X)]^2.
+\]</span></p>
+<hr>
+<p><strong>Cálculo de E(X)</strong></p>
+<p>Pela definição: <span class="math display">\[
+E(X) = \sum_{k=0}^n k\,P(X=k)
+     = \sum_{k=0}^n k \binom{n}{k} p^k (1-p)^{n-k}.
+\]</span></p>
+<p>Note que o termo com <span class="math inline">\(k=0\)</span> é zero (pois tem um fator <span class="math inline">\(k\)</span>), então podemos começar em <span class="math inline">\(k=1\)</span>: <span class="math display">\[
+E(X) = \sum_{k=1}^n k \binom{n}{k} p^k (1-p)^{n-k}.
+\]</span></p>
+<p>Usamos agora a identidade combinatória <span class="math display">\[
+k \binom{n}{k} = n \binom{n-1}{k-1}.
+\]</span></p>
+<p>Substituindo: <span class="math display">\[
+E(X)= \sum_{k=1}^n n \binom{n-1}{k-1} p^k (1-p)^{n-k}.
+\]</span></p>
+<p>Colocamos <span class="math inline">\(n\)</span> em evidência: <span class="math display">\[
+E(X)= n \sum_{k=1}^n \binom{n-1}{k-1} p^k (1-p)^{n-k}.
+\]</span></p>
+<p>Agora fazemos a mudança de índice <span class="math inline">\(j = k-1\)</span>:</p>
+<ul>
+<li>quando <span class="math inline">\(k = 1\)</span>, <span class="math inline">\(j = 0\)</span>;<br>
+</li>
+<li>quando <span class="math inline">\(k = n\)</span>, <span class="math inline">\(j = n-1\)</span>;<br>
+</li>
+<li><span class="math inline">\(k = j + 1\)</span>.</li>
+</ul>
+<p>Então: <span class="math display">\[
+E(X)= n \sum_{j=0}^{n-1} \binom{n-1}{j} p^{j+1} (1-p)^{n-(j+1)}.
+\]</span></p>
+<p>Reorganizando as potências: <span class="math display">\[
+p^{j+1} = p \cdot p^j,\qquad n-(j+1) = (n-1)-j,
+\]</span> obtemos: <span class="math display">\[
+E(X)= n p \sum_{j=0}^{n-1} \binom{n-1}{j} p^{j} (1-p)^{(n-1)-j}.
+\]</span></p>
+<p>Repare que a soma <span class="math display">\[
+\sum_{j=0}^{n-1} \binom{n-1}{j} p^{j} (1-p)^{(n-1)-j}
+\]</span> é exatamente o desenvolvimento binomial de <span class="math display">\[
+(p + (1-p))^{n-1} = 1^{n-1} = 1.
+\]</span></p>
+<p>Portanto: <span class="math display">\[
+E(X) = n p \cdot 1 = np.
+\]</span></p>
+<hr>
+<p><strong>Cálculo de <span class="math inline">\(E(X^2)\)</span></strong></p>
+<p>Pela definição: <span class="math display">\[
+E(X^2) = \sum_{k=0}^n k^2\,P(X=k)
+       = \sum_{k=0}^n k^2 \binom{n}{k} p^k (1-p)^{n-k}.
+\]</span></p>
+<p>Truque clássico: escrever <span class="math display">\[
+k^2 = k(k-1) + k.
+\]</span></p>
+<p>Então: <span class="math display">\[
+\begin{eqnarray}
+E(X^2)
+&amp;=&amp; \sum_{k=0}^n [k(k-1) + k] \binom{n}{k} p^k (1-p)^{n-k} \\
+&amp;=&amp; \sum_{k=0}^n k(k-1)\binom{n}{k} p^k (1-p)^{n-k}
+  + \sum_{k=0}^n k\binom{n}{k} p^k (1-p)^{n-k}.
+\end{eqnarray}
+\]</span></p>
+<p>Chamemos:</p>
+<ul>
+<li><span class="math inline">\(A = \sum_{k=0}^n k(k-1)\binom{n}{k} p^k (1-p)^{n-k}\)</span><br>
+</li>
+<li><span class="math inline">\(B = \sum_{k=0}^n k\binom{n}{k} p^k (1-p)^{n-k}\)</span></li>
+</ul>
+<p>Logo, <span class="math inline">\(E(X^2) = A + B\)</span>.</p>
+<p>Mas repare que <strong><span class="math inline">\(B = E(X)\)</span></strong>, que já calculamos: <span class="math display">\[
+B = E(X) = np.
+\]</span></p>
+<p>Falta calcular <span class="math inline">\(A\)</span>.</p>
+<hr>
+<p><strong>Cálculo de <span class="math inline">\(A\)</span></strong></p>
+<p>Usamos agora a identidade: <span class="math display">\[
+k(k-1)\binom{n}{k} = n(n-1)\binom{n-2}{k-2}.
+\]</span></p>
+<p>Então: <span class="math display">\[
+A = \sum_{k=0}^n k(k-1)\binom{n}{k} p^k (1-p)^{n-k}
+  = \sum_{k=2}^n n(n-1)\binom{n-2}{k-2} p^k (1-p)^{n-k}.
+\]</span></p>
+<p>Podemos tirar <span class="math inline">\(n(n-1)\)</span> em evidência: <span class="math display">\[
+A = n(n-1)\sum_{k=2}^n \binom{n-2}{k-2} p^k (1-p)^{n-k}.
+\]</span></p>
+<p>Agora faça a mudança de índice <span class="math inline">\(j = k-2\)</span>:</p>
+<ul>
+<li>quando <span class="math inline">\(k = 2\)</span>, <span class="math inline">\(j = 0\)</span>;<br>
+</li>
+<li>quando <span class="math inline">\(k = n\)</span>, <span class="math inline">\(j = n-2\)</span>;<br>
+</li>
+<li><span class="math inline">\(k = j + 2\)</span>.</li>
+</ul>
+<p>Substituindo: <span class="math display">\[
+A = n(n-1)\sum_{j=0}^{n-2} \binom{n-2}{j} p^{j+2} (1-p)^{n-(j+2)}.
+\]</span></p>
+<p>Reorganizando as potências: <span class="math display">\[
+p^{j+2} = p^2 p^j,
+\qquad
+n-(j+2) = (n-2)-j,
+\]</span> temos: <span class="math display">\[
+A = n(n-1)p^2 \sum_{j=0}^{n-2} \binom{n-2}{j} p^{j} (1-p)^{(n-2)-j}.
+\]</span></p>
+<p>A soma é novamente um binômio: <span class="math display">\[
+\sum_{j=0}^{n-2} \binom{n-2}{j} p^{j} (1-p)^{(n-2)-j}
+= (p + (1-p))^{n-2} = 1^{n-2} = 1.
+\]</span></p>
+<p>Portanto: <span class="math display">\[
+A = n(n-1)p^2.
+\]</span></p>
+<hr>
+<p><strong>Conclusão para <span class="math inline">\(E(X^2)\)</span></strong></p>
+<p>Lembrando que:</p>
+<ul>
+<li><span class="math inline">\(A = n(n-1)p^2\)</span><br>
+</li>
+<li><span class="math inline">\(B = np\)</span></li>
+</ul>
+<p>temos: <span class="math display">\[
+E(X^2) = A + B = n(n-1)p^2 + np.
+\]</span></p>
+<hr>
+<p><strong>Cálculo de <span class="math inline">\(\mathrm{Var}(X)\)</span></strong></p>
+<p>Agora usamos: <span class="math display">\[
+\mathrm{Var}(X) = E(X^2) - [E(X)]^2.
+\]</span></p>
+<p>Já temos:</p>
+<ul>
+<li><span class="math inline">\(E(X^2) = n(n-1)p^2 + np\)</span></li>
+<li><span class="math inline">\(E(X) = np\)</span></li>
+</ul>
+<p>Logo: <span class="math display">\[
+\mathrm{Var}(X)
+= \big(n(n-1)p^2 + np\big) - (np)^2.
+\]</span></p>
+<p>Agora expandimos: <span class="math display">\[
+(np)^2 = n^2 p^2,
+\]</span> então: <span class="math display">\[
+\mathrm{Var}(X)
+= n(n-1)p^2 + np - n^2 p^2.
+\]</span></p>
+<p>Note que <span class="math display">\[
+n(n-1)p^2 = (n^2 - n)p^2,
+\]</span> então: <span class="math display">\[
+\mathrm{Var}(X)
+= (n^2 - n)p^2 + np - n^2 p^2
+= -n p^2 + np
+= n p (1-p).
+\]</span></p>
+<hr>
+<p>Logo,</p>
+<p>Para <span class="math inline">\(X \sim \text{Binomial}(n,p)\)</span>, <span class="math display">\[
+E(X) = np,
+\qquad
+\mathrm{Var}(X) = np(1-p).
+\]</span></p>
+</div>
+</div>
+</div>
+<p><strong>Exemplo:</strong> A probabilidade de um cliente comprar um produto é <span class="math inline">\(p=0{,}3\)</span>. Em um dia, 20 clientes entram na loja. Seja <span class="math inline">\(X\)</span> = número de compras.</p>
+<ol type="a">
+<li>Calcule <span class="math inline">\(P(X=8)\)</span>.<br>
+</li>
+<li>Calcule <span class="math inline">\(E[X]\)</span>.</li>
+</ol>
+<p><strong>Solução:</strong></p>
+<ol type="a">
+<li><p><span class="math display">\[
+P(X=8)=\binom{20}{8}(0{,}3)^8(0{,}7)^{12}\approx 0{,}053
+\]</span></p></li>
+<li><p><span class="math display">\[
+E[X]=np=20\cdot 0{,}3 = 6
+\]</span></p></li>
+</ol>
+<hr>
+</section>
+<section id="geométrica-p" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="geométrica-p"><span class="header-section-number">3.3</span> Geométrica <span class="math inline">\((p)\)</span></h2>
+<p><strong>Convenção usada:</strong> <span class="math inline">\(X\)</span> = número de <strong>ensaios até o 1º sucesso</strong> (apoio <span class="math inline">\(1,2,\dots\)</span>).</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Item</th>
+<th>Expressão</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(p(k)\)</span></td>
+<td><span class="math inline">\(p(1-p)^{k-1}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(F(k)\)</span></td>
+<td><span class="math inline">\(1-(1-p)^k\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(E[X]\)</span></td>
+<td><span class="math inline">\(1/p\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(Var(X)\)</span></td>
+<td><span class="math inline">\((1-p)/p^2\)</span></td>
+</tr>
+<tr class="odd">
+<td>Propriedade</td>
+<td><strong>Sem memória</strong>: <span class="math inline">\(P(X&gt;s+t\mid X&gt;t)=P(X&gt;s)\)</span></td>
+</tr>
+</tbody>
+</table>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="revisao_files/figure-html/geometrica-plot-1.png" class="img-fluid figure-img" width="576"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Mostrar demonstração">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Mostrar demonstração
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Considere <span class="math inline">\(X \sim \text{Geom}(p)\)</span> com suporte <span class="math inline">\(k=1,2,\dots\)</span>, isto é, <span class="math display">\[
+P(X = k) = p(1-p)^{k-1}, \quad k = 1,2,\dots,\quad 0&lt;p&lt;1.
+\]</span></p>
+<p>Vamos demonstrar que <span class="math display">\[
+E(X) = \frac{1}{p}
+\qquad \text{e} \qquad
+\mathrm{Var}(X) = \frac{1-p}{p^2},
+\]</span> usando as definições <span class="math display">\[
+E(X) = \sum_{k=1}^{\infty} k\,P(X=k),
+\qquad
+\mathrm{Var}(X) = E(X^2) - [E(X)]^2.
+\]</span></p>
+<hr>
+<p><strong>Cálculo de <span class="math inline">\(E(X)\)</span></strong></p>
+<p>Pela definição de esperança: <span class="math display">\[
+E(X) = \sum_{k=1}^{\infty} k\,P(X=k)
+     = \sum_{k=1}^{\infty} k\,p(1-p)^{k-1}.
+\]</span></p>
+<p>Colocamos o fator <span class="math inline">\(p\)</span> em evidência: <span class="math display">\[
+E(X) = p \sum_{k=1}^{\infty} k (1-p)^{k-1}.
+\]</span></p>
+<p>Para simplificar, definimos <span class="math display">\[
+r = 1-p.
+\]</span></p>
+<p>Note que <span class="math inline">\(0&lt;r&lt;1\)</span>. Então a soma fica <span class="math display">\[
+E(X) = p \sum_{k=1}^{\infty} k r^{k-1}.
+\]</span></p>
+<p>Agora usamos uma identidade clássica de séries: - Sabemos que, para <span class="math inline">\(|r|&lt;1\)</span>, <span class="math display">\[
+  \sum_{k=0}^{\infty} r^k = \frac{1}{1-r}.
+  \]</span></p>
+<p>Derivando em relação a <span class="math inline">\(r\)</span>: <span class="math display">\[
+\frac{d}{dr}\left(\sum_{k=0}^{\infty} r^k\right)
+= \sum_{k=0}^{\infty} k r^{k-1}
+= \frac{d}{dr}\left(\frac{1}{1-r}\right)
+= \frac{1}{(1-r)^2}.
+\]</span></p>
+<p>Note que o termo <span class="math inline">\(k=0\)</span> é zero, então <span class="math display">\[
+\sum_{k=1}^{\infty} k r^{k-1} = \frac{1}{(1-r)^2}.
+\]</span></p>
+<p>Voltando à expressão de <span class="math inline">\(E(X)\)</span>: <span class="math display">\[
+E(X) = p \cdot \frac{1}{(1-r)^2}.
+\]</span></p>
+<p>Lembrando que <span class="math inline">\(r = 1-p\)</span>, então <span class="math display">\[
+1-r = 1 - (1-p) = p.
+\]</span></p>
+<p>Logo: <span class="math display">\[
+E(X) = p \cdot \frac{1}{p^2} = \frac{1}{p}.
+\]</span></p>
+<hr>
+<p><strong>Cálculo de <span class="math inline">\(E(X^2)\)</span></strong></p>
+<p>Pela definição: <span class="math display">\[
+E(X^2) = \sum_{k=1}^{\infty} k^2 P(X=k)
+       = \sum_{k=1}^{\infty} k^2 p(1-p)^{k-1}
+       = p \sum_{k=1}^{\infty} k^2 r^{k-1},
+\]</span> com <span class="math inline">\(r = 1-p\)</span>.</p>
+<p>Então precisamos do valor de <span class="math display">\[
+\sum_{k=1}^{\infty} k^2 r^{k-1}.
+\]</span></p>
+<p>Usaremos de novo a série geométrica e suas derivadas.</p>
+<p>Já sabemos: <span class="math display">\[
+\sum_{k=0}^{\infty} r^k = \frac{1}{1-r}.
+\]</span></p>
+<ol type="1">
+<li><p><strong>Primeira derivada</strong>: <span class="math display">\[
+\sum_{k=1}^{\infty} k r^{k-1} = \frac{1}{(1-r)^2}.
+\]</span></p></li>
+<li><p><strong>Multiplicando por <span class="math inline">\(r\)</span></strong>: <span class="math display">\[
+r \sum_{k=1}^{\infty} k r^{k-1}
+= \sum_{k=1}^{\infty} k r^{k}
+= \frac{r}{(1-r)^2}.
+\]</span></p></li>
+<li><p><strong>Derivando novamente</strong>: Vamos derivar a expressão <span class="math display">\[
+\sum_{k=1}^{\infty} k r^{k}
+\]</span> em relação a <span class="math inline">\(r\)</span>: <span class="math display">\[
+\frac{d}{dr}\left(\sum_{k=1}^{\infty} k r^{k}\right)
+= \sum_{k=1}^{\infty} k^2 r^{k-1}.
+\]</span></p>
+<p>Agora derivamos o outro lado: <span class="math display">\[
+\frac{d}{dr}\left(\frac{r}{(1-r)^2}\right)
+= \frac{(1-r)^2 - r\cdot 2(1-r)(-1)}{(1-r)^4}.
+\]</span></p>
+<p>Simplificando o numerador: <span class="math display">\[
+(1-r)^2 + 2r(1-r)
+= (1 - 2r + r^2) + (2r - 2r^2)
+= 1 - r^2
+= (1-r)(1+r).
+\]</span></p>
+<p>Assim, <span class="math display">\[
+\frac{d}{dr}\left(\frac{r}{(1-r)^2}\right)
+= \frac{(1-r)(1+r)}{(1-r)^4}
+= \frac{1+r}{(1-r)^3}.
+\]</span></p></li>
+</ol>
+<p>Portanto, <span class="math display">\[
+\sum_{k=1}^{\infty} k^2 r^{k-1}
+= \frac{1+r}{(1-r)^3}.
+\]</span></p>
+<p>Voltando para <span class="math inline">\(E(X^2)\)</span>: <span class="math display">\[
+E(X^2) = p \cdot \frac{1+r}{(1-r)^3}.
+\]</span></p>
+<p>Substituímos <span class="math inline">\(r=1-p\)</span> e <span class="math inline">\(1-r=p\)</span>:</p>
+<ul>
+<li><span class="math inline">\(1+r = 1 + (1-p) = 2-p\)</span><br>
+</li>
+<li><span class="math inline">\((1-r)^3 = p^3\)</span></li>
+</ul>
+<p>Então: <span class="math display">\[
+E(X^2)= p \cdot \frac{2-p}{p^3}
+      = \frac{2-p}{p^2}.
+\]</span></p>
+<hr>
+<p><strong>Cálculo de <span class="math inline">\(\mathrm{Var}(X)\)</span></strong></p>
+<p>Agora usamos <span class="math display">\[
+\mathrm{Var}(X) = E(X^2) - [E(X)]^2.
+\]</span></p>
+<p>Já encontramos:</p>
+<ul>
+<li><span class="math inline">\(E(X) = \dfrac{1}{p}\)</span></li>
+<li><span class="math inline">\(E(X^2) = \dfrac{2-p}{p^2}\)</span></li>
+</ul>
+<p>Logo: <span class="math display">\[
+\mathrm{Var}(X)
+= \frac{2-p}{p^2} - \left(\frac{1}{p}\right)^2
+= \frac{2-p}{p^2} - \frac{1}{p^2}
+= \frac{1-p}{p^2}.
+\]</span></p>
+<hr>
+<p>Logo,</p>
+<p>Para <span class="math inline">\(X \sim \text{Geom}(p)\)</span>, com <span class="math inline">\(P(X=k)=p(1-p)^{k-1}\)</span>, <span class="math inline">\(k=1,2,\dots\)</span>, temos:</p>
+<p><span class="math display">\[
+E(X) = \frac{1}{p},
+\qquad
+\mathrm{Var}(X) = \frac{1-p}{p^2}.
+\]</span></p>
+</div>
+</div>
+</div>
+<p><strong>Exemplo:</strong> Uma chamada telefônica é atendida com probabilidade <span class="math inline">\(p = 0{,}15\)</span>. Seja <span class="math inline">\(X\)</span> = número de tentativas até o primeiro atendimento.</p>
+<ol type="a">
+<li>Calcule <span class="math inline">\(P(X=4)\)</span>.<br>
+</li>
+<li>Calcule <span class="math inline">\(P(X&gt;4)\)</span>.<br>
+</li>
+<li>Determine <span class="math inline">\(E[X]\)</span>.</li>
+</ol>
+<p><strong>Solução:</strong></p>
+<ol type="a">
+<li><p><span class="math display">\[
+P(X=4)=0{,}15(0{,}85)^3 \approx 0{,}092
+\]</span></p></li>
+<li><p><span class="math display">\[
+P(X&gt;4)=0{,}85^4 \approx 0{,}522
+\]</span></p></li>
+<li><p><span class="math display">\[
+E[X]=\frac{1}{0{,}15}\approx 6{,}67
+\]</span></p></li>
+</ol>
+<hr>
+</section>
+<section id="pascal-binomial-negativa-rp" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="pascal-binomial-negativa-rp"><span class="header-section-number">3.4</span> Pascal / Binomial Negativa <span class="math inline">\((r,p)\)</span></h2>
+<p><strong>Convenção usada:</strong> <span class="math inline">\(Y\)</span> = número de <strong>falhas antes do <span class="math inline">\(r\)</span>-ésimo sucesso</strong> (apoio <span class="math inline">\(0,1,\dots\)</span>).</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Item</th>
+<th>Expressão</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(p(k)\)</span></td>
+<td><span class="math inline">\(\binom{k+r-1}{k}(1-p)^k p^r\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(F(k)\)</span></td>
+<td><span class="math inline">\(\sum_{j=0}^{k}\binom{j+r-1}{j}(1-p)^j p^r\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(E[Y]\)</span></td>
+<td><span class="math inline">\(r(1-p)/p\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(Var(Y)\)</span></td>
+<td><span class="math inline">\(r(1-p)/p^2\)</span></td>
+</tr>
+</tbody>
+</table>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="revisao_files/figure-html/negbin-plot-1.png" class="img-fluid figure-img" width="624"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Mostrar demonstração">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Mostrar demonstração
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Vamos usar a seguinte <strong>definição</strong>:</p>
+<ul>
+<li>Em cada tentativa, ocorre <strong>sucesso</strong> com probabilidade <span class="math inline">\(p\)</span> e <strong>falha</strong> com probabilidade <span class="math inline">\(1-p\)</span>, independentemente.</li>
+<li><span class="math inline">\(X\)</span> é o <strong>número de falhas até o <span class="math inline">\(r\)</span>-ésimo sucesso</strong>.</li>
+<li>Dizemos então que <span class="math inline">\(X \sim \text{Binomial Negativa}(r,p)\)</span>, com <span class="math inline">\(r \in \mathbb{N}\)</span>.</li>
+</ul>
+<p>A função de probabilidade é <span class="math display">\[
+P(X = k)
+= \binom{k + r - 1}{k} (1-p)^k p^r,
+\quad k = 0,1,2,\dots
+\]</span></p>
+<p>Nosso objetivo é demonstrar que <span class="math display">\[
+E(X) = \frac{r(1-p)}{p}
+\qquad \text{e} \qquad
+\mathrm{Var}(X) = \frac{r(1-p)}{p^2}.
+\]</span></p>
+<p>Em vez de somar diretamente a série da f.p., vamos usar uma <strong>interpretação construída a partir da Geométrica</strong>, que já sabemos tratar.</p>
+<hr>
+<p><strong>Ligação com a distribuição geométrica</strong></p>
+<p>Considere o processo de Bernoulli (tentativas independentes com probabilidade de sucesso <span class="math inline">\(p\)</span>).</p>
+<p>Entre sucessos consecutivos, o número de falhas que ocorre é sempre do mesmo tipo:</p>
+<ul>
+<li>Antes do <strong>1º sucesso</strong>, temos um certo número de falhas <span class="math inline">\(Y_1\)</span>.</li>
+<li>Entre o <strong>1º e o 2º sucesso</strong>, temos um número de falhas <span class="math inline">\(Y_2\)</span>.</li>
+<li>…</li>
+<li>Entre o <strong>(r-1)º</strong> e o <strong>r-ésimo sucesso</strong>, temos um número de falhas <span class="math inline">\(Y_r\)</span>.</li>
+</ul>
+<p>Essas quantidades <span class="math inline">\(Y_1, Y_2, \dots, Y_r\)</span> são independentes e têm <strong>mesma distribuição</strong>.</p>
+<p>Além disso, o número total de falhas até o <span class="math inline">\(r\)</span>-ésimo sucesso é <span class="math display">\[
+X = Y_1 + Y_2 + \cdots + Y_r.
+\]</span></p>
+<p>Vamos então:</p>
+<ol type="1">
+<li>Determinar a distribuição de cada <span class="math inline">\(Y_i\)</span>.</li>
+<li>Calcular <span class="math inline">\(E(Y_i)\)</span> e <span class="math inline">\(\mathrm{Var}(Y_i)\)</span>.</li>
+<li>Somar para obter <span class="math inline">\(E(X)\)</span> e <span class="math inline">\(\mathrm{Var}(X)\)</span>.</li>
+</ol>
+<hr>
+<p><strong>Distribuição de <span class="math inline">\(Y_i\)</span> (número de falhas entre dois sucessos)</strong></p>
+<p>Entre dois sucessos consecutivos, o experimento funciona assim:</p>
+<ul>
+<li>Observamos uma sequência de falhas, todas com probabilidade <span class="math inline">\((1-p)\)</span>,<br>
+</li>
+<li>seguida de um sucesso, com probabilidade <span class="math inline">\(p\)</span>.</li>
+</ul>
+<p>Se <span class="math inline">\(Y_i = k\)</span>, isso significa: falha, falha, …, falha (<span class="math inline">\(k\)</span> vezes), depois um sucesso.<br>
+Logo <span class="math display">\[
+P(Y_i = k) = (1-p)^k p, \quad k = 0,1,2,\dots
+\]</span></p>
+<p>Essa é uma <strong>Geométrica com suporte em <span class="math inline">\(\{0,1,2,\dots\}\)</span></strong>, às vezes chamada de <strong>geométrica “deslocada”</strong> ou “número de falhas antes do sucesso”.</p>
+<p>Sabemos que:</p>
+<ul>
+<li>Se <span class="math inline">\(G\)</span> tem <span class="math inline">\(P(G=k)=p(1-p)^{k-1}\)</span>, <span class="math inline">\(k=1,2,\dots\)</span>, então <span class="math inline">\(E(G)=\frac{1}{p}\)</span> e <span class="math inline">\(\mathrm{Var}(G)=\frac{1-p}{p^2}\)</span>.</li>
+<li>Se definimos <span class="math inline">\(Y = G - 1\)</span>, então <span class="math inline">\(Y\)</span> tem suporte <span class="math inline">\(\{0,1,2,\dots\}\)</span>, e <span class="math display">\[
+E(Y) = E(G-1) = E(G) - 1 = \frac{1}{p} - 1 = \frac{1-p}{p},
+\]</span> <span class="math display">\[
+\mathrm{Var}(Y) = \mathrm{Var}(G-1) = \mathrm{Var}(G) = \frac{1-p}{p^2}.
+\]</span></li>
+</ul>
+<p>Portanto, cada <span class="math inline">\(Y_i\)</span> tem:</p>
+<p><span class="math display">\[
+E(Y_i)=\frac{1-p}{p}, \qquad
+\mathrm{Var}(Y_i)=\frac{1-p}{p^2}.
+\]</span></p>
+<p>E os <span class="math inline">\(Y_i\)</span> são i.i.d. (independentes e identicamente distribuídos).</p>
+<hr>
+<p><strong>Expressão de <span class="math inline">\(X\)</span> como soma de geométricas</strong></p>
+<p>Relembrando: <span class="math display">\[
+X = Y_1 + Y_2 + \cdots + Y_r,
+\]</span> com <span class="math inline">\(Y_i\)</span> independentes e com a mesma distribuição.</p>
+<p>Vamos usar:</p>
+<ul>
+<li><strong>Linearidade da esperança</strong>: <span class="math display">\[
+E(X) = E(Y_1) + \cdots + E(Y_r),
+\]</span></li>
+<li><strong>Variância da soma de independentes</strong>: <span class="math display">\[
+\mathrm{Var}(X)
+= \mathrm{Var}(Y_1) + \cdots + \mathrm{Var}(Y_r),
+\]</span> pois não há termos de covariância (independência <span class="math inline">\(\Rightarrow\)</span> covariância zero).</li>
+</ul>
+<hr>
+<p><strong>Cálculo de <span class="math inline">\(E(X)\)</span></strong></p>
+<p>Pela linearidade da esperança: <span class="math display">\[
+E(X)
+= E(Y_1 + \cdots + Y_r)
+= E(Y_1) + \cdots + E(Y_r).
+\]</span></p>
+<p>Como todos têm a mesma esperança: <span class="math display">\[
+E(X)
+= r \cdot E(Y_1).
+\]</span></p>
+<p>Usando o valor encontrado para a geométrica: <span class="math display">\[
+E(Y_1) = \frac{1-p}{p},
+\]</span> então: <span class="math display">\[
+E(X)
+= r \cdot \frac{1-p}{p}
+= \frac{r(1-p)}{p}.
+\]</span></p>
+<p>Este é o valor esperado da Binomial Negativa (número de falhas até o <span class="math inline">\(r\)</span>-ésimo sucesso).</p>
+<hr>
+<p><strong>Cálculo de <span class="math inline">\(\mathrm{Var}(X)\)</span></strong></p>
+<p>Da variância da soma de variáveis independentes: <span class="math display">\[
+\mathrm{Var}(X)
+= \mathrm{Var}(Y_1 + \cdots + Y_r)
+= \mathrm{Var}(Y_1) + \cdots + \mathrm{Var}(Y_r),
+\]</span> pois <span class="math inline">\(\mathrm{Cov}(Y_i, Y_j)=0\)</span> para <span class="math inline">\(i\ne j\)</span>.</p>
+<p>Como todas têm a mesma variância: <span class="math display">\[
+\mathrm{Var}(X)
+= r \cdot \mathrm{Var}(Y_1).
+\]</span></p>
+<p>Usando o valor da geométrica: <span class="math display">\[
+\mathrm{Var}(Y_1) = \frac{1-p}{p^2},
+\]</span> obtemos: <span class="math display">\[
+\mathrm{Var}(X)
+= r \cdot \frac{1-p}{p^2}
+= \frac{r(1-p)}{p^2}.
+\]</span></p>
+<hr>
+<p>Portanto, para <span class="math inline">\(X \sim \text{Binomial Negativa}(r,p)\)</span> (número de falhas até o <span class="math inline">\(r\)</span>-ésimo sucesso), temos:</p>
+<p><span class="math display">\[
+E(X) = \frac{r(1-p)}{p},
+\qquad
+\mathrm{Var}(X) = \frac{r(1-p)}{p^2}.
+\]</span></p>
+</div>
+</div>
+</div>
+<p><strong>Exemplo:</strong> Um pesquisador precisa de 4 pessoas que aceitem responder um questionário. Cada tentativa tem probabilidade <span class="math inline">\(p=0{,}25\)</span> de sucesso. Seja <span class="math inline">\(Y\)</span> = número de recusas até o 4º sucesso.</p>
+<ol type="a">
+<li>Calcule <span class="math inline">\(P(Y=6)\)</span>.<br>
+</li>
+<li>Calcule <span class="math inline">\(E[Y]\)</span>.</li>
+</ol>
+<p><strong>Solução:</strong></p>
+<ol type="a">
+<li><p><span class="math display">\[
+P(Y=6)=\binom{9}{6}(0{,}75)^6 (0{,}25)^4 \approx 0{,}050
+\]</span></p></li>
+<li><p><span class="math display">\[
+E[Y]=\frac{4(1-0{,}25)}{0{,}25}=12
+\]</span></p></li>
+</ol>
+<hr>
+</section>
+<section id="hipergeométrica-nkn" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="hipergeométrica-nkn"><span class="header-section-number">3.5</span> Hipergeométrica <span class="math inline">\((N,K,n)\)</span></h2>
+<p><strong>Amostragem sem reposição.</strong> <span class="math inline">\(N\)</span> total, <span class="math inline">\(K\)</span> sucessos na população, amostra <span class="math inline">\(n\)</span>.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Item</th>
+<th>Expressão</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Suporte</td>
+<td><span class="math inline">\(k=\max(0,n-(N-K)),\dots,\min(n,K)\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(p(k)\)</span></td>
+<td><span class="math inline">\(\dfrac{\binom{K}{k}\binom{N-K}{n-k}}{\binom{N}{n}}\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(E[X]\)</span></td>
+<td><span class="math inline">\(n\,\dfrac{K}{N}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(Var(X)\)</span></td>
+<td><span class="math inline">\(n\,\dfrac{K}{N}\!\left(1-\dfrac{K}{N}\right)\!\dfrac{N-n}{N-1}\)</span></td>
+</tr>
+</tbody>
+</table>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="revisao_files/figure-html/hyper-plot-1.png" class="img-fluid figure-img" width="624"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Mostrar demonstração">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Mostrar demonstração
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Considere:</p>
+<ul>
+<li>Uma população finita com <span class="math inline">\(N\)</span> elementos.</li>
+<li><span class="math inline">\(K\)</span> desses <span class="math inline">\(N\)</span> elementos são “sucessos” (por exemplo, peças defeituosas).</li>
+<li>Os demais <span class="math inline">\(N-K\)</span> são “fracassos”.</li>
+<li>Retiramos uma amostra <strong>sem reposição</strong> de tamanho <span class="math inline">\(n\)</span>.</li>
+</ul>
+<p>Seja <span class="math inline">\(X\)</span> o <strong>número de sucessos na amostra</strong>. Dizemos que <span class="math display">\[
+X \sim \text{Hipergeométrica}(N, K, n).
+\]</span></p>
+<p>A função de probabilidade é <span class="math display">\[
+P(X = k)
+= \frac{\binom{K}{k}\binom{N-K}{n-k}}{\binom{N}{n}},
+\quad k = 0,1,\dots,\min(K,n).
+\]</span></p>
+<p>Queremos demonstrar que: <span class="math display">\[
+E(X) = n \frac{K}{N},
+\qquad
+\mathrm{Var}(X) = n\frac{K}{N}\left(1-\frac{K}{N}\right)\frac{N-n}{N-1}.
+\]</span></p>
+<p>Em vez de somar diretamente a f.p., vamos usar uma abordagem com <strong>variáveis indicadoras</strong>.</p>
+<hr>
+<p><strong>Representando <span class="math inline">\(X\)</span> como soma de indicadores</strong></p>
+<p>Imagine que a amostra de tamanho <span class="math inline">\(n\)</span> é extraída em <strong>ordem</strong>: 1ª retirada, 2ª retirada, …, <span class="math inline">\(n\)</span>-ésima retirada.</p>
+<p>Defina, para cada <span class="math inline">\(i=1,\dots,n\)</span>: <span class="math display">\[
+Y_i =
+\begin{cases}
+1, &amp; \text{se o $i$-ésimo elemento sorteado é sucesso;}\\[4pt]
+0, &amp; \text{caso contrário.}
+\end{cases}
+\]</span></p>
+<p>Então o número total de sucessos na amostra é <span class="math display">\[
+X = Y_1 + Y_2 + \cdots + Y_n.
+\]</span></p>
+<p>Isso é intuitivo: cada <span class="math inline">\(Y_i\)</span> indica se houve sucesso naquela retirada, e a soma conta quantos sucessos houve ao todo.</p>
+<hr>
+<p><strong>Esperança de <span class="math inline">\(X\)</span> via linearidade</strong></p>
+<p>Usando linearidade da esperança: <span class="math display">\[
+E(X) = E(Y_1 + Y_2 + \cdots + Y_n)
+     = E(Y_1) + E(Y_2) + \cdots + E(Y_n).
+\]</span></p>
+<p>Como a população é homogênea e a amostragem é simétrica, todas as retiradas têm a mesma probabilidade de ser sucesso. Ou seja: <span class="math display">\[
+E(Y_1)=E(Y_2)=\cdots=E(Y_n).
+\]</span></p>
+<p>Basta, então, calcular <span class="math inline">\(E(Y_1)\)</span>.</p>
+<hr>
+<p><strong>Cálculo de <span class="math inline">\(E(Y_i)\)</span></strong></p>
+<p>Por definição, <span class="math display">\[
+E(Y_i) = P(Y_i=1).
+\]</span></p>
+<p>Mas <span class="math inline">\(Y_i=1\)</span> significa que, na <span class="math inline">\(i\)</span>-ésima retirada, escolhemos um elemento “sucesso”.<br>
+Como as retiradas são todas igualmente prováveis (sem viés) e a população tem <span class="math inline">\(K\)</span> sucessos em <span class="math inline">\(N\)</span> elementos, temos: <span class="math display">\[
+P(Y_i=1) = \frac{K}{N},
+\quad \text{para qualquer } i.
+\]</span></p>
+<p>Logo, <span class="math display">\[
+E(Y_i) = \frac{K}{N}.
+\]</span></p>
+<p>Portanto, <span class="math display">\[
+E(X)
+= \sum_{i=1}^n E(Y_i)
+= n \cdot \frac{K}{N}.
+\]</span></p>
+<p>Isso demonstra: <span class="math display">\[
+E(X) = n \frac{K}{N}.
+\]</span></p>
+<hr>
+<p><strong>Variância de <span class="math inline">\(X\)</span>:</strong></p>
+<p>Queremos agora <span class="math display">\[
+\mathrm{Var}(X) = \mathrm{Var}(Y_1+\cdots+Y_n).
+\]</span></p>
+<p>Lembre que, em geral, para variáveis quaisquer: <span class="math display">\[
+\mathrm{Var}\left(\sum_{i=1}^n Y_i\right)
+= \sum_{i=1}^n \mathrm{Var}(Y_i) + 2\sum_{1\le i&lt;j\le n} \mathrm{Cov}(Y_i, Y_j).
+\]</span></p>
+<p>As <span class="math inline">\(Y_i\)</span> <strong>não são independentes</strong> (pois a amostragem é sem reposição), então precisamos levar em conta as covariâncias.</p>
+<p>Pela simetria do problema:</p>
+<ul>
+<li>Todas as variâncias <span class="math inline">\(\mathrm{Var}(Y_i)\)</span> são iguais.</li>
+<li>Todas as covariâncias <span class="math inline">\(\mathrm{Cov}(Y_i,Y_j)\)</span> com <span class="math inline">\(i \ne j\)</span> são iguais.</li>
+</ul>
+<p>Então podemos escrever: <span class="math display">\[
+\mathrm{Var}(X)
+= n\,\mathrm{Var}(Y_1) + 2\binom{n}{2}\mathrm{Cov}(Y_1,Y_2)
+= n\,\mathrm{Var}(Y_1) + n(n-1)\,\mathrm{Cov}(Y_1,Y_2).
+\]</span></p>
+<p>Assim, precisamos calcular:</p>
+<ol type="1">
+<li><span class="math inline">\(\mathrm{Var}(Y_1)\)</span><br>
+</li>
+<li><span class="math inline">\(\mathrm{Cov}(Y_1,Y_2)\)</span></li>
+</ol>
+<hr>
+<p><strong>Cálculo de <span class="math inline">\(\mathrm{Var}(Y_1)\)</span></strong></p>
+<p>Como <span class="math inline">\(Y_1\)</span> é uma variável indicadora (0 ou 1) com <span class="math display">\[
+P(Y_1=1) = \frac{K}{N},
+\quad
+P(Y_1=0) = 1 - \frac{K}{N},
+\]</span> temos: <span class="math display">\[
+E(Y_1) = \frac{K}{N},\qquad
+E(Y_1^2) = E(Y_1) = \frac{K}{N}
+\]</span> (pois <span class="math inline">\(Y_1^2 = Y_1\)</span> quando <span class="math inline">\(Y_1 \in \{0,1\}\)</span>).</p>
+<p>Logo: <span class="math display">\[
+\mathrm{Var}(Y_1) = E(Y_1^2) - [E(Y_1)]^2
+= \frac{K}{N} - \left(\frac{K}{N}\right)^2
+= \frac{K}{N}\left(1-\frac{K}{N}\right)
+= \frac{K}{N}\cdot\frac{N-K}{N}
+= \frac{K(N-K)}{N^2}.
+\]</span></p>
+<hr>
+<p><strong>Cálculo de <span class="math inline">\(\mathrm{Cov}(Y_1,Y_2)\)</span></strong></p>
+<p>Por definição: <span class="math display">\[
+\mathrm{Cov}(Y_1,Y_2)
+= E(Y_1Y_2) - E(Y_1)E(Y_2).
+\]</span></p>
+<p>Já sabemos que <span class="math display">\[
+E(Y_1) = E(Y_2) = \frac{K}{N}.
+\]</span></p>
+<p>Então precisamos de <span class="math inline">\(E(Y_1Y_2)\)</span>, que é <span class="math display">\[
+E(Y_1Y_2) = P(Y_1=1 \text{ e } Y_2=1),
+\]</span> pois <span class="math inline">\(Y_1Y_2=1\)</span> somente quando ambos são 1.</p>
+<hr>
+<p><strong>Cálculo de <span class="math inline">\(P(Y_1=1, Y_2=1)\)</span></strong></p>
+<p>Interprete o sorteio em duas etapas, sem reposição:</p>
+<ol type="1">
+<li>Primeira retirada é sucesso: probabilidade <span class="math inline">\(K/N\)</span>.</li>
+<li>Dada uma primeira retirada de sucesso, restam:
+<ul>
+<li><span class="math inline">\(K-1\)</span> sucessos</li>
+<li>em um total de <span class="math inline">\(N-1\)</span> elementos.</li>
+</ul>
+Então a probabilidade de a <strong>segunda</strong> retirada também ser sucesso é: <span class="math display">\[
+\frac{K-1}{N-1}.
+\]</span></li>
+</ol>
+<p>Logo: <span class="math display">\[
+P(Y_1=1, Y_2=1)
+= \frac{K}{N} \cdot \frac{K-1}{N-1}
+= \frac{K(K-1)}{N(N-1)}.
+\]</span></p>
+<p>Portanto: <span class="math display">\[
+E(Y_1Y_2) = \frac{K(K-1)}{N(N-1)}.
+\]</span></p>
+<hr>
+<p><strong>Covariância</strong></p>
+<p>Agora: <span class="math display">\[
+\mathrm{Cov}(Y_1,Y_2)
+= E(Y_1Y_2) - E(Y_1)E(Y_2)
+= \frac{K(K-1)}{N(N-1)} - \left(\frac{K}{N}\right)^2.
+\]</span></p>
+<p>Vamos colocar os termos no mesmo denominador. Note que <span class="math display">\[
+\left(\frac{K}{N}\right)^2 = \frac{K^2}{N^2}
+= \frac{K^2(N-1)}{N^2(N-1)}.
+\]</span></p>
+<p>E <span class="math display">\[
+\frac{K(K-1)}{N(N-1)}
+= \frac{K(K-1)N}{N^2(N-1)}.
+\]</span></p>
+<p>Então: <span class="math display">\[
+\mathrm{Cov}(Y_1,Y_2)
+= \frac{K(K-1)N - K^2(N-1)}{N^2(N-1)}.
+\]</span></p>
+<p>Simplificando o numerador: <span class="math display">\[
+K(K-1)N - K^2(N-1)
+= K[ N(K-1) - K(N-1) ].
+\]</span></p>
+<p>Dentro dos colchetes: <span class="math display">\[
+N(K-1) - K(N-1)
+= (NK - N) - (KN - K)
+= NK - N - KN + K
+= -N + K
+= K - N.
+\]</span></p>
+<p>Logo o numerador é: <span class="math display">\[
+K(K-N) = -K(N-K).
+\]</span></p>
+<p>Portanto: <span class="math display">\[
+\mathrm{Cov}(Y_1,Y_2)
+= \frac{-K(N-K)}{N^2(N-1)}.
+\]</span></p>
+<p>Isso mostra que a covariância é <strong>negativa</strong>: faz sentido, pois sem reposição, ao observar um sucesso na primeira retirada, fica ligeiramente <strong>menos provável</strong> ver outro sucesso na segunda.</p>
+<hr>
+<p><strong>Variância de <span class="math inline">\(X\)</span></strong></p>
+<p>Relembrando: <span class="math display">\[
+\mathrm{Var}(X)=n\,\mathrm{Var}(Y_1) + n(n-1)\,\mathrm{Cov}(Y_1,Y_2).
+\]</span></p>
+<p>Substituímos os valores encontrados:</p>
+<ul>
+<li><span class="math inline">\(\mathrm{Var}(Y_1) = \dfrac{K(N-K)}{N^2}\)</span></li>
+<li><span class="math inline">\(\mathrm{Cov}(Y_1,Y_2) = -\dfrac{K(N-K)}{N^2(N-1)}\)</span></li>
+</ul>
+<p>Então: <span class="math display">\[
+\mathrm{Var}(X)
+= n \cdot \frac{K(N-K)}{N^2}
++ n(n-1)\cdot\left(-\frac{K(N-K)}{N^2(N-1)}\right).
+\]</span></p>
+<p>Colocamos o fator comum <span class="math inline">\(\dfrac{K(N-K)}{N^2}\)</span> em evidência: <span class="math display">\[
+\mathrm{Var}(X)
+= \frac{K(N-K)}{N^2}
+\left[
+n - \frac{n(n-1)}{N-1}
+\right].
+\]</span></p>
+<p>Agora vamos simplificar o colchete: <span class="math display">\[
+n - \frac{n(n-1)}{N-1}
+= n\left[1 - \frac{n-1}{N-1}\right]
+= n\left[\frac{N-1 - (n-1)}{N-1}\right]
+= n\left[\frac{N-n}{N-1}\right].
+\]</span></p>
+<p>Portanto: <span class="math display">\[
+\mathrm{Var}(X)
+= \frac{K(N-K)}{N^2}\cdot n\frac{N-n}{N-1}.
+\]</span></p>
+<p>Podemos reescrever <span class="math inline">\(K(N-K)/N^2\)</span> como <span class="math display">\[
+\frac{K}{N}\left(1-\frac{K}{N}\right).
+\]</span></p>
+<p>Assim: <span class="math display">\[
+\mathrm{Var}(X)
+= n \frac{K}{N}\left(1-\frac{K}{N}\right)\frac{N-n}{N-1}.
+\]</span></p>
+<hr>
+<p>Assim, para <span class="math inline">\(X \sim \text{Hipergeométrica}(N,K,n)\)</span>:</p>
+<ul>
+<li><p><strong>Esperança</strong>: <span class="math display">\[
+E(X) = n \frac{K}{N}.
+\]</span></p></li>
+<li><p><strong>Variância</strong>: <span class="math display">\[
+\mathrm{Var}(X) = n \frac{K}{N}\left(1-\frac{K}{N}\right)\frac{N-n}{N-1}.
+\]</span></p></li>
+</ul>
+</div>
+</div>
+</div>
+<p><strong>Exemplo:</strong> Um lote tem <span class="math inline">\(N=80\)</span> peças, sendo <span class="math inline">\(K=10\)</span> defeituosas. Retira-se uma amostra de <span class="math inline">\(n=12\)</span> peças. Seja <span class="math inline">\(X\)</span> = número de defeituosas na amostra.</p>
+<ol type="a">
+<li>Calcule <span class="math inline">\(P(X=2)\)</span>.<br>
+</li>
+<li>Calcule <span class="math inline">\(E[X]\)</span>.</li>
+</ol>
+<p><strong>Solução:</strong></p>
+<ol type="a">
+<li><span class="math display">\[
+P(X=2)=\frac{\binom{10}{2}\binom{70}{10}}{\binom{80}{12}}
+\]</span></li>
+</ol>
+<p>Resultado aproximado: <strong>0,283</strong></p>
+<ol start="2" type="a">
+<li><span class="math display">\[
+E[X]=12 \cdot \frac{10}{80} = 1{,}5
+\]</span></li>
+</ol>
+<hr>
+</section>
+<section id="poisson-lambda" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="poisson-lambda"><span class="header-section-number">3.6</span> Poisson <span class="math inline">\((\lambda)\)</span></h2>
+<p><strong>Contagem de eventos raros</strong> em intervalo fixo.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Item</th>
+<th>Expressão</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Suporte</td>
+<td><span class="math inline">\(k=0,1,2,\dots\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(p(k)\)</span></td>
+<td><span class="math inline">\(e^{-\lambda}\lambda^k/k!\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(F(k)\)</span></td>
+<td><span class="math inline">\(\sum_{j=0}^{k}e^{-\lambda}\lambda^j/j!\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(E[X]\)</span></td>
+<td><span class="math inline">\(\lambda\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(Var(X)\)</span></td>
+<td><span class="math inline">\(\lambda\)</span></td>
+</tr>
+</tbody>
+</table>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="revisao_files/figure-html/poisson-plot-1.png" class="img-fluid figure-img" width="624"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Mostrar demonstração">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Mostrar demonstração
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Considere <span class="math inline">\(X \sim \text{Poisson}(\lambda)\)</span>, com <span class="math inline">\(\lambda &gt; 0\)</span>. A função de probabilidade é: <span class="math display">\[
+P(X=k) = e^{-\lambda}\frac{\lambda^k}{k!},\qquad k=0,1,2,\dots
+\]</span></p>
+<p>Nosso objetivo é demonstrar: <span class="math display">\[
+E(X)=\lambda,
+\qquad
+\mathrm{Var}(X)=\lambda.
+\]</span></p>
+<p>Usaremos somente as definições: <span class="math display">\[
+E(X)=\sum_{k=0}^{\infty} k\,P(X=k), \qquad
+\mathrm{Var}(X)=E(X^2)-[E(X)]^2.
+\]</span></p>
+<hr>
+<p><strong>Cálculo de <span class="math inline">\(E(X)\)</span></strong></p>
+<p>Pela definição de esperança: <span class="math display">\[
+E(X)=\sum_{k=0}^{\infty} k\,P(X=k)
+    =\sum_{k=0}^{\infty} k\,e^{-\lambda}\frac{\lambda^k}{k!}.
+\]</span></p>
+<p>O termo <span class="math inline">\(k=0\)</span> é nulo, então: <span class="math display">\[
+E(X)=e^{-\lambda}\sum_{k=1}^{\infty} k\frac{\lambda^k}{k!}.
+\]</span></p>
+<p>Usamos a identidade: <span class="math display">\[
+k\frac{\lambda^k}{k!}=\frac{\lambda^k}{(k-1)!}.
+\]</span></p>
+<p>Logo: <span class="math display">\[
+E(X)=e^{-\lambda}\sum_{k=1}^{\infty} \frac{\lambda^k}{(k-1)!}.
+\]</span></p>
+<p>Agora fazemos a mudança de variável <span class="math inline">\(j=k-1\)</span>:</p>
+<ul>
+<li>quando <span class="math inline">\(k=1\)</span>, <span class="math inline">\(j=0\)</span><br>
+</li>
+<li>quando <span class="math inline">\(k\to\infty\)</span>, <span class="math inline">\(j\to\infty\)</span></li>
+</ul>
+<p>Então: <span class="math display">\[
+E(X)=e^{-\lambda}\sum_{j=0}^{\infty} \frac{\lambda^{j+1}}{j!}
+= e^{-\lambda}\lambda \sum_{j=0}^{\infty} \frac{\lambda^{j}}{j!}.
+\]</span></p>
+<p>Mas: <span class="math display">\[
+\sum_{j=0}^{\infty} \frac{\lambda^{j}}{j!} = e^{\lambda}.
+\]</span></p>
+<p>Portanto: <span class="math display">\[
+E(X)=e^{-\lambda}\lambda e^{\lambda} = \lambda.
+\]</span></p>
+<p>Assim demonstramos: <span class="math display">\[
+E(X)=\lambda.
+\]</span></p>
+<hr>
+<p><strong>Cálculo de <span class="math inline">\(E(X^2)\)</span></strong></p>
+<p>Agora usamos a definição: <span class="math display">\[
+E(X^2)=\sum_{k=0}^{\infty} k^2 P(X=k)
+      =e^{-\lambda}\sum_{k=0}^{\infty} k^2 \frac{\lambda^k}{k!}.
+\]</span></p>
+<p>Truque clássico: escrever <span class="math display">\[
+k^2 = k(k-1) + k.
+\]</span></p>
+<p>Então: <span class="math display">\[
+E(X^2)
+= e^{-\lambda}\sum_{k=0}^{\infty} k(k-1)\frac{\lambda^k}{k!}
++ e^{-\lambda}\sum_{k=0}^{\infty} k\frac{\lambda^k}{k!}.
+\]</span></p>
+<p>Chamemos:</p>
+<ul>
+<li><p>Primeiro somatório:<br>
+<span class="math display">\[A = e^{-\lambda}\sum_{k=0}^{\infty} k(k-1)\frac{\lambda^k}{k!}\]</span></p></li>
+<li><p>Segundo somatório:<br>
+<span class="math display">\[B = e^{-\lambda}\sum_{k=0}^{\infty} k\frac{\lambda^k}{k!}\]</span></p></li>
+</ul>
+<p>Mas já vimos antes que <strong><span class="math inline">\(B = E(X) = \lambda\)</span></strong>.</p>
+<p>Vamos calcular <span class="math inline">\(A\)</span>.</p>
+<hr>
+<p><strong>Cálculo do termo <span class="math inline">\(A\)</span></strong></p>
+<p>Note que: <span class="math display">\[
+k(k-1)\frac{\lambda^k}{k!}
+= \frac{\lambda^k}{(k-2)!}.
+\]</span></p>
+<p>Portanto: <span class="math display">\[
+A = e^{-\lambda}\sum_{k=2}^{\infty}\frac{\lambda^k}{(k-2)!}.
+\]</span></p>
+<p>Fazemos a mudança de variável <span class="math inline">\(j=k-2\)</span>:</p>
+<ul>
+<li>quando <span class="math inline">\(k=2\)</span>, <span class="math inline">\(j=0\)</span></li>
+<li>quando <span class="math inline">\(k\to\infty\)</span>, <span class="math inline">\(j\to\infty\)</span></li>
+</ul>
+<p>Então: <span class="math display">\[
+A = e^{-\lambda}\sum_{j=0}^{\infty}\frac{\lambda^{j+2}}{j!}
+= e^{-\lambda}\lambda^2 \sum_{j=0}^{\infty}\frac{\lambda^{j}}{j!}.
+\]</span></p>
+<p>A soma é novamente <span class="math inline">\(e^\lambda\)</span>, logo: <span class="math display">\[
+A = e^{-\lambda}\lambda^2 e^\lambda = \lambda^2.
+\]</span></p>
+<p>Agora juntamos:</p>
+<ul>
+<li><span class="math inline">\(A = \lambda^2\)</span></li>
+<li><span class="math inline">\(B = \lambda\)</span></li>
+</ul>
+<p>Portanto: <span class="math display">\[
+E(X^2) = A + B = \lambda^2 + \lambda.
+\]</span></p>
+<hr>
+<p><strong>Variância</strong></p>
+<p>Usamos: <span class="math display">\[
+\mathrm{Var}(X)=E(X^2)-[E(X)]^2.
+\]</span></p>
+<p>Substituindo:</p>
+<ul>
+<li><span class="math inline">\(E(X)=\lambda\)</span></li>
+<li><span class="math inline">\(E(X^2)=\lambda^2 + \lambda\)</span></li>
+</ul>
+<p>Temos: <span class="math display">\[
+\mathrm{Var}(X)
+= (\lambda^2+\lambda) - \lambda^2
+= \lambda.
+\]</span></p>
+<hr>
+<p>Logo, para <span class="math inline">\(X \sim \text{Poisson}(\lambda)\)</span>:</p>
+<p><span class="math display">\[
+E(X)=\lambda,
+\qquad
+\mathrm{Var}(X)=\lambda.
+\]</span></p>
+</div>
+</div>
+</div>
+<p><strong>Exemplo:</strong> A taxa média de chamadas em um call center é <span class="math inline">\(\lambda=12\)</span> chamadas por hora. Seja <span class="math inline">\(N\)</span> = número de chamadas.</p>
+<ol type="a">
+<li>Calcule <span class="math inline">\(P(N=10)\)</span>.<br>
+</li>
+<li>Calcule <span class="math inline">\(P(N\ge 15)\)</span>.<br>
+</li>
+<li>Calcule <span class="math inline">\(E[N]\)</span> e <span class="math inline">\(Var(N)\)</span>.</li>
+</ol>
+<p><strong>Solução:</strong></p>
+<ol type="a">
+<li><p><span class="math display">\[
+P(N=10)=e^{-12}\frac{12^{10}}{10!}\approx 0{,}104
+\]</span></p></li>
+<li><p><span class="math display">\[
+P(N\ge 15)=1-P(N\le 14)\approx 0{,}263
+\]</span></p></li>
+<li><p><span class="math display">\[
+E[N]=12,\qquad Var(N)=12
+\]</span></p></li>
+</ol>
+</section>
+</section>
+<section id="distribuições-contínuas" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Distribuições Contínuas</h1>
+<section id="uniforme-ab" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="uniforme-ab"><span class="header-section-number">4.1</span> Uniforme <span class="math inline">\((a,b)\)</span></h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Item</th>
+<th>Expressão</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Suporte</td>
+<td><span class="math inline">\(a\le x\le b\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(f(x)\)</span></td>
+<td><span class="math inline">\(1/(b-a)\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(F(x)\)</span></td>
+<td><span class="math inline">\((x-a)/(b-a)\)</span> para <span class="math inline">\(a\le x\le b\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(E[X]\)</span></td>
+<td><span class="math inline">\((a+b)/2\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(Var(X)\)</span></td>
+<td><span class="math inline">\((b-a)^2/12\)</span></td>
+</tr>
+</tbody>
+</table>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="revisao_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Mostrar demonstração">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Mostrar demonstração
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Considere <span class="math inline">\(X \sim \text{Uniforme}(a,b)\)</span>, com <span class="math inline">\(a &lt; b\)</span>.</p>
+<p>A função densidade é: <span class="math display">\[
+f(x) =
+\begin{cases}
+\dfrac{1}{b-a}, &amp; a \le x \le b,\\[6pt]
+0, &amp; \text{caso contrário.}
+\end{cases}
+\]</span></p>
+<p>Nosso objetivo é demonstrar que <span class="math display">\[
+E(X) = \frac{a+b}{2},
+\qquad
+\mathrm{Var}(X) = \frac{(b-a)^2}{12},
+\]</span> usando apenas as definições: <span class="math display">\[
+E(X)=\int_{-\infty}^{\infty} x f(x)\,dx,
+\qquad
+E(X^2)=\int_{-\infty}^{\infty} x^2 f(x)\,dx,
+\qquad
+\mathrm{Var}(X)=E(X^2)-[E(X)]^2.
+\]</span></p>
+<hr>
+<p><strong>Cálculo de <span class="math inline">\(E(X)\)</span></strong></p>
+<p>Pela definição: <span class="math display">\[
+E(X) = \int_{-\infty}^{\infty} x f(x)\,dx.
+\]</span></p>
+<p>Como <span class="math inline">\(f(x)=0\)</span> fora do intervalo <span class="math inline">\([a,b]\)</span>, temos: <span class="math display">\[
+E(X) = \int_a^b x \cdot \frac{1}{b-a}\,dx
+     = \frac{1}{b-a} \int_a^b x\,dx.
+\]</span></p>
+<p>Calculamos a integral: <span class="math display">\[
+\int_a^b x\,dx = \left[\frac{x^2}{2}\right]_a^b
+= \frac{b^2}{2} - \frac{a^2}{2}
+= \frac{b^2 - a^2}{2}.
+\]</span></p>
+<p>Logo: <span class="math display">\[
+E(X) = \frac{1}{b-a} \cdot \frac{b^2 - a^2}{2}.
+\]</span></p>
+<p>Fatoramos <span class="math inline">\(b^2 - a^2\)</span>: <span class="math display">\[
+b^2 - a^2 = (b-a)(b+a).
+\]</span></p>
+<p>Substituindo: <span class="math display">\[
+E(X) = \frac{1}{b-a} \cdot \frac{(b-a)(b+a)}{2}
+     = \frac{b+a}{2}.
+\]</span></p>
+<p>Portanto: <span class="math display">\[
+E(X) = \frac{a+b}{2}.
+\]</span></p>
+<hr>
+<p><strong>Cálculo de <span class="math inline">\(E(X^2)\)</span></strong></p>
+<p>Pela definição: <span class="math display">\[
+E(X^2) = \int_{-\infty}^{\infty} x^2 f(x)\,dx
+       = \int_a^b x^2 \cdot \frac{1}{b-a}\,dx
+       = \frac{1}{b-a}\int_a^b x^2\,dx.
+\]</span></p>
+<p>Calculamos a integral: <span class="math display">\[
+\int_a^b x^2\,dx = \left[\frac{x^3}{3}\right]_a^b
+= \frac{b^3}{3} - \frac{a^3}{3}
+= \frac{b^3 - a^3}{3}.
+\]</span></p>
+<p>Então: <span class="math display">\[
+E(X^2) = \frac{1}{b-a} \cdot \frac{b^3 - a^3}{3}
+       = \frac{b^3 - a^3}{3(b-a)}.
+\]</span></p>
+<p>Agora usamos a fatoração: <span class="math display">\[
+b^3 - a^3 = (b-a)(b^2 + ab + a^2).
+\]</span></p>
+<p>Substituindo: <span class="math display">\[
+E(X^2) = \frac{(b-a)(b^2 + ab + a^2)}{3(b-a)}
+       = \frac{b^2 + ab + a^2}{3}.
+\]</span></p>
+<p>Portanto: <span class="math display">\[
+E(X^2) = \frac{a^2 + ab + b^2}{3}.
+\]</span></p>
+<hr>
+<p><strong>Cálculo de <span class="math inline">\(\mathrm{Var}(X)\)</span></strong></p>
+<p>Usamos: <span class="math display">\[
+\mathrm{Var}(X) = E(X^2) - [E(X)]^2.
+\]</span></p>
+<p>Já obtivemos:</p>
+<ul>
+<li><span class="math inline">\(E(X) = \dfrac{a+b}{2}\)</span><br>
+</li>
+<li><span class="math inline">\(E(X^2) = \dfrac{a^2 + ab + b^2}{3}\)</span></li>
+</ul>
+<p>Então: <span class="math display">\[
+\mathrm{Var}(X)
+= \frac{a^2 + ab + b^2}{3} - \left(\frac{a+b}{2}\right)^2.
+\]</span></p>
+<p>Primeiro, calculemos o quadrado: <span class="math display">\[
+\left(\frac{a+b}{2}\right)^2
+= \frac{(a+b)^2}{4}
+= \frac{a^2 + 2ab + b^2}{4}.
+\]</span></p>
+<p>Agora escrevemos a variância com denominador comum. O denominador comum entre 3 e 4 é 12:</p>
+<ul>
+<li><p>Primeiro termo: <span class="math display">\[
+\frac{a^2 + ab + b^2}{3}
+= \frac{4(a^2 + ab + b^2)}{12}.
+\]</span></p></li>
+<li><p>Segundo termo: <span class="math display">\[
+\frac{a^2 + 2ab + b^2}{4}
+= \frac{3(a^2 + 2ab + b^2)}{12}.
+\]</span></p></li>
+</ul>
+<p>Então: <span class="math display">\[
+\mathrm{Var}(X)
+= \frac{4(a^2 + ab + b^2)}{12} - \frac{3(a^2 + 2ab + b^2)}{12}.
+\]</span></p>
+<p>Subtraindo os numeradores: <span class="math display">\[
+4(a^2 + ab + b^2) - 3(a^2 + 2ab + b^2)
+= 4a^2 + 4ab + 4b^2 - 3a^2 - 6ab - 3b^2
+= (4a^2 - 3a^2) + (4ab - 6ab) + (4b^2 - 3b^2)
+= a^2 - 2ab + b^2.
+\]</span></p>
+<p>Logo: <span class="math display">\[
+\mathrm{Var}(X)
+= \frac{a^2 - 2ab + b^2}{12}
+= \frac{(b-a)^2}{12},
+\]</span> pois <span class="math display">\[
+a^2 - 2ab + b^2 = (b-a)^2.
+\]</span></p>
+<hr>
+<p>Assim, para <span class="math inline">\(X \sim \text{Uniforme}(a,b)\)</span>, demonstramos que: <span class="math display">\[
+E(X) = \frac{a+b}{2},
+\qquad
+\mathrm{Var}(X) = \frac{(b-a)^2}{12}.
+\]</span></p>
+</div>
+</div>
+</div>
+<p><strong>Exemplo:</strong> O tempo de resposta de um servidor <em>web</em> varia uniformemente entre 50 ms e 90 ms, ou seja <span class="math inline">\(T \sim U(50, 90)\)</span>.</p>
+<ol type="a">
+<li>Calcule <span class="math inline">\(P(60 &lt; T &lt; 80)\)</span>.<br>
+</li>
+<li>Calcule <span class="math inline">\(E[T]\)</span> e <span class="math inline">\(Var(T)\)</span>.<br>
+</li>
+<li>Interprete o valor esperado no contexto.</li>
+</ol>
+<p><strong>Solução:</strong></p>
+<ol type="a">
+<li><p><span class="math display">\[
+P(60&lt;T&lt;80)=\frac{80-60}{90-50}=\frac{20}{40}=0{,}5
+\]</span></p></li>
+<li><p><span class="math display">\[
+E[T]=\frac{50+90}{2}=70
+\]</span></p></li>
+</ol>
+<p><span class="math display">\[
+Var(T)=\frac{(90-50)^2}{12}=\frac{1600}{12}\approx 133{,}33
+\]</span></p>
+<ol start="3" type="a">
+<li>O tempo médio de resposta é 70 ms.</li>
+</ol>
+<hr>
+</section>
+<section id="exponencial-lambda" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="exponencial-lambda"><span class="header-section-number">4.2</span> Exponencial <span class="math inline">\((\lambda)\)</span></h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Item</th>
+<th>Expressão</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Suporte</td>
+<td><span class="math inline">\(x\ge 0\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(f(x)\)</span></td>
+<td><span class="math inline">\(\lambda e^{-\lambda x}\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(F(x)\)</span></td>
+<td><span class="math inline">\(1-e^{-\lambda x}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(E[X]\)</span></td>
+<td><span class="math inline">\(1/\lambda\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(Var(X)\)</span></td>
+<td><span class="math inline">\(1/\lambda^2\)</span></td>
+</tr>
+<tr class="even">
+<td>Propriedade</td>
+<td><strong>Sem memória</strong>: <span class="math inline">\(P(X&gt;s+t\mid X&gt;t)=P(X&gt;s)\)</span></td>
+</tr>
+</tbody>
+</table>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="revisao_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Mostrar demonstração">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Mostrar demonstração
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Considere <span class="math inline">\(X \sim \text{Exponencial}(\lambda)\)</span>, com <span class="math inline">\(\lambda &gt; 0\)</span>.</p>
+<p>A função densidade é <span class="math display">\[
+f(x) =
+\begin{cases}
+\lambda e^{-\lambda x}, &amp; x \ge 0, \\[4pt]
+0, &amp; x &lt; 0.
+\end{cases}
+\]</span></p>
+<p>Nosso objetivo é demonstrar: <span class="math display">\[
+E(X) = \frac{1}{\lambda},
+\qquad
+\mathrm{Var}(X) = \frac{1}{\lambda^2},
+\]</span> usando apenas as definições: <span class="math display">\[
+E(X) = \int_0^\infty x\,\lambda e^{-\lambda x}\,dx,
+\qquad
+E(X^2) = \int_0^\infty x^2\,\lambda e^{-\lambda x}\,dx.
+\]</span></p>
+<hr>
+<p><strong>Cálculo de <span class="math inline">\(E(X)\)</span></strong></p>
+<p>Pela definição: <span class="math display">\[
+E(X) = \int_0^\infty x\lambda e^{-\lambda x}\,dx.
+\]</span></p>
+<p>Para resolver a integral, usamos <strong>integração por partes</strong>.</p>
+<p>Escolhemos: - <span class="math inline">\(u = x\)</span> → <span class="math inline">\(du = dx\)</span> - <span class="math inline">\(dv = \lambda e^{-\lambda x}dx\)</span> → <span class="math inline">\(v = -e^{-\lambda x}\)</span></p>
+<p>Aplicando integração por partes: <span class="math display">\[
+\int_0^\infty x\lambda e^{-\lambda x}\,dx
+= \left[-x e^{-\lambda x}\right]_{0}^{\infty}
++ \int_0^\infty e^{-\lambda x}\,dx.
+\]</span></p>
+<p>Agora avaliamos cada termo:</p>
+<ol type="1">
+<li><p><strong>Primeira parte</strong>:</p>
+<ul>
+<li>Quando <span class="math inline">\(x\to\infty\)</span>: <span class="math inline">\(x e^{-\lambda x} \to 0\)</span>.</li>
+<li>Quando <span class="math inline">\(x=0\)</span>: <span class="math inline">\(0 \cdot e^{0} = 0\)</span>.</li>
+</ul>
+<p>Logo: <span class="math display">\[
+\left[-x e^{-\lambda x}\right]_{0}^{\infty} = 0.
+\]</span></p></li>
+<li><p><strong>Integral restante</strong>: <span class="math display">\[
+\int_0^\infty e^{-\lambda x}\,dx
+= \left[-\frac{1}{\lambda}e^{-\lambda x}\right]_{0}^{\infty}
+= \frac{1}{\lambda}.
+\]</span></p></li>
+</ol>
+<p>Portanto: <span class="math display">\[
+E(X)=\frac{1}{\lambda}.
+\]</span></p>
+<hr>
+<p><strong>Cálculo de <span class="math inline">\(E(X^2)\)</span></strong></p>
+<p>Pela definição: <span class="math display">\[
+E(X^2)=\int_0^\infty x^2 \lambda e^{-\lambda x}\,dx.
+\]</span></p>
+<p>Vamos aplicar <strong>integração por partes duas vezes</strong>.</p>
+<hr>
+<p><strong>Primeira integração por partes</strong></p>
+<p>Escolha: - <span class="math inline">\(u = x^2\)</span> → <span class="math inline">\(du = 2x\,dx\)</span> - <span class="math inline">\(dv = \lambda e^{-\lambda x}dx\)</span> → <span class="math inline">\(v = -e^{-\lambda x}\)</span></p>
+<p>Então: <span class="math display">\[
+E(X^2)
+= \left[-x^2 e^{-\lambda x}\right]_0^\infty
++ \int_0^\infty 2x e^{-\lambda x} \, dx.
+\]</span></p>
+<p>O primeiro termo é zero, pelo mesmo argumento anterior.</p>
+<p>Assim: <span class="math display">\[
+E(X^2)= 2\int_0^\infty x e^{-\lambda x}\,dx.
+\]</span></p>
+<hr>
+<p><strong>Segunda integração por partes</strong></p>
+<p>Agora resolvemos: <span class="math display">\[
+\int_0^\infty x e^{-\lambda x}\,dx.
+\]</span></p>
+<p>Escolha: - <span class="math inline">\(u = x\)</span> → <span class="math inline">\(du = dx\)</span> - <span class="math inline">\(dv = e^{-\lambda x}dx\)</span> → <span class="math inline">\(v = -\frac{1}{\lambda}e^{-\lambda x}\)</span></p>
+<p>Então: <span class="math display">\[
+\int_0^\infty x e^{-\lambda x}\,dx
+= \left[-\frac{x}{\lambda} e^{-\lambda x}\right]_0^\infty
++ \int_0^\infty \frac{1}{\lambda} e^{-\lambda x}\,dx.
+\]</span></p>
+<p>O primeiro termo novamente é zero.</p>
+<p>Resta: <span class="math display">\[
+\int_0^\infty x e^{-\lambda x}\,dx
+= \frac{1}{\lambda} \int_0^\infty e^{-\lambda x}\,dx
+= \frac{1}{\lambda}\cdot\frac{1}{\lambda}
+= \frac{1}{\lambda^2}.
+\]</span></p>
+<p>Voltando ao ponto onde paramos: <span class="math display">\[
+E(X^2)= 2\left(\frac{1}{\lambda^2}\right)
+= \frac{2}{\lambda^2}.
+\]</span></p>
+<hr>
+<p><strong>Cálculo da variância</strong></p>
+<p>Usamos: <span class="math display">\[
+\mathrm{Var}(X)=E(X^2)-[E(X)]^2.
+\]</span></p>
+<p>Substituindo:</p>
+<ul>
+<li><span class="math inline">\(E(X^2)=\frac{2}{\lambda^2}\)</span></li>
+<li><span class="math inline">\(E(X)=\frac{1}{\lambda}\)</span></li>
+</ul>
+<p>Então: <span class="math display">\[
+\mathrm{Var}(X)
+= \frac{2}{\lambda^2} - \left(\frac{1}{\lambda}\right)^2
+= \frac{2}{\lambda^2} - \frac{1}{\lambda^2}
+= \frac{1}{\lambda^2}.
+\]</span></p>
+<p>Loggo, para <span class="math inline">\(X \sim \text{Exponencial}(\lambda)\)</span>:</p>
+<p><span class="math display">\[
+E(X)=\frac{1}{\lambda},
+\qquad
+\mathrm{Var}(X)=\frac{1}{\lambda^2}.
+\]</span></p>
+</div>
+</div>
+</div>
+<p><strong>Exemplo:</strong> O tempo entre chegadas ao caixa segue <span class="math inline">\(X \sim Exp(0{,}2)\)</span>.</p>
+<ol type="a">
+<li>Calcule <span class="math inline">\(P(X&gt;8)\)</span>.<br>
+</li>
+<li>Determine a mediana.<br>
+</li>
+<li>Interprete a propriedade “sem memória”.</li>
+</ol>
+<p><strong>Solução:</strong></p>
+<ol type="a">
+<li><p><span class="math display">\[
+P(X&gt;8)=e^{-0{,}2\cdot 8}=e^{-1{,}6}\approx 0{,}2019
+\]</span></p></li>
+<li><p><span class="math display">\[
+m=\frac{\ln 2}{0{,}2}=5\ln 2 \approx 3{,}47
+\]</span></p></li>
+<li><p>O tempo adicional não depende do tempo já passado.</p></li>
+</ol>
+<hr>
+</section>
+<section id="normal-musigma2" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="normal-musigma2"><span class="header-section-number">4.3</span> Normal <span class="math inline">\((\mu,\sigma^2)\)</span></h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Item</th>
+<th>Expressão</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Suporte</td>
+<td><span class="math inline">\(x\in\mathbb{R}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(f(x)\)</span></td>
+<td><span class="math inline">\(\dfrac{1}{\sigma\sqrt{2\pi}}\,\exp\left(-\dfrac{(x-\mu)^2}{2\sigma^2}\right)\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(F(x)\)</span></td>
+<td><span class="math inline">\(\Phi\!\left(\dfrac{x-\mu}{\sigma}\right)\)</span> (não possui forma fechada)</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(E[X]\)</span></td>
+<td><span class="math inline">\(\mu\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(Var(X)\)</span></td>
+<td><span class="math inline">\(\sigma^2\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Uso de Tabelas:</strong> padronize <span class="math inline">\(Z=(X-\mu)/\sigma\)</span> e leia <span class="math inline">\(P(Z\le z)\)</span> na tabela da Normal padrão <span class="math inline">\(\Phi(z)\)</span>.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="revisao_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Mostrar demonstração">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Mostrar demonstração
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Vamos considerar uma variável aleatória normal geral <span class="math display">\[
+X \sim N(\mu,\sigma^2), \quad \sigma &gt; 0.
+\]</span></p>
+<p>A densidade é <span class="math display">\[
+f_X(x) = \frac{1}{\sigma\sqrt{2\pi}}
+\exp\!\left(-\frac{(x-\mu)^2}{2\sigma^2}\right),\quad x\in\mathbb{R}.
+\]</span></p>
+<p>Nosso objetivo é demonstrar, a partir das definições, que <span class="math display">\[
+E(X)=\mu,
+\qquad
+\mathrm{Var}(X)=\sigma^2.
+\]</span></p>
+<p>A estratégia será:</p>
+<ol type="1">
+<li>Calcular <span class="math inline">\(E(Z)\)</span> e <span class="math inline">\(\mathrm{Var}(Z)\)</span> para a <strong>normal padrão</strong> <span class="math inline">\(Z\sim N(0,1)\)</span>.</li>
+<li>Usar a relação <span class="math inline">\(X = \mu + \sigma Z\)</span>.</li>
+</ol>
+<hr>
+<p><strong>Normal padrão <span class="math inline">\(Z \sim N(0,1)\)</span></strong></p>
+<p>Para a normal padrão, a densidade é <span class="math display">\[
+f_Z(z)=\frac{1}{\sqrt{2\pi}}e^{-z^2/2},\quad z\in\mathbb{R}.
+\]</span></p>
+<p>Queremos mostrar que: <span class="math display">\[
+E(Z)=0, \qquad E(Z^2)=1 \quad\Rightarrow\quad \mathrm{Var}(Z)=1.
+\]</span></p>
+<hr>
+<p><strong>Cálculo de <span class="math inline">\(E(Z)\)</span></strong></p>
+<p>Pela definição: <span class="math display">\[
+E(Z)=\int_{-\infty}^{\infty} z f_Z(z)\,dz
+= \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty} z e^{-z^2/2}\,dz.
+\]</span></p>
+<p>Observe que:</p>
+<ul>
+<li>A função <span class="math inline">\(e^{-z^2/2}\)</span> é <strong>par</strong> (simétrica): <span class="math inline">\(e^{-(-z)^2/2}=e^{-z^2/2}\)</span>.</li>
+<li>A função <span class="math inline">\(z\)</span> é <strong>ímpar</strong>: <span class="math inline">\((-z) = -z\)</span>.</li>
+<li>Logo, o produto <span class="math inline">\(z e^{-z^2/2}\)</span> é <strong>ímpar</strong>.</li>
+</ul>
+<p>A integral de uma função ímpar em intervalo simétrico é zero: <span class="math display">\[
+\int_{-\infty}^{\infty} z e^{-z^2/2}\,dz = 0.
+\]</span></p>
+<p>Portanto: <span class="math display">\[
+E(Z)=0.
+\]</span></p>
+<hr>
+<p><strong>Cálculo de <span class="math inline">\(E(Z^2)\)</span></strong></p>
+<p>Pela definição: <span class="math display">\[
+E(Z^2)=\int_{-\infty}^{\infty} z^2 f_Z(z)\,dz
+= \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty} z^2 e^{-z^2/2}\,dz.
+\]</span></p>
+<p>Para calcular <span class="math display">\[
+\int_{-\infty}^{\infty} z^2 e^{-z^2/2}\,dz,
+\]</span> vamos usar um truque padrão com um parâmetro auxiliar.</p>
+<p>Considere, para <span class="math inline">\(a&gt;0\)</span>: <span class="math display">\[
+I(a) = \int_{-\infty}^{\infty} e^{-a z^2/2}\,dz.
+\]</span></p>
+<p>Este é um <strong>integral gaussiano</strong>. Sabe-se (ou demonstra-se via coordenadas polares) que <span class="math display">\[
+I(a) = \sqrt{\frac{2\pi}{a}}.
+\]</span></p>
+<p>Agora vamos derivar <span class="math inline">\(I(a)\)</span> em relação a <span class="math inline">\(a\)</span> para obter uma integral com <span class="math inline">\(z^2\)</span>.</p>
+<hr>
+<p><strong>Derivando <span class="math inline">\(I(a)\)</span></strong></p>
+<p>Por um lado, derivando “dentro” da integral (legítimo sob condições usuais):</p>
+<p><span class="math display">\[
+I'(a) = \frac{d}{da}\int_{-\infty}^{\infty} e^{-a z^2/2}\,dz
+      = \int_{-\infty}^{\infty} \frac{\partial}{\partial a}
+        \big(e^{-a z^2/2}\big)\,dz.
+\]</span></p>
+<p>Mas <span class="math display">\[
+\frac{\partial}{\partial a} e^{-a z^2/2}
+= -\frac{z^2}{2} e^{-a z^2/2}.
+\]</span></p>
+<p>Logo: <span class="math display">\[
+I'(a) = \int_{-\infty}^{\infty} -\frac{z^2}{2} e^{-a z^2/2}\,dz
+      = -\frac{1}{2}\int_{-\infty}^{\infty} z^2 e^{-a z^2/2}\,dz.
+\]</span></p>
+<p>Por outro lado, derivando a expressão fechada <span class="math display">\[
+I(a) = \sqrt{\frac{2\pi}{a}}
+= (2\pi)^{1/2} a^{-1/2},
+\]</span></p>
+<p>temos <span class="math display">\[
+I'(a) = (2\pi)^{1/2}\left(-\frac{1}{2}\right)a^{-3/2}
+      = -\frac{\sqrt{2\pi}}{2}\,a^{-3/2}.
+\]</span></p>
+<p>Igualando as duas expressões para <span class="math inline">\(I'(a)\)</span>: <span class="math display">\[
+-\frac{1}{2}\int_{-\infty}^{\infty} z^2 e^{-a z^2/2}\,dz
+= -\frac{\sqrt{2\pi}}{2}\,a^{-3/2}.
+\]</span></p>
+<p>Multiplicando por <span class="math inline">\(-2\)</span> ambos os lados: <span class="math display">\[
+\int_{-\infty}^{\infty} z^2 e^{-a z^2/2}\,dz
+= \sqrt{2\pi}\,a^{-3/2}.
+\]</span></p>
+<hr>
+<p><strong>Aplicando o resultado em <span class="math inline">\(a=1\)</span></strong></p>
+<p>Queremos o caso com <span class="math inline">\(a=1\)</span>, isto é, <span class="math display">\[
+\int_{-\infty}^{\infty} z^2 e^{-z^2/2}\,dz.
+\]</span></p>
+<p>Pela fórmula: <span class="math display">\[
+\int_{-\infty}^{\infty} z^2 e^{-z^2/2}\,dz
+= \sqrt{2\pi}\cdot 1^{-3/2}
+= \sqrt{2\pi}.
+\]</span></p>
+<p>Agora voltamos para <span class="math inline">\(E(Z^2)\)</span>: <span class="math display">\[
+E(Z^2)
+= \frac{1}{\sqrt{2\pi}}
+\int_{-\infty}^{\infty} z^2 e^{-z^2/2}\,dz
+= \frac{1}{\sqrt{2\pi}}\cdot \sqrt{2\pi} = 1.
+\]</span></p>
+<p>Logo: <span class="math display">\[
+E(Z^2)=1.
+\]</span></p>
+<hr>
+<p><strong>Variância da normal padrão</strong></p>
+<p>A variância é <span class="math display">\[
+\mathrm{Var}(Z)=E(Z^2)-[E(Z)]^2=1-0^2=1.
+\]</span></p>
+<p>Concluímos: <span class="math display">\[
+E(Z)=0,\qquad \mathrm{Var}(Z)=1
+\quad\text{para } Z\sim N(0,1).
+\]</span></p>
+<hr>
+<p><strong>Normal geral <span class="math inline">\(X \sim N(\mu,\sigma^2)\)</span></strong></p>
+<p>Uma variável normal geral pode ser escrita como <span class="math display">\[
+X = \mu + \sigma Z,
+\]</span> onde <span class="math inline">\(Z \sim N(0,1)\)</span>.</p>
+<p>Vamos usar essa relação para encontrar <span class="math inline">\(E(X)\)</span> e <span class="math inline">\(\mathrm{Var}(X)\)</span>.</p>
+<hr>
+<p><strong>Cálculo de <span class="math inline">\(E(X)\)</span></strong></p>
+<p>Usando a linearidade da esperança: <span class="math display">\[
+E(X) = E(\mu + \sigma Z)
+     = E(\mu) + E(\sigma Z)
+     = \mu + \sigma E(Z).
+\]</span></p>
+<p>Como já mostramos que <span class="math inline">\(E(Z)=0\)</span>, obtemos: <span class="math display">\[
+E(X) = \mu + \sigma \cdot 0 = \mu.
+\]</span></p>
+<hr>
+<p><strong>Cálculo de <span class="math inline">\(\mathrm{Var}(X)\)</span></strong></p>
+<p>Usamos a propriedade de variância para transformações lineares: <span class="math display">\[
+\mathrm{Var}(a + bZ) = b^2\,\mathrm{Var}(Z).
+\]</span></p>
+<p>Aqui, <span class="math inline">\(a=\mu\)</span> e <span class="math inline">\(b=\sigma\)</span>, então: <span class="math display">\[
+\mathrm{Var}(X) = \mathrm{Var}(\mu + \sigma Z)
+                = \sigma^2\,\mathrm{Var}(Z).
+\]</span></p>
+<p>Sabemos que <span class="math inline">\(\mathrm{Var}(Z)=1\)</span>, logo: <span class="math display">\[
+\mathrm{Var}(X) = \sigma^2 \cdot 1 = \sigma^2.
+\]</span></p>
+<hr>
+<p>Assim, para uma variável aleatória normal geral <span class="math inline">\(X \sim N(\mu,\sigma^2)\)</span>, demonstramos que:</p>
+<p><span class="math display">\[
+E(X) = \mu,
+\qquad
+\mathrm{Var}(X) = \sigma^2.
+\]</span></p>
+</div>
+</div>
+</div>
+<p><strong>Exemplo:</strong> Pesos de pacotes seguem <span class="math inline">\(W \sim N(25, 1{,}5^2)\)</span>.</p>
+<ol type="a">
+<li>Calcule <span class="math inline">\(P(24 &lt; W &lt; 27)\)</span>.<br>
+</li>
+<li>Determine o percentil 95%.<br>
+</li>
+<li>Interprete o percentil no controle de qualidade.</li>
+</ol>
+<p><strong>Solução:</strong></p>
+<ol type="a">
+<li><span class="math display">\[
+P(24&lt;W&lt;27)=P(-0{,}67&lt;Z&lt;1{,}33)=\Phi(1{,}33)-\Phi(-0{,}67)
+\]</span></li>
+</ol>
+<p><span class="math display">\[
+\approx 0{,}9082 - 0{,}2514 = 0{,}6568
+\]</span></p>
+<ol start="2" type="a">
+<li><p><span class="math display">\[
+x_{0{,}95}=25 + 1{,}645\cdot 1{,}5 = 27{,}4675
+\]</span></p></li>
+<li><p>95% dos pacotes pesam até 27,47 kg.</p></li>
+</ol>
+</section>
+</section>
+<section id="aproximações-clássicas" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Aproximações Clássicas</h1>
+<section id="hipergeométrica-approx-binomial" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="hipergeométrica-approx-binomial"><span class="header-section-number">5.1</span> Hipergeométrica <span class="math inline">\(\approx\)</span> Binomial</h2>
+<p><strong>Condição:</strong> população grande vs.&nbsp;amostra pequena (fração amostral <span class="math inline">\(n/N\)</span> pequena).<br>
+Use <span class="math inline">\(X\sim Bin(n, p=K/N)\)</span> como aproximação.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="revisao_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="binomial-approx-poisson" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="binomial-approx-poisson"><span class="header-section-number">5.2</span> Binomial <span class="math inline">\(\approx\)</span> Poisson</h2>
+<p><strong>Condição:</strong> <span class="math inline">\(n\)</span> grande, <span class="math inline">\(p\)</span> pequeno, <span class="math inline">\(\lambda=np\)</span> moderado.<br>
+Aproximação: <span class="math inline">\(P_{Bin}(X=k)\approx e^{-\lambda}\lambda^k/k!\)</span>.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="revisao_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="binomial-approx-normal" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="binomial-approx-normal"><span class="header-section-number">5.3</span> Binomial <span class="math inline">\(\approx\)</span> Normal</h2>
+<p><strong>Condição:</strong> <span class="math inline">\(np(1-p)\gtrsim 10\)</span>.<br>
+Aproximação: <span class="math inline">\(X\approx N(\mu=np,\sigma^2=np(1-p))\)</span> com <strong>correção de continuidade</strong>.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="revisao_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="poisson-approx-normal" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="poisson-approx-normal"><span class="header-section-number">5.4</span> Poisson <span class="math inline">\(\approx\)</span> Normal</h2>
+<p><strong>Condição:</strong> <span class="math inline">\(\lambda\gtrsim 10\)</span>.<br>
+Aproximação: <span class="math inline">\(X\approx N(\mu=\lambda,\sigma^2=\lambda)\)</span> com correção de continuidade.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="revisao_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<hr>
+<!-- # Relações importantes entre distribuições -->
+<!-- - **Bernoulli e Binomial**   -->
+<!--   - Se $X_1, \dots, X_n$ são i.i.d. $Bernoulli(p)$, então   -->
+<!--     $$S_n = \sum_{i=1}^n X_i \sim Binomial(n, p).$$   -->
+<!--   - Caso especial: $Binomial(n=1,p) = Bernoulli(p)$. -->
+<!-- - **Binomial e Poisson** (aproximação)   -->
+<!--   - Se $X \sim Binomial(n, p)$ com $n$ grande e $p$ pequeno de modo que $np = \lambda$ é moderado, então   -->
+<!--     $$X \approx Poisson(\lambda).$$   -->
+<!-- - **Binomial e Normal** (CLT / aproximação)   -->
+<!--   - Para $n$ grande,   -->
+<!--     $$X \sim Binomial(n,p) \approx Normal\big(np,\; np(1-p)\big).$$   -->
+<!-- - **Poisson e Normal** (aproximação)   -->
+<!--   - Se $X \sim Poisson(\lambda)$ com $\lambda$ grande,   -->
+<!--     $$X \approx Normal(\lambda, \lambda).$$   -->
+<!-- - **Poisson e Exponencial**   -->
+<!--   - Se o número de chegadas em um intervalo segue $Poisson(\lambda)$, então o **tempo entre chegadas** é   -->
+<!--     $$T \sim Exponencial(\lambda).$$   -->
+<!-- - **Somas e a família Gamma / Qui-quadrado / Exponencial**   -->
+<!--   - Se $T_1, \dots, T_k$ são i.i.d. $Exponencial(\lambda)$, então   -->
+<!--     $$\sum_{i=1}^k T_i \sim Gamma(k, \lambda).$$   -->
+<!--   - Se $X \sim Gamma(\alpha, \lambda)$ com $\alpha = \nu/2$ e $\lambda = 1/2$, então   -->
+<!--     $$X \sim \chi^2_\nu.$$   -->
+<!--   - Caso especial: $\chi^2_2$ é $Exponencial$ com média 2. -->
+<!-- - **Normal, Qui-quadrado, t e F**   -->
+<!--   - Se $Z \sim N(0,1)$, então $Z^2 \sim \chi^2_1$.   -->
+<!--   - Se $Z_1, \dots, Z_\nu$ são i.i.d. $N(0,1)$, então   -->
+<!--     $$\sum_{i=1}^\nu Z_i^2 \sim \chi^2_\nu.$$   -->
+<!--   - Se $Z \sim N(0,1)$ e $V \sim \chi^2_\nu$ independentes, então   -->
+<!--     $$T = \frac{Z}{\sqrt{V/\nu}} \sim t_\nu.$$   -->
+<!--   - Se $V_1 \sim \chi^2_{\nu_1}$ e $V_2 \sim \chi^2_{\nu_2}$ independentes, então   -->
+<!--     $$F = \frac{V_1/\nu_1}{V_2/\nu_2} \sim F_{\nu_1,\nu_2}.$$ -->
+<!-- - **Normal e Log-normal**   -->
+<!--   - Se $Y \sim N(\mu,\sigma^2)$, então   -->
+<!--     $$X = e^Y \sim Lognormal(\mu,\sigma^2).$$   -->
+<!--   - Reciprocamente, se $X \sim Lognormal(\mu,\sigma^2)$, então $\log X \sim N(\mu,\sigma^2)$. -->
+<!-- - **Gamma e Beta**   -->
+<!--   - Se $X_1 \sim Gamma(\alpha_1, 1)$ e $X_2 \sim Gamma(\alpha_2, 1)$ independentes, então   -->
+<!--     $$\frac{X_1}{X_1+X_2} \sim Beta(\alpha_1, \alpha_2).$$   -->
+<!--   - Caso especial: $Beta(1,1)$ é $Uniforme(0,1)$. -->
+<!-- - **Uniforme e Exponencial (transformação inversa)**   -->
+<!--   - Se $U \sim Uniforme(0,1)$ e definimos   -->
+<!--     $$X = -\lambda \log U,$$   -->
+<!--     então $X \sim Exponencial(\lambda)$.   -->
+<!--   - Mais geral: se $U \sim Uniforme(0,1)$ e $F_X^{-1}$ é a função quantil de $X$, então   -->
+<!--     $$X = F_X^{-1}(U)$$   -->
+<!--     tem a distribuição de $X$. -->
+<!-- - **Normal e Cauchy**   -->
+<!--   - Se $Z_1, Z_2$ são i.i.d. $N(0,1)$, então   -->
+<!--     $$\frac{Z_1}{Z_2} \sim Cauchy(0,1).$$ -->
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("http:\/\/professortp\.com\.br\/est304\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./cronograma.html" class="pagination-link" aria-label="Cronograma da Disciplina">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Cronograma da Disciplina</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© Copyright 2025, Tiago Pereira</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/tiagomartin/est304/edit/main/revisao.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/tiagomartin/est304/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>Página construída usando <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
