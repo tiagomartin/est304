@@ -91,6 +91,35 @@ div.csl-indent {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <meta property="og:title" content="Probabilidade II – EST304 - Probabilidade II">
 <meta property="og:description" content="Homepage da disciplina EST304 - Probabilidade II, 2025/2">
@@ -407,8 +436,8 @@ div.csl-indent {
 <ul>
 <li>Duas provas valendo 70 pontos, distribuídos da seguinte forma:
 <ul>
-<li>**1^a Prova: 35 pontos a ser realizada em 29/01/26</li>
-<li>**2^a Prova: 35 pontos a ser realizada em 26/02/26</li>
+<li><strong><span class="math inline">\(1^a\)</span> Prova:</strong> 35 pontos a ser realizada em 29/01/26</li>
+<li><strong><span class="math inline">\(2^a\)</span> Prova:</strong> 35 pontos a ser realizada em 26/02/26</li>
 </ul></li>
 <li>Listas de exercícios a serem entregues ao longo do semestre no valor de 30 pontos.</li>
 </ul>
