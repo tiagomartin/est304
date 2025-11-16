@@ -32,7 +32,7 @@ Esta página contém um esboço dos tópicos, conteúdos e tarefas para o semest
 |:------:|--------|--------|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
 | [6](programacao/semana-6.html) | Ter, 11/11 | Outras Distribuições Contínuas |  | [{{< fa file-powerpoint size=2xl >}}](/aulas/outras_distr_continuas/outras_dist_continuas.html#/title-slide "Outras Distribuições Contínuas"){aria-label="Outras Distribuições Contínuas"} |  |  |  |  |  |
 |  | Qui, 13/11 | Outras Distribuições Contínuas |  | [{{< fa file-powerpoint size=2xl >}}](/aulas/outras_distr_continuas/outras_dist_continuas.html#/title-slide "Outras Distribuições Contínuas"){aria-label="Outras Distribuições Contínuas"} |  |  |  |  |  |
-| [7](programacao/semana-7.html) | Ter, 18/11 | Não haverá aula |  |  |  |  |  |  |  |
+| [7](programacao/semana-7.html) | Ter, 18/11 | Não haverá aula |  |  |  |[{{< fa file-lines size=2xl >}}](/exercicios/lista01.html "Lista de Exercícios 01"){aria-label="Lista de Exercícios 01"}  |  |  |  |
 |  | Qui, 20/11 | Feriado: não haverá aula |  |  |  |  |  |  |  |
 <!-- | [8](programacao/semana-8.html) | Ter, 24/06 | Análise Preditiva |  | [{{< fa file-powerpoint size=2xl >}}](/aulas/Analise_preditiva/preditiva.html#/random-forests "Algoritmo Random Forests"){aria-label="Algoritmo Random Forests"} |  |  |  |  |  | -->
 <!-- |  | Qui, 26/06 | Análise Preditiva |  | [{{< fa file-powerpoint size=2xl >}}](/aulas/Analise_preditiva/preditiva.html#/redes-neurais-artificiais "Redes Neurais Artificiais"){aria-label="Redes Neurais Artificiais"} |  |  |  |  |  | -->

@@ -4,3 +4,19 @@ title: "Semana 07"
 
 
 Não haverá aula!
+
+
+
+## Entrega lista de exercícios 01
+
+::: callout-important
+
+## Fique Atento!
+
+{{< fa file-lines size=lg >}} [Lista de exercícios 01](/exercicios/lista01.html "Lista de exercícios 01"){aria-label="Lista de exercícios 01"} 
+
+Entrega na sala de aula!
+
+-   Data de entrega:
+    -   25 de novembro de 2025
+:::

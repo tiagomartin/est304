@@ -2205,5 +2205,12 @@
     "title": "Transformação de Variáveis Unidimensionais",
     "section": "Função de Variável Aleatória: Caso Contínuo",
     "text": "Função de Variável Aleatória: Caso Contínuo\nLogo, se \\(X\\sim U(-1,1)\\), a distribuição de \\(Y=X^2\\) é dada por\n\\[f_Y(y) = \\dfrac{1}{2 \\sqrt{y}}I_{(0,1)}(y)\\]"
+  },
+  {
+    "objectID": "programacao/semana-7.html#entrega-lista-de-exercícios-01",
+    "href": "programacao/semana-7.html#entrega-lista-de-exercícios-01",
+    "title": "Semana 07",
+    "section": "Entrega lista de exercícios 01",
+    "text": "Entrega lista de exercícios 01\n\n\n\n\n\n\nFique Atento!\n\n\n\n Lista de exercícios 01\nEntrega na sala de aula!\n\nData de entrega:\n\n25 de novembro de 2025"
   }
 ]
