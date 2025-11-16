@@ -4,7 +4,7 @@ title: "Aulas"
 
 - [Outras Distribuições Contínuas](/aulas/outras_distr_continuas/outras_dist_continuas.html#/title-slide)
 
-- Transformação de Variáveis Unidimensionais
+- [Transformação de Variáveis Unidimensionais](/aulas/transformacoes/transformacoes.html#/title-slide)
 
 - Função Geradora de Momentos
 

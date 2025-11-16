@@ -1,0 +1,1143 @@
+% Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  ignorenonframetext,
+  aspectratio=169,
+]{beamer}
+\newif\ifbibliography
+\usepackage{pgfpages}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamercolor{caption name}{fg=normal text.fg}
+\beamertemplatenavigationsymbolsempty
+% remove section numbering
+\setbeamertemplate{part page}{
+  \centering
+  \begin{beamercolorbox}[sep=16pt,center]{part title}
+    \usebeamerfont{part title}\insertpart\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{section page}{
+  \centering
+  \begin{beamercolorbox}[sep=12pt,center]{section title}
+    \usebeamerfont{section title}\insertsection\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{subsection page}{
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center]{subsection title}
+    \usebeamerfont{subsection title}\insertsubsection\par
+  \end{beamercolorbox}
+}
+% Prevent slide breaks in the middle of a paragraph
+\widowpenalties 1 10000
+\raggedbottom
+\AtBeginPart{
+  \frame{\partpage}
+}
+\AtBeginSection{
+  \ifbibliography
+  \else
+    \frame{\sectionpage}
+  \fi
+}
+\AtBeginSubsection{
+  \frame{\subsectionpage}
+}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+
+
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+\usepackage{caption}
+% Make caption package work with longtable
+\makeatletter
+\def\fnum@table{\tablename~\thetable}
+\makeatother
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+
+
+
+
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+ 
+
+
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Transformação de Variáveis Unidimensionais},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+
+
+\title{Transformação de Variáveis Unidimensionais}
+\author{}
+\date{}
+
+\begin{document}
+\frame{\titlepage}
+
+
+\begin{frame}{Função de Variável Aleatória}
+\phantomsection\label{funuxe7uxe3o-de-variuxe1vel-aleatuxf3ria}
+Se \(X\) é uma variável aleatória com função densidade acumulada
+\(F_x(x)\), então qualquer função de \(X\), por exemplo, \(g(X)\) também
+é uma variável aleatória.
+
+\pause
+
+Geralmente, \(g(X)\) é de nosso interesse e denotamos \(Y = g(X)\) para
+indicar a nova variável aleatória \(g(X)\).
+
+\pause
+
+Uma vez que \(Y\) é uma função de \(X\), podemos descrever o
+comportamento probabilístico de \(Y\) em termos de \(X\), isto é, para
+um dado conjunto \(A\),
+
+\[P(Y \in A) = P(g(X) \in A)\]
+
+mostrando que a distribuição de \(Y\) depende das funções \(F_X\) e
+\(g\).
+\end{frame}
+
+\begin{frame}{Função de Variável Aleatória}
+\phantomsection\label{funuxe7uxe3o-de-variuxe1vel-aleatuxf3ria-1}
+Formalmente, ao escrevermos \(y = g(x)\), a função \(g(x)\) define uma
+função no suporte original de \(X\), denotado por \(S_X\), para um novo
+espaço amostral, denotado por \(S_Y\), o suporte de \(Y\).
+
+\pause
+
+Seja então a função inversa de \(g\), denotada por \(g^{-1}\), que é uma
+função de \(S_y\) para \(S_x\).
+
+\[g^{-1}(y)=\{x : g(x) = y \}\]
+
+\pause
+
+Portanto, a função inversa consiste no conjunto de valores de \(X\),
+para os quais \(g(x) = y\), dado um valor de \(y\) fixado do suporte de
+\(Y\), que é a variável aleatória obtida pela transformação de
+interesse, \(g(X)\).
+\end{frame}
+
+\begin{frame}{Função de Variável Aleatória}
+\phantomsection\label{funuxe7uxe3o-de-variuxe1vel-aleatuxf3ria-2}
+É importante observar que cada valor de \(x\) pertencente ao suporte de
+\(X\), corresponde a um único valor de \(y\) pertencente ao suporte de
+\(Y\). Por outro lado, um valor \(y \in S_Y\) pode corresponder a mais
+de um valor do suporte de \(X\), conforme ilustra a figura abaixo
+
+\begin{center}
+\pandocbounded{\includegraphics[keepaspectratio]{../../images/funcao_var_alea.png}}
+\end{center}
+\end{frame}
+
+\begin{frame}{Função de Variável Aleatória}
+\phantomsection\label{funuxe7uxe3o-de-variuxe1vel-aleatuxf3ria-3}
+Finalmente, se a variável aleatória \(Y\) for definida por \(Y= g(X)\),
+podemos escrever para qualquer conjunto \(A \subset S_Y\),
+
+\[
+\begin{aligned}
+P(Y \in A) &= P(g(X) \in A) \\
+           &= P(\{x \in S_X : g(x) \in A\}) \\
+           &= P(X \in g^{-1}(A))
+\end{aligned}
+\]
+
+Isto define a distribuição de probabilidade de \(Y\).
+\end{frame}
+
+\begin{frame}{Função de Variável Aleatória: Caso Discreto}
+\phantomsection\label{funuxe7uxe3o-de-variuxe1vel-aleatuxf3ria-caso-discreto}
+Se \(X\) for uma variável aleatória discreta e \(Y= g(X)\), então \(Y\)
+também será uma variável aleatória discreta. Assim,
+
+\[p_Y(y) = P(Y = y) = \sum_{x \in g^{-1}(y)} p_X(x), \qquad \text{para} \,\, y \in S_Y\]
+e \(p_Y(y) = 0\) para \(y \notin S_Y\).
+\end{frame}
+
+\begin{frame}{Função de Variável Aleatória: Caso Discreto}
+\phantomsection\label{funuxe7uxe3o-de-variuxe1vel-aleatuxf3ria-caso-discreto-1}
+\textbf{Exemplo 01:} Suponhamos que a distribuição de probabilidades da
+variável aleatória \(X\) é dada pela tabela abaixo:
+
+\(x\)
+
+-2
+
+-1
+
+0
+
+1
+
+2
+
+3
+
+\(p_X(x)\)
+
+0,1
+
+0,2
+
+0,2
+
+0,3
+
+0,1
+
+0,1
+
+Seja \(Y = 3X+1\). Encontre a distribuição da variável aleatória \(Y\).
+
+\pause
+
+\textbf{Solução:}
+
+Como \(Y = 3X+1\),
+
+\(y = 3x + 1\)
+
+-5
+
+-2
+
+1
+
+4
+
+7
+
+10
+
+\(p_Y(y)\)
+
+0,1
+
+0,2
+
+0,2
+
+0,3
+
+0,1
+
+0,1
+\end{frame}
+
+\begin{frame}{Função de Variável Aleatória: Caso Discreto}
+\phantomsection\label{funuxe7uxe3o-de-variuxe1vel-aleatuxf3ria-caso-discreto-2}
+\textbf{Exemplo 02:} Considere a mesma distribuição de probabilidades da
+variável aleatória \(X\), dada pela tabela abaixo:
+
+\(x\)
+
+-2
+
+-1
+
+0
+
+1
+
+2
+
+3
+
+\(p_X(x)\)
+
+0,1
+
+0,2
+
+0,2
+
+0,3
+
+0,1
+
+0,1
+
+Contudo, vamos agora definir a variável aleatória \(Y = X^2\). Qual a
+distribuição de probabilidades de \(Y\)?
+
+\pause
+
+\textbf{Solução:}
+
+Temos que \(S_X = \{-2, -1, 0, 1, 2, 3\}\). Como \(Y = X^2\), temos que
+o suporte de \(Y\) é dado por \(S_Y = \{0, 1, 4, 9\}\), de forma que a
+distribuição da variável \(Y\) será dada por:
+\end{frame}
+
+\begin{frame}{Função de Variável Aleatória: Caso Discreto}
+\phantomsection\label{funuxe7uxe3o-de-variuxe1vel-aleatuxf3ria-caso-discreto-3}
+\[
+\begin{aligned}
+P(Y = 0) &= P(X = 0) = 0{,}2 \\[6pt]
+P(Y = 1) &= P(X = -1) + P(X = 1) = 0{,}5 \\[6pt]
+P(Y = 4) &= P(X = -2) + P(X = 2) = 0{,}2 \\[6pt]
+P(Y = 9) &= P(X = 3) = 0{,}1
+\end{aligned}
+\]
+
+Logo,
+
+\(y = x^2\)
+
+0
+
+1
+
+4
+
+9
+
+\(p_Y(y)\)
+
+0,2
+
+0,5
+
+0,2
+
+0,1
+\end{frame}
+
+\begin{frame}{Função de Variável Aleatória: Caso Discreto}
+\phantomsection\label{funuxe7uxe3o-de-variuxe1vel-aleatuxf3ria-caso-discreto-4}
+\textbf{Exemplo 03:} Suponha que \(X \sim Poisson(\lambda)\), com função
+de probabilidade
+
+\[
+P(x | \lambda)=
+  \begin{cases}
+\dfrac{e^{-\lambda} \lambda^x}{x!}, & x \in \{0, 1, 2, 3, \cdots \} \\[6pt]
+0, & c.c.
+\end{cases}
+\]
+
+Considere que \(Y = g(X)\), tal que \(g(X) = 0\), se \(x\) é par e
+\(g(X) = 1\), se \(x\) é ímpar. Obter a função de probabilidade de
+\(Y\).
+
+\pause
+
+\textbf{Solução:}
+
+Temos que o conjunto suporte de \(Y\) é \(S_Y = \{0,1\}\). Vamos
+calcular a \(P(Y = 0)\).
+\end{frame}
+
+\begin{frame}{Função de Variável Aleatória: Caso Discreto}
+\phantomsection\label{funuxe7uxe3o-de-variuxe1vel-aleatuxf3ria-caso-discreto-5}
+\[
+\begin{aligned}
+P(Y = 0)
+ &= P(g(X) = 0)
+  = P(X \text{ ser par}) \\[6pt]
+ &= \sum_{x \in \{0,2,4,\ldots\}}
+    \frac{e^{-\lambda}\lambda^{x}}{x!} \\[6pt]
+ &= e^{-\lambda}
+    \sum_{k = 0}^{\infty}
+    \frac{\lambda^{2k}}{(2k)!}.
+\end{aligned}
+\]
+\end{frame}
+
+\begin{frame}{Aparte --- Séries de Taylor e Maclaurin}
+\phantomsection\label{aparte-suxe9ries-de-taylor-e-maclaurin}
+\begin{block}{Série de Taylor}
+\phantomsection\label{suxe9rie-de-taylor}
+Expansão de uma função em torno de um ponto \(a\):
+
+A expansão de Taylor escrita termo a termo é:
+
+\[
+{\small
+\begin{aligned}
+    f(x) &= f(a)
+    + f'(a)(x-a)
++ \frac{f''(a)}{2!}(x-a)^2
++ \frac{f^{(3)}(a)}{3!}(x-a)^3 + \cdots = \sum_{n=0}^{\infty} \frac{f^{(n)}(a)}{n!}(x-a)^n
+\end{aligned}
+}
+\]
+\end{block}
+\end{frame}
+
+\begin{frame}{Aparte --- Séries de Taylor e Maclaurin}
+\phantomsection\label{aparte-suxe9ries-de-taylor-e-maclaurin-1}
+\begin{block}{Série de Maclaurin}
+\phantomsection\label{suxe9rie-de-maclaurin}
+Caso particular da série de Taylor com \(a = 0\):
+
+\[ f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(0)}{n!}x^n \]
+
+Exemplos:
+
+\[
+e^x
+= 1
++ x
++ \frac{x^2}{2!}
++ \frac{x^3}{3!}
++ \frac{x^4}{4!}
++ \frac{x^5}{5!}
++ \cdots
++ \frac{x^n}{n!}
++ \cdots= \sum_{n=0}^{\infty} \frac{x^n}{n!}
+\]
+
+\[
+e^{-x}
+= 1
+- x
++ \frac{x^2}{2!}
+- \frac{x^3}{3!}
++ \frac{x^4}{4!}
+- \frac{x^5}{5!}
++ \cdots
++ (-1)^n \frac{x^n}{n!}
++ \cdots = \sum_{n=0}^{\infty} (-1)^n \frac{x^n}{n!}
+\]
+\end{block}
+\end{frame}
+
+\begin{frame}{Função de Variável Aleatória: Caso Discreto}
+\phantomsection\label{funuxe7uxe3o-de-variuxe1vel-aleatuxf3ria-caso-discreto-6}
+Assim,
+\(e^{\lambda} + e^{-\lambda} = 2\sum_{k=0}^{\infty} \frac{\lambda^{2k}}{(2k)!}\)
+e,
+
+\[
+\begin{aligned}
+P(Y = 0)
+ &= e^{-\lambda} \sum_{k = 0}^{\infty} \frac{\lambda^{2k}}{(2k)!} \\[6pt]
+ &= e^{-\lambda} \cdot \frac{1}{2}\Big(e^{\lambda} + e^{-\lambda}\Big) \\[6pt]
+ &= \frac{1}{2}\Big(1 + e^{-2\lambda}\Big).
+\end{aligned}
+\]
+\end{frame}
+
+\begin{frame}{Função de Variável Aleatória: Caso Discreto}
+\phantomsection\label{funuxe7uxe3o-de-variuxe1vel-aleatuxf3ria-caso-discreto-7}
+Como \(\sum_{y=0}^{\infty} P(Y = y) = 1\), temos que
+
+\[
+\begin{aligned}
+P(Y = 1)
+ &= P(X \text{ ser ímpar})
+  = 1 - \frac{1}{2}\Big(1 + e^{-2\lambda}\Big) \\[6pt]
+ &= \frac{1}{2}\Big(1 - e^{-2\lambda}\Big).
+\end{aligned}
+\]
+
+\pause
+
+Finalmente, \(p_Y(y) = 0\) para outros valores de \(y \notin S_Y\).
+Portanto, \(Y \sim Bernoulli(p)\) com
+
+\[p = \dfrac{1}{2}\Big(1 - e^{-2\lambda}\Big), \qquad \lambda > 0\]
+\end{frame}
+
+\begin{frame}{Função de Variável Aleatória: Caso Discreto}
+\phantomsection\label{funuxe7uxe3o-de-variuxe1vel-aleatuxf3ria-caso-discreto-8}
+\textbf{Exemplo 04:} Considere que \(X \sim Binomial (n,p)\) com função
+de probabilidade
+
+\[
+P(x | n,p)=
+\begin{cases}
+\dbinom{n}{x}\, p^{x}\, (1-p)^{\,n-x}, \qquad x \in \{0, 1, 2, \dots, n\}  \\[6pt]
+0, & c.c.
+\end{cases}
+\]
+
+Considere \(Y = g(X) = n - X\) e obtenha a distribuição de probabilidade
+de \(Y\).
+
+\pause
+
+\textbf{Solução:}
+
+Considerando \(Y = g(X) = n - X\), temos que
+\(S_Y = \{0, 1, 2, \dots, n\}\). Quando \(Y =  y\), temos \(X = n-y\),
+assim,
+\end{frame}
+
+\begin{frame}{Função de Variável Aleatória: Caso Discreto}
+\phantomsection\label{funuxe7uxe3o-de-variuxe1vel-aleatuxf3ria-caso-discreto-9}
+\[
+\begin{aligned}
+P(Y = y) &= P(g(X) = y) = P(X = g^{-1}(y)) = P(X = n - y) \\
+         &= \binom{n}{\,n-y\,}\, p^{\,n-y}\, (1-p)^{\,n-(n-y)} \\
+         &= \binom{n}{\,n-y\,}\, p^{\,n-y}\, (1-p)^{\,y} \\
+         &= \binom{n}{y}\, (1-p)^{y}\, p^{\,n-y}, 
+         \qquad \text{uma vez que } \binom{n}{n-y} = \binom{n}{y}
+\end{aligned}
+\]
+
+que equivale a dizer que \(Y \sim binomial(n, 1-p)\).
+\end{frame}
+
+\begin{frame}{Função de Variável Aleatória: Caso Contínuo}
+\phantomsection\label{funuxe7uxe3o-de-variuxe1vel-aleatuxf3ria-caso-contuxednuo}
+\begin{block}{Método da Função de Distribuição}
+\phantomsection\label{muxe9todo-da-funuxe7uxe3o-de-distribuiuxe7uxe3o}
+\textbf{Teorema:} Consideremos uma variável aleatória contínua \(X\) com
+função de distribuição de probabilidade \(F_X\) conhecida e a função
+\(g: \mathbb{R} \rightarrow \mathbb{R}\), então \(Y = g(X)\) é uma
+variável aleatória com função distribuição dada por
+
+\[F_Y(y) = P(Y \le y) = P(X \in g^{-1}\big((-\infty, y]\big) = \int_{g^{-1}\big((-\infty, y]\big)}f_X(x)\,\,dx\]
+
+em que \(g^{-1}(y)\) é a função inversa de \(g\).
+\end{block}
+\end{frame}
+
+\begin{frame}{Função de Variável Aleatória: Caso Contínuo}
+\phantomsection\label{funuxe7uxe3o-de-variuxe1vel-aleatuxf3ria-caso-contuxednuo-1}
+\begin{itemize}
+\item
+  Esse método consiste em encontrar a função de distribuição da variável
+  transformada \(Y = g(X)\) a partir da função de distribuição de \(X\).
+\item
+  Se \(Y\) for variável aleatória continua, podemos então obter a sua
+  função densidade a partir da derivada da função de distribuição já
+  encontrada.
+\item
+  Não necessariamente \(Y = g(X)\) será variável aleatória contínua,
+  \(Y\) por ser contínua, discreta e até mesmo uma variável aleatória
+  que não seja nem discreta nem contínua.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Função de Variável Aleatória: Caso Contínuo}
+\phantomsection\label{funuxe7uxe3o-de-variuxe1vel-aleatuxf3ria-caso-contuxednuo-2}
+\textbf{Exemplo 05:} Considere que \(X \sim Exp(\lambda)\), sendo
+\(\lambda > 0\) conhecido, com função densidade de probabilidade dada
+por
+
+\[
+f_X(x| \lambda) =
+\begin{cases}
+\lambda \,\, e^{-\lambda x} & \text{para } x > 0  \\[6pt] 
+0, & c.c.
+\end{cases}
+\] Para \(Y = g(X)\) dada por
+
+\[
+Y = g(X) =
+\begin{cases}
+0 & \text{se } P\Bigg( X \le \dfrac{1}{\lambda}\Bigg) > 0  \\[6pt] 
+1, & c.c.
+\end{cases}
+\] obter a distribuição de \(Y\).
+\end{frame}
+
+\begin{frame}{Função de Variável Aleatória: Caso Contínuo}
+\phantomsection\label{funuxe7uxe3o-de-variuxe1vel-aleatuxf3ria-caso-contuxednuo-3}
+\textbf{Solução:}
+
+Como o evento \(\{Y = 0\}\) ocorre quando \(X \le 1/\lambda\) e a função
+de distribuição exponencial é \(F_X(x) = 1 - \exp(-\lambda x)\), então
+
+\[P(Y=0) = F_X\Bigg( \dfrac{1}{\lambda}\Bigg) = 1 - \exp \Bigg(-\lambda \times \dfrac{1}{\lambda}\Bigg) = 1-e^{-1}\]
+
+Temos então, que
+
+\[P(Y = 1) = 1 - F_X\Bigg( \dfrac{1}{\lambda}\Bigg) = 1 - (1 - e^{-1}) = e^{-1}\]
+\end{frame}
+
+\begin{frame}{Função de Variável Aleatória: Caso Contínuo}
+\phantomsection\label{funuxe7uxe3o-de-variuxe1vel-aleatuxf3ria-caso-contuxednuo-4}
+Logo, \(Y\) é uma variável aleatória discreta, pois \(S_Y = \{0,1\}\).
+Além disso, \(Y \sim Bernoulli(p = e^{-1})\), com \emph{fp} dada por
+
+\[
+p_Y(y) =
+\begin{cases}
+p^y(1-p)^{1-y} & \text{para } y \in \{0,1\}  \\[6pt] 
+0, & c.c.
+\end{cases}
+\] com \(p = e^{-1}\).
+\end{frame}
+
+\begin{frame}{Função de Variável Aleatória: Caso Contínuo}
+\phantomsection\label{funuxe7uxe3o-de-variuxe1vel-aleatuxf3ria-caso-contuxednuo-5}
+\textbf{Exemplo 06:} Seja \(X\) uma variável aleatória tal que
+\(X \sim N(0,1)\), cuja \emph{fdp} é dada por
+
+\[f_X(x) = \dfrac{1}{\sqrt{2\pi}}
+\exp\left( -\dfrac{x^2}{2} \right), \quad x \in \mathbb{R}\]
+
+Considerando \(Y = g(X) = X^2\), obter a função densidade de
+probabilidade de \(Y\).
+\end{frame}
+
+\begin{frame}{Função de Variável Aleatória: Caso Contínuo}
+\phantomsection\label{funuxe7uxe3o-de-variuxe1vel-aleatuxf3ria-caso-contuxednuo-6}
+\textbf{Solução:}
+
+Temos que o evento \(\{Y \le y\}\), para \(y\) fixado e pertencente ao
+conjunto suporte \(S_Y = [0, \infty) \subset \mathbb{R}\), cuja
+equivalência em relação aos eventos pertencentes ao suporte de \(X\),
+\(S_X = \mathbb{R}\), é dada por
+\(\{Y \le y\} = \{-\sqrt{y} \le X \le \sqrt{y}\}\), conforme ilustrado
+abaixo
+
+\pandocbounded{\includegraphics[keepaspectratio]{transformacoes_files/figure-beamer/unnamed-chunk-1-1.pdf}}
+\end{frame}
+
+\begin{frame}{Função de Variável Aleatória: Caso Contínuo}
+\phantomsection\label{funuxe7uxe3o-de-variuxe1vel-aleatuxf3ria-caso-contuxednuo-7}
+Portanto,
+
+\[F_Y(y) = P(Y \le y) = P(-\sqrt{y} \le X \le \sqrt{y}) = \Phi_X(\sqrt{y}) - \Phi_X(-\sqrt{y})\]
+para \(y > 0\), sendo \(\Phi_X\), a função de distribuição de
+probabilidade da normal padrão.
+\end{frame}
+
+\begin{frame}{Função de Variável Aleatória: Caso Contínuo}
+\phantomsection\label{funuxe7uxe3o-de-variuxe1vel-aleatuxf3ria-caso-contuxednuo-8}
+Se derivarmos \(F_y(y)\) em relação a \(y\), e usando o fato de
+\(\Gamma\Big(\frac{1}{2}\Big) =  \sqrt{\pi}\), temos
+
+\[\small
+\begin{aligned}
+f_Y(y)
+ &= \frac{dF_Y(y)}{dy}
+   = \frac{d\Big[ \Phi_X(\sqrt{y}) - \Phi_X(-\sqrt{y}) \Big]}{dy} \\[6pt]
+ &= f_X(\sqrt{y}) \cdot \frac{1}{2\sqrt{y}}
+  + f_X(-\sqrt{y}) \cdot \frac{1}{2\sqrt{y}}
+   \qquad \text{(regra da cadeia)} \\[6pt]
+ &= f_X(\sqrt{y}) \cdot \frac{1}{\sqrt{y}}
+   \qquad \text{(simetria da normal)} \\[6pt]
+ &= \frac{1}{\sqrt{2\pi}}
+    \exp\!\left( -\frac{(\sqrt{y})^{2}}{2}\right)
+    \cdot \frac{1}{\sqrt{y}} = \frac{1}{2^{1/2}\sqrt{\pi}}\,e^{-y/2}\,y^{-1/2} = \chi^2_1(y).
+\end{aligned}
+\]
+\end{frame}
+
+\begin{frame}{Função de Variável Aleatória: Caso Contínuo}
+\phantomsection\label{funuxe7uxe3o-de-variuxe1vel-aleatuxf3ria-caso-contuxednuo-9}
+\begin{block}{Método do Jacobiano}
+\phantomsection\label{muxe9todo-do-jacobiano}
+\textbf{Teorema:} Seja \(X\) com \emph{fdp} \(f_X(x)\) e \(Y=g(X)\),
+onde \(g\) é uma função monótona. Sejam \(S_X = \{x: f_X(x) > 0\}\) e
+\(S_Y = \{y: y = g(x) \,\, \text{para algum } \, x \in S_X\}\). Suponha
+que \(f_X(x)\) seja contínua em \(S_X\) e que \(g^{-1}(y)\) tenha uma
+derivada contínua em \(S_Y\). Então,
+
+\[
+f_Y(y) =
+\begin{cases}
+f_X \Big(g^{-1}(y)\Big) \Bigg|\dfrac{d}{dy}g^{-1}(y)\Bigg| & y \in S_Y  \\[6pt] 
+0, & c.c.
+\end{cases}
+\]
+\end{block}
+\end{frame}
+
+\begin{frame}{Função de Variável Aleatória: Caso Contínuo}
+\phantomsection\label{funuxe7uxe3o-de-variuxe1vel-aleatuxf3ria-caso-contuxednuo-10}
+\textbf{Exemplo 07:} Suponha uma variável aleatória contínua \[
+X \sim N(\mu, \sigma^2), \quad \sigma > 0.
+\]
+
+Sua função densidade é \[
+f_X(x) = \frac{1}{\sigma \sqrt{2\pi}}
+\exp\left( -\frac{(x - \mu)^2}{2\sigma^2} \right), \quad x \in \mathbb{R}
+\]
+
+Definimos a nova variável aleatória \[
+Y = \frac{X - \mu}{\sigma}.
+\]
+
+Queremos encontrar a distribuição de \(Y\) usando o \textbf{método do
+jacobiano}.
+\end{frame}
+
+\begin{frame}{Função de Variável Aleatória: Caso Contínuo}
+\phantomsection\label{funuxe7uxe3o-de-variuxe1vel-aleatuxf3ria-caso-contuxednuo-11}
+\textbf{Passo 1:} Escrever a transformação e a inversa
+
+A transformação é \[
+Y = g(X) = \frac{X - \mu}{\sigma}.
+\]
+
+Isolando \(X\) em função de \(Y\), obtemos a inversa: \[
+X = \sigma Y + \mu.
+\]
+
+Isto é, \[
+x = g^{-1}(y) = \sigma y + \mu.
+\]
+\end{frame}
+
+\begin{frame}{Função de Variável Aleatória: Caso Contínuo}
+\phantomsection\label{funuxe7uxe3o-de-variuxe1vel-aleatuxf3ria-caso-contuxednuo-12}
+\textbf{Passo 2:} Calcular o jacobiano em 1D
+
+No caso unidimensional, o jacobiano é o valor absoluto da derivada de
+\(x\) em relação a \(y\): \[
+\dfrac{d}{dy} x= \dfrac{d}{dy} \,\sigma y + \mu  =  \sigma \quad \Rightarrow \quad \left| \dfrac{d}{dy} \,\sigma y + \mu \right| = \sigma
+\]
+\end{frame}
+
+\begin{frame}{Função de Variável Aleatória: Caso Contínuo}
+\phantomsection\label{funuxe7uxe3o-de-variuxe1vel-aleatuxf3ria-caso-contuxednuo-13}
+\textbf{Passo 3:} Para \(Y = g(X)\) com \(g\) monotônica, a densidade de
+\(Y\) é dada por
+
+\[
+f_Y(y) = f_X\big(g^{-1}(y)\big)\,\left|\frac{d}{dy} g^{-1}(y)\right|
+\]
+
+No nosso caso:
+
+\[
+\begin{aligned}
+f_Y(y)
+ &= f_X(\sigma y + \mu)\,\sigma \\[6pt]
+ &= \frac{1}{\sigma\sqrt{2\pi}}
+    \exp\!\left(
+      -\frac{(\sigma y + \mu - \mu)^2}{2\sigma^2}
+    \right)\,\sigma \\[6pt]
+ &= \frac{1}{\sigma\sqrt{2\pi}}
+    \exp\!\left(
+      -\frac{(\sigma y)^2}{2\sigma^2}
+    \right)\,\sigma = \frac{1}{\sqrt{2\pi}}
+    \exp\!\left( -\frac{y^2}{2} \right).
+\end{aligned}
+\]
+\end{frame}
+
+\begin{frame}{Função de Variável Aleatória: Caso Contínuo}
+\phantomsection\label{funuxe7uxe3o-de-variuxe1vel-aleatuxf3ria-caso-contuxednuo-14}
+Logo, \[
+f_Y(y) = \sigma \cdot \dfrac{1}{\sigma \sqrt{2\pi}}
+\exp\left( -\dfrac{\sigma^2 y^2}{2\sigma^2} \right)
+= \dfrac{1}{\sqrt{2\pi}}
+\exp\left( -\dfrac{y^2}{2} \right), \quad y \in \mathbb{R}
+\]
+
+que é exatamente a densidade da \textbf{Normal Padrão}.
+
+Portanto, \[
+Y = \frac{X - \mu}{\sigma} \sim N(0,1).
+\]
+\end{frame}
+
+\begin{frame}{Função de Variável Aleatória: Caso Contínuo}
+\phantomsection\label{funuxe7uxe3o-de-variuxe1vel-aleatuxf3ria-caso-contuxednuo-15}
+\textbf{Exemplo 08:} Seja \(X \sim U(0,1)\). Obtenha a função densidade
+de \(Y = -\ln(X)\).
+
+\pause
+
+\textbf{Solução:}
+
+Sabemos que se \(X \sim U(0,1)\), então sua função densidade \(f_X(x)\)
+é dada por
+
+\[
+f_X(x) =
+\begin{cases}
+1, & 0 < x < 1, \\
+0, & \text{caso contrário.}
+\end{cases}
+\]
+
+Temos que \(Y = -\ln(X)\). Como \(0 < X < 1\), então \(Y > 0\).
+
+Invertendo:
+
+\[
+Y = -\ln(X) \;\Rightarrow\; -Y = \ln(X) \;\Rightarrow\; X = e^{-Y}
+\]
+\end{frame}
+
+\begin{frame}{Função de Variável Aleatória: Caso Contínuo}
+\phantomsection\label{funuxe7uxe3o-de-variuxe1vel-aleatuxf3ria-caso-contuxednuo-16}
+Portanto:
+
+\[
+x = g^{-1}(y) = e^{-y}
+\]
+
+\textbf{Jacobiano}
+
+\[
+\dfrac{d}{dy} x = \dfrac{d}{dy} e^{-y} = -e^{-y} \quad \Rightarrow \quad \left| \dfrac{d}{dy} x \right| = e^{-y}
+\]
+
+Temos que
+
+\[
+f_Y(y) = f_X(g^{-1}(y)) \left| \frac{d}{dy} g^{-1}(y) \right|
+\]
+\end{frame}
+
+\begin{frame}{Função de Variável Aleatória: Caso Contínuo}
+\phantomsection\label{funuxe7uxe3o-de-variuxe1vel-aleatuxf3ria-caso-contuxednuo-17}
+Substituindo:
+
+\[
+f_Y(y) = f_X(e^{-y}) \cdot e^{-y}
+\]
+
+uma vez que \(f_X(x) = 1\) no intervalo \((0, 1)\).
+
+\[
+f_Y(y) = 1 \cdot e^{-y} = e^{-y}, \quad y > 0.
+\]
+
+Temos que \(Y \sim Exp(\lambda = 1)\)
+\end{frame}
+
+\begin{frame}{Função de Variável Aleatória: Caso Contínuo}
+\phantomsection\label{funuxe7uxe3o-de-variuxe1vel-aleatuxf3ria-caso-contuxednuo-18}
+\begin{block}{Generalização do Método do Jacobiano}
+\phantomsection\label{generalizauxe7uxe3o-do-muxe9todo-do-jacobiano}
+Se \(Y = g(X)\) não é monótona em \(\mathbb{R}\), podemos aplicar o
+método do Jacobiano em cada um dos intervalos em que \(g\) é monótona,
+da seguinte forma:
+
+\begin{enumerate}
+[1)]
+\item
+  Defina uma partição de \(\mathbb{R}_X\) formada pelos intervalos
+  \(I_1, I_2, \cdots I_k\) tais que a função \(g\) é monótona em cada
+  \(I_j, \,\,\, j= 1\cdots k\).
+\item
+  Obtenha
+  \(f_j(y) = f_X \Big(g^{-1}(y)\Big) \Bigg|\dfrac{d}{dy}g^{-1}(y)\Bigg|\)
+  a cada intervalo \(I_j\).
+\item
+  Finalmente, obtenha
+\end{enumerate}
+
+\[f_Y(y) = \sum_{j=1}^k f_j(y)\]
+\end{block}
+\end{frame}
+
+\begin{frame}{Função de Variável Aleatória: Caso Contínuo}
+\phantomsection\label{funuxe7uxe3o-de-variuxe1vel-aleatuxf3ria-caso-contuxednuo-19}
+\textbf{Exemplo 09:} \textbf{(Exemplo 06 revisitado)} Seja \(X\) uma
+variável aleatória tal que \(X \sim N(0,1)\), cuja \emph{fdp} é dada por
+
+\[f_X(x) = \dfrac{1}{\sqrt{2\pi}}
+\exp\left( -\dfrac{x^2}{2} \right), \quad x \in \mathbb{R}\]
+
+Considerando \(Y = g(X) = X^2\), obter a função densidade de
+probabilidade de \(Y\), usando o \textbf{método do Jacobiano}.
+\end{frame}
+
+\begin{frame}{Função de Variável Aleatória: Caso Contínuo}
+\phantomsection\label{funuxe7uxe3o-de-variuxe1vel-aleatuxf3ria-caso-contuxednuo-20}
+\textbf{Solução:}
+
+Note que, neste caso, temos duas regiões disjuntas do suporte de \(X\),
+\(S_X\), em que \(g(x) = x^2\) é injetora. Temos,
+\(S_{X_1} = (-\infty, 0]\) e \(S_{X_2} = [0, \infty)\). Logo,
+\(g^{-1}_1(y) = -\sqrt{y}\) para \(x \le 0\) e
+\(g^{-1}_2(y) = \sqrt{y}\) para \(x > 0\). Portanto,
+\end{frame}
+
+\begin{frame}{Função de Variável Aleatória: Caso Contínuo}
+\phantomsection\label{funuxe7uxe3o-de-variuxe1vel-aleatuxf3ria-caso-contuxednuo-21}
+\[
+\begin{aligned}
+f_Y(y)
+ &= f_X(g_1^{-1}(y)) \left| \frac{d}{dy} g_1^{-1}(y) \right|
+  + f_X(g_2^{-1}(y)) \left| \frac{d}{dy} g_2^{-1}(y) \right| \\[6pt]
+ &= \frac{1}{\sqrt{2\pi}}
+    \exp\!\left( -\frac{(-\sqrt{y})^2}{2} \right)
+    \left| \frac{d}{dy} (-\sqrt{y}) \right|
+  + \frac{1}{\sqrt{2\pi}}
+    \exp\!\left( -\frac{(\sqrt{y})^2}{2} \right)
+    \left| \frac{d}{dy} \sqrt{y} \right| \\[6pt]
+ &= \frac{1}{\sqrt{2\pi}}
+    \exp\!\left( -\frac{y}{2} \right)
+    \left| -\frac{1}{2 \sqrt{y}} \right|
+  + \frac{1}{\sqrt{2\pi}}
+    \exp\!\left( -\frac{y}{2} \right)
+    \left| \frac{1}{2 \sqrt{y}}  \right| \\[6pt]
+ &= \frac{1}{\sqrt{2\pi}}
+    e^{-y/2}\,\frac{1}{2 \sqrt{y}}
+  + \frac{1}{\sqrt{2\pi}}
+    e^{-y/2}\,\frac{1}{2 \sqrt{y}} \\[6pt]
+ &= \frac{2}{\sqrt{2\pi}}\,e^{-y/2}\,\frac{1}{2 \sqrt{y}} = \frac{1}{\sqrt{2\pi}}\,e^{-y/2}\,y^{-1/2}
+  = \frac{1}{2^{1/2}\sqrt{\pi}}\,e^{-y/2}\,y^{-1/2}
+  = \chi^2_1(y).
+\end{aligned}
+\]
+\end{frame}
+
+\begin{frame}{Função de Variável Aleatória: Caso Contínuo}
+\phantomsection\label{funuxe7uxe3o-de-variuxe1vel-aleatuxf3ria-caso-contuxednuo-22}
+\textbf{Exemplo 10:} Seja \(X\sim U(-1,1)\). Qual a distribuição de
+\(Y=X^2\)?
+
+\pause
+
+\textbf{Solução:}
+
+Definindo a função indicadora de um conjunto \(A\) como
+
+\[
+I_A(x) =
+\begin{cases}
+1, & \text{se } x \in A, \\
+0, & \text{se } x \notin A
+\end{cases}
+\]
+
+podemos escrever a fução densidade de \(X\) como
+\(f_X(x) = \dfrac{1}{2}I_{(-1,1)}(x)\).
+\end{frame}
+
+\begin{frame}{Função de Variável Aleatória: Caso Contínuo}
+\phantomsection\label{funuxe7uxe3o-de-variuxe1vel-aleatuxf3ria-caso-contuxednuo-23}
+Como \(Y = X^2\) não é monótona em \((−1, 1)\), mas o é em \((−1, 0)\) e
+\((0, 1)\) podemos utilizar a generalização do método do Jacobiano, ou
+seja, no intervalo \((−1, 0)\), \(g_1^{-1}(y) = -\sqrt{y}\) e no
+intervalo \((0, 1)\) \(g_2^{-1}(y) = \sqrt{y}\). Assim,
+\end{frame}
+
+\begin{frame}{Função de Variável Aleatória: Caso Contínuo}
+\phantomsection\label{funuxe7uxe3o-de-variuxe1vel-aleatuxf3ria-caso-contuxednuo-24}
+\[
+\begin{aligned}
+f_Y(y)
+ &= f_X(g_1^{-1}(y)) \left| \frac{d}{dy} g_1^{-1}(y) \right|
+  + f_X(g_2^{-1}(y)) \left| \frac{d}{dy} g_2^{-1}(y) \right| \\[6pt]
+ &= f_X(-\sqrt{y}) \left| \frac{d}{dy} (-\sqrt{y}) \right|
+  + f_X(\sqrt{y}) \left| \frac{d}{dy} \sqrt{y} \right| \\[6pt]
+ &= \frac{1}{2} \cdot \left| -\frac{1}{2 \sqrt{y}} \right|
+  + \frac{1}{2} \cdot \left| \frac{1}{2 \sqrt{y}} \right| \\[6pt]
+ &= \frac{1}{2} \cdot \frac{1}{2 \sqrt{y}}
+  + \frac{1}{2} \cdot \frac{1}{2 \sqrt{y}} \\[6pt]
+ &= \frac{1}{4 \sqrt{y}} + \frac{1}{4 \sqrt{y}}
+  = \frac{1}{2 \sqrt{y}}, \qquad y > 0
+\end{aligned}
+\]
+\end{frame}
+
+\begin{frame}{Função de Variável Aleatória: Caso Contínuo}
+\phantomsection\label{funuxe7uxe3o-de-variuxe1vel-aleatuxf3ria-caso-contuxednuo-25}
+Logo, se \(X\sim U(-1,1)\), a distribuição de \(Y=X^2\) é dada por
+
+\[f_Y(y) = \dfrac{1}{2 \sqrt{y}}I_{(0,1)}(y)\]
+\end{frame}
+
+\begin{frame}{A Transformação Integral}
+\phantomsection\label{a-transformauxe7uxe3o-integral}
+Um importante e conhecido teorema é o \textbf{Teorema da Probabilidade
+Integral}, que relaciona a distribuição uniforme contínua com todas as
+outras distribuições de probabilidade.
+
+\pause
+
+Seu resultado é importante na \textbf{Estatística Computacional}, pois
+permite que sejam simuladas amostras aleatórias de qualquer distribuição
+de probabilidade.
+\end{frame}
+
+\begin{frame}{A Transformação Integral}
+\phantomsection\label{a-transformauxe7uxe3o-integral-1}
+\textbf{Teorema da probabilidade integral:} Consideremos \(X\) uma
+variável aleatória absolutamente contínua com função de distribuição
+acumulada \(F_X\). Então \(U = F_X(X)\) possui distribuição uniforme no
+intervalo \([0,1]\). Por outro lado, se \(U \sim U(0,1)\), então
+\(X = F^{-1}_X(U)\) possui função de distribuição acumulada \(F_X\).
+\end{frame}
+
+\begin{frame}{A Transformação Integral}
+\phantomsection\label{a-transformauxe7uxe3o-integral-2}
+\textbf{Demonstração:} Considere \(X\) uma variável aleatória
+absolutamente contínua com função de distribuição acumulada \(F_X\),
+então
+
+\[
+F_U(u) = P(U \le u)= P(F_X(X) \le u) = P(X \le F_X^{-1}(u)) = F_X(F_X^{-1}(u)) = u
+\] Por outro lado, se \(U \sim U(0,1)\), então
+
+\[
+{\small  
+P(X \le x) = P(F^{-1}_X(U) \le x) = P(U \le F_x(x)) = F_U(F_X(x)) = F_X(x), \qquad \text{pois } U \text{ é uniforme} 
+}
+\] Assim \(X\) possui função de distribuição \(F_X\).
+\end{frame}
+
+\begin{frame}{A Transformação Integral}
+\phantomsection\label{a-transformauxe7uxe3o-integral-3}
+\textbf{Exemplo 11:} \textbf{(Geração de variáveis da distribuição
+exponencial)} Considere que \(X \sim Exp(\lambda)\), cuja função de
+distribuição de probabilidade é dada por
+
+\[ F_X(x) = 1 - e^{-\lambda x}, \qquad x \ge 0 \]
+
+Se \(U \sim U(0,1)\), qual é a distribuição de \(X = F_X^{-1}(U)\)?
+
+\pause
+
+\textbf{Solução:}
+
+A função inversa é dada por
+
+\[
+u = 1 - e^{-\lambda x} \Rightarrow e^{-\lambda x} = 1 - u \Rightarrow x = -\frac{1}{\lambda} \ln(1-u)
+\]
+\end{frame}
+
+\begin{frame}{A Transformação Integral}
+\phantomsection\label{a-transformauxe7uxe3o-integral-4}
+Assim, pelo teorema da transformação integral,
+
+\[X = F_X^{-1}(U) = -\frac{1}{\lambda} \ln(1-U)\] possui distribuição
+exponencial com função de distribuição \(F_X\). Podemos utilizar esse
+resultado para gerar realizações de uma amostra aleatória da
+distribuição exponencial. Para isso, basta gerarmos realizações
+uniformes \(u\) e aplicarmos a relação anterior.
+\end{frame}
+
+\begin{frame}{A Transformação Integral}
+\phantomsection\label{a-transformauxe7uxe3o-integral-5}
+\textbf{Exemplo 12:} \textbf{(Geração de variáveis da distribuição
+Weibull)} Considere que \(X \sim Weibull(\alpha, \beta)\), cuja função
+de distribuição de probabilidade é dada por
+
+\[F_X(x) = 1 - e^{-(x/\alpha)^{\beta}}, \qquad x \ge 0\]
+
+Se \(U \sim U(0,1)\), qual é a distribuição de \(X = F_X^{-1}(U)\)?
+
+\pause
+
+\textbf{Solução:}
+
+A função inversa é dada por
+
+\[
+u = 1 - e^{-(x/\alpha)^{\beta}} \Rightarrow e^{-(x/\alpha)^{\beta}} = 1 - u \Rightarrow (x/\alpha)^{\beta} = -\ln(1-u) \Rightarrow x = \alpha \,[-\ln(1-u)]^{1/\beta}
+\]
+\end{frame}
+
+\begin{frame}{A Transformação Integral}
+\phantomsection\label{a-transformauxe7uxe3o-integral-6}
+Assim, pelo teorema da transformação integral,
+
+\[X = F_X^{-1}(U) = \alpha \,[-\ln(1-U)]^{1/\beta}\] possui distribuição
+Weibull com função de distribuição \(F_X\).
+\end{frame}
+
+
+
+
+\end{document}

@@ -166,9 +166,11 @@
 <h2>Função de Variável Aleatória</h2>
 <p>Finalmente, se a variável aleatória <span class="math inline">\(Y\)</span> for definida por <span class="math inline">\(Y= g(X)\)</span>, podemos escrever para qualquer conjunto <span class="math inline">\(A \subset S_Y\)</span>,</p>
 <p><span class="math display">\[
-\begin{eqnarray}
-P(Y \in A) &amp;=&amp; P(g(X) \in A) \\&amp;=&amp; P(\{x \in S_X : g(x) \in A\}) \\ &amp;=&amp; P(X \in g^{-1}(A))
-\end{eqnarray}
+\begin{aligned}
+P(Y \in A) &amp;= P(g(X) \in A) \\
+           &amp;= P(\{x \in S_X : g(x) \in A\}) \\
+           &amp;= P(X \in g^{-1}(A))
+\end{aligned}
 \]</span></p>
 <p>Isto define a distribuição de probabilidade de <span class="math inline">\(Y\)</span>.</p>
 </section>
@@ -354,12 +356,12 @@ P(Y \in A) &amp;=&amp; P(g(X) \in A) \\&amp;=&amp; P(\{x \in S_X : g(x) \in A\})
 <section id="função-de-variável-aleatória-caso-discreto-3" class="slide level2">
 <h2>Função de Variável Aleatória: Caso Discreto</h2>
 <p><span class="math display">\[
-\begin{eqnarray}
-P(Y = 0) &amp;=&amp; P(X = 0) = 0,2 \\
-P(Y = 1) &amp;=&amp; P(X = -1) + P(X = 1) = 0,5 \\
-P(Y = 4) &amp;=&amp; P(X = -2) + P(X = 2) = 0,2 \\
-P(Y = 9) &amp;=&amp; P(X = 3) = 0,1
-\end{eqnarray}
+\begin{aligned}
+P(Y = 0) &amp;= P(X = 0) = 0{,}2 \\[6pt]
+P(Y = 1) &amp;= P(X = -1) + P(X = 1) = 0{,}5 \\[6pt]
+P(Y = 4) &amp;= P(X = -2) + P(X = 2) = 0{,}2 \\[6pt]
+P(Y = 9) &amp;= P(X = 3) = 0{,}1
+\end{aligned}
 \]</span></p>
 <p>Logo,</p>
 <table style="border-collapse: collapse; margin-top:10px; margin-bottom:10px;">
@@ -408,7 +410,7 @@ P(Y = 9) &amp;=&amp; P(X = 3) = 0,1
 <p><strong>Exemplo 03:</strong> Suponha que <span class="math inline">\(X \sim Poisson(\lambda)\)</span>, com função de probabilidade</p>
 <p><span class="math display">\[
 P(x | \lambda)=
-\begin{cases}
+  \begin{cases}
 \dfrac{e^{-\lambda} \lambda^x}{x!}, &amp; x \in \{0, 1, 2, 3, \cdots \} \\[6pt]
 0, &amp; c.c.
 \end{cases}
@@ -422,11 +424,16 @@ P(x | \lambda)=
 <section id="função-de-variável-aleatória-caso-discreto-5" class="slide level2">
 <h2>Função de Variável Aleatória: Caso Discreto</h2>
 <p><span class="math display">\[
-\begin{eqnarray}
-P(Y = 0) &amp;=&amp; P(g(X) = 0) = P(X \,\,\,\text{ser par}) \\
-&amp;=&amp; \sum_{x \in \{0,2,4, \cdots\}} \dfrac{e^{-\lambda} \lambda^x}{x!} \\
-&amp;=&amp; e^{-\lambda} \sum_{k = 0}^{\infty} \dfrac{\lambda^{2k}}{(2k)!}
-\end{eqnarray}
+\begin{aligned}
+P(Y = 0)
+&amp;= P(g(X) = 0)
+  = P(X \text{ ser par}) \\[6pt]
+&amp;= \sum_{x \in \{0,2,4,\ldots\}}
+    \frac{e^{-\lambda}\lambda^{x}}{x!} \\[6pt]
+&amp;= e^{-\lambda}
+    \sum_{k = 0}^{\infty}
+    \frac{\lambda^{2k}}{(2k)!}.
+\end{aligned}
 \]</span></p>
 </section>
 <section id="aparte-séries-de-taylor-e-maclaurin" class="slide level2">
@@ -434,13 +441,15 @@ P(Y = 0) &amp;=&amp; P(g(X) = 0) = P(X \,\,\,\text{ser par}) \\
 <h3 id="série-de-taylor">Série de Taylor</h3>
 <p>Expansão de uma função em torno de um ponto <span class="math inline">\(a\)</span>:</p>
 <p>A expansão de Taylor escrita termo a termo é:</p>
-<p><span class="math display">\[\small
+<p><span class="math display">\[
+{\small
 \begin{aligned}
-f(x) &amp;= f(a)
-+ f'(a)(x-a)
+    f(x) &amp;= f(a)
+    + f'(a)(x-a)
 + \frac{f''(a)}{2!}(x-a)^2
 + \frac{f^{(3)}(a)}{3!}(x-a)^3 + \cdots = \sum_{n=0}^{\infty} \frac{f^{(n)}(a)}{n!}(x-a)^n
 \end{aligned}
+}
 \]</span></p>
 </section>
 <section id="aparte-séries-de-taylor-e-maclaurin-1" class="slide level2">
@@ -478,21 +487,29 @@ e^{-x}
 <h2>Função de Variável Aleatória: Caso Discreto</h2>
 <p>Assim, <span class="math inline">\(e^{\lambda} + e^{-\lambda} = 2\sum_{k=0}^{\infty} \frac{\lambda^{2k}}{(2k)!}\)</span> e,</p>
 <p><span class="math display">\[
-\begin{eqnarray}
-P(Y = 0) &amp;=&amp; e^{-\lambda} \sum_{k = 0}^{\infty} \dfrac{\lambda^{2k}}{(2k)!} = e^{-\lambda} \dfrac{1}{2}\Big(e^{\lambda} + e^{-\lambda}\Big) \\&amp;=&amp; \dfrac{1}{2}\Big(1 + e^{-2\lambda}\Big)
-\end{eqnarray}
-\]</span></p>
-<p>Como <span class="math inline">\(\sum_{y=0}^{\infty} P(Y = y) = 1\)</span>, temos que</p>
-<p><span class="math display">\[
-\begin{eqnarray}
-P(Y = 1) &amp;=&amp; P(X \,\, \text{ser ímpar}) =  1 - \dfrac{1}{2}\Big(1 + e^{-2\lambda}\Big) \\&amp;=&amp; \dfrac{1}{2}\Big(1 - e^{-2\lambda}\Big)
-\end{eqnarray}
+\begin{aligned}
+P(Y = 0)
+&amp;= e^{-\lambda} \sum_{k = 0}^{\infty} \frac{\lambda^{2k}}{(2k)!} \\[6pt]
+&amp;= e^{-\lambda} \cdot \frac{1}{2}\Big(e^{\lambda} + e^{-\lambda}\Big) \\[6pt]
+&amp;= \frac{1}{2}\Big(1 + e^{-2\lambda}\Big).
+\end{aligned}
 \]</span></p>
 </section>
 <section id="função-de-variável-aleatória-caso-discreto-7" class="slide level2">
 <h2>Função de Variável Aleatória: Caso Discreto</h2>
+<p>Como <span class="math inline">\(\sum_{y=0}^{\infty} P(Y = y) = 1\)</span>, temos que</p>
+<p><span class="math display">\[
+\begin{aligned}
+P(Y = 1)
+&amp;= P(X \text{ ser ímpar})
+  = 1 - \frac{1}{2}\Big(1 + e^{-2\lambda}\Big) \\[6pt]
+&amp;= \frac{1}{2}\Big(1 - e^{-2\lambda}\Big).
+\end{aligned}
+\]</span></p>
+<div class="fragment">
 <p>Finalmente, <span class="math inline">\(p_Y(y) = 0\)</span> para outros valores de <span class="math inline">\(y \notin S_Y\)</span>. Portanto, <span class="math inline">\(Y \sim Bernoulli(p)\)</span> com</p>
 <p><span class="math display">\[p = \dfrac{1}{2}\Big(1 - e^{-2\lambda}\Big), \qquad \lambda &gt; 0\]</span></p>
+</div>
 </section>
 <section id="função-de-variável-aleatória-caso-discreto-8" class="slide level2">
 <h2>Função de Variável Aleatória: Caso Discreto</h2>
@@ -513,9 +530,13 @@ P(x | n,p)=
 <section id="função-de-variável-aleatória-caso-discreto-9" class="slide level2">
 <h2>Função de Variável Aleatória: Caso Discreto</h2>
 <p><span class="math display">\[
-\begin{eqnarray}
-P(Y = y) &amp;=&amp; P(g(X) = y) = P(X = g^{-1}(y)) = P(X = n - y) \\&amp;=&amp; \dbinom{n}{n-y}\, p^{n-y}\, (1-p)^{\,n-(n-y)}\\&amp;=&amp; \dbinom{n}{n-y}\, p^{n-y}\, (1-p)^{\,y}\\&amp;=&amp; \dbinom{n}{y}\, (1-p)^{y}\, p^{\,n-y}, \,\,\ \text{uma vez que} \,\,\, \dbinom{n}{n-y} = \dbinom{n}{y}
-\end{eqnarray}
+\begin{aligned}
+P(Y = y) &amp;= P(g(X) = y) = P(X = g^{-1}(y)) = P(X = n - y) \\
+         &amp;= \binom{n}{\,n-y\,}\, p^{\,n-y}\, (1-p)^{\,n-(n-y)} \\
+         &amp;= \binom{n}{\,n-y\,}\, p^{\,n-y}\, (1-p)^{\,y} \\
+         &amp;= \binom{n}{y}\, (1-p)^{y}\, p^{\,n-y},
+         \qquad \text{uma vez que } \binom{n}{n-y} = \binom{n}{y}
+\end{aligned}
 \]</span></p>
 <p>que equivale a dizer que <span class="math inline">\(Y \sim binomial(n, 1-p)\)</span>.</p>
 </section>
@@ -591,14 +612,22 @@ p^y(1-p)^{1-y} &amp; \text{para } y \in \{0,1\}  \\[6pt]
 </section>
 <section id="função-de-variável-aleatória-caso-contínuo-8" class="slide level2">
 <h2>Função de Variável Aleatória: Caso Contínuo</h2>
-<p>Se derivarmos <span class="math inline">\(F_y(y)\)</span> em relação a <span class="math inline">\(y\)</span>, temos</p>
-<p><span class="math display">\[
-\begin{eqnarray}
-f_Y(y) &amp;=&amp; \dfrac{dF_Y(y)}{dy} = \dfrac{d\Big[ \Phi_X(\sqrt{y}) - \Phi_X(-\sqrt{y})\Big]}{dy} \\ &amp;=&amp; f_X(\sqrt{y}) \times \dfrac{1}{2\sqrt{y}} + f_X(-\sqrt{y}) \times \dfrac{1}{2\sqrt{y}}, \qquad \text{(regra da cadeia)} \\ &amp;=&amp; f_X(\sqrt{y}) \times \dfrac{1}{\sqrt{y}}, \qquad \text{(simetria da normal)} \\ &amp;=&amp; \dfrac{1}{\sqrt{2\pi}}
-\exp\left( -\dfrac{(\sqrt{y})^2}{2} \right) \times \dfrac{1}{\sqrt{y}} = \dfrac{1}{2^{\frac{1}{2}}\sqrt{\pi}}
-e^\left(-\frac{y}{2} \right) y ^{-\frac{1}{2}} = \chi^2_1
-\end{eqnarray}
-\]</span> Uma vez que <span class="math inline">\(\Gamma\Big(\frac{1}{2}\Big) =  \sqrt{\pi}\)</span>.</p>
+<p>Se derivarmos <span class="math inline">\(F_y(y)\)</span> em relação a <span class="math inline">\(y\)</span>, e usando o fato de <span class="math inline">\(\Gamma\Big(\frac{1}{2}\Big) =  \sqrt{\pi}\)</span>, temos</p>
+<p><span class="math display">\[\small
+\begin{aligned}
+f_Y(y)
+&amp;= \frac{dF_Y(y)}{dy}
+   = \frac{d\Big[ \Phi_X(\sqrt{y}) - \Phi_X(-\sqrt{y}) \Big]}{dy} \\[6pt]
+&amp;= f_X(\sqrt{y}) \cdot \frac{1}{2\sqrt{y}}
+  + f_X(-\sqrt{y}) \cdot \frac{1}{2\sqrt{y}}
+   \qquad \text{(regra da cadeia)} \\[6pt]
+&amp;= f_X(\sqrt{y}) \cdot \frac{1}{\sqrt{y}}
+   \qquad \text{(simetria da normal)} \\[6pt]
+&amp;= \frac{1}{\sqrt{2\pi}}
+    \exp\!\left( -\frac{(\sqrt{y})^{2}}{2}\right)
+    \cdot \frac{1}{\sqrt{y}} = \frac{1}{2^{1/2}\sqrt{\pi}}\,e^{-y/2}\,y^{-1/2} = \chi^2_1(y).
+\end{aligned}
+\]</span></p>
 </section>
 <section id="função-de-variável-aleatória-caso-contínuo-9" class="slide level2">
 <h2>Função de Variável Aleatória: Caso Contínuo</h2>
@@ -654,11 +683,19 @@ f_Y(y) = f_X\big(g^{-1}(y)\big)\,\left|\frac{d}{dy} g^{-1}(y)\right|
 \]</span></p>
 <p>No nosso caso:</p>
 <p><span class="math display">\[
-\begin{eqnarray}
-f_Y(y) &amp;=&amp; f_X(\sigma y + \mu)\,\sigma = \dfrac{1}{\sigma \sqrt{2\pi}}
-\exp\left( -\dfrac{(\sigma y + \mu - \mu)^2}{2\sigma^2} \right)\,\sigma \\ &amp;=&amp; \dfrac{1}{\sigma \sqrt{2\pi}}
-\exp\left( -\dfrac{(\sigma y)^2}{2\sigma^2} \right) \,\sigma
-\end{eqnarray}
+\begin{aligned}
+f_Y(y)
+&amp;= f_X(\sigma y + \mu)\,\sigma \\[6pt]
+&amp;= \frac{1}{\sigma\sqrt{2\pi}}
+    \exp\!\left(
+      -\frac{(\sigma y + \mu - \mu)^2}{2\sigma^2}
+    \right)\,\sigma \\[6pt]
+&amp;= \frac{1}{\sigma\sqrt{2\pi}}
+    \exp\!\left(
+      -\frac{(\sigma y)^2}{2\sigma^2}
+    \right)\,\sigma = \frac{1}{\sqrt{2\pi}}
+    \exp\!\left( -\frac{y^2}{2} \right).
+\end{aligned}
 \]</span></p>
 </section>
 <section id="função-de-variável-aleatória-caso-contínuo-14" class="slide level2">
@@ -747,15 +784,30 @@ f_Y(y) = 1 \cdot e^{-y} = e^{-y}, \quad y &gt; 0.
 <section id="função-de-variável-aleatória-caso-contínuo-21" class="slide level2">
 <h2>Função de Variável Aleatória: Caso Contínuo</h2>
 <p><span class="math display">\[
-\begin{eqnarray}
-f_Y(y) &amp;=&amp; f_X(g^{-1}_1(y)) \left| \frac{d}{dy} g_1^{-1}(y) \right| + f_X(g_2^{-1}(y)) \left| \frac{d}{dy} g_2^{-1}(y) \right| \\&amp;=&amp; \dfrac{1}{\sqrt{2\pi}}
-\exp\left( -\dfrac{(-\sqrt{y})^2}{2} \right) \left| \frac{d}{dy} (-\sqrt{y}) \right| + \dfrac{1}{\sqrt{2\pi}}
-\exp\left( -\dfrac{(\sqrt{y})^2}{2} \right) \left| \frac{d}{dy} \sqrt{y} \right| \\ &amp;=&amp; \dfrac{1}{\sqrt{2\pi}}
-\exp\left( -\dfrac{y}{2} \right) \left| -\frac{1}{2 \sqrt{y}} \right| + \dfrac{1}{\sqrt{2\pi}}
-\exp\left( -\dfrac{y}{2} \right) \left| \frac{1}{2 \sqrt{y}}  \right| \\&amp;=&amp; \dfrac{2}{\sqrt{2\pi}}
-\exp\left( -\dfrac{y}{2} \right)  \frac{1}{2 \sqrt{y}}   = \dfrac{1}{2^{\frac{1}{2}}\sqrt{\pi}}
-e^{-\frac{y}{2}}  y^{-\frac{1}{2}} = \chi^2_1
-\end{eqnarray}
+\begin{aligned}
+f_Y(y)
+&amp;= f_X(g_1^{-1}(y)) \left| \frac{d}{dy} g_1^{-1}(y) \right|
+  + f_X(g_2^{-1}(y)) \left| \frac{d}{dy} g_2^{-1}(y) \right| \\[6pt]
+&amp;= \frac{1}{\sqrt{2\pi}}
+    \exp\!\left( -\frac{(-\sqrt{y})^2}{2} \right)
+    \left| \frac{d}{dy} (-\sqrt{y}) \right|
+  + \frac{1}{\sqrt{2\pi}}
+    \exp\!\left( -\frac{(\sqrt{y})^2}{2} \right)
+    \left| \frac{d}{dy} \sqrt{y} \right| \\[6pt]
+&amp;= \frac{1}{\sqrt{2\pi}}
+    \exp\!\left( -\frac{y}{2} \right)
+    \left| -\frac{1}{2 \sqrt{y}} \right|
+  + \frac{1}{\sqrt{2\pi}}
+    \exp\!\left( -\frac{y}{2} \right)
+    \left| \frac{1}{2 \sqrt{y}}  \right| \\[6pt]
+&amp;= \frac{1}{\sqrt{2\pi}}
+    e^{-y/2}\,\frac{1}{2 \sqrt{y}}
+  + \frac{1}{\sqrt{2\pi}}
+    e^{-y/2}\,\frac{1}{2 \sqrt{y}} \\[6pt]
+&amp;= \frac{2}{\sqrt{2\pi}}\,e^{-y/2}\,\frac{1}{2 \sqrt{y}} = \frac{1}{\sqrt{2\pi}}\,e^{-y/2}\,y^{-1/2}
+  = \frac{1}{2^{1/2}\sqrt{\pi}}\,e^{-y/2}\,y^{-1/2}
+  = \chi^2_1(y).
+\end{aligned}
 \]</span></p>
 </section>
 <section id="função-de-variável-aleatória-caso-contínuo-22" class="slide level2">
@@ -777,20 +829,33 @@ I_A(x) =
 <section id="função-de-variável-aleatória-caso-contínuo-23" class="slide level2">
 <h2>Função de Variável Aleatória: Caso Contínuo</h2>
 <p>Como <span class="math inline">\(Y = X^2\)</span> não é monótona em <span class="math inline">\((−1, 1)\)</span>, mas o é em <span class="math inline">\((−1, 0)\)</span> e <span class="math inline">\((0, 1)\)</span> podemos utilizar a generalização do método do Jacobiano, ou seja, no intervalo <span class="math inline">\((−1, 0)\)</span>, <span class="math inline">\(g_1^{-1}(y) = -\sqrt{y}\)</span> e no intervalo <span class="math inline">\((0, 1)\)</span> <span class="math inline">\(g_2^{-1}(y) = \sqrt{y}\)</span>. Assim,</p>
-<p><span class="math display">\[
-\begin{eqnarray}
-f_Y(y) &amp;=&amp; f_X(g^{-1}_1(y)) \left| \frac{d}{dy} g_1^{-1}(y) \right| + f_X(g_2^{-1}(y)) \left| \frac{d}{dy} g_2^{-1}(y) \right| \\&amp;=&amp; f_X(-\sqrt{y}) \left| \frac{d}{dy} (-\sqrt{y}) \right| + f_X(\sqrt{y}) \left| \frac{d}{dy} \sqrt{y} \right| \\ &amp;=&amp; \frac{1}{2} \times \left| -\frac{1}{2 \sqrt{y}} \right| +  \frac{1}{2} \times \left| \frac{1}{2 \sqrt{y}} \right| = \frac{1}{2} \times  \frac{1}{2 \sqrt{y}} + \frac{1}{2} \times  \frac{1}{2 \sqrt{y}} \\ &amp;=&amp; \frac{1}{4 \sqrt{y}} +  \frac{1}{4 \sqrt{y}} = \frac{1}{2 \sqrt{y}}, \qquad y&gt;0
-\end{eqnarray}
-\]</span></p>
 </section>
 <section id="função-de-variável-aleatória-caso-contínuo-24" class="slide level2">
+<h2>Função de Variável Aleatória: Caso Contínuo</h2>
+<p><span class="math display">\[
+\begin{aligned}
+f_Y(y)
+&amp;= f_X(g_1^{-1}(y)) \left| \frac{d}{dy} g_1^{-1}(y) \right|
+  + f_X(g_2^{-1}(y)) \left| \frac{d}{dy} g_2^{-1}(y) \right| \\[6pt]
+&amp;= f_X(-\sqrt{y}) \left| \frac{d}{dy} (-\sqrt{y}) \right|
+  + f_X(\sqrt{y}) \left| \frac{d}{dy} \sqrt{y} \right| \\[6pt]
+&amp;= \frac{1}{2} \cdot \left| -\frac{1}{2 \sqrt{y}} \right|
+  + \frac{1}{2} \cdot \left| \frac{1}{2 \sqrt{y}} \right| \\[6pt]
+&amp;= \frac{1}{2} \cdot \frac{1}{2 \sqrt{y}}
+  + \frac{1}{2} \cdot \frac{1}{2 \sqrt{y}} \\[6pt]
+&amp;= \frac{1}{4 \sqrt{y}} + \frac{1}{4 \sqrt{y}}
+  = \frac{1}{2 \sqrt{y}}, \qquad y &gt; 0
+\end{aligned}
+\]</span></p>
+</section>
+<section id="função-de-variável-aleatória-caso-contínuo-25" class="slide level2">
 <h2>Função de Variável Aleatória: Caso Contínuo</h2>
 <p>Logo, se <span class="math inline">\(X\sim U(-1,1)\)</span>, a distribuição de <span class="math inline">\(Y=X^2\)</span> é dada por</p>
 <p><span class="math display">\[f_Y(y) = \dfrac{1}{2 \sqrt{y}}I_{(0,1)}(y)\]</span></p>
 </section>
 <section id="a-transformação-integral" class="slide level2">
 <h2>A Transformação Integral</h2>
-<p>Um importante e conhecido teorema é o Teorema da Probabilidade Integral, que relaciona a distribuição uniforme contínua com todas as outras distribuições de probabilidade.</p>
+<p>Um importante e conhecido teorema é o <strong>Teorema da Probabilidade Integral</strong>, que relaciona a distribuição uniforme contínua com todas as outras distribuições de probabilidade.</p>
 <div class="fragment">
 <p>Seu resultado é importante na <strong>Estatística Computacional</strong>, pois permite que sejam simuladas amostras aleatórias de qualquer distribuição de probabilidade.</p>
 </div>
@@ -803,11 +868,13 @@ f_Y(y) &amp;=&amp; f_X(g^{-1}_1(y)) \left| \frac{d}{dy} g_1^{-1}(y) \right| + f_
 <h2>A Transformação Integral</h2>
 <p><strong>Demonstração:</strong> Considere <span class="math inline">\(X\)</span> uma variável aleatória absolutamente contínua com função de distribuição acumulada <span class="math inline">\(F_X\)</span>, então</p>
 <p><span class="math display">\[
-\begin{eqnarray}
-F_U(u) &amp;=&amp; P(U \le u)= P(F_X(X) \le u) = P(X \le F_X^{-1}(u)) = F_X(F_X^{-1}(u)) = u
-\end{eqnarray}
+F_U(u) = P(U \le u)= P(F_X(X) \le u) = P(X \le F_X^{-1}(u)) = F_X(F_X^{-1}(u)) = u
 \]</span> Por outro lado, se <span class="math inline">\(U \sim U(0,1)\)</span>, então</p>
-<p><span class="math display">\[\small P(X \le x) = P(F^{-1}_X(U) \le x) = P(U \le F_x(x)) = F_U(F_X(x)) = F_X(x), \qquad \text{pois } U \text{ é uniforme} \]</span> Assim <span class="math inline">\(X\)</span> possui função de distribuição <span class="math inline">\(F_X\)</span>.</p>
+<p><span class="math display">\[
+{\small  
+P(X \le x) = P(F^{-1}_X(U) \le x) = P(U \le F_x(x)) = F_U(F_X(x)) = F_X(x), \qquad \text{pois } U \text{ é uniforme}
+}
+\]</span> Assim <span class="math inline">\(X\)</span> possui função de distribuição <span class="math inline">\(F_X\)</span>.</p>
 </section>
 <section id="a-transformação-integral-3" class="slide level2">
 <h2>A Transformação Integral</h2>

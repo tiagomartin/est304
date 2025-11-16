@@ -43,9 +43,8 @@ Geralmente, $g(X)$ é de nosso interesse e denotamos $Y = g(X)$ para indicar a n
 Uma vez que $Y$ é uma função de $X$, podemos descrever o comportamento probabilístico de $Y$ em termos de $X$, isto é, para um dado conjunto $A$,
 
 $$P(Y \in A) = P(g(X) \in A)$$
-
+  
 mostrando que a distribuição de $Y$ depende das funções $F_X$ e $g$.
-
 
 
 ## Função de Variável Aleatória
@@ -58,8 +57,8 @@ Formalmente, ao escrevermos $y = g(x)$, a função $g(x)$ define uma função no
 Seja então a função inversa de $g$, denotada por $g^{-1}$, que é uma função de $S_y$ para $S_x$.
 
 $$g^{-1}(y)=\{x : g(x) = y \}$$
-
-. . .
+  
+  . . .
 
 Portanto, a função inversa consiste no conjunto de valores de $X$, para os quais $g(x) = y$, dado um valor de $y$ fixado do suporte de $Y$, que é a variável aleatória obtida pela transformação de interesse, $g(X)$.
 
@@ -72,192 +71,193 @@ Portanto, a função inversa consiste no conjunto de valores de $X$, para os qua
 ![](/images/funcao_var_alea.png){fig-align="center"}
 
 
-
 ## Função de Variável Aleatória
 
 Finalmente, se a variável aleatória $Y$ for definida por $Y= g(X)$, podemos escrever para qualquer conjunto $A \subset S_Y$,
 
 $$
-\begin{eqnarray}
-P(Y \in A) &=& P(g(X) \in A) \\&=& P(\{x \in S_X : g(x) \in A\}) \\ &=& P(X \in g^{-1}(A))
-\end{eqnarray}
+\begin{aligned}
+P(Y \in A) &= P(g(X) \in A) \\
+           &= P(\{x \in S_X : g(x) \in A\}) \\
+           &= P(X \in g^{-1}(A))
+\end{aligned}
 $$
 
-
+  
+  
 Isto define a distribuição de probabilidade de $Y$.
-
-
 
 ## Função de Variável Aleatória: Caso Discreto
 
 Se $X$ for uma variável aleatória discreta e $Y= g(X)$, então $Y$ também será uma variável aleatória discreta. Assim,
 
 $$p_Y(y) = P(Y = y) = \sum_{x \in g^{-1}(y)} p_X(x), \qquad \text{para} \,\, y \in S_Y$$
-e $p_Y(y) = 0$ para $y \notin S_Y$.
+  e $p_Y(y) = 0$ para $y \notin S_Y$.
 
 
 ## Função de Variável Aleatória: Caso Discreto
 
 **Exemplo 01:** Suponhamos que a distribuição de probabilidades da variável aleatória $X$ é dada pela tabela abaixo:
-
-
-<table style="border-collapse: collapse; margin-top:10px; margin-bottom:10px;">
+  
+  
+  <table style="border-collapse: collapse; margin-top:10px; margin-bottom:10px;">
   <thead>
-    <tr style="border-top: 2px solid black; border-bottom: 1px solid black;">
-      <th style="padding:4px; border-right: 2px solid black;">$x$</th>
-      <th style="padding:4px;">-2</th>
-      <th style="padding:4px;">-1</th>
-      <th style="padding:4px;">0</th>
-      <th style="padding:4px;">1</th>
-      <th style="padding:4px;">2</th>
-      <th style="padding:4px;">3</th>
-    </tr>
+  <tr style="border-top: 2px solid black; border-bottom: 1px solid black;">
+  <th style="padding:4px; border-right: 2px solid black;">$x$</th>
+  <th style="padding:4px;">-2</th>
+  <th style="padding:4px;">-1</th>
+  <th style="padding:4px;">0</th>
+  <th style="padding:4px;">1</th>
+  <th style="padding:4px;">2</th>
+  <th style="padding:4px;">3</th>
+  </tr>
   </thead>
   <tbody>
-    <tr style="border-bottom: 2px solid black;">
-      <td style="padding:4px; border-right: 2px solid black;"><em>$p_X(x)$</em></td>
-      <td style="padding:4px;">0,1</td>
-      <td style="padding:4px;">0,2</td>
-      <td style="padding:4px;">0,2</td>
-      <td style="padding:4px;">0,3</td>
-      <td style="padding:4px;">0,1</td>
-      <td style="padding:4px;">0,1</td>
-    </tr>
+  <tr style="border-bottom: 2px solid black;">
+  <td style="padding:4px; border-right: 2px solid black;"><em>$p_X(x)$</em></td>
+  <td style="padding:4px;">0,1</td>
+  <td style="padding:4px;">0,2</td>
+  <td style="padding:4px;">0,2</td>
+  <td style="padding:4px;">0,3</td>
+  <td style="padding:4px;">0,1</td>
+  <td style="padding:4px;">0,1</td>
+  </tr>
   </tbody>
-</table>
-
-Seja $Y = 3X+1$. Encontre a distribuição da variável aleatória $Y$.
+  </table>
+  
+  Seja $Y = 3X+1$. Encontre a distribuição da variável aleatória $Y$.
 
 
 . . .
 
 **Solução:**
-
+  
 Como $Y = 3X+1$, 
 
 
 <table style="border-collapse: collapse; margin-top:10px; margin-bottom:10px;">
-  <thead>
-    <tr style="border-top: 2px solid black; border-bottom: 1px solid black;">
-      <th style="padding:4px; border-right: 2px solid black;">$y = 3x + 1$</th>
-      <th style="padding:4px;">-5</th>
-      <th style="padding:4px;">-2</th>
-      <th style="padding:4px;">1</th>
-      <th style="padding:4px;">4</th>
-      <th style="padding:4px;">7</th>
-      <th style="padding:4px;">10</th>
-    </tr>
+<thead>
+<tr style="border-top: 2px solid black; border-bottom: 1px solid black;">
+<th style="padding:4px; border-right: 2px solid black;">$y = 3x + 1$</th>
+  <th style="padding:4px;">-5</th>
+  <th style="padding:4px;">-2</th>
+  <th style="padding:4px;">1</th>
+  <th style="padding:4px;">4</th>
+  <th style="padding:4px;">7</th>
+  <th style="padding:4px;">10</th>
+  </tr>
   </thead>
   <tbody>
-    <tr style="border-bottom: 2px solid black;">
-      <td style="padding:4px; border-right: 2px solid black;"><em>$p_Y(y)$</em></td>
-      <td style="padding:4px;">0,1</td>
-      <td style="padding:4px;">0,2</td>
-      <td style="padding:4px;">0,2</td>
-      <td style="padding:4px;">0,3</td>
-      <td style="padding:4px;">0,1</td>
-      <td style="padding:4px;">0,1</td>
-    </tr>
+  <tr style="border-bottom: 2px solid black;">
+  <td style="padding:4px; border-right: 2px solid black;"><em>$p_Y(y)$</em></td>
+  <td style="padding:4px;">0,1</td>
+  <td style="padding:4px;">0,2</td>
+  <td style="padding:4px;">0,2</td>
+  <td style="padding:4px;">0,3</td>
+  <td style="padding:4px;">0,1</td>
+  <td style="padding:4px;">0,1</td>
+  </tr>
   </tbody>
-</table>
-
-
+  </table>
+  
+  
 ## Função de Variável Aleatória: Caso Discreto
-
+  
 **Exemplo 02:** Considere a mesma distribuição de probabilidades da variável aleatória $X$, dada pela tabela abaixo:
-
-
-<table style="border-collapse: collapse; margin-top:10px; margin-bottom:10px;">
+  
+  
+  <table style="border-collapse: collapse; margin-top:10px; margin-bottom:10px;">
   <thead>
-    <tr style="border-top: 2px solid black; border-bottom: 1px solid black;">
-      <th style="padding:4px; border-right: 2px solid black;">$x$</th>
-      <th style="padding:4px;">-2</th>
-      <th style="padding:4px;">-1</th>
-      <th style="padding:4px;">0</th>
-      <th style="padding:4px;">1</th>
-      <th style="padding:4px;">2</th>
-      <th style="padding:4px;">3</th>
-    </tr>
+  <tr style="border-top: 2px solid black; border-bottom: 1px solid black;">
+  <th style="padding:4px; border-right: 2px solid black;">$x$</th>
+  <th style="padding:4px;">-2</th>
+  <th style="padding:4px;">-1</th>
+  <th style="padding:4px;">0</th>
+  <th style="padding:4px;">1</th>
+  <th style="padding:4px;">2</th>
+  <th style="padding:4px;">3</th>
+  </tr>
   </thead>
   <tbody>
-    <tr style="border-bottom: 2px solid black;">
-      <td style="padding:4px; border-right: 2px solid black;"><em>$p_X(x)$</em></td>
-      <td style="padding:4px;">0,1</td>
-      <td style="padding:4px;">0,2</td>
-      <td style="padding:4px;">0,2</td>
-      <td style="padding:4px;">0,3</td>
-      <td style="padding:4px;">0,1</td>
-      <td style="padding:4px;">0,1</td>
-    </tr>
+  <tr style="border-bottom: 2px solid black;">
+  <td style="padding:4px; border-right: 2px solid black;"><em>$p_X(x)$</em></td>
+  <td style="padding:4px;">0,1</td>
+  <td style="padding:4px;">0,2</td>
+  <td style="padding:4px;">0,2</td>
+  <td style="padding:4px;">0,3</td>
+  <td style="padding:4px;">0,1</td>
+  <td style="padding:4px;">0,1</td>
+  </tr>
   </tbody>
-</table>
-
-Contudo, vamos agora definir a variável aleatória $Y = X^2$. Qual a distribuição de probabilidades de $Y$?
-
-
-. . .
-
+  </table>
+  
+  Contudo, vamos agora definir a variável aleatória $Y = X^2$. Qual a distribuição de probabilidades de $Y$?
+  
+  
+  . . .
+  
 
 **Solução:**
-
-Temos que $S_X = \{-2, -1, 0, 1, 2, 3\}$. Como $Y = X^2$, temos que o suporte de $Y$ é dado por $S_Y = \{0, 1, 4, 9\}$, de forma que a distribuição da variável $Y$ será dada por:
-
-
+  
+  Temos que $S_X = \{-2, -1, 0, 1, 2, 3\}$. Como $Y = X^2$, temos que o suporte de $Y$ é dado por $S_Y = \{0, 1, 4, 9\}$, de forma que a distribuição da variável $Y$ será dada por:
+  
+  
 ## Função de Variável Aleatória: Caso Discreto
-
+  
 $$
-\begin{eqnarray}
-P(Y = 0) &=& P(X = 0) = 0,2 \\
-P(Y = 1) &=& P(X = -1) + P(X = 1) = 0,5 \\
-P(Y = 4) &=& P(X = -2) + P(X = 2) = 0,2 \\
-P(Y = 9) &=& P(X = 3) = 0,1
-\end{eqnarray}
+\begin{aligned}
+P(Y = 0) &= P(X = 0) = 0{,}2 \\[6pt]
+P(Y = 1) &= P(X = -1) + P(X = 1) = 0{,}5 \\[6pt]
+P(Y = 4) &= P(X = -2) + P(X = 2) = 0{,}2 \\[6pt]
+P(Y = 9) &= P(X = 3) = 0{,}1
+\end{aligned}
 $$
 
-Logo, 
+  
+  Logo, 
 
 <table style="border-collapse: collapse; margin-top:10px; margin-bottom:10px;">
   <thead>
-    <tr style="border-top: 2px solid black; border-bottom: 1px solid black;">
-      <th style="padding:4px; border-right: 2px solid black;">$y = x^2$</th>
-      <th style="padding:4px;">0</th>
-      <th style="padding:4px;">1</th>
-      <th style="padding:4px;">4</th>
-      <th style="padding:4px;">9</th>
-    </tr>
+  <tr style="border-top: 2px solid black; border-bottom: 1px solid black;">
+  <th style="padding:4px; border-right: 2px solid black;">$y = x^2$</th>
+  <th style="padding:4px;">0</th>
+  <th style="padding:4px;">1</th>
+  <th style="padding:4px;">4</th>
+  <th style="padding:4px;">9</th>
+  </tr>
   </thead>
   <tbody>
-    <tr style="border-bottom: 2px solid black;">
-      <td style="padding:4px; border-right: 2px solid black;"><em>$p_Y(y)$</em></td>
-      <td style="padding:4px;">0,2</td>
-      <td style="padding:4px;">0,5</td>
-      <td style="padding:4px;">0,2</td>
-      <td style="padding:4px;">0,1</td>
-    </tr>
+  <tr style="border-bottom: 2px solid black;">
+  <td style="padding:4px; border-right: 2px solid black;"><em>$p_Y(y)$</em></td>
+  <td style="padding:4px;">0,2</td>
+  <td style="padding:4px;">0,5</td>
+  <td style="padding:4px;">0,2</td>
+  <td style="padding:4px;">0,1</td>
+  </tr>
   </tbody>
-</table>
-
-
-
+  </table>
+  
+  
+  
 ## Função de Variável Aleatória: Caso Discreto
-
+  
 **Exemplo 03:** Suponha que $X \sim Poisson(\lambda)$, com função de probabilidade
 
 $$
 P(x | \lambda)=
-\begin{cases}
+  \begin{cases}
 \dfrac{e^{-\lambda} \lambda^x}{x!}, & x \in \{0, 1, 2, 3, \cdots \} \\[6pt]
 0, & c.c.
 \end{cases}
 $$
-
+  
 Considere que $Y = g(X)$, tal que $g(X) = 0$, se $x$ é par e $g(X) = 1$, se $x$ é ímpar. Obter a função de probabilidade de $Y$.
 
 . . .
 
 
 **Solução:**
-
+  
 Temos que o conjunto suporte de $Y$ é $S_Y = \{0,1\}$. Vamos calcular a $P(Y = 0)$.
 
 
@@ -265,31 +265,41 @@ Temos que o conjunto suporte de $Y$ é $S_Y = \{0,1\}$. Vamos calcular a $P(Y = 
 
 
 $$
-\begin{eqnarray}
-P(Y = 0) &=& P(g(X) = 0) = P(X \,\,\,\text{ser par}) \\
-&=& \sum_{x \in \{0,2,4, \cdots\}} \dfrac{e^{-\lambda} \lambda^x}{x!} \\
-&=& e^{-\lambda} \sum_{k = 0}^{\infty} \dfrac{\lambda^{2k}}{(2k)!} 
-\end{eqnarray}
+\begin{aligned}
+P(Y = 0)
+ &= P(g(X) = 0)
+  = P(X \text{ ser par}) \\[6pt]
+ &= \sum_{x \in \{0,2,4,\ldots\}}
+    \frac{e^{-\lambda}\lambda^{x}}{x!} \\[6pt]
+ &= e^{-\lambda}
+    \sum_{k = 0}^{\infty}
+    \frac{\lambda^{2k}}{(2k)!}.
+\end{aligned}
 $$
 
-
+  
+  
 ## Aparte — Séries de Taylor e Maclaurin
-
-
+  
+  
 ### Série de Taylor
-Expansão de uma função em torno de um ponto $a$:
-
-
-A expansão de Taylor escrita termo a termo é:
-
-$$\small
+  Expansão de uma função em torno de um ponto $a$:
+  
+  
+  A expansão de Taylor escrita termo a termo é:
+  
+  
+$$
+{\small
 \begin{aligned}
-f(x) &= f(a)
-+ f'(a)(x-a)
+    f(x) &= f(a)
+    + f'(a)(x-a)
 + \frac{f''(a)}{2!}(x-a)^2
 + \frac{f^{(3)}(a)}{3!}(x-a)^3 + \cdots = \sum_{n=0}^{\infty} \frac{f^{(n)}(a)}{n!}(x-a)^n
 \end{aligned}
+}
 $$
+
 
 
 ## Aparte — Séries de Taylor e Maclaurin
@@ -337,23 +347,33 @@ $$
 Assim, $e^{\lambda} + e^{-\lambda} = 2\sum_{k=0}^{\infty} \frac{\lambda^{2k}}{(2k)!}$ e,
 
 $$
-\begin{eqnarray}
-P(Y = 0) &=& e^{-\lambda} \sum_{k = 0}^{\infty} \dfrac{\lambda^{2k}}{(2k)!} = e^{-\lambda} \dfrac{1}{2}\Big(e^{\lambda} + e^{-\lambda}\Big) \\&=& \dfrac{1}{2}\Big(1 + e^{-2\lambda}\Big)
-\end{eqnarray}
+\begin{aligned}
+P(Y = 0)
+ &= e^{-\lambda} \sum_{k = 0}^{\infty} \frac{\lambda^{2k}}{(2k)!} \\[6pt]
+ &= e^{-\lambda} \cdot \frac{1}{2}\Big(e^{\lambda} + e^{-\lambda}\Big) \\[6pt]
+ &= \frac{1}{2}\Big(1 + e^{-2\lambda}\Big).
+\end{aligned}
 $$
+
+
+## Função de Variável Aleatória: Caso Discreto
 
 
 Como $\sum_{y=0}^{\infty} P(Y = y) = 1$, temos que
 
 
 $$
-\begin{eqnarray}
-P(Y = 1) &=& P(X \,\, \text{ser ímpar}) =  1 - \dfrac{1}{2}\Big(1 + e^{-2\lambda}\Big) \\&=& \dfrac{1}{2}\Big(1 - e^{-2\lambda}\Big)
-\end{eqnarray}
+\begin{aligned}
+P(Y = 1)
+ &= P(X \text{ ser ímpar})
+  = 1 - \frac{1}{2}\Big(1 + e^{-2\lambda}\Big) \\[6pt]
+ &= \frac{1}{2}\Big(1 - e^{-2\lambda}\Big).
+\end{aligned}
 $$
 
+. . .
 
-## Função de Variável Aleatória: Caso Discreto
+
 
 Finalmente, $p_Y(y) = 0$ para outros valores de $y \notin S_Y$. Portanto, $Y \sim Bernoulli(p)$ com
 
@@ -391,9 +411,13 @@ Considerando $Y = g(X) = n - X$, temos que $S_Y = \{0, 1, 2, \dots, n\}$. Quando
 
 
 $$
-\begin{eqnarray}
-P(Y = y) &=& P(g(X) = y) = P(X = g^{-1}(y)) = P(X = n - y) \\&=& \dbinom{n}{n-y}\, p^{n-y}\, (1-p)^{\,n-(n-y)}\\&=& \dbinom{n}{n-y}\, p^{n-y}\, (1-p)^{\,y}\\&=& \dbinom{n}{y}\, (1-p)^{y}\, p^{\,n-y}, \,\,\ \text{uma vez que} \,\,\, \dbinom{n}{n-y} = \dbinom{n}{y}
-\end{eqnarray}
+\begin{aligned}
+P(Y = y) &= P(g(X) = y) = P(X = g^{-1}(y)) = P(X = n - y) \\
+         &= \binom{n}{\,n-y\,}\, p^{\,n-y}\, (1-p)^{\,n-(n-y)} \\
+         &= \binom{n}{\,n-y\,}\, p^{\,n-y}\, (1-p)^{\,y} \\
+         &= \binom{n}{y}\, (1-p)^{y}\, p^{\,n-y}, 
+         \qquad \text{uma vez que } \binom{n}{n-y} = \binom{n}{y}
+\end{aligned}
 $$
 
 
@@ -561,18 +585,23 @@ para $y > 0$, sendo $\Phi_X$, a função de distribuição de probabilidade da n
 
 ## Função de Variável Aleatória: Caso Contínuo
 
-Se derivarmos $F_y(y)$ em relação a $y$, temos
+Se derivarmos $F_y(y)$ em relação a $y$, e usando o fato de $\Gamma\Big(\frac{1}{2}\Big) =  \sqrt{\pi}$, temos
 
+$$\small
+\begin{aligned}
+f_Y(y)
+ &= \frac{dF_Y(y)}{dy}
+   = \frac{d\Big[ \Phi_X(\sqrt{y}) - \Phi_X(-\sqrt{y}) \Big]}{dy} \\[6pt]
+ &= f_X(\sqrt{y}) \cdot \frac{1}{2\sqrt{y}}
+  + f_X(-\sqrt{y}) \cdot \frac{1}{2\sqrt{y}}
+   \qquad \text{(regra da cadeia)} \\[6pt]
+ &= f_X(\sqrt{y}) \cdot \frac{1}{\sqrt{y}}
+   \qquad \text{(simetria da normal)} \\[6pt]
+ &= \frac{1}{\sqrt{2\pi}}
+    \exp\!\left( -\frac{(\sqrt{y})^{2}}{2}\right)
+    \cdot \frac{1}{\sqrt{y}} = \frac{1}{2^{1/2}\sqrt{\pi}}\,e^{-y/2}\,y^{-1/2} = \chi^2_1(y).
+\end{aligned}
 $$
-\begin{eqnarray}
-f_Y(y) &=& \dfrac{dF_Y(y)}{dy} = \dfrac{d\Big[ \Phi_X(\sqrt{y}) - \Phi_X(-\sqrt{y})\Big]}{dy} \\ &=& f_X(\sqrt{y}) \times \dfrac{1}{2\sqrt{y}} + f_X(-\sqrt{y}) \times \dfrac{1}{2\sqrt{y}}, \qquad \text{(regra da cadeia)} \\ &=& f_X(\sqrt{y}) \times \dfrac{1}{\sqrt{y}}, \qquad \text{(simetria da normal)} \\ &=& \dfrac{1}{\sqrt{2\pi}}
-\exp\left( -\dfrac{(\sqrt{y})^2}{2} \right) \times \dfrac{1}{\sqrt{y}} = \dfrac{1}{2^{\frac{1}{2}}\sqrt{\pi}}
-e^\left(-\frac{y}{2} \right) y ^{-\frac{1}{2}} = \chi^2_1
-\end{eqnarray}
-$$
-Uma vez que $\Gamma\Big(\frac{1}{2}\Big) =  \sqrt{\pi}$.
-
-
 
 ## Função de Variável Aleatória: Caso Contínuo
 
@@ -655,12 +684,21 @@ $$
 No nosso caso:
 
 $$
-\begin{eqnarray}
-f_Y(y) &=& f_X(\sigma y + \mu)\,\sigma = \dfrac{1}{\sigma \sqrt{2\pi}}
-\exp\left( -\dfrac{(\sigma y + \mu - \mu)^2}{2\sigma^2} \right)\,\sigma \\ &=& \dfrac{1}{\sigma \sqrt{2\pi}}
-\exp\left( -\dfrac{(\sigma y)^2}{2\sigma^2} \right) \,\sigma
-\end{eqnarray}
+\begin{aligned}
+f_Y(y)
+ &= f_X(\sigma y + \mu)\,\sigma \\[6pt]
+ &= \frac{1}{\sigma\sqrt{2\pi}}
+    \exp\!\left(
+      -\frac{(\sigma y + \mu - \mu)^2}{2\sigma^2}
+    \right)\,\sigma \\[6pt]
+ &= \frac{1}{\sigma\sqrt{2\pi}}
+    \exp\!\left(
+      -\frac{(\sigma y)^2}{2\sigma^2}
+    \right)\,\sigma = \frac{1}{\sqrt{2\pi}}
+    \exp\!\left( -\frac{y^2}{2} \right).
+\end{aligned}
 $$
+
 
 
 ## Função de Variável Aleatória: Caso Contínuo
@@ -793,16 +831,32 @@ Note que, neste caso, temos duas regiões disjuntas do suporte de $X$, $S_X$, em
 ## Função de Variável Aleatória: Caso Contínuo
 
 $$
-\begin{eqnarray}
-f_Y(y) &=& f_X(g^{-1}_1(y)) \left| \frac{d}{dy} g_1^{-1}(y) \right| + f_X(g_2^{-1}(y)) \left| \frac{d}{dy} g_2^{-1}(y) \right| \\&=& \dfrac{1}{\sqrt{2\pi}}
-\exp\left( -\dfrac{(-\sqrt{y})^2}{2} \right) \left| \frac{d}{dy} (-\sqrt{y}) \right| + \dfrac{1}{\sqrt{2\pi}}
-\exp\left( -\dfrac{(\sqrt{y})^2}{2} \right) \left| \frac{d}{dy} \sqrt{y} \right| \\ &=& \dfrac{1}{\sqrt{2\pi}}
-\exp\left( -\dfrac{y}{2} \right) \left| -\frac{1}{2 \sqrt{y}} \right| + \dfrac{1}{\sqrt{2\pi}}
-\exp\left( -\dfrac{y}{2} \right) \left| \frac{1}{2 \sqrt{y}}  \right| \\&=& \dfrac{2}{\sqrt{2\pi}}
-\exp\left( -\dfrac{y}{2} \right)  \frac{1}{2 \sqrt{y}}   = \dfrac{1}{2^{\frac{1}{2}}\sqrt{\pi}}
-e^{-\frac{y}{2}}  y^{-\frac{1}{2}} = \chi^2_1
-\end{eqnarray}
+\begin{aligned}
+f_Y(y)
+ &= f_X(g_1^{-1}(y)) \left| \frac{d}{dy} g_1^{-1}(y) \right|
+  + f_X(g_2^{-1}(y)) \left| \frac{d}{dy} g_2^{-1}(y) \right| \\[6pt]
+ &= \frac{1}{\sqrt{2\pi}}
+    \exp\!\left( -\frac{(-\sqrt{y})^2}{2} \right)
+    \left| \frac{d}{dy} (-\sqrt{y}) \right|
+  + \frac{1}{\sqrt{2\pi}}
+    \exp\!\left( -\frac{(\sqrt{y})^2}{2} \right)
+    \left| \frac{d}{dy} \sqrt{y} \right| \\[6pt]
+ &= \frac{1}{\sqrt{2\pi}}
+    \exp\!\left( -\frac{y}{2} \right)
+    \left| -\frac{1}{2 \sqrt{y}} \right|
+  + \frac{1}{\sqrt{2\pi}}
+    \exp\!\left( -\frac{y}{2} \right)
+    \left| \frac{1}{2 \sqrt{y}}  \right| \\[6pt]
+ &= \frac{1}{\sqrt{2\pi}}
+    e^{-y/2}\,\frac{1}{2 \sqrt{y}}
+  + \frac{1}{\sqrt{2\pi}}
+    e^{-y/2}\,\frac{1}{2 \sqrt{y}} \\[6pt]
+ &= \frac{2}{\sqrt{2\pi}}\,e^{-y/2}\,\frac{1}{2 \sqrt{y}} = \frac{1}{\sqrt{2\pi}}\,e^{-y/2}\,y^{-1/2}
+  = \frac{1}{2^{1/2}\sqrt{\pi}}\,e^{-y/2}\,y^{-1/2}
+  = \chi^2_1(y).
+\end{aligned}
 $$
+
 
 
 ## Função de Variável Aleatória: Caso Contínuo
@@ -831,10 +885,23 @@ podemos escrever a fução densidade de $X$ como $f_X(x) = \dfrac{1}{2}I_{(-1,1)
 Como $Y = X^2$ não é monótona em $(−1, 1)$, mas o é em $(−1, 0)$ e $(0, 1)$ podemos utilizar a generalização do método do Jacobiano, ou seja, no intervalo $(−1, 0)$, $g_1^{-1}(y) = -\sqrt{y}$ e no intervalo $(0, 1)$ $g_2^{-1}(y) = \sqrt{y}$. Assim,
 
 
+## Função de Variável Aleatória: Caso Contínuo
+
+
 $$
-\begin{eqnarray}
-f_Y(y) &=& f_X(g^{-1}_1(y)) \left| \frac{d}{dy} g_1^{-1}(y) \right| + f_X(g_2^{-1}(y)) \left| \frac{d}{dy} g_2^{-1}(y) \right| \\&=& f_X(-\sqrt{y}) \left| \frac{d}{dy} (-\sqrt{y}) \right| + f_X(\sqrt{y}) \left| \frac{d}{dy} \sqrt{y} \right| \\ &=& \frac{1}{2} \times \left| -\frac{1}{2 \sqrt{y}} \right| +  \frac{1}{2} \times \left| \frac{1}{2 \sqrt{y}} \right| = \frac{1}{2} \times  \frac{1}{2 \sqrt{y}} + \frac{1}{2} \times  \frac{1}{2 \sqrt{y}} \\ &=& \frac{1}{4 \sqrt{y}} +  \frac{1}{4 \sqrt{y}} = \frac{1}{2 \sqrt{y}}, \qquad y>0
-\end{eqnarray}
+\begin{aligned}
+f_Y(y)
+ &= f_X(g_1^{-1}(y)) \left| \frac{d}{dy} g_1^{-1}(y) \right|
+  + f_X(g_2^{-1}(y)) \left| \frac{d}{dy} g_2^{-1}(y) \right| \\[6pt]
+ &= f_X(-\sqrt{y}) \left| \frac{d}{dy} (-\sqrt{y}) \right|
+  + f_X(\sqrt{y}) \left| \frac{d}{dy} \sqrt{y} \right| \\[6pt]
+ &= \frac{1}{2} \cdot \left| -\frac{1}{2 \sqrt{y}} \right|
+  + \frac{1}{2} \cdot \left| \frac{1}{2 \sqrt{y}} \right| \\[6pt]
+ &= \frac{1}{2} \cdot \frac{1}{2 \sqrt{y}}
+  + \frac{1}{2} \cdot \frac{1}{2 \sqrt{y}} \\[6pt]
+ &= \frac{1}{4 \sqrt{y}} + \frac{1}{4 \sqrt{y}}
+  = \frac{1}{2 \sqrt{y}}, \qquad y > 0
+\end{aligned}
 $$
 
 
@@ -848,7 +915,7 @@ $$f_Y(y) = \dfrac{1}{2 \sqrt{y}}I_{(0,1)}(y)$$
 
 ## A Transformação Integral
 
-Um importante e conhecido teorema é o Teorema da Probabilidade Integral, que relaciona a distribuição uniforme contínua com todas as outras distribuições de probabilidade.
+Um importante e conhecido teorema é o **Teorema da Probabilidade Integral**, que relaciona a distribuição uniforme contínua com todas as outras distribuições de probabilidade.
 
 . . .
 
@@ -867,13 +934,15 @@ Seu resultado é importante na **Estatística Computacional**, pois permite que 
 **Demonstração:** Considere $X$ uma variável aleatória absolutamente contínua com função de distribuição acumulada $F_X$, então
 
 $$
-\begin{eqnarray}
-F_U(u) &=& P(U \le u)= P(F_X(X) \le u) = P(X \le F_X^{-1}(u)) = F_X(F_X^{-1}(u)) = u
-\end{eqnarray}
+F_U(u) = P(U \le u)= P(F_X(X) \le u) = P(X \le F_X^{-1}(u)) = F_X(F_X^{-1}(u)) = u
 $$
 Por outro lado, se $U \sim U(0,1)$, então
 
-$$\small P(X \le x) = P(F^{-1}_X(U) \le x) = P(U \le F_x(x)) = F_U(F_X(x)) = F_X(x), \qquad \text{pois } U \text{ é uniforme} $$
+$$
+{\small  
+P(X \le x) = P(F^{-1}_X(U) \le x) = P(U \le F_x(x)) = F_U(F_X(x)) = F_X(x), \qquad \text{pois } U \text{ é uniforme} 
+}
+$$
 Assim $X$ possui função de distribuição $F_X$.
 
 
@@ -940,3 +1009,7 @@ Assim, pelo teorema da transformação integral,
 
 
 $$X = F_X^{-1}(U) = \alpha \,[-\ln(1-U)]^{1/\beta}$$ possui distribuição Weibull com função de distribuição $F_X$.
+
+
+
+
