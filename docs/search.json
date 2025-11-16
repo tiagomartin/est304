@@ -70,21 +70,21 @@
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#função-gamma-4",
     "title": "Outras Distribuições Contínuas",
     "section": "Função Gamma",
-    "text": "Função Gamma\nDemonstração\n\nResolvendo a integral por partes, fazendo \\(u = y^{\\alpha - 1}\\) e \\(dv = e^{-y} dy\\), temos\n\n\\[\n\\begin{eqnarray}\n\\Gamma(\\alpha) &=& - e^{-y} y^{\\alpha-1}\\Big|_0^\\infty + \\int_0^\\infty e^{-y} (\\alpha - 1) y^{\\alpha-2} \\, dy \\\\ &=& (\\alpha - 1)\\int_0^\\infty e^{-y} y^{\\alpha-2} \\, dy \\\\ &=& (\\alpha - 1)\\Gamma(\\alpha - 1)\n\\end{eqnarray}\n\\]"
+    "text": "Função Gamma\nDemonstração\n\nResolvendo a integral por partes, fazendo \\(u = y^{\\alpha - 1}\\) e \\(dv = e^{-y} dy\\), temos\n\n\\[\n\\begin{aligned}\n\\Gamma(\\alpha)\n&= -\\, e^{-y}\\,y^{\\alpha-1}\\Big|_{0}^{\\infty}\n    + \\int_{0}^{\\infty} e^{-y}(\\alpha-1)\\,y^{\\alpha-2}\\,dy \\\\[6pt]\n&= (\\alpha - 1)\\int_{0}^{\\infty} e^{-y} y^{\\alpha-2}\\,dy \\\\[6pt]\n&= (\\alpha - 1)\\,\\Gamma(\\alpha - 1).\n\\end{aligned}\n\\]"
   },
   {
     "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#função-gamma-5",
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#função-gamma-5",
     "title": "Outras Distribuições Contínuas",
     "section": "Função Gamma",
-    "text": "Função Gamma\n\nPara valores inteiros positivos de \\(\\alpha\\), por exemplo \\(\\alpha = n\\), temos\n\n\\[\n\\begin{eqnarray}\n\\Gamma(n) &=& (n-1)\\Gamma(n-1) \\\\ &=& (n-1)(n-2)\\Gamma(n-2) \\\\ &=& \\cdots \\\\ &=& (n-1)(n-2)\\cdots 3\\cdot 2\\cdot \\Gamma(1)\n\\end{eqnarray}\n\\]\nComo\n\\[\n\\begin{eqnarray}\n\\Gamma(1) &=& \\int_{0}^{\\infty} e^{-y} \\, y^{1-1} \\, dy = \\int_{0}^{\\infty} e^{-y} dy = \\lim_{t \\to +\\infty} \\int_{0}^{t} e^{-t} dt = \\lim_{t \\to +\\infty} (-e^{-t} + e^0) = 1\n\\end{eqnarray}\n\\]\ntemos que \\(\\Gamma(n) = (n-1)!\\)."
+    "text": "Função Gamma\n\nPara valores inteiros positivos de \\(\\alpha\\), por exemplo \\(\\alpha = n\\), temos\n\n\\[\n\\begin{aligned}\n\\Gamma(n)\n&= (n-1)\\,\\Gamma(n-1) \\\\[6pt]\n&= (n-1)(n-2)\\,\\Gamma(n-2) \\\\[6pt]\n&= \\cdots \\\\[6pt]\n&= (n-1)(n-2)\\cdots 3\\cdot 2\\cdot \\Gamma(1).\n\\end{aligned}\n\\]\nComo\n\\[\n\\Gamma(1) = \\int_{0}^{\\infty} e^{-y} \\, y^{1-1} \\, dy = \\int_{0}^{\\infty} e^{-y} dy = \\lim_{t \\to +\\infty} \\int_{0}^{t} e^{-t} dt = \\lim_{t \\to +\\infty} (-e^{-t} + e^0) = 1\n\\]\ntemos que \\(\\Gamma(n) = (n-1)!\\)."
   },
   {
     "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#função-gamma-6",
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#função-gamma-6",
     "title": "Outras Distribuições Contínuas",
     "section": "Função Gamma",
-    "text": "Função Gamma\n\nUma forma alternativa de definir a função gamma, às vezes útil, é dada por:\n\n\\[ \\Gamma(\\alpha) = 2\\int_0^\\infty e^{-y^2} y^{2\\alpha-1} dy\\] Temos que \\(\\Gamma(\\alpha) = \\int_{0}^{\\infty} e^{-y} \\, y^{\\alpha-1} \\, dy\\). Fazendo \\(y = u^2\\), temos que \\(dy = 2udu\\). Assim,\n\\[\n\\begin{eqnarray}\n\\Gamma(\\alpha) &=& \\int_{0}^{\\infty} e^{-y} \\, y^{\\alpha-1} \\, dy = \\int_{0}^{\\infty} e^{-u^2} \\, u^{2\\alpha-2} \\, 2udu = 2\\int_{0}^{\\infty} e^{-u^2}u^{2\\alpha-1}du\n\\end{eqnarray}\n\\]\nSe provarmos que \\(\\left[ \\Gamma\\left( \\frac{1}{2}\\right) \\right]^2 = \\pi\\), então segue que \\(\\Gamma\\left( \\frac{1}{2}\\right) = \\sqrt{\\pi}\\)."
+    "text": "Função Gamma\n\nUma forma alternativa de definir a função gamma, às vezes útil, é dada por:\n\n\\[ \\Gamma(\\alpha) = 2\\int_0^\\infty e^{-y^2} y^{2\\alpha-1} dy\\] Temos que \\(\\Gamma(\\alpha) = \\int_{0}^{\\infty} e^{-y} \\, y^{\\alpha-1} \\, dy\\). Fazendo \\(y = u^2\\), temos que \\(dy = 2udu\\). Assim,\n\\[\n\\Gamma(\\alpha) = \\int_{0}^{\\infty} e^{-y} \\, y^{\\alpha-1} \\, dy = \\int_{0}^{\\infty} e^{-u^2} \\, u^{2\\alpha-2} \\, 2u\\,du = 2\\int_{0}^{\\infty} e^{-u^2}u^{2\\alpha-1}du\n\\]\nSe provarmos que \\(\\left[ \\Gamma\\left( \\frac{1}{2}\\right) \\right]^2 = \\pi\\), então segue que \\(\\Gamma\\left( \\frac{1}{2}\\right) = \\sqrt{\\pi}\\)."
   },
   {
     "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#função-gamma-7",
@@ -98,21 +98,21 @@
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#função-gamma-8",
     "title": "Outras Distribuições Contínuas",
     "section": "Função Gamma",
-    "text": "Função Gamma\nTomando \\(\\alpha = \\dfrac{1}{2}\\), temos \\(2 \\alpha - 1 = 0\\) e assim,\n\\[\n\\begin{eqnarray}\n\\displaystyle \\left[ \\Gamma \\left({\\frac {1}{2}}\\right) \\right]^2 = 4\\int_0^\\infty\\int_0^\\infty  e^{-(x^2+y^2)} dx dy\n\\end{eqnarray}\n\\]\n\nPara resolvermos esta integral dupla, podemos recorrer à técnica de coordenadas polares, na qual pontos \\((x,y)\\) são referenciados no sitema de coordenadas \\((r,\\theta)\\), sendo não negativo e \\(\\theta\\) variando de 0 a \\(2\\pi\\).\n\n\nAssim, tomamos \\(x=r \\cos\\theta\\) e \\(y=r \\text{ sen}\\,\\,\\theta\\), de forma que,\n\\[x^2+y^2 = r^2 \\cos^2\\theta +r^2 \\text{ sen}^2\\theta = r^2\\]"
+    "text": "Função Gamma\nTomando \\(\\alpha = \\dfrac{1}{2}\\), temos \\(2 \\alpha - 1 = 0\\) e assim,\n\\[\n\\displaystyle \\left[ \\Gamma \\left({\\frac {1}{2}}\\right) \\right]^2 = 4\\int_0^\\infty\\int_0^\\infty  e^{-(x^2+y^2)} dx dy\n\\]\n\nPara resolvermos esta integral dupla, podemos recorrer à técnica de coordenadas polares, na qual pontos \\((x,y)\\) são referenciados no sitema de coordenadas \\((r,\\theta)\\), sendo não negativo e \\(\\theta\\) variando de 0 a \\(2\\pi\\).\n\n\nAssim, tomamos \\(x=r \\cos\\theta\\) e \\(y=r \\text{ sen}\\,\\,\\theta\\), de forma que,\n\\[x^2+y^2 = r^2 \\cos^2\\theta +r^2 \\text{ sen}^2\\theta = r^2\\]"
   },
   {
     "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#função-gamma-9",
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#função-gamma-9",
     "title": "Outras Distribuições Contínuas",
     "section": "Função Gamma",
-    "text": "Função Gamma\nA unidade infinitesimal de área \\(dx\\text{ }dy\\) corresponde à unidade infinitesimal de área \\(r\\text{ }dr\\text{ }d\\theta\\) no sistema de coordenadas polares.\n\nAlém disso, integrar com tanto como variando de zero a infinito corresponde a integrar no primeiro quadrante, que, no sistema de coordenadas polares, consiste em integrar com \\(\\theta\\) variando de 0 a \\(\\pi /2\\) e variando de 0 a infinito.\n\n\nAssim,\n\\[\n\\small\n\\begin{eqnarray}\n\\left[ \\Gamma\\left( \\frac{1}{2}\\right) \\right]^2 &=& 4\\int_0^{\\pi/2}\\int_0^\\infty e^{-r^2} r\\text{ } dr d\\theta = 4\\int_0^{\\pi/2} d\\theta \\int_0^\\infty e^{-r^2} r\\text{ } dr = 4\\int_0^{\\pi/2} d\\theta  \\left[ -\\frac{e^{-r^2}}{2} \\right]_0^\\infty \\\\ &=& 4\\int_0^{\\pi/2} d\\theta \\left( \\frac{1}{2} \\right)  = 2\\int_0^{\\pi/2}1\\text{ } d\\theta   = 2 \\left. \\theta \\right|_0^{\\pi/2} = \\pi\n\\end{eqnarray}\n\\]"
+    "text": "Função Gamma\nA unidade infinitesimal de área \\(dx\\text{ }dy\\) corresponde à unidade infinitesimal de área \\(r\\text{ }dr\\text{ }d\\theta\\) no sistema de coordenadas polares.\n\nAlém disso, integrar com tanto como variando de zero a infinito corresponde a integrar no primeiro quadrante, que, no sistema de coordenadas polares, consiste em integrar com \\(\\theta\\) variando de 0 a \\(\\pi /2\\) e variando de 0 a infinito."
   },
   {
     "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#função-gamma-10",
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#função-gamma-10",
     "title": "Outras Distribuições Contínuas",
     "section": "Função Gamma",
-    "text": "Função Gamma"
+    "text": "Função Gamma\nAssim,\n\\[\n\\begin{aligned}\n\\left[\\Gamma\\!\\left(\\frac12\\right)\\right]^2\n&= 4 \\int_{0}^{\\pi/2} \\int_{0}^{\\infty} e^{-r^{2}}\\, r\\, dr\\, d\\theta = 4 \\int_{0}^{\\pi/2} d\\theta \\int_{0}^{\\infty} e^{-r^{2}}\\, r\\, dr \\\\[6pt]\n&= 4 \\int_{0}^{\\pi/2} d\\theta\n    \\left[ -\\frac{e^{-r^{2}}}{2} \\right]_{0}^{\\infty} = 4 \\int_{0}^{\\pi/2} \\left(\\frac12\\right)\\, d\\theta \\\\[6pt]\n&= 2 \\int_{0}^{\\pi/2} 1\\, d\\theta = 2\\,\\theta\\Big|_{0}^{\\pi/2} = \\pi\n\\end{aligned}\n\\]"
   },
   {
     "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-gamma",
@@ -126,21 +126,21 @@
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-gamma-1",
     "title": "Outras Distribuições Contínuas",
     "section": "Distribuição Gamma",
-    "text": "Distribuição Gamma\nSe \\(X \\sim Gamma(\\alpha, \\lambda)\\), então\n\\[\n\\begin{eqnarray}\nE[X] &=& \\frac{1}{\\Gamma(\\alpha)} \\int_0^\\infty x \\lambda  e^{-\\lambda x} (\\lambda x)^{\\alpha-1}\\,dx \\\\ &=& \\frac{1}{\\Gamma(\\alpha)} \\int_0^\\infty e^{-\\lambda x} (\\lambda x)^{\\alpha}\\, dx \\\\ &=& \\frac{1}{\\lambda \\Gamma(\\alpha)} \\int_0^\\infty e^{-u} (u)^{\\alpha}\\, du \\\\ &=& \\frac{\\Gamma(\\alpha+1)}{\\lambda \\,\\Gamma(\\alpha)} = \\frac{\\alpha \\Gamma(\\alpha)}{\\lambda \\,\\Gamma(\\alpha)} = \\dfrac{\\alpha}{\\lambda}\n\\end{eqnarray}\n\\]"
+    "text": "Distribuição Gamma\nSe \\(X \\sim Gamma(\\alpha, \\lambda)\\), então\n\\[\n\\begin{aligned}\nE[X]\n&= \\frac{1}{\\Gamma(\\alpha)}\n    \\int_{0}^{\\infty} x\\,\\lambda\\,e^{-\\lambda x}(\\lambda x)^{\\alpha-1}\\,dx \\\\[6pt]\n&= \\frac{1}{\\Gamma(\\alpha)}\n    \\int_{0}^{\\infty} e^{-\\lambda x}(\\lambda x)^{\\alpha}\\,dx \\\\[6pt]\n&= \\frac{1}{\\lambda\\,\\Gamma(\\alpha)}\n    \\int_{0}^{\\infty} e^{-u}\\,u^{\\alpha}\\,du \\\\[6pt]\n&= \\frac{\\Gamma(\\alpha+1)}{\\lambda\\,\\Gamma(\\alpha)}\n  = \\frac{\\alpha\\,\\Gamma(\\alpha)}{\\lambda\\,\\Gamma(\\alpha)}\n  = \\frac{\\alpha}{\\lambda}.\n\\end{aligned}\n\\]"
   },
   {
     "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-gamma-2",
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-gamma-2",
     "title": "Outras Distribuições Contínuas",
     "section": "Distribuição Gamma",
-    "text": "Distribuição Gamma\n\\[\n\\begin{eqnarray}\nE[X^2] &=& \\frac{1}{\\Gamma(\\alpha)} \\int_0^\\infty x^2 \\lambda  e^{-\\lambda x} (\\lambda x)^{\\alpha-1}\\,dx = \\frac{1}{\\Gamma(\\alpha)} \\int_0^\\infty x^2 \\lambda e^{-\\lambda x} \\lambda^{\\alpha -1} x^{\\alpha-1}\\, dx \\\\ &=& \\frac{1}{\\Gamma(\\alpha)} \\int_0^\\infty e^{-\\lambda x} \\lambda^{\\alpha}x^{\\alpha+1}\\, dx = \\frac{\\lambda^{\\alpha}}{\\Gamma(\\alpha)} \\int_0^\\infty e^{-\\lambda x} x^{\\alpha+1}\\, dx \\\\ &=& \\frac{\\lambda^{\\alpha}}{\\Gamma(\\alpha)} \\int_0^\\infty e^{-u} \\left(\\dfrac{u}{\\lambda}\\right)^{\\alpha+1}\\,\\left(\\dfrac{1}{\\lambda}\\right) du  = \\frac{\\lambda^{\\alpha}}{\\lambda^{\\alpha +2}\\Gamma(\\alpha)} \\int_0^\\infty e^{-u} u^{\\alpha+1}\\, du \\\\ &=& \\frac{\\lambda^{\\alpha}\\Gamma(\\alpha+2)}{\\lambda^{\\alpha +2} \\,\\Gamma(\\alpha)} = \\frac{(\\alpha+1) \\Gamma(\\alpha+1)}{\\lambda^2 \\,\\Gamma(\\alpha)} =  \\frac{(\\alpha+1)\\alpha \\Gamma(\\alpha)}{\\lambda^2 \\,\\Gamma(\\alpha)} =  \\dfrac{\\alpha (\\alpha+1)}{\\lambda^2}\n\\end{eqnarray}\n\\]"
+    "text": "Distribuição Gamma\n\\[\n\\begin{aligned}\nE[X^{2}]\n&= \\frac{1}{\\Gamma(\\alpha)}\n    \\int_{0}^{\\infty} x^{2}\\,\\lambda\\,e^{-\\lambda x}(\\lambda x)^{\\alpha-1}\\,dx = \\frac{1}{\\Gamma(\\alpha)}\n    \\int_{0}^{\\infty} e^{-\\lambda x}\\,\\lambda^{\\alpha}\\,x^{\\alpha+1}\\,dx \\\\[6pt]\n&= \\frac{\\lambda^{\\alpha}}{\\Gamma(\\alpha)}\n    \\int_{0}^{\\infty} e^{-\\lambda x}\\,x^{\\alpha+1}\\,dx = \\frac{\\lambda^{\\alpha}}{\\Gamma(\\alpha)}\n    \\int_{0}^{\\infty} e^{-u}\\left(\\frac{u}{\\lambda}\\right)^{\\alpha+1}\n    \\left(\\frac{1}{\\lambda}\\right)\\,du \\\\[6pt]\n&= \\frac{\\lambda^{\\alpha}}{\\lambda^{\\alpha+2}\\,\\Gamma(\\alpha)}\n    \\int_{0}^{\\infty} e^{-u}\\,u^{\\alpha+1}\\,du = \\frac{\\lambda^{\\alpha}\\,\\Gamma(\\alpha+2)}\n        {\\lambda^{\\alpha+2}\\,\\Gamma(\\alpha)} \\\\[6pt]\n&= \\frac{(\\alpha+1)\\Gamma(\\alpha+1)}\n        {\\lambda^{2}\\,\\Gamma(\\alpha)} = \\frac{(\\alpha+1)\\alpha\\,\\Gamma(\\alpha)}{\\lambda^{2}\\,\\Gamma(\\alpha)}= \\frac{\\alpha(\\alpha+1)}{\\lambda^{2}}\n\\end{aligned}\n\\]"
   },
   {
     "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-gamma-3",
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-gamma-3",
     "title": "Outras Distribuições Contínuas",
     "section": "Distribuição Gamma",
-    "text": "Distribuição Gamma\nDe forma que,\n\\[\n\\begin{eqnarray}\nVar(X) &=& E(X^2) - \\left[E(X)\\right]^2 \\\\ &=& \\dfrac{\\alpha (\\alpha+1)}{\\lambda^2} - \\left[\\dfrac{\\alpha}{\\lambda}\\right]^2 \\\\ &=& \\dfrac{\\alpha^2 + \\alpha}{\\lambda^2} - \\dfrac{\\alpha^2}{\\lambda^2} \\\\ &=& \\dfrac{\\alpha^2 + \\alpha - \\alpha^2}{\\lambda^2} = \\dfrac{\\alpha}{\\lambda^2}\n\\end{eqnarray}\n\\]"
+    "text": "Distribuição Gamma\nDe forma que,\n\\[\n\\begin{aligned}\n\\operatorname{Var}(X)\n&= E(X^{2}) - [E(X)]^{2} \\\\[6pt]\n&= \\frac{\\alpha(\\alpha+1)}{\\lambda^{2}}\n    - \\left(\\frac{\\alpha}{\\lambda}\\right)^{2} \\\\[6pt]\n&= \\frac{\\alpha^{2}+\\alpha}{\\lambda^{2}}\n    - \\frac{\\alpha^{2}}{\\lambda^{2}} \\\\[6pt]\n&= \\frac{\\alpha^{2}+\\alpha-\\alpha^{2}}{\\lambda^{2}} \\\\[6pt]\n&= \\frac{\\alpha}{\\lambda^{2}}.\n\\end{aligned}\n\\]"
   },
   {
     "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-gamma-4",
@@ -203,7 +203,7 @@
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-qui-quadrado",
     "title": "Outras Distribuições Contínuas",
     "section": "Distribuição Qui-Quadrado",
-    "text": "Distribuição Qui-Quadrado\nUm caso particular da distribuição Gamma, quando tomamos \\(\\alpha = \\dfrac{n}{2}\\) e \\(\\lambda = \\dfrac{1}{2}\\), onde \\(n\\) é um inteiro positivo.\n\nAssim, para \\(\\alpha = \\dfrac{n}{2}\\) e \\(\\lambda = \\dfrac{1}{2}\\),\n\\[\n\\begin{eqnarray}\nf(x) = \\dfrac{\\frac{1}{2} e^{-\\frac{x}{2}}\\left(\\frac{x}{2}\\right)^{\\frac{n}{2}-1}}{\\Gamma \\left(\\frac{n}{2}\\right)} =  \\dfrac{\\frac{e^{-\\frac{x}{2}}}{2} \\left(\\frac{x ^{\\frac{n}{2}-1}}{2^{\\frac{n}{2}-1}}\\right)}{\\Gamma \\left(\\frac{n}{2}\\right)} = \\dfrac{\\frac{e^{-\\frac{x}{2}} x ^{\\frac{n}{2}-1}}{2^{\\frac{n}{2}}}}{\\Gamma \\left(\\frac{n}{2}\\right)} = \\dfrac{1}{2^{\\frac{n}{2}} \\Gamma \\left(\\frac{n}{2}\\right)} e^{-\\frac{x}{2}} x ^{\\frac{n}{2}-1}\n\\end{eqnarray}\n\\]"
+    "text": "Distribuição Qui-Quadrado\nUm caso particular da distribuição Gamma, quando tomamos \\(\\alpha = \\dfrac{n}{2}\\) e \\(\\lambda = \\dfrac{1}{2}\\), onde \\(n\\) é um inteiro positivo.\n\nAssim, para \\(\\alpha = \\dfrac{n}{2}\\) e \\(\\lambda = \\dfrac{1}{2}\\),\n\\[\nf(x) = \\dfrac{\\frac{1}{2} e^{-\\frac{x}{2}}\\left(\\frac{x}{2}\\right)^{\\frac{n}{2}-1}}{\\Gamma \\left(\\frac{n}{2}\\right)} =  \\dfrac{\\frac{e^{-\\frac{x}{2}}}{2} \\left(\\frac{x ^{\\frac{n}{2}-1}}{2^{\\frac{n}{2}-1}}\\right)}{\\Gamma \\left(\\frac{n}{2}\\right)} = \\dfrac{\\frac{e^{-\\frac{x}{2}} x ^{\\frac{n}{2}-1}}{2^{\\frac{n}{2}}}}{\\Gamma \\left(\\frac{n}{2}\\right)} = \\dfrac{1}{2^{\\frac{n}{2}} \\Gamma \\left(\\frac{n}{2}\\right)} e^{-\\frac{x}{2}} x ^{\\frac{n}{2}-1}\n\\]"
   },
   {
     "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-qui-quadrado-1",
@@ -252,77 +252,77 @@
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-beta-2",
     "title": "Outras Distribuições Contínuas",
     "section": "Distribuição Beta",
-    "text": "Distribuição Beta\nSe \\(X \\sim Beta(a, b)\\), então\n\\[\n\\begin{eqnarray}\nE[X] &=& \\int_0^1 x \\dfrac{1}{B(a,b)} x^{\\,a-1} (1-x)^{\\,b-1} &=& \\dfrac{1}{B(a,b)}  \\int_0^1 x^a(1-x)^{b-1} = \\dfrac{B(a+1,b)}{B(a,b)}\n\\end{eqnarray}\n\\]\nUsando a relação \\(B(a,b) = \\dfrac{\\Gamma(a) \\Gamma(b)}{\\Gamma(a+b)}\\), temos\n\\[\n\\begin{eqnarray}\n\\dfrac{B(a+1,b)}{B(a,b)} &=& \\dfrac{\\dfrac{\\Gamma(a+1)\\Gamma(b)}{\\Gamma(a+b + 1)}}{\\dfrac{\\Gamma(a)\\Gamma(b)}{\\Gamma(a+b)}} = \\dfrac{\\Gamma(a+1)\\Gamma(b)}{\\Gamma(a+b + 1)} \\times \\dfrac{\\Gamma(a+b)}{\\Gamma(a)\\Gamma(b)} = \\dfrac{\\Gamma(a+1)\\Gamma(a+b)}{\\Gamma(a+b + 1)\\Gamma(a)}=\n\\end{eqnarray}\n\\]"
+    "text": "Distribuição Beta\nSe \\(X \\sim Beta(a, b)\\), então\n\\[\nE[X] = \\int_0^1 x \\dfrac{1}{B(a,b)} x^{\\,a-1} (1-x)^{\\,b-1} = \\dfrac{1}{B(a,b)}  \\int_0^1 x^a(1-x)^{b-1} = \\dfrac{B(a+1,b)}{B(a,b)}\n\\]\nUsando a relação \\(B(a,b) = \\dfrac{\\Gamma(a) \\Gamma(b)}{\\Gamma(a+b)}\\), temos\n\\[\n\\dfrac{B(a+1,b)}{B(a,b)} = \\dfrac{\\dfrac{\\Gamma(a+1)\\Gamma(b)}{\\Gamma(a+b + 1)}}{\\dfrac{\\Gamma(a)\\Gamma(b)}{\\Gamma(a+b)}} = \\dfrac{\\Gamma(a+1)\\Gamma(b)}{\\Gamma(a+b + 1)} \\times \\dfrac{\\Gamma(a+b)}{\\Gamma(a)\\Gamma(b)} = \\dfrac{\\Gamma(a+1)\\Gamma(a+b)}{\\Gamma(a+b + 1)\\Gamma(a)}=\n\\]"
   },
   {
     "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-beta-3",
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-beta-3",
     "title": "Outras Distribuições Contínuas",
     "section": "Distribuição Beta",
-    "text": "Distribuição Beta\n\\(= \\dfrac{a\\Gamma(a)\\Gamma(a+b)}{(a+b)\\Gamma(a+b)\\Gamma(a)} = \\dfrac{a}{a+b}\\)\n\n\\[\n\\begin{eqnarray}\nE[X^2] &=& \\int_0^1 x^2 \\dfrac{1}{B(a,b)} x^{\\,a-1} (1-x)^{\\,b-1} = \\dfrac{1}{B(a,b)}  \\int_0^1 x^{a+1}(1-x)^{b-1} = \\dfrac{B(a+2,b)}{B(a,b)} \\\\ &=& \\dfrac{\\dfrac{\\Gamma(a+2)\\Gamma(b)}{\\Gamma(a+b + 2)}}{\\dfrac{\\Gamma(a)\\Gamma(b)}{\\Gamma(a+b)}} = \\dfrac{\\Gamma(a+2)\\Gamma(b)\\Gamma(a+b)}{\\Gamma(a+b + 2)\\Gamma(a)\\Gamma(b)} = \\dfrac{(a+1)\\Gamma(a+1)\\Gamma(a+b)}{(a+b+1)\\Gamma(a+b + 1)\\Gamma(a)} \\\\ &=& \\dfrac{(a+1)a\\Gamma(a)\\Gamma(a+b)}{(a+b+1)(a+b)\\Gamma(a+b)\\Gamma(a)} = \\dfrac{(a+1)a}{(a+b+1)(a+b)}\n\\end{eqnarray}\n\\]"
+    "text": "Distribuição Beta\n\\(= \\dfrac{a\\Gamma(a)\\Gamma(a+b)}{(a+b)\\Gamma(a+b)\\Gamma(a)} = \\dfrac{a}{a+b}\\)"
   },
   {
     "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-beta-4",
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-beta-4",
     "title": "Outras Distribuições Contínuas",
     "section": "Distribuição Beta",
-    "text": "Distribuição Beta\nDe forma que,\n\\[\n\\begin{eqnarray}\nVar(X) &=& E(X^2) - \\left[E(X)\\right]^2 \\\\ &=& \\dfrac{(a+1)a}{(a+b+1)(a+b)}-\\left[\\dfrac{a}{a+b}\\right]^2 = \\dfrac{a^2 + a}{(a+b+1)(a+b)}-\\dfrac{a^2}{(a+b)^2} \\\\ &=& \\dfrac{(a^2 + a)(a+b) - a^2(a+b+1)}{(a+b+1)(a+b)^2} = \\dfrac{a^3 + a^2b+a^2 +ab- a^3-a^2b-a^2}{(a+b+1)(a+b)^2} \\\\ &=& \\dfrac{ab}{(a+b+1)(a+b)^2}\n\\end{eqnarray}\n\\]"
+    "text": "Distribuição Beta\n\\[\n\\begin{aligned}\nE[X^{2}]\n&= \\int_{0}^{1} x^{2}\\,\n    \\frac{1}{B(a,b)}\\,x^{a-1}(1-x)^{b-1}\\,dx = \\frac{1}{B(a,b)}\n    \\int_{0}^{1} x^{a+1}(1-x)^{\\,b-1}\\,dx \\\\[6pt]\n&= \\frac{B(a+2,b)}{B(a,b)} = \\frac{\n      \\dfrac{\\Gamma(a+2)\\Gamma(b)}{\\Gamma(a+b+2)}\n    }{\n      \\dfrac{\\Gamma(a)\\Gamma(b)}{\\Gamma(a+b)}\n    } = \\frac{\\Gamma(a+2)\\Gamma(b)\\Gamma(a+b)}\n        {\\Gamma(a+b+2)\\Gamma(a)\\Gamma(b)} \\\\[6pt]\n&= \\frac{\n      (a+1)\\Gamma(a+1)\\,\\Gamma(a+b)\n    }{\n      (a+b+1)\\Gamma(a+b+1)\\,\\Gamma(a)\n    } = \\frac{\n      (a+1)a\\,\\Gamma(a)\\,\\Gamma(a+b)\n    }{\n      (a+b+1)(a+b)\\,\\Gamma(a+b)\\,\\Gamma(a)\n    } \\\\[6pt]\n&= \\frac{a(a+1)}{(a+b)(a+b+1)}\n\\end{aligned}\n\\]"
   },
   {
     "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-beta-5",
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-beta-5",
     "title": "Outras Distribuições Contínuas",
     "section": "Distribuição Beta",
-    "text": "Distribuição Beta\nLogo, se \\(X \\sim Beta(a,b)\\), então\n\\[\nf(x \\mid a,b)=\n\\begin{cases}\n\\dfrac{1}{B(a,b)} x^{\\,a-1} (1-x)^{\\,b-1}, & 0&lt;x&lt;1\\\\[6pt]\n0, & \\text{caso contrário}\n\\end{cases}\n\\]\ncom\n\\[E(X) =  \\dfrac{a}{a+b} \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\, \\text{       e       } \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,Var(X) = \\dfrac{ab}{(a+b+1)(a+b)^2}\\]"
+    "text": "Distribuição Beta\nDe forma que,\n\\[\n\\begin{aligned}\n\\operatorname{Var}(X)\n&= E(X^{2}) - [E(X)]^{2} = \\frac{a(a+1)}{(a+b)(a+b+1)}\n    - \\left(\\frac{a}{a+b}\\right)^{2} \\\\[6pt]\n&= \\frac{a^{2}+a}{(a+b)(a+b+1)}\n    - \\frac{a^{2}}{(a+b)^{2}} = \\frac{(a^{2}+a)(a+b) - a^{2}(a+b+1)}\n        {(a+b+1)(a+b)^{2}} \\\\[6pt]\n&= \\frac{a^{3} + a^{2}b + a^{2} + ab - a^{3} - a^{2}b - a^{2}}\n        {(a+b+1)(a+b)^{2}} = \\frac{ab}{(a+b+1)(a+b)^{2}}\n\\end{aligned}\n\\]"
   },
   {
     "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-beta-6",
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-beta-6",
     "title": "Outras Distribuições Contínuas",
     "section": "Distribuição Beta",
-    "text": "Distribuição Beta\nA Função de Distribuição Acumulada da distribuição Beta é intratável analiticamente.\n\\[\nF(x| a,b)=\\dfrac{1}{B(a,b)}\\int_0^x t^{a-1}(1-t)^{b-1}dt.\n\\qquad 0&lt; x &lt; 1.\n\\]"
+    "text": "Distribuição Beta\nLogo, se \\(X \\sim Beta(a,b)\\), então\n\\[\nf(x \\mid a,b)=\n\\begin{cases}\n\\dfrac{1}{B(a,b)}x^{a-1} (1-x)^{b-1}, & 0&lt;x&lt;1\\\\[6pt]\n0, & \\text{caso contrário}\n\\end{cases}\n\\]\ncom\n\\[E(X) =  \\dfrac{a}{a+b} \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\, \\text{       e       } \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,Var(X) = \\dfrac{ab}{(a+b+1)(a+b)^2}\\]"
   },
   {
     "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-beta-7",
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-beta-7",
     "title": "Outras Distribuições Contínuas",
     "section": "Distribuição Beta",
-    "text": "Distribuição Beta\n\n\nFigure 4: Distribuição Beta — variação de a (shape1) com b fixo."
+    "text": "Distribuição Beta\nA Função de Distribuição Acumulada da distribuição Beta é intratável analiticamente.\n\\[\nF(x| a,b)=\\dfrac{1}{B(a,b)}\\int_0^x t^{a-1}(1-t)^{b-1}dt.\n\\qquad 0&lt; x &lt; 1.\n\\]"
   },
   {
     "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-beta-8",
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-beta-8",
     "title": "Outras Distribuições Contínuas",
     "section": "Distribuição Beta",
-    "text": "Distribuição Beta\n\n\nFigure 5: Distribuição Beta — variação de b (shape2) com a fixo."
+    "text": "Distribuição Beta\n\n\nFigure 4: Distribuição Beta — variação de a (shape1) com b fixo."
   },
   {
     "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-beta-9",
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-beta-9",
     "title": "Outras Distribuições Contínuas",
     "section": "Distribuição Beta",
-    "text": "Distribuição Beta\n\n\nFigure 6: Distribuição Beta — simetria quando α = β."
+    "text": "Distribuição Beta\n\n\nFigure 5: Distribuição Beta — variação de b (shape2) com a fixo."
   },
   {
     "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-beta-10",
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-beta-10",
     "title": "Outras Distribuições Contínuas",
     "section": "Distribuição Beta",
-    "text": "Distribuição Beta\nA distribuição Beta é usada para modelar proporções (variáveis contínuas entre 0 e 1). É uma das distribuições mais importantes em estatística aplicada.\n\n\nModelagem de proporções: proporção de sucesso, taxa de clique (CTR) em marketing digital, fração de tempo ativo de um equipamento, percentual de umidade, pureza, concentração, etc.\n\n\n\n\nInferência Bayesiana: é a prior conjugada da Bernoulli e da Binomial → se o parâmetro de interesse é uma probabilidade \\(p\\), a priori Beta é natural.\n\n\n\n\nModelo para incerteza em probabilidades: incerteza sobre \\(p\\) em “probabilidade de sucesso” antes de observar dados, nossa crença sobre \\(p\\) é Beta"
+    "text": "Distribuição Beta\n\n\nFigure 6: Distribuição Beta — simetria quando α = β."
   },
   {
     "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-beta-11",
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-beta-11",
     "title": "Outras Distribuições Contínuas",
     "section": "Distribuição Beta",
-    "text": "Distribuição Beta\nExemplo 03: A porcentagem de impurezas por lote, em determinado produto químico, é uma variável aleatória com distribuição Beta com parâmetros \\(a = 3\\) e \\(b = 2\\). Um lote com mais de \\(40\\%\\) de impurezas não pode ser vendido.\n\nQual é a probabilidade de que um lote, selecionado ao acaso, não possa ser vendido por causa do excesso de impurezas? R: \\(0,8208\\)\nQuantos lotes, em média, são selecionados, ao acaso, até que se encontre um que não pode ser vendido por causa do excesso de impurezas? R: \\(1,2183\\)\nQual é a porcentagem média de impurezas nos lotes desse produto químico? R: \\(0,60\\)"
+    "text": "Distribuição Beta\nA distribuição Beta é usada para modelar proporções (variáveis contínuas entre 0 e 1). É uma das distribuições mais importantes em estatística aplicada.\n\n\nModelagem de proporções: proporção de sucesso, taxa de clique (CTR) em marketing digital, fração de tempo ativo de um equipamento, percentual de umidade, pureza, concentração, etc.\n\n\n\n\nInferência Bayesiana: é a prior conjugada da Bernoulli e da Binomial → se o parâmetro de interesse é uma probabilidade \\(p\\), a priori Beta é natural.\n\n\n\n\nModelo para incerteza em probabilidades: incerteza sobre \\(p\\) em “probabilidade de sucesso” antes de observar dados, nossa crença sobre \\(p\\) é Beta"
   },
   {
     "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-beta-12",
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-beta-12",
     "title": "Outras Distribuições Contínuas",
     "section": "Distribuição Beta",
-    "text": "Distribuição Beta\nExemplo 04: O teor de gordura no leite de um rebanho bovino é uma variável com distribuição Beta com parâmetros \\(a = 2\\) e \\(b = 5\\).\n\nQual o teor médio de gordura no leite? R: \\(0,2857\\)\nQual o percentual de amostras que terá teor de gordura menor que \\(10\\%\\)? R: \\(0,1143\\)"
+    "text": "Distribuição Beta\nExemplo 03: A porcentagem de impurezas por lote, em determinado produto químico, é uma variável aleatória com distribuição Beta com parâmetros \\(a = 3\\) e \\(b = 2\\). Um lote com mais de \\(40\\%\\) de impurezas não pode ser vendido.\n\nQual é a probabilidade de que um lote, selecionado ao acaso, não possa ser vendido por causa do excesso de impurezas? R: \\(0,8208\\)\nQuantos lotes, em média, são selecionados, ao acaso, até que se encontre um que não pode ser vendido por causa do excesso de impurezas? R: \\(1,2183\\)\nQual é a porcentagem média de impurezas nos lotes desse produto químico? R: \\(0,60\\)"
   },
   {
     "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-weibull",
@@ -336,21 +336,21 @@
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-weibull-1",
     "title": "Outras Distribuições Contínuas",
     "section": "Distribuição Weibull",
-    "text": "Distribuição Weibull\nSe \\(X \\sim Weibull(\\alpha, \\beta)\\), então\n\\[\n\\begin{eqnarray}\nE[X] &=& \\int_0^\\infty x \\dfrac{\\beta}{\\alpha} \\left(\\dfrac{x}{\\alpha}\\right)^{\\beta - 1} \\exp\\!\\left[-\\left(\\dfrac{x}{\\alpha}\\right)^{\\beta}\\right]dx = \\int_0^\\infty \\alpha u \\dfrac{\\beta}{\\alpha} \\left(\\dfrac{\\alpha u}{\\alpha}\\right)^{\\beta - 1} \\exp\\!\\left[-\\left(\\dfrac{\\alpha u}{\\alpha}\\right)^{\\beta}\\right] \\alpha  \\,\\,\\,du \\\\&=& \\int_0^\\infty  u \\,\\,\\beta \\,\\, u^{\\beta - 1} \\exp\\!\\left[-u^{\\beta}\\right] \\alpha \\,\\,\\,du = \\int_0^\\infty  \\beta \\,\\, u^{\\beta } \\exp\\!\\left[-u^{\\beta}\\right] \\alpha \\,\\,\\,du \\\\ &=& \\int_0^\\infty  \\beta \\,\\, v \\exp\\!\\left[-v\\right] \\alpha \\,\\,\\,\\dfrac{1}{\\beta} v^{\\frac{1}{\\beta}-1} dv = \\alpha \\int_0^\\infty  \\exp\\!\\left[-v\\right] v^{\\frac{1}{\\beta}} \\,\\, dv = \\alpha \\Gamma\\left( \\dfrac{1}{\\beta} + 1\\right)\n\\end{eqnarray}\n\\]"
+    "text": "Distribuição Weibull\nSe \\(X \\sim Weibull(\\alpha, \\beta)\\), então\n\\[ \\small\n\\begin{aligned}\nE[X]\n&= \\int_{0}^{\\infty}\n    x \\,\\frac{\\beta}{\\alpha}\n    \\left(\\frac{x}{\\alpha}\\right)^{\\beta-1}\n    \\exp\\!\\left[-\\left(\\frac{x}{\\alpha}\\right)^{\\beta}\\right] dx = \\int_{0}^{\\infty}\n    (\\alpha u)\\,\\frac{\\beta}{\\alpha}\n    \\left(\\frac{\\alpha u}{\\alpha}\\right)^{\\beta-1}\n    \\exp\\!\\left[-\\left(\\frac{\\alpha u}{\\alpha}\\right)^{\\beta}\\right]\n    \\alpha\\,du \\\\[6pt]\n&= \\int_{0}^{\\infty}\n    u\\,\\beta\\,u^{\\beta-1}\\exp[-u^{\\beta}]\\,\\alpha\\,du = \\alpha\\int_{0}^{\\infty}\n    \\beta\\,u^{\\beta}\\exp[-u^{\\beta}]\\,du \\\\[6pt]\n&= \\alpha\\int_{0}^{\\infty}\n    \\beta\\,v\\,e^{-v}\\,\\frac{1}{\\beta}\\,v^{\\frac{1}{\\beta}-1} dv\n    \\qquad (v = u^{\\beta}) \\\\ &= \\alpha\\int_{0}^{\\infty}\n    e^{-v}\\,v^{\\frac{1}{\\beta}}\\,dv = \\alpha\\,\\Gamma\\!\\left(\\frac{1}{\\beta}+1\\right)\n\\end{aligned}\n\\]"
   },
   {
     "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-weibull-2",
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-weibull-2",
     "title": "Outras Distribuições Contínuas",
     "section": "Distribuição Weibull",
-    "text": "Distribuição Weibull\n\\[\n\\small\n\\begin{eqnarray}\nE[X^2] &=& \\int_0^\\infty x^2 \\dfrac{\\beta}{\\alpha} \\left(\\dfrac{x}{\\alpha}\\right)^{\\beta - 1} \\exp\\!\\left[-\\left(\\dfrac{x}{\\alpha}\\right)^{\\beta}\\right]dx = \\int_0^\\infty (\\alpha u)^2 \\dfrac{\\beta}{\\alpha} \\left(\\dfrac{\\alpha u}{\\alpha}\\right)^{\\beta - 1} \\exp\\!\\left[-\\left(\\dfrac{\\alpha u}{\\alpha}\\right)^{\\beta}\\right] \\alpha  \\,\\,\\,du \\\\&=& \\int_0^\\infty  \\alpha^2u^2 \\,\\,\\dfrac{\\beta}{\\alpha} \\,\\, u^{\\beta - 1} \\exp\\!\\left[-u^{\\beta}\\right] \\alpha \\,\\,\\,du = \\int_0^\\infty  \\alpha^2 \\,\\,\\beta \\,\\, u^{\\beta +1} \\exp\\!\\left[-u^{\\beta}\\right]\\,\\,\\,du \\\\ &=& \\int_0^\\infty  \\alpha^2 \\,\\,\\beta \\,\\, u^{\\beta} \\,\\, u \\,\\, \\exp\\!\\left[-u^{\\beta}\\right]\\,\\,\\,du = \\int_0^\\infty \\alpha^2 \\beta \\,\\, v \\,\\, v^{\\frac{1}{\\beta}}\\exp\\!\\left[-v\\right] \\,\\,\\dfrac{1}{\\beta} v^{\\frac{1}{\\beta}-1} dv \\\\ &=& \\alpha^2 \\int_0^\\infty  v^{\\frac{1}{\\beta} + 1} \\exp\\!\\left[-v\\right] v^{\\frac{1}{\\beta}-1} \\,\\, dv = \\alpha^2 \\int_0^\\infty  v^{\\frac{2}{\\beta}} \\exp\\!\\left[-v\\right] \\,\\, dv = \\alpha^2 \\Gamma\\left( \\dfrac{2}{\\beta} + 1\\right)\n\\end{eqnarray}\n\\]"
+    "text": "Distribuição Weibull\n\\[ \\small\n\\begin{aligned}\nE[X^{2}]\n&= \\int_{0}^{\\infty}\n    x^{2}\\,\\frac{\\beta}{\\alpha}\n    \\left(\\frac{x}{\\alpha}\\right)^{\\beta-1}\n    \\exp\\!\\left[-\\left(\\frac{x}{\\alpha}\\right)^{\\beta}\\right] dx \\\\[6pt]\n&= \\int_{0}^{\\infty}\n    (\\alpha u)^{2}\\,\\frac{\\beta}{\\alpha}\n    \\left(\\frac{\\alpha u}{\\alpha}\\right)^{\\beta-1}\n    \\exp[-u^{\\beta}]\\,\\alpha\\,du \\\\[6pt]\n&= \\int_{0}^{\\infty}\n    \\alpha^{2}u^{2}\\,\\frac{\\beta}{\\alpha}\\,u^{\\beta-1}\n    e^{-u^{\\beta}}\\,\\alpha\\,du = \\int_{0}^{\\infty}\n    \\alpha^{2}\\beta\\,u^{\\beta+1}\\,e^{-u^{\\beta}}\\,du \\\\[6pt]\n&= \\int_{0}^{\\infty}\n    \\alpha^{2}\\beta\\,u^{\\beta}\\,u\\,e^{-u^{\\beta}}\\,du = \\int_{0}^{\\infty}\n    \\alpha^{2}\\beta\\,v\\,v^{1/\\beta}\\,e^{-v}\\,\n    \\frac{1}{\\beta}\\,v^{1/\\beta-1}\\,dv\n    \\quad (v = u^{\\beta}) \\\\[6pt]&= \\alpha^{2}\n    \\int_{0}^{\\infty}\n    v^{\\,1/\\beta + 1 + 1/\\beta -1}\\,e^{-v}\\,dv = \\alpha^{2}\n    \\int_{0}^{\\infty}\n    v^{\\,2/\\beta}\\,e^{-v}\\,dv = \\alpha^{2}\\,\n    \\Gamma\\!\\left(\\frac{2}{\\beta}+1\\right)\n\\end{aligned}\n\\]"
   },
   {
     "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-weibull-3",
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-weibull-3",
     "title": "Outras Distribuições Contínuas",
     "section": "Distribuição Weibull",
-    "text": "Distribuição Weibull\nDe forma que,\n\\[\n\\begin{eqnarray}\nVar(X) &=& E(X^2) - \\left[E(X)\\right]^2 \\\\ &=& \\alpha^2 \\Gamma\\left( \\dfrac{2}{\\beta} + 1\\right)-\\left[\\alpha \\Gamma\\left( \\dfrac{1}{\\beta} + 1\\right)\\right]^2 = \\alpha^2 \\Gamma\\left( \\dfrac{2}{\\beta} + 1\\right)- \\alpha^2\\left[ \\Gamma\\left( \\dfrac{1}{\\beta} + 1\\right)\\right]^2\\\\ &=& \\alpha^2\\left\\{\\Gamma\\left( \\dfrac{2}{\\beta} + 1\\right) - \\left[\\Gamma\\left( \\dfrac{1}{\\beta} + 1\\right)\\right]^2\\right\\}\n\\end{eqnarray}\n\\]"
+    "text": "Distribuição Weibull\nDe forma que,\n\\[\n\\begin{aligned}\n\\operatorname{Var}(X)\n&= E(X^{2}) - [E(X)]^{2} \\\\[6pt]\n&= \\alpha^{2}\\,\\Gamma\\!\\left(\\frac{2}{\\beta}+1\\right)\n    - \\left[\\alpha\\,\\Gamma\\!\\left(\\frac{1}{\\beta}+1\\right)\\right]^{2} \\\\[6pt]\n&= \\alpha^{2}\\,\\Gamma\\!\\left(\\frac{2}{\\beta}+1\\right)\n    - \\alpha^{2}\\left[\\Gamma\\!\\left(\\frac{1}{\\beta}+1\\right)\\right]^{2} \\\\[6pt]\n&= \\alpha^{2}\n    \\left\\{\n      \\Gamma\\!\\left(\\frac{2}{\\beta}+1\\right)\n      - \\left[\\Gamma\\!\\left(\\frac{1}{\\beta}+1\\right)\\right]^{2}\n    \\right\\}\n\\end{aligned}\n\\]"
   },
   {
     "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-weibull-4",
@@ -434,56 +434,56 @@
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-log-normal-1",
     "title": "Outras Distribuições Contínuas",
     "section": "Distribuição Log-Normal",
-    "text": "Distribuição Log-Normal\n\\[\n\\begin{eqnarray}\nE(X) &=& \\int_{-\\infty}^{\\infty} x \\,\\dfrac{1}{x\\, \\sigma\\, \\sqrt{2\\pi}} \\,\\exp\\!\\left[-\\dfrac{1}{2}\\left(\\dfrac{\\ln x - \\mu}{\\sigma}\\right)^2\\right]\\,dx \\\\&=& \\int_{0}^{\\infty}  \\,\\dfrac{1}{\\sigma \\,\\sqrt{2\\pi}}\\exp\\!\\left[-\\dfrac{1}{2}\\left(\\dfrac{\\ln x - \\mu}{\\sigma}\\right)^2\\right]\\,dx\n\\end{eqnarray}\n\\] Mudança de variável: \\(z = \\ln(x) \\Rightarrow x = e^z, dx = e^z \\, dz\\). Quando \\(x \\in (0, \\infty) \\Rightarrow z \\in (-\\infty,\\infty)\\)\n\\[\n\\begin{eqnarray}\n&=& \\int_{-\\infty}^{\\infty} \\dfrac{1}{\\sigma\\, \\sqrt{2\\pi}} \\,\\exp\\!\\left[-\\dfrac{1}{2}\\left(\\dfrac{z - \\mu}{\\sigma}\\right)^2\\right]\\, e^z \\,dz \\\\&=& \\int_{-\\infty}^{\\infty}  \\,\\dfrac{1}{\\sigma \\,\\sqrt{2\\pi}}\\exp\\!\\left[-\\dfrac{1}{2}\\left(\\dfrac{z - \\mu}{\\sigma}\\right)^2 + z\\right]\\,dz\n\\end{eqnarray}\n\\]"
+    "text": "Distribuição Log-Normal\n\\[\n\\begin{aligned}\nE(X)\n&= \\int_{0}^{\\infty}\n    x \\,\\frac{1}{x\\,\\sigma\\sqrt{2\\pi}}\\,\n    \\exp\\!\\left[\n      -\\frac{1}{2}\\left(\\frac{\\ln x - \\mu}{\\sigma}\\right)^{2}\n    \\right] dx \\\\[6pt]\n&= \\int_{0}^{\\infty}\n    \\frac{1}{\\sigma\\sqrt{2\\pi}}\\,\n    \\exp\\!\\left[\n      -\\frac{1}{2}\\left(\\frac{\\ln x - \\mu}{\\sigma}\\right)^{2}\n    \\right] dx\n\\end{aligned}\n\\]\nMudança de variável: \\(z = \\ln(x) \\Rightarrow x = e^z, dx = e^z \\, dz\\). Quando \\(x \\in (0, \\infty) \\Rightarrow z \\in (-\\infty,\\infty)\\)\n\\[\n\\begin{aligned}\n&= \\int_{-\\infty}^{\\infty}\n   \\frac{1}{\\sigma\\sqrt{2\\pi}}\\,\n   \\exp\\!\\left[\n     -\\frac12\\left(\\frac{z-\\mu}{\\sigma}\\right)^{2}\n   \\right]\\, e^{z}\\,dz \\\\[6pt]\n&= \\int_{-\\infty}^{\\infty}\n   \\frac{1}{\\sigma\\sqrt{2\\pi}}\\,\n   \\exp\\!\\left[\n     -\\frac12\\left(\\frac{z-\\mu}{\\sigma}\\right)^{2}\n     + z\n   \\right]\\,dz\n\\end{aligned}\n\\]"
   },
   {
     "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-log-normal-2",
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-log-normal-2",
     "title": "Outras Distribuições Contínuas",
     "section": "Distribuição Log-Normal",
-    "text": "Distribuição Log-Normal\nCompletando o quadrado do expoente:\n\\[\n\\begin{eqnarray}\nz-\\dfrac{(z-\\mu)^2}{2\\sigma^2} &=& -\\dfrac{1}{2\\sigma^2}\\Big[(z-\\mu)^2-2\\sigma^2 z\\Big] = -\\dfrac{1}{2\\sigma^2}\\Big[z^2-2(\\mu+\\sigma^2)z+\\mu^2\\Big] \\\\ &=&  -\\dfrac{1}{2\\sigma^2}\\big[\\big(z-(\\mu+\\sigma^2)\\big)^2 - (\\mu+\\sigma^2)^2+\\mu^2\\big] \\\\ &=& -\\dfrac{\\big(z-(\\mu+\\sigma^2)\\big)^2}{2\\sigma^2} +\\dfrac{(\\mu+\\sigma^2)^2-\\mu^2}{2\\sigma^2} \\\\ &=& -\\dfrac{\\big(z-(\\mu+\\sigma^2)\\big)^2}{2\\sigma^2} +\\mu+\\dfrac{\\sigma^2}{2}\n\\end{eqnarray}\n\\]"
+    "text": "Distribuição Log-Normal\nCompletando o quadrado do expoente:\n\\[\n\\begin{aligned}\nz - \\frac{(z-\\mu)^2}{2\\sigma^{2}}\n&= -\\frac{1}{2\\sigma^{2}}\\Big[(z-\\mu)^2 - 2\\sigma^{2}z\\Big] \\\\[6pt]\n&= -\\frac{1}{2\\sigma^{2}}\\Big[z^{2} - 2(\\mu+\\sigma^{2})z + \\mu^{2}\\Big] \\\\[6pt]\n&= -\\frac{1}{2\\sigma^{2}}\n    \\left[\n      (\\,z-(\\mu+\\sigma^{2})\\,)^2\n      -(\\mu+\\sigma^{2})^{2}\n      + \\mu^{2}\n    \\right] \\\\[6pt]\n&= -\\frac{(z-(\\mu+\\sigma^{2}))^{2}}{2\\sigma^{2}}\n    + \\frac{(\\mu+\\sigma^{2})^{2} - \\mu^{2}}{2\\sigma^{2}} \\\\[6pt]\n&= -\\frac{(z-(\\mu+\\sigma^{2}))^{2}}{2\\sigma^{2}}\n    + \\mu + \\frac{\\sigma^{2}}{2}\n\\end{aligned}\n\\]"
   },
   {
     "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-log-normal-3",
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-log-normal-3",
     "title": "Outras Distribuições Contínuas",
     "section": "Distribuição Log-Normal",
-    "text": "Distribuição Log-Normal\nAssim,\n\\[\\small\n\\begin{eqnarray}\n\\int_{-\\infty}^{\\infty}  \\,\\dfrac{1}{\\sigma \\,\\sqrt{2\\pi}}\\exp\\!\\left[-\\dfrac{1}{2}\\left(\\dfrac{z - \\mu}{\\sigma}\\right)^2 + z\\right]\\,dz &=& \\int_{-\\infty}^{\\infty}  \\,\\dfrac{1}{\\sigma \\,\\sqrt{2\\pi}}\\exp\\!\\left[-\\dfrac{\\big(z-(\\mu+\\sigma^2)\\big)^2}{2\\sigma^2} +\\mu+\\dfrac{\\sigma^2}{2}\\right]\\,dz \\\\&=& e^{\\mu+\\dfrac{\\sigma^2}{2}}\n\\int_{-\\infty}^{\\infty} \\dfrac{1}{\\sigma \\,\\sqrt{2\\pi}} \\exp\\!\\left[-\\frac{\\big(z-(\\mu+\\sigma^2)\\big)^2}{2\\sigma^2}\\right]\\,dz\n\\end{eqnarray}\n\\]\nA integral é 1 (é uma densidade Normal). Logo,\n\\[\n\\boxed{E(X)=\\exp\\!\\left(\\mu+\\frac{\\sigma^2}{2}\\right)}\n\\]"
+    "text": "Distribuição Log-Normal\nAssim,\n\\[ \\small\n\\begin{aligned}\n\\int_{-\\infty}^{\\infty}\n\\frac{1}{\\sigma\\sqrt{2\\pi}}\n\\exp\\!\\left[\n   -\\frac{1}{2}\\left(\\frac{z-\\mu}{\\sigma}\\right)^{2}\n   + z\n\\right] dz\n&=\n\\int_{-\\infty}^{\\infty}\n\\frac{1}{\\sigma\\sqrt{2\\pi}}\n\\exp\\!\\left[\n   -\\frac{\\big(z-(\\mu+\\sigma^{2})\\big)^{2}}{2\\sigma^{2}}\n   + \\mu + \\frac{\\sigma^{2}}{2}\n\\right] dz \\\\[6pt]\n&=\ne^{\\mu+\\sigma^{2}/2}\n\\int_{-\\infty}^{\\infty}\n\\frac{1}{\\sigma\\sqrt{2\\pi}}\n\\exp\\!\\left[\n   -\\frac{\\big(z-(\\mu+\\sigma^{2})\\big)^{2}}{2\\sigma^{2}}\n\\right] dz\n\\end{aligned}\n\\]\nA integral é 1 (é uma densidade Normal). Logo,\n\\[\n\\boxed{E(X)=\\exp\\!\\left(\\mu+\\frac{\\sigma^2}{2}\\right)}\n\\]"
   },
   {
     "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-log-normal-4",
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-log-normal-4",
     "title": "Outras Distribuições Contínuas",
     "section": "Distribuição Log-Normal",
-    "text": "Distribuição Log-Normal\nDa mesma forma,\n\\[\n\\begin{eqnarray}\nE(X^2) &=& \\int_{-\\infty}^{\\infty} x^2 \\,\\dfrac{1}{x\\, \\sigma\\, \\sqrt{2\\pi}} \\,\\exp\\!\\left[-\\dfrac{1}{2}\\left(\\dfrac{\\ln x - \\mu}{\\sigma}\\right)^2\\right]\\,dx \\\\&=& \\int_{0}^{\\infty}  \\,\\dfrac{x}{\\sigma \\,\\sqrt{2\\pi}}\\exp\\!\\left[-\\dfrac{1}{2}\\left(\\dfrac{\\ln x - \\mu}{\\sigma}\\right)^2\\right]\\,dx\n\\end{eqnarray}\n\\]\nMudança de variável: \\(z = \\ln(x) \\Rightarrow x = e^z, dx = e^z \\, dz\\). Quando \\(x \\in (0, \\infty) \\Rightarrow z \\in (-\\infty,\\infty)\\)"
+    "text": "Distribuição Log-Normal\nDa mesma forma,\n\\[\n\\begin{aligned}\nE(X^{2})\n&= \\int_{0}^{\\infty}\n    x^{2}\\,\n    \\frac{1}{x\\,\\sigma\\sqrt{2\\pi}}\\,\n    \\exp\\!\\left[\n      -\\frac12\\left(\\frac{\\ln x - \\mu}{\\sigma}\\right)^{2}\n    \\right] dx \\\\[6pt]\n&= \\int_{0}^{\\infty}\n    \\frac{x}{\\sigma\\sqrt{2\\pi}}\\,\n    \\exp\\!\\left[\n      -\\frac12\\left(\\frac{\\ln x - \\mu}{\\sigma}\\right)^{2}\n    \\right] dx\n\\end{aligned}\n\\]\nMudança de variável: \\(z = \\ln(x) \\Rightarrow x = e^z, dx = e^z \\, dz\\). Quando \\(x \\in (0, \\infty) \\Rightarrow z \\in (-\\infty,\\infty)\\)"
   },
   {
     "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-log-normal-5",
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-log-normal-5",
     "title": "Outras Distribuições Contínuas",
     "section": "Distribuição Log-Normal",
-    "text": "Distribuição Log-Normal\n\\[\n\\begin{eqnarray}\n&=& \\int_{-\\infty}^{\\infty} \\dfrac{e^z}{\\sigma\\, \\sqrt{2\\pi}} \\,\\exp\\!\\left[-\\dfrac{1}{2}\\left(\\dfrac{z - \\mu}{\\sigma}\\right)^2\\right]\\, e^z \\,dz \\\\&=& \\int_{-\\infty}^{\\infty} \\dfrac{1}{\\sigma\\, \\sqrt{2\\pi}} \\,\\exp\\!\\left[-\\dfrac{1}{2}\\left(\\dfrac{z - \\mu}{\\sigma}\\right)^2\\right]\\, e^{2z} \\,dz \\\\&=& \\int_{-\\infty}^{\\infty}  \\,\\dfrac{1}{\\sigma \\,\\sqrt{2\\pi}}\\exp\\!\\left[-\\dfrac{1}{2}\\left(\\dfrac{z - \\mu}{\\sigma}\\right)^2 + 2z\\right]\\,dz\n\\end{eqnarray}\n\\]"
+    "text": "Distribuição Log-Normal\n\\[\n\\begin{aligned}\n&= \\int_{-\\infty}^{\\infty}\n   \\frac{e^{z}}{\\sigma\\sqrt{2\\pi}}\\,\n   \\exp\\!\\left[\n     -\\frac12\\left(\\frac{z-\\mu}{\\sigma}\\right)^{2}\n   \\right] e^{z}\\,dz \\\\[6pt]\n&= \\int_{-\\infty}^{\\infty}\n   \\frac{1}{\\sigma\\sqrt{2\\pi}}\\,\n   \\exp\\!\\left[\n     -\\frac12\\left(\\frac{z-\\mu}{\\sigma}\\right)^{2}\n   \\right] e^{2z}\\,dz \\\\[6pt]\n&= \\int_{-\\infty}^{\\infty}\n   \\frac{1}{\\sigma\\sqrt{2\\pi}}\\,\n   \\exp\\!\\left[\n     -\\frac12\\left(\\frac{z-\\mu}{\\sigma}\\right)^{2}\n     + 2z\n   \\right] dz\n\\end{aligned}\n\\]"
   },
   {
     "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-log-normal-6",
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-log-normal-6",
     "title": "Outras Distribuições Contínuas",
     "section": "Distribuição Log-Normal",
-    "text": "Distribuição Log-Normal\nCompletando o quadrado do expoente:\n\\[\n\\begin{eqnarray}\n2z-\\dfrac{(z-\\mu)^2}{2\\sigma^2} &=& -\\dfrac{1}{2\\sigma^2}\\Big[(z-\\mu)^2-4\\sigma^2 z\\Big] = -\\dfrac{1}{2\\sigma^2}\\Big[z^2-2(\\mu+2\\sigma^2)z+\\mu^2\\Big] \\\\ &=&  -\\dfrac{1}{2\\sigma^2}\\big[\\big(z-(\\mu+2\\sigma^2)\\big)^2 - (\\mu+2\\sigma^2)^2+\\mu^2\\big] \\\\ &=& -\\dfrac{\\big(z-(\\mu+2\\sigma^2)\\big)^2}{2\\sigma^2} +\\dfrac{(\\mu+2\\sigma^2)^2-\\mu^2}{2\\sigma^2} \\\\ &=& -\\dfrac{\\big(z-(\\mu+2\\sigma^2)\\big)^2}{2\\sigma^2} +2\\mu+ 2\\sigma^2\n\\end{eqnarray}\n\\]"
+    "text": "Distribuição Log-Normal\nCompletando o quadrado do expoente:\n\\[\n\\begin{aligned}\n2z - \\frac{(z-\\mu)^2}{2\\sigma^{2}}\n&= -\\frac{1}{2\\sigma^{2}}\n    \\Big[(z-\\mu)^2 - 4\\sigma^{2}z\\Big] \\\\[6pt]\n&= -\\frac{1}{2\\sigma^{2}}\n    \\Big[z^{2} - 2(\\mu+2\\sigma^{2})z + \\mu^{2}\\Big] \\\\[6pt]\n&= -\\frac{1}{2\\sigma^{2}}\n    \\left[\n      (\\,z-(\\mu+2\\sigma^{2})\\,)^{2}\n      - (\\mu+2\\sigma^{2})^{2} + \\mu^{2}\n    \\right] \\\\[6pt]\n&= -\\frac{(z-(\\mu+2\\sigma^{2}))^{2}}{2\\sigma^{2}}\n    + \\frac{(\\mu+2\\sigma^{2})^{2} - \\mu^{2}}{2\\sigma^{2}} \\\\[6pt]\n&= -\\frac{(z-(\\mu+2\\sigma^{2}))^{2}}{2\\sigma^{2}}\n    + 2\\mu + 2\\sigma^{2}\n\\end{aligned}\n\\]"
   },
   {
     "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-log-normal-7",
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-log-normal-7",
     "title": "Outras Distribuições Contínuas",
     "section": "Distribuição Log-Normal",
-    "text": "Distribuição Log-Normal\nAssim,\n\\[\\small\n\\begin{eqnarray}\n\\int_{-\\infty}^{\\infty}  \\,\\dfrac{1}{\\sigma \\,\\sqrt{2\\pi}}\\exp\\!\\left[-\\dfrac{1}{2}\\left(\\dfrac{z - \\mu}{\\sigma}\\right)^2 + 2z\\right]\\,dz &=& \\int_{-\\infty}^{\\infty}  \\,\\dfrac{1}{\\sigma \\,\\sqrt{2\\pi}}\\exp\\!\\left[-\\dfrac{\\big(z-(\\mu+ 2\\sigma^2)\\big)^2}{2\\sigma^2} +2\\mu+2\\sigma^2\\right]\\,dz \\\\&=& e^{2\\mu+2\\sigma^2}\n\\int_{-\\infty}^{\\infty} \\dfrac{1}{\\sigma \\,\\sqrt{2\\pi}} \\exp\\!\\left[-\\frac{\\big(z-(\\mu+2\\sigma^2)\\big)^2}{2\\sigma^2}\\right]\\,dz\n\\end{eqnarray}\n\\]\nA integral é 1 (é uma densidade Normal). Logo,\n\\[\n\\boxed{E(X^2)=\\exp\\!\\left(2\\mu+2\\sigma^2\\right)}\n\\]"
+    "text": "Distribuição Log-Normal\nAssim,\n\\[\\small\n\\begin{aligned}\n\\int_{-\\infty}^{\\infty}\n\\frac{1}{\\sigma\\sqrt{2\\pi}}\n\\exp\\!\\left[\n   -\\frac{1}{2}\\left(\\frac{z-\\mu}{\\sigma}\\right)^2 + 2z\n\\right] dz\n&=\n\\int_{-\\infty}^{\\infty}\n\\frac{1}{\\sigma\\sqrt{2\\pi}}\n\\exp\\!\\left[\n   -\\frac{(z-(\\mu+2\\sigma^{2}))^{2}}{2\\sigma^{2}}\n   + 2\\mu + 2\\sigma^{2}\n\\right] dz\n\\\\[6pt]\n&=\ne^{2\\mu + 2\\sigma^{2}}\n\\int_{-\\infty}^{\\infty}\n\\frac{1}{\\sigma\\sqrt{2\\pi}}\n\\exp\\!\\left[\n   -\\frac{(z-(\\mu+2\\sigma^{2}))^{2}}{2\\sigma^{2}}\n\\right] dz\n\\end{aligned}\n\\]\nA integral é 1 (é uma densidade Normal). Logo,\n\\[\n\\boxed{E(X^2)=\\exp\\!\\left(2\\mu+2\\sigma^2\\right)}\n\\]"
   },
   {
     "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-log-normal-8",
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-log-normal-8",
     "title": "Outras Distribuições Contínuas",
     "section": "Distribuição Log-Normal",
-    "text": "Distribuição Log-Normal\nDe forma que,\n\\[\n\\begin{eqnarray}\nVar(X) &=& E(X^2) - \\left[E(X)\\right]^2 \\\\ &=& \\exp\\!\\left( 2\\mu+2\\sigma^2 \\right) - \\left[\\exp\\!\\left(\\mu+\\frac{\\sigma^2}{2}\\right)\\right]^2 \\\\ &=& \\exp\\!\\left(\\,2\\mu+\\sigma^2\\right)\\big(e^{\\sigma^2}-1\\big)\n\\end{eqnarray}\n\\]\nAssim,\n\\[\n\\boxed{Var(X)=\\exp\\!\\left(\\,2\\mu+\\sigma^2\\right)\\big(e^{\\sigma^2}-1\\big)}\n\\]"
+    "text": "Distribuição Log-Normal\nDe forma que,\n\\[\n\\begin{aligned}\n\\operatorname{Var}(X)\n&= E(X^2) - [E(X)]^2 \\\\[4pt]\n&= \\exp\\!\\left(2\\mu + 2\\sigma^2\\right)\n    - \\left[\\exp\\!\\left(\\mu + \\frac{\\sigma^2}{2}\\right)\\right]^2 \\\\[4pt]\n&= \\exp\\!\\left(2\\mu + 2\\sigma^2\\right)\n    - \\exp\\!\\left(2\\mu + \\sigma^2\\right) \\\\[4pt]\n&= \\exp\\!\\left(2\\mu + \\sigma^2\\right)\\big(e^{\\sigma^2} - 1\\big)\n\\end{aligned}\n\\]\nAssim,\n\\[\n\\boxed{Var(X)=\\exp\\!\\left(\\,2\\mu+\\sigma^2\\right)\\big(e^{\\sigma^2}-1\\big)}\n\\]"
   },
   {
     "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-log-normal-9",
@@ -588,7 +588,7 @@
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-2",
     "title": "Outras Distribuições Contínuas",
     "section": "Distribuição Exponencial Dupla",
-    "text": "Distribuição Exponencial Dupla\nVamos encontrar \\(E(X)\\). Para isso, tomamos \\(Z = X-a\\). Logo, \\(Z \\sim Laplace(0,b)\\) com\n\\[\nf_Z(z)= \\dfrac{1}{2b}\\, \\exp\\!\\left(-\\frac{|z|}{b}\\right)\n\\] e \\(E(X) = E(Z + a) = E(Z) + a\\)\n\\[\n\\begin{eqnarray}\nE(Z) &=& \\int_{-\\infty}^{\\infty} z\\,f_Z(z)\\,dz =\\frac{1}{2b}\\int_{-\\infty}^{\\infty} z\\,e^{-|z|/b}\\,dz \\\\ &=& \\frac{1}{2b}\\left(\\int_{-\\infty}^{0} z\\,e^{z/b}\\,dz+\\int_{0}^{\\infty} z\\,e^{-z/b}\\,dz\\right)\n\\end{eqnarray}\n\\]"
+    "text": "Distribuição Exponencial Dupla\nVamos encontrar \\(E(X)\\). Para isso, tomamos \\(Z = X-a\\). Logo, \\(Z \\sim Laplace(0,b)\\) com\n\\[\nf_Z(z)= \\dfrac{1}{2b}\\, \\exp\\!\\left(-\\frac{|z|}{b}\\right)\n\\] e \\(E(X) = E(Z + a) = E(Z) + a\\)\n\\[\n\\begin{aligned}\nE(Z)\n&= \\int_{-\\infty}^{\\infty} z\\,f_Z(z)\\,dz\n  = \\frac{1}{2b} \\int_{-\\infty}^{\\infty} z\\,e^{-|z|/b}\\,dz \\\\[6pt]\n&= \\frac{1}{2b}\n    \\left(\n      \\int_{-\\infty}^{0} z\\,e^{z/b}\\,dz\n      +\n      \\int_{0}^{\\infty} z\\,e^{-z/b}\\,dz\n    \\right)\n\\end{aligned}\n\\]"
   },
   {
     "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-3",
@@ -602,21 +602,21 @@
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-4",
     "title": "Outras Distribuições Contínuas",
     "section": "Distribuição Exponencial Dupla",
-    "text": "Distribuição Exponencial Dupla\nCálculo de \\(Var(Z)=E(Z^2)\\) (pois \\((E(Z)=0\\)):\n\\[\n\\begin{eqnarray}\nE(Z^2)&=&\\int_{-\\infty}^{\\infty} z^{2}\\,f_Z(z)\\,dz=\\int_{-\\infty}^{\\infty} z^{2}\\,\\frac{1}{2b} \\,e^{-|z|/b}\\,dz\n\\end{eqnarray}\n\\]\nComo o integrando é par,\n\\[\n\\begin{eqnarray}\nE(Z^2)&=&\\int_{0}^{\\infty} z^{2} \\frac{1}{b} e^{-z/b}\\,dz\n\\end{eqnarray}\n\\]\nFaça a mudança \\(y=z/b\\Rightarrow z=by,\\ dz=b\\,dy\\)"
+    "text": "Distribuição Exponencial Dupla\nCálculo de \\(Var(Z)=E(Z^2)\\) (pois \\((E(Z)=0\\)):\n\\[\n\\begin{aligned}\nE(Z^{2})\n&= \\int_{-\\infty}^{\\infty} z^{2}\\,f_Z(z)\\,dz \\\\[6pt]\n&= \\int_{-\\infty}^{\\infty} z^{2}\\,\\frac{1}{2b}\\,e^{-|z|/b}\\,dz\n\\end{aligned}\n\\]\nComo o integrando é par,\n\\[\nE(Z^2)=\\int_{0}^{\\infty} z^{2} \\frac{1}{b} e^{-z/b}\\,dz\n\\]\nFaça a mudança \\(y=z/b\\Rightarrow z=by,\\ dz=b\\,dy\\)"
   },
   {
     "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-5",
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-5",
     "title": "Outras Distribuições Contínuas",
     "section": "Distribuição Exponencial Dupla",
-    "text": "Distribuição Exponencial Dupla\n\\[\n\\begin{eqnarray}\nE(Z^2)&=&\\int_{0}^{\\infty} z^{2} \\,\\frac{1}{b}\\ e^{-z/b}\\,dz \\\\ &=&\\int_{0}^{\\infty}  (b y)^{2}\\,\\frac{1}{b}\\, e^{-y}\\,b\\,dy\n= b^{2}\\int_{0}^{\\infty} y^{2} e^{-y}\\,dy\n\\end{eqnarray}\n\\]\nPela definição da função Gama,\n\\[\\int_{0}^{\\infty} y^{2} e^{-y}\\,dy=\\Gamma(3)=2!\\]\nPortanto,\n\\[E(Z^2)=b^{2}\\cdot 2 = 2b^{2}\\]"
+    "text": "Distribuição Exponencial Dupla\n\\[\n\\begin{aligned}\nE(Z^{2})\n&= \\int_{0}^{\\infty} z^{2}\\,\\frac{1}{b}\\,e^{-z/b}\\,dz \\\\[6pt]\n&= \\int_{0}^{\\infty} (b y)^{2}\\,\\frac{1}{b}\\,e^{-y}\\,b\\,dy \\\\[6pt]\n&= b^{2}\\int_{0}^{\\infty} y^{2} e^{-y}\\,dy\n\\end{aligned}\n\\]"
   },
   {
     "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-6",
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-6",
     "title": "Outras Distribuições Contínuas",
     "section": "Distribuição Exponencial Dupla",
-    "text": "Distribuição Exponencial Dupla\nComo \\(Var(X)=Var(Z)=E(Z^2)\\),\n\\[\\boxed{Var(X)=2b^{2}}\\]"
+    "text": "Distribuição Exponencial Dupla\nPela definição da função Gama,\n\\[\\int_{0}^{\\infty} y^{2} e^{-y}\\,dy=\\Gamma(3)=2!\\]\nPortanto,\n\\[E(Z^2)=b^{2}\\cdot 2 = 2b^{2}\\]\n\nComo \\(Var(X)=Var(Z)=E(Z^2)\\),\n\\[\\boxed{Var(X)=2b^{2}}\\]"
   },
   {
     "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-7",
@@ -644,21 +644,21 @@
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-10",
     "title": "Outras Distribuições Contínuas",
     "section": "Distribuição Exponencial Dupla",
-    "text": "Distribuição Exponencial Dupla\nCaso 2: \\(x \\ge a\\)\nAqui \\(|t-a|=t-a\\). Assim:\n\\[F(x)=\\int_{-\\infty}^{a}\\frac{1}{2b}e^{-(a-t)/b}\\,dt + \\int_{a}^{x}\\frac{1}{2b}e^{-(t-a)/b}\\,dt\\]\nA primeira integral resulta em:\n\\[\\scriptsize\\int_{-\\infty}^{a} \\frac{1}{2b}\\, e^{-(a-t)/b}\\,dt = \\frac{e^{-a/b}}{2b}\\int_{-\\infty}^{a} e^{t/b}\\,dt = \\frac{e^{-a/b}}{2b}\\,\\Big[b\\,e^{t/b}\\Big]_{-\\infty}^{a} = \\frac{e^{-a/b}}{2b}\\,\\Big(b\\,e^{a/b}-0\\Big) = \\frac{1}{2}\\,e^{-a/b}e^{a/b} = \\frac{1}{2}\\]"
+    "text": "Distribuição Exponencial Dupla\nCaso 2: \\(x \\ge a\\)\nAqui \\(|t-a|=t-a\\). Assim:\n\\[F(x)=\\int_{-\\infty}^{a}\\frac{1}{2b}e^{-(a-t)/b}\\,dt + \\int_{a}^{x}\\frac{1}{2b}e^{-(t-a)/b}\\,dt\\]\nA primeira integral resulta em:\n\\[\n\\begin{aligned}\n\\int_{-\\infty}^{a} \\frac{1}{2b}\\, e^{-(a-t)/b}\\,dt\n&= \\frac{e^{-a/b}}{2b}\\int_{-\\infty}^{a} e^{t/b}\\,dt = \\frac{e^{-a/b}}{2b}\\,\\Big[b\\,e^{t/b}\\Big]_{-\\infty}^{a} \\\\[6pt]\n&= \\frac{e^{-a/b}}{2b}\\,\\Big(b\\,e^{a/b}-0\\Big) = \\frac{1}{2}\\,e^{-a/b}e^{a/b} = \\frac{1}{2}\n\\end{aligned}\n\\]"
   },
   {
     "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-11",
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-11",
     "title": "Outras Distribuições Contínuas",
     "section": "Distribuição Exponencial Dupla",
-    "text": "Distribuição Exponencial Dupla\nPara a segunda integral, fazemos a substituição \\(u = t - a  \\Rightarrow  du = dt\\). Quando \\(t = a \\Rightarrow u = 0\\) e quando \\(t = x \\Rightarrow u = x - a\\).\n\\[\n\\begin{eqnarray}\n\\int_{a}^{x}\\dfrac{1}{2b}e^{-(t-a)/b}\\,dt &=& \\dfrac{1}{2b}\\int_{0}^{x-a} e^{-u/b}\\,du = \\dfrac{1}{2b}\\Big[-b\\,e^{-u/b}\\Big]_{0}^{x-a}\\\\\n&=& \\dfrac{1}{2b}\\Big[-b\\,e^{-(x-a)/b} + b\\Big] = \\dfrac{1}{2b}\\cdot b(1 - e^{-(x-a)/b}) \\\\&=& \\dfrac{1}{2}\\left(1 - e^{-\\dfrac{x-a}{b}}\\right)\n\\end{eqnarray}\n\\]"
+    "text": "Distribuição Exponencial Dupla\nPara a segunda integral, fazemos a substituição \\(u = t - a  \\Rightarrow  du = dt\\). Quando \\(t = a \\Rightarrow u = 0\\) e quando \\(t = x \\Rightarrow u = x - a\\).\n\\[\n\\begin{aligned}\n\\int_{a}^{x}\\frac{1}{2b}\\,e^{-(t-a)/b}\\,dt\n&= \\frac{1}{2b}\\int_{0}^{\\,x-a} e^{-u/b}\\,du = \\frac{1}{2b}\\left[-b\\,e^{-u/b}\\right]_{0}^{\\,x-a} \\\\[6pt]\n&= \\frac{1}{2b}\\left[-b\\,e^{-(x-a)/b} + b\\right] = \\frac{1}{2b}\\cdot b\\,(1 - e^{-(x-a)/b}) \\\\[6pt]\n&= \\frac{1}{2}\\left(1 - e^{-\\frac{x-a}{b}}\\right)\n\\end{aligned}\n\\]"
   },
   {
     "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-12",
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-12",
     "title": "Outras Distribuições Contínuas",
     "section": "Distribuição Exponencial Dupla",
-    "text": "Distribuição Exponencial Dupla\nSomando:\n\\[ F(x)=\\frac{1}{2}+\\frac{1}{2}(1-e^{-(x-a)/b}) =1 - \\dfrac{1}{2} e^{-\\Big(\\dfrac{x-a}{b}\\Big)}, \\qquad x\\ge a\\] Logo, se \\(X \\sim Laplace(a,b)\\), então\n\\[\nF(x)=\n\\begin{cases}\n\\dfrac{1}{2} e^{\\Big({\\dfrac{x-a}{b}}\\Big)}, & x&lt;a, \\\\[8pt]\n1 - \\dfrac{1}{2} e^{-\\Big(\\dfrac{x-a}{b}\\Big)}, & x\\ge a.\n\\end{cases}\n\\]"
+    "text": "Distribuição Exponencial Dupla\nSomando:\n\\[ F(x)=\\frac{1}{2}+\\frac{1}{2}(1-e^{-(x-a)/b}) =1 - \\dfrac{1}{2} e^{-\\Big(\\dfrac{x-a}{b}\\Big)}, \\qquad x\\ge a\\] Logo, se \\(X \\sim Laplace(a,b)\\), então\n\\[\nF(x)=\n\\begin{cases}\n\\dfrac{1}{2} e^{\\Big({\\dfrac{x-a}{b}}\\Big)}, & x&lt;a, \\\\[8pt]\n1 - \\dfrac{1}{2} e^{-\\Big(\\dfrac{x-a}{b}\\Big)}, & x\\ge a\n\\end{cases}\n\\]"
   },
   {
     "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-13",
@@ -763,7 +763,7 @@
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-de-valores-extremos-3",
     "title": "Outras Distribuições Contínuas",
     "section": "Distribuição de Valores Extremos",
-    "text": "Distribuição de Valores Extremos\nA função densidade é:\n\\[\\small f(x \\mid \\mu, \\sigma)\n= \\frac{1}{\\sigma}\n\\exp\\!\\left[\n-\\left(\n\\frac{x - \\mu}{\\sigma}\n\\right)\n- \\exp\\!\\left(\n-\\frac{x - \\mu}{\\sigma}\n\\right)\n\\right],\n\\qquad\n-\\infty &lt; x &lt; \\infty,\\;\n-\\infty &lt; \\mu &lt; \\infty,\\;\n\\sigma &gt; 0\\]\nÉ possível demonstrar que,\n\\[E(X) = \\mu + \\gamma\\sigma,\\]\nonde \\(\\gamma = 0.57721566\\) é conhecida como constante de Euler–Mascheroni.\ne,\n\\[Var(X) = \\dfrac{\\pi^2}{6}\\sigma^2\\]"
+    "text": "Distribuição de Valores Extremos\nA função densidade é:\n\\[\\small f(x \\mid \\mu, \\sigma)\n= \\frac{1}{\\sigma}\n\\exp\\!\\left[\n-\\left(\n\\frac{x - \\mu}{\\sigma}\n\\right)\n- \\exp\\!\\left(\n-\\frac{x - \\mu}{\\sigma}\n\\right)\n\\right],\nx \\in \\mathbb{R},\\;\n\\mu \\in \\mathbb{R},\\;\n\\sigma &gt; 0\\]\nÉ possível demonstrar que,\n\\[E(X) = \\mu + \\gamma\\sigma,\\]\nonde \\(\\gamma = 0.57721566\\) é conhecida como constante de Euler–Mascheroni.\ne,\n\\[Var(X) = \\dfrac{\\pi^2}{6}\\sigma^2\\]"
   },
   {
     "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-de-valores-extremos-4",
@@ -791,7 +791,7 @@
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-de-valores-extremos-7",
     "title": "Outras Distribuições Contínuas",
     "section": "Distribuição de Valores Extremos",
-    "text": "Distribuição de Valores Extremos\nA função de distribuição acumulada é:\n\\[F(x) = 1 - \\exp\\!\\left[-\\,e^{\\Big(\\dfrac{x-\\mu}{\\sigma}\\Big)}\\right], \\qquad x \\in \\mathbb{R}\\] A função densidade correspondente é:\n\\[\n\\small\nf(x|\\mu, \\sigma) = \\dfrac{1}{\\sigma}\\exp\\!\\left[\\Big(\\dfrac{x - \\mu}{\\sigma}\\Big)- \\exp\\!\\left(\\dfrac{x - \\mu}{\\sigma}\\right)\\right],\n\\qquad\n-\\infty &lt; x &lt; \\infty,\\;\n-\\infty &lt; \\mu &lt; \\infty,\\;\n\\sigma &gt; 0\n\\]"
+    "text": "Distribuição de Valores Extremos\nA função de distribuição acumulada é:\n\\[F(x) = 1 - \\exp\\!\\left[-\\,e^{\\Big(\\dfrac{x-\\mu}{\\sigma}\\Big)}\\right], \\qquad x \\in \\mathbb{R}\\] A função densidade correspondente é:\n\\[\n\\small\nf(x|\\mu, \\sigma) = \\dfrac{1}{\\sigma}\\exp\\!\\left[\\Big(\\dfrac{x - \\mu}{\\sigma}\\Big)- \\exp\\!\\left(\\dfrac{x - \\mu}{\\sigma}\\right)\\right],\nx \\in \\mathbb{R},\\;\n\\mu \\in \\mathbb{R},\\;\n\\sigma &gt; 0\n\\]"
   },
   {
     "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-de-valores-extremos-8",
@@ -1896,21 +1896,21 @@
     "href": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-discreto-1",
     "title": "Transformação de Variáveis Unidimensionais",
     "section": "Função de Variável Aleatória: Caso Discreto",
-    "text": "Função de Variável Aleatória: Caso Discreto\nExemplo 01: Suponhamos que a distribuição de probabilidades da variável aleatória \\(X\\) é dada pela tabela abaixo:\n\n\n\n\n\\(x\\)\n\n\n-2\n\n\n-1\n\n\n0\n\n\n1\n\n\n2\n\n\n3\n\n\n\n\n\n\n\\(p_X(x)\\)\n\n\n0,1\n\n\n0,2\n\n\n0,2\n\n\n0,3\n\n\n0,1\n\n\n0,1\n\n\n\n\nSeja \\(Y = 3X+1\\). Encontre a distribuição da variável aleatória \\(Y\\).\n\nSolução:\nComo \\(Y = 3X+1\\),\n\n\n\n\n\\(y = 3x + 1\\)\n\n\n-5\n\n\n-2\n\n\n1\n\n\n4\n\n\n7\n\n\n10\n\n\n\n\n\n\n\\(p_Y(y)\\)\n\n\n0,1\n\n\n0,2\n\n\n0,2\n\n\n0,3\n\n\n0,1\n\n\n0,1"
+    "text": "Função de Variável Aleatória: Caso Discreto\nExemplo 01: Suponhamos que a distribuição de probabilidades da variável aleatória \\(X\\) é dada pela tabela abaixo:\n\n\n\n\n\\(x\\)\n-2\n-1\n0\n1\n2\n3\n\n\n\n\n\\(p_X(x)\\)\n0,1\n0,2\n0,2\n0,3\n0,1\n0,1\n\n\n\n\nSeja \\(Y = 3X+1\\). Encontre a distribuição da variável aleatória \\(Y\\).\n\nSolução:\nComo \\(Y = 3X+1\\),\n\n\n\n\n\\(y = 3x + 1\\)\n-5\n-2\n1\n4\n7\n10\n\n\n\n\n\\(p_Y(y)\\)\n0,1\n0,2\n0,2\n0,3\n0,1\n0,1"
   },
   {
     "objectID": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-discreto-2",
     "href": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-discreto-2",
     "title": "Transformação de Variáveis Unidimensionais",
     "section": "Função de Variável Aleatória: Caso Discreto",
-    "text": "Função de Variável Aleatória: Caso Discreto\nExemplo 02: Considere a mesma distribuição de probabilidades da variável aleatória \\(X\\), dada pela tabela abaixo:\n\n\n\n\n\\(x\\)\n\n\n-2\n\n\n-1\n\n\n0\n\n\n1\n\n\n2\n\n\n3\n\n\n\n\n\n\n\\(p_X(x)\\)\n\n\n0,1\n\n\n0,2\n\n\n0,2\n\n\n0,3\n\n\n0,1\n\n\n0,1\n\n\n\n\nContudo, vamos agora definir a variável aleatória \\(Y = X^2\\). Qual a distribuição de probabilidades de \\(Y\\)?\n\nSolução:\nTemos que \\(S_X = \\{-2, -1, 0, 1, 2, 3\\}\\). Como \\(Y = X^2\\), temos que o suporte de \\(Y\\) é dado por \\(S_Y = \\{0, 1, 4, 9\\}\\), de forma que a distribuição da variável \\(Y\\) será dada por:"
+    "text": "Função de Variável Aleatória: Caso Discreto\nExemplo 02: Considere a mesma distribuição de probabilidades da variável aleatória \\(X\\), dada pela tabela abaixo:\n\n\n\n\n\\(x\\)\n-2\n-1\n0\n1\n2\n3\n\n\n\n\n\\(p_X(x)\\)\n0,1\n0,2\n0,2\n0,3\n0,1\n0,1\n\n\n\n\nContudo, vamos agora definir a variável aleatória \\(Y = X^2\\). Qual a distribuição de probabilidades de \\(Y\\)?\n\nSolução:\nTemos que \\(S_X = \\{-2, -1, 0, 1, 2, 3\\}\\). Como \\(Y = X^2\\), temos que o suporte de \\(Y\\) é dado por \\(S_Y = \\{0, 1, 4, 9\\}\\), de forma que a distribuição da variável \\(Y\\) será dada por:"
   },
   {
     "objectID": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-discreto-3",
     "href": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-discreto-3",
     "title": "Transformação de Variáveis Unidimensionais",
     "section": "Função de Variável Aleatória: Caso Discreto",
-    "text": "Função de Variável Aleatória: Caso Discreto\n\\[\n\\begin{aligned}\nP(Y = 0) &= P(X = 0) = 0{,}2 \\\\[6pt]\nP(Y = 1) &= P(X = -1) + P(X = 1) = 0{,}5 \\\\[6pt]\nP(Y = 4) &= P(X = -2) + P(X = 2) = 0{,}2 \\\\[6pt]\nP(Y = 9) &= P(X = 3) = 0{,}1\n\\end{aligned}\n\\]\nLogo,\n\n\n\n\n\\(y = x^2\\)\n\n\n0\n\n\n1\n\n\n4\n\n\n9\n\n\n\n\n\n\n\\(p_Y(y)\\)\n\n\n0,2\n\n\n0,5\n\n\n0,2\n\n\n0,1"
+    "text": "Função de Variável Aleatória: Caso Discreto\n\\[\n\\begin{aligned}\nP(Y = 0) &= P(X = 0) = 0{,}2 \\\\[6pt]\nP(Y = 1) &= P(X = -1) + P(X = 1) = 0{,}5 \\\\[6pt]\nP(Y = 4) &= P(X = -2) + P(X = 2) = 0{,}2 \\\\[6pt]\nP(Y = 9) &= P(X = 3) = 0{,}1\n\\end{aligned}\n\\]\nLogo,\n\n\n\n\n\\(y = x^{2}\\)\n0\n1\n4\n9\n\n\n\n\n\\(p_Y(y)\\)\n0,2\n0,5\n0,2\n0,1"
   },
   {
     "objectID": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-discreto-4",
@@ -2162,7 +2162,7 @@
     "href": "aulas/transformacoes/transformacoes.html#a-transformação-integral-2",
     "title": "Transformação de Variáveis Unidimensionais",
     "section": "A Transformação Integral",
-    "text": "A Transformação Integral\nDemonstração: Considere \\(X\\) uma variável aleatória absolutamente contínua com função de distribuição acumulada \\(F_X\\), então\n\\[\nF_U(u) = P(U \\le u)= P(F_X(X) \\le u) = P(X \\le F_X^{-1}(u)) = F_X(F_X^{-1}(u)) = u\n\\] Por outro lado, se \\(U \\sim U(0,1)\\), então\n\\[\n{\\small  \nP(X \\le x) = P(F^{-1}_X(U) \\le x) = P(U \\le F_x(x)) = F_U(F_X(x)) = F_X(x), \\qquad \\text{pois } U \\text{ é uniforme}\n}\n\\] Assim \\(X\\) possui função de distribuição \\(F_X\\)."
+    "text": "A Transformação Integral\nDemonstração: Considere \\(X\\) uma variável aleatória absolutamente contínua com função de distribuição acumulada \\(F_X\\), então\n\\[\nF_U(u) = P(U \\le u)= P(F_X(X) \\le u) = P(X \\le F_X^{-1}(u)) = F_X(F_X^{-1}(u)) = u\n\\] Por outro lado, se \\(U \\sim U(0,1)\\), então\n\\[\n{\\small  \nP(X \\le x) = P(F^{-1}_X(U) \\le x) = P(U \\le F_x(x)) = F_U(F_X(x)) = F_X(x), \\,\\, \\text{pois } U \\text{ é uniforme}\n}\n\\] Assim \\(X\\) possui função de distribuição \\(F_X\\)."
   },
   {
     "objectID": "aulas/transformacoes/transformacoes.html#a-transformação-integral-3",
@@ -2219,5 +2219,26 @@
     "title": "Probabilidade II",
     "section": "Avaliações",
     "text": "Avaliações\n\n\n\n\n\n\nCritérios de Avaliação\n\n\n\nA nota final do semestre será computada da seguinte forma:\n\nDuas provas valendo 70 pontos, distribuídos da seguinte forma:\n\n\\(1^{\\text{a}}\\) Prova: 35 pontos — a ser realizada em 29/01/26\n\\(2^{\\text{a}}\\) Prova: 35 pontos — a ser realizada em 26/02/26\n\nListas de exercícios a serem entregues ao longo do semestre no valor de 30 pontos.\nExame Final: 05/03/26"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#função-gamma-11",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#função-gamma-11",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Função Gamma",
+    "text": "Função Gamma"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-beta-13",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-beta-13",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Beta",
+    "text": "Distribuição Beta\nExemplo 04: O teor de gordura no leite de um rebanho bovino é uma variável com distribuição Beta com parâmetros \\(a = 2\\) e \\(b = 5\\).\n\nQual o teor médio de gordura no leite? R: \\(0,2857\\)\nQual o percentual de amostras que terá teor de gordura menor que \\(10\\%\\)? R: \\(0,1143\\)"
+  },
+  {
+    "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-24",
+    "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-exponencial-dupla-24",
+    "title": "Outras Distribuições Contínuas",
+    "section": "Distribuição Exponencial Dupla",
+    "text": "Distribuição Exponencial Dupla\n\nRuído Laplaciano (a=0, b=10) e comparação com Normal(0,10)"
   }
 ]

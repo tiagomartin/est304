@@ -263,33 +263,14 @@ e \(p_Y(y) = 0\) para \(y \notin S_Y\).
 \textbf{Exemplo 01:} Suponhamos que a distribuição de probabilidades da
 variável aleatória \(X\) é dada pela tabela abaixo:
 
-\(x\)
-
--2
-
--1
-
-0
-
-1
-
-2
-
-3
-
-\(p_X(x)\)
-
-0,1
-
-0,2
-
-0,2
-
-0,3
-
-0,1
-
-0,1
+\begin{longtable}[]{@{}lllllll@{}}
+\toprule\noalign{}
+\(x\) & -2 & -1 & 0 & 1 & 2 & 3 \\
+\midrule\noalign{}
+\endhead
+\(p_X(x)\) & 0,1 & 0,2 & 0,2 & 0,3 & 0,1 & 0,1 \\
+\bottomrule\noalign{}
+\end{longtable}
 
 Seja \(Y = 3X+1\). Encontre a distribuição da variável aleatória \(Y\).
 
@@ -299,33 +280,14 @@ Seja \(Y = 3X+1\). Encontre a distribuição da variável aleatória \(Y\).
 
 Como \(Y = 3X+1\),
 
-\(y = 3x + 1\)
-
--5
-
--2
-
-1
-
-4
-
-7
-
-10
-
-\(p_Y(y)\)
-
-0,1
-
-0,2
-
-0,2
-
-0,3
-
-0,1
-
-0,1
+\begin{longtable}[]{@{}lllllll@{}}
+\toprule\noalign{}
+\(y = 3x + 1\) & -5 & -2 & 1 & 4 & 7 & 10 \\
+\midrule\noalign{}
+\endhead
+\(p_Y(y)\) & 0,1 & 0,2 & 0,2 & 0,3 & 0,1 & 0,1 \\
+\bottomrule\noalign{}
+\end{longtable}
 \end{frame}
 
 \begin{frame}{Função de Variável Aleatória: Caso Discreto}
@@ -333,33 +295,14 @@ Como \(Y = 3X+1\),
 \textbf{Exemplo 02:} Considere a mesma distribuição de probabilidades da
 variável aleatória \(X\), dada pela tabela abaixo:
 
-\(x\)
-
--2
-
--1
-
-0
-
-1
-
-2
-
-3
-
-\(p_X(x)\)
-
-0,1
-
-0,2
-
-0,2
-
-0,3
-
-0,1
-
-0,1
+\begin{longtable}[]{@{}lllllll@{}}
+\toprule\noalign{}
+\(x\) & -2 & -1 & 0 & 1 & 2 & 3 \\
+\midrule\noalign{}
+\endhead
+\(p_X(x)\) & 0,1 & 0,2 & 0,2 & 0,3 & 0,1 & 0,1 \\
+\bottomrule\noalign{}
+\end{longtable}
 
 Contudo, vamos agora definir a variável aleatória \(Y = X^2\). Qual a
 distribuição de probabilidades de \(Y\)?
@@ -386,25 +329,14 @@ P(Y = 9) &= P(X = 3) = 0{,}1
 
 Logo,
 
-\(y = x^2\)
-
-0
-
-1
-
-4
-
-9
-
-\(p_Y(y)\)
-
-0,2
-
-0,5
-
-0,2
-
-0,1
+\begin{longtable}[]{@{}lllll@{}}
+\toprule\noalign{}
+\(y = x^{2}\) & 0 & 1 & 4 & 9 \\
+\midrule\noalign{}
+\endhead
+\(p_Y(y)\) & 0,2 & 0,5 & 0,2 & 0,1 \\
+\bottomrule\noalign{}
+\end{longtable}
 \end{frame}
 
 \begin{frame}{Função de Variável Aleatória: Caso Discreto}
@@ -690,7 +622,9 @@ equivalência em relação aos eventos pertencentes ao suporte de \(X\),
 \(\{Y \le y\} = \{-\sqrt{y} \le X \le \sqrt{y}\}\), conforme ilustrado
 abaixo
 
-\pandocbounded{\includegraphics[keepaspectratio]{transformacoes_files/figure-beamer/unnamed-chunk-1-1.pdf}}
+\begin{center}
+\includegraphics[width=0.7\linewidth,height=\textheight,keepaspectratio]{transformacoes_files/figure-beamer/unnamed-chunk-1-1.pdf}
+\end{center}
 \end{frame}
 
 \begin{frame}{Função de Variável Aleatória: Caso Contínuo}
@@ -1071,7 +1005,7 @@ F_U(u) = P(U \le u)= P(F_X(X) \le u) = P(X \le F_X^{-1}(u)) = F_X(F_X^{-1}(u)) =
 
 \[
 {\small  
-P(X \le x) = P(F^{-1}_X(U) \le x) = P(U \le F_x(x)) = F_U(F_X(x)) = F_X(x), \qquad \text{pois } U \text{ é uniforme} 
+P(X \le x) = P(F^{-1}_X(U) \le x) = P(U \le F_x(x)) = F_U(F_X(x)) = F_X(x), \,\, \text{pois } U \text{ é uniforme} 
 }
 \] Assim \(X\) possui função de distribuição \(F_X\).
 \end{frame}

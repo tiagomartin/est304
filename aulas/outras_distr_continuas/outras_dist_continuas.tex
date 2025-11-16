@@ -1,0 +1,2621 @@
+% Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  ignorenonframetext,
+  aspectratio=169,
+]{beamer}
+\newif\ifbibliography
+\usepackage{pgfpages}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamercolor{caption name}{fg=normal text.fg}
+\beamertemplatenavigationsymbolsempty
+% remove section numbering
+\setbeamertemplate{part page}{
+  \centering
+  \begin{beamercolorbox}[sep=16pt,center]{part title}
+    \usebeamerfont{part title}\insertpart\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{section page}{
+  \centering
+  \begin{beamercolorbox}[sep=12pt,center]{section title}
+    \usebeamerfont{section title}\insertsection\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{subsection page}{
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center]{subsection title}
+    \usebeamerfont{subsection title}\insertsubsection\par
+  \end{beamercolorbox}
+}
+% Prevent slide breaks in the middle of a paragraph
+\widowpenalties 1 10000
+\raggedbottom
+\AtBeginPart{
+  \frame{\partpage}
+}
+\AtBeginSection{
+  \ifbibliography
+  \else
+    \frame{\sectionpage}
+  \fi
+}
+\AtBeginSubsection{
+  \frame{\subsectionpage}
+}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+
+
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+\usepackage{caption}
+% Make caption package work with longtable
+\makeatletter
+\def\fnum@table{\tablename~\thetable}
+\makeatother
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+
+
+
+
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+ 
+
+
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Outras Distribuições Contínuas},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+
+
+\title{Outras Distribuições Contínuas}
+\author{}
+\date{}
+
+\begin{document}
+\frame{\titlepage}
+
+
+\begin{frame}{Função Gamma}
+\phantomsection\label{funuxe7uxe3o-gamma}
+A \emph{função Gamma} é uma das funções especiais mais importantes em
+probabilidade e estatística. Ela aparece naturalmente em várias
+distribuições contínuas fundamentais:
+
+\begin{itemize}
+\tightlist
+\item
+  Distribuição Gamma
+\end{itemize}
+
+\[f(x |\alpha, \lambda) = \dfrac{\lambda e^{-\lambda x}(\lambda x)^{\alpha-1}}{\Gamma(\alpha)}\]
+
+\begin{itemize}
+\tightlist
+\item
+  Distribuição Qui-quadrado
+\end{itemize}
+
+\[f(x | n) = \frac{1}{2^{n/2} \Gamma(n/2)} x^{\frac{n}{2} -1} e^{- \frac{x}{2}}\]
+\end{frame}
+
+\begin{frame}{Função Gamma}
+\phantomsection\label{funuxe7uxe3o-gamma-1}
+\begin{itemize}
+\tightlist
+\item
+  Distribuição Beta
+\end{itemize}
+
+\[f(x |\alpha, \beta) = \frac{\Gamma(\alpha+\beta)}{\Gamma(\alpha)\Gamma(\beta)}x^{\alpha-1} (1-x)^{\beta-1} \]
+
+\begin{itemize}
+\tightlist
+\item
+  Distribuição t de Student
+\end{itemize}
+
+\[ f(x |\nu) = \frac{\Gamma [(\nu+1)/2]}{\Gamma (\nu/2)} \frac{1}{\sqrt{\nu\pi}} \left( 1 + \frac{x^2}{\nu} \right)^{-(\nu+1)/2} \]
+\end{frame}
+
+\begin{frame}{Função Gamma}
+\phantomsection\label{funuxe7uxe3o-gamma-2}
+\begin{itemize}
+\tightlist
+\item
+  Distribuição F de Snedecor
+\end{itemize}
+
+\[ f(x |\nu_1, \nu_2) = \frac{\Gamma [(\nu_1+\nu_2)/2] }{\Gamma \left( \frac{\nu_1}{2} \right) \Gamma \left( \frac{\nu_2}{2} \right) } \left( \frac{\nu_1}{\nu_2} \right)^{\nu_1/2} \frac{x^{(\nu_1-2)/2}}{[1+(\nu_1/\nu_2)x]^{(\nu_1+\nu_2)/2}} \]
+\end{frame}
+
+\begin{frame}{Função Gamma}
+\phantomsection\label{funuxe7uxe3o-gamma-3}
+Definimos a \emph{função gamma} como
+
+\[\Gamma(\alpha) = \int_{0}^{\infty} e^{-y} \, y^{\alpha-1} \, dy, \,\,\,\,\,\,\,\ \alpha > 0\]
+
+Vale destacar os seguintes resultados:
+
+\begin{enumerate}
+[i)]
+\tightlist
+\item
+  \(\Gamma(\alpha) = (\alpha - 1)\Gamma(\alpha - 1)\);
+\item
+  \(\Gamma(n) = (n-1)!\), \(n\) inteiro positivo;
+\item
+  \(\Gamma(1/2) = \sqrt{(\pi)}\)
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Função Gamma}
+\phantomsection\label{funuxe7uxe3o-gamma-4}
+\begin{block}{Demonstração}
+\phantomsection\label{demonstrauxe7uxe3o}
+\begin{enumerate}
+[i)]
+\tightlist
+\item
+  Resolvendo a integral por partes, fazendo \(u = y^{\alpha - 1}\) e
+  \(dv = e^{-y} dy\), temos
+\end{enumerate}
+
+\[
+\begin{aligned}
+\Gamma(\alpha)
+ &= -\, e^{-y}\,y^{\alpha-1}\Big|_{0}^{\infty}
+    + \int_{0}^{\infty} e^{-y}(\alpha-1)\,y^{\alpha-2}\,dy \\[6pt]
+ &= (\alpha - 1)\int_{0}^{\infty} e^{-y} y^{\alpha-2}\,dy \\[6pt]
+ &= (\alpha - 1)\,\Gamma(\alpha - 1).
+\end{aligned}
+\]
+\end{block}
+\end{frame}
+
+\begin{frame}{Função Gamma}
+\phantomsection\label{funuxe7uxe3o-gamma-5}
+\begin{enumerate}
+[i)]
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Para valores inteiros positivos de \(\alpha\), por exemplo
+  \(\alpha = n\), temos
+\end{enumerate}
+
+\[
+\begin{aligned}
+\Gamma(n)
+ &= (n-1)\,\Gamma(n-1) \\[6pt]
+ &= (n-1)(n-2)\,\Gamma(n-2) \\[6pt]
+ &= \cdots \\[6pt]
+ &= (n-1)(n-2)\cdots 3\cdot 2\cdot \Gamma(1).
+\end{aligned}
+\]
+
+Como
+
+\[
+\Gamma(1) = \int_{0}^{\infty} e^{-y} \, y^{1-1} \, dy = \int_{0}^{\infty} e^{-y} dy = \lim_{t \to +\infty} \int_{0}^{t} e^{-t} dt = \lim_{t \to +\infty} (-e^{-t} + e^0) = 1
+\]
+
+temos que \(\Gamma(n) = (n-1)!\).
+\end{frame}
+
+\begin{frame}{Função Gamma}
+\phantomsection\label{funuxe7uxe3o-gamma-6}
+\begin{enumerate}
+[i)]
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Uma forma alternativa de definir a função gamma, às vezes útil, é dada
+  por:
+\end{enumerate}
+
+\[ \Gamma(\alpha) = 2\int_0^\infty e^{-y^2} y^{2\alpha-1} dy\] Temos que
+\(\Gamma(\alpha) = \int_{0}^{\infty} e^{-y} \, y^{\alpha-1} \, dy\).
+Fazendo \(y = u^2\), temos que \(dy = 2udu\). Assim,
+
+\[
+\Gamma(\alpha) = \int_{0}^{\infty} e^{-y} \, y^{\alpha-1} \, dy = \int_{0}^{\infty} e^{-u^2} \, u^{2\alpha-2} \, 2u\,du = 2\int_{0}^{\infty} e^{-u^2}u^{2\alpha-1}du
+\]
+
+Se provarmos que
+\(\left[ \Gamma\left( \frac{1}{2}\right) \right]^2 = \pi\), então segue
+que \(\Gamma\left( \frac{1}{2}\right) = \sqrt{\pi}\).
+\end{frame}
+
+\begin{frame}{Função Gamma}
+\phantomsection\label{funuxe7uxe3o-gamma-7}
+Partindo de:
+
+\[ \left[ \Gamma(\alpha) \right]^2 = 2\int_0^\infty x^{2\alpha-1}e^{-x^2} dx\quad 2\int_0^\infty y^{2\alpha-1}e^{-y^2} dy\]
+
+o que resulta,
+
+\[ \left[ \Gamma(\alpha) \right]^2 = 4\int_0^\infty\int_0^\infty x^{2\alpha-1}  y^{2\alpha-1} e^{-(x^2+y^2)} dx dy\]
+\end{frame}
+
+\begin{frame}{Função Gamma}
+\phantomsection\label{funuxe7uxe3o-gamma-8}
+Tomando \(\alpha = \dfrac{1}{2}\), temos \(2 \alpha - 1 = 0\) e assim,
+
+\[
+\displaystyle \left[ \Gamma \left({\frac {1}{2}}\right) \right]^2 = 4\int_0^\infty\int_0^\infty  e^{-(x^2+y^2)} dx dy
+\]
+
+\pause
+
+Para resolvermos esta integral dupla, podemos recorrer à técnica de
+coordenadas polares, na qual pontos \((x,y)\) são referenciados no
+sitema de coordenadas \((r,\theta)\), sendo \emph{r} não negativo e
+\(\theta\) variando de 0 a \(2\pi\).
+
+\pause
+
+Assim, tomamos \(x=r \cos\theta\) e \(y=r \text{ sen}\,\,\theta\), de
+forma que,
+
+\[x^2+y^2 = r^2 \cos^2\theta +r^2 \text{ sen}^2\theta = r^2\]
+\end{frame}
+
+\begin{frame}{Função Gamma}
+\phantomsection\label{funuxe7uxe3o-gamma-9}
+A unidade infinitesimal de área \(dx\text{ }dy\) corresponde à unidade
+infinitesimal de área \(r\text{ }dr\text{ }d\theta\) no sistema de
+coordenadas polares.
+
+\pause
+
+Além disso, integrar com tanto \emph{x} como \emph{y} variando de zero a
+infinito corresponde a integrar no primeiro quadrante, que, no sistema
+de coordenadas polares, consiste em integrar com \(\theta\) variando de
+0 a \(\pi /2\) e \emph{r} variando de 0 a infinito.
+\end{frame}
+
+\begin{frame}{Função Gamma}
+\phantomsection\label{funuxe7uxe3o-gamma-10}
+Assim,
+
+\[
+\begin{aligned}
+\left[\Gamma\!\left(\frac12\right)\right]^2
+ &= 4 \int_{0}^{\pi/2} \int_{0}^{\infty} e^{-r^{2}}\, r\, dr\, d\theta = 4 \int_{0}^{\pi/2} d\theta \int_{0}^{\infty} e^{-r^{2}}\, r\, dr \\[6pt]
+ &= 4 \int_{0}^{\pi/2} d\theta
+    \left[ -\frac{e^{-r^{2}}}{2} \right]_{0}^{\infty} = 4 \int_{0}^{\pi/2} \left(\frac12\right)\, d\theta \\[6pt]
+ &= 2 \int_{0}^{\pi/2} 1\, d\theta = 2\,\theta\Big|_{0}^{\pi/2} = \pi
+\end{aligned}
+\]
+\end{frame}
+
+\begin{frame}{Função Gamma}
+\phantomsection\label{funuxe7uxe3o-gamma-11}
+\pandocbounded{\includegraphics[keepaspectratio]{outras_dist_continuas_files/figure-beamer/unnamed-chunk-1-1.pdf}}
+\end{frame}
+
+\begin{frame}{Distribuição Gamma}
+\phantomsection\label{distribuiuxe7uxe3o-gamma}
+Dizemos que \(X\) segue uma distribuição Gamma com parâmetros
+\(\alpha > 0\) e \(\lambda > 0\) se sua função densidade é dada por
+
+\[
+f(x | \alpha, \lambda)=
+\begin{cases}
+\dfrac{\lambda e^{-\lambda x}(\lambda x)^{\alpha-1}}{\Gamma(\alpha)}, & x\ge0\\[6pt]
+0, & x<0
+\end{cases}
+\]
+
+Notação: \(X \sim Gamma(\alpha, \lambda)\). Nessa parametrização:
+
+\begin{itemize}
+\item
+  \(\alpha\) = parâmetro de forma
+\item
+  \(\dfrac{1}{\lambda}\) = parâmetro de escala
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Distribuição Gamma}
+\phantomsection\label{distribuiuxe7uxe3o-gamma-1}
+Se \(X \sim Gamma(\alpha, \lambda)\), então
+
+\[
+\begin{aligned}
+E[X]
+ &= \frac{1}{\Gamma(\alpha)}
+    \int_{0}^{\infty} x\,\lambda\,e^{-\lambda x}(\lambda x)^{\alpha-1}\,dx \\[6pt]
+ &= \frac{1}{\Gamma(\alpha)}
+    \int_{0}^{\infty} e^{-\lambda x}(\lambda x)^{\alpha}\,dx \\[6pt]
+ &= \frac{1}{\lambda\,\Gamma(\alpha)}
+    \int_{0}^{\infty} e^{-u}\,u^{\alpha}\,du \\[6pt]
+ &= \frac{\Gamma(\alpha+1)}{\lambda\,\Gamma(\alpha)}
+  = \frac{\alpha\,\Gamma(\alpha)}{\lambda\,\Gamma(\alpha)}
+  = \frac{\alpha}{\lambda}.
+\end{aligned}
+\]
+\end{frame}
+
+\begin{frame}{Distribuição Gamma}
+\phantomsection\label{distribuiuxe7uxe3o-gamma-2}
+\[
+\begin{aligned}
+E[X^{2}]
+ &= \frac{1}{\Gamma(\alpha)}
+    \int_{0}^{\infty} x^{2}\,\lambda\,e^{-\lambda x}(\lambda x)^{\alpha-1}\,dx = \frac{1}{\Gamma(\alpha)}
+    \int_{0}^{\infty} e^{-\lambda x}\,\lambda^{\alpha}\,x^{\alpha+1}\,dx \\[6pt]
+ &= \frac{\lambda^{\alpha}}{\Gamma(\alpha)}
+    \int_{0}^{\infty} e^{-\lambda x}\,x^{\alpha+1}\,dx = \frac{\lambda^{\alpha}}{\Gamma(\alpha)}
+    \int_{0}^{\infty} e^{-u}\left(\frac{u}{\lambda}\right)^{\alpha+1}
+    \left(\frac{1}{\lambda}\right)\,du \\[6pt]
+ &= \frac{\lambda^{\alpha}}{\lambda^{\alpha+2}\,\Gamma(\alpha)}
+    \int_{0}^{\infty} e^{-u}\,u^{\alpha+1}\,du = \frac{\lambda^{\alpha}\,\Gamma(\alpha+2)}
+        {\lambda^{\alpha+2}\,\Gamma(\alpha)} \\[6pt]
+ &= \frac{(\alpha+1)\Gamma(\alpha+1)}
+        {\lambda^{2}\,\Gamma(\alpha)} = \frac{(\alpha+1)\alpha\,\Gamma(\alpha)}{\lambda^{2}\,\Gamma(\alpha)}= \frac{\alpha(\alpha+1)}{\lambda^{2}}
+\end{aligned}
+\]
+\end{frame}
+
+\begin{frame}{Distribuição Gamma}
+\phantomsection\label{distribuiuxe7uxe3o-gamma-3}
+De forma que,
+
+\[
+\begin{aligned}
+\operatorname{Var}(X)
+ &= E(X^{2}) - [E(X)]^{2} \\[6pt]
+ &= \frac{\alpha(\alpha+1)}{\lambda^{2}}
+    - \left(\frac{\alpha}{\lambda}\right)^{2} \\[6pt]
+ &= \frac{\alpha^{2}+\alpha}{\lambda^{2}}
+    - \frac{\alpha^{2}}{\lambda^{2}} \\[6pt]
+ &= \frac{\alpha^{2}+\alpha-\alpha^{2}}{\lambda^{2}} \\[6pt]
+ &= \frac{\alpha}{\lambda^{2}}.
+\end{aligned}
+\]
+\end{frame}
+
+\begin{frame}{Distribuição Gamma}
+\phantomsection\label{distribuiuxe7uxe3o-gamma-4}
+Logo, se \(X \sim Gamma(\alpha, \lambda)\), então
+
+\[
+f(x | \alpha, \lambda)=
+\begin{cases}
+\dfrac{\lambda e^{-\lambda x}(\lambda x)^{\alpha-1}}{\Gamma(\alpha)}, & x\ge0\\[6pt]
+0, & x<0
+\end{cases}
+\]
+
+com
+
+\[E(X) =  \dfrac{\alpha}{\lambda} \,\,\,\,\,\,\,\,\,\,\,\, \text{       e       } \,\,\,\,\,\,\,\,\,\,\,\,Var(X) = \dfrac{\alpha}{\lambda^2}\]
+\end{frame}
+
+\begin{frame}{Distribuição Gamma}
+\phantomsection\label{distribuiuxe7uxe3o-gamma-5}
+A Função de Distribuição Acumulada da distribuição gamma é intratável
+analiticamente.
+
+\[
+F(x\mid\alpha,\lambda)
+= \int_{0}^{x} \frac{\lambda e^{-\lambda u}(\lambda u)^{\alpha-1}}{\Gamma(\alpha)}\,du,
+\qquad x\ge 0.
+\]
+
+Para \(\alpha\) inteiro positivo, a equação acima pode ser integrada por
+partes, resultando em
+
+\[
+F(x\mid\alpha,\lambda) =
+\begin{cases}
+1 - \sum_{k=0}^{\alpha-1}\frac{\lambda^k}{k!} x^k e^{-\lambda x}, & x > 0\\[6pt]
+0, & x \leq 0
+\end{cases}
+\]
+
+A expressão acima é a soma de termos da Poisson com média \(\lambda x\).
+\end{frame}
+
+\begin{frame}{Distribução Gamma}
+\phantomsection\label{distribuuxe7uxe3o-gamma}
+\begin{figure}
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{outras_dist_continuas_files/figure-beamer/fig-gamma-formas-1.pdf}}
+
+}
+
+\caption{\label{fig-gamma-formas}Distribuição Gama --- variação do shape
+(α) com λ fixo.}
+
+\end{figure}%
+\end{frame}
+
+\begin{frame}{Distribução Gamma}
+\phantomsection\label{distribuuxe7uxe3o-gamma-1}
+\begin{figure}
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{outras_dist_continuas_files/figure-beamer/fig-gamma-taxas-1.pdf}}
+
+}
+
+\caption{\label{fig-gamma-taxas}Distribuição Gama --- variação da taxa
+(λ) com α fixo.}
+
+\end{figure}%
+\end{frame}
+
+\begin{frame}{Distribuição Gamma}
+\phantomsection\label{distribuiuxe7uxe3o-gamma-6}
+A distribuição Gamma tem muitas aplicações reais, especialmente quando
+estudamos \textbf{tempos até ocorrência de eventos}.
+
+\pause
+
+\begin{enumerate}
+[1)]
+\tightlist
+\item
+  \textbf{Tempo até falha / confiabilidade de sistemas:} modelagem do
+  tempo de vida de componentes mecânicos, eletrônicos, etc.
+\end{enumerate}
+
+\pause
+
+\begin{enumerate}
+[1)]
+\setcounter{enumi}{1}
+\tightlist
+\item
+  \textbf{Tempo até ocorrência de eventos em Poisson:} Se eventos
+  acontecem segundo um processo de Poisson com taxa \(\lambda\):
+
+  \begin{itemize}
+  \tightlist
+  \item
+    o tempo até o primeiro evento é Exponencial (Gamma(1, \(\lambda\)))
+  \item
+    o tempo até o \(k\)-ésimo evento é Gamma(k,\(\lambda\))
+  \end{itemize}
+\end{enumerate}
+
+\pause
+
+\begin{enumerate}
+[1)]
+\setcounter{enumi}{2}
+\tightlist
+\item
+  \textbf{Modelagem de tempos de espera em filas:} em teoria de filas
+  (M/M/1, G/G/1 etc.), tempos de serviço ou tempos de atendimento podem
+  ser modelados como Gamma.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Distribuição Gamma}
+\phantomsection\label{distribuiuxe7uxe3o-gamma-7}
+\begin{enumerate}
+[1)]
+\setcounter{enumi}{3}
+\tightlist
+\item
+  \textbf{Priori conjugada em Bayesiana:} é priori conjugada para o
+  parâmetro de taxa de uma Exponencial ou Poisson. Então em inferência
+  Bayesiana, a Gamma aparece o tempo todo como priori para \(\lambda\)
+\end{enumerate}
+
+\pause
+
+\begin{enumerate}
+[1)]
+\setcounter{enumi}{4}
+\tightlist
+\item
+  \textbf{Hidrologia / clima:} modelagem de chuvas acumuladas
+  (precipitação) ao longo de certo intervalo: o total acumulado de chuva
+  frequentemente é bem modelado por Gamma.
+\end{enumerate}
+
+\pause
+
+\begin{enumerate}
+[1)]
+\setcounter{enumi}{5}
+\tightlist
+\item
+  \textbf{Biologia / Epidemiologia:} tempo até infecção, tempo até
+  recuperação, duração de hospitalização, tempos de permanência podem
+  ser modelados por Gamma (ou Weibull, que é próxima).
+\end{enumerate}
+
+\pause
+
+\begin{enumerate}
+[1)]
+\setcounter{enumi}{6}
+\tightlist
+\item
+  \textbf{Análise de risco / Seguros:} valores positivos e assimétricos
+  (como sinistros) podem ser modelados com Gamma.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Distribuição Gamma}
+\phantomsection\label{distribuiuxe7uxe3o-gamma-8}
+\textbf{Exemplo 01:} Suponha que o tempo gasto por um estagiário
+selecionado aleatoriamente para realizar uma tarefa em uma empresa tem
+uma distribuição gamma com média \(20\,\, \text{minutos}\) e variância
+de \(80\,\, \text{minutos}^2\)
+
+\begin{enumerate}
+[a)]
+\tightlist
+\item
+  Quais são os parâmetros da distribuição gamma utilizada? \textbf{R:}
+  \(\lambda = 0,25\) e \(\alpha = 5\)
+\item
+  Qual é a probabilidade de um estagiário realizar a tarefa em no máximo
+  24 minutos? \textbf{R:} \(0,7149\)
+\item
+  Qual é a probabilidade de um estagiário passar entre 20 e 40 minutos
+  realizando a tarefa? \textbf{R:} \(0,5595\)
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Distribuição Gamma}
+\phantomsection\label{distribuiuxe7uxe3o-gamma-9}
+\textbf{Exemplo 02:} A duração do atendimento de cada cliente no caixa
+de um supermercado tem distribuição Gamma com parâmetro de forma
+\(\alpha = 12\) e parâmetro de taxa \(\lambda = 2\)
+
+\begin{enumerate}
+[a)]
+\item
+  Qual a média e variância da duração dos atendimentos? \textbf{R:}
+  \(E(x) = 6\) e \(Var(X) = 3\)
+\item
+  Qual a probabilidade de um atendimento durar menos de 5 minutos?
+  \textbf{R:} \(0,3032\)
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Distribuição Qui-Quadrado}
+\phantomsection\label{distribuiuxe7uxe3o-qui-quadrado}
+Um caso particular da distribuição Gamma, quando tomamos
+\(\alpha = \dfrac{n}{2}\) e \(\lambda = \dfrac{1}{2}\), onde \(n\) é um
+inteiro positivo.
+
+\pause
+
+Assim, para \(\alpha = \dfrac{n}{2}\) e \(\lambda = \dfrac{1}{2}\),
+
+\[
+f(x) = \dfrac{\frac{1}{2} e^{-\frac{x}{2}}\left(\frac{x}{2}\right)^{\frac{n}{2}-1}}{\Gamma \left(\frac{n}{2}\right)} =  \dfrac{\frac{e^{-\frac{x}{2}}}{2} \left(\frac{x ^{\frac{n}{2}-1}}{2^{\frac{n}{2}-1}}\right)}{\Gamma \left(\frac{n}{2}\right)} = \dfrac{\frac{e^{-\frac{x}{2}} x ^{\frac{n}{2}-1}}{2^{\frac{n}{2}}}}{\Gamma \left(\frac{n}{2}\right)} = \dfrac{1}{2^{\frac{n}{2}} \Gamma \left(\frac{n}{2}\right)} e^{-\frac{x}{2}} x ^{\frac{n}{2}-1}
+\]
+\end{frame}
+
+\begin{frame}{Distribuição Qui-Quadrado}
+\phantomsection\label{distribuiuxe7uxe3o-qui-quadrado-1}
+Logo, se \(X \sim \chi^2_n\), então
+
+\[
+f(x | \alpha, \lambda)=
+\begin{cases}
+\dfrac{1}{2^{\frac{n}{2}} \Gamma \left(\frac{n}{2}\right)} e^{-\frac{x}{2}} x ^{\frac{n}{2}-1}, & x\ge0\\[6pt]
+0, & x<0
+\end{cases}
+\]
+
+com
+
+\[E(X) =  n \,\,\,\,\,\,\,\,\,\,\,\, \text{       e       } \,\,\,\,\,\,\,\,\,\,\,\,Var(X) = 2n\]
+\end{frame}
+
+\begin{frame}{Distribuição Qui-Quadrado}
+\phantomsection\label{distribuiuxe7uxe3o-qui-quadrado-2}
+A Função de Distribuição Acumulada da distribuição qui-quadrado é
+intratável analiticamente.
+
+\[
+F(x\mid n)
+= \int_{0}^{x} \dfrac{1}{2^{\frac{n}{2}} \Gamma \left(\frac{n}{2}\right)} e^{-\frac{x}{2}} x ^{\frac{n}{2}-1} \,dx,
+\qquad x\ge 0.
+\]
+
+Para \(n\) inteiro positivo par, então existe forma como série finita:
+
+\[
+F(x\mid n) = 1 - e^{-x/2}\sum_{k=0}^{\frac{n}{2}-1}\frac{\left(\frac{x}{2}\right)^k}{k!}
+\]
+
+ou seja, quando \(n\) é par, ela pode ser escrita como uma soma finita
+de termos tipo Poisson.
+\end{frame}
+
+\begin{frame}{Distribuição Qui-Quadrado}
+\phantomsection\label{distribuiuxe7uxe3o-qui-quadrado-3}
+\begin{figure}
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{outras_dist_continuas_files/figure-beamer/fig-chisq-multicurves-1.pdf}}
+
+}
+
+\caption{\label{fig-chisq-multicurves}Densidades qui-quadrado para
+vários graus de liberdade n.}
+
+\end{figure}%
+\end{frame}
+
+\begin{frame}{Distribuição Qui-Quadrado}
+\phantomsection\label{distribuiuxe7uxe3o-qui-quadrado-4}
+A distribuição qui-quadrado é central em inferência estatística porque
+ela surge naturalmente quando somamos quadrados de variáveis Normais
+padrão:
+
+\[\chi^2_n = \displaystyle{\sum_{i=1}^n} Z_i^2, \,\,\,\,\, Z_i \sim N(0,1)\]
+
+\pause
+
+Logo, ela está por trás dos testes mais usados com dados categóricos,
+ANOVA, variâncias e na estruturação das distribuições t e F.
+\end{frame}
+
+\begin{frame}{Distribuição Beta}
+\phantomsection\label{distribuiuxe7uxe3o-beta}
+Diz-se que uma variável aleatória tem distribução Beta, se sua função
+densidade é dada por
+
+\[
+f(x \mid a,b)=
+\begin{cases}
+\dfrac{1}{B(a,b)} x^{\,a-1} (1-x)^{\,b-1}, & 0<x<1\\[6pt]
+0, & \text{caso contrário}
+\end{cases}
+\]
+
+em que a função Beta é dada por
+
+\[B(a,b)=\int_0^1 x^{\,a-1} (1-x)^{\,b-1}\,dx\]
+\end{frame}
+
+\begin{frame}{Distribuição Beta}
+\phantomsection\label{distribuiuxe7uxe3o-beta-1}
+Além disso, a função Beta tem uma conexão muito importante com a função
+Gamma
+
+\[B(a,b) = \dfrac{\Gamma(a) \Gamma(b)}{\Gamma(a+b)}\]
+\end{frame}
+
+\begin{frame}{Distribuição Beta}
+\phantomsection\label{distribuiuxe7uxe3o-beta-2}
+Se \(X \sim Beta(a, b)\), então
+
+\[
+E[X] = \int_0^1 x \dfrac{1}{B(a,b)} x^{\,a-1} (1-x)^{\,b-1} = \dfrac{1}{B(a,b)}  \int_0^1 x^a(1-x)^{b-1} = \dfrac{B(a+1,b)}{B(a,b)}
+\]
+
+Usando a relação \(B(a,b) = \dfrac{\Gamma(a) \Gamma(b)}{\Gamma(a+b)}\),
+temos
+
+\[
+\dfrac{B(a+1,b)}{B(a,b)} = \dfrac{\dfrac{\Gamma(a+1)\Gamma(b)}{\Gamma(a+b + 1)}}{\dfrac{\Gamma(a)\Gamma(b)}{\Gamma(a+b)}} = \dfrac{\Gamma(a+1)\Gamma(b)}{\Gamma(a+b + 1)} \times \dfrac{\Gamma(a+b)}{\Gamma(a)\Gamma(b)} = \dfrac{\Gamma(a+1)\Gamma(a+b)}{\Gamma(a+b + 1)\Gamma(a)}=
+\]
+\end{frame}
+
+\begin{frame}{Distribuição Beta}
+\phantomsection\label{distribuiuxe7uxe3o-beta-3}
+\(= \dfrac{a\Gamma(a)\Gamma(a+b)}{(a+b)\Gamma(a+b)\Gamma(a)} = \dfrac{a}{a+b}\)
+\end{frame}
+
+\begin{frame}{Distribuição Beta}
+\phantomsection\label{distribuiuxe7uxe3o-beta-4}
+\[ 
+\begin{aligned}
+E[X^{2}]
+ &= \int_{0}^{1} x^{2}\,
+    \frac{1}{B(a,b)}\,x^{a-1}(1-x)^{b-1}\,dx = \frac{1}{B(a,b)}
+    \int_{0}^{1} x^{a+1}(1-x)^{\,b-1}\,dx \\[6pt]
+ &= \frac{B(a+2,b)}{B(a,b)} = \frac{
+      \dfrac{\Gamma(a+2)\Gamma(b)}{\Gamma(a+b+2)}
+    }{
+      \dfrac{\Gamma(a)\Gamma(b)}{\Gamma(a+b)}
+    } = \frac{\Gamma(a+2)\Gamma(b)\Gamma(a+b)}
+        {\Gamma(a+b+2)\Gamma(a)\Gamma(b)} \\[6pt]
+ &= \frac{
+      (a+1)\Gamma(a+1)\,\Gamma(a+b)
+    }{
+      (a+b+1)\Gamma(a+b+1)\,\Gamma(a)
+    } = \frac{
+      (a+1)a\,\Gamma(a)\,\Gamma(a+b)
+    }{
+      (a+b+1)(a+b)\,\Gamma(a+b)\,\Gamma(a)
+    } \\[6pt]
+ &= \frac{a(a+1)}{(a+b)(a+b+1)}
+\end{aligned}
+\]
+\end{frame}
+
+\begin{frame}{Distribuição Beta}
+\phantomsection\label{distribuiuxe7uxe3o-beta-5}
+De forma que,
+
+\[
+\begin{aligned}
+\operatorname{Var}(X)
+ &= E(X^{2}) - [E(X)]^{2} = \frac{a(a+1)}{(a+b)(a+b+1)}
+    - \left(\frac{a}{a+b}\right)^{2} \\[6pt]
+ &= \frac{a^{2}+a}{(a+b)(a+b+1)}
+    - \frac{a^{2}}{(a+b)^{2}} = \frac{(a^{2}+a)(a+b) - a^{2}(a+b+1)}
+        {(a+b+1)(a+b)^{2}} \\[6pt]
+ &= \frac{a^{3} + a^{2}b + a^{2} + ab - a^{3} - a^{2}b - a^{2}}
+        {(a+b+1)(a+b)^{2}} = \frac{ab}{(a+b+1)(a+b)^{2}}
+\end{aligned}
+\]
+\end{frame}
+
+\begin{frame}{Distribuição Beta}
+\phantomsection\label{distribuiuxe7uxe3o-beta-6}
+Logo, se \(X \sim Beta(a,b)\), então
+
+\[
+f(x \mid a,b)=
+\begin{cases}
+\dfrac{1}{B(a,b)}x^{a-1} (1-x)^{b-1}, & 0<x<1\\[6pt]
+0, & \text{caso contrário}
+\end{cases}
+\]
+
+com
+
+\[E(X) =  \dfrac{a}{a+b} \,\,\,\,\,\,\,\,\,\,\,\, \text{       e       } \,\,\,\,\,\,\,\,\,\,\,\,Var(X) = \dfrac{ab}{(a+b+1)(a+b)^2}\]
+\end{frame}
+
+\begin{frame}{Distribuição Beta}
+\phantomsection\label{distribuiuxe7uxe3o-beta-7}
+A Função de Distribuição Acumulada da distribuição Beta é intratável
+analiticamente.
+
+\[
+F(x| a,b)=\dfrac{1}{B(a,b)}\int_0^x t^{a-1}(1-t)^{b-1}dt.
+\qquad 0< x < 1.
+\]
+\end{frame}
+
+\begin{frame}{Distribuição Beta}
+\phantomsection\label{distribuiuxe7uxe3o-beta-8}
+\begin{figure}
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{outras_dist_continuas_files/figure-beamer/fig-beta-varia-a-1.pdf}}
+
+}
+
+\caption{\label{fig-beta-varia-a}Distribuição Beta --- variação de a
+(shape1) com b fixo.}
+
+\end{figure}%
+\end{frame}
+
+\begin{frame}{Distribuição Beta}
+\phantomsection\label{distribuiuxe7uxe3o-beta-9}
+\begin{figure}
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{outras_dist_continuas_files/figure-beamer/fig-beta-varia-b-1.pdf}}
+
+}
+
+\caption{\label{fig-beta-varia-b}Distribuição Beta --- variação de b
+(shape2) com a fixo.}
+
+\end{figure}%
+\end{frame}
+
+\begin{frame}{Distribuição Beta}
+\phantomsection\label{distribuiuxe7uxe3o-beta-10}
+\begin{figure}
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{outras_dist_continuas_files/figure-beamer/fig-beta-simetria-1.pdf}}
+
+}
+
+\caption{\label{fig-beta-simetria}Distribuição Beta --- simetria quando
+α = β.}
+
+\end{figure}%
+\end{frame}
+
+\begin{frame}{Distribuição Beta}
+\phantomsection\label{distribuiuxe7uxe3o-beta-11}
+A distribuição Beta é usada para modelar proporções (variáveis contínuas
+entre 0 e 1). É uma das distribuições mais importantes em estatística
+aplicada.
+
+\pause
+
+\begin{enumerate}
+[1)]
+\tightlist
+\item
+  \textbf{Modelagem de proporções:} proporção de sucesso, taxa de clique
+  (CTR) em marketing digital, fração de tempo ativo de um equipamento,
+  percentual de umidade, pureza, concentração, etc.
+\end{enumerate}
+
+\pause
+
+\begin{enumerate}
+[1)]
+\setcounter{enumi}{1}
+\tightlist
+\item
+  \textbf{Inferência Bayesiana:} é a prior conjugada da Bernoulli e da
+  Binomial → se o parâmetro de interesse é uma probabilidade \(p\), a
+  priori Beta é natural.
+\end{enumerate}
+
+\pause
+
+\begin{enumerate}
+[1)]
+\setcounter{enumi}{2}
+\tightlist
+\item
+  \textbf{Modelo para incerteza em probabilidades:} incerteza sobre
+  \(p\) em ``probabilidade de sucesso'' antes de observar dados, nossa
+  crença sobre \(p\) é Beta
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Distribuição Beta}
+\phantomsection\label{distribuiuxe7uxe3o-beta-12}
+\textbf{Exemplo 03:} A porcentagem de impurezas por lote, em determinado
+produto químico, é uma variável aleatória com distribuição Beta com
+parâmetros \(a = 3\) e \(b = 2\). Um lote com mais de \(40\%\) de
+impurezas não pode ser vendido.
+
+\begin{enumerate}
+[a)]
+\tightlist
+\item
+  Qual é a probabilidade de que um lote, selecionado ao acaso, não possa
+  ser vendido por causa do excesso de impurezas? \textbf{R:} \(0,8208\)
+\item
+  Quantos lotes, em média, são selecionados, ao acaso, até que se
+  encontre um que não pode ser vendido por causa do excesso de
+  impurezas? \textbf{R:} \(1,2183\)
+\item
+  Qual é a porcentagem média de impurezas nos lotes desse produto
+  químico? \textbf{R:} \(0,60\)
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Distribuição Beta}
+\phantomsection\label{distribuiuxe7uxe3o-beta-13}
+\textbf{Exemplo 04:} O teor de gordura no leite de um rebanho bovino é
+uma variável com distribuição Beta com parâmetros \(a = 2\) e \(b = 5\).
+
+\begin{enumerate}
+[a)]
+\tightlist
+\item
+  Qual o teor médio de gordura no leite? \textbf{R:} \(0,2857\)
+\item
+  Qual o percentual de amostras que terá teor de gordura menor que
+  \(10\%\)? \textbf{R:} \(0,1143\)
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Distribuição Weibull}
+\phantomsection\label{distribuiuxe7uxe3o-weibull}
+Uma variável aleatória tem distribuição de Weibull com parâmetros
+\(\beta > 0\) e \(\alpha > 0\) se sua função densidade para \(x \geq 0\)
+é dada por
+
+\[
+f(x|\alpha, \beta) =
+\begin{cases}
+\dfrac{\beta}{\alpha}
+\left(\dfrac{x}{\alpha}\right)^{\beta - 1}
+\exp\!\left[-\left(\dfrac{x}{\alpha}\right)^{\beta}\right],
+& x\geq0\\[10pt]
+0, & x<0
+\end{cases}
+\]
+
+Nesta parametrização,
+
+\begin{itemize}
+\tightlist
+\item
+  \(\beta\) - parâmetro de forma
+\item
+  \(\alpha\) - parâmetro de escala
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Distribuição Weibull}
+\phantomsection\label{distribuiuxe7uxe3o-weibull-1}
+Se \(X \sim Weibull(\alpha, \beta)\), então
+
+\[ \small
+\begin{aligned}
+E[X]
+ &= \int_{0}^{\infty}
+    x \,\frac{\beta}{\alpha}
+    \left(\frac{x}{\alpha}\right)^{\beta-1}
+    \exp\!\left[-\left(\frac{x}{\alpha}\right)^{\beta}\right] dx = \int_{0}^{\infty}
+    (\alpha u)\,\frac{\beta}{\alpha}
+    \left(\frac{\alpha u}{\alpha}\right)^{\beta-1}
+    \exp\!\left[-\left(\frac{\alpha u}{\alpha}\right)^{\beta}\right]
+    \alpha\,du \\[6pt]
+ &= \int_{0}^{\infty}
+    u\,\beta\,u^{\beta-1}\exp[-u^{\beta}]\,\alpha\,du = \alpha\int_{0}^{\infty}
+    \beta\,u^{\beta}\exp[-u^{\beta}]\,du \\[6pt]
+ &= \alpha\int_{0}^{\infty}
+    \beta\,v\,e^{-v}\,\frac{1}{\beta}\,v^{\frac{1}{\beta}-1} dv
+    \qquad (v = u^{\beta}) \\ &= \alpha\int_{0}^{\infty}
+    e^{-v}\,v^{\frac{1}{\beta}}\,dv = \alpha\,\Gamma\!\left(\frac{1}{\beta}+1\right)
+\end{aligned}
+\]
+\end{frame}
+
+\begin{frame}{Distribuição Weibull}
+\phantomsection\label{distribuiuxe7uxe3o-weibull-2}
+\[ \small
+\begin{aligned}
+E[X^{2}]
+ &= \int_{0}^{\infty}
+    x^{2}\,\frac{\beta}{\alpha}
+    \left(\frac{x}{\alpha}\right)^{\beta-1}
+    \exp\!\left[-\left(\frac{x}{\alpha}\right)^{\beta}\right] dx \\[6pt]
+ &= \int_{0}^{\infty}
+    (\alpha u)^{2}\,\frac{\beta}{\alpha}
+    \left(\frac{\alpha u}{\alpha}\right)^{\beta-1}
+    \exp[-u^{\beta}]\,\alpha\,du \\[6pt]
+ &= \int_{0}^{\infty}
+    \alpha^{2}u^{2}\,\frac{\beta}{\alpha}\,u^{\beta-1}
+    e^{-u^{\beta}}\,\alpha\,du = \int_{0}^{\infty}
+    \alpha^{2}\beta\,u^{\beta+1}\,e^{-u^{\beta}}\,du \\[6pt]
+ &= \int_{0}^{\infty}
+    \alpha^{2}\beta\,u^{\beta}\,u\,e^{-u^{\beta}}\,du = \int_{0}^{\infty}
+    \alpha^{2}\beta\,v\,v^{1/\beta}\,e^{-v}\,
+    \frac{1}{\beta}\,v^{1/\beta-1}\,dv
+    \quad (v = u^{\beta}) \\[6pt]&= \alpha^{2}
+    \int_{0}^{\infty}
+    v^{\,1/\beta + 1 + 1/\beta -1}\,e^{-v}\,dv = \alpha^{2}
+    \int_{0}^{\infty}
+    v^{\,2/\beta}\,e^{-v}\,dv = \alpha^{2}\,
+    \Gamma\!\left(\frac{2}{\beta}+1\right)
+\end{aligned}
+\]
+\end{frame}
+
+\begin{frame}{Distribuição Weibull}
+\phantomsection\label{distribuiuxe7uxe3o-weibull-3}
+De forma que,
+
+\[
+\begin{aligned}
+\operatorname{Var}(X)
+ &= E(X^{2}) - [E(X)]^{2} \\[6pt]
+ &= \alpha^{2}\,\Gamma\!\left(\frac{2}{\beta}+1\right)
+    - \left[\alpha\,\Gamma\!\left(\frac{1}{\beta}+1\right)\right]^{2} \\[6pt]
+ &= \alpha^{2}\,\Gamma\!\left(\frac{2}{\beta}+1\right)
+    - \alpha^{2}\left[\Gamma\!\left(\frac{1}{\beta}+1\right)\right]^{2} \\[6pt]
+ &= \alpha^{2}
+    \left\{
+      \Gamma\!\left(\frac{2}{\beta}+1\right)
+      - \left[\Gamma\!\left(\frac{1}{\beta}+1\right)\right]^{2}
+    \right\}
+\end{aligned}
+\]
+\end{frame}
+
+\begin{frame}{Distribuição Weibull}
+\phantomsection\label{distribuiuxe7uxe3o-weibull-4}
+Se \(X \sim Weibull(\alpha, \beta)\), então
+
+\[
+f(x|\alpha, \beta) =
+\begin{cases}
+\dfrac{\beta}{\alpha}
+\left(\dfrac{x}{\alpha}\right)^{\beta - 1}
+\exp\!\left[-\left(\dfrac{x}{\alpha}\right)^{\beta}\right],
+& x\geq0\\[10pt]
+0, & x<0
+\end{cases}
+\]
+
+com
+
+\[E(X) = \alpha \Gamma\left( \dfrac{1}{\beta} + 1\right) \,\,\,\,\,\,\,\,\,\,\,\, \text{       e       } \,\,\,\,\,\,\,\,\,\,\,\,Var(X) = \alpha^2\left\{\Gamma\left( \dfrac{2}{\beta} + 1\right) - \left[\Gamma\left( \dfrac{1}{\beta} + 1\right)\right]^2\right\}\]
+\end{frame}
+
+\begin{frame}{Distribuição Weibull}
+\phantomsection\label{distribuiuxe7uxe3o-weibull-5}
+\textbf{Observação:} Se \(X \sim Weibull(\alpha, 1)\), ou seja, fazendo
+\(\beta = 1\), temos
+
+\[f(x) = \dfrac{1}{\alpha} \left(\dfrac{x}{\alpha}\right)^{1 - 1} \exp\!\left[-\left(\dfrac{x}{\alpha}\right)^{1}\right] = \dfrac{1}{\alpha}  \exp\!\left(-\dfrac{x}{\alpha}\right), \,\,\,\,\,\, x\geq 0\]
+
+Fazendo \(\lambda = \dfrac{1}{\lambda}\), temos
+\(f(x) = \lambda e^{-\lambda x}\). Logo \(X \sim Exp(\lambda)\).
+\end{frame}
+
+\begin{frame}{Distribuição Weibull}
+\phantomsection\label{distribuiuxe7uxe3o-weibull-6}
+Uma das vantagens da distribuição Weibull é a possibilidade de encontrar
+a sua função de distribuição parametrizada por \(\alpha\) e \(\beta\).
+Dessa forma fica fácil fazer cálculos de probabilidades.
+
+\pause
+
+Por definição, \(F(x) = P(X ≤ x)\). Para \(x \leq 0\) claramente
+\(F(x) = 0\). Para \(x > 0\), temos:
+
+\[F(x) = \int_0^x \dfrac{\beta}{\alpha}\left(\dfrac{t}{\alpha}\right)^{\beta - 1} \exp\!\left[-\left(\dfrac{t}{\alpha}\right)^{\beta}\right] \,\,dt\]
+
+Mudança de variável:
+\(u=\left(\frac{t}{\alpha}\right)^{\beta} \;\;\Rightarrow\;\; du=\frac{\beta}{\alpha}\left(\frac{t}{\alpha}\right)^{\beta-1}dt.\)
+Quando \(t=0\), \(u=0\); quando \(t=x\), \(u=(x/\alpha)^{\beta}\).
+\end{frame}
+
+\begin{frame}{Distribuição Weibull}
+\phantomsection\label{distribuiuxe7uxe3o-weibull-7}
+Logo,
+
+\[
+F(x)=\int_{0}^{(x/\alpha)^{\beta}} e^{-u}\,du = \Big[-e^{-u}\Big]_{0}^{(x/\alpha)^{\beta}} = 1-\exp\!\left[-\left(\frac{x}{\alpha}\right)^{\beta}\right]
+\]
+
+Portanto,
+
+\[
+F(x|\alpha, \beta)=
+\begin{cases}
+1-\exp\!\left[-\left(\dfrac{x}{\alpha}\right)^{\beta}\right], & x> 0,\\[8pt]
+0, & x\le0.
+\end{cases}
+\]
+\end{frame}
+
+\begin{frame}{Distribuição Weibull}
+\phantomsection\label{distribuiuxe7uxe3o-weibull-8}
+\begin{figure}
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{outras_dist_continuas_files/figure-beamer/fig-weibull-var-1.pdf}}
+
+}
+
+\caption{\label{fig-weibull-var}Distribuição Weibull --- variação de β
+(forma) com α fixo.}
+
+\end{figure}%
+\end{frame}
+
+\begin{frame}{Distribuição Weibull}
+\phantomsection\label{distribuiuxe7uxe3o-weibull-9}
+\begin{figure}
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{outras_dist_continuas_files/figure-beamer/fig-weibull-var-alpha-1.pdf}}
+
+}
+
+\caption{\label{fig-weibull-var-alpha}Distribuição Weibull --- variação
+de α (escala) com β fixo.}
+
+\end{figure}%
+\end{frame}
+
+\begin{frame}{Distribuição Weibull}
+\phantomsection\label{distribuiuxe7uxe3o-weibull-10}
+A Weibull é uma das distribuições mais usadas em engenharia para modelar
+tempo até falha/tempo de vida. Ela é extremamente flexível porque o
+parâmetro de forma \(\beta\) permite que o risco aumente, diminua ou
+seja constante ao longo do tempo.
+
+\pause
+
+\begin{enumerate}
+[1)]
+\tightlist
+\item
+  \textbf{Engenharia de Confiabilidade:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    vida útil de componentes mecânicos e eletrônicos{]}
+  \item
+    fadiga de materiais
+  \item
+    tempo até quebra de peças, motores, rolamentos, cabos, soldas
+  \end{itemize}
+\end{enumerate}
+
+\pause
+
+\begin{enumerate}
+[1)]
+\setcounter{enumi}{1}
+\tightlist
+\item
+  \textbf{Análise de Risco/Manutenção:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    planejamento de manutenção preventiva
+  \item
+    prever quando um equipamento deve ser substituído
+  \end{itemize}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Distribuição Weibull}
+\phantomsection\label{distribuiuxe7uxe3o-weibull-11}
+\begin{enumerate}
+[1)]
+\setcounter{enumi}{2}
+\tightlist
+\item
+  \textbf{Análise de sobrevivência/biomedicina:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    tempo até ocorrência de um evento (recorrência de doença, óbito,
+    falha de tratamento)
+  \item
+    alternativa mais flexível que exponencial
+  \end{itemize}
+\end{enumerate}
+
+\pause
+
+\begin{enumerate}
+[1)]
+\setcounter{enumi}{3}
+\tightlist
+\item
+  \textbf{Meteorologia e Clima:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    distribuição de vento (velocidade do vento normalmente é modelada
+    por Weibull)
+  \end{itemize}
+\end{enumerate}
+
+\pause
+
+\begin{enumerate}
+[1)]
+\setcounter{enumi}{4}
+\tightlist
+\item
+  \textbf{Pesquisa operacional:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    tempo até falha em sistemas complexos
+  \item
+    modelagem em teoria de filas com tempos de serviço não-exponenciais
+  \end{itemize}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Distribuição Weibull}
+\phantomsection\label{distribuiuxe7uxe3o-weibull-12}
+\textbf{Exemplo 05:} Uma empresa realiza treinamentos periódicos com
+seus funcionários. Em cada grupo de treinamento é passado uma tarefa
+desafio individual e os funcionários do grupo podem fazê-la durante o
+tempo que precisarem. O tempo que dura a tarefa desafio, em horas, pode
+ser considerada uma variável aleatória de Weibull com \(\alpha = 2\) e
+\(\beta = 0,4\).
+
+\begin{enumerate}
+[a)]
+\tightlist
+\item
+  Em média, quanto tempo dura a tarefa desafio em um treinamento?
+  \textbf{R:} \(6,6467\) \((\approx 6h38min)\)
+\item
+  Qual a probabilidade da tarefa desafio durar menos de 8 horas?
+  \textbf{R:} \(0,8247\)
+\item
+  A tarefa desafio já está sendo realizada há 2 horas. Qual a
+  probabilidade dela acabar nas próximas 2 horas? \textbf{R:} \(0,2735\)
+\item
+  Qual o menor tempo \(t\), em horas, para o qual podemos dizer que
+  \(95\%\) das tarefas desafio duram menos que \(t\)? \textbf{R:}
+  \(31,06615\) \((\approx 31h04min)\)
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Distribuição Weibull}
+\phantomsection\label{distribuiuxe7uxe3o-weibull-13}
+\textbf{Exemplo 06:} Uma loja quer saber quanto tempo suas lâmpadas LED
+duram, para decidir garantia. Ela testa várias lâmpadas funcionando 24
+horas por dia e anota o tempo até queimarem. Os dados mostram que quanto
+mais antiga a lâmpada, mais chance ela tem de queimar a qualquer
+momento, ou seja, os dados seguem uma distribuição de Weibull com
+parâmetros \(\alpha = 200\) e \(\beta = 1,4\).
+
+\begin{enumerate}
+[a)]
+\tightlist
+\item
+  Qual a probabilidade de uma lâmpada queimar antes de 150 dias?
+  \textbf{R:} \(0,4875\)
+\item
+  Qual a probabilidade de uma lâmpada queimar entre 100 e 250 dias?
+  \textbf{R:} \(0,4296\)
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Distribuição Log-Normal}
+\phantomsection\label{distribuiuxe7uxe3o-log-normal}
+Uma variável \(X\) tem distribuição Log-Normal quando
+
+\[\ln(X) \sim N(\mu, \sigma^2)\]
+
+Assim, \(X \sim Log-Normal(\mu, \sigma^2)\) se sua função densidade é
+dada por
+
+\[
+f(x|\mu, \sigma) =
+\begin{cases}
+\dfrac{1}{x\, \sigma\, \sqrt{2\pi}} \,\exp\!\left[-\dfrac{1}{2}\left(\dfrac{\ln x - \mu}{\sigma}\right)^2\right],
+& x>0\\[10pt]
+0, & x\leq 0
+\end{cases}
+\]
+\end{frame}
+
+\begin{frame}{Distribuição Log-Normal}
+\phantomsection\label{distribuiuxe7uxe3o-log-normal-1}
+\[
+\begin{aligned}
+E(X)
+ &= \int_{0}^{\infty}
+    x \,\frac{1}{x\,\sigma\sqrt{2\pi}}\,
+    \exp\!\left[
+      -\frac{1}{2}\left(\frac{\ln x - \mu}{\sigma}\right)^{2}
+    \right] dx \\[6pt]
+ &= \int_{0}^{\infty}
+    \frac{1}{\sigma\sqrt{2\pi}}\,
+    \exp\!\left[
+      -\frac{1}{2}\left(\frac{\ln x - \mu}{\sigma}\right)^{2}
+    \right] dx
+\end{aligned}
+\]
+
+Mudança de variável: \(z = \ln(x) \Rightarrow x = e^z, dx = e^z \, dz\).
+Quando \(x \in (0, \infty) \Rightarrow z \in (-\infty,\infty)\)
+
+\[
+\begin{aligned}
+&= \int_{-\infty}^{\infty}
+   \frac{1}{\sigma\sqrt{2\pi}}\,
+   \exp\!\left[
+     -\frac12\left(\frac{z-\mu}{\sigma}\right)^{2}
+   \right]\, e^{z}\,dz \\[6pt]
+&= \int_{-\infty}^{\infty}
+   \frac{1}{\sigma\sqrt{2\pi}}\,
+   \exp\!\left[
+     -\frac12\left(\frac{z-\mu}{\sigma}\right)^{2}
+     + z
+   \right]\,dz
+\end{aligned}
+\]
+\end{frame}
+
+\begin{frame}{Distribuição Log-Normal}
+\phantomsection\label{distribuiuxe7uxe3o-log-normal-2}
+\textbf{Completando o quadrado} do expoente:
+
+\[
+\begin{aligned}
+z - \frac{(z-\mu)^2}{2\sigma^{2}}
+ &= -\frac{1}{2\sigma^{2}}\Big[(z-\mu)^2 - 2\sigma^{2}z\Big] \\[6pt]
+ &= -\frac{1}{2\sigma^{2}}\Big[z^{2} - 2(\mu+\sigma^{2})z + \mu^{2}\Big] \\[6pt]
+ &= -\frac{1}{2\sigma^{2}}
+    \left[
+      (\,z-(\mu+\sigma^{2})\,)^2
+      -(\mu+\sigma^{2})^{2}
+      + \mu^{2}
+    \right] \\[6pt]
+ &= -\frac{(z-(\mu+\sigma^{2}))^{2}}{2\sigma^{2}}
+    + \frac{(\mu+\sigma^{2})^{2} - \mu^{2}}{2\sigma^{2}} \\[6pt]
+ &= -\frac{(z-(\mu+\sigma^{2}))^{2}}{2\sigma^{2}}
+    + \mu + \frac{\sigma^{2}}{2}
+\end{aligned}
+\]
+\end{frame}
+
+\begin{frame}{Distribuição Log-Normal}
+\phantomsection\label{distribuiuxe7uxe3o-log-normal-3}
+Assim,
+
+\[ \small
+\begin{aligned}
+\int_{-\infty}^{\infty}
+ \frac{1}{\sigma\sqrt{2\pi}}
+ \exp\!\left[
+   -\frac{1}{2}\left(\frac{z-\mu}{\sigma}\right)^{2}
+   + z
+ \right] dz
+&=
+\int_{-\infty}^{\infty}
+ \frac{1}{\sigma\sqrt{2\pi}}
+ \exp\!\left[
+   -\frac{\big(z-(\mu+\sigma^{2})\big)^{2}}{2\sigma^{2}}
+   + \mu + \frac{\sigma^{2}}{2}
+ \right] dz \\[6pt]
+&=
+e^{\mu+\sigma^{2}/2}
+\int_{-\infty}^{\infty}
+ \frac{1}{\sigma\sqrt{2\pi}}
+ \exp\!\left[
+   -\frac{\big(z-(\mu+\sigma^{2})\big)^{2}}{2\sigma^{2}}
+ \right] dz
+\end{aligned}
+\]
+
+A integral é 1 (é uma densidade Normal). Logo,
+
+\[
+\boxed{E(X)=\exp\!\left(\mu+\frac{\sigma^2}{2}\right)}
+\]
+\end{frame}
+
+\begin{frame}{Distribuição Log-Normal}
+\phantomsection\label{distribuiuxe7uxe3o-log-normal-4}
+Da mesma forma,
+
+\[
+\begin{aligned}
+E(X^{2})
+ &= \int_{0}^{\infty}
+    x^{2}\,
+    \frac{1}{x\,\sigma\sqrt{2\pi}}\,
+    \exp\!\left[
+      -\frac12\left(\frac{\ln x - \mu}{\sigma}\right)^{2}
+    \right] dx \\[6pt]
+ &= \int_{0}^{\infty}
+    \frac{x}{\sigma\sqrt{2\pi}}\,
+    \exp\!\left[
+      -\frac12\left(\frac{\ln x - \mu}{\sigma}\right)^{2}
+    \right] dx
+\end{aligned}
+\]
+
+Mudança de variável: \(z = \ln(x) \Rightarrow x = e^z, dx = e^z \, dz\).
+Quando \(x \in (0, \infty) \Rightarrow z \in (-\infty,\infty)\)
+\end{frame}
+
+\begin{frame}{Distribuição Log-Normal}
+\phantomsection\label{distribuiuxe7uxe3o-log-normal-5}
+\[
+\begin{aligned}
+&= \int_{-\infty}^{\infty}
+   \frac{e^{z}}{\sigma\sqrt{2\pi}}\,
+   \exp\!\left[
+     -\frac12\left(\frac{z-\mu}{\sigma}\right)^{2}
+   \right] e^{z}\,dz \\[6pt]
+&= \int_{-\infty}^{\infty}
+   \frac{1}{\sigma\sqrt{2\pi}}\,
+   \exp\!\left[
+     -\frac12\left(\frac{z-\mu}{\sigma}\right)^{2}
+   \right] e^{2z}\,dz \\[6pt]
+&= \int_{-\infty}^{\infty}
+   \frac{1}{\sigma\sqrt{2\pi}}\,
+   \exp\!\left[
+     -\frac12\left(\frac{z-\mu}{\sigma}\right)^{2}
+     + 2z
+   \right] dz
+\end{aligned}
+\]
+\end{frame}
+
+\begin{frame}{Distribuição Log-Normal}
+\phantomsection\label{distribuiuxe7uxe3o-log-normal-6}
+\textbf{Completando o quadrado} do expoente:
+
+\[
+\begin{aligned}
+2z - \frac{(z-\mu)^2}{2\sigma^{2}}
+ &= -\frac{1}{2\sigma^{2}}
+    \Big[(z-\mu)^2 - 4\sigma^{2}z\Big] \\[6pt]
+ &= -\frac{1}{2\sigma^{2}}
+    \Big[z^{2} - 2(\mu+2\sigma^{2})z + \mu^{2}\Big] \\[6pt]
+ &= -\frac{1}{2\sigma^{2}}
+    \left[
+      (\,z-(\mu+2\sigma^{2})\,)^{2}
+      - (\mu+2\sigma^{2})^{2} + \mu^{2}
+    \right] \\[6pt]
+ &= -\frac{(z-(\mu+2\sigma^{2}))^{2}}{2\sigma^{2}}
+    + \frac{(\mu+2\sigma^{2})^{2} - \mu^{2}}{2\sigma^{2}} \\[6pt]
+ &= -\frac{(z-(\mu+2\sigma^{2}))^{2}}{2\sigma^{2}}
+    + 2\mu + 2\sigma^{2}
+\end{aligned}
+\]
+\end{frame}
+
+\begin{frame}{Distribuição Log-Normal}
+\phantomsection\label{distribuiuxe7uxe3o-log-normal-7}
+Assim,
+
+\[\small
+\begin{aligned}
+\int_{-\infty}^{\infty}
+ \frac{1}{\sigma\sqrt{2\pi}}
+ \exp\!\left[
+   -\frac{1}{2}\left(\frac{z-\mu}{\sigma}\right)^2 + 2z
+ \right] dz
+&=
+\int_{-\infty}^{\infty}
+ \frac{1}{\sigma\sqrt{2\pi}}
+ \exp\!\left[
+   -\frac{(z-(\mu+2\sigma^{2}))^{2}}{2\sigma^{2}}
+   + 2\mu + 2\sigma^{2}
+ \right] dz
+\\[6pt]
+&=
+e^{2\mu + 2\sigma^{2}}
+\int_{-\infty}^{\infty}
+ \frac{1}{\sigma\sqrt{2\pi}}
+ \exp\!\left[
+   -\frac{(z-(\mu+2\sigma^{2}))^{2}}{2\sigma^{2}}
+ \right] dz
+\end{aligned}
+\]
+
+A integral é 1 (é uma densidade Normal). Logo,
+
+\[
+\boxed{E(X^2)=\exp\!\left(2\mu+2\sigma^2\right)}
+\]
+\end{frame}
+
+\begin{frame}{Distribuição Log-Normal}
+\phantomsection\label{distribuiuxe7uxe3o-log-normal-8}
+De forma que,
+
+\[
+\begin{aligned}
+\operatorname{Var}(X)
+ &= E(X^2) - [E(X)]^2 \\[4pt]
+ &= \exp\!\left(2\mu + 2\sigma^2\right)
+    - \left[\exp\!\left(\mu + \frac{\sigma^2}{2}\right)\right]^2 \\[4pt]
+ &= \exp\!\left(2\mu + 2\sigma^2\right)
+    - \exp\!\left(2\mu + \sigma^2\right) \\[4pt]
+ &= \exp\!\left(2\mu + \sigma^2\right)\big(e^{\sigma^2} - 1\big)
+\end{aligned}
+\]
+
+Assim,
+
+\[
+\boxed{Var(X)=\exp\!\left(\,2\mu+\sigma^2\right)\big(e^{\sigma^2}-1\big)}
+\]
+\end{frame}
+
+\begin{frame}{Distribuição Log-Normal}
+\phantomsection\label{distribuiuxe7uxe3o-log-normal-9}
+Se \(X \sim Log-Normal(\mu, \sigma^2)\), então
+
+\[
+f(x|\mu, \sigma) =
+\begin{cases}
+\dfrac{1}{x\, \sigma\, \sqrt{2\pi}} \,\exp\!\left[-\dfrac{1}{2}\left(\dfrac{\ln x - \mu}{\sigma}\right)^2\right],
+& x>0\\[10pt]
+0, & x\leq 0
+\end{cases}
+\]
+
+com
+
+\[E(X) = \exp\!\left(\mu+\frac{\sigma^2}{2}\right) \,\,\,\,\,\,\,\,\,\,\,\, \text{       e       } \,\,\,\,\,\,\,\,\,\,\,\,Var(X) = \exp\!\left(\,2\mu+\sigma^2\right)\big(e^{\sigma^2}-1\big)\]
+\end{frame}
+
+\begin{frame}{Distribuição Log-Normal}
+\phantomsection\label{distribuiuxe7uxe3o-log-normal-10}
+A distribuição Log-Normal não possui forma fechada para a função de
+distribuição acumulada. No entanto,
+
+\[F_X(x)=P(X\le x)=\Phi\!\left(\frac{\ln x - \mu}{\sigma}\right), \quad x>0,\]
+
+onde \(\Phi(\cdot)\) é a FDA da Normal padrão.
+\end{frame}
+
+\begin{frame}{Distribuição Log-Normal}
+\phantomsection\label{distribuiuxe7uxe3o-log-normal-11}
+\begin{figure}
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{outras_dist_continuas_files/figure-beamer/fig-lognormal-mu-1.pdf}}
+
+}
+
+\caption{\label{fig-lognormal-mu}Distribuição Lognormal --- variação de
+μ (com σ fixo)}
+
+\end{figure}%
+\end{frame}
+
+\begin{frame}{Distribuição Log-Normal}
+\phantomsection\label{distribuiuxe7uxe3o-log-normal-12}
+\begin{figure}
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{outras_dist_continuas_files/figure-beamer/fig-lognormal-sigma-1.pdf}}
+
+}
+
+\caption{\label{fig-lognormal-sigma}Distribuição Lognormal --- variação
+de σ (com μ fixo)}
+
+\end{figure}%
+\end{frame}
+
+\begin{frame}{Distribuição Log-Normal}
+\phantomsection\label{distribuiuxe7uxe3o-log-normal-13}
+\begin{figure}
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{outras_dist_continuas_files/figure-beamer/fig-lnorm-cdf-mu-1.pdf}}
+
+}
+
+\caption{\label{fig-lnorm-cdf-mu}Distribuição Lognormal --- FDC variando
+μ (σ fixo)}
+
+\end{figure}%
+\end{frame}
+
+\begin{frame}{Distribuição Log-Normal}
+\phantomsection\label{distribuiuxe7uxe3o-log-normal-14}
+\begin{figure}
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{outras_dist_continuas_files/figure-beamer/fig-lnorm-cdf-sigma-1.pdf}}
+
+}
+
+\caption{\label{fig-lnorm-cdf-sigma}Distribuição Lognormal --- FDC
+variando σ (μ fixo)}
+
+\end{figure}%
+\end{frame}
+
+\begin{frame}{Distribuição Log-Normal}
+\phantomsection\label{distribuiuxe7uxe3o-log-normal-15}
+A distribuição Lognormal aparece quando um \textbf{processo
+multiplicativo} gera a variável observada. Como \(\ln(X)\) é Normal,
+isso quer dizer que \(X\) nasce como produto de vários pequenos fatores
+aleatórios. Por isso, a Lognormal é muito comum em:
+
+\pause
+
+\begin{enumerate}
+[1)]
+\tightlist
+\item
+  \textbf{Economia e Finanças:} distribuição de valores de ações, tempo
+  até certos eventos econômicos, modelos de volatilidade e retornos
+  acumulados
+\end{enumerate}
+
+\pause
+
+\begin{enumerate}
+[1)]
+\setcounter{enumi}{1}
+\tightlist
+\item
+  \textbf{Biologia e Medicina:} tempos de incubação de doenças, tempos
+  de sobrevivência em certos contextos, concentração (positiva) de
+  substâncias em fluidos biológicos
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Distribuição Log-Normal}
+\phantomsection\label{distribuiuxe7uxe3o-log-normal-16}
+\begin{enumerate}
+[1)]
+\setcounter{enumi}{2}
+\tightlist
+\item
+  \textbf{Engenharias/Confiabilidade:} vida útil de componentes quando o
+  desgaste é multiplicativo, dureza de materiais, diâmetro de partículas
+  (tamanho de grãos)
+\end{enumerate}
+
+\pause
+
+\begin{enumerate}
+[1)]
+\setcounter{enumi}{3}
+\tightlist
+\item
+  \textbf{Ciências Ambientais:} distribuição de poluentes positivos
+  (\(CO_2\), etc.), precipitação acumulada em certos modelos
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Distribuição Log-Normal}
+\phantomsection\label{distribuiuxe7uxe3o-log-normal-17}
+\textbf{Exemplo 07:} A duração do atendimento de cada cliente no caixa
+de um supermercado tem distribuição Lognormal com parâmetro de locação
+\(\mu = 1,5\) e parâmetro de dispersão \(\sigma = 0,5\).
+
+\begin{enumerate}
+[a)]
+\tightlist
+\item
+  Qual a média e variância da duração dos atendimentos? \textbf{R:}
+  \(E(X) = 5,0784\) e \(Var(x) = 7,3251\)
+\item
+  Qual a probabilidade de um atendimento durar menos de 5 minutos?
+  \textbf{R:} \(0,5871\)
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Distribuição Log-Normal}
+\phantomsection\label{distribuiuxe7uxe3o-log-normal-18}
+\textbf{Exemplo 08:} Considere o tempo de reparo \(X\) (em horas) de
+equipamentos. Admita que \[
+\ln(X) \sim N(\mu,\sigma^2), \qquad \mu=0,2\,\,\,\,\text{e}\,\,\,\, \sigma=0,6.
+\]
+
+Responda:
+
+\begin{enumerate}
+[a)]
+\tightlist
+\item
+  Calcule \(P(X \le 1,5)\). \textbf{R:} \(0,6331\)\\
+\item
+  Calcule \(P(1 \le X \le 3)\). \textbf{R:} \(0,5625\)
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Distribuição Exponencial Dupla}
+\phantomsection\label{distribuiuxe7uxe3o-exponencial-dupla}
+Também conhecida como \emph{Distribuição de Laplace}, é formada por
+reflexão da distribuição exponencial em torno da média.
+
+\pause
+
+Se \(X \sim Laplace(a, b)\), então sua função densidade é dada por
+
+\[
+f(x)= \frac{1}{2b}\, \exp\!\left(-\frac{|x-a|}{b}\right), \qquad -\infty < x < \infty,\; -\infty < a < \infty,\; b > 0.
+\]
+
+Nesta parametrização:
+
+\begin{itemize}
+\item
+  \(a\): parâmetro de localização (a média e mediana da distribuição).
+\item
+  \(b\): parâmetro de escala (controla a dispersão; quanto maior \(b\),
+  mais ``achatada'' é a curva).
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Distribuição Exponencial Dupla}
+\phantomsection\label{distribuiuxe7uxe3o-exponencial-dupla-1}
+\begin{itemize}
+\tightlist
+\item
+  Para \(x \ge a\), exponencial decaindo para a direita
+\end{itemize}
+
+\[
+f(x)= \frac{1}{2b}\, \exp\!\left(-\frac{x-a}{b}\right)
+\]
+
+\begin{itemize}
+\tightlist
+\item
+  Para \(x < a\), exponencial decaindo para a esquerda
+\end{itemize}
+
+\[
+f(x)= \frac{1}{2b}\, \exp\!\left(\frac{x-a}{b}\right)
+\]
+\end{frame}
+
+\begin{frame}{Aparte: Funções Pares e Ímpares}
+\phantomsection\label{aparte-funuxe7uxf5es-pares-e-uxedmpares}
+\textbf{Definições:}
+
+\begin{itemize}
+\tightlist
+\item
+  Uma função \(f(x)\) é \textbf{par} se
+\end{itemize}
+
+\[  f(-x) = f(x), \quad \forall x\]
+
+→ Gráfico \textbf{simétrico em relação ao eixo y}. Exemplos:
+\(f(x) = x^2, \cos x, e^{-x^2}\)
+
+\begin{itemize}
+\tightlist
+\item
+  Uma função \(f(x)\) é \textbf{ímpar} se
+\end{itemize}
+
+\[f(-x) = -f(x), \quad \forall x\] → Gráfico \textbf{simétrico em
+relação à origem}. Exemplos: \(f(x) = x^3, \sin x, x e^{-x^2}\)
+\end{frame}
+
+\begin{frame}{Aparte: Funções Pares e Ímpares}
+\phantomsection\label{aparte-funuxe7uxf5es-pares-e-uxedmpares-1}
+Para integrais \textbf{em intervalos simétricos} \([-a, a]\):
+
+\begin{itemize}
+\tightlist
+\item
+  Se \(f(x)\) é \textbf{par}:
+\end{itemize}
+
+\[\int_{-a}^{a} f(x)\,dx = 2\int_{0}^{a} f(x)\,dx\]
+
+\begin{itemize}
+\tightlist
+\item
+  Se \(f(x)\) é \textbf{ímpar}:
+\end{itemize}
+
+\[\int_{-a}^{a} f(x)\,dx = 0\]
+\end{frame}
+
+\begin{frame}{Distribuição Exponencial Dupla}
+\phantomsection\label{distribuiuxe7uxe3o-exponencial-dupla-2}
+Vamos encontrar \(E(X)\). Para isso, tomamos \(Z = X-a\). Logo,
+\(Z \sim Laplace(0,b)\) com
+
+\[
+f_Z(z)= \dfrac{1}{2b}\, \exp\!\left(-\frac{|z|}{b}\right)
+\] e \(E(X) = E(Z + a) = E(Z) + a\)
+
+\[
+\begin{aligned}
+E(Z)
+ &= \int_{-\infty}^{\infty} z\,f_Z(z)\,dz
+  = \frac{1}{2b} \int_{-\infty}^{\infty} z\,e^{-|z|/b}\,dz \\[6pt]
+ &= \frac{1}{2b}
+    \left(
+      \int_{-\infty}^{0} z\,e^{z/b}\,dz
+      +
+      \int_{0}^{\infty} z\,e^{-z/b}\,dz
+    \right)
+\end{aligned}
+\]
+\end{frame}
+
+\begin{frame}{Distribuição Exponencial Dupla}
+\phantomsection\label{distribuiuxe7uxe3o-exponencial-dupla-3}
+Note que o integrando \(z\,e^{-|z|/b}\) é \textbf{ímpar}, portanto as
+áreas se cancelam:
+
+\[E(Z)=0\]
+
+de forma que,
+
+\[E(X)= E(Z+a) = E(Z) + a = a\]
+
+Logo,
+
+\[\boxed{E(X)=a}\]
+\end{frame}
+
+\begin{frame}{Distribuição Exponencial Dupla}
+\phantomsection\label{distribuiuxe7uxe3o-exponencial-dupla-4}
+Cálculo de \(Var(Z)=E(Z^2)\) (pois \((E(Z)=0\)):
+
+\[
+\begin{aligned}
+E(Z^{2})
+ &= \int_{-\infty}^{\infty} z^{2}\,f_Z(z)\,dz \\[6pt]
+ &= \int_{-\infty}^{\infty} z^{2}\,\frac{1}{2b}\,e^{-|z|/b}\,dz
+\end{aligned}
+\]
+
+Como o integrando é \textbf{par},
+
+\[
+E(Z^2)=\int_{0}^{\infty} z^{2} \frac{1}{b} e^{-z/b}\,dz
+\]
+
+Faça a mudança \(y=z/b\Rightarrow z=by,\ dz=b\,dy\)
+\end{frame}
+
+\begin{frame}{Distribuição Exponencial Dupla}
+\phantomsection\label{distribuiuxe7uxe3o-exponencial-dupla-5}
+\[
+\begin{aligned}
+E(Z^{2})
+ &= \int_{0}^{\infty} z^{2}\,\frac{1}{b}\,e^{-z/b}\,dz \\[6pt]
+ &= \int_{0}^{\infty} (b y)^{2}\,\frac{1}{b}\,e^{-y}\,b\,dy \\[6pt]
+ &= b^{2}\int_{0}^{\infty} y^{2} e^{-y}\,dy
+\end{aligned}
+\]
+\end{frame}
+
+\begin{frame}{Distribuição Exponencial Dupla}
+\phantomsection\label{distribuiuxe7uxe3o-exponencial-dupla-6}
+Pela definição da função Gama,
+
+\[\int_{0}^{\infty} y^{2} e^{-y}\,dy=\Gamma(3)=2!\]
+
+Portanto,
+
+\[E(Z^2)=b^{2}\cdot 2 = 2b^{2}\]
+
+\pause
+
+Como \(Var(X)=Var(Z)=E(Z^2)\),
+
+\[\boxed{Var(X)=2b^{2}}\]
+\end{frame}
+
+\begin{frame}{Distribuição Exponencial Dupla}
+\phantomsection\label{distribuiuxe7uxe3o-exponencial-dupla-7}
+Se \(X \sim Laplace(a, b)\), então
+
+\[
+f(x)= \frac{1}{2b}\, \exp\!\left(-\frac{|x-a|}{b}\right), \qquad -\infty < x < \infty,\; -\infty < a < \infty,\; b > 0.
+\]
+
+com
+
+\[E(X) = a \,\,\,\,\,\,\,\,\,\,\,\, \text{       e       } \,\,\,\,\,\,\,\,\,\,\,\,Var(X) = 2b^{2}\]
+\end{frame}
+
+\begin{frame}{Distribuição Exponencial Dupla}
+\phantomsection\label{distribuiuxe7uxe3o-exponencial-dupla-8}
+Se \(X \sim Laplace(a,b)\), então,
+
+\[F(x)=P(X\le x)=\int_{-\infty}^{x} f(t)\,dt = \int_{-\infty}^{x} \frac{1}{2b}e^{-\frac{|t-a|}{b}}\,dt\]
+
+Como a função é definida por módulos, dividimos o cálculo em
+\textbf{dois casos}.
+
+\pause
+
+\textbf{Caso 1:} \(x < a\)
+
+Neste intervalo, \(|t-a|=a-t\). Logo
+
+\[F(x)=\int_{-\infty}^{x}\frac{1}{2b}e^{-(a-t)/b}\,dt
+=\frac{1}{2b}e^{-a/b}\int_{-\infty}^{x}e^{t/b}\,dt\]
+\end{frame}
+
+\begin{frame}{Distribuição Exponencial Dupla}
+\phantomsection\label{distribuiuxe7uxe3o-exponencial-dupla-9}
+Calculando a integral:
+
+\[\int_{-\infty}^{x} e^{t/b}\,dt = \Big[b\,e^{t/b}\Big]_{-\infty}^{x} = b\,e^{x/b} - b\,\lim_{t\to -\infty} e^{t/b} = b\,e^{x/b}\]
+
+Uma vez que \(\lim_{t\to -\infty} e^{t/b}=0\). Então:
+
+\[F(x)=\frac{1}{2b}e^{-a/b}\,b\,e^{x/b} =\dfrac{1}{2} e^{\Big({\dfrac{x-a}{b}}\Big)}, \qquad x<a\]
+\end{frame}
+
+\begin{frame}{Distribuição Exponencial Dupla}
+\phantomsection\label{distribuiuxe7uxe3o-exponencial-dupla-10}
+\textbf{Caso 2:} \(x \ge a\)
+
+Aqui \(|t-a|=t-a\). Assim:
+
+\[F(x)=\int_{-\infty}^{a}\frac{1}{2b}e^{-(a-t)/b}\,dt + \int_{a}^{x}\frac{1}{2b}e^{-(t-a)/b}\,dt\]
+
+A primeira integral resulta em:
+
+\[
+\begin{aligned}
+\int_{-\infty}^{a} \frac{1}{2b}\, e^{-(a-t)/b}\,dt
+ &= \frac{e^{-a/b}}{2b}\int_{-\infty}^{a} e^{t/b}\,dt = \frac{e^{-a/b}}{2b}\,\Big[b\,e^{t/b}\Big]_{-\infty}^{a} \\[6pt]
+ &= \frac{e^{-a/b}}{2b}\,\Big(b\,e^{a/b}-0\Big) = \frac{1}{2}\,e^{-a/b}e^{a/b} = \frac{1}{2}
+\end{aligned}
+\]
+\end{frame}
+
+\begin{frame}{Distribuição Exponencial Dupla}
+\phantomsection\label{distribuiuxe7uxe3o-exponencial-dupla-11}
+Para a segunda integral, fazemos a substituição
+\(u = t - a  \Rightarrow  du = dt\). Quando \(t = a \Rightarrow u = 0\)
+e quando \(t = x \Rightarrow u = x - a\).
+
+\[
+\begin{aligned}
+\int_{a}^{x}\frac{1}{2b}\,e^{-(t-a)/b}\,dt 
+ &= \frac{1}{2b}\int_{0}^{\,x-a} e^{-u/b}\,du = \frac{1}{2b}\left[-b\,e^{-u/b}\right]_{0}^{\,x-a} \\[6pt]
+ &= \frac{1}{2b}\left[-b\,e^{-(x-a)/b} + b\right] = \frac{1}{2b}\cdot b\,(1 - e^{-(x-a)/b}) \\[6pt]
+ &= \frac{1}{2}\left(1 - e^{-\frac{x-a}{b}}\right)
+\end{aligned}
+\]
+\end{frame}
+
+\begin{frame}{Distribuição Exponencial Dupla}
+\phantomsection\label{distribuiuxe7uxe3o-exponencial-dupla-12}
+Somando:
+
+\[ F(x)=\frac{1}{2}+\frac{1}{2}(1-e^{-(x-a)/b}) =1 - \dfrac{1}{2} e^{-\Big(\dfrac{x-a}{b}\Big)}, \qquad x\ge a\]
+Logo, se \(X \sim Laplace(a,b)\), então
+
+\[
+F(x)=
+\begin{cases}
+\dfrac{1}{2} e^{\Big({\dfrac{x-a}{b}}\Big)}, & x<a, \\[8pt]
+1 - \dfrac{1}{2} e^{-\Big(\dfrac{x-a}{b}\Big)}, & x\ge a
+\end{cases}
+\]
+\end{frame}
+
+\begin{frame}{Distribuição Exponencial Dupla}
+\phantomsection\label{distribuiuxe7uxe3o-exponencial-dupla-13}
+\begin{figure}
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{outras_dist_continuas_files/figure-beamer/fig-laplace-densidades-1.pdf}}
+
+}
+
+\caption{\label{fig-laplace-densidades}Distribuição Laplace ---
+diferentes parâmetros (função densidade)}
+
+\end{figure}%
+\end{frame}
+
+\begin{frame}{Distribuição Exponencial Dupla}
+\phantomsection\label{distribuiuxe7uxe3o-exponencial-dupla-14}
+\begin{figure}
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{outras_dist_continuas_files/figure-beamer/fig-laplace-fdc-1.pdf}}
+
+}
+
+\caption{\label{fig-laplace-fdc}Distribuição Laplace --- diferentes
+parâmetros (função de distribuição acumulada)}
+
+\end{figure}%
+\end{frame}
+
+\begin{frame}{Distribuição Exponencial Dupla}
+\phantomsection\label{distribuiuxe7uxe3o-exponencial-dupla-15}
+A distribuição Laplace (também chamada de exponencial dupla) aparece em
+diversas áreas onde há simetria, mas com caudas mais pesadas que a
+normal.
+
+\begin{figure}
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{outras_dist_continuas_files/figure-beamer/fig-laplace-vs-normal-side-1.pdf}}
+
+}
+
+\caption{\label{fig-laplace-vs-normal-side}Comparação lado a lado:
+Laplace(0, 1/√2) vs Normal(0,1)}
+
+\end{figure}%
+\end{frame}
+
+\begin{frame}{Distribuição Exponencial Dupla}
+\phantomsection\label{distribuiuxe7uxe3o-exponencial-dupla-16}
+\begin{itemize}
+\item
+  No painel esquerdo (escala linear): a Laplace tem pico mais alto e
+  mais pontudo no centro.
+\item
+  No painel direito (escala log): as caudas da Laplace decaem mais
+  lentamente que as da Normal --- ou seja, a Laplace tem caudas mais
+  pesadas.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Distribuição Exponencial Dupla}
+\phantomsection\label{distribuiuxe7uxe3o-exponencial-dupla-17}
+\begin{figure}
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{outras_dist_continuas_files/figure-beamer/fig-norm-vs-laplace-cdf-1.pdf}}
+
+}
+
+\caption{\label{fig-norm-vs-laplace-cdf}CDF: Normal(0,1) vs Laplace(0,
+1/√2)}
+
+\end{figure}%
+\end{frame}
+
+\begin{frame}{Distribuição Exponencial Dupla}
+\phantomsection\label{distribuiuxe7uxe3o-exponencial-dupla-18}
+\begin{enumerate}
+\tightlist
+\item
+  \textbf{Modelagem de Erros e Ruídos:} Em muitos fenômenos, os erros
+  são simétricos, mas com maior probabilidade de valores extremos do que
+  uma normal permitiria.
+\end{enumerate}
+
+\pause
+
+\begin{enumerate}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  \textbf{Economia e Finanças:} Em séries de retornos de ativos
+  financeiros, é comum observar distribuições simétricas com caudas
+  longas.
+\end{enumerate}
+
+\pause
+
+\begin{enumerate}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  \textbf{Engenharia de Processos e Controle:} Modelagem de diferenças
+  entre medições ou resíduos em sistemas físicos. Muito usada em filtros
+  robustos e em controle adaptativo, pois é menos sensível a outliers do
+  que a Normal.
+\end{enumerate}
+
+\pause
+
+\begin{enumerate}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  \textbf{Processamento de Sinais e Imagens:} Em processamento de
+  imagem, a distribuição Laplace descreve coeficientes de transformadas,
+  especialmente onde há bordas ou ruídos bruscos. Também aparece em
+  compressão de imagem e remoção de ruído impulsivo.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Distribuição Exponencial Dupla}
+\phantomsection\label{distribuiuxe7uxe3o-exponencial-dupla-19}
+\begin{enumerate}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  \textbf{Ciência de Dados e Estatística Robusta:} O modelo Laplace é
+  base para a Regressão de Mínima Soma de Desvios Absolutos (LAD),
+  também chamada regressão mediana. O estimador de máxima
+  verossimilhança sob erro Laplace é o estimador da mediana, o que torna
+  a Laplace uma escolha natural para modelos robustos a outliers.
+\end{enumerate}
+
+\pause
+
+\begin{enumerate}
+\setcounter{enumi}{5}
+\tightlist
+\item
+  \textbf{Privacidade Diferencial:} Em Ciência de Dados, o
+  \textbf{Mecanismo Laplace} é usado para adicionar ruído calibrado e
+  proteger dados sensíveis. A distribuição Laplace permite controlar a
+  quantidade de ruído adicionada de acordo com o parâmetro de
+  privacidade \(\epsilon\).
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Distribuição Exponencial Dupla}
+\phantomsection\label{distribuiuxe7uxe3o-exponencial-dupla-20}
+\textbf{Exemplo 09:} Considere que o retorno financeiro de dado
+investimento possa ser modelado de acordo com um distribuição de
+Laplace, com parâmetros \(a = \, R\$ \, 1 \text{milhão}\) e
+\(b = 20 \, \text{mil}\).
+
+\begin{enumerate}
+[a)]
+\tightlist
+\item
+  Calcule a probabilidade do retorno ser superior a
+  \(R\$ \, 1.020.000,00\). \textbf{R:} \(0,1839\)
+\item
+  Calcule a probabilidade do retorno ser inferior a
+  \(R\$ \, 940.000,00\). \textbf{R:} \(0,0249\)
+\item
+  Calcule a probabilidade do retorno ficar entre \(R\$ \, 940.000,00\) e
+  \(R\$ \, 1.020.000,00\). \textbf{R:} \(0,7912\)
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Distribuição Exponencial Dupla}
+\phantomsection\label{distribuiuxe7uxe3o-exponencial-dupla-21}
+\textbf{Exemplo 10:} Uma câmera digital utilizada em um ambiente
+industrial está sujeita a \textbf{reflexos de luz intensa} e
+\textbf{interferências elétricas}, que produzem \textbf{ruído impulsivo}
+nas imagens. Esse ruído pode ser modelado pela \textbf{distribuição de
+Laplace}, cuja função densidade de probabilidade é dada por:
+
+\[f(x) = \frac{1}{2b}\, e^{-\frac{|x - a|}{b}}, \quad -\infty < x < \infty,\]
+
+onde: - \(a\) é o valor médio (esperado) do ruído, - \(b\) é o parâmetro
+de escala que controla a dispersão.
+
+Em uma determinada medição, assume-se que:
+
+\[a = 0, \quad b = 10\]
+\end{frame}
+
+\begin{frame}{Distribuição Exponencial Dupla}
+\phantomsection\label{distribuiuxe7uxe3o-exponencial-dupla-22}
+\begin{enumerate}
+[a)]
+\item
+  Calcule a probabilidade de que a perturbação no brilho de um pixel
+  seja \textbf{maior que 20 unidades} em valor absoluto (ou seja,
+  (\textbar X\textbar{} \textgreater{} 20)). \textbf{R:} \(0,1353\)
+\item
+  Calcule a probabilidade de que a variação do brilho esteja
+  \textbf{entre -15 e 15 unidades}. \textbf{R:} \(0,7769\)
+\item
+  Compare esse comportamento com o ruído Gaussiano \(N(0, 10^2)\). O
+  ruído Laplaciano gera mais ou menos pixels ``fora da faixa normal''
+  (\(|X| > 20\))? Explique o motivo, relacionando ao formato das caudas.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Distribuição Exponencial Dupla}
+\phantomsection\label{distribuiuxe7uxe3o-exponencial-dupla-23}
+\begin{figure}[H]
+
+{\centering \pandocbounded{\includegraphics[keepaspectratio]{outras_dist_continuas_files/figure-beamer/laplace-noise-exercise-1.pdf}}
+
+}
+
+\caption{Ruído Laplaciano (a=0, b=10) e comparação com Normal(0,10)}
+
+\end{figure}%
+\end{frame}
+
+\begin{frame}{Distribuição de Valores Extremos}
+\phantomsection\label{distribuiuxe7uxe3o-de-valores-extremos}
+Em muitas situações práticas, não estamos interessados na média ou no
+comportamento típico dos dados, mas sim nos eventos extremos, os maiores
+ou menores valores observados.
+
+Assim, temos duas possibilidades:
+
+\begin{itemize}
+\tightlist
+\item
+  Distribuição do Menor Valor Extremo
+\item
+  Distribuição do Maior Valor Extremo
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Distribuição de Valores Extremos}
+\phantomsection\label{distribuiuxe7uxe3o-de-valores-extremos-1}
+A \textbf{Distribuição de Gumbel} é um caso particular da teoria dos
+valores extremos. Ela descreve o comportamento assintótico de
+\textbf{máximos} ou \textbf{mínimos} em grandes amostras.
+
+\pause
+
+\begin{enumerate}
+\tightlist
+\item
+  Distribuição do \textbf{Maior Valor Extremo} (Gumbel Máximo)
+\end{enumerate}
+
+Usada para modelar \textbf{valores máximos} observados, por exemplo:
+
+\begin{itemize}
+\tightlist
+\item
+  a maior temperatura anual,
+\item
+  a maior cheia de um rio,
+\item
+  o maior prejuízo financeiro.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Distribuição de Valores Extremos}
+\phantomsection\label{distribuiuxe7uxe3o-de-valores-extremos-2}
+A função de distribuição acumulada (FDC) é:
+
+\[F(x) = \exp\!\left[-\,e^{-\Big(\dfrac{x-\mu}{\sigma}\Big)}\right], \qquad x \in \mathbb{R},\]
+
+onde:
+
+\begin{itemize}
+\tightlist
+\item
+  \(\mu\) é o \textbf{parâmetro de localização},
+\item
+  \(\sigma > 0\) é o \textbf{parâmetro de escala}.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Distribuição de Valores Extremos}
+\phantomsection\label{distribuiuxe7uxe3o-de-valores-extremos-3}
+A função densidade é:
+
+\[\small f(x \mid \mu, \sigma)
+= \frac{1}{\sigma}
+\exp\!\left[
+-\left(
+\frac{x - \mu}{\sigma}
+\right)
+- \exp\!\left(
+-\frac{x - \mu}{\sigma}
+\right)
+\right],
+x \in \mathbb{R},\;
+\mu \in \mathbb{R},\;
+\sigma > 0\]
+
+É possível demonstrar que,
+
+\[E(X) = \mu + \gamma\sigma,\]
+
+onde \(\gamma = 0.57721566\) é conhecida como \textbf{constante de
+Euler--Mascheroni}.
+
+e,
+
+\[Var(X) = \dfrac{\pi^2}{6}\sigma^2\]
+\end{frame}
+
+\begin{frame}{Distribuição de Valores Extremos}
+\phantomsection\label{distribuiuxe7uxe3o-de-valores-extremos-4}
+Se \(X \sim Gumbel_{\text{max}}(\mu, \sigma)\), então
+
+\[
+f(x) = \frac{1}{\sigma} \exp\!\left[-\left(\frac{x - \mu}{\sigma}\right)- \exp\!\left(-\frac{x - \mu}{\sigma}\right)\right]
+\]
+
+com
+
+\[E(X) = \mu + \gamma\sigma \,\,\,\,\,\,\,\,\,\,\,\, \text{       e       } \,\,\,\,\,\,\,\,\,\,\,\,Var(X) = \dfrac{\pi^2}{6}\sigma^2\]
+\end{frame}
+
+\begin{frame}{Distribuição de Valores Extremos}
+\phantomsection\label{distribuiuxe7uxe3o-de-valores-extremos-5}
+\begin{figure}
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{outras_dist_continuas_files/figure-beamer/fig-gumbel-max-multiplas-1.pdf}}
+
+}
+
+\caption{\label{fig-gumbel-max-multiplas}Gumbel --- Maior Valor Extremo:
+diferentes parâmetros}
+
+\end{figure}%
+\end{frame}
+
+\begin{frame}{Distribuição de Valores Extremos}
+\phantomsection\label{distribuiuxe7uxe3o-de-valores-extremos-6}
+\begin{enumerate}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Distribuição do \textbf{Menor Valor Extremo} (Gumbel Mínimo)
+\end{enumerate}
+
+Usada para modelar \textbf{valores mínimos}, por exemplo:
+
+\begin{itemize}
+\tightlist
+\item
+  a menor temperatura do inverno,
+\item
+  a menor resistência de um material antes da falha,
+\item
+  o menor tempo até um evento extremo.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Distribuição de Valores Extremos}
+\phantomsection\label{distribuiuxe7uxe3o-de-valores-extremos-7}
+A função de distribuição acumulada é:
+
+\[F(x) = 1 - \exp\!\left[-\,e^{\Big(\dfrac{x-\mu}{\sigma}\Big)}\right], \qquad x \in \mathbb{R}\]
+A função densidade correspondente é:
+
+\[
+\small
+f(x|\mu, \sigma) = \dfrac{1}{\sigma}\exp\!\left[\Big(\dfrac{x - \mu}{\sigma}\Big)- \exp\!\left(\dfrac{x - \mu}{\sigma}\right)\right],
+x \in \mathbb{R},\;
+\mu \in \mathbb{R},\;
+\sigma > 0
+\]
+\end{frame}
+
+\begin{frame}{Distribuição de Valores Extremos}
+\phantomsection\label{distribuiuxe7uxe3o-de-valores-extremos-8}
+É possível demonstrar que,
+
+\[E(X) = \mu - \gamma\sigma,\]
+
+onde \(\gamma = 0.57721566\) é a \textbf{constante de
+Euler--Mascheroni}.
+
+e,
+
+\[Var(X) = \dfrac{\pi^2}{6}\sigma^2\]
+
+\begin{itemize}
+\tightlist
+\item
+  Observe que a variância é a mesma; apenas o sinal da média muda.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Distribuição de Valores Extremos}
+\phantomsection\label{distribuiuxe7uxe3o-de-valores-extremos-9}
+Se \(X \sim Gumbel_{\text{min}}(\mu, \sigma)\), então
+
+\[
+f(x) = \dfrac{1}{\sigma}\exp\!\left[\Big(\dfrac{x - \mu}{\sigma}\Big)- \exp\!\left(\dfrac{x - \mu}{\sigma}\right)\right]
+\]
+
+com
+
+\[E(X) = \mu - \gamma\sigma \,\,\,\,\,\,\,\,\,\,\,\, \text{       e       } \,\,\,\,\,\,\,\,\,\,\,\,Var(X) = \dfrac{\pi^2}{6}\sigma^2\]
+\end{frame}
+
+\begin{frame}{Distribuição de Valores Extremos}
+\phantomsection\label{distribuiuxe7uxe3o-de-valores-extremos-10}
+\begin{figure}
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{outras_dist_continuas_files/figure-beamer/fig-gumbel-min-multiplas-1.pdf}}
+
+}
+
+\caption{\label{fig-gumbel-min-multiplas}Gumbel --- Menor Valor Extremo:
+diferentes parâmetros}
+
+\end{figure}%
+\end{frame}
+
+\begin{frame}{Distribuição de Valores Extremos}
+\phantomsection\label{distribuiuxe7uxe3o-de-valores-extremos-11}
+\textbf{Relação entre as duas formas}
+
+Note que o \textbf{Gumbel do mínimo} é obtido invertendo o sinal de
+\(x\):
+
+\[
+X_{\text{mínimo}} \sim \text{Gumbel Mínimo}(\mu, \sigma)
+\quad \Leftrightarrow \quad
+-Y \sim \text{Gumbel Máximo}(-\mu, \sigma),
+\]
+
+ou seja, o Gumbel mínimo é simplesmente o reflexo do Gumbel máximo em
+torno do eixo vertical.
+\end{frame}
+
+\begin{frame}{Distribuição de Valores Extremos}
+\phantomsection\label{distribuiuxe7uxe3o-de-valores-extremos-12}
+\begin{figure}
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{outras_dist_continuas_files/figure-beamer/fig-gumbel-comparison-1.pdf}}
+
+}
+
+\caption{\label{fig-gumbel-comparison}Comparação entre Gumbel Máximo e
+Gumbel Mínimo}
+
+\end{figure}%
+\end{frame}
+
+\begin{frame}{Distribuição de Valores Extremos}
+\phantomsection\label{distribuiuxe7uxe3o-de-valores-extremos-13}
+\begin{itemize}
+\item
+  O Gumbel Máximo tem cauda longa à direita → eventos de máximos
+  (chuvas, enchentes, picos).
+\item
+  O Gumbel Mínimo tem cauda longa à esquerda → eventos de mínimos
+  (temperaturas mínimas, falhas).
+\item
+  Parâmetro \(\mu\): define o centro.
+\item
+  Parâmetro \(\sigma\): define a dispersão e intensidade dos extremos.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Distribuição de Valores Extremos}
+\phantomsection\label{distribuiuxe7uxe3o-de-valores-extremos-14}
+\textbf{Exemplo 11:} Considere que a temperatura de operação para um
+determinado processo industrial possa ser modelada através de uma
+distribuição do Menor Valor Extremo, com parâmetros \(\mu = 30^o \,C\) e
+\(\sigma = 2\). Valores de temperatura abaixo de \(20^o\,C\) são raros,
+porém quando acontecem, inviabilizam o processo. Determine a
+probabilidade disso ocorrer, bem como a temperatura média do processo.
+\textbf{R:} \(0,0067\) \(E(X) = 28,85\)
+\end{frame}
+
+\begin{frame}{Distribuição de Valores Extremos}
+\phantomsection\label{distribuiuxe7uxe3o-de-valores-extremos-15}
+\textbf{Exemplo 12:} Uma equipe de engenheiros hidrólogos está estudando
+o nível máximo anual do Rio Paraopeba (em metros acima do leito) para
+dimensionar obras de contenção. Com base em 30 anos de registros
+históricos, o nível máximo anual pode ser modelado por uma Distribuição
+de Gumbel do Máximo com parâmetros:
+
+\[\mu = 6 \,\,\text{m} \,\,\,\text{       e       } \,\,\,\sigma = 0,4\]
+
+Quer-se saber:
+
+\begin{enumerate}
+[a)]
+\tightlist
+\item
+  Qual é a probabilidade de o nível máximo anual ultrapassar 7 metros?
+  \textbf{R:} \(0,0789\)
+\item
+  Qual é o nível esperado (médio) das cheias anuais?\textbf{R:}
+  \(6,23 \, \text{m}\)
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Distribuição de Valores Extremos}
+\phantomsection\label{distribuiuxe7uxe3o-de-valores-extremos-16}
+\begin{figure}
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{outras_dist_continuas_files/figure-beamer/fig-gumbel-max-exemplo-1.pdf}}
+
+}
+
+\caption{\label{fig-gumbel-max-exemplo}Distribuição de Gumbel (Maior
+Valor Extremo) --- Exemplo: nível máximo anual do Rio Paraopeba}
+
+\end{figure}%
+\end{frame}
+
+
+
+
+\end{document}

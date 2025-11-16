@@ -11,6 +11,9 @@ format:
     preview-links: auto
     self-contained: false
     embed-resources: false
+  beamer:          # Slides em PDF (LaTeX/Beamer)
+    aspectratio: 169   # 16:9
+    keep-tex: true     # opcional, guarda o .tex gerado
 incremental: false
 code-link: true
 bibliography: references.bib
@@ -78,10 +81,15 @@ iii) $\Gamma(1/2) = \sqrt{(\pi)}$
 i) Resolvendo a integral por partes, fazendo $u = y^{\alpha - 1}$ e $dv = e^{-y} dy$, temos
 
 $$
-\begin{eqnarray}
-\Gamma(\alpha) &=& - e^{-y} y^{\alpha-1}\Big|_0^\infty + \int_0^\infty e^{-y} (\alpha - 1) y^{\alpha-2} \, dy \\ &=& (\alpha - 1)\int_0^\infty e^{-y} y^{\alpha-2} \, dy \\ &=& (\alpha - 1)\Gamma(\alpha - 1) 
-\end{eqnarray}
+\begin{aligned}
+\Gamma(\alpha)
+ &= -\, e^{-y}\,y^{\alpha-1}\Big|_{0}^{\infty}
+    + \int_{0}^{\infty} e^{-y}(\alpha-1)\,y^{\alpha-2}\,dy \\[6pt]
+ &= (\alpha - 1)\int_{0}^{\infty} e^{-y} y^{\alpha-2}\,dy \\[6pt]
+ &= (\alpha - 1)\,\Gamma(\alpha - 1).
+\end{aligned}
 $$
+
 
 ## Função Gamma 
 
@@ -89,17 +97,20 @@ ii) Para valores inteiros positivos de $\alpha$, por exemplo $\alpha = n$, temos
 
 
 $$
-\begin{eqnarray}
-\Gamma(n) &=& (n-1)\Gamma(n-1) \\ &=& (n-1)(n-2)\Gamma(n-2) \\ &=& \cdots \\ &=& (n-1)(n-2)\cdots 3\cdot 2\cdot \Gamma(1)
-\end{eqnarray}
+\begin{aligned}
+\Gamma(n)
+ &= (n-1)\,\Gamma(n-1) \\[6pt]
+ &= (n-1)(n-2)\,\Gamma(n-2) \\[6pt]
+ &= \cdots \\[6pt]
+ &= (n-1)(n-2)\cdots 3\cdot 2\cdot \Gamma(1).
+\end{aligned}
 $$
+
 
 Como 
 
 $$
-\begin{eqnarray}
-\Gamma(1) &=& \int_{0}^{\infty} e^{-y} \, y^{1-1} \, dy = \int_{0}^{\infty} e^{-y} dy = \lim_{t \to +\infty} \int_{0}^{t} e^{-t} dt = \lim_{t \to +\infty} (-e^{-t} + e^0) = 1
-\end{eqnarray}
+\Gamma(1) = \int_{0}^{\infty} e^{-y} \, y^{1-1} \, dy = \int_{0}^{\infty} e^{-y} dy = \lim_{t \to +\infty} \int_{0}^{t} e^{-t} dt = \lim_{t \to +\infty} (-e^{-t} + e^0) = 1
 $$
 
 
@@ -116,9 +127,7 @@ Temos que $\Gamma(\alpha) = \int_{0}^{\infty} e^{-y} \, y^{\alpha-1} \, dy$. Faz
 
 
 $$
-\begin{eqnarray}
-\Gamma(\alpha) &=& \int_{0}^{\infty} e^{-y} \, y^{\alpha-1} \, dy = \int_{0}^{\infty} e^{-u^2} \, u^{2\alpha-2} \, 2udu = 2\int_{0}^{\infty} e^{-u^2}u^{2\alpha-1}du
-\end{eqnarray}
+\Gamma(\alpha) = \int_{0}^{\infty} e^{-y} \, y^{\alpha-1} \, dy = \int_{0}^{\infty} e^{-u^2} \, u^{2\alpha-2} \, 2u\,du = 2\int_{0}^{\infty} e^{-u^2}u^{2\alpha-1}du
 $$
 
 
@@ -144,9 +153,7 @@ $$ \left[ \Gamma(\alpha) \right]^2 = 4\int_0^\infty\int_0^\infty x^{2\alpha-1}  
 Tomando $\alpha = \dfrac{1}{2}$, temos $2 \alpha - 1 = 0$ e assim,
 
 $$
-\begin{eqnarray}
 \displaystyle \left[ \Gamma \left({\frac {1}{2}}\right) \right]^2 = 4\int_0^\infty\int_0^\infty  e^{-(x^2+y^2)} dx dy
-\end{eqnarray}
 $$
 
 
@@ -173,17 +180,24 @@ A unidade infinitesimal de área $dx\text{ }dy$ corresponde à unidade infinites
 Além disso, integrar com tanto \emph{x} como \emph{y} variando de zero a infinito corresponde a integrar no primeiro quadrante, que, no sistema de coordenadas polares, consiste em integrar com $\theta$ variando de 0 a $\pi /2$ e \emph{r} variando de 0 a infinito. 
 
 
-. . .
+## Função Gamma 
+
 
 Assim,
 
 
-$$ 
-\small
-\begin{eqnarray}
-\left[ \Gamma\left( \frac{1}{2}\right) \right]^2 &=& 4\int_0^{\pi/2}\int_0^\infty e^{-r^2} r\text{ } dr d\theta = 4\int_0^{\pi/2} d\theta \int_0^\infty e^{-r^2} r\text{ } dr = 4\int_0^{\pi/2} d\theta  \left[ -\frac{e^{-r^2}}{2} \right]_0^\infty \\ &=& 4\int_0^{\pi/2} d\theta \left( \frac{1}{2} \right)  = 2\int_0^{\pi/2}1\text{ } d\theta   = 2 \left. \theta \right|_0^{\pi/2} = \pi
-\end{eqnarray}
+
 $$
+\begin{aligned}
+\left[\Gamma\!\left(\frac12\right)\right]^2
+ &= 4 \int_{0}^{\pi/2} \int_{0}^{\infty} e^{-r^{2}}\, r\, dr\, d\theta = 4 \int_{0}^{\pi/2} d\theta \int_{0}^{\infty} e^{-r^{2}}\, r\, dr \\[6pt]
+ &= 4 \int_{0}^{\pi/2} d\theta
+    \left[ -\frac{e^{-r^{2}}}{2} \right]_{0}^{\infty} = 4 \int_{0}^{\pi/2} \left(\frac12\right)\, d\theta \\[6pt]
+ &= 2 \int_{0}^{\pi/2} 1\, d\theta = 2\,\theta\Big|_{0}^{\pi/2} = \pi
+\end{aligned}
+$$
+
+
 
 
 
@@ -231,10 +245,20 @@ Se $X \sim Gamma(\alpha, \lambda)$, então
 
 
 $$
-\begin{eqnarray}
-E[X] &=& \frac{1}{\Gamma(\alpha)} \int_0^\infty x \lambda  e^{-\lambda x} (\lambda x)^{\alpha-1}\,dx \\ &=& \frac{1}{\Gamma(\alpha)} \int_0^\infty e^{-\lambda x} (\lambda x)^{\alpha}\, dx \\ &=& \frac{1}{\lambda \Gamma(\alpha)} \int_0^\infty e^{-u} (u)^{\alpha}\, du \\ &=& \frac{\Gamma(\alpha+1)}{\lambda \,\Gamma(\alpha)} = \frac{\alpha \Gamma(\alpha)}{\lambda \,\Gamma(\alpha)} = \dfrac{\alpha}{\lambda}
-\end{eqnarray}
+\begin{aligned}
+E[X]
+ &= \frac{1}{\Gamma(\alpha)}
+    \int_{0}^{\infty} x\,\lambda\,e^{-\lambda x}(\lambda x)^{\alpha-1}\,dx \\[6pt]
+ &= \frac{1}{\Gamma(\alpha)}
+    \int_{0}^{\infty} e^{-\lambda x}(\lambda x)^{\alpha}\,dx \\[6pt]
+ &= \frac{1}{\lambda\,\Gamma(\alpha)}
+    \int_{0}^{\infty} e^{-u}\,u^{\alpha}\,du \\[6pt]
+ &= \frac{\Gamma(\alpha+1)}{\lambda\,\Gamma(\alpha)}
+  = \frac{\alpha\,\Gamma(\alpha)}{\lambda\,\Gamma(\alpha)}
+  = \frac{\alpha}{\lambda}.
+\end{aligned}
 $$
+
 
 
 
@@ -245,10 +269,23 @@ $$
 
 
 $$
-\begin{eqnarray}
-E[X^2] &=& \frac{1}{\Gamma(\alpha)} \int_0^\infty x^2 \lambda  e^{-\lambda x} (\lambda x)^{\alpha-1}\,dx = \frac{1}{\Gamma(\alpha)} \int_0^\infty x^2 \lambda e^{-\lambda x} \lambda^{\alpha -1} x^{\alpha-1}\, dx \\ &=& \frac{1}{\Gamma(\alpha)} \int_0^\infty e^{-\lambda x} \lambda^{\alpha}x^{\alpha+1}\, dx = \frac{\lambda^{\alpha}}{\Gamma(\alpha)} \int_0^\infty e^{-\lambda x} x^{\alpha+1}\, dx \\ &=& \frac{\lambda^{\alpha}}{\Gamma(\alpha)} \int_0^\infty e^{-u} \left(\dfrac{u}{\lambda}\right)^{\alpha+1}\,\left(\dfrac{1}{\lambda}\right) du  = \frac{\lambda^{\alpha}}{\lambda^{\alpha +2}\Gamma(\alpha)} \int_0^\infty e^{-u} u^{\alpha+1}\, du \\ &=& \frac{\lambda^{\alpha}\Gamma(\alpha+2)}{\lambda^{\alpha +2} \,\Gamma(\alpha)} = \frac{(\alpha+1) \Gamma(\alpha+1)}{\lambda^2 \,\Gamma(\alpha)} =  \frac{(\alpha+1)\alpha \Gamma(\alpha)}{\lambda^2 \,\Gamma(\alpha)} =  \dfrac{\alpha (\alpha+1)}{\lambda^2} 
-\end{eqnarray}
+\begin{aligned}
+E[X^{2}]
+ &= \frac{1}{\Gamma(\alpha)}
+    \int_{0}^{\infty} x^{2}\,\lambda\,e^{-\lambda x}(\lambda x)^{\alpha-1}\,dx = \frac{1}{\Gamma(\alpha)}
+    \int_{0}^{\infty} e^{-\lambda x}\,\lambda^{\alpha}\,x^{\alpha+1}\,dx \\[6pt]
+ &= \frac{\lambda^{\alpha}}{\Gamma(\alpha)}
+    \int_{0}^{\infty} e^{-\lambda x}\,x^{\alpha+1}\,dx = \frac{\lambda^{\alpha}}{\Gamma(\alpha)}
+    \int_{0}^{\infty} e^{-u}\left(\frac{u}{\lambda}\right)^{\alpha+1}
+    \left(\frac{1}{\lambda}\right)\,du \\[6pt]
+ &= \frac{\lambda^{\alpha}}{\lambda^{\alpha+2}\,\Gamma(\alpha)}
+    \int_{0}^{\infty} e^{-u}\,u^{\alpha+1}\,du = \frac{\lambda^{\alpha}\,\Gamma(\alpha+2)}
+        {\lambda^{\alpha+2}\,\Gamma(\alpha)} \\[6pt]
+ &= \frac{(\alpha+1)\Gamma(\alpha+1)}
+        {\lambda^{2}\,\Gamma(\alpha)} = \frac{(\alpha+1)\alpha\,\Gamma(\alpha)}{\lambda^{2}\,\Gamma(\alpha)}= \frac{\alpha(\alpha+1)}{\lambda^{2}}
+\end{aligned}
 $$
+
 
 
 ## Distribuição Gamma
@@ -257,10 +294,18 @@ De forma que,
 
 
 $$
-\begin{eqnarray}
-Var(X) &=& E(X^2) - \left[E(X)\right]^2 \\ &=& \dfrac{\alpha (\alpha+1)}{\lambda^2} - \left[\dfrac{\alpha}{\lambda}\right]^2 \\ &=& \dfrac{\alpha^2 + \alpha}{\lambda^2} - \dfrac{\alpha^2}{\lambda^2} \\ &=& \dfrac{\alpha^2 + \alpha - \alpha^2}{\lambda^2} = \dfrac{\alpha}{\lambda^2}
-\end{eqnarray}
+\begin{aligned}
+\operatorname{Var}(X)
+ &= E(X^{2}) - [E(X)]^{2} \\[6pt]
+ &= \frac{\alpha(\alpha+1)}{\lambda^{2}}
+    - \left(\frac{\alpha}{\lambda}\right)^{2} \\[6pt]
+ &= \frac{\alpha^{2}+\alpha}{\lambda^{2}}
+    - \frac{\alpha^{2}}{\lambda^{2}} \\[6pt]
+ &= \frac{\alpha^{2}+\alpha-\alpha^{2}}{\lambda^{2}} \\[6pt]
+ &= \frac{\alpha}{\lambda^{2}}.
+\end{aligned}
 $$
+
 
 
 ## Distribuição Gamma
@@ -460,9 +505,7 @@ Assim, para $\alpha = \dfrac{n}{2}$ e $\lambda = \dfrac{1}{2}$,
 
 
 $$
-\begin{eqnarray}
 f(x) = \dfrac{\frac{1}{2} e^{-\frac{x}{2}}\left(\frac{x}{2}\right)^{\frac{n}{2}-1}}{\Gamma \left(\frac{n}{2}\right)} =  \dfrac{\frac{e^{-\frac{x}{2}}}{2} \left(\frac{x ^{\frac{n}{2}-1}}{2^{\frac{n}{2}-1}}\right)}{\Gamma \left(\frac{n}{2}\right)} = \dfrac{\frac{e^{-\frac{x}{2}} x ^{\frac{n}{2}-1}}{2^{\frac{n}{2}}}}{\Gamma \left(\frac{n}{2}\right)} = \dfrac{1}{2^{\frac{n}{2}} \Gamma \left(\frac{n}{2}\right)} e^{-\frac{x}{2}} x ^{\frac{n}{2}-1}
-\end{eqnarray}
 $$
 
 
@@ -603,17 +646,13 @@ $$B(a,b) = \dfrac{\Gamma(a) \Gamma(b)}{\Gamma(a+b)}$$
 Se $X \sim Beta(a, b)$, então
 
 $$
-\begin{eqnarray}
-E[X] &=& \int_0^1 x \dfrac{1}{B(a,b)} x^{\,a-1} (1-x)^{\,b-1} &=& \dfrac{1}{B(a,b)}  \int_0^1 x^a(1-x)^{b-1} = \dfrac{B(a+1,b)}{B(a,b)}
-\end{eqnarray}
+E[X] = \int_0^1 x \dfrac{1}{B(a,b)} x^{\,a-1} (1-x)^{\,b-1} = \dfrac{1}{B(a,b)}  \int_0^1 x^a(1-x)^{b-1} = \dfrac{B(a+1,b)}{B(a,b)}
 $$
 
 Usando a relação $B(a,b) = \dfrac{\Gamma(a) \Gamma(b)}{\Gamma(a+b)}$, temos
 
 $$
-\begin{eqnarray}
-\dfrac{B(a+1,b)}{B(a,b)} &=& \dfrac{\dfrac{\Gamma(a+1)\Gamma(b)}{\Gamma(a+b + 1)}}{\dfrac{\Gamma(a)\Gamma(b)}{\Gamma(a+b)}} = \dfrac{\Gamma(a+1)\Gamma(b)}{\Gamma(a+b + 1)} \times \dfrac{\Gamma(a+b)}{\Gamma(a)\Gamma(b)} = \dfrac{\Gamma(a+1)\Gamma(a+b)}{\Gamma(a+b + 1)\Gamma(a)}=
-\end{eqnarray}
+\dfrac{B(a+1,b)}{B(a,b)} = \dfrac{\dfrac{\Gamma(a+1)\Gamma(b)}{\Gamma(a+b + 1)}}{\dfrac{\Gamma(a)\Gamma(b)}{\Gamma(a+b)}} = \dfrac{\Gamma(a+1)\Gamma(b)}{\Gamma(a+b + 1)} \times \dfrac{\Gamma(a+b)}{\Gamma(a)\Gamma(b)} = \dfrac{\Gamma(a+1)\Gamma(a+b)}{\Gamma(a+b + 1)\Gamma(a)}=
 $$
 
 
@@ -621,14 +660,35 @@ $$
 
 $= \dfrac{a\Gamma(a)\Gamma(a+b)}{(a+b)\Gamma(a+b)\Gamma(a)} = \dfrac{a}{a+b}$
 
-. . .
+
+## Distribuição Beta
 
 
+$$ 
+\begin{aligned}
+E[X^{2}]
+ &= \int_{0}^{1} x^{2}\,
+    \frac{1}{B(a,b)}\,x^{a-1}(1-x)^{b-1}\,dx = \frac{1}{B(a,b)}
+    \int_{0}^{1} x^{a+1}(1-x)^{\,b-1}\,dx \\[6pt]
+ &= \frac{B(a+2,b)}{B(a,b)} = \frac{
+      \dfrac{\Gamma(a+2)\Gamma(b)}{\Gamma(a+b+2)}
+    }{
+      \dfrac{\Gamma(a)\Gamma(b)}{\Gamma(a+b)}
+    } = \frac{\Gamma(a+2)\Gamma(b)\Gamma(a+b)}
+        {\Gamma(a+b+2)\Gamma(a)\Gamma(b)} \\[6pt]
+ &= \frac{
+      (a+1)\Gamma(a+1)\,\Gamma(a+b)
+    }{
+      (a+b+1)\Gamma(a+b+1)\,\Gamma(a)
+    } = \frac{
+      (a+1)a\,\Gamma(a)\,\Gamma(a+b)
+    }{
+      (a+b+1)(a+b)\,\Gamma(a+b)\,\Gamma(a)
+    } \\[6pt]
+ &= \frac{a(a+1)}{(a+b)(a+b+1)}
+\end{aligned}
 $$
-\begin{eqnarray}
-E[X^2] &=& \int_0^1 x^2 \dfrac{1}{B(a,b)} x^{\,a-1} (1-x)^{\,b-1} = \dfrac{1}{B(a,b)}  \int_0^1 x^{a+1}(1-x)^{b-1} = \dfrac{B(a+2,b)}{B(a,b)} \\ &=& \dfrac{\dfrac{\Gamma(a+2)\Gamma(b)}{\Gamma(a+b + 2)}}{\dfrac{\Gamma(a)\Gamma(b)}{\Gamma(a+b)}} = \dfrac{\Gamma(a+2)\Gamma(b)\Gamma(a+b)}{\Gamma(a+b + 2)\Gamma(a)\Gamma(b)} = \dfrac{(a+1)\Gamma(a+1)\Gamma(a+b)}{(a+b+1)\Gamma(a+b + 1)\Gamma(a)} \\ &=& \dfrac{(a+1)a\Gamma(a)\Gamma(a+b)}{(a+b+1)(a+b)\Gamma(a+b)\Gamma(a)} = \dfrac{(a+1)a}{(a+b+1)(a+b)}
-\end{eqnarray}
-$$
+
 
 
 ## Distribuição Beta
@@ -637,10 +697,18 @@ De forma que,
 
 
 $$
-\begin{eqnarray}
-Var(X) &=& E(X^2) - \left[E(X)\right]^2 \\ &=& \dfrac{(a+1)a}{(a+b+1)(a+b)}-\left[\dfrac{a}{a+b}\right]^2 = \dfrac{a^2 + a}{(a+b+1)(a+b)}-\dfrac{a^2}{(a+b)^2} \\ &=& \dfrac{(a^2 + a)(a+b) - a^2(a+b+1)}{(a+b+1)(a+b)^2} = \dfrac{a^3 + a^2b+a^2 +ab- a^3-a^2b-a^2}{(a+b+1)(a+b)^2} \\ &=& \dfrac{ab}{(a+b+1)(a+b)^2}
-\end{eqnarray}
+\begin{aligned}
+\operatorname{Var}(X)
+ &= E(X^{2}) - [E(X)]^{2} = \frac{a(a+1)}{(a+b)(a+b+1)}
+    - \left(\frac{a}{a+b}\right)^{2} \\[6pt]
+ &= \frac{a^{2}+a}{(a+b)(a+b+1)}
+    - \frac{a^{2}}{(a+b)^{2}} = \frac{(a^{2}+a)(a+b) - a^{2}(a+b+1)}
+        {(a+b+1)(a+b)^{2}} \\[6pt]
+ &= \frac{a^{3} + a^{2}b + a^{2} + ab - a^{3} - a^{2}b - a^{2}}
+        {(a+b+1)(a+b)^{2}} = \frac{ab}{(a+b+1)(a+b)^{2}}
+\end{aligned}
 $$
+
 
 
 
@@ -651,7 +719,7 @@ Logo, se $X \sim Beta(a,b)$, então
 $$
 f(x \mid a,b)=
 \begin{cases}
-\dfrac{1}{B(a,b)} x^{\,a-1} (1-x)^{\,b-1}, & 0<x<1\\[6pt]
+\dfrac{1}{B(a,b)}x^{a-1} (1-x)^{b-1}, & 0<x<1\\[6pt]
 0, & \text{caso contrário}
 \end{cases}
 $$
@@ -854,23 +922,63 @@ Nesta parametrização,
 
 Se $X \sim Weibull(\alpha, \beta)$, então
 
+$$ \small
+\begin{aligned}
+E[X]
+ &= \int_{0}^{\infty}
+    x \,\frac{\beta}{\alpha}
+    \left(\frac{x}{\alpha}\right)^{\beta-1}
+    \exp\!\left[-\left(\frac{x}{\alpha}\right)^{\beta}\right] dx = \int_{0}^{\infty}
+    (\alpha u)\,\frac{\beta}{\alpha}
+    \left(\frac{\alpha u}{\alpha}\right)^{\beta-1}
+    \exp\!\left[-\left(\frac{\alpha u}{\alpha}\right)^{\beta}\right]
+    \alpha\,du \\[6pt]
+ &= \int_{0}^{\infty}
+    u\,\beta\,u^{\beta-1}\exp[-u^{\beta}]\,\alpha\,du = \alpha\int_{0}^{\infty}
+    \beta\,u^{\beta}\exp[-u^{\beta}]\,du \\[6pt]
+ &= \alpha\int_{0}^{\infty}
+    \beta\,v\,e^{-v}\,\frac{1}{\beta}\,v^{\frac{1}{\beta}-1} dv
+    \qquad (v = u^{\beta}) \\ &= \alpha\int_{0}^{\infty}
+    e^{-v}\,v^{\frac{1}{\beta}}\,dv = \alpha\,\Gamma\!\left(\frac{1}{\beta}+1\right)
+\end{aligned}
 $$
-\begin{eqnarray}
-E[X] &=& \int_0^\infty x \dfrac{\beta}{\alpha} \left(\dfrac{x}{\alpha}\right)^{\beta - 1} \exp\!\left[-\left(\dfrac{x}{\alpha}\right)^{\beta}\right]dx = \int_0^\infty \alpha u \dfrac{\beta}{\alpha} \left(\dfrac{\alpha u}{\alpha}\right)^{\beta - 1} \exp\!\left[-\left(\dfrac{\alpha u}{\alpha}\right)^{\beta}\right] \alpha  \,\,\,du \\&=& \int_0^\infty  u \,\,\beta \,\, u^{\beta - 1} \exp\!\left[-u^{\beta}\right] \alpha \,\,\,du = \int_0^\infty  \beta \,\, u^{\beta } \exp\!\left[-u^{\beta}\right] \alpha \,\,\,du \\ &=& \int_0^\infty  \beta \,\, v \exp\!\left[-v\right] \alpha \,\,\,\dfrac{1}{\beta} v^{\frac{1}{\beta}-1} dv = \alpha \int_0^\infty  \exp\!\left[-v\right] v^{\frac{1}{\beta}} \,\, dv = \alpha \Gamma\left( \dfrac{1}{\beta} + 1\right)
-\end{eqnarray}
-$$
+
 
 
 
 ## Distribuição Weibull
 
 
+
+$$ \small
+\begin{aligned}
+E[X^{2}]
+ &= \int_{0}^{\infty}
+    x^{2}\,\frac{\beta}{\alpha}
+    \left(\frac{x}{\alpha}\right)^{\beta-1}
+    \exp\!\left[-\left(\frac{x}{\alpha}\right)^{\beta}\right] dx \\[6pt]
+ &= \int_{0}^{\infty}
+    (\alpha u)^{2}\,\frac{\beta}{\alpha}
+    \left(\frac{\alpha u}{\alpha}\right)^{\beta-1}
+    \exp[-u^{\beta}]\,\alpha\,du \\[6pt]
+ &= \int_{0}^{\infty}
+    \alpha^{2}u^{2}\,\frac{\beta}{\alpha}\,u^{\beta-1}
+    e^{-u^{\beta}}\,\alpha\,du = \int_{0}^{\infty}
+    \alpha^{2}\beta\,u^{\beta+1}\,e^{-u^{\beta}}\,du \\[6pt]
+ &= \int_{0}^{\infty}
+    \alpha^{2}\beta\,u^{\beta}\,u\,e^{-u^{\beta}}\,du = \int_{0}^{\infty}
+    \alpha^{2}\beta\,v\,v^{1/\beta}\,e^{-v}\,
+    \frac{1}{\beta}\,v^{1/\beta-1}\,dv
+    \quad (v = u^{\beta}) \\[6pt]&= \alpha^{2}
+    \int_{0}^{\infty}
+    v^{\,1/\beta + 1 + 1/\beta -1}\,e^{-v}\,dv = \alpha^{2}
+    \int_{0}^{\infty}
+    v^{\,2/\beta}\,e^{-v}\,dv = \alpha^{2}\,
+    \Gamma\!\left(\frac{2}{\beta}+1\right)
+\end{aligned}
 $$
-\small
-\begin{eqnarray}
-E[X^2] &=& \int_0^\infty x^2 \dfrac{\beta}{\alpha} \left(\dfrac{x}{\alpha}\right)^{\beta - 1} \exp\!\left[-\left(\dfrac{x}{\alpha}\right)^{\beta}\right]dx = \int_0^\infty (\alpha u)^2 \dfrac{\beta}{\alpha} \left(\dfrac{\alpha u}{\alpha}\right)^{\beta - 1} \exp\!\left[-\left(\dfrac{\alpha u}{\alpha}\right)^{\beta}\right] \alpha  \,\,\,du \\&=& \int_0^\infty  \alpha^2u^2 \,\,\dfrac{\beta}{\alpha} \,\, u^{\beta - 1} \exp\!\left[-u^{\beta}\right] \alpha \,\,\,du = \int_0^\infty  \alpha^2 \,\,\beta \,\, u^{\beta +1} \exp\!\left[-u^{\beta}\right]\,\,\,du \\ &=& \int_0^\infty  \alpha^2 \,\,\beta \,\, u^{\beta} \,\, u \,\, \exp\!\left[-u^{\beta}\right]\,\,\,du = \int_0^\infty \alpha^2 \beta \,\, v \,\, v^{\frac{1}{\beta}}\exp\!\left[-v\right] \,\,\dfrac{1}{\beta} v^{\frac{1}{\beta}-1} dv \\ &=& \alpha^2 \int_0^\infty  v^{\frac{1}{\beta} + 1} \exp\!\left[-v\right] v^{\frac{1}{\beta}-1} \,\, dv = \alpha^2 \int_0^\infty  v^{\frac{2}{\beta}} \exp\!\left[-v\right] \,\, dv = \alpha^2 \Gamma\left( \dfrac{2}{\beta} + 1\right)
-\end{eqnarray}
-$$
+
+
 
 
 
@@ -880,10 +988,21 @@ De forma que,
 
 
 $$
-\begin{eqnarray}
-Var(X) &=& E(X^2) - \left[E(X)\right]^2 \\ &=& \alpha^2 \Gamma\left( \dfrac{2}{\beta} + 1\right)-\left[\alpha \Gamma\left( \dfrac{1}{\beta} + 1\right)\right]^2 = \alpha^2 \Gamma\left( \dfrac{2}{\beta} + 1\right)- \alpha^2\left[ \Gamma\left( \dfrac{1}{\beta} + 1\right)\right]^2\\ &=& \alpha^2\left\{\Gamma\left( \dfrac{2}{\beta} + 1\right) - \left[\Gamma\left( \dfrac{1}{\beta} + 1\right)\right]^2\right\}
-\end{eqnarray}
+\begin{aligned}
+\operatorname{Var}(X)
+ &= E(X^{2}) - [E(X)]^{2} \\[6pt]
+ &= \alpha^{2}\,\Gamma\!\left(\frac{2}{\beta}+1\right)
+    - \left[\alpha\,\Gamma\!\left(\frac{1}{\beta}+1\right)\right]^{2} \\[6pt]
+ &= \alpha^{2}\,\Gamma\!\left(\frac{2}{\beta}+1\right)
+    - \alpha^{2}\left[\Gamma\!\left(\frac{1}{\beta}+1\right)\right]^{2} \\[6pt]
+ &= \alpha^{2}
+    \left\{
+      \Gamma\!\left(\frac{2}{\beta}+1\right)
+      - \left[\Gamma\!\left(\frac{1}{\beta}+1\right)\right]^{2}
+    \right\}
+\end{aligned}
 $$
+
 
 
 
@@ -1136,18 +1255,40 @@ $$
 ## Distribuição Log-Normal
 
 $$
-\begin{eqnarray}
-E(X) &=& \int_{-\infty}^{\infty} x \,\dfrac{1}{x\, \sigma\, \sqrt{2\pi}} \,\exp\!\left[-\dfrac{1}{2}\left(\dfrac{\ln x - \mu}{\sigma}\right)^2\right]\,dx \\&=& \int_{0}^{\infty}  \,\dfrac{1}{\sigma \,\sqrt{2\pi}}\exp\!\left[-\dfrac{1}{2}\left(\dfrac{\ln x - \mu}{\sigma}\right)^2\right]\,dx 
-\end{eqnarray}
+\begin{aligned}
+E(X)
+ &= \int_{0}^{\infty}
+    x \,\frac{1}{x\,\sigma\sqrt{2\pi}}\,
+    \exp\!\left[
+      -\frac{1}{2}\left(\frac{\ln x - \mu}{\sigma}\right)^{2}
+    \right] dx \\[6pt]
+ &= \int_{0}^{\infty}
+    \frac{1}{\sigma\sqrt{2\pi}}\,
+    \exp\!\left[
+      -\frac{1}{2}\left(\frac{\ln x - \mu}{\sigma}\right)^{2}
+    \right] dx
+\end{aligned}
 $$
+
 Mudança de variável: $z = \ln(x) \Rightarrow x = e^z, dx = e^z \, dz$. Quando $x \in (0, \infty) \Rightarrow z \in (-\infty,\infty)$
 
 
 $$
-\begin{eqnarray}
-&=& \int_{-\infty}^{\infty} \dfrac{1}{\sigma\, \sqrt{2\pi}} \,\exp\!\left[-\dfrac{1}{2}\left(\dfrac{z - \mu}{\sigma}\right)^2\right]\, e^z \,dz \\&=& \int_{-\infty}^{\infty}  \,\dfrac{1}{\sigma \,\sqrt{2\pi}}\exp\!\left[-\dfrac{1}{2}\left(\dfrac{z - \mu}{\sigma}\right)^2 + z\right]\,dz 
-\end{eqnarray}
+\begin{aligned}
+&= \int_{-\infty}^{\infty}
+   \frac{1}{\sigma\sqrt{2\pi}}\,
+   \exp\!\left[
+     -\frac12\left(\frac{z-\mu}{\sigma}\right)^{2}
+   \right]\, e^{z}\,dz \\[6pt]
+&= \int_{-\infty}^{\infty}
+   \frac{1}{\sigma\sqrt{2\pi}}\,
+   \exp\!\left[
+     -\frac12\left(\frac{z-\mu}{\sigma}\right)^{2}
+     + z
+   \right]\,dz
+\end{aligned}
 $$
+
 
 
 ## Distribuição Log-Normal
@@ -1155,10 +1296,23 @@ $$
 **Completando o quadrado** do expoente:
 
 $$
-\begin{eqnarray}
-z-\dfrac{(z-\mu)^2}{2\sigma^2} &=& -\dfrac{1}{2\sigma^2}\Big[(z-\mu)^2-2\sigma^2 z\Big] = -\dfrac{1}{2\sigma^2}\Big[z^2-2(\mu+\sigma^2)z+\mu^2\Big] \\ &=&  -\dfrac{1}{2\sigma^2}\big[\big(z-(\mu+\sigma^2)\big)^2 - (\mu+\sigma^2)^2+\mu^2\big] \\ &=& -\dfrac{\big(z-(\mu+\sigma^2)\big)^2}{2\sigma^2} +\dfrac{(\mu+\sigma^2)^2-\mu^2}{2\sigma^2} \\ &=& -\dfrac{\big(z-(\mu+\sigma^2)\big)^2}{2\sigma^2} +\mu+\dfrac{\sigma^2}{2}
-\end{eqnarray}
+\begin{aligned}
+z - \frac{(z-\mu)^2}{2\sigma^{2}}
+ &= -\frac{1}{2\sigma^{2}}\Big[(z-\mu)^2 - 2\sigma^{2}z\Big] \\[6pt]
+ &= -\frac{1}{2\sigma^{2}}\Big[z^{2} - 2(\mu+\sigma^{2})z + \mu^{2}\Big] \\[6pt]
+ &= -\frac{1}{2\sigma^{2}}
+    \left[
+      (\,z-(\mu+\sigma^{2})\,)^2
+      -(\mu+\sigma^{2})^{2}
+      + \mu^{2}
+    \right] \\[6pt]
+ &= -\frac{(z-(\mu+\sigma^{2}))^{2}}{2\sigma^{2}}
+    + \frac{(\mu+\sigma^{2})^{2} - \mu^{2}}{2\sigma^{2}} \\[6pt]
+ &= -\frac{(z-(\mu+\sigma^{2}))^{2}}{2\sigma^{2}}
+    + \mu + \frac{\sigma^{2}}{2}
+\end{aligned}
 $$
+
 
 
 ## Distribuição Log-Normal
@@ -1167,12 +1321,33 @@ $$
 Assim,
 
 
-$$\small
-\begin{eqnarray}
-\int_{-\infty}^{\infty}  \,\dfrac{1}{\sigma \,\sqrt{2\pi}}\exp\!\left[-\dfrac{1}{2}\left(\dfrac{z - \mu}{\sigma}\right)^2 + z\right]\,dz &=& \int_{-\infty}^{\infty}  \,\dfrac{1}{\sigma \,\sqrt{2\pi}}\exp\!\left[-\dfrac{\big(z-(\mu+\sigma^2)\big)^2}{2\sigma^2} +\mu+\dfrac{\sigma^2}{2}\right]\,dz \\&=& e^{\mu+\dfrac{\sigma^2}{2}}
-\int_{-\infty}^{\infty} \dfrac{1}{\sigma \,\sqrt{2\pi}} \exp\!\left[-\frac{\big(z-(\mu+\sigma^2)\big)^2}{2\sigma^2}\right]\,dz
-\end{eqnarray}
+
+$$ \small
+\begin{aligned}
+\int_{-\infty}^{\infty}
+ \frac{1}{\sigma\sqrt{2\pi}}
+ \exp\!\left[
+   -\frac{1}{2}\left(\frac{z-\mu}{\sigma}\right)^{2}
+   + z
+ \right] dz
+&=
+\int_{-\infty}^{\infty}
+ \frac{1}{\sigma\sqrt{2\pi}}
+ \exp\!\left[
+   -\frac{\big(z-(\mu+\sigma^{2})\big)^{2}}{2\sigma^{2}}
+   + \mu + \frac{\sigma^{2}}{2}
+ \right] dz \\[6pt]
+&=
+e^{\mu+\sigma^{2}/2}
+\int_{-\infty}^{\infty}
+ \frac{1}{\sigma\sqrt{2\pi}}
+ \exp\!\left[
+   -\frac{\big(z-(\mu+\sigma^{2})\big)^{2}}{2\sigma^{2}}
+ \right] dz
+\end{aligned}
 $$
+
+
 
 
 
@@ -1189,9 +1364,20 @@ $$
 Da mesma forma,
 
 $$
-\begin{eqnarray}
-E(X^2) &=& \int_{-\infty}^{\infty} x^2 \,\dfrac{1}{x\, \sigma\, \sqrt{2\pi}} \,\exp\!\left[-\dfrac{1}{2}\left(\dfrac{\ln x - \mu}{\sigma}\right)^2\right]\,dx \\&=& \int_{0}^{\infty}  \,\dfrac{x}{\sigma \,\sqrt{2\pi}}\exp\!\left[-\dfrac{1}{2}\left(\dfrac{\ln x - \mu}{\sigma}\right)^2\right]\,dx 
-\end{eqnarray}
+\begin{aligned}
+E(X^{2})
+ &= \int_{0}^{\infty}
+    x^{2}\,
+    \frac{1}{x\,\sigma\sqrt{2\pi}}\,
+    \exp\!\left[
+      -\frac12\left(\frac{\ln x - \mu}{\sigma}\right)^{2}
+    \right] dx \\[6pt]
+ &= \int_{0}^{\infty}
+    \frac{x}{\sigma\sqrt{2\pi}}\,
+    \exp\!\left[
+      -\frac12\left(\frac{\ln x - \mu}{\sigma}\right)^{2}
+    \right] dx
+\end{aligned}
 $$
 
 
@@ -1202,10 +1388,26 @@ Mudança de variável: $z = \ln(x) \Rightarrow x = e^z, dx = e^z \, dz$. Quando 
 
 
 $$
-\begin{eqnarray}
-&=& \int_{-\infty}^{\infty} \dfrac{e^z}{\sigma\, \sqrt{2\pi}} \,\exp\!\left[-\dfrac{1}{2}\left(\dfrac{z - \mu}{\sigma}\right)^2\right]\, e^z \,dz \\&=& \int_{-\infty}^{\infty} \dfrac{1}{\sigma\, \sqrt{2\pi}} \,\exp\!\left[-\dfrac{1}{2}\left(\dfrac{z - \mu}{\sigma}\right)^2\right]\, e^{2z} \,dz \\&=& \int_{-\infty}^{\infty}  \,\dfrac{1}{\sigma \,\sqrt{2\pi}}\exp\!\left[-\dfrac{1}{2}\left(\dfrac{z - \mu}{\sigma}\right)^2 + 2z\right]\,dz 
-\end{eqnarray}
+\begin{aligned}
+&= \int_{-\infty}^{\infty}
+   \frac{e^{z}}{\sigma\sqrt{2\pi}}\,
+   \exp\!\left[
+     -\frac12\left(\frac{z-\mu}{\sigma}\right)^{2}
+   \right] e^{z}\,dz \\[6pt]
+&= \int_{-\infty}^{\infty}
+   \frac{1}{\sigma\sqrt{2\pi}}\,
+   \exp\!\left[
+     -\frac12\left(\frac{z-\mu}{\sigma}\right)^{2}
+   \right] e^{2z}\,dz \\[6pt]
+&= \int_{-\infty}^{\infty}
+   \frac{1}{\sigma\sqrt{2\pi}}\,
+   \exp\!\left[
+     -\frac12\left(\frac{z-\mu}{\sigma}\right)^{2}
+     + 2z
+   \right] dz
+\end{aligned}
 $$
+
 
 
 ## Distribuição Log-Normal
@@ -1213,10 +1415,24 @@ $$
 **Completando o quadrado** do expoente:
 
 $$
-\begin{eqnarray}
-2z-\dfrac{(z-\mu)^2}{2\sigma^2} &=& -\dfrac{1}{2\sigma^2}\Big[(z-\mu)^2-4\sigma^2 z\Big] = -\dfrac{1}{2\sigma^2}\Big[z^2-2(\mu+2\sigma^2)z+\mu^2\Big] \\ &=&  -\dfrac{1}{2\sigma^2}\big[\big(z-(\mu+2\sigma^2)\big)^2 - (\mu+2\sigma^2)^2+\mu^2\big] \\ &=& -\dfrac{\big(z-(\mu+2\sigma^2)\big)^2}{2\sigma^2} +\dfrac{(\mu+2\sigma^2)^2-\mu^2}{2\sigma^2} \\ &=& -\dfrac{\big(z-(\mu+2\sigma^2)\big)^2}{2\sigma^2} +2\mu+ 2\sigma^2
-\end{eqnarray}
+\begin{aligned}
+2z - \frac{(z-\mu)^2}{2\sigma^{2}}
+ &= -\frac{1}{2\sigma^{2}}
+    \Big[(z-\mu)^2 - 4\sigma^{2}z\Big] \\[6pt]
+ &= -\frac{1}{2\sigma^{2}}
+    \Big[z^{2} - 2(\mu+2\sigma^{2})z + \mu^{2}\Big] \\[6pt]
+ &= -\frac{1}{2\sigma^{2}}
+    \left[
+      (\,z-(\mu+2\sigma^{2})\,)^{2}
+      - (\mu+2\sigma^{2})^{2} + \mu^{2}
+    \right] \\[6pt]
+ &= -\frac{(z-(\mu+2\sigma^{2}))^{2}}{2\sigma^{2}}
+    + \frac{(\mu+2\sigma^{2})^{2} - \mu^{2}}{2\sigma^{2}} \\[6pt]
+ &= -\frac{(z-(\mu+2\sigma^{2}))^{2}}{2\sigma^{2}}
+    + 2\mu + 2\sigma^{2}
+\end{aligned}
 $$
+
 
 
 
@@ -1226,12 +1442,33 @@ $$
 Assim,
 
 
+
 $$\small
-\begin{eqnarray}
-\int_{-\infty}^{\infty}  \,\dfrac{1}{\sigma \,\sqrt{2\pi}}\exp\!\left[-\dfrac{1}{2}\left(\dfrac{z - \mu}{\sigma}\right)^2 + 2z\right]\,dz &=& \int_{-\infty}^{\infty}  \,\dfrac{1}{\sigma \,\sqrt{2\pi}}\exp\!\left[-\dfrac{\big(z-(\mu+ 2\sigma^2)\big)^2}{2\sigma^2} +2\mu+2\sigma^2\right]\,dz \\&=& e^{2\mu+2\sigma^2}
-\int_{-\infty}^{\infty} \dfrac{1}{\sigma \,\sqrt{2\pi}} \exp\!\left[-\frac{\big(z-(\mu+2\sigma^2)\big)^2}{2\sigma^2}\right]\,dz
-\end{eqnarray}
+\begin{aligned}
+\int_{-\infty}^{\infty}
+ \frac{1}{\sigma\sqrt{2\pi}}
+ \exp\!\left[
+   -\frac{1}{2}\left(\frac{z-\mu}{\sigma}\right)^2 + 2z
+ \right] dz
+&=
+\int_{-\infty}^{\infty}
+ \frac{1}{\sigma\sqrt{2\pi}}
+ \exp\!\left[
+   -\frac{(z-(\mu+2\sigma^{2}))^{2}}{2\sigma^{2}}
+   + 2\mu + 2\sigma^{2}
+ \right] dz
+\\[6pt]
+&=
+e^{2\mu + 2\sigma^{2}}
+\int_{-\infty}^{\infty}
+ \frac{1}{\sigma\sqrt{2\pi}}
+ \exp\!\left[
+   -\frac{(z-(\mu+2\sigma^{2}))^{2}}{2\sigma^{2}}
+ \right] dz
+\end{aligned}
 $$
+
+
 
 A integral é 1 (é uma densidade Normal). Logo,
 
@@ -1247,10 +1484,17 @@ De forma que,
 
 
 $$
-\begin{eqnarray}
-Var(X) &=& E(X^2) - \left[E(X)\right]^2 \\ &=& \exp\!\left( 2\mu+2\sigma^2 \right) - \left[\exp\!\left(\mu+\frac{\sigma^2}{2}\right)\right]^2 \\ &=& \exp\!\left(\,2\mu+\sigma^2\right)\big(e^{\sigma^2}-1\big)
-\end{eqnarray}
+\begin{aligned}
+\operatorname{Var}(X)
+ &= E(X^2) - [E(X)]^2 \\[4pt]
+ &= \exp\!\left(2\mu + 2\sigma^2\right)
+    - \left[\exp\!\left(\mu + \frac{\sigma^2}{2}\right)\right]^2 \\[4pt]
+ &= \exp\!\left(2\mu + 2\sigma^2\right)
+    - \exp\!\left(2\mu + \sigma^2\right) \\[4pt]
+ &= \exp\!\left(2\mu + \sigma^2\right)\big(e^{\sigma^2} - 1\big)
+\end{aligned}
 $$
+
 
 Assim,
 
@@ -1553,10 +1797,19 @@ $$
 e $E(X) = E(Z + a) = E(Z) + a$
 
 $$
-\begin{eqnarray}
-E(Z) &=& \int_{-\infty}^{\infty} z\,f_Z(z)\,dz =\frac{1}{2b}\int_{-\infty}^{\infty} z\,e^{-|z|/b}\,dz \\ &=& \frac{1}{2b}\left(\int_{-\infty}^{0} z\,e^{z/b}\,dz+\int_{0}^{\infty} z\,e^{-z/b}\,dz\right)
-\end{eqnarray}
+\begin{aligned}
+E(Z)
+ &= \int_{-\infty}^{\infty} z\,f_Z(z)\,dz
+  = \frac{1}{2b} \int_{-\infty}^{\infty} z\,e^{-|z|/b}\,dz \\[6pt]
+ &= \frac{1}{2b}
+    \left(
+      \int_{-\infty}^{0} z\,e^{z/b}\,dz
+      +
+      \int_{0}^{\infty} z\,e^{-z/b}\,dz
+    \right)
+\end{aligned}
 $$
+
 
 
 ## Distribuição Exponencial Dupla
@@ -1580,18 +1833,19 @@ $$\boxed{E(X)=a}$$
 Cálculo de $Var(Z)=E(Z^2)$ (pois $(E(Z)=0$):
 
 $$
-\begin{eqnarray}
-E(Z^2)&=&\int_{-\infty}^{\infty} z^{2}\,f_Z(z)\,dz=\int_{-\infty}^{\infty} z^{2}\,\frac{1}{2b} \,e^{-|z|/b}\,dz
-\end{eqnarray}
+\begin{aligned}
+E(Z^{2})
+ &= \int_{-\infty}^{\infty} z^{2}\,f_Z(z)\,dz \\[6pt]
+ &= \int_{-\infty}^{\infty} z^{2}\,\frac{1}{2b}\,e^{-|z|/b}\,dz
+\end{aligned}
 $$
+
 
 Como o integrando é **par**,
 
 
 $$
-\begin{eqnarray}
-E(Z^2)&=&\int_{0}^{\infty} z^{2} \frac{1}{b} e^{-z/b}\,dz
-\end{eqnarray}
+E(Z^2)=\int_{0}^{\infty} z^{2} \frac{1}{b} e^{-z/b}\,dz
 $$
 
 Faça a mudança $y=z/b\Rightarrow z=by,\ dz=b\,dy$
@@ -1601,11 +1855,16 @@ Faça a mudança $y=z/b\Rightarrow z=by,\ dz=b\,dy$
 
 
 $$
-\begin{eqnarray}
-E(Z^2)&=&\int_{0}^{\infty} z^{2} \,\frac{1}{b}\ e^{-z/b}\,dz \\ &=&\int_{0}^{\infty}  (b y)^{2}\,\frac{1}{b}\, e^{-y}\,b\,dy
-= b^{2}\int_{0}^{\infty} y^{2} e^{-y}\,dy
-\end{eqnarray}
+\begin{aligned}
+E(Z^{2})
+ &= \int_{0}^{\infty} z^{2}\,\frac{1}{b}\,e^{-z/b}\,dz \\[6pt]
+ &= \int_{0}^{\infty} (b y)^{2}\,\frac{1}{b}\,e^{-y}\,b\,dy \\[6pt]
+ &= b^{2}\int_{0}^{\infty} y^{2} e^{-y}\,dy
+\end{aligned}
 $$
+
+## Distribuição Exponencial Dupla
+
 
 Pela definição da função Gama,
 
@@ -1616,7 +1875,7 @@ Portanto,
 $$E(Z^2)=b^{2}\cdot 2 = 2b^{2}$$
 
 
-## Distribuição Exponencial Dupla
+. . .
 
 Como $Var(X)=Var(Z)=E(Z^2)$,
 
@@ -1687,8 +1946,15 @@ $$F(x)=\int_{-\infty}^{a}\frac{1}{2b}e^{-(a-t)/b}\,dt + \int_{a}^{x}\frac{1}{2b}
 
 A primeira integral resulta em:
 
+$$
+\begin{aligned}
+\int_{-\infty}^{a} \frac{1}{2b}\, e^{-(a-t)/b}\,dt
+ &= \frac{e^{-a/b}}{2b}\int_{-\infty}^{a} e^{t/b}\,dt = \frac{e^{-a/b}}{2b}\,\Big[b\,e^{t/b}\Big]_{-\infty}^{a} \\[6pt]
+ &= \frac{e^{-a/b}}{2b}\,\Big(b\,e^{a/b}-0\Big) = \frac{1}{2}\,e^{-a/b}e^{a/b} = \frac{1}{2}
+\end{aligned}
+$$
 
-$$\scriptsize\int_{-\infty}^{a} \frac{1}{2b}\, e^{-(a-t)/b}\,dt = \frac{e^{-a/b}}{2b}\int_{-\infty}^{a} e^{t/b}\,dt = \frac{e^{-a/b}}{2b}\,\Big[b\,e^{t/b}\Big]_{-\infty}^{a} = \frac{e^{-a/b}}{2b}\,\Big(b\,e^{a/b}-0\Big) = \frac{1}{2}\,e^{-a/b}e^{a/b} = \frac{1}{2}$$
+
 
 
 ## Distribuição Exponencial Dupla
@@ -1699,11 +1965,14 @@ Para a segunda integral, fazemos a substituição $u = t - a  \Rightarrow  du = 
 
 
 $$
-\begin{eqnarray}
-\int_{a}^{x}\dfrac{1}{2b}e^{-(t-a)/b}\,dt &=& \dfrac{1}{2b}\int_{0}^{x-a} e^{-u/b}\,du = \dfrac{1}{2b}\Big[-b\,e^{-u/b}\Big]_{0}^{x-a}\\
-&=& \dfrac{1}{2b}\Big[-b\,e^{-(x-a)/b} + b\Big] = \dfrac{1}{2b}\cdot b(1 - e^{-(x-a)/b}) \\&=& \dfrac{1}{2}\left(1 - e^{-\dfrac{x-a}{b}}\right)
-\end{eqnarray}
+\begin{aligned}
+\int_{a}^{x}\frac{1}{2b}\,e^{-(t-a)/b}\,dt 
+ &= \frac{1}{2b}\int_{0}^{\,x-a} e^{-u/b}\,du = \frac{1}{2b}\left[-b\,e^{-u/b}\right]_{0}^{\,x-a} \\[6pt]
+ &= \frac{1}{2b}\left[-b\,e^{-(x-a)/b} + b\right] = \frac{1}{2b}\cdot b\,(1 - e^{-(x-a)/b}) \\[6pt]
+ &= \frac{1}{2}\left(1 - e^{-\frac{x-a}{b}}\right)
+\end{aligned}
 $$
+
 
 
 ## Distribuição Exponencial Dupla
@@ -1718,7 +1987,7 @@ $$
 F(x)=
 \begin{cases}
 \dfrac{1}{2} e^{\Big({\dfrac{x-a}{b}}\Big)}, & x<a, \\[8pt]
-1 - \dfrac{1}{2} e^{-\Big(\dfrac{x-a}{b}\Big)}, & x\ge a.
+1 - \dfrac{1}{2} e^{-\Big(\dfrac{x-a}{b}\Big)}, & x\ge a
 \end{cases}
 $$
 
@@ -2037,9 +2306,8 @@ $$\small f(x \mid \mu, \sigma)
 -\frac{x - \mu}{\sigma}
 \right)
 \right],
-\qquad
--\infty < x < \infty,\;
--\infty < \mu < \infty,\;
+x \in \mathbb{R},\;
+\mu \in \mathbb{R},\;
 \sigma > 0$$
 
 
@@ -2143,9 +2411,8 @@ A função densidade correspondente é:
 $$
 \small
 f(x|\mu, \sigma) = \dfrac{1}{\sigma}\exp\!\left[\Big(\dfrac{x - \mu}{\sigma}\Big)- \exp\!\left(\dfrac{x - \mu}{\sigma}\right)\right],
-\qquad
--\infty < x < \infty,\;
--\infty < \mu < \infty,\;
+x \in \mathbb{R},\;
+\mu \in \mathbb{R},\;
 \sigma > 0
 $$
 

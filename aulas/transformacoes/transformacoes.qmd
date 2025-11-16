@@ -99,33 +99,13 @@ $$p_Y(y) = P(Y = y) = \sum_{x \in g^{-1}(y)} p_X(x), \qquad \text{para} \,\, y \
 
 **Exemplo 01:** Suponhamos que a distribuição de probabilidades da variável aleatória $X$ é dada pela tabela abaixo:
   
-  
-  <table style="border-collapse: collapse; margin-top:10px; margin-bottom:10px;">
-  <thead>
-  <tr style="border-top: 2px solid black; border-bottom: 1px solid black;">
-  <th style="padding:4px; border-right: 2px solid black;">$x$</th>
-  <th style="padding:4px;">-2</th>
-  <th style="padding:4px;">-1</th>
-  <th style="padding:4px;">0</th>
-  <th style="padding:4px;">1</th>
-  <th style="padding:4px;">2</th>
-  <th style="padding:4px;">3</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr style="border-bottom: 2px solid black;">
-  <td style="padding:4px; border-right: 2px solid black;"><em>$p_X(x)$</em></td>
-  <td style="padding:4px;">0,1</td>
-  <td style="padding:4px;">0,2</td>
-  <td style="padding:4px;">0,2</td>
-  <td style="padding:4px;">0,3</td>
-  <td style="padding:4px;">0,1</td>
-  <td style="padding:4px;">0,1</td>
-  </tr>
-  </tbody>
-  </table>
-  
-  Seja $Y = 3X+1$. Encontre a distribuição da variável aleatória $Y$.
+::: {.table .striped}
+| $x$         | -2  | -1  |  0  |  1  |  2  |  3  |
+|---------------|-----|-----|-----|-----|-----|-----|
+| $p_X(x)$    | 0,1 | 0,2 | 0,2 | 0,3 | 0,1 | 0,1 |
+:::
+
+Seja $Y = 3X+1$. Encontre a distribuição da variável aleatória $Y$.
 
 
 . . .
@@ -134,67 +114,28 @@ $$p_Y(y) = P(Y = y) = \sum_{x \in g^{-1}(y)} p_X(x), \qquad \text{para} \,\, y \
   
 Como $Y = 3X+1$, 
 
+::: {.table .striped}
+| $y = 3x + 1$ | -5  | -2  | 1   | 4   | 7   | 10  |
+|----------------|-----|-----|-----|-----|-----|-----|
+| $p_Y(y)$     | 0,1 | 0,2 | 0,2 | 0,3 | 0,1 | 0,1 |
+:::
 
-<table style="border-collapse: collapse; margin-top:10px; margin-bottom:10px;">
-<thead>
-<tr style="border-top: 2px solid black; border-bottom: 1px solid black;">
-<th style="padding:4px; border-right: 2px solid black;">$y = 3x + 1$</th>
-  <th style="padding:4px;">-5</th>
-  <th style="padding:4px;">-2</th>
-  <th style="padding:4px;">1</th>
-  <th style="padding:4px;">4</th>
-  <th style="padding:4px;">7</th>
-  <th style="padding:4px;">10</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr style="border-bottom: 2px solid black;">
-  <td style="padding:4px; border-right: 2px solid black;"><em>$p_Y(y)$</em></td>
-  <td style="padding:4px;">0,1</td>
-  <td style="padding:4px;">0,2</td>
-  <td style="padding:4px;">0,2</td>
-  <td style="padding:4px;">0,3</td>
-  <td style="padding:4px;">0,1</td>
-  <td style="padding:4px;">0,1</td>
-  </tr>
-  </tbody>
-  </table>
   
   
 ## Função de Variável Aleatória: Caso Discreto
   
 **Exemplo 02:** Considere a mesma distribuição de probabilidades da variável aleatória $X$, dada pela tabela abaixo:
   
-  
-  <table style="border-collapse: collapse; margin-top:10px; margin-bottom:10px;">
-  <thead>
-  <tr style="border-top: 2px solid black; border-bottom: 1px solid black;">
-  <th style="padding:4px; border-right: 2px solid black;">$x$</th>
-  <th style="padding:4px;">-2</th>
-  <th style="padding:4px;">-1</th>
-  <th style="padding:4px;">0</th>
-  <th style="padding:4px;">1</th>
-  <th style="padding:4px;">2</th>
-  <th style="padding:4px;">3</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr style="border-bottom: 2px solid black;">
-  <td style="padding:4px; border-right: 2px solid black;"><em>$p_X(x)$</em></td>
-  <td style="padding:4px;">0,1</td>
-  <td style="padding:4px;">0,2</td>
-  <td style="padding:4px;">0,2</td>
-  <td style="padding:4px;">0,3</td>
-  <td style="padding:4px;">0,1</td>
-  <td style="padding:4px;">0,1</td>
-  </tr>
-  </tbody>
-  </table>
-  
-  Contudo, vamos agora definir a variável aleatória $Y = X^2$. Qual a distribuição de probabilidades de $Y$?
+::: {.table .striped}
+| $x$        | -2  | -1  |  0  |  1  |  2  |  3  |
+|----------------|-----|-----|-----|-----|-----|-----|
+| $p_X(x)$   | 0,1 | 0,2 | 0,2 | 0,3 | 0,1 | 0,1 |
+:::
+
+Contudo, vamos agora definir a variável aleatória $Y = X^2$. Qual a distribuição de probabilidades de $Y$?
   
   
-  . . .
+. . .
   
 
 **Solução:**
@@ -216,26 +157,11 @@ $$
   
   Logo, 
 
-<table style="border-collapse: collapse; margin-top:10px; margin-bottom:10px;">
-  <thead>
-  <tr style="border-top: 2px solid black; border-bottom: 1px solid black;">
-  <th style="padding:4px; border-right: 2px solid black;">$y = x^2$</th>
-  <th style="padding:4px;">0</th>
-  <th style="padding:4px;">1</th>
-  <th style="padding:4px;">4</th>
-  <th style="padding:4px;">9</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr style="border-bottom: 2px solid black;">
-  <td style="padding:4px; border-right: 2px solid black;"><em>$p_Y(y)$</em></td>
-  <td style="padding:4px;">0,2</td>
-  <td style="padding:4px;">0,5</td>
-  <td style="padding:4px;">0,2</td>
-  <td style="padding:4px;">0,1</td>
-  </tr>
-  </tbody>
-  </table>
+::: {.table .striped}
+| $y = x^{2}$ | 0   | 1   | 4   | 9   |
+|---------------|-----|-----|-----|-----|
+| $p_Y(y)$    | 0,2 | 0,5 | 0,2 | 0,1 |
+:::
   
   
   
@@ -522,55 +448,47 @@ Temos que o evento $\{Y \le y\}$, para $y$ fixado e pertencente ao conjunto supo
 
 
 ```{r, echo=FALSE}
+#| fig-width: 6
+#| fig-height: 4
+#| fig-align: center
+#| out-width: 70%
+#| echo: false
 # Carregar pacote
 library(ggplot2)
 
-# Curva y = x^2
-x <- seq(-3, 3, length.out = 400)
-df <- data.frame(x = x, y = x^2)
+y  <- 2
+x1 <- -sqrt(y)
+x2 <-  sqrt(y)
 
-# Escolha do valor de y (o nível do traço horizontal)
-y0 <- 2        # ajuste se quiser outra altura
-
-# Dados para os segmentos verticais em ±sqrt(y0)
-df_seg <- data.frame(
-  x    = c(-sqrt(y0),  sqrt(y0)),
-  xend = c(-sqrt(y0),  sqrt(y0)),
-  y    = c(0,          0),
-  yend = c(y0,         y0)
+df <- data.frame(
+  x = seq(-4, 4, length.out = 300),
+  y = seq(-4, 4, length.out = 300)^2
 )
 
 ggplot(df, aes(x, y)) +
-  # curva g(x) = x^2
-  geom_line(linewidth = 1) +
-  
-  # eixos passando pelo 0
-  geom_hline(yintercept = 0) +
-  geom_vline(xintercept = 0) +
-  
-  # nível y = y0
-  geom_hline(yintercept = y0, linetype = "dashed") +
-  
-  # segmentos verticais até ±sqrt(y0)
-  geom_segment(data = df_seg,
-               aes(x = x, xend = xend, y = y, yend = yend),
+  geom_line(size = 1.1) +
+  geom_hline(yintercept = y, linetype = "dashed") +
+  geom_segment(aes(x = x1, xend = x1, y = 0, yend = y),
                linetype = "dashed") +
-  
-  # ponto na origem
-  geom_point(aes(0, 0), size = 2) +
-  
-  # rótulos
-  annotate("text", x = 0.2,        y = -0.3, label = "0") +
-  annotate("text", x =  sqrt(y0),  y = -0.3, label = "+√y") +
-  annotate("text", x = -sqrt(y0),  y = -0.3, label = "-√y") +
-  annotate("text", x = 0.3,        y = max(df$y)*0.9,
-           label = "g(x) = x^2") +
-  annotate("text", x = 0.2,        y = y0 + 0.15,
-           label = "y") +
-  
-  coord_cartesian(xlim = c(-3, 3), ylim = c(-0.5, 5)) +
+  geom_segment(aes(x = x2, xend = x2, y = 0, yend = y),
+               linetype = "dashed") +
+  geom_point(aes(x = 0, y = 0), size = 3) +
+  geom_vline(xintercept = 0) +
+  geom_hline(yintercept = 0) +
+
+  # rótulos no eixo x, AGORA COM parse = TRUE
+  annotate("text", x = x1, y = -0.3,
+           label = "-sqrt(y)", parse = TRUE, size = 5) +
+  annotate("text", x = x2, y = -0.3,
+           label = "sqrt(y)",  parse = TRUE, size = 5) +
+  annotate("text", x = 0,  y = -0.3,
+           label = "0", size = 5) +
+  annotate("text", x = 0,  y = y + 0.2,
+           label = "y", size = 5) +
+
+  coord_cartesian(ylim = c(-1, 5.5)) +
   labs(x = "x", y = "y") +
-  theme_minimal(base_size = 14)
+  theme_minimal(base_size = 16)
 
 ```
 
@@ -940,7 +858,7 @@ Por outro lado, se $U \sim U(0,1)$, então
 
 $$
 {\small  
-P(X \le x) = P(F^{-1}_X(U) \le x) = P(U \le F_x(x)) = F_U(F_X(x)) = F_X(x), \qquad \text{pois } U \text{ é uniforme} 
+P(X \le x) = P(F^{-1}_X(U) \le x) = P(U \le F_x(x)) = F_U(F_X(x)) = F_X(x), \,\, \text{pois } U \text{ é uniforme} 
 }
 $$
 Assim $X$ possui função de distribuição $F_X$.
