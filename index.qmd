@@ -56,15 +56,20 @@ Neste semestre, as aulas da disciplina serão ministradas no LABEST II.
 | Quinta-feira   | 21:00 - 22:40   | LABEST II   |
 
 
-# Avaliações
+## Avaliações
 
+::: {.callout-note title="Critérios de Avaliação"}
 A nota final do semestre será computada da seguinte forma:
 
-- Duas provas valendo 70 pontos, distribuídos da seguinte forma:
-  - **$1^a$ Prova:** 35 pontos a ser realizada em 29/01/26
-  - **$2^a$ Prova:** 35 pontos a ser realizada em 26/02/26
+- Duas provas valendo **70 pontos**, distribuídos da seguinte forma:
+  - **$1^{\text{a}}$ Prova:** 35 pontos — a ser realizada em **29/01/26**
+  - **$2^{\text{a}}$ Prova:** 35 pontos — a ser realizada em **26/02/26**
 
-- Listas de exercícios a serem entregues ao longo do semestre no valor de 30 pontos.
+- Listas de exercícios a serem entregues ao longo do semestre no valor de **30 pontos**.
+
+- **Exame Final: 05/03/26**
+:::
+
 
 # Referências Bibliográficas
 
