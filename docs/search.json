@@ -1848,5 +1848,348 @@
     "crumbs": [
       "Listas de exercícios"
     ]
+  },
+  {
+    "objectID": "aulas/transformacoes/transformacoes.html#introdução",
+    "href": "aulas/transformacoes/transformacoes.html#introdução",
+    "title": "Transformação de Variáveis Unidimensionais",
+    "section": "Introdução",
+    "text": "Introdução\nMuitas vezes, o modelo probabilístico para uma variável aleatória \\(X\\) é conhecido, mas se deseja obter a distribuição de probabilidade de uma segunda variável aleátória, \\(Y\\), relacionada a \\(X\\) segundo:\n\\[Y = h(X)\\]\nsendo \\(h\\) uma função real."
+  },
+  {
+    "objectID": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória",
+    "href": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória",
+    "title": "Transformação de Variáveis Unidimensionais",
+    "section": "Função de Variável Aleatória",
+    "text": "Função de Variável Aleatória\nSe \\(X\\) é uma variável aleatória com função densidade acumulada \\(F_x(x)\\), então qualquer função de \\(X\\), por exemplo, \\(g(X)\\) também é uma variável aleatória.\n\nGeralmente, \\(g(X)\\) é de nosso interesse e denotamos \\(Y = g(X)\\) para indicar a nova variável aleatória \\(g(X)\\).\n\n\nUma vez que \\(Y\\) é uma função de \\(X\\), podemos descrever o comportamento probabilístico de \\(Y\\) em termos de \\(X\\), isto é, para um dado conjunto \\(A\\),\n\\[P(Y \\in A) = P(g(X) \\in A)\\]\nmostrando que a distribuição de \\(Y\\) depende das funções \\(F_X\\) e \\(g\\)."
+  },
+  {
+    "objectID": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-1",
+    "href": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-1",
+    "title": "Transformação de Variáveis Unidimensionais",
+    "section": "Função de Variável Aleatória",
+    "text": "Função de Variável Aleatória\nFormalmente, ao escrevermos \\(y = g(x)\\), a função \\(g(x)\\) define uma função no suporte original de \\(X\\), denotado por \\(S_X\\), para um novo espaço amostral, denotado por \\(S_Y\\), o suporte de \\(Y\\).\n\nSeja então a função inversa de \\(g\\), denotada por \\(g^{-1}\\), que é uma função de \\(S_y\\) para \\(S_x\\).\n\\[g^{-1}(y)=\\{x : g(x) = y \\}\\]\n\n\nPortanto, a função inversa consiste no conjunto de valores de \\(X\\), para os quais \\(g(x) = y\\), dado um valor de \\(y\\) fixado do suporte de \\(Y\\), que é a variável aleatória obtida pela transformação de interesse, \\(g(X)\\)."
+  },
+  {
+    "objectID": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-2",
+    "href": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-2",
+    "title": "Transformação de Variáveis Unidimensionais",
+    "section": "Função de Variável Aleatória",
+    "text": "Função de Variável Aleatória\nÉ importante observar que cada valor de \\(x\\) pertencente ao suporte de \\(X\\), corresponde a um único valor de \\(y\\) pertencente ao suporte de \\(Y\\). Por outro lado, um valor \\(y \\in S_Y\\) pode corresponder a mais de um valor do suporte de \\(X\\), conforme ilustra a figura abaixo"
+  },
+  {
+    "objectID": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-3",
+    "href": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-3",
+    "title": "Transformação de Variáveis Unidimensionais",
+    "section": "Função de Variável Aleatória",
+    "text": "Função de Variável Aleatória\nFinalmente, se a variável aleatória \\(Y\\) for definida por \\(Y= g(X)\\), podemos escrever para qualquer conjunto \\(A \\subset S_Y\\),\n\\[\n\\begin{eqnarray}\nP(Y \\in A) &=& P(g(X) \\in A) \\\\&=& P(\\{x \\in S_X : g(x) \\in A\\}) \\\\ &=& P(X \\in g^{-1}(A))\n\\end{eqnarray}\n\\]\nIsto define a distribuição de probabilidade de \\(Y\\)."
+  },
+  {
+    "objectID": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-discreto",
+    "href": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-discreto",
+    "title": "Transformação de Variáveis Unidimensionais",
+    "section": "Função de Variável Aleatória: Caso Discreto",
+    "text": "Função de Variável Aleatória: Caso Discreto\nSe \\(X\\) for uma variável aleatória discreta e \\(Y= g(X)\\), então \\(Y\\) também será uma variável aleatória discreta. Assim,\n\\[p_Y(y) = P(Y = y) = \\sum_{x \\in g^{-1}(y)} p_X(x), \\qquad \\text{para} \\,\\, y \\in S_Y\\] e \\(p_Y(y) = 0\\) para \\(y \\notin S_Y\\)."
+  },
+  {
+    "objectID": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-discreto-1",
+    "href": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-discreto-1",
+    "title": "Transformação de Variáveis Unidimensionais",
+    "section": "Função de Variável Aleatória: Caso Discreto",
+    "text": "Função de Variável Aleatória: Caso Discreto\nExemplo 01: Suponhamos que a distribuição de probabilidades da variável aleatória \\(X\\) é dada pela tabela abaixo:\n\n\n\n\n\\(x\\)\n\n\n-2\n\n\n-1\n\n\n0\n\n\n1\n\n\n2\n\n\n3\n\n\n\n\n\n\n\\(p_X(x)\\)\n\n\n0,1\n\n\n0,2\n\n\n0,2\n\n\n0,3\n\n\n0,1\n\n\n0,1\n\n\n\n\nSeja \\(Y = 3X+1\\). Encontre a distribuição da variável aleatória \\(Y\\).\n\nSolução:\nComo \\(Y = 3X+1\\),\n\n\n\n\n\\(y = 3x + 1\\)\n\n\n-5\n\n\n-2\n\n\n1\n\n\n4\n\n\n7\n\n\n10\n\n\n\n\n\n\n\\(p_Y(y)\\)\n\n\n0,1\n\n\n0,2\n\n\n0,2\n\n\n0,3\n\n\n0,1\n\n\n0,1"
+  },
+  {
+    "objectID": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-discreto-2",
+    "href": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-discreto-2",
+    "title": "Transformação de Variáveis Unidimensionais",
+    "section": "Função de Variável Aleatória: Caso Discreto",
+    "text": "Função de Variável Aleatória: Caso Discreto\nExemplo 02: Considere a mesma distribuição de probabilidades da variável aleatória \\(X\\), dada pela tabela abaixo:\n\n\n\n\n\\(x\\)\n\n\n-2\n\n\n-1\n\n\n0\n\n\n1\n\n\n2\n\n\n3\n\n\n\n\n\n\n\\(p_X(x)\\)\n\n\n0,1\n\n\n0,2\n\n\n0,2\n\n\n0,3\n\n\n0,1\n\n\n0,1\n\n\n\n\nContudo, vamos agora definir a variável aleatória \\(Y = X^2\\). Qual a distribuição de probabilidades de \\(Y\\)?\n\nSolução:\nTemos que \\(S_X = \\{-2, -1, 0, 1, 2, 3\\}\\). Como \\(Y = X^2\\), temos que o suporte de \\(Y\\) é dado por \\(S_Y = \\{0, 1, 4, 9\\}\\), de forma que a distribuição da variável \\(Y\\) será dada por:"
+  },
+  {
+    "objectID": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-discreto-3",
+    "href": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-discreto-3",
+    "title": "Transformação de Variáveis Unidimensionais",
+    "section": "Função de Variável Aleatória: Caso Discreto",
+    "text": "Função de Variável Aleatória: Caso Discreto\n\\[\n\\begin{eqnarray}\nP(Y = 0) &=& P(X = 0) = 0,2 \\\\\nP(Y = 1) &=& P(X = -1) + P(X = 1) = 0,5 \\\\\nP(Y = 4) &=& P(X = -2) + P(X = 2) = 0,2 \\\\\nP(Y = 9) &=& P(X = 3) = 0,1\n\\end{eqnarray}\n\\]\nLogo,\n\n\n\n\n\\(y = x^2\\)\n\n\n0\n\n\n1\n\n\n4\n\n\n9\n\n\n\n\n\n\n\\(p_Y(y)\\)\n\n\n0,2\n\n\n0,5\n\n\n0,2\n\n\n0,1"
+  },
+  {
+    "objectID": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-discreto-4",
+    "href": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-discreto-4",
+    "title": "Transformação de Variáveis Unidimensionais",
+    "section": "Função de Variável Aleatória: Caso Discreto",
+    "text": "Função de Variável Aleatória: Caso Discreto\nExemplo 03: Suponha que \\(X \\sim Poisson(\\lambda)\\), com função de probabilidade\n\\[\nP(x | \\lambda)=\n\\begin{cases}\n\\dfrac{e^{-\\lambda} \\lambda^x}{x!}, & x \\in \\{0, 1, 2, 3, \\cdots \\} \\\\[6pt]\n0, & c.c.\n\\end{cases}\n\\]\nConsidere que \\(Y = g(X)\\), tal que \\(g(X) = 0\\), se \\(x\\) é par e \\(g(X) = 1\\), se \\(x\\) é ímpar. Obter a função de probabilidade de \\(Y\\).\n\nSolução:\nTemos que o conjunto suporte de \\(Y\\) é \\(S_Y = \\{0,1\\}\\). Vamos calcular a \\(P(Y = 0)\\)."
+  },
+  {
+    "objectID": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-discreto-5",
+    "href": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-discreto-5",
+    "title": "Transformação de Variáveis Unidimensionais",
+    "section": "Função de Variável Aleatória: Caso Discreto",
+    "text": "Função de Variável Aleatória: Caso Discreto\n\\[\n\\begin{eqnarray}\nP(Y = 0) &=& P(g(X) = 0) = P(X \\,\\,\\,\\text{ser par}) \\\\\n&=& \\sum_{x \\in \\{0,2,4, \\cdots\\}} \\dfrac{e^{-\\lambda} \\lambda^x}{x!} \\\\\n&=& e^{-\\lambda} \\sum_{k = 0}^{\\infty} \\dfrac{\\lambda^{2k}}{(2k)!}\n\\end{eqnarray}\n\\]"
+  },
+  {
+    "objectID": "aulas/transformacoes/transformacoes.html#aparte-séries-de-taylor-e-maclaurin",
+    "href": "aulas/transformacoes/transformacoes.html#aparte-séries-de-taylor-e-maclaurin",
+    "title": "Transformação de Variáveis Unidimensionais",
+    "section": "Aparte — Séries de Taylor e Maclaurin",
+    "text": "Aparte — Séries de Taylor e Maclaurin\nSérie de Taylor\nExpansão de uma função em torno de um ponto \\(a\\):\nA expansão de Taylor escrita termo a termo é:\n\\[\\small\n\\begin{aligned}\nf(x) &= f(a)\n+ f'(a)(x-a)\n+ \\frac{f''(a)}{2!}(x-a)^2\n+ \\frac{f^{(3)}(a)}{3!}(x-a)^3 + \\cdots = \\sum_{n=0}^{\\infty} \\frac{f^{(n)}(a)}{n!}(x-a)^n\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "aulas/transformacoes/transformacoes.html#aparte-séries-de-taylor-e-maclaurin-1",
+    "href": "aulas/transformacoes/transformacoes.html#aparte-séries-de-taylor-e-maclaurin-1",
+    "title": "Transformação de Variáveis Unidimensionais",
+    "section": "Aparte — Séries de Taylor e Maclaurin",
+    "text": "Aparte — Séries de Taylor e Maclaurin\nSérie de Maclaurin\nCaso particular da série de Taylor com \\(a = 0\\):\n\\[ f(x) = \\sum_{n=0}^{\\infty} \\frac{f^{(n)}(0)}{n!}x^n \\]\nExemplos:\n\\[\ne^x\n= 1\n+ x\n+ \\frac{x^2}{2!}\n+ \\frac{x^3}{3!}\n+ \\frac{x^4}{4!}\n+ \\frac{x^5}{5!}\n+ \\cdots\n+ \\frac{x^n}{n!}\n+ \\cdots= \\sum_{n=0}^{\\infty} \\frac{x^n}{n!}\n\\]\n\\[\ne^{-x}\n= 1\n- x\n+ \\frac{x^2}{2!}\n- \\frac{x^3}{3!}\n+ \\frac{x^4}{4!}\n- \\frac{x^5}{5!}\n+ \\cdots\n+ (-1)^n \\frac{x^n}{n!}\n+ \\cdots = \\sum_{n=0}^{\\infty} (-1)^n \\frac{x^n}{n!}\n\\]"
+  },
+  {
+    "objectID": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-discreto-6",
+    "href": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-discreto-6",
+    "title": "Transformação de Variáveis Unidimensionais",
+    "section": "Função de Variável Aleatória: Caso Discreto",
+    "text": "Função de Variável Aleatória: Caso Discreto\nAssim, \\(e^{\\lambda} + e^{-\\lambda} = 2\\sum_{k=0}^{\\infty} \\frac{\\lambda^{2k}}{(2k)!}\\) e,\n\\[\n\\begin{eqnarray}\nP(Y = 0) &=& e^{-\\lambda} \\sum_{k = 0}^{\\infty} \\dfrac{\\lambda^{2k}}{(2k)!} = e^{-\\lambda} \\dfrac{1}{2}\\Big(e^{\\lambda} + e^{-\\lambda}\\Big) \\\\&=& \\dfrac{1}{2}\\Big(1 + e^{-2\\lambda}\\Big)\n\\end{eqnarray}\n\\]\nComo \\(\\sum_{y=0}^{\\infty} P(Y = y) = 1\\), temos que\n\\[\n\\begin{eqnarray}\nP(Y = 1) &=& P(X \\,\\, \\text{ser ímpar}) =  1 - \\dfrac{1}{2}\\Big(1 + e^{-2\\lambda}\\Big) \\\\&=& \\dfrac{1}{2}\\Big(1 - e^{-2\\lambda}\\Big)\n\\end{eqnarray}\n\\]"
+  },
+  {
+    "objectID": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-discreto-7",
+    "href": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-discreto-7",
+    "title": "Transformação de Variáveis Unidimensionais",
+    "section": "Função de Variável Aleatória: Caso Discreto",
+    "text": "Função de Variável Aleatória: Caso Discreto\nFinalmente, \\(p_Y(y) = 0\\) para outros valores de \\(y \\notin S_Y\\). Portanto, \\(Y \\sim Bernoulli(p)\\) com\n\\[p = \\dfrac{1}{2}\\Big(1 - e^{-2\\lambda}\\Big), \\qquad \\lambda &gt; 0\\]"
+  },
+  {
+    "objectID": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-discreto-8",
+    "href": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-discreto-8",
+    "title": "Transformação de Variáveis Unidimensionais",
+    "section": "Função de Variável Aleatória: Caso Discreto",
+    "text": "Função de Variável Aleatória: Caso Discreto\nExemplo 04: Considere que \\(X \\sim Binomial (n,p)\\) com função de probabilidade\n\\[\nP(x | n,p)=\n\\begin{cases}\n\\dbinom{n}{x}\\, p^{x}\\, (1-p)^{\\,n-x}, \\qquad x \\in \\{0, 1, 2, \\dots, n\\}  \\\\[6pt]\n0, & c.c.\n\\end{cases}\n\\]\nConsidere \\(Y = g(X) = n - X\\) e obtenha a distribuição de probabilidade de \\(Y\\).\n\nSolução:\nConsiderando \\(Y = g(X) = n - X\\), temos que \\(S_Y = \\{0, 1, 2, \\dots, n\\}\\). Quando \\(Y =  y\\), temos \\(X = n-y\\), assim,"
+  },
+  {
+    "objectID": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-discreto-9",
+    "href": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-discreto-9",
+    "title": "Transformação de Variáveis Unidimensionais",
+    "section": "Função de Variável Aleatória: Caso Discreto",
+    "text": "Função de Variável Aleatória: Caso Discreto\n\\[\n\\begin{eqnarray}\nP(Y = y) &=& P(g(X) = y) = P(X = g^{-1}(y)) = P(X = n - y) \\\\&=& \\dbinom{n}{n-y}\\, p^{n-y}\\, (1-p)^{\\,n-(n-y)}\\\\&=& \\dbinom{n}{n-y}\\, p^{n-y}\\, (1-p)^{\\,y}\\\\&=& \\dbinom{n}{y}\\, (1-p)^{y}\\, p^{\\,n-y}, \\,\\,\\ \\text{uma vez que} \\,\\,\\, \\dbinom{n}{n-y} = \\dbinom{n}{y}\n\\end{eqnarray}\n\\]\nque equivale a dizer que \\(Y \\sim binomial(n, 1-p)\\)."
+  },
+  {
+    "objectID": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo",
+    "href": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo",
+    "title": "Transformação de Variáveis Unidimensionais",
+    "section": "Função de Variável Aleatória: Caso Contínuo",
+    "text": "Função de Variável Aleatória: Caso Contínuo\nMétodo da Função de Distribuição\nTeorema: Consideremos uma variável aleatória contínua \\(X\\) com função de distribuição de probabilidade \\(F_X\\) conhecida e a função \\(g: \\mathbb{R} \\rightarrow \\mathbb{R}\\), então \\(Y = g(X)\\) é uma variável aleatória com função distribuição dada por\n\\[F_Y(y) = P(Y \\le y) = P(X \\in g^{-1}\\big((-\\infty, y]\\big) = \\int_{g^{-1}\\big((-\\infty, y]\\big)}f_X(x)\\,\\,dx\\]\nem que \\(g^{-1}(y)\\) é a função inversa de \\(g\\)."
+  },
+  {
+    "objectID": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo-1",
+    "href": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo-1",
+    "title": "Transformação de Variáveis Unidimensionais",
+    "section": "Função de Variável Aleatória: Caso Contínuo",
+    "text": "Função de Variável Aleatória: Caso Contínuo\n\nEsse método consiste em encontrar a função de distribuição da variável transformada \\(Y = g(X)\\) a partir da função de distribuição de \\(X\\).\nSe \\(Y\\) for variável aleatória continua, podemos então obter a sua função densidade a partir da derivada da função de distribuição já encontrada.\nNão necessariamente \\(Y = g(X)\\) será variável aleatória contínua, \\(Y\\) por ser contínua, discreta e até mesmo uma variável aleatória que não seja nem discreta nem contínua."
+  },
+  {
+    "objectID": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo-2",
+    "href": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo-2",
+    "title": "Transformação de Variáveis Unidimensionais",
+    "section": "Função de Variável Aleatória: Caso Contínuo",
+    "text": "Função de Variável Aleatória: Caso Contínuo\nExemplo 05: Considere que \\(X \\sim Exp(\\lambda)\\), sendo \\(\\lambda &gt; 0\\) conhecido, com função densidade de probabilidade dada por\n\\[\nf_X(x| \\lambda) =\n\\begin{cases}\n\\lambda \\,\\, e^{-\\lambda x} & \\text{para } x &gt; 0  \\\\[6pt]\n0, & c.c.\n\\end{cases}\n\\] Para \\(Y = g(X)\\) dada por\n\\[\nY = g(X) =\n\\begin{cases}\n0 & \\text{se } P\\Bigg( X \\le \\dfrac{1}{\\lambda}\\Bigg) &gt; 0  \\\\[6pt]\n1, & c.c.\n\\end{cases}\n\\] obter a distribuição de \\(Y\\)."
+  },
+  {
+    "objectID": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo-3",
+    "href": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo-3",
+    "title": "Transformação de Variáveis Unidimensionais",
+    "section": "Função de Variável Aleatória: Caso Contínuo",
+    "text": "Função de Variável Aleatória: Caso Contínuo\nSolução:\nComo o evento \\(\\{Y = 0\\}\\) ocorre quando \\(X \\le 1/\\lambda\\) e a função de distribuição exponencial é \\(F_X(x) = 1 - \\exp(-\\lambda x)\\), então\n\\[P(Y=0) = F_X\\Bigg( \\dfrac{1}{\\lambda}\\Bigg) = 1 - \\exp \\Bigg(-\\lambda \\times \\dfrac{1}{\\lambda}\\Bigg) = 1-e^{-1}\\]\nTemos então, que\n\\[P(Y = 1) = 1 - F_X\\Bigg( \\dfrac{1}{\\lambda}\\Bigg) = 1 - (1 - e^{-1}) = e^{-1}\\]"
+  },
+  {
+    "objectID": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo-4",
+    "href": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo-4",
+    "title": "Transformação de Variáveis Unidimensionais",
+    "section": "Função de Variável Aleatória: Caso Contínuo",
+    "text": "Função de Variável Aleatória: Caso Contínuo\nLogo, \\(Y\\) é uma variável aleatória discreta, pois \\(S_Y = \\{0,1\\}\\). Além disso, \\(Y \\sim Bernoulli(p = e^{-1})\\), com fp dada por\n\\[\np_Y(y) =\n\\begin{cases}\np^y(1-p)^{1-y} & \\text{para } y \\in \\{0,1\\}  \\\\[6pt]\n0, & c.c.\n\\end{cases}\n\\] com \\(p = e^{-1}\\)."
+  },
+  {
+    "objectID": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo-5",
+    "href": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo-5",
+    "title": "Transformação de Variáveis Unidimensionais",
+    "section": "Função de Variável Aleatória: Caso Contínuo",
+    "text": "Função de Variável Aleatória: Caso Contínuo\nExemplo 06: Seja \\(X\\) uma variável aleatória tal que \\(X \\sim N(0,1)\\), cuja fdp é dada por\n\\[f_X(x) = \\dfrac{1}{\\sqrt{2\\pi}}\n\\exp\\left( -\\dfrac{x^2}{2} \\right), \\quad x \\in \\mathbb{R}\\]\nConsiderando \\(Y = g(X) = X^2\\), obter a função densidade de probabilidade de \\(Y\\)."
+  },
+  {
+    "objectID": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo-6",
+    "href": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo-6",
+    "title": "Transformação de Variáveis Unidimensionais",
+    "section": "Função de Variável Aleatória: Caso Contínuo",
+    "text": "Função de Variável Aleatória: Caso Contínuo\nSolução:\nTemos que o evento \\(\\{Y \\le y\\}\\), para \\(y\\) fixado e pertencente ao conjunto suporte \\(S_Y = [0, \\infty) \\subset \\mathbb{R}\\), cuja equivalência em relação aos eventos pertencentes ao suporte de \\(X\\), \\(S_X = \\mathbb{R}\\), é dada por \\(\\{Y \\le y\\} = \\{-\\sqrt{y} \\le X \\le \\sqrt{y}\\}\\), conforme ilustrado abaixo"
+  },
+  {
+    "objectID": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo-7",
+    "href": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo-7",
+    "title": "Transformação de Variáveis Unidimensionais",
+    "section": "Função de Variável Aleatória: Caso Contínuo",
+    "text": "Função de Variável Aleatória: Caso Contínuo\nPortanto,\n\\[F_Y(y) = P(Y \\le y) = P(-\\sqrt{y} \\le X \\le \\sqrt{y}) = \\Phi_X(\\sqrt{y}) - \\Phi_X(-\\sqrt{y})\\] para \\(y &gt; 0\\), sendo \\(\\Phi_X\\), a função de distribuição de probabilidade da normal padrão."
+  },
+  {
+    "objectID": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo-8",
+    "href": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo-8",
+    "title": "Transformação de Variáveis Unidimensionais",
+    "section": "Função de Variável Aleatória: Caso Contínuo",
+    "text": "Função de Variável Aleatória: Caso Contínuo\nSe derivarmos \\(F_y(y)\\) em relação a \\(y\\), temos\n\\[\n\\begin{eqnarray}\nf_Y(y) &=& \\dfrac{dF_Y(y)}{dy} = \\dfrac{d\\Big[ \\Phi_X(\\sqrt{y}) - \\Phi_X(-\\sqrt{y})\\Big]}{dy} \\\\ &=& f_X(\\sqrt{y}) \\times \\dfrac{1}{2\\sqrt{y}} + f_X(-\\sqrt{y}) \\times \\dfrac{1}{2\\sqrt{y}}, \\qquad \\text{(regra da cadeia)} \\\\ &=& f_X(\\sqrt{y}) \\times \\dfrac{1}{\\sqrt{y}}, \\qquad \\text{(simetria da normal)} \\\\ &=& \\dfrac{1}{\\sqrt{2\\pi}}\n\\exp\\left( -\\dfrac{(\\sqrt{y})^2}{2} \\right) \\times \\dfrac{1}{\\sqrt{y}} = \\dfrac{1}{2^{\\frac{1}{2}}\\sqrt{\\pi}}\ne^\\left(-\\frac{y}{2} \\right) y ^{-\\frac{1}{2}} = \\chi^2_1\n\\end{eqnarray}\n\\] Uma vez que \\(\\Gamma\\Big(\\frac{1}{2}\\Big) =  \\sqrt{\\pi}\\)."
+  },
+  {
+    "objectID": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo-9",
+    "href": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo-9",
+    "title": "Transformação de Variáveis Unidimensionais",
+    "section": "Função de Variável Aleatória: Caso Contínuo",
+    "text": "Função de Variável Aleatória: Caso Contínuo\nMétodo do Jacobiano\nTeorema: Seja \\(X\\) com fdp \\(f_X(x)\\) e \\(Y=g(X)\\), onde \\(g\\) é uma função monótona. Sejam \\(S_X = \\{x: f_X(x) &gt; 0\\}\\) e \\(S_Y = \\{y: y = g(x) \\,\\, \\text{para algum } \\, x \\in S_X\\}\\). Suponha que \\(f_X(x)\\) seja contínua em \\(S_X\\) e que \\(g^{-1}(y)\\) tenha uma derivada contínua em \\(S_Y\\). Então,\n\\[\nf_Y(y) =\n\\begin{cases}\nf_X \\Big(g^{-1}(y)\\Big) \\Bigg|\\dfrac{d}{dy}g^{-1}(y)\\Bigg| & y \\in S_Y  \\\\[6pt]\n0, & c.c.\n\\end{cases}\n\\]"
+  },
+  {
+    "objectID": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo-10",
+    "href": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo-10",
+    "title": "Transformação de Variáveis Unidimensionais",
+    "section": "Função de Variável Aleatória: Caso Contínuo",
+    "text": "Função de Variável Aleatória: Caso Contínuo\nExemplo 07: Suponha uma variável aleatória contínua \\[\nX \\sim N(\\mu, \\sigma^2), \\quad \\sigma &gt; 0.\n\\]\nSua função densidade é \\[\nf_X(x) = \\frac{1}{\\sigma \\sqrt{2\\pi}}\n\\exp\\left( -\\frac{(x - \\mu)^2}{2\\sigma^2} \\right), \\quad x \\in \\mathbb{R}\n\\]\nDefinimos a nova variável aleatória \\[\nY = \\frac{X - \\mu}{\\sigma}.\n\\]\nQueremos encontrar a distribuição de \\(Y\\) usando o método do jacobiano."
+  },
+  {
+    "objectID": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo-11",
+    "href": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo-11",
+    "title": "Transformação de Variáveis Unidimensionais",
+    "section": "Função de Variável Aleatória: Caso Contínuo",
+    "text": "Função de Variável Aleatória: Caso Contínuo\nPasso 1: Escrever a transformação e a inversa\nA transformação é \\[\nY = g(X) = \\frac{X - \\mu}{\\sigma}.\n\\]\nIsolando \\(X\\) em função de \\(Y\\), obtemos a inversa: \\[\nX = \\sigma Y + \\mu.\n\\]\nIsto é, \\[\nx = g^{-1}(y) = \\sigma y + \\mu.\n\\]"
+  },
+  {
+    "objectID": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo-12",
+    "href": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo-12",
+    "title": "Transformação de Variáveis Unidimensionais",
+    "section": "Função de Variável Aleatória: Caso Contínuo",
+    "text": "Função de Variável Aleatória: Caso Contínuo\nPasso 2: Calcular o jacobiano em 1D\nNo caso unidimensional, o jacobiano é o valor absoluto da derivada de \\(x\\) em relação a \\(y\\): \\[\n\\dfrac{d}{dy} x= \\dfrac{d}{dy} \\,\\sigma y + \\mu  =  \\sigma \\quad \\Rightarrow \\quad \\left| \\dfrac{d}{dy} \\,\\sigma y + \\mu \\right| = \\sigma\n\\]"
+  },
+  {
+    "objectID": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo-13",
+    "href": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo-13",
+    "title": "Transformação de Variáveis Unidimensionais",
+    "section": "Função de Variável Aleatória: Caso Contínuo",
+    "text": "Função de Variável Aleatória: Caso Contínuo\nPasso 3: Para \\(Y = g(X)\\) com \\(g\\) monotônica, a densidade de \\(Y\\) é dada por\n\\[\nf_Y(y) = f_X\\big(g^{-1}(y)\\big)\\,\\left|\\frac{d}{dy} g^{-1}(y)\\right|\n\\]\nNo nosso caso:\n\\[\n\\begin{eqnarray}\nf_Y(y) &=& f_X(\\sigma y + \\mu)\\,\\sigma = \\dfrac{1}{\\sigma \\sqrt{2\\pi}}\n\\exp\\left( -\\dfrac{(\\sigma y + \\mu - \\mu)^2}{2\\sigma^2} \\right)\\,\\sigma \\\\ &=& \\dfrac{1}{\\sigma \\sqrt{2\\pi}}\n\\exp\\left( -\\dfrac{(\\sigma y)^2}{2\\sigma^2} \\right) \\,\\sigma\n\\end{eqnarray}\n\\]"
+  },
+  {
+    "objectID": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo-14",
+    "href": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo-14",
+    "title": "Transformação de Variáveis Unidimensionais",
+    "section": "Função de Variável Aleatória: Caso Contínuo",
+    "text": "Função de Variável Aleatória: Caso Contínuo\nLogo, \\[\nf_Y(y) = \\sigma \\cdot \\dfrac{1}{\\sigma \\sqrt{2\\pi}}\n\\exp\\left( -\\dfrac{\\sigma^2 y^2}{2\\sigma^2} \\right)\n= \\dfrac{1}{\\sqrt{2\\pi}}\n\\exp\\left( -\\dfrac{y^2}{2} \\right), \\quad y \\in \\mathbb{R}\n\\]\nque é exatamente a densidade da Normal Padrão.\nPortanto, \\[\nY = \\frac{X - \\mu}{\\sigma} \\sim N(0,1).\n\\]"
+  },
+  {
+    "objectID": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo-15",
+    "href": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo-15",
+    "title": "Transformação de Variáveis Unidimensionais",
+    "section": "Função de Variável Aleatória: Caso Contínuo",
+    "text": "Função de Variável Aleatória: Caso Contínuo\nExemplo 08: Seja \\(X \\sim U(0,1)\\). Obtenha a função densidade de \\(Y = -\\ln(X)\\).\n\nSolução:\nSabemos que se \\(X \\sim U(0,1)\\), então sua função densidade \\(f_X(x)\\) é dada por\n\\[\nf_X(x) =\n\\begin{cases}\n1, & 0 &lt; x &lt; 1, \\\\\n0, & \\text{caso contrário.}\n\\end{cases}\n\\]\nTemos que \\(Y = -\\ln(X)\\). Como \\(0 &lt; X &lt; 1\\), então \\(Y &gt; 0\\).\nInvertendo:\n\\[\nY = -\\ln(X) \\;\\Rightarrow\\; -Y = \\ln(X) \\;\\Rightarrow\\; X = e^{-Y}\n\\]"
+  },
+  {
+    "objectID": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo-16",
+    "href": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo-16",
+    "title": "Transformação de Variáveis Unidimensionais",
+    "section": "Função de Variável Aleatória: Caso Contínuo",
+    "text": "Função de Variável Aleatória: Caso Contínuo\nPortanto:\n\\[\nx = g^{-1}(y) = e^{-y}\n\\]\nJacobiano\n\\[\n\\dfrac{d}{dy} x = \\dfrac{d}{dy} e^{-y} = -e^{-y} \\quad \\Rightarrow \\quad \\left| \\dfrac{d}{dy} x \\right| = e^{-y}\n\\]\nTemos que\n\\[\nf_Y(y) = f_X(g^{-1}(y)) \\left| \\frac{d}{dy} g^{-1}(y) \\right|\n\\]"
+  },
+  {
+    "objectID": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo-17",
+    "href": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo-17",
+    "title": "Transformação de Variáveis Unidimensionais",
+    "section": "Função de Variável Aleatória: Caso Contínuo",
+    "text": "Função de Variável Aleatória: Caso Contínuo\nSubstituindo:\n\\[\nf_Y(y) = f_X(e^{-y}) \\cdot e^{-y}\n\\]\numa vez que \\(f_X(x) = 1\\) no intervalo \\((0, 1)\\).\n\\[\nf_Y(y) = 1 \\cdot e^{-y} = e^{-y}, \\quad y &gt; 0.\n\\]\nTemos que \\(Y \\sim Exp(\\lambda = 1)\\)"
+  },
+  {
+    "objectID": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo-18",
+    "href": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo-18",
+    "title": "Transformação de Variáveis Unidimensionais",
+    "section": "Função de Variável Aleatória: Caso Contínuo",
+    "text": "Função de Variável Aleatória: Caso Contínuo\nGeneralização do Método do Jacobiano\nSe \\(Y = g(X)\\) não é monótona em \\(\\mathbb{R}\\), podemos aplicar o método do Jacobiano em cada um dos intervalos em que \\(g\\) é monótona, da seguinte forma:\n\nDefina uma partição de \\(\\mathbb{R}_X\\) formada pelos intervalos \\(I_1, I_2, \\cdots I_k\\) tais que a função \\(g\\) é monótona em cada \\(I_j, \\,\\,\\, j= 1\\cdots k\\).\nObtenha \\(f_j(y) = f_X \\Big(g^{-1}(y)\\Big) \\Bigg|\\dfrac{d}{dy}g^{-1}(y)\\Bigg|\\) a cada intervalo \\(I_j\\).\nFinalmente, obtenha\n\n\\[f_Y(y) = \\sum_{j=1}^k f_j(y)\\]"
+  },
+  {
+    "objectID": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo-19",
+    "href": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo-19",
+    "title": "Transformação de Variáveis Unidimensionais",
+    "section": "Função de Variável Aleatória: Caso Contínuo",
+    "text": "Função de Variável Aleatória: Caso Contínuo\nExemplo 09: (Exemplo 06 revisitado) Seja \\(X\\) uma variável aleatória tal que \\(X \\sim N(0,1)\\), cuja fdp é dada por\n\\[f_X(x) = \\dfrac{1}{\\sqrt{2\\pi}}\n\\exp\\left( -\\dfrac{x^2}{2} \\right), \\quad x \\in \\mathbb{R}\\]\nConsiderando \\(Y = g(X) = X^2\\), obter a função densidade de probabilidade de \\(Y\\), usando o método do Jacobiano."
+  },
+  {
+    "objectID": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo-20",
+    "href": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo-20",
+    "title": "Transformação de Variáveis Unidimensionais",
+    "section": "Função de Variável Aleatória: Caso Contínuo",
+    "text": "Função de Variável Aleatória: Caso Contínuo\nSolução:\nNote que, neste caso, temos duas regiões disjuntas do suporte de \\(X\\), \\(S_X\\), em que \\(g(x) = x^2\\) é injetora. Temos, \\(S_{X_1} = (-\\infty, 0]\\) e \\(S_{X_2} = [0, \\infty)\\). Logo, \\(g^{-1}_1(y) = -\\sqrt{y}\\) para \\(x \\le 0\\) e \\(g^{-1}_2(y) = \\sqrt{y}\\) para \\(x &gt; 0\\). Portanto,"
+  },
+  {
+    "objectID": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo-21",
+    "href": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo-21",
+    "title": "Transformação de Variáveis Unidimensionais",
+    "section": "Função de Variável Aleatória: Caso Contínuo",
+    "text": "Função de Variável Aleatória: Caso Contínuo\n\\[\n\\begin{eqnarray}\nf_Y(y) &=& f_X(g^{-1}_1(y)) \\left| \\frac{d}{dy} g_1^{-1}(y) \\right| + f_X(g_2^{-1}(y)) \\left| \\frac{d}{dy} g_2^{-1}(y) \\right| \\\\&=& \\dfrac{1}{\\sqrt{2\\pi}}\n\\exp\\left( -\\dfrac{(-\\sqrt{y})^2}{2} \\right) \\left| \\frac{d}{dy} (-\\sqrt{y}) \\right| + \\dfrac{1}{\\sqrt{2\\pi}}\n\\exp\\left( -\\dfrac{(\\sqrt{y})^2}{2} \\right) \\left| \\frac{d}{dy} \\sqrt{y} \\right| \\\\ &=& \\dfrac{1}{\\sqrt{2\\pi}}\n\\exp\\left( -\\dfrac{y}{2} \\right) \\left| -\\frac{1}{2 \\sqrt{y}} \\right| + \\dfrac{1}{\\sqrt{2\\pi}}\n\\exp\\left( -\\dfrac{y}{2} \\right) \\left| \\frac{1}{2 \\sqrt{y}}  \\right| \\\\&=& \\dfrac{2}{\\sqrt{2\\pi}}\n\\exp\\left( -\\dfrac{y}{2} \\right)  \\frac{1}{2 \\sqrt{y}}   = \\dfrac{1}{2^{\\frac{1}{2}}\\sqrt{\\pi}}\ne^{-\\frac{y}{2}}  y^{-\\frac{1}{2}} = \\chi^2_1\n\\end{eqnarray}\n\\]"
+  },
+  {
+    "objectID": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo-22",
+    "href": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo-22",
+    "title": "Transformação de Variáveis Unidimensionais",
+    "section": "Função de Variável Aleatória: Caso Contínuo",
+    "text": "Função de Variável Aleatória: Caso Contínuo\nExemplo 10: Seja \\(X\\sim U(-1,1)\\). Qual a distribuição de \\(Y=X^2\\)?\n\nSolução:\nDefinindo a função indicadora de um conjunto \\(A\\) como\n\\[\nI_A(x) =\n\\begin{cases}\n1, & \\text{se } x \\in A, \\\\\n0, & \\text{se } x \\notin A\n\\end{cases}\n\\]\npodemos escrever a fução densidade de \\(X\\) como \\(f_X(x) = \\dfrac{1}{2}I_{(-1,1)}(x)\\)."
+  },
+  {
+    "objectID": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo-23",
+    "href": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo-23",
+    "title": "Transformação de Variáveis Unidimensionais",
+    "section": "Função de Variável Aleatória: Caso Contínuo",
+    "text": "Função de Variável Aleatória: Caso Contínuo\nComo \\(Y = X^2\\) não é monótona em \\((−1, 1)\\), mas o é em \\((−1, 0)\\) e \\((0, 1)\\) podemos utilizar a generalização do método do Jacobiano, ou seja, no intervalo \\((−1, 0)\\), \\(g_1^{-1}(y) = -\\sqrt{y}\\) e no intervalo \\((0, 1)\\) \\(g_2^{-1}(y) = \\sqrt{y}\\). Assim,\n\\[\n\\begin{eqnarray}\nf_Y(y) &=& f_X(g^{-1}_1(y)) \\left| \\frac{d}{dy} g_1^{-1}(y) \\right| + f_X(g_2^{-1}(y)) \\left| \\frac{d}{dy} g_2^{-1}(y) \\right| \\\\&=& f_X(-\\sqrt{y}) \\left| \\frac{d}{dy} (-\\sqrt{y}) \\right| + f_X(\\sqrt{y}) \\left| \\frac{d}{dy} \\sqrt{y} \\right| \\\\ &=& \\frac{1}{2} \\times \\left| -\\frac{1}{2 \\sqrt{y}} \\right| +  \\frac{1}{2} \\times \\left| \\frac{1}{2 \\sqrt{y}} \\right| = \\frac{1}{2} \\times  \\frac{1}{2 \\sqrt{y}} + \\frac{1}{2} \\times  \\frac{1}{2 \\sqrt{y}} \\\\ &=& \\frac{1}{4 \\sqrt{y}} +  \\frac{1}{4 \\sqrt{y}} = \\frac{1}{2 \\sqrt{y}}, \\qquad y&gt;0\n\\end{eqnarray}\n\\]"
+  },
+  {
+    "objectID": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo-24",
+    "href": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo-24",
+    "title": "Transformação de Variáveis Unidimensionais",
+    "section": "Função de Variável Aleatória: Caso Contínuo",
+    "text": "Função de Variável Aleatória: Caso Contínuo\nLogo, se \\(X\\sim U(-1,1)\\), a distribuição de \\(Y=X^2\\) é dada por\n\\[f_Y(y) = \\dfrac{1}{2 \\sqrt{y}}I_{(0,1)}(y)\\]"
+  },
+  {
+    "objectID": "aulas/transformacoes/transformacoes.html#a-transformação-integral",
+    "href": "aulas/transformacoes/transformacoes.html#a-transformação-integral",
+    "title": "Transformação de Variáveis Unidimensionais",
+    "section": "A Transformação Integral",
+    "text": "A Transformação Integral\nUm importante e conhecido teorema é o Teorema da Probabilidade Integral, que relaciona a distribuição uniforme contínua com todas as outras distribuições de probabilidade.\n\nSeu resultado é importante na Estatística Computacional, pois permite que sejam simuladas amostras aleatórias de qualquer distribuição de probabilidade."
+  },
+  {
+    "objectID": "aulas/transformacoes/transformacoes.html#a-transformação-integral-1",
+    "href": "aulas/transformacoes/transformacoes.html#a-transformação-integral-1",
+    "title": "Transformação de Variáveis Unidimensionais",
+    "section": "A Transformação Integral",
+    "text": "A Transformação Integral\nTeorema da probabilidade integral: Consideremos \\(X\\) uma variável aleatória absolutamente contínua com função de distribuição acumulada \\(F_X\\). Então \\(U = F_X(X)\\) possui distribuição uniforme no intervalo \\([0,1]\\). Por outro lado, se \\(U \\sim U(0,1)\\), então \\(X = F^{-1}_X(U)\\) possui função de distribuição acumulada \\(F_X\\)."
+  },
+  {
+    "objectID": "aulas/transformacoes/transformacoes.html#a-transformação-integral-2",
+    "href": "aulas/transformacoes/transformacoes.html#a-transformação-integral-2",
+    "title": "Transformação de Variáveis Unidimensionais",
+    "section": "A Transformação Integral",
+    "text": "A Transformação Integral\nDemonstração: Considere \\(X\\) uma variável aleatória absolutamente contínua com função de distribuição acumulada \\(F_X\\), então\n\\[\n\\begin{eqnarray}\nF_U(u) &=& P(U \\le u)= P(F_X(X) \\le u) = P(X \\le F_X^{-1}(u)) = F_X(F_X^{-1}(u)) = u\n\\end{eqnarray}\n\\] Por outro lado, se \\(U \\sim U(0,1)\\), então\n\\[\\small P(X \\le x) = P(F^{-1}_X(U) \\le x) = P(U \\le F_x(x)) = F_U(F_X(x)) = F_X(x), \\qquad \\text{pois } U \\text{ é uniforme} \\] Assim \\(X\\) possui função de distribuição \\(F_X\\)."
+  },
+  {
+    "objectID": "aulas/transformacoes/transformacoes.html#a-transformação-integral-3",
+    "href": "aulas/transformacoes/transformacoes.html#a-transformação-integral-3",
+    "title": "Transformação de Variáveis Unidimensionais",
+    "section": "A Transformação Integral",
+    "text": "A Transformação Integral\nExemplo 11: (Geração de variáveis da distribuição exponencial) Considere que \\(X \\sim Exp(\\lambda)\\), cuja função de distribuição de probabilidade é dada por\n\\[ F_X(x) = 1 - e^{-\\lambda x}, \\qquad x \\ge 0 \\]\nSe \\(U \\sim U(0,1)\\), qual é a distribuição de \\(X = F_X^{-1}(U)\\)?\n\nSolução:\nA função inversa é dada por\n\\[\nu = 1 - e^{-\\lambda x} \\Rightarrow e^{-\\lambda x} = 1 - u \\Rightarrow x = -\\frac{1}{\\lambda} \\ln(1-u)\n\\]"
+  },
+  {
+    "objectID": "aulas/transformacoes/transformacoes.html#a-transformação-integral-4",
+    "href": "aulas/transformacoes/transformacoes.html#a-transformação-integral-4",
+    "title": "Transformação de Variáveis Unidimensionais",
+    "section": "A Transformação Integral",
+    "text": "A Transformação Integral\nAssim, pelo teorema da transformação integral,\n\\[X = F_X^{-1}(U) = -\\frac{1}{\\lambda} \\ln(1-U)\\] possui distribuição exponencial com função de distribuição \\(F_X\\). Podemos utilizar esse resultado para gerar realizações de uma amostra aleatória da distribuição exponencial. Para isso, basta gerarmos realizações uniformes \\(u\\) e aplicarmos a relação anterior."
+  },
+  {
+    "objectID": "aulas/transformacoes/transformacoes.html#a-transformação-integral-5",
+    "href": "aulas/transformacoes/transformacoes.html#a-transformação-integral-5",
+    "title": "Transformação de Variáveis Unidimensionais",
+    "section": "A Transformação Integral",
+    "text": "A Transformação Integral\nExemplo 12: (Geração de variáveis da distribuição Weibull) Considere que \\(X \\sim Weibull(\\alpha, \\beta)\\), cuja função de distribuição de probabilidade é dada por\n\\[F_X(x) = 1 - e^{-(x/\\alpha)^{\\beta}}, \\qquad x \\ge 0\\]\nSe \\(U \\sim U(0,1)\\), qual é a distribuição de \\(X = F_X^{-1}(U)\\)?\n\nSolução:\nA função inversa é dada por\n\\[\nu = 1 - e^{-(x/\\alpha)^{\\beta}} \\Rightarrow e^{-(x/\\alpha)^{\\beta}} = 1 - u \\Rightarrow (x/\\alpha)^{\\beta} = -\\ln(1-u) \\Rightarrow x = \\alpha \\,[-\\ln(1-u)]^{1/\\beta}\n\\]"
+  },
+  {
+    "objectID": "aulas/transformacoes/transformacoes.html#a-transformação-integral-6",
+    "href": "aulas/transformacoes/transformacoes.html#a-transformação-integral-6",
+    "title": "Transformação de Variáveis Unidimensionais",
+    "section": "A Transformação Integral",
+    "text": "A Transformação Integral\nAssim, pelo teorema da transformação integral,\n\\[X = F_X^{-1}(U) = \\alpha \\,[-\\ln(1-U)]^{1/\\beta}\\] possui distribuição Weibull com função de distribuição \\(F_X\\)."
   }
 ]
