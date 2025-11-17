@@ -1,5 +1,5 @@
 ---
-title: "Lista de exercícios 01: Revisão de Probabilidade I"
+title: "Revisão de Probabilidade I"
 format:
   html:
     number-sections: true
