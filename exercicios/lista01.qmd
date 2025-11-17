@@ -70,7 +70,7 @@ $$
 f_X(x)=
 \begin{cases}
 \dfrac{x+1}{10}, & 0<x<2,\\[6pt]
-1-\dfrac{18-3x}{40}, & 2<x<6,\\[6pt]
+\dfrac{18-3x}{40}, & 2<x<6,\\[6pt]
 0, & \text{c.c.}
 \end{cases}
 $$
