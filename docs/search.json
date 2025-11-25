@@ -861,7 +861,7 @@
     "href": "cronograma.html",
     "title": "Cronograma da Disciplina",
     "section": "",
-    "text": "Esta página contém um esboço dos tópicos, conteúdos e tarefas para o semestre. Este cronograma será atualizado conforme o semestre avança.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSemana\nData\nTópico\nArtigo\nSlides\nEC\nLE\nScript\nMC\nProjeto\n\n\n\n\n6\nTer, 11/11\nOutras Distribuições Contínuas\n\n\n\n\n\n\n\n\n\n\nQui, 13/11\nOutras Distribuições Contínuas\n\n\n\n\n\n\n\n\n\n7\nTer, 18/11\nNão haverá aula\n\n\n\n\n\n\n\n\n\n\nQui, 20/11\nFeriado: não haverá aula",
+    "text": "Esta página contém um esboço dos tópicos, conteúdos e tarefas para o semestre. Este cronograma será atualizado conforme o semestre avança.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSemana\nData\nTópico\nArtigo\nSlides\nEC\nLE\nScript\nMC\nProjeto\n\n\n\n\n6\nTer, 11/11\nOutras Distribuições Contínuas\n\n\n\n\n\n\n\n\n\n\nQui, 13/11\nOutras Distribuições Contínuas\n\n\n\n\n\n\n\n\n\n7\nTer, 18/11\nNão haverá aula\n\n\n\n\n\n\n\n\n\n\nQui, 20/11\nFeriado: não haverá aula\n\n\n\n\n\n\n\n\n\n8\nTer, 25/11\nOutras Distribuições Contínuas\n\n\n\n\n\n\n\n\n\n\nQui, 27/11\nOutras Distribuições Contínuas",
     "crumbs": [
       "Cronograma da Disciplina"
     ]
@@ -2270,5 +2270,33 @@
     "crumbs": [
       "Aulas"
     ]
+  },
+  {
+    "objectID": "programacao/semana-8.html",
+    "href": "programacao/semana-8.html",
+    "title": "Semana 08",
+    "section": "",
+    "text": "Outras Distribuições Contínuas \n\n\nVer slides PDF"
+  },
+  {
+    "objectID": "programacao/semana-8.html#slides",
+    "href": "programacao/semana-8.html#slides",
+    "title": "Semana 08",
+    "section": "",
+    "text": "Outras Distribuições Contínuas \n\n\nVer slides PDF"
+  },
+  {
+    "objectID": "programacao/semana-8.html#entrega-lista-de-exercícios-01",
+    "href": "programacao/semana-8.html#entrega-lista-de-exercícios-01",
+    "title": "Semana 08",
+    "section": "Entrega lista de exercícios 01",
+    "text": "Entrega lista de exercícios 01\n\n\n\n\n\n\nFique Atento!\n\n\n\n Lista de exercícios 01\nEntrega na sala de aula!\n\nData de entrega:\n\n25 de novembro de 2025"
+  },
+  {
+    "objectID": "programacao/semana-8.html#entrega-lista-de-exercícios-01-1",
+    "href": "programacao/semana-8.html#entrega-lista-de-exercícios-01-1",
+    "title": "Semana 07",
+    "section": "Entrega lista de exercícios 01",
+    "text": "Entrega lista de exercícios 01\n\n\n\n\n\n\nFique Atento!\n\n\n\n Lista de exercícios 01\nEntrega na sala de aula!\n\nData de entrega:\n\n25 de novembro de 2025"
   }
 ]
