@@ -1173,7 +1173,7 @@ A Weibull é uma das distribuições mais usadas em engenharia para modelar temp
 
 
 1) **Engenharia de Confiabilidade:**
-    - vida útil de componentes mecânicos e eletrônicos]
+    - vida útil de componentes mecânicos e eletrônicos
     - fadiga de materiais
     - tempo até quebra de peças, motores, rolamentos, cabos, soldas
 

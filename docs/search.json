@@ -399,7 +399,7 @@
     "href": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-weibull-10",
     "title": "Outras Distribuições Contínuas",
     "section": "Distribuição Weibull",
-    "text": "Distribuição Weibull\nA Weibull é uma das distribuições mais usadas em engenharia para modelar tempo até falha/tempo de vida. Ela é extremamente flexível porque o parâmetro de forma \\(\\beta\\) permite que o risco aumente, diminua ou seja constante ao longo do tempo.\n\n\nEngenharia de Confiabilidade:\n\nvida útil de componentes mecânicos e eletrônicos]\nfadiga de materiais\ntempo até quebra de peças, motores, rolamentos, cabos, soldas\n\n\n\n\n\nAnálise de Risco/Manutenção:\n\nplanejamento de manutenção preventiva\nprever quando um equipamento deve ser substituído"
+    "text": "Distribuição Weibull\nA Weibull é uma das distribuições mais usadas em engenharia para modelar tempo até falha/tempo de vida. Ela é extremamente flexível porque o parâmetro de forma \\(\\beta\\) permite que o risco aumente, diminua ou seja constante ao longo do tempo.\n\n\nEngenharia de Confiabilidade:\n\nvida útil de componentes mecânicos e eletrônicos\nfadiga de materiais\ntempo até quebra de peças, motores, rolamentos, cabos, soldas\n\n\n\n\n\nAnálise de Risco/Manutenção:\n\nplanejamento de manutenção preventiva\nprever quando um equipamento deve ser substituído"
   },
   {
     "objectID": "aulas/outras_distr_continuas/outras_dist_continuas.html#distribuição-weibull-11",
