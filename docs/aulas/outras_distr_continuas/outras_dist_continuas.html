@@ -533,7 +533,7 @@ f(x \mid a,b)=
 <h2>Distribuição Beta</h2>
 <p>Se <span class="math inline">\(X \sim Beta(a, b)\)</span>, então</p>
 <p><span class="math display">\[
-E[X] = \int_0^1 x \dfrac{1}{B(a,b)} x^{\,a-1} (1-x)^{\,b-1} = \dfrac{1}{B(a,b)}  \int_0^1 x^a(1-x)^{b-1} = \dfrac{B(a+1,b)}{B(a,b)}
+E[X] = \int_0^1 x \dfrac{1}{B(a,b)} x^{\,a-1} (1-x)^{\,b-1} \, dx = \dfrac{1}{B(a,b)}  \int_0^1 x^a(1-x)^{b-1} \, dx = \dfrac{B(a+1,b)}{B(a,b)}
 \]</span></p>
 <p>Usando a relação <span class="math inline">\(B(a,b) = \dfrac{\Gamma(a) \Gamma(b)}{\Gamma(a+b)}\)</span>, temos</p>
 <p><span class="math display">\[
@@ -774,7 +774,7 @@ f(x|\alpha, \beta) =
 <h2>Distribuição Weibull</h2>
 <p><strong>Observação:</strong> Se <span class="math inline">\(X \sim Weibull(\alpha, 1)\)</span>, ou seja, fazendo <span class="math inline">\(\beta = 1\)</span>, temos</p>
 <p><span class="math display">\[f(x) = \dfrac{1}{\alpha} \left(\dfrac{x}{\alpha}\right)^{1 - 1} \exp\!\left[-\left(\dfrac{x}{\alpha}\right)^{1}\right] = \dfrac{1}{\alpha}  \exp\!\left(-\dfrac{x}{\alpha}\right), \,\,\,\,\,\, x\geq 0\]</span></p>
-<p>Fazendo <span class="math inline">\(\lambda = \dfrac{1}{\lambda}\)</span>, temos <span class="math inline">\(f(x) = \lambda e^{-\lambda x}\)</span>. Logo <span class="math inline">\(X \sim Exp(\lambda)\)</span>.</p>
+<p>Fazendo <span class="math inline">\(\lambda = \dfrac{1}{\alpha}\)</span>, temos <span class="math inline">\(f(x) = \lambda e^{-\lambda x}\)</span>. Logo <span class="math inline">\(X \sim Exp(\lambda)\)</span>.</p>
 </section>
 <section id="distribuição-weibull-6" class="slide level2">
 <h2>Distribuição Weibull</h2>
