@@ -391,7 +391,7 @@ Para $Y = g(X)$ dada por
 $$
 Y = g(X) =
 \begin{cases}
-0 & \text{se } P\Bigg( X \le \dfrac{1}{\lambda}\Bigg) > 0  \\[6pt] 
+0 & \text{se }  X \le \dfrac{1}{\lambda}  \\[6pt] 
 1, & c.c.
 \end{cases}
 $$

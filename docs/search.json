@@ -1987,7 +1987,7 @@
     "href": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo-2",
     "title": "Transformação de Variáveis Unidimensionais",
     "section": "Função de Variável Aleatória: Caso Contínuo",
-    "text": "Função de Variável Aleatória: Caso Contínuo\nExemplo 05: Considere que \\(X \\sim Exp(\\lambda)\\), sendo \\(\\lambda &gt; 0\\) conhecido, com função densidade de probabilidade dada por\n\\[\nf_X(x| \\lambda) =\n\\begin{cases}\n\\lambda \\,\\, e^{-\\lambda x} & \\text{para } x &gt; 0  \\\\[6pt]\n0, & c.c.\n\\end{cases}\n\\] Para \\(Y = g(X)\\) dada por\n\\[\nY = g(X) =\n\\begin{cases}\n0 & \\text{se } P\\Bigg( X \\le \\dfrac{1}{\\lambda}\\Bigg) &gt; 0  \\\\[6pt]\n1, & c.c.\n\\end{cases}\n\\] obter a distribuição de \\(Y\\)."
+    "text": "Função de Variável Aleatória: Caso Contínuo\nExemplo 05: Considere que \\(X \\sim Exp(\\lambda)\\), sendo \\(\\lambda &gt; 0\\) conhecido, com função densidade de probabilidade dada por\n\\[\nf_X(x| \\lambda) =\n\\begin{cases}\n\\lambda \\,\\, e^{-\\lambda x} & \\text{para } x &gt; 0  \\\\[6pt]\n0, & c.c.\n\\end{cases}\n\\] Para \\(Y = g(X)\\) dada por\n\\[\nY = g(X) =\n\\begin{cases}\n0 & \\text{se }  X \\le \\dfrac{1}{\\lambda}  \\\\[6pt]\n1, & c.c.\n\\end{cases}\n\\] obter a distribuição de \\(Y\\)."
   },
   {
     "objectID": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo-3",
