@@ -49,7 +49,7 @@ Esta página contém aulas que serão apresentadas ao longo do semestre. Você p
 
 <span>
 [Ver slides](/aulas/outras_distr_continuas/outras_dist_continuas.html#/title-slide){.btn .btn-est304-main .btn-sm}
-[PDF](/pdf/outras_dist_continuas.pdf){.btn .btn-est304-outline .btn-sm}
+[PDF](/aulas/outras_distr_continuas/outras_dist_continuas.pdf){.btn .btn-est304-outline .btn-sm}
 </span>
 :::
 
@@ -60,7 +60,7 @@ Esta página contém aulas que serão apresentadas ao longo do semestre. Você p
 
 <span>
 [Ver slides](/aulas/transformacoes/transformacoes.html#/title-slide){.btn .btn-est304-main .btn-sm}
-[PDF](/pdf/transformacoes.pdf){.btn .btn-est304-outline .btn-sm}
+[PDF](/aulas/transformacoes/transformacoes.pdf){.btn .btn-est304-outline .btn-sm}
 </span>
 :::
 
