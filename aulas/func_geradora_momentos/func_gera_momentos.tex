@@ -1,0 +1,624 @@
+% Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  ignorenonframetext,
+  aspectratio=169,
+]{beamer}
+\newif\ifbibliography
+\usepackage{pgfpages}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamercolor{caption name}{fg=normal text.fg}
+\beamertemplatenavigationsymbolsempty
+% remove section numbering
+\setbeamertemplate{part page}{
+  \centering
+  \begin{beamercolorbox}[sep=16pt,center]{part title}
+    \usebeamerfont{part title}\insertpart\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{section page}{
+  \centering
+  \begin{beamercolorbox}[sep=12pt,center]{section title}
+    \usebeamerfont{section title}\insertsection\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{subsection page}{
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center]{subsection title}
+    \usebeamerfont{subsection title}\insertsubsection\par
+  \end{beamercolorbox}
+}
+% Prevent slide breaks in the middle of a paragraph
+\widowpenalties 1 10000
+\raggedbottom
+\AtBeginPart{
+  \frame{\partpage}
+}
+\AtBeginSection{
+  \ifbibliography
+  \else
+    \frame{\sectionpage}
+  \fi
+}
+\AtBeginSubsection{
+  \frame{\subsectionpage}
+}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+
+
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+\usepackage{caption}
+% Make caption package work with longtable
+\makeatletter
+\def\fnum@table{\tablename~\thetable}
+\makeatother
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+
+
+
+
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+ 
+
+
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
+\@ifpackageloaded{fontawesome5}{}{\usepackage{fontawesome5}}
+\definecolor{quarto-callout-color}{HTML}{909090}
+\definecolor{quarto-callout-note-color}{HTML}{0758E5}
+\definecolor{quarto-callout-important-color}{HTML}{CC1914}
+\definecolor{quarto-callout-warning-color}{HTML}{EB9113}
+\definecolor{quarto-callout-tip-color}{HTML}{00A047}
+\definecolor{quarto-callout-caution-color}{HTML}{FC5300}
+\definecolor{quarto-callout-color-frame}{HTML}{acacac}
+\definecolor{quarto-callout-note-color-frame}{HTML}{4582ec}
+\definecolor{quarto-callout-important-color-frame}{HTML}{d9534f}
+\definecolor{quarto-callout-warning-color-frame}{HTML}{f0ad4e}
+\definecolor{quarto-callout-tip-color-frame}{HTML}{02b875}
+\definecolor{quarto-callout-caution-color-frame}{HTML}{fd7e14}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Função Geradora de Momentos},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+
+
+\title{Função Geradora de Momentos}
+\author{}
+\date{}
+
+\begin{document}
+\frame{\titlepage}
+
+
+\begin{frame}{Momentos}
+\phantomsection\label{momentos}
+Calculamos algumas características de uma variável aleatória \(X\), tais
+como \(E(X)\) e \(Var(X)\), através da distribuição de probabilidade de
+\(X\)
+
+\pause
+
+Vimos que a variância pode ser expressa como uma \textbf{função da
+esperança} das duas primeiras potências de \(X\), ou seja,
+
+\[Var(X) = E(X^2) - \Big[E(X)\Big]^2\]
+
+\pause
+
+Outras características da distribuição de probabilidade de \(X\) podem
+ser expressas por meio das esperanças das potências de \(X\) como por
+exemplo \textbf{coeficientes de assimetria} e \textbf{curtose}.
+\end{frame}
+
+\begin{frame}{Momentos}
+\phantomsection\label{momentos-1}
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, breakable, toptitle=1mm, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, coltitle=black, colframe=quarto-callout-note-color-frame, opacitybacktitle=0.6, bottomrule=.15mm, leftrule=.75mm, rightrule=.15mm, bottomtitle=1mm, left=2mm, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Definição 01: Momentos}, opacityback=0, colback=white]
+
+Seja \(X\) uma variável aleatória. Então, o \textbf{k-ésimo momento} de
+\(X\), denotado por \(\mu'_k\) é definido como,
+
+\[\mu'_k = E(X^k)\]
+
+desde que essa quantidade exista. O \textbf{k-ésimo momento central} de
+uma variável aleatória \(X\), denotado por \(\mu_k\) é definido como,
+
+\[\mu^k = E\Big[X - E(X)\Big]^k\]
+
+sempre que essa quantidade existir.
+
+\end{tcolorbox}
+\end{frame}
+
+\begin{frame}{Momentos}
+\phantomsection\label{momentos-2}
+Note que,
+
+\begin{itemize}
+\tightlist
+\item
+  \(E(X) = \mu'_1\)
+\end{itemize}
+
+\pause
+
+\begin{itemize}
+\tightlist
+\item
+  \(Var(X) = \mu_2 = \mu'_2 - [\mu'_1]^2\)
+\end{itemize}
+
+\pause
+
+\begin{itemize}
+\tightlist
+\item
+  Para qualquer variável aleatória, \(\mu_1 = 0\).
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Momentos}
+\phantomsection\label{momentos-3}
+\begin{itemize}
+\tightlist
+\item
+  Se \(X\) é uma variável aleatória discreta,
+\end{itemize}
+
+\[\mu'_k = E(X^k) = \sum_{i=1}^{\infty} x_i^k p(x_i)\]
+
+\pause
+
+\begin{itemize}
+\tightlist
+\item
+  Se \(X\) é uma variável aleatória contínua,
+\end{itemize}
+
+\[\mu'_k = E(X^k) = \int_{-\infty}^{\infty} x_i^k f(x) \, dx\]
+\end{frame}
+
+\begin{frame}{Momentos}
+\phantomsection\label{momentos-4}
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, breakable, toptitle=1mm, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, coltitle=black, colframe=quarto-callout-note-color-frame, opacitybacktitle=0.6, bottomrule=.15mm, leftrule=.75mm, rightrule=.15mm, bottomtitle=1mm, left=2mm, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Exemplo 01: Momentos da distribuição Gamma}, opacityback=0, colback=white]
+
+Encontre o \(k\)-ésimo momento de \(X \sim Gamma(\alpha, \lambda)\).
+
+\end{tcolorbox}
+
+\pause
+
+\textbf{Solução:} Temos que, se \(X \sim Gamma(\alpha, \lambda)\), então
+sua função densidade é dada por,
+
+\[
+f(x \mid \alpha,\lambda) =
+\begin{cases}
+\dfrac{\lambda e^{-\lambda x}(\lambda x)^{\alpha-1}}{\Gamma(\alpha)}, & x\ge 0,\\[6pt]
+0, & x<0
+\end{cases}
+\]
+\end{frame}
+
+\begin{frame}{Momentos}
+\phantomsection\label{momentos-5}
+Assim,
+
+\[
+\begin{aligned}
+E(X^k) &= \int_0^\infty x^k f(x\mid \alpha,\lambda)\, dx = \int_0^\infty x^k 
+\frac{\lambda e^{-\lambda x}(\lambda x)^{\alpha-1}}
+{\Gamma(\alpha)}\, dx \\[6pt]
+ &= \int_0^\infty x^k 
+\frac{\lambda e^{-\lambda x}\lambda^{\alpha-1} \, x^{\alpha-1}}
+{\Gamma(\alpha)}\, dx = \frac{\lambda^\alpha}{\Gamma(\alpha)}
+\int_0^\infty x^{\alpha+k-1} e^{-\lambda x}\, dx
+\end{aligned}
+\]
+
+Note que a integral é quase a função gama, a não ser pelo termo
+\(e^{-\lambda x}\). Seja então a seguinte mudança de variável,
+
+\[u = \lambda  x \,\,\, \Rightarrow \,\,\, x = \dfrac{u}{\lambda}, \qquad dx = \dfrac{du}{\lambda}\]
+\end{frame}
+
+\begin{frame}{Momentos}
+\phantomsection\label{momentos-6}
+Assim,
+
+\[
+\begin{aligned}
+E(X^k) &=  \dfrac{\lambda^\alpha}{\Gamma(\alpha)}
+\int_0^\infty x^{\alpha+k-1} e^{-\lambda x}\, dx  = \dfrac{\lambda^\alpha}{\Gamma(\alpha)}
+\int_0^\infty \Big(\dfrac{u}{\lambda}\Big)^{\alpha+k-1} e^{-u}\, \dfrac{du}{\lambda} \\[6pt] &= \dfrac{\lambda^\alpha}{\lambda ^{\alpha + k}\,\Gamma(\alpha)}
+\int_0^\infty u^{\alpha+k-1} e^{-u}\, du = \dfrac{\lambda^\alpha \Gamma(\alpha + k)}{\lambda ^{\alpha + k}\,\Gamma(\alpha)} \\[6pt] &= \dfrac{\Gamma(\alpha+k)}{\Gamma(\alpha)\lambda^k}
+\end{aligned}
+\]
+
+Mas,
+
+\[
+\Gamma(\alpha+k) = (\alpha+k-1)(\alpha+k-2)\cdots(\alpha+1)\alpha\Gamma(\alpha)
+\]
+\end{frame}
+
+\begin{frame}{Momentos}
+\phantomsection\label{momentos-7}
+De forma que, o \(k\)-ésimo momento de uma variável aleatória
+\(X \sim Gamma (\alpha, \lambda)\) é dado por
+
+\[
+E(X^k)
+=
+\frac{\alpha(\alpha+1)\cdots(\alpha+k-1)}{\lambda^k}
+\]
+\end{frame}
+
+\begin{frame}{Momentos}
+\phantomsection\label{momentos-8}
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, breakable, toptitle=1mm, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, coltitle=black, colframe=quarto-callout-note-color-frame, opacitybacktitle=0.6, bottomrule=.15mm, leftrule=.75mm, rightrule=.15mm, bottomtitle=1mm, left=2mm, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Exemplo 02: Momentos da distribuição Weibull}, opacityback=0, colback=white]
+
+Encontre o \(k\)-ésimo momento de \(X \sim Weibull(\alpha, \beta)\).
+
+\end{tcolorbox}
+
+\pause
+
+\textbf{Solução:} Temos que, se \(X \sim Weibull(\alpha, \beta)\), então
+sua função densidade é dada por,
+
+\[
+f(x \mid \alpha,\beta)=
+\begin{cases}
+\dfrac{\beta}{\alpha}
+\left(\dfrac{x}{\alpha}\right)^{\beta-1}
+\exp\!\left[-\left(\dfrac{x}{\alpha}\right)^{\beta}\right], & x\ge 0,\\[6pt]
+0, & x<0.
+\end{cases}
+\]
+\end{frame}
+
+\begin{frame}{Momentos}
+\phantomsection\label{momentos-9}
+Assim,
+
+\[
+\begin{aligned}
+E(X^k) &= \int_0^\infty x^k 
+\frac{\beta}{\alpha}
+\left(\frac{x}{\alpha}\right)^{\beta-1}
+\exp\!\left[-\left(\frac{x}{\alpha}\right)^{\beta}\right] dx 
+\end{aligned}
+\]
+
+Mudança de variável:
+
+\[
+u = \left(\frac{x}{\alpha}\right)^{\beta}
+\quad\Rightarrow\quad
+x = \alpha u^{1/\beta},\qquad
+dx = \alpha \frac{1}{\beta} u^{1/\beta - 1} du
+\]
+
+Além disso:
+
+\[
+x^k = \alpha^k u^{k/\beta},
+\qquad
+\left(\frac{x}{\alpha}\right)^{\beta-1}=u^{(\beta-1)/\beta},
+\qquad
+\exp\!\left[-\left(\frac{x}{\alpha}\right)^{\beta}\right]=e^{-u}
+\]
+\end{frame}
+
+\begin{frame}{Momentos}
+\phantomsection\label{momentos-10}
+logo,
+
+\[
+\begin{aligned}
+E(X^k) &= \int_0^\infty x^k 
+\frac{\beta}{\alpha}
+\left(\frac{x}{\alpha}\right)^{\beta-1}
+\exp\!\left[-\left(\frac{x}{\alpha}\right)^{\beta}\right] dx \\[6pt] &= \int_0^\infty 
+\alpha^k u^{k/\beta}\,
+\frac{\beta}{\alpha}\,
+u^{(\beta-1)/\beta}\,
+e^{-u}\,
+\alpha \frac{1}{\beta}u^{1/\beta -1}\,du \\[6pt] &= \alpha^k \int_0^\infty 
+u^{\frac{k+\beta}{\beta}-1} 
+e^{-u}\,du = \alpha^k\,\,\Gamma\!\left(1+\frac{k}{\beta}\right)
+\end{aligned}
+\]
+\end{frame}
+
+\begin{frame}{Função Geradora de Momentos}
+\phantomsection\label{funuxe7uxe3o-geradora-de-momentos}
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, breakable, toptitle=1mm, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, coltitle=black, colframe=quarto-callout-note-color-frame, opacitybacktitle=0.6, bottomrule=.15mm, leftrule=.75mm, rightrule=.15mm, bottomtitle=1mm, left=2mm, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Definição 02: Função Geradora de Momentos}, opacityback=0, colback=white]
+
+Seja \(X\) uma variável aleatória qualquer. A \textbf{função geradora de
+momentos} (FGM) de \(X\), denotada por \(M_X\), é definida por
+
+\[
+M_X(t)=E(e^{tX}),
+\]
+
+para valores de \(t\) em um intervalo contendo \(0\) onde a experença
+exista.
+
+\end{tcolorbox}
+
+\textbf{Importante:} a função geradora de momentos é função de \(t\).
+Para ela existir basta que exista \(\varepsilon > 0\) tal que
+\(E(e^{tX})\) esteja bem definida para qualquer
+\(t \in (-\varepsilon, \varepsilon)\).
+\end{frame}
+
+\begin{frame}{Função Geradora de Momentos}
+\phantomsection\label{funuxe7uxe3o-geradora-de-momentos-1}
+Note que a \textbf{definição de função geradora de momentos} é feita
+independente do tipo de variável, mas a forma de encontrá-la depende se
+a variável for \textbf{discreta} ou \textbf{contínua}, isto é,
+
+\begin{itemize}
+\tightlist
+\item
+  Se \(X\) é discreta,
+\end{itemize}
+
+\[M_X(t) = E(e^{tX}) = \sum_{\forall x \in S_X} \, e^{tx} p_X(x)\]
+
+\begin{itemize}
+\tightlist
+\item
+  Se \(X\) é contínua,
+\end{itemize}
+
+\[M_X(t) = E(e^{tX}) = \int_{-\infty}^{\infty} \, e^{tx} f_X(x) \, dx\]
+\end{frame}
+
+\begin{frame}{Função Geradora de Momentos}
+\phantomsection\label{funuxe7uxe3o-geradora-de-momentos-2}
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, breakable, toptitle=1mm, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, coltitle=black, colframe=quarto-callout-note-color-frame, opacitybacktitle=0.6, bottomrule=.15mm, leftrule=.75mm, rightrule=.15mm, bottomtitle=1mm, left=2mm, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Teorema 01}, opacityback=0, colback=white]
+
+Suponha que a função geradora de momentos de \(X\) exista para
+\(|t| < \varepsilon\), \(\varepsilon > 0\). Então, \(E(X^k)\) existe
+para \(k = 1, 2, \cdots\) e temos:
+
+\[E(X^k) = \dfrac{d^k}{dt^k} M_X(t) \Bigg|_{t=0}\]
+
+ou seja, o \(k\)-ésimo momento de \(X\) é igual à derivada de ordem
+\(k\) de \(M_X(t)\) avaliada em \(t = 0\).
+
+\end{tcolorbox}
+
+\textbf{Demonstração:} Suponha que a função geradora de momentos de
+\(X\) exista para todo \(t\) tal que \(|t|<\varepsilon\), com
+\(\varepsilon>0\), isto é,
+
+\[
+M_X(t)=E(e^{tX})<\infty,\qquad |t|<\varepsilon.
+\]
+\end{frame}
+
+\begin{frame}{Função Geradora de Momentos}
+\phantomsection\label{funuxe7uxe3o-geradora-de-momentos-3}
+Pela série de Maclaurin da função exponencial, para qualquer número real
+\(y\) temos \[
+e^{y} = \sum_{n=0}^{\infty} \frac{y^n}{n!}
+\]
+
+Aplicando isso a \(y=tX\), obtemos, para cada \(t\) com
+\(|t|<\varepsilon\), \[
+e^{tX} = \sum_{n=0}^{\infty} \frac{(tX)^n}{n!} = 1 + tX +\frac{(tX)^2}{2!} + \frac{(tX)^3}{3!} + \cdots
+\]
+
+Temos que \(M_X(t)=E(e^{tX})\). Logo, admitindo ser válido permutar soma
+infinita e esperança, temos
+\end{frame}
+
+\begin{frame}{Função Geradora de Momentos}
+\phantomsection\label{funuxe7uxe3o-geradora-de-momentos-4}
+\[
+M_X(t)
+= E(e^{tX})
+= E\left(\sum_{n=0}^{\infty} \frac{(tX)^n}{n!}\right)
+= \sum_{n=0}^{\infty} \frac{t^n}{n!} E(X^n),
+\qquad |t|<\varepsilon
+\]
+
+Portanto, \(M_X(t)\) é dada, em uma vizinhança de \(0\), por uma série
+de potência da forma \[
+M_X(t) = \sum_{n=0}^{\infty} a_n t^n,
+\qquad \text{com } a_n = \frac{E(X^n)}{n!}
+\]
+\end{frame}
+
+\begin{frame}{Função Geradora de Momentos}
+\phantomsection\label{funuxe7uxe3o-geradora-de-momentos-5}
+Da teoria de séries de potência, sabemos que, se \[
+M_X(t) = \sum_{n=0}^{\infty} a_n t^n,
+\] então a \(k\)-ésima derivada é \[
+M_X^{(k)}(t) = \sum_{n=k}^{\infty} a_n\, n(n-1)\cdots (n-k+1)\, t^{\,n-k}
+\]
+\end{frame}
+
+\begin{frame}{Função Geradora de Momentos}
+\phantomsection\label{funuxe7uxe3o-geradora-de-momentos-6}
+Agora substituímos \(t=0\):
+
+Observe:
+
+\begin{itemize}
+\tightlist
+\item
+  Se \(n > k\), aparece o fator \(t^{n-k} = 0^{n-k} = 0\);\\
+\item
+  Então \textbf{todos} os termos com \(n>k\) desaparecem;
+\item
+  Só o termo com \(n=k\) permanece.
+\end{itemize}
+
+O único termo sobrevivente é:
+
+\[
+a_k \, k(k-1)(k-2)\cdots 1 \, t^{\,0}
+= a_k \, k!
+\]
+\end{frame}
+
+\begin{frame}{Função Geradora de Momentos}
+\phantomsection\label{funuxe7uxe3o-geradora-de-momentos-7}
+Assim,
+
+\[
+M_X^{(k)}(0) = a_k\, k!
+= \frac{E(X^k)}{k!}\,k!
+= E(X^k)
+\]
+
+Logo, \[
+E(X^k) = \left.\frac{d^k}{dt^k} M_X(t)\right|_{t=0},
+\qquad k=1,2,\dots
+\]
+
+o que mostra que o \(k\)-ésimo momento de \(X\) é igual à derivada de
+ordem \(k\) da função geradora de momentos avaliada em \(t=0\).
+\end{frame}
+
+\begin{frame}{Função Geradora de Momentos}
+\phantomsection\label{funuxe7uxe3o-geradora-de-momentos-8}
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, breakable, toptitle=1mm, colbacktitle=quarto-callout-tip-color!10!white, toprule=.15mm, coltitle=black, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, bottomrule=.15mm, leftrule=.75mm, rightrule=.15mm, bottomtitle=1mm, left=2mm, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Dica Importante!}, opacityback=0, colback=white]
+
+Para qualquer variável aleatória \(X\):
+
+\[
+M_X(0) = E(e^{0X}) = 1.
+\]
+
+Isso sempre deve ocorrer. Use esse fato para verificar se sua FGM está
+correta.
+
+\end{tcolorbox}
+\end{frame}
+
+\begin{frame}{Função Geradora de Momentos}
+\phantomsection\label{funuxe7uxe3o-geradora-de-momentos-9}
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, breakable, toptitle=1mm, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, coltitle=black, colframe=quarto-callout-note-color-frame, opacitybacktitle=0.6, bottomrule=.15mm, leftrule=.75mm, rightrule=.15mm, bottomtitle=1mm, left=2mm, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Exemplo 03: Distribuição de Bernoulli}, opacityback=0, colback=white]
+
+Seja \(X \sim Bernoulli(p)\). Encontre sua função geradora de momentos e
+a partir dela, encontre \(E(X)\) e \(Var(X)\).
+
+\end{tcolorbox}
+
+\pause
+
+\textbf{Solução:}
+\end{frame}
+
+
+
+
+\end{document}

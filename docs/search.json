@@ -861,7 +861,7 @@
     "href": "cronograma.html",
     "title": "Cronograma da Disciplina",
     "section": "",
-    "text": "Esta página contém um esboço dos tópicos, conteúdos e tarefas para o semestre. Este cronograma será atualizado conforme o semestre avança.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSemana\nData\nTópico\nArtigo\nSlides\nEC\nLE\nScript\nMC\nProjeto\n\n\n\n\n6\nTer, 11/11\nOutras Distribuições Contínuas\n\n\n\n\n\n\n\n\n\n\nQui, 13/11\nOutras Distribuições Contínuas\n\n\n\n\n\n\n\n\n\n7\nTer, 18/11\nNão haverá aula\n\n\n\n\n\n\n\n\n\n\nQui, 20/11\nFeriado: não haverá aula\n\n\n\n\n\n\n\n\n\n8\nTer, 25/11\nOutras Distribuições Contínuas\n\n\n\n\n\n\n\n\n\n\nQui, 27/11\nOutras Distribuições Contínuas",
+    "text": "Esta página contém um esboço dos tópicos, conteúdos e tarefas para o semestre. Este cronograma será atualizado conforme o semestre avança.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSemana\nData\nTópico\nArtigo\nSlides\nEC\nLE\nScript\nMC\nProjeto\n\n\n\n\n6\nTer, 11/11\nOutras Distribuições Contínuas\n\n\n\n\n\n\n\n\n\n\nQui, 13/11\nOutras Distribuições Contínuas\n\n\n\n\n\n\n\n\n\n7\nTer, 18/11\nNão haverá aula\n\n\n\n\n\n\n\n\n\n\nQui, 20/11\nFeriado: não haverá aula\n\n\n\n\n\n\n\n\n\n8\nTer, 25/11\nOutras Distribuições Contínuas\n\n\n\n\n\n\n\n\n\n\nQui, 27/11\nTransformação de Variáveis Aleatórias",
     "crumbs": [
       "Cronograma da Disciplina"
     ]
@@ -2276,14 +2276,14 @@
     "href": "programacao/semana-8.html",
     "title": "Semana 08",
     "section": "",
-    "text": "Outras Distribuições Contínuas \n\n\nVer slides PDF"
+    "text": "Outras Distribuições Contínuas \n\n\nVer slides PDF\n\n\n\n\n Transformação de variáveis Aleatórias \n\n\nVer slides PDF"
   },
   {
     "objectID": "programacao/semana-8.html#slides",
     "href": "programacao/semana-8.html#slides",
     "title": "Semana 08",
     "section": "",
-    "text": "Outras Distribuições Contínuas \n\n\nVer slides PDF"
+    "text": "Outras Distribuições Contínuas \n\n\nVer slides PDF\n\n\n\n\n Transformação de variáveis Aleatórias \n\n\nVer slides PDF"
   },
   {
     "objectID": "programacao/semana-8.html#entrega-lista-de-exercícios-01",
@@ -2298,5 +2298,229 @@
     "title": "Semana 07",
     "section": "Entrega lista de exercícios 01",
     "text": "Entrega lista de exercícios 01\n\n\n\n\n\n\nFique Atento!\n\n\n\n Lista de exercícios 01\nEntrega na sala de aula!\n\nData de entrega:\n\n25 de novembro de 2025"
+  },
+  {
+    "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos",
+    "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos",
+    "title": "Função Geradora de Momentos",
+    "section": "Função Geradora de Momentos",
+    "text": "Função Geradora de Momentos\n\n\n\n\n\n\n\nDefinição 02: Função Geradora de Momentos\n\n\nSeja \\(X\\) uma variável aleatória qualquer. A função geradora de momentos (FGM) de \\(X\\), denotada por \\(M_X\\), é definida por\n\\[\nM_X(t)=E(e^{tX}),\n\\]\npara valores de \\(t\\) em um intervalo contendo \\(0\\) onde a experença exista.\n\n\n\n\nImportante: a função geradora de momentos é função de \\(t\\). Para ela existir basta que exista \\(\\varepsilon &gt; 0\\) tal que \\(E(e^{tX})\\) esteja bem definida para qualquer \\(t \\in (-\\varepsilon, \\varepsilon)\\)."
+  },
+  {
+    "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-1",
+    "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-1",
+    "title": "Função Geradora de Momentos",
+    "section": "Função Geradora de Momentos",
+    "text": "Função Geradora de Momentos\nNote que a definição de função geradora de momentos é feita independente do tipo de variável, mas a forma de encontrá-la depende se a variável for discreta ou contínua, isto é,\n\nSe \\(X\\) é discreta,\n\n\\[M_X(t) = E(e^{tX}) = \\sum_{\\forall x \\in S_X} \\, e^{tx} p_X(x)\\]\n\nSe \\(X\\) é contínua,\n\n\\[M_X(t) = E(e^{tX}) = \\int_{-\\infty}^{\\infty} \\, e^{tx} f_X(x) \\, dx\\]"
+  },
+  {
+    "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-2",
+    "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-2",
+    "title": "Função Geradora de Momentos",
+    "section": "Função Geradora de Momentos",
+    "text": "Função Geradora de Momentos\n\n\n\n\n\n\n\nTeorema 01\n\n\nSuponha que a função geradora de momentos de \\(X\\) exista para \\(|t| &lt; \\varepsilon\\), \\(\\varepsilon &gt; 0\\). Então, \\(E(X^k)\\) existe para \\(k = 1, 2, \\cdots\\) e temos:\n\\[E(X^k) = \\dfrac{d^k}{dt^k} M_X(t) \\Bigg|_{t=0}\\]\nou seja, o \\(k\\)-ésimo momento de \\(X\\) é igual à derivada de ordem \\(k\\) de \\(M_X(t)\\) avaliada em \\(t = 0\\).\n\n\n\n\nDemonstração: Suponha que a função geradora de momentos de \\(X\\) exista para todo \\(t\\) tal que \\(|t|&lt;\\varepsilon\\), com \\(\\varepsilon&gt;0\\), isto é,\n\\[\nM_X(t)=E(e^{tX})&lt;\\infty,\\qquad |t|&lt;\\varepsilon.\n\\]"
+  },
+  {
+    "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-3",
+    "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-3",
+    "title": "Função Geradora de Momentos",
+    "section": "Função Geradora de Momentos",
+    "text": "Função Geradora de Momentos\nPela série de Maclaurin da função exponencial, para qualquer número real \\(y\\) temos \\[\ne^{y} = \\sum_{n=0}^{\\infty} \\frac{y^n}{n!}\n\\]\nAplicando isso a \\(y=tX\\), obtemos, para cada \\(t\\) com \\(|t|&lt;\\varepsilon\\), \\[\ne^{tX} = \\sum_{n=0}^{\\infty} \\frac{(tX)^n}{n!} = 1 + tX +\\frac{(tX)^2}{2!} + \\frac{(tX)^3}{3!} + \\cdots\n\\]\nTemos que \\(M_X(t)=E(e^{tX})\\). Logo, admitindo ser válido permutar soma infinita e esperança, temos"
+  },
+  {
+    "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#momentos",
+    "href": "aulas/func_geradora_momentos/func_gera_momentos.html#momentos",
+    "title": "Função Geradora de Momentos",
+    "section": "Momentos",
+    "text": "Momentos\nCalculamos algumas características de uma variável aleatória \\(X\\), tais como \\(E(X)\\) e \\(Var(X)\\), através da distribuição de probabilidade de \\(X\\)\n\nVimos que a variância pode ser expressa como uma função da esperança das duas primeiras potências de \\(X\\), ou seja,\n\\[Var(X) = E(X^2) - \\Big[E(X)\\Big]^2\\]\n\n\nOutras características da distribuição de probabilidade de \\(X\\) podem ser expressas por meio das esperanças das potências de \\(X\\) como por exemplo coeficientes de assimetria e curtose."
+  },
+  {
+    "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#momentos-1",
+    "href": "aulas/func_geradora_momentos/func_gera_momentos.html#momentos-1",
+    "title": "Função Geradora de Momentos",
+    "section": "Momentos",
+    "text": "Momentos\n\n\n\n\n\n\n\nDefinição 01: Momentos\n\n\nSeja \\(X\\) uma variável aleatória. Então, o k-ésimo momento de \\(X\\), denotado por \\(\\mu'_k\\) é definido como,\n\\[\\mu'_k = E(X^k)\\]\ndesde que essa quantidade exista. O k-ésimo momento central de uma variável aleatória \\(X\\), denotado por \\(\\mu_k\\) é definido como,\n\\[\\mu^k = E\\Big[X - E(X)\\Big]^k\\]\nsempre que essa quantidade existir."
+  },
+  {
+    "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#momentos-2",
+    "href": "aulas/func_geradora_momentos/func_gera_momentos.html#momentos-2",
+    "title": "Função Geradora de Momentos",
+    "section": "Momentos",
+    "text": "Momentos\nNote que,\n\n\\(E(X) = \\mu'_1\\)\n\n\n\n\\(Var(X) = \\mu_2 = \\mu'_2 - [\\mu'_1]^2\\)\n\n\n\n\nPara qualquer variável aleatória, \\(\\mu_1 = 0\\)."
+  },
+  {
+    "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#momentos-3",
+    "href": "aulas/func_geradora_momentos/func_gera_momentos.html#momentos-3",
+    "title": "Função Geradora de Momentos",
+    "section": "Momentos",
+    "text": "Momentos\n\nSe \\(X\\) é uma variável aleatória discreta,\n\n\\[\\mu'_k = E(X^k) = \\sum_{i=1}^{\\infty} x_i^k p(x_i)\\]\n\n\nSe \\(X\\) é uma variável aleatória contínua,\n\n\\[\\mu'_k = E(X^k) = \\int_{-\\infty}^{\\infty} x_i^k f(x) \\, dx\\]"
+  },
+  {
+    "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#momentos-4",
+    "href": "aulas/func_geradora_momentos/func_gera_momentos.html#momentos-4",
+    "title": "Função Geradora de Momentos",
+    "section": "Momentos",
+    "text": "Momentos\n\n\n\n\n\n\n\nExemplo 01: Momentos da distribuição Gamma\n\n\nEncontre o \\(k\\)-ésimo momento de \\(X \\sim Gamma(\\alpha, \\lambda)\\).\n\n\n\n\n\nSolução: Temos que, se \\(X \\sim Gamma(\\alpha, \\lambda)\\), então sua função densidade é dada por,\n\\[\nf(x \\mid \\alpha,\\lambda) =\n\\begin{cases}\n\\dfrac{\\lambda e^{-\\lambda x}(\\lambda x)^{\\alpha-1}}{\\Gamma(\\alpha)}, & x\\ge 0,\\\\[6pt]\n0, & x&lt;0\n\\end{cases}\n\\]"
+  },
+  {
+    "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#momentos-5",
+    "href": "aulas/func_geradora_momentos/func_gera_momentos.html#momentos-5",
+    "title": "Função Geradora de Momentos",
+    "section": "Momentos",
+    "text": "Momentos\nAssim,\n\\[\n\\begin{aligned}\nE(X^k) &= \\int_0^\\infty x^k f(x\\mid \\alpha,\\lambda)\\, dx = \\int_0^\\infty x^k\n\\frac{\\lambda e^{-\\lambda x}(\\lambda x)^{\\alpha-1}}\n{\\Gamma(\\alpha)}\\, dx \\\\[6pt]\n&= \\int_0^\\infty x^k\n\\frac{\\lambda e^{-\\lambda x}\\lambda^{\\alpha-1} \\, x^{\\alpha-1}}\n{\\Gamma(\\alpha)}\\, dx = \\frac{\\lambda^\\alpha}{\\Gamma(\\alpha)}\n\\int_0^\\infty x^{\\alpha+k-1} e^{-\\lambda x}\\, dx\n\\end{aligned}\n\\]\nNote que a integral é quase a função gama, a não ser pelo termo \\(e^{-\\lambda x}\\). Seja então a seguinte mudança de variável,\n\\[u = \\lambda  x \\,\\,\\, \\Rightarrow \\,\\,\\, x = \\dfrac{u}{\\lambda}, \\qquad dx = \\dfrac{du}{\\lambda}\\]"
+  },
+  {
+    "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#momentos-6",
+    "href": "aulas/func_geradora_momentos/func_gera_momentos.html#momentos-6",
+    "title": "Função Geradora de Momentos",
+    "section": "Momentos",
+    "text": "Momentos\nAssim,\n\\[\n\\begin{aligned}\nE(X^k) &=  \\dfrac{\\lambda^\\alpha}{\\Gamma(\\alpha)}\n\\int_0^\\infty x^{\\alpha+k-1} e^{-\\lambda x}\\, dx  = \\dfrac{\\lambda^\\alpha}{\\Gamma(\\alpha)}\n\\int_0^\\infty \\Big(\\dfrac{u}{\\lambda}\\Big)^{\\alpha+k-1} e^{-u}\\, \\dfrac{du}{\\lambda} \\\\[6pt] &= \\dfrac{\\lambda^\\alpha}{\\lambda ^{\\alpha + k}\\,\\Gamma(\\alpha)}\n\\int_0^\\infty u^{\\alpha+k-1} e^{-u}\\, du = \\dfrac{\\lambda^\\alpha \\Gamma(\\alpha + k)}{\\lambda ^{\\alpha + k}\\,\\Gamma(\\alpha)} \\\\[6pt] &= \\dfrac{\\Gamma(\\alpha+k)}{\\Gamma(\\alpha)\\lambda^k}\n\\end{aligned}\n\\]\nMas,\n\\[\n\\Gamma(\\alpha+k) = (\\alpha+k-1)(\\alpha+k-2)\\cdots(\\alpha+1)\\alpha\\Gamma(\\alpha)\n\\]"
+  },
+  {
+    "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#momentos-7",
+    "href": "aulas/func_geradora_momentos/func_gera_momentos.html#momentos-7",
+    "title": "Função Geradora de Momentos",
+    "section": "Momentos",
+    "text": "Momentos\nDe forma que, o \\(k\\)-ésimo momento de uma variável aleatória \\(X \\sim Gamma (\\alpha, \\lambda)\\) é dado por\n\\[\nE(X^k)\n=\n\\frac{\\alpha(\\alpha+1)\\cdots(\\alpha+k-1)}{\\lambda^k}\n\\]"
+  },
+  {
+    "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#momentos-8",
+    "href": "aulas/func_geradora_momentos/func_gera_momentos.html#momentos-8",
+    "title": "Função Geradora de Momentos",
+    "section": "Momentos",
+    "text": "Momentos\n\n\n\n\n\n\n\nExemplo 02: Momentos da distribuição Weibull\n\n\nEncontre o \\(k\\)-ésimo momento de \\(X \\sim Weibull(\\alpha, \\beta)\\).\n\n\n\n\n\nSolução: Temos que, se \\(X \\sim Weibull(\\alpha, \\beta)\\), então sua função densidade é dada por,\n\\[\nf(x \\mid \\alpha,\\beta)=\n\\begin{cases}\n\\dfrac{\\beta}{\\alpha}\n\\left(\\dfrac{x}{\\alpha}\\right)^{\\beta-1}\n\\exp\\!\\left[-\\left(\\dfrac{x}{\\alpha}\\right)^{\\beta}\\right], & x\\ge 0,\\\\[6pt]\n0, & x&lt;0.\n\\end{cases}\n\\]"
+  },
+  {
+    "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#momentos-9",
+    "href": "aulas/func_geradora_momentos/func_gera_momentos.html#momentos-9",
+    "title": "Função Geradora de Momentos",
+    "section": "Momentos",
+    "text": "Momentos\nAssim,\n\\[\n\\begin{aligned}\nE(X^k) &= \\int_0^\\infty x^k\n\\frac{\\beta}{\\alpha}\n\\left(\\frac{x}{\\alpha}\\right)^{\\beta-1}\n\\exp\\!\\left[-\\left(\\frac{x}{\\alpha}\\right)^{\\beta}\\right] dx\n\\end{aligned}\n\\]\nMudança de variável:\n\\[\nu = \\left(\\frac{x}{\\alpha}\\right)^{\\beta}\n\\quad\\Rightarrow\\quad\nx = \\alpha u^{1/\\beta},\\qquad\ndx = \\alpha \\frac{1}{\\beta} u^{1/\\beta - 1} du\n\\]\nAlém disso:\n\\[\nx^k = \\alpha^k u^{k/\\beta},\n\\qquad\n\\left(\\frac{x}{\\alpha}\\right)^{\\beta-1}=u^{(\\beta-1)/\\beta},\n\\qquad\n\\exp\\!\\left[-\\left(\\frac{x}{\\alpha}\\right)^{\\beta}\\right]=e^{-u}\n\\]"
+  },
+  {
+    "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#momentos-10",
+    "href": "aulas/func_geradora_momentos/func_gera_momentos.html#momentos-10",
+    "title": "Função Geradora de Momentos",
+    "section": "Momentos",
+    "text": "Momentos\nlogo,\n\\[\n\\begin{aligned}\nE(X^k) &= \\int_0^\\infty x^k\n\\frac{\\beta}{\\alpha}\n\\left(\\frac{x}{\\alpha}\\right)^{\\beta-1}\n\\exp\\!\\left[-\\left(\\frac{x}{\\alpha}\\right)^{\\beta}\\right] dx \\\\[6pt] &= \\int_0^\\infty\n\\alpha^k u^{k/\\beta}\\,\n\\frac{\\beta}{\\alpha}\\,\nu^{(\\beta-1)/\\beta}\\,\ne^{-u}\\,\n\\alpha \\frac{1}{\\beta}u^{1/\\beta -1}\\,du \\\\[6pt] &= \\alpha^k \\int_0^\\infty\nu^{\\frac{k+\\beta}{\\beta}-1}\ne^{-u}\\,du = \\alpha^k\\,\\,\\Gamma\\!\\left(1+\\frac{k}{\\beta}\\right)\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#section",
+    "href": "aulas/func_geradora_momentos/func_gera_momentos.html#section",
+    "title": "Função Geradora de Momentos",
+    "section": "",
+    "text": "Figure 1: Função geradora de momentos da Exponencial(λ = 1). A região sombreada indica um intervalo aberto em torno de 0 onde a MGF é bem definida."
+  },
+  {
+    "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-4",
+    "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-4",
+    "title": "Função Geradora de Momentos",
+    "section": "Função Geradora de Momentos",
+    "text": "Função Geradora de Momentos\n\\[\nM_X(t)\n= E(e^{tX})\n= E\\left(\\sum_{n=0}^{\\infty} \\frac{(tX)^n}{n!}\\right)\n= \\sum_{n=0}^{\\infty} \\frac{t^n}{n!} E(X^n),\n\\qquad |t|&lt;\\varepsilon\n\\]\nPortanto, \\(M_X(t)\\) é dada, em uma vizinhança de \\(0\\), por uma série de potência da forma \\[\nM_X(t) = \\sum_{n=0}^{\\infty} a_n t^n,\n\\qquad \\text{com } a_n = \\frac{E(X^n)}{n!}\n\\]"
+  },
+  {
+    "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-5",
+    "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-5",
+    "title": "Função Geradora de Momentos",
+    "section": "Função Geradora de Momentos",
+    "text": "Função Geradora de Momentos\nDa teoria de séries de potência, sabemos que, se \\[\nM_X(t) = \\sum_{n=0}^{\\infty} a_n t^n,\n\\] então a \\(k\\)-ésima derivada é \\[\nM_X^{(k)}(t) = \\sum_{n=k}^{\\infty} a_n\\, n(n-1)\\cdots (n-k+1)\\, t^{\\,n-k}\n\\]"
+  },
+  {
+    "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-6",
+    "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-6",
+    "title": "Função Geradora de Momentos",
+    "section": "Função Geradora de Momentos",
+    "text": "Função Geradora de Momentos\nAgora substituímos \\(t=0\\):\nObserve:\n\nSe \\(n &gt; k\\), aparece o fator \\(t^{n-k} = 0^{n-k} = 0\\);\n\nEntão todos os termos com \\(n&gt;k\\) desaparecem;\nSó o termo com \\(n=k\\) permanece.\n\nO único termo sobrevivente é:\n\\[\na_k \\, k(k-1)(k-2)\\cdots 1 \\, t^{\\,0}\n= a_k \\, k!\n\\]"
+  },
+  {
+    "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-7",
+    "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-7",
+    "title": "Função Geradora de Momentos",
+    "section": "Função Geradora de Momentos",
+    "text": "Função Geradora de Momentos\nAssim,\n\\[\nM_X^{(k)}(0) = a_k\\, k!\n= \\frac{E(X^k)}{k!}\\,k!\n= E(X^k)\n\\]\nLogo, \\[\nE(X^k) = \\left.\\frac{d^k}{dt^k} M_X(t)\\right|_{t=0},\n\\qquad k=1,2,\\dots\n\\]\no que mostra que o \\(k\\)-ésimo momento de \\(X\\) é igual à derivada de ordem \\(k\\) da função geradora de momentos avaliada em \\(t=0\\)."
+  },
+  {
+    "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-8",
+    "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-8",
+    "title": "Função Geradora de Momentos",
+    "section": "Função Geradora de Momentos",
+    "text": "Função Geradora de Momentos\n\n\n\n\n\n\n\nTip 1: Dica Importante!\n\n\nPara qualquer variável aleatória \\(X\\):\n\\[\nM_X(0) = E(e^{0X}) = 1.\n\\]\nIsso sempre deve ocorrer. Use esse fato para verificar se sua FGM está correta."
+  },
+  {
+    "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-9",
+    "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-9",
+    "title": "Função Geradora de Momentos",
+    "section": "Função Geradora de Momentos",
+    "text": "Função Geradora de Momentos\n\n\n\n\n\n\n\nExemplo 03: Distribuição de Bernoulli\n\n\nSeja \\(X \\sim Bernoulli(p)\\). Encontre sua função geradora de momentos e a partir dela, encontre \\(E(X)\\) e \\(\\operatorname{Var}(X)\\).\n\n\n\n\n\nSolução: Por definição,\n\\[\nM_X(t) = E(e^{tX}) = \\sum_{x=0}^1 e^{tx} p^x(1-p)^{1-x}\n\\]\nComo \\(X\\) só assume os valores \\(0\\) e \\(1\\):\n\\[\nM_X(t)\n= e^{t\\cdot 0} p^0(1-p)^{1-0} + e^{t\\cdot 1} p^1(1-p)^{1-1}\n= (1-p) + e^{t}p\n= 1 - p +  e^{t} p\n\\]"
+  },
+  {
+    "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-10",
+    "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-10",
+    "title": "Função Geradora de Momentos",
+    "section": "Função Geradora de Momentos",
+    "text": "Função Geradora de Momentos\nPortanto,\n\\[\n\\boxed{M_X(t) = 1 - p + p e^{t}, \\quad t \\in \\mathbb{R}}\n\\]\nVeja que pela Tip 1 \\(M_X(0) = 1 - p + p e^{0} = 1 - p + p \\times 1 = 1\\). Assim,\n\nPrimeira derivada de \\(M_X(t)\\):\n\n\\[\nM_X'(t) = \\frac{d}{dt}\\big(1 - p + p e^{t}\\big)\n= p e^{t}\n\\]\nAvaliada em \\(t = 0\\), temos \\(E(X) = M_X'(0) = p e^{0} = p\\)"
+  },
+  {
+    "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-11",
+    "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-11",
+    "title": "Função Geradora de Momentos",
+    "section": "Função Geradora de Momentos",
+    "text": "Função Geradora de Momentos\n\nSegunda derivada de \\(M_X(t)\\):\n\n\\[\nM_X''(t) = \\frac{d}{dt}\\big(M_X'(t)\\big)\n= \\frac{d}{dt}(p e^{t}) = p e^{t}\n\\]\nAvaliada em \\(t = 0\\), temos \\(E(X) = M_X''(0) = p e^{0} = p\\).\nAssim,\n\\[\n\\operatorname{Var}(X)\n= M_X''(0) - [M_X'(0)]^2\n= p - p^2\n= p(1-p)\n\\]"
+  },
+  {
+    "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-12",
+    "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-12",
+    "title": "Função Geradora de Momentos",
+    "section": "Função Geradora de Momentos",
+    "text": "Função Geradora de Momentos\n\n\n\n\n\n\n\nExemplo 03: Distribuição Binomial\n\n\nSeja \\(X \\sim Binomial(n,p)\\). Encontre sua função geradora de momentos e a partir dela, encontre \\(E(X)\\) e \\(\\operatorname{Var}(X)\\).\n\n\n\n\n\nSolução: Se \\(X \\sim Binomial(n,p)\\) então sua f.p. é dada por\n\\[\nP(X = k) = \\binom{n}{k} p^k (1-p)^{n-k}, \\qquad k=0,1,\\dots,n\n\\]\nPor definição,\n\\[\nM_X(t) = E(e^{tX}) = \\sum_{k=0}^{n} e^{tk} P(X = k)\n= \\sum_{k=0}^{n} e^{tk} \\binom{n}{k} p^k (1-p)^{n-k}\n\\]"
+  },
+  {
+    "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-13",
+    "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-13",
+    "title": "Função Geradora de Momentos",
+    "section": "Função Geradora de Momentos",
+    "text": "Função Geradora de Momentos\nEscrevendo \\(e^{tk} = (e^{t})^k\\):\n\\[\nM_X(t)\n= \\sum_{k=0}^{n} \\binom{n}{k} (p e^t)^k (1-p)^{n-k}\n\\]\nTemos que o binômio de Newton é dado por:\n\\[\n(a+b)^n = \\sum_{k=0}^{n} \\binom{n}{k} a^k b^{n-k}\n\\]"
+  },
+  {
+    "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-14",
+    "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-14",
+    "title": "Função Geradora de Momentos",
+    "section": "Função Geradora de Momentos",
+    "text": "Função Geradora de Momentos\nAssim, tomando \\(a = p e^{t}\\) e \\(b = 1-p\\):\n\\[\nM_X(t) = (1-p + p e^{t})^n\n\\]\nPortanto,\n\\[\n\\boxed{M_X(t) = (1-p + p e^{t})^n,\\quad t\\in\\mathbb{R}}\n\\]\nVeja que pela Tip 1 \\(M_X(0) = (1-p + p e^{0})^n = (1 - p + p \\times 1)^n = 1^n = 1\\)."
+  },
+  {
+    "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-15",
+    "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-15",
+    "title": "Função Geradora de Momentos",
+    "section": "Função Geradora de Momentos",
+    "text": "Função Geradora de Momentos\nSabemos que\n\\[\nE(X) = M_X'(0)\n\\]\nDerivada primeira em relação a \\(t\\),\n\\[\nM_X'(t) = \\frac{d}{dt} (1-p + p e^{t})^n\n= n(1-p + p e^{t})^{n-1} \\cdot p e^{t}\n\\]\nLogo,\n\\[\nM_X'(0)\n= n(1-p + p e^{0})^{n-1} \\cdot p e^{0}\n= n(1-p + p)^{n-1} p\n= n p\n\\]"
+  },
+  {
+    "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-16",
+    "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-16",
+    "title": "Função Geradora de Momentos",
+    "section": "Função Geradora de Momentos",
+    "text": "Função Geradora de Momentos\nVamos agora encontrar a segunda derivada. Temos\n\\[\nM_X'(t) = n p e^{t} (1-p + p e^{t})^{n-1}\n\\]\nAplicando a regra do produto:\n\\[\n\\begin{aligned}\nM_X''(t)\n&= \\frac{d}{dt}\\Big[ n p e^{t} (1-p + p e^{t})^{n-1} \\Big] \\\\\n&= n p e^{t} (n-1)(1-p + p e^{t})^{n-2} \\cdot p e^{t}\n\\;+\\; n p e^{t} (1-p + p e^{t})^{n-1}\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-17",
+    "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-17",
+    "title": "Função Geradora de Momentos",
+    "section": "Função Geradora de Momentos",
+    "text": "Função Geradora de Momentos\nAvaliando em \\(t=0\\):\n\n\\(e^{0}=1\\)\n\n\\(1-p + p e^{0} = 1-p + p = 1\\)\n\nAssim,\n\\[\n\\begin{aligned}\nM_X''(0)\n&= n p \\cdot 1 \\cdot (n-1) \\cdot 1^{\\,n-2} \\cdot p \\cdot 1\n   \\;+\\; n p \\cdot 1 \\cdot 1^{\\,n-1} \\\\[6pt]\n&= n p (n-1)p + n p \\\\[6pt]\n&= n p \\big[(n-1)p + 1\\big]\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-18",
+    "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-18",
+    "title": "Função Geradora de Momentos",
+    "section": "Função Geradora de Momentos",
+    "text": "Função Geradora de Momentos\nDe forma que,\n\\[\n\\begin{aligned}\n\\operatorname{Var}(X)\n&= M_X''(0) - [M_X'(0)]^2\\\\[6pt]\n&= n p \\big[(n-1)p + 1\\big] - (np)^2 \\\\[6pt]\n&= n p \\big[(n-1)p + 1 - n p\\big] \\\\[6pt]\n&= n p (1 - p)\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-19",
+    "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-19",
+    "title": "Função Geradora de Momentos",
+    "section": "Função Geradora de Momentos",
+    "text": "Função Geradora de Momentos\n\n\n\n\n\n\n\nExemplo 04: Distribuição Geométrica\n\n\nSeja \\(X \\sim Geo(p)\\). Encontre sua função geradora de momentos e a partir dela, encontre \\(E(X)\\) e \\(\\operatorname{Var}(X)\\).\n\n\n\n\n\nSolução:"
   }
 ]

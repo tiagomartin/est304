@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-0815c480559380816a4d1ea211a47e91.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.7.29">
+
+  <title>EST304 - Probabilidade II – Função Geradora de Momentos</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-5389521b91c90b914e6de3488af1db39.css">
+  <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+<meta property="og:title" content="Função Geradora de Momentos – EST304 - Probabilidade II">
+<meta property="og:site_name" content="EST304 - Probabilidade II">
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" data-background-image="../../images/back.png" data-background-opacity="0.3" data-background-size="cover" class="quarto-title-block center">
+  <h1 class="title">Função Geradora de Momentos</h1>
+
+<div class="quarto-title-authors">
+</div>
+
+</section>
+<section id="momentos" class="slide level2">
+<h2>Momentos</h2>
+<p>Calculamos algumas características de uma variável aleatória <span class="math inline">\(X\)</span>, tais como <span class="math inline">\(E(X)\)</span> e <span class="math inline">\(Var(X)\)</span>, através da distribuição de probabilidade de <span class="math inline">\(X\)</span></p>
+<div class="fragment">
+<p>Vimos que a variância pode ser expressa como uma <strong>função da esperança</strong> das duas primeiras potências de <span class="math inline">\(X\)</span>, ou seja,</p>
+<p><span class="math display">\[Var(X) = E(X^2) - \Big[E(X)\Big]^2\]</span></p>
+</div>
+<div class="fragment">
+<p>Outras características da distribuição de probabilidade de <span class="math inline">\(X\)</span> podem ser expressas por meio das esperanças das potências de <span class="math inline">\(X\)</span> como por exemplo <strong>coeficientes de assimetria</strong> e <strong>curtose</strong>.</p>
+</div>
+</section>
+<section id="momentos-1" class="slide level2">
+<h2>Momentos</h2>
+<div title="Definição 01: Momentos">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Definição 01: Momentos</strong></p>
+</div>
+<div class="callout-content">
+<p>Seja <span class="math inline">\(X\)</span> uma variável aleatória. Então, o <strong>k-ésimo momento</strong> de <span class="math inline">\(X\)</span>, denotado por <span class="math inline">\(\mu'_k\)</span> é definido como,</p>
+<p><span class="math display">\[\mu'_k = E(X^k)\]</span></p>
+<p>desde que essa quantidade exista. O <strong>k-ésimo momento central</strong> de uma variável aleatória <span class="math inline">\(X\)</span>, denotado por <span class="math inline">\(\mu_k\)</span> é definido como,</p>
+<p><span class="math display">\[\mu^k = E\Big[X - E(X)\Big]^k\]</span></p>
+<p>sempre que essa quantidade existir.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="momentos-2" class="slide level2">
+<h2>Momentos</h2>
+<p>Note que,</p>
+<ul>
+<li><span class="math inline">\(E(X) = \mu'_1\)</span></li>
+</ul>
+<div class="fragment">
+<ul>
+<li><span class="math inline">\(Var(X) = \mu_2 = \mu'_2 - [\mu'_1]^2\)</span></li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li>Para qualquer variável aleatória, <span class="math inline">\(\mu_1 = 0\)</span>.</li>
+</ul>
+</div>
+</section>
+<section id="momentos-3" class="slide level2">
+<h2>Momentos</h2>
+<ul>
+<li>Se <span class="math inline">\(X\)</span> é uma variável aleatória discreta,</li>
+</ul>
+<p><span class="math display">\[\mu'_k = E(X^k) = \sum_{i=1}^{\infty} x_i^k p(x_i)\]</span></p>
+<div class="fragment">
+<ul>
+<li>Se <span class="math inline">\(X\)</span> é uma variável aleatória contínua,</li>
+</ul>
+<p><span class="math display">\[\mu'_k = E(X^k) = \int_{-\infty}^{\infty} x_i^k f(x) \, dx\]</span></p>
+</div>
+</section>
+<section id="momentos-4" class="slide level2">
+<h2>Momentos</h2>
+<div title="Exemplo 01: Momentos da distribuição Gamma">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Exemplo 01: Momentos da distribuição Gamma</strong></p>
+</div>
+<div class="callout-content">
+<p>Encontre o <span class="math inline">\(k\)</span>-ésimo momento de <span class="math inline">\(X \sim Gamma(\alpha, \lambda)\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p><strong>Solução:</strong> Temos que, se <span class="math inline">\(X \sim Gamma(\alpha, \lambda)\)</span>, então sua função densidade é dada por,</p>
+<p><span class="math display">\[
+f(x \mid \alpha,\lambda) =
+\begin{cases}
+\dfrac{\lambda e^{-\lambda x}(\lambda x)^{\alpha-1}}{\Gamma(\alpha)}, &amp; x\ge 0,\\[6pt]
+0, &amp; x&lt;0
+\end{cases}
+\]</span></p>
+</div>
+</section>
+<section id="momentos-5" class="slide level2">
+<h2>Momentos</h2>
+<p>Assim,</p>
+<p><span class="math display">\[
+\begin{aligned}
+E(X^k) &amp;= \int_0^\infty x^k f(x\mid \alpha,\lambda)\, dx = \int_0^\infty x^k
+\frac{\lambda e^{-\lambda x}(\lambda x)^{\alpha-1}}
+{\Gamma(\alpha)}\, dx \\[6pt]
+&amp;= \int_0^\infty x^k
+\frac{\lambda e^{-\lambda x}\lambda^{\alpha-1} \, x^{\alpha-1}}
+{\Gamma(\alpha)}\, dx = \frac{\lambda^\alpha}{\Gamma(\alpha)}
+\int_0^\infty x^{\alpha+k-1} e^{-\lambda x}\, dx
+\end{aligned}
+\]</span></p>
+<p>Note que a integral é quase a função gama, a não ser pelo termo <span class="math inline">\(e^{-\lambda x}\)</span>. Seja então a seguinte mudança de variável,</p>
+<p><span class="math display">\[u = \lambda  x \,\,\, \Rightarrow \,\,\, x = \dfrac{u}{\lambda}, \qquad dx = \dfrac{du}{\lambda}\]</span></p>
+</section>
+<section id="momentos-6" class="slide level2">
+<h2>Momentos</h2>
+<p>Assim,</p>
+<p><span class="math display">\[
+\begin{aligned}
+E(X^k) &amp;=  \dfrac{\lambda^\alpha}{\Gamma(\alpha)}
+\int_0^\infty x^{\alpha+k-1} e^{-\lambda x}\, dx  = \dfrac{\lambda^\alpha}{\Gamma(\alpha)}
+\int_0^\infty \Big(\dfrac{u}{\lambda}\Big)^{\alpha+k-1} e^{-u}\, \dfrac{du}{\lambda} \\[6pt] &amp;= \dfrac{\lambda^\alpha}{\lambda ^{\alpha + k}\,\Gamma(\alpha)}
+\int_0^\infty u^{\alpha+k-1} e^{-u}\, du = \dfrac{\lambda^\alpha \Gamma(\alpha + k)}{\lambda ^{\alpha + k}\,\Gamma(\alpha)} \\[6pt] &amp;= \dfrac{\Gamma(\alpha+k)}{\Gamma(\alpha)\lambda^k}
+\end{aligned}
+\]</span></p>
+<p>Mas,</p>
+<p><span class="math display">\[
+\Gamma(\alpha+k) = (\alpha+k-1)(\alpha+k-2)\cdots(\alpha+1)\alpha\Gamma(\alpha)
+\]</span></p>
+</section>
+<section id="momentos-7" class="slide level2">
+<h2>Momentos</h2>
+<p>De forma que, o <span class="math inline">\(k\)</span>-ésimo momento de uma variável aleatória <span class="math inline">\(X \sim Gamma (\alpha, \lambda)\)</span> é dado por</p>
+<p><span class="math display">\[
+E(X^k)
+=
+\frac{\alpha(\alpha+1)\cdots(\alpha+k-1)}{\lambda^k}
+\]</span></p>
+</section>
+<section id="momentos-8" class="slide level2">
+<h2>Momentos</h2>
+<div title="Exemplo 02: Momentos da distribuição Weibull">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Exemplo 02: Momentos da distribuição Weibull</strong></p>
+</div>
+<div class="callout-content">
+<p>Encontre o <span class="math inline">\(k\)</span>-ésimo momento de <span class="math inline">\(X \sim Weibull(\alpha, \beta)\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p><strong>Solução:</strong> Temos que, se <span class="math inline">\(X \sim Weibull(\alpha, \beta)\)</span>, então sua função densidade é dada por,</p>
+<p><span class="math display">\[
+f(x \mid \alpha,\beta)=
+\begin{cases}
+\dfrac{\beta}{\alpha}
+\left(\dfrac{x}{\alpha}\right)^{\beta-1}
+\exp\!\left[-\left(\dfrac{x}{\alpha}\right)^{\beta}\right], &amp; x\ge 0,\\[6pt]
+0, &amp; x&lt;0.
+\end{cases}
+\]</span></p>
+</div>
+</section>
+<section id="momentos-9" class="slide level2">
+<h2>Momentos</h2>
+<p>Assim,</p>
+<p><span class="math display">\[
+\begin{aligned}
+E(X^k) &amp;= \int_0^\infty x^k
+\frac{\beta}{\alpha}
+\left(\frac{x}{\alpha}\right)^{\beta-1}
+\exp\!\left[-\left(\frac{x}{\alpha}\right)^{\beta}\right] dx
+\end{aligned}
+\]</span></p>
+<p>Mudança de variável:</p>
+<p><span class="math display">\[
+u = \left(\frac{x}{\alpha}\right)^{\beta}
+\quad\Rightarrow\quad
+x = \alpha u^{1/\beta},\qquad
+dx = \alpha \frac{1}{\beta} u^{1/\beta - 1} du
+\]</span></p>
+<p>Além disso:</p>
+<p><span class="math display">\[
+x^k = \alpha^k u^{k/\beta},
+\qquad
+\left(\frac{x}{\alpha}\right)^{\beta-1}=u^{(\beta-1)/\beta},
+\qquad
+\exp\!\left[-\left(\frac{x}{\alpha}\right)^{\beta}\right]=e^{-u}
+\]</span></p>
+</section>
+<section id="momentos-10" class="slide level2">
+<h2>Momentos</h2>
+<p>logo,</p>
+<p><span class="math display">\[
+\begin{aligned}
+E(X^k) &amp;= \int_0^\infty x^k
+\frac{\beta}{\alpha}
+\left(\frac{x}{\alpha}\right)^{\beta-1}
+\exp\!\left[-\left(\frac{x}{\alpha}\right)^{\beta}\right] dx \\[6pt] &amp;= \int_0^\infty
+\alpha^k u^{k/\beta}\,
+\frac{\beta}{\alpha}\,
+u^{(\beta-1)/\beta}\,
+e^{-u}\,
+\alpha \frac{1}{\beta}u^{1/\beta -1}\,du \\[6pt] &amp;= \alpha^k \int_0^\infty
+u^{\frac{k+\beta}{\beta}-1}
+e^{-u}\,du = \alpha^k\,\,\Gamma\!\left(1+\frac{k}{\beta}\right)
+\end{aligned}
+\]</span></p>
+</section>
+<section id="função-geradora-de-momentos" class="slide level2">
+<h2>Função Geradora de Momentos</h2>
+<div title="Definição 02: Função Geradora de Momentos">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Definição 02: Função Geradora de Momentos</strong></p>
+</div>
+<div class="callout-content">
+<p>Seja <span class="math inline">\(X\)</span> uma variável aleatória qualquer. A <strong>função geradora de momentos</strong> (FGM) de <span class="math inline">\(X\)</span>, denotada por <span class="math inline">\(M_X\)</span>, é definida por</p>
+<p><span class="math display">\[
+M_X(t)=E(e^{tX}),
+\]</span></p>
+<p>para valores de <span class="math inline">\(t\)</span> em um intervalo contendo <span class="math inline">\(0\)</span> onde a experença exista.</p>
+</div>
+</div>
+</div>
+</div>
+<p><strong>Importante:</strong> a função geradora de momentos é função de <span class="math inline">\(t\)</span>. Para ela existir basta que exista <span class="math inline">\(\varepsilon &gt; 0\)</span> tal que <span class="math inline">\(E(e^{tX})\)</span> esteja bem definida para qualquer <span class="math inline">\(t \in (-\varepsilon, \varepsilon)\)</span>.</p>
+<!-- ## -->
+<!-- ```{r, echo=FALSE} -->
+<!-- #| label: fig-mgf-exp -->
+<!-- #| fig-cap: "Função geradora de momentos da Exponencial(λ = 1). A região sombreada indica um intervalo aberto em torno de 0 onde a MGF é bem definida." -->
+<!-- #| warning: false -->
+<!-- #| message: false -->
+<!-- library(ggplot2) -->
+<!-- lambda <- 1 -->
+<!-- eps    <- 0.5  # intervalo (-eps, eps) ao redor de 0 -->
+<!-- # pontos apenas onde a MGF está bem definida: t < lambda -->
+<!-- t  <- seq(-3, lambda - 0.01, length.out = 400) -->
+<!-- mgf <- lambda / (lambda - t) -->
+<!-- df <- data.frame(t = t, M = mgf) -->
+<!-- ggplot(df, aes(x = t, y = M)) + -->
+<!--   # faixa sombreada (-eps, eps) -->
+<!--   geom_rect(aes(xmin = -eps, xmax = eps, ymin = -Inf, ymax = Inf), -->
+<!--             fill = "grey80", alpha = 0.5, inherit.aes = FALSE) + -->
+<!--   # curva da MGF -->
+<!--   geom_line(size = 1) + -->
+<!--   # assíntota em t = lambda -->
+<!--   geom_vline(xintercept = lambda, linetype = "dashed") + -->
+<!--   # linha vertical em t = 0 -->
+<!--   geom_vline(xintercept = 0, linetype = "dotted") + -->
+<!--   labs( -->
+<!--     x = "t", -->
+<!--     y = "M_X(t)", -->
+<!--     title = "MGF da Exponencial com λ = 1", -->
+<!--     subtitle = "Domínio: t < 1. A região sombreada é um intervalo (-ε, ε) em torno de 0." -->
+<!--   ) + -->
+<!--   coord_cartesian(ylim = c(0, 10)) + -->
+<!--   theme_minimal(base_size = 14) -->
+<!-- ``` -->
+</section>
+<section id="função-geradora-de-momentos-1" class="slide level2">
+<h2>Função Geradora de Momentos</h2>
+<p>Note que a <strong>definição de função geradora de momentos</strong> é feita independente do tipo de variável, mas a forma de encontrá-la depende se a variável for <strong>discreta</strong> ou <strong>contínua</strong>, isto é,</p>
+<ul>
+<li>Se <span class="math inline">\(X\)</span> é discreta,</li>
+</ul>
+<p><span class="math display">\[M_X(t) = E(e^{tX}) = \sum_{\forall x \in S_X} \, e^{tx} p_X(x)\]</span></p>
+<ul>
+<li>Se <span class="math inline">\(X\)</span> é contínua,</li>
+</ul>
+<p><span class="math display">\[M_X(t) = E(e^{tX}) = \int_{-\infty}^{\infty} \, e^{tx} f_X(x) \, dx\]</span></p>
+</section>
+<section id="função-geradora-de-momentos-2" class="slide level2">
+<h2>Função Geradora de Momentos</h2>
+<div title="Teorema 01">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Teorema 01</strong></p>
+</div>
+<div class="callout-content">
+<p>Suponha que a função geradora de momentos de <span class="math inline">\(X\)</span> exista para <span class="math inline">\(|t| &lt; \varepsilon\)</span>, <span class="math inline">\(\varepsilon &gt; 0\)</span>. Então, <span class="math inline">\(E(X^k)\)</span> existe para <span class="math inline">\(k = 1, 2, \cdots\)</span> e temos:</p>
+<p><span class="math display">\[E(X^k) = \dfrac{d^k}{dt^k} M_X(t) \Bigg|_{t=0}\]</span></p>
+<p>ou seja, o <span class="math inline">\(k\)</span>-ésimo momento de <span class="math inline">\(X\)</span> é igual à derivada de ordem <span class="math inline">\(k\)</span> de <span class="math inline">\(M_X(t)\)</span> avaliada em <span class="math inline">\(t = 0\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<p><strong>Demonstração:</strong> Suponha que a função geradora de momentos de <span class="math inline">\(X\)</span> exista para todo <span class="math inline">\(t\)</span> tal que <span class="math inline">\(|t|&lt;\varepsilon\)</span>, com <span class="math inline">\(\varepsilon&gt;0\)</span>, isto é,</p>
+<p><span class="math display">\[
+M_X(t)=E(e^{tX})&lt;\infty,\qquad |t|&lt;\varepsilon.
+\]</span></p>
+</section>
+<section id="função-geradora-de-momentos-3" class="slide level2">
+<h2>Função Geradora de Momentos</h2>
+<p>Pela série de Maclaurin da função exponencial, para qualquer número real <span class="math inline">\(y\)</span> temos <span class="math display">\[
+e^{y} = \sum_{n=0}^{\infty} \frac{y^n}{n!}
+\]</span></p>
+<p>Aplicando isso a <span class="math inline">\(y=tX\)</span>, obtemos, para cada <span class="math inline">\(t\)</span> com <span class="math inline">\(|t|&lt;\varepsilon\)</span>, <span class="math display">\[
+e^{tX} = \sum_{n=0}^{\infty} \frac{(tX)^n}{n!} = 1 + tX +\frac{(tX)^2}{2!} + \frac{(tX)^3}{3!} + \cdots
+\]</span></p>
+<p>Temos que <span class="math inline">\(M_X(t)=E(e^{tX})\)</span>. Logo, admitindo ser válido permutar soma infinita e esperança, temos</p>
+</section>
+<section id="função-geradora-de-momentos-4" class="slide level2">
+<h2>Função Geradora de Momentos</h2>
+<p><span class="math display">\[
+M_X(t)
+= E(e^{tX})
+= E\left(\sum_{n=0}^{\infty} \frac{(tX)^n}{n!}\right)
+= \sum_{n=0}^{\infty} \frac{t^n}{n!} E(X^n),
+\qquad |t|&lt;\varepsilon
+\]</span></p>
+<p>Portanto, <span class="math inline">\(M_X(t)\)</span> é dada, em uma vizinhança de <span class="math inline">\(0\)</span>, por uma série de potência da forma <span class="math display">\[
+M_X(t) = \sum_{n=0}^{\infty} a_n t^n,
+\qquad \text{com } a_n = \frac{E(X^n)}{n!}
+\]</span></p>
+</section>
+<section id="função-geradora-de-momentos-5" class="slide level2">
+<h2>Função Geradora de Momentos</h2>
+<p>Da teoria de séries de potência, sabemos que, se <span class="math display">\[
+M_X(t) = \sum_{n=0}^{\infty} a_n t^n,
+\]</span> então a <span class="math inline">\(k\)</span>-ésima derivada é <span class="math display">\[
+M_X^{(k)}(t) = \sum_{n=k}^{\infty} a_n\, n(n-1)\cdots (n-k+1)\, t^{\,n-k}
+\]</span></p>
+</section>
+<section id="função-geradora-de-momentos-6" class="slide level2">
+<h2>Função Geradora de Momentos</h2>
+<p>Agora substituímos <span class="math inline">\(t=0\)</span>:</p>
+<p>Observe:</p>
+<ul>
+<li>Se <span class="math inline">\(n &gt; k\)</span>, aparece o fator <span class="math inline">\(t^{n-k} = 0^{n-k} = 0\)</span>;<br>
+</li>
+<li>Então <strong>todos</strong> os termos com <span class="math inline">\(n&gt;k\)</span> desaparecem;</li>
+<li>Só o termo com <span class="math inline">\(n=k\)</span> permanece.</li>
+</ul>
+<p>O único termo sobrevivente é:</p>
+<p><span class="math display">\[
+a_k \, k(k-1)(k-2)\cdots 1 \, t^{\,0}
+= a_k \, k!
+\]</span></p>
+</section>
+<section id="função-geradora-de-momentos-7" class="slide level2">
+<h2>Função Geradora de Momentos</h2>
+<p>Assim,</p>
+<p><span class="math display">\[
+M_X^{(k)}(0) = a_k\, k!
+= \frac{E(X^k)}{k!}\,k!
+= E(X^k)
+\]</span></p>
+<p>Logo, <span class="math display">\[
+E(X^k) = \left.\frac{d^k}{dt^k} M_X(t)\right|_{t=0},
+\qquad k=1,2,\dots
+\]</span></p>
+<p>o que mostra que o <span class="math inline">\(k\)</span>-ésimo momento de <span class="math inline">\(X\)</span> é igual à derivada de ordem <span class="math inline">\(k\)</span> da função geradora de momentos avaliada em <span class="math inline">\(t=0\)</span>.</p>
+</section>
+<section id="função-geradora-de-momentos-8" class="slide level2">
+<h2>Função Geradora de Momentos</h2>
+<div id="tip-FGM">
+<div id="tip-FGM" class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip&nbsp;1: Dica Importante!</strong></p>
+</div>
+<div class="callout-content">
+<p>Para qualquer variável aleatória <span class="math inline">\(X\)</span>:</p>
+<p><span class="math display">\[
+M_X(0) = E(e^{0X}) = 1.
+\]</span></p>
+<p>Isso sempre deve ocorrer. Use esse fato para verificar se sua FGM está correta.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="função-geradora-de-momentos-9" class="slide level2">
+<h2>Função Geradora de Momentos</h2>
+<div title="Exemplo 03: Distribuição de Bernoulli">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Exemplo 03: Distribuição de Bernoulli</strong></p>
+</div>
+<div class="callout-content">
+<p>Seja <span class="math inline">\(X \sim Bernoulli(p)\)</span>. Encontre sua função geradora de momentos e a partir dela, encontre <span class="math inline">\(E(X)\)</span> e <span class="math inline">\(\operatorname{Var}(X)\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p><strong>Solução:</strong> Por definição,</p>
+<p><span class="math display">\[
+M_X(t) = E(e^{tX}) = \sum_{x=0}^1 e^{tx} p^x(1-p)^{1-x}
+\]</span></p>
+<p>Como <span class="math inline">\(X\)</span> só assume os valores <span class="math inline">\(0\)</span> e <span class="math inline">\(1\)</span>:</p>
+<p><span class="math display">\[
+M_X(t)
+= e^{t\cdot 0} p^0(1-p)^{1-0} + e^{t\cdot 1} p^1(1-p)^{1-1}
+= (1-p) + e^{t}p
+= 1 - p +  e^{t} p
+\]</span></p>
+</div>
+</section>
+<section id="função-geradora-de-momentos-10" class="slide level2">
+<h2>Função Geradora de Momentos</h2>
+<p>Portanto,</p>
+<p><span class="math display">\[
+\boxed{M_X(t) = 1 - p + p e^{t}, \quad t \in \mathbb{R}}
+\]</span></p>
+<p>Veja que pela <a href="#/tip-FGM" class="quarto-xref">Tip&nbsp;1</a> <span class="math inline">\(M_X(0) = 1 - p + p e^{0} = 1 - p + p \times 1 = 1\)</span>. Assim,</p>
+<ul>
+<li>Primeira derivada de <span class="math inline">\(M_X(t)\)</span>:</li>
+</ul>
+<p><span class="math display">\[
+M_X'(t) = \frac{d}{dt}\big(1 - p + p e^{t}\big)
+= p e^{t}
+\]</span></p>
+<p>Avaliada em <span class="math inline">\(t = 0\)</span>, temos <span class="math inline">\(E(X) = M_X'(0) = p e^{0} = p\)</span></p>
+</section>
+<section id="função-geradora-de-momentos-11" class="slide level2">
+<h2>Função Geradora de Momentos</h2>
+<ul>
+<li>Segunda derivada de <span class="math inline">\(M_X(t)\)</span>:</li>
+</ul>
+<p><span class="math display">\[
+M_X''(t) = \frac{d}{dt}\big(M_X'(t)\big)
+= \frac{d}{dt}(p e^{t}) = p e^{t}
+\]</span></p>
+<p>Avaliada em <span class="math inline">\(t = 0\)</span>, temos <span class="math inline">\(E(X) = M_X''(0) = p e^{0} = p\)</span>.</p>
+<p>Assim,</p>
+<p><span class="math display">\[
+\operatorname{Var}(X)
+= M_X''(0) - [M_X'(0)]^2
+= p - p^2
+= p(1-p)
+\]</span></p>
+</section>
+<section id="função-geradora-de-momentos-12" class="slide level2">
+<h2>Função Geradora de Momentos</h2>
+<div title="Exemplo 03: Distribuição Binomial">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Exemplo 03: Distribuição Binomial</strong></p>
+</div>
+<div class="callout-content">
+<p>Seja <span class="math inline">\(X \sim Binomial(n,p)\)</span>. Encontre sua função geradora de momentos e a partir dela, encontre <span class="math inline">\(E(X)\)</span> e <span class="math inline">\(\operatorname{Var}(X)\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p><strong>Solução:</strong> Se <span class="math inline">\(X \sim Binomial(n,p)\)</span> então sua f.p. é dada por</p>
+<p><span class="math display">\[
+P(X = k) = \binom{n}{k} p^k (1-p)^{n-k}, \qquad k=0,1,\dots,n
+\]</span></p>
+<p>Por definição,</p>
+<p><span class="math display">\[
+M_X(t) = E(e^{tX}) = \sum_{k=0}^{n} e^{tk} P(X = k)
+= \sum_{k=0}^{n} e^{tk} \binom{n}{k} p^k (1-p)^{n-k}
+\]</span></p>
+</div>
+</section>
+<section id="função-geradora-de-momentos-13" class="slide level2">
+<h2>Função Geradora de Momentos</h2>
+<p>Escrevendo <span class="math inline">\(e^{tk} = (e^{t})^k\)</span>:</p>
+<p><span class="math display">\[
+M_X(t)
+= \sum_{k=0}^{n} \binom{n}{k} (p e^t)^k (1-p)^{n-k}
+\]</span></p>
+<p>Temos que o binômio de Newton é dado por:</p>
+<p><span class="math display">\[
+(a+b)^n = \sum_{k=0}^{n} \binom{n}{k} a^k b^{n-k}
+\]</span></p>
+</section>
+<section id="função-geradora-de-momentos-14" class="slide level2">
+<h2>Função Geradora de Momentos</h2>
+<p>Assim, tomando <span class="math inline">\(a = p e^{t}\)</span> e <span class="math inline">\(b = 1-p\)</span>:</p>
+<p><span class="math display">\[
+M_X(t) = (1-p + p e^{t})^n
+\]</span></p>
+<p>Portanto,</p>
+<p><span class="math display">\[
+\boxed{M_X(t) = (1-p + p e^{t})^n,\quad t\in\mathbb{R}}
+\]</span></p>
+<p>Veja que pela <a href="#/tip-FGM" class="quarto-xref">Tip&nbsp;1</a> <span class="math inline">\(M_X(0) = (1-p + p e^{0})^n = (1 - p + p \times 1)^n = 1^n = 1\)</span>.</p>
+</section>
+<section id="função-geradora-de-momentos-15" class="slide level2">
+<h2>Função Geradora de Momentos</h2>
+<p>Sabemos que</p>
+<p><span class="math display">\[
+E(X) = M_X'(0)
+\]</span></p>
+<p>Derivada primeira em relação a <span class="math inline">\(t\)</span>,</p>
+<p><span class="math display">\[
+M_X'(t) = \frac{d}{dt} (1-p + p e^{t})^n
+= n(1-p + p e^{t})^{n-1} \cdot p e^{t}
+\]</span></p>
+<p>Logo,</p>
+<p><span class="math display">\[
+M_X'(0)
+= n(1-p + p e^{0})^{n-1} \cdot p e^{0}
+= n(1-p + p)^{n-1} p
+= n p
+\]</span></p>
+</section>
+<section id="função-geradora-de-momentos-16" class="slide level2">
+<h2>Função Geradora de Momentos</h2>
+<p>Vamos agora encontrar a segunda derivada. Temos</p>
+<p><span class="math display">\[
+M_X'(t) = n p e^{t} (1-p + p e^{t})^{n-1}
+\]</span></p>
+<p>Aplicando a regra do produto:</p>
+<p><span class="math display">\[
+\begin{aligned}
+M_X''(t)
+&amp;= \frac{d}{dt}\Big[ n p e^{t} (1-p + p e^{t})^{n-1} \Big] \\
+&amp;= n p e^{t} (n-1)(1-p + p e^{t})^{n-2} \cdot p e^{t}
+\;+\; n p e^{t} (1-p + p e^{t})^{n-1}
+\end{aligned}
+\]</span></p>
+</section>
+<section id="função-geradora-de-momentos-17" class="slide level2">
+<h2>Função Geradora de Momentos</h2>
+<p>Avaliando em <span class="math inline">\(t=0\)</span>:</p>
+<ul>
+<li><span class="math inline">\(e^{0}=1\)</span><br>
+</li>
+<li><span class="math inline">\(1-p + p e^{0} = 1-p + p = 1\)</span></li>
+</ul>
+<p>Assim,</p>
+<p><span class="math display">\[
+\begin{aligned}
+M_X''(0)
+&amp;= n p \cdot 1 \cdot (n-1) \cdot 1^{\,n-2} \cdot p \cdot 1
+   \;+\; n p \cdot 1 \cdot 1^{\,n-1} \\[6pt]
+&amp;= n p (n-1)p + n p \\[6pt]
+&amp;= n p \big[(n-1)p + 1\big]
+\end{aligned}
+\]</span></p>
+</section>
+<section id="função-geradora-de-momentos-18" class="slide level2">
+<h2>Função Geradora de Momentos</h2>
+<p>De forma que,</p>
+<p><span class="math display">\[
+\begin{aligned}
+\operatorname{Var}(X)
+&amp;= M_X''(0) - [M_X'(0)]^2\\[6pt]
+&amp;= n p \big[(n-1)p + 1\big] - (np)^2 \\[6pt]
+&amp;= n p \big[(n-1)p + 1 - n p\big] \\[6pt]
+&amp;= n p (1 - p)
+\end{aligned}
+\]</span></p>
+</section>
+<section id="função-geradora-de-momentos-19" class="slide level2">
+<h2>Função Geradora de Momentos</h2>
+<div title="Exemplo 04: Distribuição Geométrica">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Exemplo 04: Distribuição Geométrica</strong></p>
+</div>
+<div class="callout-content">
+<p>Seja <span class="math inline">\(X \sim Geo(p)\)</span>. Encontre sua função geradora de momentos e a partir dela, encontre <span class="math inline">\(E(X)\)</span> e <span class="math inline">\(\operatorname{Var}(X)\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p><strong>Solução:</strong></p>
+
+
+</div>
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': true,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1600,
+
+        height: 900,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+            const codeEl = trigger.previousElementSibling.cloneNode(true);
+            for (const childEl of codeEl.children) {
+              if (isCodeAnnotation(childEl)) {
+                childEl.remove();
+              }
+            }
+            return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp("http:\/\/professortp\.com\.br\/est304\/");
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>
