@@ -1,63 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://professortp.com.br/est304/programacao/semana-6.html</loc>
-    <lastmod>2025-11-17T00:53:53.633Z</lastmod>
-  </url>
-  <url>
-    <loc>http://professortp.com.br/est304/index.html</loc>
-    <lastmod>2025-11-16T20:42:56.872Z</lastmod>
-  </url>
-  <url>
-    <loc>http://professortp.com.br/est304/aulas.html</loc>
-    <lastmod>2025-11-17T00:12:57.454Z</lastmod>
-  </url>
-  <url>
-    <loc>http://professortp.com.br/est304/about.html</loc>
-    <lastmod>2025-11-09T14:16:53.052Z</lastmod>
-  </url>
-  <url>
-    <loc>http://professortp.com.br/est304/aulas/outras_distr_continuas/outras_dist_continuas.html</loc>
-    <lastmod>2025-11-25T19:55:48.524Z</lastmod>
-  </url>
-  <url>
-    <loc>http://professortp.com.br/est304/cronograma.html</loc>
-    <lastmod>2025-11-27T15:48:27.903Z</lastmod>
-  </url>
-  <url>
-    <loc>http://professortp.com.br/est304/plano.html</loc>
-    <lastmod>2025-11-17T00:47:42.175Z</lastmod>
-  </url>
-  <url>
-    <loc>http://professortp.com.br/est304/exercicios/lista01.html</loc>
-    <lastmod>2025-11-17T00:25:28.269Z</lastmod>
-  </url>
-  <url>
-    <loc>http://professortp.com.br/est304/exercicios/lista02.html</loc>
-    <lastmod>2025-11-13T20:22:36.974Z</lastmod>
-  </url>
-  <url>
     <loc>http://professortp.com.br/est304/revisao.html</loc>
-    <lastmod>2025-11-13T20:21:23.969Z</lastmod>
-  </url>
-  <url>
-    <loc>http://professortp.com.br/est304/exercicios.html</loc>
-    <lastmod>2025-11-17T00:44:03.979Z</lastmod>
-  </url>
-  <url>
-    <loc>http://professortp.com.br/est304/aulas/transformacoes/transformacoes.html</loc>
-    <lastmod>2025-11-27T17:45:19.517Z</lastmod>
+    <lastmod>2025-11-27T18:30:00.471Z</lastmod>
   </url>
   <url>
     <loc>http://professortp.com.br/est304/programacao/semana-7.html</loc>
     <lastmod>2025-11-17T00:54:36.244Z</lastmod>
   </url>
   <url>
-    <loc>http://professortp.com.br/est304/programacao/semana-8.html</loc>
-    <lastmod>2025-11-27T15:52:07.463Z</lastmod>
+    <loc>http://professortp.com.br/est304/plano.html</loc>
+    <lastmod>2025-11-17T00:47:42.175Z</lastmod>
+  </url>
+  <url>
+    <loc>http://professortp.com.br/est304/exercicios.html</loc>
+    <lastmod>2025-11-17T00:44:03.979Z</lastmod>
+  </url>
+  <url>
+    <loc>http://professortp.com.br/est304/exercicios/lista01.html</loc>
+    <lastmod>2025-11-17T00:25:28.269Z</lastmod>
+  </url>
+  <url>
+    <loc>http://professortp.com.br/est304/aulas.html</loc>
+    <lastmod>2025-11-17T00:12:57.454Z</lastmod>
+  </url>
+  <url>
+    <loc>http://professortp.com.br/est304/aulas/outras_distr_continuas/outras_dist_continuas.html</loc>
+    <lastmod>2025-11-25T19:55:48.524Z</lastmod>
+  </url>
+  <url>
+    <loc>http://professortp.com.br/est304/about.html</loc>
+    <lastmod>2025-11-09T14:16:53.052Z</lastmod>
   </url>
   <url>
     <loc>http://professortp.com.br/est304/aulas/func_geradora_momentos/func_gera_momentos.html</loc>
     <lastmod>2025-11-27T00:28:16.984Z</lastmod>
+  </url>
+  <url>
+    <loc>http://professortp.com.br/est304/aulas/transformacoes/transformacoes.html</loc>
+    <lastmod>2025-11-27T17:45:19.517Z</lastmod>
+  </url>
+  <url>
+    <loc>http://professortp.com.br/est304/cronograma.html</loc>
+    <lastmod>2025-11-27T15:48:27.903Z</lastmod>
+  </url>
+  <url>
+    <loc>http://professortp.com.br/est304/exercicios/lista02.html</loc>
+    <lastmod>2025-11-13T20:22:36.974Z</lastmod>
+  </url>
+  <url>
+    <loc>http://professortp.com.br/est304/index.html</loc>
+    <lastmod>2025-11-16T20:42:56.872Z</lastmod>
+  </url>
+  <url>
+    <loc>http://professortp.com.br/est304/programacao/semana-6.html</loc>
+    <lastmod>2025-11-17T00:53:53.633Z</lastmod>
+  </url>
+  <url>
+    <loc>http://professortp.com.br/est304/programacao/semana-8.html</loc>
+    <lastmod>2025-11-27T15:52:07.463Z</lastmod>
   </url>
 </urlset>

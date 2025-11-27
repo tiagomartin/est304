@@ -339,12 +339,12 @@ $$
 
 Então:
 $$
-\begin{eqnarray}
+\begin{aligned}
 E(X^2)
-&=& \sum_{k=0}^n [k(k-1) + k] \binom{n}{k} p^k (1-p)^{n-k} \\
-&=& \sum_{k=0}^n k(k-1)\binom{n}{k} p^k (1-p)^{n-k}
-  + \sum_{k=0}^n k\binom{n}{k} p^k (1-p)^{n-k}.
-\end{eqnarray}
+&= \sum_{k=0}^n \big[ k(k-1) + k \big]\binom{n}{k} p^k (1-p)^{\,n-k} \\[6pt]
+&= \sum_{k=0}^n k(k-1)\binom{n}{k} p^k (1-p)^{\,n-k}
+ \;+\; \sum_{k=0}^n k\binom{n}{k} p^k (1-p)^{\,n-k}.
+\end{aligned}
 $$
 
 Chamemos:

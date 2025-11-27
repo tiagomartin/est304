@@ -174,6 +174,8 @@
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
+\newcounter{quartocallouttipno}
+\newcommand{\quartocallouttip}[1]{\refstepcounter{quartocallouttipno}\label{#1}}
 
 \usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
@@ -215,7 +217,7 @@ exemplo \textbf{coeficientes de assimetria} e \textbf{curtose}.
 
 \begin{frame}{Momentos}
 \phantomsection\label{momentos-1}
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, breakable, toptitle=1mm, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, coltitle=black, colframe=quarto-callout-note-color-frame, opacitybacktitle=0.6, bottomrule=.15mm, leftrule=.75mm, rightrule=.15mm, bottomtitle=1mm, left=2mm, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Definição 01: Momentos}, opacityback=0, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, opacitybacktitle=0.6, toptitle=1mm, breakable, rightrule=.15mm, coltitle=black, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Definição 01: Momentos}, colframe=quarto-callout-note-color-frame, bottomtitle=1mm, leftrule=.75mm, titlerule=0mm, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, bottomrule=.15mm, toprule=.15mm, left=2mm]
 
 Seja \(X\) uma variável aleatória. Então, o \textbf{k-ésimo momento} de
 \(X\), denotado por \(\mu'_k\) é definido como,
@@ -282,7 +284,7 @@ Note que,
 
 \begin{frame}{Momentos}
 \phantomsection\label{momentos-4}
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, breakable, toptitle=1mm, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, coltitle=black, colframe=quarto-callout-note-color-frame, opacitybacktitle=0.6, bottomrule=.15mm, leftrule=.75mm, rightrule=.15mm, bottomtitle=1mm, left=2mm, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Exemplo 01: Momentos da distribuição Gamma}, opacityback=0, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, opacitybacktitle=0.6, toptitle=1mm, breakable, rightrule=.15mm, coltitle=black, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Exemplo 01: Momentos da distribuição Gamma}, colframe=quarto-callout-note-color-frame, bottomtitle=1mm, leftrule=.75mm, titlerule=0mm, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, bottomrule=.15mm, toprule=.15mm, left=2mm]
 
 Encontre o \(k\)-ésimo momento de \(X \sim Gamma(\alpha, \lambda)\).
 
@@ -358,7 +360,7 @@ E(X^k)
 
 \begin{frame}{Momentos}
 \phantomsection\label{momentos-8}
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, breakable, toptitle=1mm, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, coltitle=black, colframe=quarto-callout-note-color-frame, opacitybacktitle=0.6, bottomrule=.15mm, leftrule=.75mm, rightrule=.15mm, bottomtitle=1mm, left=2mm, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Exemplo 02: Momentos da distribuição Weibull}, opacityback=0, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, opacitybacktitle=0.6, toptitle=1mm, breakable, rightrule=.15mm, coltitle=black, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Exemplo 02: Momentos da distribuição Weibull}, colframe=quarto-callout-note-color-frame, bottomtitle=1mm, leftrule=.75mm, titlerule=0mm, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, bottomrule=.15mm, toprule=.15mm, left=2mm]
 
 Encontre o \(k\)-ésimo momento de \(X \sim Weibull(\alpha, \beta)\).
 
@@ -436,7 +438,7 @@ e^{-u}\,du = \alpha^k\,\,\Gamma\!\left(1+\frac{k}{\beta}\right)
 
 \begin{frame}{Função Geradora de Momentos}
 \phantomsection\label{funuxe7uxe3o-geradora-de-momentos}
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, breakable, toptitle=1mm, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, coltitle=black, colframe=quarto-callout-note-color-frame, opacitybacktitle=0.6, bottomrule=.15mm, leftrule=.75mm, rightrule=.15mm, bottomtitle=1mm, left=2mm, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Definição 02: Função Geradora de Momentos}, opacityback=0, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, opacitybacktitle=0.6, toptitle=1mm, breakable, rightrule=.15mm, coltitle=black, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Definição 02: Função Geradora de Momentos}, colframe=quarto-callout-note-color-frame, bottomtitle=1mm, leftrule=.75mm, titlerule=0mm, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, bottomrule=.15mm, toprule=.15mm, left=2mm]
 
 Seja \(X\) uma variável aleatória qualquer. A \textbf{função geradora de
 momentos} (FGM) de \(X\), denotada por \(M_X\), é definida por
@@ -481,7 +483,7 @@ a variável for \textbf{discreta} ou \textbf{contínua}, isto é,
 
 \begin{frame}{Função Geradora de Momentos}
 \phantomsection\label{funuxe7uxe3o-geradora-de-momentos-2}
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, breakable, toptitle=1mm, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, coltitle=black, colframe=quarto-callout-note-color-frame, opacitybacktitle=0.6, bottomrule=.15mm, leftrule=.75mm, rightrule=.15mm, bottomtitle=1mm, left=2mm, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Teorema 01}, opacityback=0, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, opacitybacktitle=0.6, toptitle=1mm, breakable, rightrule=.15mm, coltitle=black, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Teorema 01}, colframe=quarto-callout-note-color-frame, bottomtitle=1mm, leftrule=.75mm, titlerule=0mm, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, bottomrule=.15mm, toprule=.15mm, left=2mm]
 
 Suponha que a função geradora de momentos de \(X\) exista para
 \(|t| < \varepsilon\), \(\varepsilon > 0\). Então, \(E(X^k)\) existe
@@ -590,7 +592,9 @@ ordem \(k\) da função geradora de momentos avaliada em \(t=0\).
 
 \begin{frame}{Função Geradora de Momentos}
 \phantomsection\label{funuxe7uxe3o-geradora-de-momentos-8}
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, breakable, toptitle=1mm, colbacktitle=quarto-callout-tip-color!10!white, toprule=.15mm, coltitle=black, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, bottomrule=.15mm, leftrule=.75mm, rightrule=.15mm, bottomtitle=1mm, left=2mm, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Dica Importante!}, opacityback=0, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, opacitybacktitle=0.6, toptitle=1mm, breakable, rightrule=.15mm, coltitle=black, colback=white, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip \ref*{tip-FGM}: Dica Importante!}, colframe=quarto-callout-tip-color-frame, bottomtitle=1mm, leftrule=.75mm, titlerule=0mm, arc=.35mm, colbacktitle=quarto-callout-tip-color!10!white, bottomrule=.15mm, toprule=.15mm, left=2mm]
+
+\quartocallouttip{tip-FGM} 
 
 Para qualquer variável aleatória \(X\):
 
@@ -606,10 +610,231 @@ correta.
 
 \begin{frame}{Função Geradora de Momentos}
 \phantomsection\label{funuxe7uxe3o-geradora-de-momentos-9}
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, breakable, toptitle=1mm, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, coltitle=black, colframe=quarto-callout-note-color-frame, opacitybacktitle=0.6, bottomrule=.15mm, leftrule=.75mm, rightrule=.15mm, bottomtitle=1mm, left=2mm, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Exemplo 03: Distribuição de Bernoulli}, opacityback=0, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, opacitybacktitle=0.6, toptitle=1mm, breakable, rightrule=.15mm, coltitle=black, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Exemplo 03: Distribuição de Bernoulli}, colframe=quarto-callout-note-color-frame, bottomtitle=1mm, leftrule=.75mm, titlerule=0mm, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, bottomrule=.15mm, toprule=.15mm, left=2mm]
 
 Seja \(X \sim Bernoulli(p)\). Encontre sua função geradora de momentos e
-a partir dela, encontre \(E(X)\) e \(Var(X)\).
+a partir dela, encontre \(E(X)\) e \(\operatorname{Var}(X)\).
+
+\end{tcolorbox}
+
+\pause
+
+\textbf{Solução:} Por definição,
+
+\[
+M_X(t) = E(e^{tX}) = \sum_{x=0}^1 e^{tx} p^x(1-p)^{1-x}
+\]
+
+Como \(X\) só assume os valores \(0\) e \(1\):
+
+\[
+M_X(t)
+= e^{t\cdot 0} p^0(1-p)^{1-0} + e^{t\cdot 1} p^1(1-p)^{1-1}
+= (1-p) + e^{t}p
+= 1 - p +  e^{t} p
+\]
+\end{frame}
+
+\begin{frame}{Função Geradora de Momentos}
+\phantomsection\label{funuxe7uxe3o-geradora-de-momentos-10}
+Portanto,
+
+\[
+\boxed{M_X(t) = 1 - p + p e^{t}, \quad t \in \mathbb{R}}
+\]
+
+Veja que pela Tip~\ref{tip-FGM}
+\(M_X(0) = 1 - p + p e^{0} = 1 - p + p \times 1 = 1\). Assim,
+
+\begin{itemize}
+\tightlist
+\item
+  Primeira derivada de \(M_X(t)\):
+\end{itemize}
+
+\[
+M_X'(t) = \frac{d}{dt}\big(1 - p + p e^{t}\big)
+= p e^{t}
+\]
+
+Avaliada em \(t = 0\), temos \(E(X) = M_X'(0) = p e^{0} = p\)
+\end{frame}
+
+\begin{frame}{Função Geradora de Momentos}
+\phantomsection\label{funuxe7uxe3o-geradora-de-momentos-11}
+\begin{itemize}
+\tightlist
+\item
+  Segunda derivada de \(M_X(t)\):
+\end{itemize}
+
+\[
+M_X''(t) = \frac{d}{dt}\big(M_X'(t)\big)
+= \frac{d}{dt}(p e^{t}) = p e^{t}
+\]
+
+Avaliada em \(t = 0\), temos \(E(X) = M_X''(0) = p e^{0} = p\).
+
+Assim,
+
+\[
+\operatorname{Var}(X)
+= M_X''(0) - [M_X'(0)]^2
+= p - p^2
+= p(1-p)
+\]
+\end{frame}
+
+\begin{frame}{Função Geradora de Momentos}
+\phantomsection\label{funuxe7uxe3o-geradora-de-momentos-12}
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, opacitybacktitle=0.6, toptitle=1mm, breakable, rightrule=.15mm, coltitle=black, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Exemplo 03: Distribuição Binomial}, colframe=quarto-callout-note-color-frame, bottomtitle=1mm, leftrule=.75mm, titlerule=0mm, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, bottomrule=.15mm, toprule=.15mm, left=2mm]
+
+Seja \(X \sim Binomial(n,p)\). Encontre sua função geradora de momentos
+e a partir dela, encontre \(E(X)\) e \(\operatorname{Var}(X)\).
+
+\end{tcolorbox}
+
+\pause
+
+\textbf{Solução:} Se \(X \sim Binomial(n,p)\) então sua f.p. é dada por
+
+\[
+P(X = k) = \binom{n}{k} p^k (1-p)^{n-k}, \qquad k=0,1,\dots,n
+\]
+
+Por definição,
+
+\[
+M_X(t) = E(e^{tX}) = \sum_{k=0}^{n} e^{tk} P(X = k)
+= \sum_{k=0}^{n} e^{tk} \binom{n}{k} p^k (1-p)^{n-k}
+\]
+\end{frame}
+
+\begin{frame}{Função Geradora de Momentos}
+\phantomsection\label{funuxe7uxe3o-geradora-de-momentos-13}
+Escrevendo \(e^{tk} = (e^{t})^k\):
+
+\[
+M_X(t)
+= \sum_{k=0}^{n} \binom{n}{k} (p e^t)^k (1-p)^{n-k}
+\]
+
+Temos que o binômio de Newton é dado por:
+
+\[
+(a+b)^n = \sum_{k=0}^{n} \binom{n}{k} a^k b^{n-k}
+\]
+\end{frame}
+
+\begin{frame}{Função Geradora de Momentos}
+\phantomsection\label{funuxe7uxe3o-geradora-de-momentos-14}
+Assim, tomando \(a = p e^{t}\) e \(b = 1-p\):
+
+\[
+M_X(t) = (1-p + p e^{t})^n
+\]
+
+Portanto,
+
+\[
+\boxed{M_X(t) = (1-p + p e^{t})^n,\quad t\in\mathbb{R}}
+\]
+
+Veja que pela Tip~\ref{tip-FGM}
+\(M_X(0) = (1-p + p e^{0})^n = (1 - p + p \times 1)^n = 1^n = 1\).
+\end{frame}
+
+\begin{frame}{Função Geradora de Momentos}
+\phantomsection\label{funuxe7uxe3o-geradora-de-momentos-15}
+Sabemos que
+
+\[
+E(X) = M_X'(0)
+\]
+
+Derivada primeira em relação a \(t\),
+
+\[
+M_X'(t) = \frac{d}{dt} (1-p + p e^{t})^n
+= n(1-p + p e^{t})^{n-1} \cdot p e^{t}
+\]
+
+Logo,
+
+\[
+M_X'(0)
+= n(1-p + p e^{0})^{n-1} \cdot p e^{0}
+= n(1-p + p)^{n-1} p
+= n p
+\]
+\end{frame}
+
+\begin{frame}{Função Geradora de Momentos}
+\phantomsection\label{funuxe7uxe3o-geradora-de-momentos-16}
+Vamos agora encontrar a segunda derivada. Temos
+
+\[
+M_X'(t) = n p e^{t} (1-p + p e^{t})^{n-1}
+\]
+
+Aplicando a regra do produto:
+
+\[
+\begin{aligned}
+M_X''(t)
+&= \frac{d}{dt}\Big[ n p e^{t} (1-p + p e^{t})^{n-1} \Big] \\
+&= n p e^{t} (n-1)(1-p + p e^{t})^{n-2} \cdot p e^{t}
+ \;+\; n p e^{t} (1-p + p e^{t})^{n-1}
+\end{aligned}
+\]
+\end{frame}
+
+\begin{frame}{Função Geradora de Momentos}
+\phantomsection\label{funuxe7uxe3o-geradora-de-momentos-17}
+Avaliando em \(t=0\):
+
+\begin{itemize}
+\tightlist
+\item
+  \(e^{0}=1\)\\
+\item
+  \(1-p + p e^{0} = 1-p + p = 1\)
+\end{itemize}
+
+Assim,
+
+\[
+\begin{aligned}
+M_X''(0)
+&= n p \cdot 1 \cdot (n-1) \cdot 1^{\,n-2} \cdot p \cdot 1
+   \;+\; n p \cdot 1 \cdot 1^{\,n-1} \\[6pt]
+&= n p (n-1)p + n p \\[6pt]
+&= n p \big[(n-1)p + 1\big]
+\end{aligned}
+\]
+\end{frame}
+
+\begin{frame}{Função Geradora de Momentos}
+\phantomsection\label{funuxe7uxe3o-geradora-de-momentos-18}
+De forma que,
+
+\[
+\begin{aligned}
+\operatorname{Var}(X)
+&= M_X''(0) - [M_X'(0)]^2\\[6pt] 
+&= n p \big[(n-1)p + 1\big] - (np)^2 \\[6pt]
+&= n p \big[(n-1)p + 1 - n p\big] \\[6pt]
+&= n p (1 - p)
+\end{aligned}
+\]
+\end{frame}
+
+\begin{frame}{Função Geradora de Momentos}
+\phantomsection\label{funuxe7uxe3o-geradora-de-momentos-19}
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, opacitybacktitle=0.6, toptitle=1mm, breakable, rightrule=.15mm, coltitle=black, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Exemplo 04: Distribuição Geométrica}, colframe=quarto-callout-note-color-frame, bottomtitle=1mm, leftrule=.75mm, titlerule=0mm, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, bottomrule=.15mm, toprule=.15mm, left=2mm]
+
+Seja \(X \sim Geo(p)\). Encontre sua função geradora de momentos e a
+partir dela, encontre \(E(X)\) e \(\operatorname{Var}(X)\).
 
 \end{tcolorbox}
 
