@@ -1245,7 +1245,7 @@
     "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-19",
     "title": "Função Geradora de Momentos",
     "section": "Função Geradora de Momentos",
-    "text": "Função Geradora de Momentos\n\n\n\n\n\n\n\nExemplo 04: Distribuição Geométrica\n\n\nSeja \\(X \\sim Geo(p)\\). Encontre sua função geradora de momentos e a partir dela, encontre \\(E(X)\\) e \\(\\operatorname{Var}(X)\\).\n\n\n\n\n\nSolução:"
+    "text": "Função Geradora de Momentos\n\n\n\n\n\n\n\nExemplo 04: Distribuição Geométrica\n\n\nSeja \\(X \\sim Geo(p)\\). Encontre sua função geradora de momentos e a partir dela, encontre \\(E(X)\\) e \\(\\operatorname{Var}(X)\\).\n\n\n\n\n\nSolução: Seja \\(X \\sim \\text{Geo}(p)\\), cuja função de probabilidade é\n\\[\nP(X = k) = p(1-p)^{k-1}, \\qquad k = 1,2,3,\\dots\n\\]\nPor definição, temos que,\n\\[\nM_X(t)\n= E(e^{tX})\n= \\sum_{k=1}^{\\infty} e^{tk} p(1-p)^{k-1} = p \\sum_{k=1}^{\\infty} (e^t)^k (1-p)^{k-1}\n\\]"
   },
   {
     "objectID": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória",
@@ -1648,5 +1648,54 @@
     "title": "Semana 08",
     "section": "Entrega lista de exercícios 01",
     "text": "Entrega lista de exercícios 01\n\n\n\n\n\n\nFique Atento!\n\n\n\n Lista de exercícios 01\nEntrega na sala de aula!\n\nData de entrega:\n\n25 de novembro de 2025"
+  },
+  {
+    "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-20",
+    "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-20",
+    "title": "Função Geradora de Momentos",
+    "section": "Função Geradora de Momentos",
+    "text": "Função Geradora de Momentos\nReorganizando,\n\\[\nM_X(t)\n= p e^t \\sum_{k=1}^{\\infty} \\big[(1-p)e^{t}\\big]^{\\,k-1}\n\\]\nA soma é uma série geométrica com razão\n\\[\nr=(1-p)e^{t}\n\\]\nA série converge se e somente se:\n\\[\n|(1-p)e^{t}| &lt; 1\n\\]"
+  },
+  {
+    "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-21",
+    "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-21",
+    "title": "Função Geradora de Momentos",
+    "section": "Função Geradora de Momentos",
+    "text": "Função Geradora de Momentos\nUsando a soma da série geométrica,\n\\[\n\\sum_{k=0}^{\\infty} r^k = \\frac{1}{1-r},\n\\]\ntemos:\n\\[\nM_X(t) = \\frac{p e^t}{1 - (1-p)e^{t}}\n\\]"
+  },
+  {
+    "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-22",
+    "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-22",
+    "title": "Função Geradora de Momentos",
+    "section": "Função Geradora de Momentos",
+    "text": "Função Geradora de Momentos\nPortanto,\n\\[\n\\boxed{M_X(t) = \\frac{p e^{t}}{1-(1-p)e^{t}}, \\quad \\text{para } t &lt; \\ln\\Bigg(\\frac{1}{1-p}\\Bigg)}\n\\]\nNote que, pela Tip 1, \\(M_X(0) = \\dfrac{p e^{0}}{1-(1-p)e^{0}} = \\dfrac{p}{1-(1-p)} =  \\dfrac{p}{p} =1\\)\n\nSabemos que:\n\\[\nE(X) = M_X'(0)\n\\]"
+  },
+  {
+    "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-23",
+    "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-23",
+    "title": "Função Geradora de Momentos",
+    "section": "Função Geradora de Momentos",
+    "text": "Função Geradora de Momentos\nVamos então encontrar a derivada de primeira ordem de\n\\[\nM_X(t) = \\frac{p e^{t}}{1 - (1-p)e^{t}}\n\\]\nUse regra do quociente, temos\n\\[\nM_X'(t)\n= \\frac{p e^t \\big[1 - (1-p)e^{t}\\big] - p e^{t}\\big[-(1-p)e^{t}\\big]}{\\big[1 - (1-p)e^{t}\\big]^2}\n\\]\nSimplificando o numerador:\n\\[\np e^{t}\\left[1 - (1-p)e^{t} + (1-p)e^{t}\\right]\n= p e^{t}\n\\]"
+  },
+  {
+    "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-24",
+    "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-24",
+    "title": "Função Geradora de Momentos",
+    "section": "Função Geradora de Momentos",
+    "text": "Função Geradora de Momentos\nPortanto,\n\\[\nM_X'(t) = \\frac{p e^{t}}{\\left[1 - (1-p)e^{t}\\right]^2}\n\\]\nAvaliando em \\(t=0\\):\n\n\\(e^0=1\\)\n\\(1 - (1-p)e^{0} = 1-(1-p) = p\\)\n\nLogo,\n\\[E(X) = M_X'(0)\n= \\frac{p}{p^2}\n= \\frac{1}{p}\\]"
+  },
+  {
+    "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-25",
+    "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-25",
+    "title": "Função Geradora de Momentos",
+    "section": "Função Geradora de Momentos",
+    "text": "Função Geradora de Momentos\nEncontrando \\(\\operatorname{Var}(X)\\), usamos,\n\\[\n\\operatorname{Var}(X) = M_X''(0) - \\Big[M_X'(0)\\Big]^2\n\\]\nA derivada segunda é dada por\n\\[\nM_X''(t)\n= \\frac{p e^{t}\\big[1+(1-p)e^{t}\\big]}{\\left[1-(1-p)e^{t}\\right]^3}\n\\]\nde forma que\n\\[M_X''(0)\n= \\frac{p(1+(1-p))}{p^3}\n= \\frac{p(2-p)}{p^3}\n= \\frac{2-p}{p^2}\\]"
+  },
+  {
+    "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-26",
+    "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-26",
+    "title": "Função Geradora de Momentos",
+    "section": "Função Geradora de Momentos",
+    "text": "Função Geradora de Momentos\ne, portanto,\n\\[\\operatorname{Var}(X)\n= M_X''(0) - \\Big[M_X'(0)\\Big]^2\n= \\frac{2-p}{p^2} - \\left(\\frac{1}{p}\\right)^2\n= \\frac{2-p-1}{p^2}\n= \\frac{1-p}{p^2}\\]\n\nVeja que neste exemplo, a função geradora de momentos de \\(X ∼ Geo(p)\\) não está definida para todo \\(t \\in \\mathbb{R}\\), mas está bem definida para \\(t &lt; \\ln\\Big(\\frac{1}{1-p}\\Big)\\). E como \\(\\ln\\Big(\\frac{1}{1-p}\\Big) &gt; 0\\), a função geradora de momentos está bem definida para \\(t\\) em uma vizinhança de zero."
   }
 ]

@@ -684,4 +684,171 @@ Seja $X \sim Geo(p)$. Encontre sua função geradora de momentos e a partir dela
 
 . . . 
 
-**Solução:**
+**Solução:** Seja $X \sim \text{Geo}(p)$, cuja função de probabilidade é
+
+$$
+P(X = k) = p(1-p)^{k-1}, \qquad k = 1,2,3,\dots
+$$
+
+
+Por definição, temos que,
+
+$$
+M_X(t)
+= E(e^{tX})
+= \sum_{k=1}^{\infty} e^{tk} p(1-p)^{k-1} = p \sum_{k=1}^{\infty} (e^t)^k (1-p)^{k-1}
+$$
+
+
+
+## Função Geradora de Momentos
+
+
+Reorganizando,
+
+$$
+M_X(t)
+= p e^t \sum_{k=1}^{\infty} \big[(1-p)e^{t}\big]^{\,k-1}
+$$
+
+A soma é uma série geométrica com razão 
+
+$$
+r=(1-p)e^{t}
+$$
+
+A série converge se e somente se:
+
+$$
+|(1-p)e^{t}| < 1
+$$
+
+
+
+## Função Geradora de Momentos
+
+Usando a soma da série geométrica, 
+
+$$
+\sum_{k=0}^{\infty} r^k = \frac{1}{1-r},
+$$
+
+temos:
+
+$$
+M_X(t) = \frac{p e^t}{1 - (1-p)e^{t}}
+$$
+
+## Função Geradora de Momentos
+
+Portanto,
+
+$$
+\boxed{M_X(t) = \frac{p e^{t}}{1-(1-p)e^{t}}, \quad \text{para } t < \ln\Bigg(\frac{1}{1-p}\Bigg)}
+$$
+
+
+
+
+Note que, pela @tip-FGM, $M_X(0) = \dfrac{p e^{0}}{1-(1-p)e^{0}} = \dfrac{p}{1-(1-p)} =  \dfrac{p}{p} =1$
+
+
+. . .
+
+
+Sabemos que:
+
+$$
+E(X) = M_X'(0)
+$$
+
+
+## Função Geradora de Momentos
+
+Vamos então encontrar a derivada de primeira ordem de 
+
+$$
+M_X(t) = \frac{p e^{t}}{1 - (1-p)e^{t}}
+$$
+
+Use regra do quociente, temos
+
+$$
+M_X'(t)
+= \frac{p e^t \big[1 - (1-p)e^{t}\big] - p e^{t}\big[-(1-p)e^{t}\big]}{\big[1 - (1-p)e^{t}\big]^2}
+$$
+
+
+Simplificando o numerador:
+
+$$
+p e^{t}\left[1 - (1-p)e^{t} + (1-p)e^{t}\right]
+= p e^{t}
+$$
+
+
+
+
+
+## Função Geradora de Momentos
+
+Portanto,
+
+$$
+M_X'(t) = \frac{p e^{t}}{\left[1 - (1-p)e^{t}\right]^2}
+$$
+
+Avaliando em $t=0$:
+
+- $e^0=1$
+- $1 - (1-p)e^{0} = 1-(1-p) = p$
+
+
+Logo,
+
+$$E(X) = M_X'(0)
+= \frac{p}{p^2}
+= \frac{1}{p}$$
+
+
+
+## Função Geradora de Momentos
+
+
+Encontrando $\operatorname{Var}(X)$, usamos,
+
+$$
+\operatorname{Var}(X) = M_X''(0) - \Big[M_X'(0)\Big]^2
+$$
+
+A derivada segunda é dada por
+
+$$
+M_X''(t)
+= \frac{p e^{t}\big[1+(1-p)e^{t}\big]}{\left[1-(1-p)e^{t}\right]^3}
+$$
+
+de forma que
+
+$$M_X''(0)
+= \frac{p(1+(1-p))}{p^3}
+= \frac{p(2-p)}{p^3}
+= \frac{2-p}{p^2}$$
+
+
+## Função Geradora de Momentos
+
+e, portanto, 
+
+
+$$\operatorname{Var}(X)
+= M_X''(0) - \Big[M_X'(0)\Big]^2
+= \frac{2-p}{p^2} - \left(\frac{1}{p}\right)^2
+= \frac{2-p-1}{p^2}
+= \frac{1-p}{p^2}$$
+
+
+. . .
+
+
+Veja que neste exemplo, a função geradora de momentos de $X ∼ Geo(p)$ não está definida para todo $t \in \mathbb{R}$, mas está bem definida para $t < \ln\Big(\frac{1}{1-p}\Big)$. E como $\ln\Big(\frac{1}{1-p}\Big) > 0$, a função geradora de momentos está bem definida para $t$ em uma vizinhança de zero.

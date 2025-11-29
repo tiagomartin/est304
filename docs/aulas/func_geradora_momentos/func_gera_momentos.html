@@ -721,7 +721,119 @@ M_X''(0)
 </div>
 </div>
 <div class="fragment">
-<p><strong>Solução:</strong></p>
+<p><strong>Solução:</strong> Seja <span class="math inline">\(X \sim \text{Geo}(p)\)</span>, cuja função de probabilidade é</p>
+<p><span class="math display">\[
+P(X = k) = p(1-p)^{k-1}, \qquad k = 1,2,3,\dots
+\]</span></p>
+<p>Por definição, temos que,</p>
+<p><span class="math display">\[
+M_X(t)
+= E(e^{tX})
+= \sum_{k=1}^{\infty} e^{tk} p(1-p)^{k-1} = p \sum_{k=1}^{\infty} (e^t)^k (1-p)^{k-1}
+\]</span></p>
+</div>
+</section>
+<section id="função-geradora-de-momentos-20" class="slide level2">
+<h2>Função Geradora de Momentos</h2>
+<p>Reorganizando,</p>
+<p><span class="math display">\[
+M_X(t)
+= p e^t \sum_{k=1}^{\infty} \big[(1-p)e^{t}\big]^{\,k-1}
+\]</span></p>
+<p>A soma é uma série geométrica com razão</p>
+<p><span class="math display">\[
+r=(1-p)e^{t}
+\]</span></p>
+<p>A série converge se e somente se:</p>
+<p><span class="math display">\[
+|(1-p)e^{t}| &lt; 1
+\]</span></p>
+</section>
+<section id="função-geradora-de-momentos-21" class="slide level2">
+<h2>Função Geradora de Momentos</h2>
+<p>Usando a soma da série geométrica,</p>
+<p><span class="math display">\[
+\sum_{k=0}^{\infty} r^k = \frac{1}{1-r},
+\]</span></p>
+<p>temos:</p>
+<p><span class="math display">\[
+M_X(t) = \frac{p e^t}{1 - (1-p)e^{t}}
+\]</span></p>
+</section>
+<section id="função-geradora-de-momentos-22" class="slide level2">
+<h2>Função Geradora de Momentos</h2>
+<p>Portanto,</p>
+<p><span class="math display">\[
+\boxed{M_X(t) = \frac{p e^{t}}{1-(1-p)e^{t}}, \quad \text{para } t &lt; \ln\Bigg(\frac{1}{1-p}\Bigg)}
+\]</span></p>
+<p>Note que, pela <a href="#/tip-FGM" class="quarto-xref">Tip&nbsp;1</a>, <span class="math inline">\(M_X(0) = \dfrac{p e^{0}}{1-(1-p)e^{0}} = \dfrac{p}{1-(1-p)} =  \dfrac{p}{p} =1\)</span></p>
+<div class="fragment">
+<p>Sabemos que:</p>
+<p><span class="math display">\[
+E(X) = M_X'(0)
+\]</span></p>
+</div>
+</section>
+<section id="função-geradora-de-momentos-23" class="slide level2">
+<h2>Função Geradora de Momentos</h2>
+<p>Vamos então encontrar a derivada de primeira ordem de</p>
+<p><span class="math display">\[
+M_X(t) = \frac{p e^{t}}{1 - (1-p)e^{t}}
+\]</span></p>
+<p>Use regra do quociente, temos</p>
+<p><span class="math display">\[
+M_X'(t)
+= \frac{p e^t \big[1 - (1-p)e^{t}\big] - p e^{t}\big[-(1-p)e^{t}\big]}{\big[1 - (1-p)e^{t}\big]^2}
+\]</span></p>
+<p>Simplificando o numerador:</p>
+<p><span class="math display">\[
+p e^{t}\left[1 - (1-p)e^{t} + (1-p)e^{t}\right]
+= p e^{t}
+\]</span></p>
+</section>
+<section id="função-geradora-de-momentos-24" class="slide level2">
+<h2>Função Geradora de Momentos</h2>
+<p>Portanto,</p>
+<p><span class="math display">\[
+M_X'(t) = \frac{p e^{t}}{\left[1 - (1-p)e^{t}\right]^2}
+\]</span></p>
+<p>Avaliando em <span class="math inline">\(t=0\)</span>:</p>
+<ul>
+<li><span class="math inline">\(e^0=1\)</span></li>
+<li><span class="math inline">\(1 - (1-p)e^{0} = 1-(1-p) = p\)</span></li>
+</ul>
+<p>Logo,</p>
+<p><span class="math display">\[E(X) = M_X'(0)
+= \frac{p}{p^2}
+= \frac{1}{p}\]</span></p>
+</section>
+<section id="função-geradora-de-momentos-25" class="slide level2">
+<h2>Função Geradora de Momentos</h2>
+<p>Encontrando <span class="math inline">\(\operatorname{Var}(X)\)</span>, usamos,</p>
+<p><span class="math display">\[
+\operatorname{Var}(X) = M_X''(0) - \Big[M_X'(0)\Big]^2
+\]</span></p>
+<p>A derivada segunda é dada por</p>
+<p><span class="math display">\[
+M_X''(t)
+= \frac{p e^{t}\big[1+(1-p)e^{t}\big]}{\left[1-(1-p)e^{t}\right]^3}
+\]</span></p>
+<p>de forma que</p>
+<p><span class="math display">\[M_X''(0)
+= \frac{p(1+(1-p))}{p^3}
+= \frac{p(2-p)}{p^3}
+= \frac{2-p}{p^2}\]</span></p>
+</section>
+<section id="função-geradora-de-momentos-26" class="slide level2">
+<h2>Função Geradora de Momentos</h2>
+<p>e, portanto,</p>
+<p><span class="math display">\[\operatorname{Var}(X)
+= M_X''(0) - \Big[M_X'(0)\Big]^2
+= \frac{2-p}{p^2} - \left(\frac{1}{p}\right)^2
+= \frac{2-p-1}{p^2}
+= \frac{1-p}{p^2}\]</span></p>
+<div class="fragment">
+<p>Veja que neste exemplo, a função geradora de momentos de <span class="math inline">\(X ∼ Geo(p)\)</span> não está definida para todo <span class="math inline">\(t \in \mathbb{R}\)</span>, mas está bem definida para <span class="math inline">\(t &lt; \ln\Big(\frac{1}{1-p}\Big)\)</span>. E como <span class="math inline">\(\ln\Big(\frac{1}{1-p}\Big) &gt; 0\)</span>, a função geradora de momentos está bem definida para <span class="math inline">\(t\)</span> em uma vizinhança de zero.</p>
 
 
 </div>
