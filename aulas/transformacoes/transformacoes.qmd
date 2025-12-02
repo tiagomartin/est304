@@ -818,7 +818,7 @@ f_Y(y)
  &= \frac{1}{2} \cdot \frac{1}{2 \sqrt{y}}
   + \frac{1}{2} \cdot \frac{1}{2 \sqrt{y}} \\[6pt]
  &= \frac{1}{4 \sqrt{y}} + \frac{1}{4 \sqrt{y}}
-  = \frac{1}{2 \sqrt{y}}, \qquad y > 0
+  = \frac{1}{2 \sqrt{y}}, \qquad 0<y<1
 \end{aligned}
 $$
 
@@ -830,6 +830,13 @@ Logo, se $X\sim U(-1,1)$, a distribuição de $Y=X^2$ é dada por
 
 $$f_Y(y) = \dfrac{1}{2 \sqrt{y}}I_{(0,1)}(y)$$
 
+
+que é exatamente a densidade $Beta(1/2, 1).$
+
+. . .
+
+
+Assim, se $X\sim U(-1,1)$, $Y=X^2 \sim Beta(1/2, 1).$
 
 ## A Transformação Integral
 

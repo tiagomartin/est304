@@ -1532,14 +1532,14 @@
     "href": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo-24",
     "title": "Transformação de Variáveis Unidimensionais",
     "section": "Função de Variável Aleatória: Caso Contínuo",
-    "text": "Função de Variável Aleatória: Caso Contínuo\n\\[\n\\begin{aligned}\nf_Y(y)\n&= f_X(g_1^{-1}(y)) \\left| \\frac{d}{dy} g_1^{-1}(y) \\right|\n  + f_X(g_2^{-1}(y)) \\left| \\frac{d}{dy} g_2^{-1}(y) \\right| \\\\[6pt]\n&= f_X(-\\sqrt{y}) \\left| \\frac{d}{dy} (-\\sqrt{y}) \\right|\n  + f_X(\\sqrt{y}) \\left| \\frac{d}{dy} \\sqrt{y} \\right| \\\\[6pt]\n&= \\frac{1}{2} \\cdot \\left| -\\frac{1}{2 \\sqrt{y}} \\right|\n  + \\frac{1}{2} \\cdot \\left| \\frac{1}{2 \\sqrt{y}} \\right| \\\\[6pt]\n&= \\frac{1}{2} \\cdot \\frac{1}{2 \\sqrt{y}}\n  + \\frac{1}{2} \\cdot \\frac{1}{2 \\sqrt{y}} \\\\[6pt]\n&= \\frac{1}{4 \\sqrt{y}} + \\frac{1}{4 \\sqrt{y}}\n  = \\frac{1}{2 \\sqrt{y}}, \\qquad y &gt; 0\n\\end{aligned}\n\\]"
+    "text": "Função de Variável Aleatória: Caso Contínuo\n\\[\n\\begin{aligned}\nf_Y(y)\n&= f_X(g_1^{-1}(y)) \\left| \\frac{d}{dy} g_1^{-1}(y) \\right|\n  + f_X(g_2^{-1}(y)) \\left| \\frac{d}{dy} g_2^{-1}(y) \\right| \\\\[6pt]\n&= f_X(-\\sqrt{y}) \\left| \\frac{d}{dy} (-\\sqrt{y}) \\right|\n  + f_X(\\sqrt{y}) \\left| \\frac{d}{dy} \\sqrt{y} \\right| \\\\[6pt]\n&= \\frac{1}{2} \\cdot \\left| -\\frac{1}{2 \\sqrt{y}} \\right|\n  + \\frac{1}{2} \\cdot \\left| \\frac{1}{2 \\sqrt{y}} \\right| \\\\[6pt]\n&= \\frac{1}{2} \\cdot \\frac{1}{2 \\sqrt{y}}\n  + \\frac{1}{2} \\cdot \\frac{1}{2 \\sqrt{y}} \\\\[6pt]\n&= \\frac{1}{4 \\sqrt{y}} + \\frac{1}{4 \\sqrt{y}}\n  = \\frac{1}{2 \\sqrt{y}}, \\qquad 0&lt;y&lt;1\n\\end{aligned}\n\\]"
   },
   {
     "objectID": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo-25",
     "href": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória-caso-contínuo-25",
     "title": "Transformação de Variáveis Unidimensionais",
     "section": "Função de Variável Aleatória: Caso Contínuo",
-    "text": "Função de Variável Aleatória: Caso Contínuo\nLogo, se \\(X\\sim U(-1,1)\\), a distribuição de \\(Y=X^2\\) é dada por\n\\[f_Y(y) = \\dfrac{1}{2 \\sqrt{y}}I_{(0,1)}(y)\\]"
+    "text": "Função de Variável Aleatória: Caso Contínuo\nLogo, se \\(X\\sim U(-1,1)\\), a distribuição de \\(Y=X^2\\) é dada por\n\\[f_Y(y) = \\dfrac{1}{2 \\sqrt{y}}I_{(0,1)}(y)\\]\nque é exatamente a densidade \\(Beta(1/2, 1).\\)\n\nAssim, se \\(X\\sim U(-1,1)\\), \\(Y=X^2 \\sim Beta(1/2, 1).\\)"
   },
   {
     "objectID": "aulas/transformacoes/transformacoes.html#a-transformação-integral",
