@@ -1,0 +1,174 @@
+
+---
+title: "Distribuições Contínuas"
+format:
+  html:
+    number-sections: true
+    toc: true
+    toc-depth: 2
+  pdf:
+    number-sections: true
+    toc: false
+    toc-depth: 2
+---
+
+<p align="center" style="font-size: 40px"> 
+`Data de entrega: 18 de dezembro de 2025`
+</p>
+
+
+---
+
+
+1. Encontre os valores numéricos das integrais a seguir, **sem resolver as integrais**, usando apenas as propriedades da função gamma. Use o seguinte resultado: $\Gamma(1/2) = \sqrt{\pi}$.
+
+(a) $\int_{0}^{\infty} x^{2} e^{-3x}\,dx$
+
+(b) $\int_{0}^{\infty} x^{4} e^{-x/5}\,dx$
+
+(c) $\int_{0}^{\infty} \sqrt{x}\, e^{-2x/3}\,dx$
+
+---
+
+2. Seja $X \sim \text{Gamma}\Big(3,\tfrac{1}{2}\Big)$.
+
+(a) Encontre a função de distribuição de $X$.
+
+(b) Verifique se a derivada da função de distribuição encontrada no item (a) é a função densidade de $X$.
+
+---
+
+3. Segundo o protocolo do departamento de TI de uma empresa, um de seus sistemas passa por manutenção quando apresentar a 4ª falha, contada a partir da última manutenção. Considere que o tempo (em dias) entre duas manutenções consecutivas desse sistema seja uma variável aleatória com distribuição Gama, com média de 48 dias e desvio padrão de 24 dias.
+
+(a) Para um sistema que acabou de sair da manutenção, qual é a probabilidade de ele funcionar pelos próximos 60 dias sem precisar de manutenção?
+
+(b) Dado que o sistema está funcionando há 40 dias desde a última manutenção, qual é a probabilidade de ele funcionar por mais 20 dias?
+
+(c) Se 3 sistemas idênticos e independentes voltam a funcionar simultaneamente depois de uma manutenção, qual é a probabilidade de pelo menos 2 não passarem por manutenção nos próximos 60 dias?
+
+
+---
+
+4. A seguir, são apresentadas algumas funções densidade de variáveis aleatórias com distribuição gamma de parâmetros $\alpha$ e $\lambda$. Para cada uma delas, determine os valores dos parâmetros.
+
+(a) $f_X(x) = \frac{8}{3}\,x^{3} e^{-2x}, \quad x > 0$
+
+(b) $f_X(x) = \frac{1}{4}\,x e^{-x/2}, \quad x > 0$
+
+(c) $f_X(x) = \sqrt{\frac{3}{\pi x}}\,e^{-3x}, \quad x > 0$
+
+
+---
+
+5. Encontre os valores numéricos para as expressões a seguir, onde $B$ é a função Beta. Use novamente o seguinte resultado: $\Gamma(1/2) = \sqrt{\pi}$.
+
+(a) $B(2,3)$  
+
+(b) $B(3,1)$  
+
+(c) $B\!\left(\tfrac{1}{2}, 4\right)$  
+
+(d) $B\!\left(\tfrac{3}{2}, \tfrac{1}{2}\right)$ 
+
+---
+
+6. Seja $X \sim \text{Beta}(2,3)$.
+
+(a) Apresente a função densidade de $X$.  
+
+(b) Apresente a função de distribuição de $X$.  
+
+(c) Determine $E(X)$.  
+
+(d) Determine $\operatorname{Var}(X)$.  
+
+(e) Calcule $P\!\big(X \geq E(X)\big)$ e  $P\!\big(X > E(X)\,\big|\,X < E(X) + DP(X)\big)$, onde $DP(X)$ denota o desvio padrão de $X$.
+
+---
+
+7. Uma fábrica produz misturas industrializadas para bolos. Sabe-se que a proporção de farinha de trigo em relação aos demais ingredientes secos nessa mistura é uma variável aleatória com distribuição Beta de parâmetros $\alpha = 3/2$ e $\beta = 3$. Após alguns testes, concluiu-se que:
+
+- se a proporção de farinha de trigo for **maior que 50%**, o bolo fica muito seco;  
+- se essa proporção for **menor que 10%**, o bolo sola.  
+
+Nesses dois casos, o bolo não segue os padrões de qualidades estipulados pela fábrica.
+
+(a) Em média, qual é a proporção de farinha de trigo para os demais ingredientes secos em uma mistura para bolo feita nessa fábrica?
+
+(b) Qual é a probabilidade de uma mistura para bolo produzida nessa fábrica **não** seguir os padrões de qualidade estipulados pela própria fábrica?
+
+(c) Sabendo que certa unidade de mistura não segue os padrões de qualidade estipulados pela fábrica, qual é a probabilidade de a proporção de farinha nesta unidade estar **abaixo da média**?
+
+(d) Em um experimento, unidades dessa mistura para bolo são testadas até que se encontre 3 que não seguem os padrões de qualidade. Em média, nesse experimento, quantas unidades **dentro do padrão de qualidade** são testadas?
+
+
+---
+
+
+8. A seguir, são apresentadas algumas funções densidade de variáveis aleatórias com distribuição Beta de parâmetros $a$ e $b$. Para cada uma delas, determine os valores dos parâmetros.
+
+(a) $f_X(x) = 105 x^{2}(1 - x)^{4}, \quad 0 < x < 1$
+
+(b) $f_X(x) = 20\big(x^{3} - x^{4}\big), \quad 0 < x < 1$
+
+(c) $f_X(x) = \frac{1}{2\sqrt{x}}, \quad 0 < x < 1$
+
+
+---
+
+
+9. Seja $X \sim \text{Weibull}(2,2)$.
+
+(a) Apresente a função densidade de $X$.  
+
+(b) Apresente a função de distribuição de $X$.  
+
+(c) Determine $E(X)$.  
+
+(d) Determine $\operatorname{Var}(X)$.  
+
+(e) Calcule $P(X > 1)$ e $P(X > 1 \mid X < 2)$.
+
+---
+
+10. Uma fábrica opera com 5 máquinas e a manutenção só é chamada quando 4 das 5 máquinas quebram. Suponha que o tempo, em dias, entre duas manutenções seja considerado uma variável aleatória com distribuição de Weibull de parâmetros $\alpha = 0{,}5$ e $\beta = 4$.
+
+(a) Qual o tempo médio entre duas manutenções seguidas?  
+
+(b) Qual o desvio padrão do tempo entre duas manutenções seguidas?  
+
+(c) Qual a probabilidade de a manutenção ficar mais de 10 dias sem aparecer na fábrica?  
+
+(d) Sabendo que hoje completa 5 dias desde a última manutenção, qual a probabilidade de a próxima manutenção **não** ocorrer nos próximos 3 dias?  
+
+(e) Qual o menor tempo $t$, em dias, para o qual podemos dizer que, em 90% das vezes, a manutenção ocorre antes de $t$?
+
+---
+
+11. A seguir são apresentadas algumas funções de densidade de variáveis aleatórias com distribuição de Weibull de parâmetros $\alpha$ e $\beta$. Para cada uma delas, determine os valores dos parâmetros.
+
+(a) $f_X(x) = \frac{3}{8} x^{2} e^{-x^{3}/8}, \quad x > 0$
+
+(b) $f_X(x) = \frac{1}{4\sqrt{x}} e^{-\sqrt{x}/2}, \quad x > 0$
+
+(c) $f_X(x) = 18 x e^{-9x^{2}}, \quad x > 0$
+
+---
+
+12. Mostre que, para $\alpha$ e $\beta$ positivos, $f(x) = \frac{\beta^\alpha}{\Gamma(\alpha)} (x - a)^{\alpha - 1} e^{-\beta(x-a)} I_{(a,\infty)}(x)$ é função densidade de probabilidade. Alguns autores definem o modelo Gamma dessa forma, sendo que, nesse caso, o modelo tem um terceiro parâmetro $a$.
+
+---
+
+13. A variável $X$ segue o modelo *Beta* de parâmetros $a, b > 0$ se sua densidade for $f(x) = \frac{1}{B(a, b)} x^{a -1} (1-x)^{b -1} I_{(0,1)}(x)$. Verifique que a densidade Beta com parâmetros $a = b = 1$ é a distribuição $U(0,1).$
+
+---
+
+14. Mostre que se $X \sim Gamma(\alpha, \lambda)$, então $E(X) = \dfrac{\alpha}{\lambda}$ e $\operatorname{Var}(X) = \dfrac{\alpha}{\lambda^2}$.
+
+---
+
+15. Mostre que se $X \sim Beta(a, b)$, então $E(X) = \dfrac{a}{a+b}$ e $\operatorname{Var}(X) = \dfrac{ab}{(a+b+1)(a+b)^2}$
+
+---
+
+15. Mostre que se $X \sim Weibull(\alpha, \beta)$, então $E(X) = \alpha \Gamma\left( \dfrac{1}{\beta} + 1\right)$ e $\operatorname{Var}(X) = \alpha^2\left\{\Gamma\left( \dfrac{2}{\beta} + 1\right) - \left[\Gamma\left( \dfrac{1}{\beta} + 1\right)\right]^2\right\}$

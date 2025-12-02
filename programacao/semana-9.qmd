@@ -1,5 +1,5 @@
 ---
-title: "Listas de Exercícios"
+title: "Semana 08"
 format:
   html:
     theme: cosmo
@@ -46,51 +46,41 @@ format:
         </style>
 ---
 
-Esta página contém as listas de exercícios que serão apresentadas ao longo do semestre. Você pode baixar as listas em versão PDF.
+
+
+## Slides
 
 ::: {.list-group .aulas-list}
 
 ::: {.list-group-item .d-flex .justify-content-between .align-items-center}
 
 <div>
-  <span class="fw-bold">1. Revisão de Probabilidade I</span>
+  <span class="fw-bold">{{< fa file-powerpoint size=lg >}} Transformação de variáveis Aleatórias </span>
 </div>
 
 <div class="d-flex align-items-center gap-3">
 
-  <span>
-    <a href="exercicios/lista01.html" class="btn btn-est304-main btn-sm">Ver lista</a>
-    <a href="exercicios/lista01.pdf" class="btn btn-est304-outline btn-sm">PDF</a>
-  </span>
-
-  <span class="badge due-date-badge">
-    Entrega: 25/11/2025
-  </span>
+[Ver slides](/aulas/transformacoes/transformacoes.html#/title-slide){.btn .btn-est304-main .btn-sm}
+[PDF](/aulas/transformacoes/transformacoes.pdf){.btn .btn-est304-outline .btn-sm}
 
 </div>
 
 :::
 
-
-::: {.list-group-item .d-flex .justify-content-between .align-items-center}
-
-<div>
-  <span class="fw-bold">2. Distribuições Contínuas</span>
-</div>
-
-<div class="d-flex align-items-center gap-3">
-
-  <span>
-    <a href="exercicios/lista02.html" class="btn btn-est304-main btn-sm">Ver lista</a>
-    <a href="exercicios/lista02.pdf" class="btn btn-est304-outline btn-sm">PDF</a>
-  </span>
-
-  <span class="badge due-date-badge">
-    Entrega: 18/12/2025
-  </span>
-
-</div>
-
 :::
 
+
+
+## Entrega lista de exercícios 02
+
+::: callout-important
+
+## Fique Atento!
+
+{{< fa file-lines size=lg >}} [Lista de exercícios 02](/exercicios/lista02.html "Lista de exercícios 02"){aria-label="Lista de exercícios 02"} 
+
+Entrega na sala de aula!
+
+-   Data de entrega:
+    -   18 de dezembro de 2025
 :::
