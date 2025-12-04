@@ -1560,7 +1560,7 @@
     "href": "aulas/transformacoes/transformacoes.html#a-transformação-integral-2",
     "title": "Transformação de Variáveis Unidimensionais",
     "section": "A Transformação Integral",
-    "text": "A Transformação Integral\nDemonstração: Considere \\(X\\) uma variável aleatória absolutamente contínua com função de distribuição acumulada \\(F_X\\), então\n\\[\nF_U(u) = P(U \\le u)= P(F_X(X) \\le u) = P(X \\le F_X^{-1}(u)) = F_X(F_X^{-1}(u)) = u\n\\] Por outro lado, se \\(U \\sim U(0,1)\\), então\n\\[\n{\\small  \nP(X \\le x) = P(F^{-1}_X(U) \\le x) = P(U \\le F_x(x)) = F_U(F_X(x)) = F_X(x), \\,\\, \\text{pois } U \\text{ é uniforme}\n}\n\\] Assim \\(X\\) possui função de distribuição \\(F_X\\)."
+    "text": "A Transformação Integral\nDemonstração: Considere \\(X\\) uma variável aleatória absolutamente contínua com função de distribuição acumulada \\(F_X\\), então\n\\[\nF_U(u) = P(U \\le u)= P(F_X(X) \\le u) = P(X \\le F_X^{-1}(u)) = F_X(F_X^{-1}(u)) = u\n\\] Por outro lado, se \\(U \\sim U(0,1)\\), então\n\\[\n{\\small  \nP(X \\le x) = P(F^{-1}_X(U) \\le x) = P(U \\le F_X(x)) = F_U(F_X(x)) = F_X(x), \\,\\, \\text{pois } U \\text{ é uniforme}\n}\n\\] Assim \\(X\\) possui função de distribuição \\(F_X\\)."
   },
   {
     "objectID": "aulas/transformacoes/transformacoes.html#a-transformação-integral-3",

@@ -865,7 +865,7 @@ Por outro lado, se $U \sim U(0,1)$, então
 
 $$
 {\small  
-P(X \le x) = P(F^{-1}_X(U) \le x) = P(U \le F_x(x)) = F_U(F_X(x)) = F_X(x), \,\, \text{pois } U \text{ é uniforme} 
+P(X \le x) = P(F^{-1}_X(U) \le x) = P(U \le F_X(x)) = F_U(F_X(x)) = F_X(x), \,\, \text{pois } U \text{ é uniforme} 
 }
 $$
 Assim $X$ possui função de distribuição $F_X$.
