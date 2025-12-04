@@ -852,3 +852,525 @@ $$\operatorname{Var}(X)
 
 
 Veja que neste exemplo, a função geradora de momentos de $X ∼ Geo(p)$ não está definida para todo $t \in \mathbb{R}$, mas está bem definida para $t < \ln\Big(\frac{1}{1-p}\Big)$. E como $\ln\Big(\frac{1}{1-p}\Big) > 0$, a função geradora de momentos está bem definida para $t$ em uma vizinhança de zero.
+
+
+
+## Função Geradora de Momentos
+
+::: {.callout-note title="Exemplo 05: Distribuição de Poisson"}
+Seja $X \sim Poisson(\lambda)$. Encontre sua função geradora de momentos e a partir dela, encontre $E(X)$ e $\operatorname{Var}(X)$.
+:::
+
+. . . 
+
+**Solução:** Seja $X \sim Poisson(\lambda)$, cuja função de probabilidade é
+
+$$
+P(X = k) = \frac{e^{-\lambda}\lambda^k}{k!}, \quad k = 0,1,2,\ldots
+$$
+
+Assim, a função geradora de momentos (fgm) de $X$ é dada por,
+
+$$
+M_X(t) = \sum_{k=0}^\infty e^{tk}\,\frac{e^{-\lambda}\lambda^k}{k!}
+       = e^{-\lambda} \sum_{k=0}^\infty \frac{(\lambda e^t)^k}{k!}
+$$
+
+
+
+## Função Geradora de Momentos
+
+A série
+
+$$
+\sum_{k=0}^\infty \frac{(\lambda e^t)^k}{k!}
+$$
+
+é a expansão em série de Taylor de $e^{\lambda e^t}$. Assim,
+
+$$
+M_X(t) = e^{-\lambda} e^{\lambda e^t}
+       = \exp\{\lambda(e^t - 1)\}
+$$
+
+## Função Geradora de Momentos
+
+
+Portanto, a fgm de $X$ é
+$$
+\boxed{M_X(t) = \exp\big(\lambda(e^t - 1)\big)}
+$$
+
+Note que, pela @tip-FGM, $M_X(0) = \exp\big(\lambda(e^0 - 1)\big) = \exp\big(0\big) =  1$
+
+
+. . . 
+
+
+Vamos calcular as derivadas de ordem primeira e ordem segunda para calcular os respectivos momentos:
+
+
+Pela regra da cadeia,
+
+$$
+M_X'(t) = \exp\big(\lambda(e^t - 1)\big)\cdot \lambda e^t
+        = \lambda e^t\, M_X(t)
+$$
+
+
+
+## Função Geradora de Momentos
+
+
+Logo,
+
+$$
+E(X) = M_X'(0) = \lambda e^0\, M_X(0) = \lambda \cdot 1 \cdot 1 = \lambda
+$$
+
+. . .
+
+
+A segunda derivada de $M_X(t)$ é dada por:
+
+$$
+\begin{aligned}
+M_X''(t) 
+&= \frac{d}{dt}\big[\lambda e^t\, M_X(t)\big] \\
+&= \lambda e^t\, M_X(t) + \lambda e^t\, M_X'(t) \\
+&= \lambda e^t\, M_X(t) + \lambda e^t\,[\lambda e^t\, M_X(t)] \\
+&= \lambda e^t\, M_X(t)\,\big[1 + \lambda e^t\big]
+\end{aligned}
+$$
+
+
+
+## Função Geradora de Momentos
+
+
+Agora, avaliando em $t=0$:
+
+$$
+\begin{aligned}
+M_X''(0) = \lambda e^0\, M_X(0)\,\big[1 + \lambda e^0\big] = \lambda \cdot 1 \cdot 1 \cdot (1+\lambda) = \lambda(1+\lambda)
+\end{aligned}
+$$
+
+Portanto,
+
+$$
+E(X^2) = M_X''(0) = \lambda(1+\lambda)
+$$
+
+
+Assim,
+
+$$
+\begin{aligned}
+\text{Var}(X) 
+&= M_X''(0) - \Big[M_X'(0)\Big]^2 \\
+&= \lambda(1+\lambda) - \lambda^2 \\
+&= \lambda
+\end{aligned}
+$$
+
+
+
+## Função Geradora de Momentos
+
+::: {.callout-note title="Exemplo 06: Distribuição Exponencial"}
+Seja $X \sim exp(\lambda)$. Encontre sua função geradora de momentos e a partir dela, encontre $E(X)$ e $\operatorname{Var}(X)$.
+:::
+
+. . . 
+
+**Solução:** Seja $X \sim exp(\lambda)$, cuja função densidade é
+
+$$
+f(x) = \lambda e^{-\lambda x}, \quad x > 0
+$$
+
+
+Neste caso, a função geradora de momentos (fgm) de $X$ é definida por
+$$
+M_X(t) = E(e^{tX}) = \int_0^\infty e^{tx}\,\lambda e^{-\lambda x}\,dx = \int_0^\infty \lambda e^{-(\lambda - t)x} \, dx
+$$
+
+válida para $t < \lambda$.
+
+
+
+## Função Geradora de Momentos
+
+
+Assim, como
+
+$$
+\int_0^\infty \lambda e^{-(\lambda - t)x} =  \lambda \frac{e^{-(\lambda - t)x}}{-(\lambda - t)} \Bigg|_0^{\infty} = \frac{\lambda}{\lambda - t}, \,\,\,\, \lambda - t > 0
+$$
+
+Logo,
+
+$$
+\boxed{M_X(t) = \frac{\lambda}{\lambda - t}, \qquad t < \lambda}
+$$
+
+
+Note que, pela @tip-FGM, $ M_X(0) = \frac{\lambda}{\lambda - 0} =  1$
+
+
+## Função Geradora de Momentos
+
+
+Derivando,
+
+$$
+M_X'(t) = \frac{\lambda}{(\lambda - t)^2}
+$$
+
+Portanto,
+
+$$
+E(X) = M_X'(0) = \frac{\lambda}{\lambda^2} = \frac{1}{\lambda}
+$$
+
+
+## Função Geradora de Momentos
+
+
+A segunda derivada é dada por,
+
+
+$$
+M_X''(t) = \frac{2\lambda}{(\lambda - t)^3}
+$$
+
+Logo,
+
+$$
+E(X^2) = M_X''(0) = \frac{2\lambda}{\lambda^3} = \frac{2}{\lambda^2}
+$$
+
+
+De forma que,
+
+
+$$
+\text{Var}(X)
+= E(X^2) - \Big[E(X) \Big]^2
+= \frac{2}{\lambda^2} - \frac{1}{\lambda^2}
+= \frac{1}{\lambda^2}
+$$
+
+
+
+
+## Função Geradora de Momentos
+
+::: {.callout-note title="Exemplo 07: Distribuição Gamma"}
+Seja $X \sim Gamma(\alpha, \lambda)$. Encontre sua função geradora de momentos.
+:::
+
+
+. . . 
+
+**Solução:** Seja $X \sim Gamma(\alpha, \lambda)$, cuja função densidade é
+
+$$
+f(x) = \frac{\lambda^\alpha}{\Gamma(\alpha)}x^{\alpha-1}e^{-\lambda x},
+\qquad x>0
+$$
+
+
+A função geradora de momentos é
+
+
+$$
+M_X(t)
+= \int_0^\infty e^{tx}
+\frac{\lambda^\alpha}{\Gamma(\alpha)}x^{\alpha-1}e^{-\lambda x}\,dx
+= \frac{\lambda^\alpha}{\Gamma(\alpha)}
+\int_0^\infty x^{\alpha-1}e^{-(\lambda - t)x}\,dx
+$$
+
+
+
+## Função Geradora de Momentos
+
+
+Usamos agora o resultado da função Gamma:
+
+$$
+\int_0^\infty x^{\alpha-1}e^{-bx}\,dx
+= \frac{\Gamma(\alpha)}{b^\alpha}, \qquad b>0
+$$
+
+Aqui, $b = \lambda - t$ (precisamos de $\lambda - t > 0$, isto é, $t<\lambda$). Logo,
+
+$$
+\int_0^\infty x^{\alpha-1}e^{-(\lambda - t)x}\,dx
+= \frac{\Gamma(\alpha)}{(\lambda - t)^\alpha}
+$$
+
+
+
+Portanto,
+
+$$
+M_X(t)
+= \frac{\lambda^\alpha}{\Gamma(\alpha)}
+\cdot
+\frac{\Gamma(\alpha)}{(\lambda - t)^\alpha}
+= \left(\frac{\lambda}{\lambda - t}\right)^\alpha,
+\qquad t<\lambda
+$$
+
+
+
+
+
+
+## Função Geradora de Momentos
+
+::: {.callout-note title="Exemplo 07: Distribuição Normal Padrão"}
+Seja $X \sim N(0, 1)$. Encontre sua função geradora de momentos.
+:::
+
+
+. . . 
+
+**Solução:** Seja $X \sim N(0, 1)$, cuja função densidade é
+
+$$
+f(x) = \frac{1}{\sqrt{2\pi}} e^{-x^2/2}, \qquad x \in \mathbb{R}
+$$
+
+
+Queremos encontrar a função geradora de momentos (fgm) dada por
+
+$$
+M_X(t)
+= \int_{-\infty}^{\infty} e^{tx}\,\frac{1}{\sqrt{2\pi}} e^{-x^2/2}\,dx
+= \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}
+\exp\Big(tx - \frac{x^2}{2}\Big)\,dx
+$$
+
+
+
+## Função Geradora de Momentos
+
+Vamos usar a técnica de completar quadrados no expoente,
+$$
+\begin{aligned}
+tx - \frac{x^2}{2}
+&= -\frac{1}{2}\big(x^2 - 2tx\big) = -\frac{1}{2}\big(x^2 - 2tx + t^2 - t^2\big) \\
+&= -\frac{1}{2}\big[(x - t)^2 - t^2\big] = -\frac{(x - t)^2}{2} + \frac{t^2}{2}
+\end{aligned}
+$$
+
+
+Assim, 
+
+$$\small
+M_X(t)
+= \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}
+\exp\!\left(-\frac{(x - t)^2}{2} + \frac{t^2}{2}\right)\,dx
+= \exp\!\left(\frac{t^2}{2}\right)
+\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}
+\exp\!\left(-\frac{(x - t)^2}{2}\right)\,dx
+$$
+
+
+
+
+## Função Geradora de Momentos
+
+
+A integral
+
+$$
+\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}
+\exp\!\left(-\frac{(x - t)^2}{2}\right)\,dx
+$$
+é a área total sob a curva de uma normal $N(t,1)$, e portanto é igual a $1$.
+
+Logo,
+$$
+\boxed{M_X(t) = \exp\!\left(\frac{t^2}{2}\right), \qquad t \in \mathbb{R}}
+$$
+
+
+
+
+## Função Geradora de Momentos
+
+::: {.callout-note title="Proposição 01: Transformações Lineares"}
+Seja $X$ uma variável aleatória com função geradora de momentos $M_X$. Seja $Y = aX + b$. Então, a função geradora de momentos de $Y$ é dada por
+
+$$M_Y(t) = e^{bt} M_X(at)$$ 
+:::
+
+
+. . .
+
+
+**Demonstração:**
+
+
+$$M_Y(t) = E(e^{tY}) = E(e^{t(aX+b)}) = E\Big(e^{atX} e^{bt} \Big) = e^{bt} E\Big(e^{atX}\Big) =  e^{bt} M_X(at)$$ 
+
+
+
+
+
+## Função Geradora de Momentos
+
+::: {.callout-note title="Exemplo 07: Distribuição Normal Padrão"}
+Seja $X \sim N(\mu, \sigma^2)$. Encontre sua função geradora de momentos.
+:::
+
+
+. . . 
+
+**Solução:** Se $X \sim N(\mu, \sigma^2)$, então $X = \sigma Z + \mu$, em que $Z\sim N(0,1)$, com função geradora de momentos dada por $M_X(t) = \exp\!\left(\frac{t^2}{2}\right)$. Assim,
+
+$$M_X(t) = e^{\mu t} M_X(\sigma t) = e^{\mu t} \exp\!\left(\frac{(\sigma t)^2}{2}\right) = e^{\mu t} \exp\!\left(\frac{\sigma^2 t^2}{2}\right)$$
+
+
+## Função Geradora de Momentos
+
+Logo, 
+
+
+Se $X \sim N(\mu, \sigma^2)$, então 
+
+
+$$\boxed{M_X(t)= \exp \Bigg(\mu t + \frac{\sigma^2 t^2}{2} \Bigg)}$$
+
+
+
+
+
+## Função Geradora de Momentos
+
+::: {.callout-note title="Teorema 02"}
+Se duas variáveis aleatórias têm funções geradoras de momentos que existem, e são iguais, então elas têm a mesma função de distribuição.
+:::
+
+
+. . .
+
+
+A demonstração desse Teorema será omitida, pois ela usa conceitos não estudados neste curso. Veja que o Teorema 02 nos mostra que se duas variáveis aleatórias tem mesma função geradora de momentos então estas variáveis aleatórias são identicamente distribuídas. 
+
+
+Isso significa que podemos identificar a distribuição de uma variável aleatória a partir da sua função geradora de momentos, assim como identificamos a distribuição da
+variável aleatória a partir da sua função de distribuição, função densidade ou função de probabilidade.
+
+
+
+## Função Geradora de Momentos
+
+
+::: {.callout-note title="Exemplo 08"}
+Seja $X \sim Gamma(\alpha, \lambda)$. Considere também $Y = cX,\,\, c\in \mathbb{R}$. Mostre, a partir da função geradora de momentos, que $Y \sim Gamma(\alpha, \lambda/c)$.
+:::
+
+
+. . . 
+
+**Solução:** Por definição,
+
+$$
+M_Y(t) = E(e^{tY}) = E(e^{t(cX)}) = E(e^{(ct)X})
+$$
+
+Logo,
+
+$$
+M_Y(t) = M_X(ct) = \left(\frac{\lambda}{\lambda - ct}\right)^{\alpha},
+\qquad ct < \lambda \;\; \Rightarrow \;\; t < \frac{\lambda}{c}
+$$
+
+
+
+## Função Geradora de Momentos
+
+
+ou seja,
+
+
+$$
+M_Y(t)
+= \left(\frac{\lambda}{\lambda - ct}\right)^{\alpha}
+= \left(\frac{\lambda/c}{(\lambda/c) - t}\right)^{\alpha},
+\qquad t < \frac{\lambda}{c}.
+$$
+
+
+
+Veja que trata-se da função geradora de momentos de uma variável aleatória com distribuição $Gamma(\alpha,\lambda/c)$. Logo, $Y \sim Gamma(\alpha,\lambda/c)$.
+
+
+
+## Função Geradora de Momentos
+
+::: {.callout-note title="Teorema 03: Soma de variáveis independentes"}
+Sejam $X_1, X_2, \cdots, X_n$ variáveis aleatórias independentes e funções geradoras de momentos, respectivamente, iguais a $M_{X_j}(t), \,\, j = 1, 2, \cdots, n$ para $t$ em alguma vizinhança de zero. Se $Y = X_1 + X_2 + \cdots + X_n$, então a função geradora de momentos de $Y$ existe e é dada por:
+
+$$M_Y(t) =  \prod_{j = 1}^n M_{X_j}(t)$$
+:::
+
+
+. . .
+
+
+**Demonstração:** Pela definição, temos
+
+$$
+\begin{aligned}
+M_Y(t) &= E(e^{t(X_1 + X_2 + \cdots + X_n)}) \\ &= E(e^{tX_1}e^{tX_2} \cdots e^{tX_n}) \\ &= E(e^{tX_1})E(e^{tX_2})\cdots E(e^{tX_n})
+\end{aligned}
+$$
+e daí segue o resultado desejado. 
+
+
+## Função Geradora de Momentos
+
+
+::: {.callout-note title="Exemplo 09"}
+Sejam $X_1, X_2, \cdots, X_n$ variáveis aleatórias independentes com distribuição Bernoulli de parâmetro $p$. Se $Y = X_1 + X_2 + \cdots + X_n$, mostre, a partir da função geradora de momentos, que $Y =  \sim Binomial(n,p)$.
+:::
+
+
+. . .
+
+
+**Solução:** Temos que se $X_1, X_2, \cdots, X_n$ são variáveis aleatórias independentes com distribuição Bernoulli de parâmetro $p$, então
+
+$$
+M_{X_j}(t) = 1 - p + p e^{t}, \quad j = 1,2, \cdots n
+$$
+
+## Função Geradora de Momentos
+
+
+Então, pelo **Teorema 03**, temos
+
+
+$$
+M_Y(t) = \prod_{j = 1}^n M_{X_j}(t) = \big(1 - p + p e^{t}\big)^n
+$$
+
+que corresponde à função geradora de momentos de uma variável aleatória Binomial com parâmetros $n$ e $p$. Logo, temos que $X_1 + X_2 + \cdots + X_n \sim Binomial(n,p)$.
+
+
+## Função Característica
+
+A **função característica** é uma das ferramentas mais importantes da Teoria das Probabilidades.  
+
+
+. . .
+
+
+Ela desempenha um papel similar ao da função geradora de momentos (fgm), mas com vantagens significativas: **sempre existe**, determina unicamente a distribuição e facilita o estudo de somas de variáveis aleatórias.

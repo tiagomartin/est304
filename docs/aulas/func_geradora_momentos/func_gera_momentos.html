@@ -834,6 +834,467 @@ M_X''(t)
 = \frac{1-p}{p^2}\]</span></p>
 <div class="fragment">
 <p>Veja que neste exemplo, a função geradora de momentos de <span class="math inline">\(X ∼ Geo(p)\)</span> não está definida para todo <span class="math inline">\(t \in \mathbb{R}\)</span>, mas está bem definida para <span class="math inline">\(t &lt; \ln\Big(\frac{1}{1-p}\Big)\)</span>. E como <span class="math inline">\(\ln\Big(\frac{1}{1-p}\Big) &gt; 0\)</span>, a função geradora de momentos está bem definida para <span class="math inline">\(t\)</span> em uma vizinhança de zero.</p>
+</div>
+</section>
+<section id="função-geradora-de-momentos-27" class="slide level2">
+<h2>Função Geradora de Momentos</h2>
+<div title="Exemplo 05: Distribuição de Poisson">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Exemplo 05: Distribuição de Poisson</strong></p>
+</div>
+<div class="callout-content">
+<p>Seja <span class="math inline">\(X \sim Poisson(\lambda)\)</span>. Encontre sua função geradora de momentos e a partir dela, encontre <span class="math inline">\(E(X)\)</span> e <span class="math inline">\(\operatorname{Var}(X)\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p><strong>Solução:</strong> Seja <span class="math inline">\(X \sim Poisson(\lambda)\)</span>, cuja função de probabilidade é</p>
+<p><span class="math display">\[
+P(X = k) = \frac{e^{-\lambda}\lambda^k}{k!}, \quad k = 0,1,2,\ldots
+\]</span></p>
+<p>Assim, a função geradora de momentos (fgm) de <span class="math inline">\(X\)</span> é dada por,</p>
+<p><span class="math display">\[
+M_X(t) = \sum_{k=0}^\infty e^{tk}\,\frac{e^{-\lambda}\lambda^k}{k!}
+       = e^{-\lambda} \sum_{k=0}^\infty \frac{(\lambda e^t)^k}{k!}
+\]</span></p>
+</div>
+</section>
+<section id="função-geradora-de-momentos-28" class="slide level2">
+<h2>Função Geradora de Momentos</h2>
+<p>A série</p>
+<p><span class="math display">\[
+\sum_{k=0}^\infty \frac{(\lambda e^t)^k}{k!}
+\]</span></p>
+<p>é a expansão em série de Taylor de <span class="math inline">\(e^{\lambda e^t}\)</span>. Assim,</p>
+<p><span class="math display">\[
+M_X(t) = e^{-\lambda} e^{\lambda e^t}
+       = \exp\{\lambda(e^t - 1)\}
+\]</span></p>
+</section>
+<section id="função-geradora-de-momentos-29" class="slide level2">
+<h2>Função Geradora de Momentos</h2>
+<p>Portanto, a fgm de <span class="math inline">\(X\)</span> é <span class="math display">\[
+\boxed{M_X(t) = \exp\big(\lambda(e^t - 1)\big)}
+\]</span></p>
+<p>Note que, pela <a href="#/tip-FGM" class="quarto-xref">Tip&nbsp;1</a>, <span class="math inline">\(M_X(0) = \exp\big(\lambda(e^0 - 1)\big) = \exp\big(0\big) =  1\)</span></p>
+<div class="fragment">
+<p>Vamos calcular as derivadas de ordem primeira e ordem segunda para calcular os respectivos momentos:</p>
+<p>Pela regra da cadeia,</p>
+<p><span class="math display">\[
+M_X'(t) = \exp\big(\lambda(e^t - 1)\big)\cdot \lambda e^t
+        = \lambda e^t\, M_X(t)
+\]</span></p>
+</div>
+</section>
+<section id="função-geradora-de-momentos-30" class="slide level2">
+<h2>Função Geradora de Momentos</h2>
+<p>Logo,</p>
+<p><span class="math display">\[
+E(X) = M_X'(0) = \lambda e^0\, M_X(0) = \lambda \cdot 1 \cdot 1 = \lambda
+\]</span></p>
+<div class="fragment">
+<p>A segunda derivada de <span class="math inline">\(M_X(t)\)</span> é dada por:</p>
+<p><span class="math display">\[
+\begin{aligned}
+M_X''(t)
+&amp;= \frac{d}{dt}\big[\lambda e^t\, M_X(t)\big] \\
+&amp;= \lambda e^t\, M_X(t) + \lambda e^t\, M_X'(t) \\
+&amp;= \lambda e^t\, M_X(t) + \lambda e^t\,[\lambda e^t\, M_X(t)] \\
+&amp;= \lambda e^t\, M_X(t)\,\big[1 + \lambda e^t\big]
+\end{aligned}
+\]</span></p>
+</div>
+</section>
+<section id="função-geradora-de-momentos-31" class="slide level2">
+<h2>Função Geradora de Momentos</h2>
+<p>Agora, avaliando em <span class="math inline">\(t=0\)</span>:</p>
+<p><span class="math display">\[
+\begin{aligned}
+M_X''(0) = \lambda e^0\, M_X(0)\,\big[1 + \lambda e^0\big] = \lambda \cdot 1 \cdot 1 \cdot (1+\lambda) = \lambda(1+\lambda)
+\end{aligned}
+\]</span></p>
+<p>Portanto,</p>
+<p><span class="math display">\[
+E(X^2) = M_X''(0) = \lambda(1+\lambda)
+\]</span></p>
+<p>Assim,</p>
+<p><span class="math display">\[
+\begin{aligned}
+\text{Var}(X)
+&amp;= M_X''(0) - \Big[M_X'(0)\Big]^2 \\
+&amp;= \lambda(1+\lambda) - \lambda^2 \\
+&amp;= \lambda
+\end{aligned}
+\]</span></p>
+</section>
+<section id="função-geradora-de-momentos-32" class="slide level2">
+<h2>Função Geradora de Momentos</h2>
+<div title="Exemplo 06: Distribuição Exponencial">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Exemplo 06: Distribuição Exponencial</strong></p>
+</div>
+<div class="callout-content">
+<p>Seja <span class="math inline">\(X \sim exp(\lambda)\)</span>. Encontre sua função geradora de momentos e a partir dela, encontre <span class="math inline">\(E(X)\)</span> e <span class="math inline">\(\operatorname{Var}(X)\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p><strong>Solução:</strong> Seja <span class="math inline">\(X \sim exp(\lambda)\)</span>, cuja função densidade é</p>
+<p><span class="math display">\[
+f(x) = \lambda e^{-\lambda x}, \quad x &gt; 0
+\]</span></p>
+<p>Neste caso, a função geradora de momentos (fgm) de <span class="math inline">\(X\)</span> é definida por <span class="math display">\[
+M_X(t) = E(e^{tX}) = \int_0^\infty e^{tx}\,\lambda e^{-\lambda x}\,dx = \int_0^\infty \lambda e^{-(\lambda - t)x} \, dx
+\]</span></p>
+<p>válida para <span class="math inline">\(t &lt; \lambda\)</span>.</p>
+</div>
+</section>
+<section id="função-geradora-de-momentos-33" class="slide level2">
+<h2>Função Geradora de Momentos</h2>
+<p>Assim, como</p>
+<p><span class="math display">\[
+\int_0^\infty \lambda e^{-(\lambda - t)x} =  \lambda \frac{e^{-(\lambda - t)x}}{-(\lambda - t)} \Bigg|_0^{\infty} = \frac{\lambda}{\lambda - t}, \,\,\,\, \lambda - t &gt; 0
+\]</span></p>
+<p>Logo,</p>
+<p><span class="math display">\[
+\boxed{M_X(t) = \frac{\lambda}{\lambda - t}, \qquad t &lt; \lambda}
+\]</span></p>
+<p>Note que, pela <a href="#/tip-FGM" class="quarto-xref">Tip&nbsp;1</a>, $ M_X(0) = = 1$</p>
+</section>
+<section id="função-geradora-de-momentos-34" class="slide level2">
+<h2>Função Geradora de Momentos</h2>
+<p>Derivando,</p>
+<p><span class="math display">\[
+M_X'(t) = \frac{\lambda}{(\lambda - t)^2}
+\]</span></p>
+<p>Portanto,</p>
+<p><span class="math display">\[
+E(X) = M_X'(0) = \frac{\lambda}{\lambda^2} = \frac{1}{\lambda}
+\]</span></p>
+</section>
+<section id="função-geradora-de-momentos-35" class="slide level2">
+<h2>Função Geradora de Momentos</h2>
+<p>A segunda derivada é dada por,</p>
+<p><span class="math display">\[
+M_X''(t) = \frac{2\lambda}{(\lambda - t)^3}
+\]</span></p>
+<p>Logo,</p>
+<p><span class="math display">\[
+E(X^2) = M_X''(0) = \frac{2\lambda}{\lambda^3} = \frac{2}{\lambda^2}
+\]</span></p>
+<p>De forma que,</p>
+<p><span class="math display">\[
+\text{Var}(X)
+= E(X^2) - \Big[E(X) \Big]^2
+= \frac{2}{\lambda^2} - \frac{1}{\lambda^2}
+= \frac{1}{\lambda^2}
+\]</span></p>
+</section>
+<section id="função-geradora-de-momentos-36" class="slide level2">
+<h2>Função Geradora de Momentos</h2>
+<div title="Exemplo 07: Distribuição Gamma">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Exemplo 07: Distribuição Gamma</strong></p>
+</div>
+<div class="callout-content">
+<p>Seja <span class="math inline">\(X \sim Gamma(\alpha, \lambda)\)</span>. Encontre sua função geradora de momentos.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p><strong>Solução:</strong> Seja <span class="math inline">\(X \sim Gamma(\alpha, \lambda)\)</span>, cuja função densidade é</p>
+<p><span class="math display">\[
+f(x) = \frac{\lambda^\alpha}{\Gamma(\alpha)}x^{\alpha-1}e^{-\lambda x},
+\qquad x&gt;0
+\]</span></p>
+<p>A função geradora de momentos é</p>
+<p><span class="math display">\[
+M_X(t)
+= \int_0^\infty e^{tx}
+\frac{\lambda^\alpha}{\Gamma(\alpha)}x^{\alpha-1}e^{-\lambda x}\,dx
+= \frac{\lambda^\alpha}{\Gamma(\alpha)}
+\int_0^\infty x^{\alpha-1}e^{-(\lambda - t)x}\,dx
+\]</span></p>
+</div>
+</section>
+<section id="função-geradora-de-momentos-37" class="slide level2">
+<h2>Função Geradora de Momentos</h2>
+<p>Usamos agora o resultado da função Gamma:</p>
+<p><span class="math display">\[
+\int_0^\infty x^{\alpha-1}e^{-bx}\,dx
+= \frac{\Gamma(\alpha)}{b^\alpha}, \qquad b&gt;0
+\]</span></p>
+<p>Aqui, <span class="math inline">\(b = \lambda - t\)</span> (precisamos de <span class="math inline">\(\lambda - t &gt; 0\)</span>, isto é, <span class="math inline">\(t&lt;\lambda\)</span>). Logo,</p>
+<p><span class="math display">\[
+\int_0^\infty x^{\alpha-1}e^{-(\lambda - t)x}\,dx
+= \frac{\Gamma(\alpha)}{(\lambda - t)^\alpha}
+\]</span></p>
+<p>Portanto,</p>
+<p><span class="math display">\[
+M_X(t)
+= \frac{\lambda^\alpha}{\Gamma(\alpha)}
+\cdot
+\frac{\Gamma(\alpha)}{(\lambda - t)^\alpha}
+= \left(\frac{\lambda}{\lambda - t}\right)^\alpha,
+\qquad t&lt;\lambda
+\]</span></p>
+</section>
+<section id="função-geradora-de-momentos-38" class="slide level2">
+<h2>Função Geradora de Momentos</h2>
+<div title="Exemplo 07: Distribuição Normal Padrão">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Exemplo 07: Distribuição Normal Padrão</strong></p>
+</div>
+<div class="callout-content">
+<p>Seja <span class="math inline">\(X \sim N(0, 1)\)</span>. Encontre sua função geradora de momentos.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p><strong>Solução:</strong> Seja <span class="math inline">\(X \sim N(0, 1)\)</span>, cuja função densidade é</p>
+<p><span class="math display">\[
+f(x) = \frac{1}{\sqrt{2\pi}} e^{-x^2/2}, \qquad x \in \mathbb{R}
+\]</span></p>
+<p>Queremos encontrar a função geradora de momentos (fgm) dada por</p>
+<p><span class="math display">\[
+M_X(t)
+= \int_{-\infty}^{\infty} e^{tx}\,\frac{1}{\sqrt{2\pi}} e^{-x^2/2}\,dx
+= \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}
+\exp\Big(tx - \frac{x^2}{2}\Big)\,dx
+\]</span></p>
+</div>
+</section>
+<section id="função-geradora-de-momentos-39" class="slide level2">
+<h2>Função Geradora de Momentos</h2>
+<p>Vamos usar a técnica de completar quadrados no expoente, <span class="math display">\[
+\begin{aligned}
+tx - \frac{x^2}{2}
+&amp;= -\frac{1}{2}\big(x^2 - 2tx\big) = -\frac{1}{2}\big(x^2 - 2tx + t^2 - t^2\big) \\
+&amp;= -\frac{1}{2}\big[(x - t)^2 - t^2\big] = -\frac{(x - t)^2}{2} + \frac{t^2}{2}
+\end{aligned}
+\]</span></p>
+<p>Assim,</p>
+<p><span class="math display">\[\small
+M_X(t)
+= \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}
+\exp\!\left(-\frac{(x - t)^2}{2} + \frac{t^2}{2}\right)\,dx
+= \exp\!\left(\frac{t^2}{2}\right)
+\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}
+\exp\!\left(-\frac{(x - t)^2}{2}\right)\,dx
+\]</span></p>
+</section>
+<section id="função-geradora-de-momentos-40" class="slide level2">
+<h2>Função Geradora de Momentos</h2>
+<p>A integral</p>
+<p><span class="math display">\[
+\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}
+\exp\!\left(-\frac{(x - t)^2}{2}\right)\,dx
+\]</span> é a área total sob a curva de uma normal <span class="math inline">\(N(t,1)\)</span>, e portanto é igual a <span class="math inline">\(1\)</span>.</p>
+<p>Logo, <span class="math display">\[
+\boxed{M_X(t) = \exp\!\left(\frac{t^2}{2}\right), \qquad t \in \mathbb{R}}
+\]</span></p>
+</section>
+<section id="função-geradora-de-momentos-41" class="slide level2">
+<h2>Função Geradora de Momentos</h2>
+<div title="Proposição 01: Transformações Lineares">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Proposição 01: Transformações Lineares</strong></p>
+</div>
+<div class="callout-content">
+<p>Seja <span class="math inline">\(X\)</span> uma variável aleatória com função geradora de momentos <span class="math inline">\(M_X\)</span>. Seja <span class="math inline">\(Y = aX + b\)</span>. Então, a função geradora de momentos de <span class="math inline">\(Y\)</span> é dada por</p>
+<p><span class="math display">\[M_Y(t) = e^{bt} M_X(at)\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p><strong>Demonstração:</strong></p>
+<p><span class="math display">\[M_Y(t) = E(e^{tY}) = E(e^{t(aX+b)}) = E\Big(e^{atX} e^{bt} \Big) = e^{bt} E\Big(e^{atX}\Big) =  e^{bt} M_X(at)\]</span></p>
+</div>
+</section>
+<section id="função-geradora-de-momentos-42" class="slide level2">
+<h2>Função Geradora de Momentos</h2>
+<div title="Exemplo 07: Distribuição Normal Padrão">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Exemplo 07: Distribuição Normal Padrão</strong></p>
+</div>
+<div class="callout-content">
+<p>Seja <span class="math inline">\(X \sim N(\mu, \sigma^2)\)</span>. Encontre sua função geradora de momentos.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p><strong>Solução:</strong> Se <span class="math inline">\(X \sim N(\mu, \sigma^2)\)</span>, então <span class="math inline">\(X = \sigma Z + \mu\)</span>, em que <span class="math inline">\(Z\sim N(0,1)\)</span>, com função geradora de momentos dada por <span class="math inline">\(M_X(t) = \exp\!\left(\frac{t^2}{2}\right)\)</span>. Assim,</p>
+<p><span class="math display">\[M_X(t) = e^{\mu t} M_X(\sigma t) = e^{\mu t} \exp\!\left(\frac{(\sigma t)^2}{2}\right) = e^{\mu t} \exp\!\left(\frac{\sigma^2 t^2}{2}\right)\]</span></p>
+</div>
+</section>
+<section id="função-geradora-de-momentos-43" class="slide level2">
+<h2>Função Geradora de Momentos</h2>
+<p>Logo,</p>
+<p>Se <span class="math inline">\(X \sim N(\mu, \sigma^2)\)</span>, então</p>
+<p><span class="math display">\[\boxed{M_X(t)= \exp \Bigg(\mu t + \frac{\sigma^2 t^2}{2} \Bigg)}\]</span></p>
+</section>
+<section id="função-geradora-de-momentos-44" class="slide level2">
+<h2>Função Geradora de Momentos</h2>
+<div title="Teorema 02">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Teorema 02</strong></p>
+</div>
+<div class="callout-content">
+<p>Se duas variáveis aleatórias têm funções geradoras de momentos que existem, e são iguais, então elas têm a mesma função de distribuição.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p>A demonstração desse Teorema será omitida, pois ela usa conceitos não estudados neste curso. Veja que o Teorema 02 nos mostra que se duas variáveis aleatórias tem mesma função geradora de momentos então estas variáveis aleatórias são identicamente distribuídas.</p>
+<p>Isso significa que podemos identificar a distribuição de uma variável aleatória a partir da sua função geradora de momentos, assim como identificamos a distribuição da variável aleatória a partir da sua função de distribuição, função densidade ou função de probabilidade.</p>
+</div>
+</section>
+<section id="função-geradora-de-momentos-45" class="slide level2">
+<h2>Função Geradora de Momentos</h2>
+<div title="Exemplo 08">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Exemplo 08</strong></p>
+</div>
+<div class="callout-content">
+<p>Seja <span class="math inline">\(X \sim Gamma(\alpha, \lambda)\)</span>. Considere também <span class="math inline">\(Y = cX,\,\, c\in \mathbb{R}\)</span>. Mostre, a partir da função geradora de momentos, que <span class="math inline">\(Y \sim Gamma(\alpha, \lambda/c)\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p><strong>Solução:</strong> Por definição,</p>
+<p><span class="math display">\[
+M_Y(t) = E(e^{tY}) = E(e^{t(cX)}) = E(e^{(ct)X})
+\]</span></p>
+<p>Logo,</p>
+<p><span class="math display">\[
+M_Y(t) = M_X(ct) = \left(\frac{\lambda}{\lambda - ct}\right)^{\alpha},
+\qquad ct &lt; \lambda \;\; \Rightarrow \;\; t &lt; \frac{\lambda}{c}
+\]</span></p>
+</div>
+</section>
+<section id="função-geradora-de-momentos-46" class="slide level2">
+<h2>Função Geradora de Momentos</h2>
+<p>ou seja,</p>
+<p><span class="math display">\[
+M_Y(t)
+= \left(\frac{\lambda}{\lambda - ct}\right)^{\alpha}
+= \left(\frac{\lambda/c}{(\lambda/c) - t}\right)^{\alpha},
+\qquad t &lt; \frac{\lambda}{c}.
+\]</span></p>
+<p>Veja que trata-se da função geradora de momentos de uma variável aleatória com distribuição <span class="math inline">\(Gamma(\alpha,\lambda/c)\)</span>. Logo, <span class="math inline">\(Y \sim Gamma(\alpha,\lambda/c)\)</span>.</p>
+</section>
+<section id="função-geradora-de-momentos-47" class="slide level2">
+<h2>Função Geradora de Momentos</h2>
+<div title="Teorema 03: Soma de variáveis independentes">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Teorema 03: Soma de variáveis independentes</strong></p>
+</div>
+<div class="callout-content">
+<p>Sejam <span class="math inline">\(X_1, X_2, \cdots, X_n\)</span> variáveis aleatórias independentes e funções geradoras de momentos, respectivamente, iguais a <span class="math inline">\(M_{X_j}(t), \,\, j = 1, 2, \cdots, n\)</span> para <span class="math inline">\(t\)</span> em alguma vizinhança de zero. Se <span class="math inline">\(Y = X_1 + X_2 + \cdots + X_n\)</span>, então a função geradora de momentos de <span class="math inline">\(Y\)</span> existe e é dada por:</p>
+<p><span class="math display">\[M_Y(t) =  \prod_{j = 1}^n M_{X_j}(t)\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p><strong>Demonstração:</strong> Pela definição, temos</p>
+<p><span class="math display">\[
+\begin{aligned}
+M_Y(t) &amp;= E(e^{t(X_1 + X_2 + \cdots + X_n)}) \\ &amp;= E(e^{tX_1}e^{tX_2} \cdots e^{tX_n}) \\ &amp;= E(e^{tX_1})E(e^{tX_2})\cdots E(e^{tX_n})
+\end{aligned}
+\]</span> e daí segue o resultado desejado.</p>
+</div>
+</section>
+<section id="função-geradora-de-momentos-48" class="slide level2">
+<h2>Função Geradora de Momentos</h2>
+<div title="Exemplo 09">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Exemplo 09</strong></p>
+</div>
+<div class="callout-content">
+<p>Sejam <span class="math inline">\(X_1, X_2, \cdots, X_n\)</span> variáveis aleatórias independentes com distribuição Bernoulli de parâmetro <span class="math inline">\(p\)</span>. Se <span class="math inline">\(Y = X_1 + X_2 + \cdots + X_n\)</span>, mostre, a partir da função geradora de momentos, que <span class="math inline">\(Y =  \sim Binomial(n,p)\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p><strong>Solução:</strong> Temos que se <span class="math inline">\(X_1, X_2, \cdots, X_n\)</span> são variáveis aleatórias independentes com distribuição Bernoulli de parâmetro <span class="math inline">\(p\)</span>, então</p>
+<p><span class="math display">\[
+M_{X_j}(t) = 1 - p + p e^{t}, \quad j = 1,2, \cdots n
+\]</span></p>
+</div>
+</section>
+<section id="função-geradora-de-momentos-49" class="slide level2">
+<h2>Função Geradora de Momentos</h2>
+<p>Então, pelo <strong>Teorema 03</strong>, temos</p>
+<p><span class="math display">\[
+M_Y(t) = \prod_{j = 1}^n M_{X_j}(t) = \big(1 - p + p e^{t}\big)^n
+\]</span></p>
+<p>que corresponde à função geradora de momentos de uma variável aleatória Binomial com parâmetros <span class="math inline">\(n\)</span> e <span class="math inline">\(p\)</span>. Logo, temos que <span class="math inline">\(X_1 + X_2 + \cdots + X_n \sim Binomial(n,p)\)</span>.</p>
+</section>
+<section id="função-característica" class="slide level2">
+<h2>Função Característica</h2>
+<p>A <strong>função característica</strong> é uma das ferramentas mais importantes da Teoria das Probabilidades.</p>
+<div class="fragment">
+<p>Ela desempenha um papel similar ao da função geradora de momentos (fgm), mas com vantagens significativas: <strong>sempre existe</strong>, determina unicamente a distribuição e facilita o estudo de somas de variáveis aleatórias.</p>
 
 
 </div>
