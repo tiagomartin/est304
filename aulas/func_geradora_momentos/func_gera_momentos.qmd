@@ -1416,7 +1416,9 @@ As propriedades usuais de números complexos serão usadas. Sendo $z = a + i\, b
 
 
 ::: {.callout-note title="Definição 04: Função Característica"}
+
 A função característica de uma variável aleatória $X$ é definida por
+
 $$
 \varphi_X(t) = E\!\left(e^{itX}\right) = E\Big[\cos(tX)\Big] + i\, E\Big[\, \text{sen}(tX)\Big],
 \qquad t \in \mathbb{R},
@@ -1442,8 +1444,7 @@ onde $i = \sqrt{-1}.$
    $$
    X \stackrel{d}{=} Y.
    $$  
-   (versão “complexa” do teorema da unicidade da fgm)
-   
+
    
 ## Função Característica
 
@@ -1647,7 +1648,7 @@ $$
 
 
 ::: {.callout-note title="Exemplo 11"}
-Seja $X \sim Binomial(n, p)$. Encontre sua função característica.
+Seja $X \sim Binomial(n, p)$. Encontre sua função característica e, através dela, encontre $E(X)$ e $\text{Var}(X)$.
 :::
 
 
@@ -1668,13 +1669,130 @@ $$
 $$
 
 
+## Função Característica
+
+
+Em geral, se a função característica é $\varphi_X(t)=E(e^{itX})$, então
+
+$$
+\varphi_X'(0) = i\,E(X) 
+\quad \Rightarrow \quad
+E(X) = \frac{\varphi_X'(0)}{i}
+$$
+
+Note que,
+
+
+$$
+\varphi_X(t) = g(t)^n,
+\quad\text{onde}\quad
+g(t) = 1-p + pe^{it}
+$$
+
+
+e
+
+$$
+\varphi_X'(t) = n g(t)^{n-1} g'(t)
+= n (1-p+pe^{it})^{n-1} \, p i e^{it}
+$$
+
+
+## Função Característica
+
+Avaliando em $t=0$:
+
+
+$$
+\varphi_X'(0) = n (1-p+pe^{i 0})^{n-1} \, p i e^{i\, 0} = n (1-p+pe^{0})^{n-1} \, p i e^{0} = n (1-p+p)^{n-1} \, p i = n p i
+$$
+
+
+Portanto,
+
+
+$$
+E(X) = \frac{\varphi_X'(0)}{i} = \frac{i np}{i} = np
+$$
+
+
+
+## Função Característica
+
+
+Já temos
+$$
+\varphi_X'(t) = n p i e^{it}\, g(t)^{n-1},
+\quad g(t)=1-p+pe^{it}
+$$
+
+
+
+Derivando novamente (regra do produto):
+
+$$
+\begin{aligned}
+\varphi_X''(t)
+&= n p i \Big[ i e^{it} g(t)^{n-1}
+      + e^{it}(n-1) g(t)^{n-2} g'(t) \Big] \\
+&= n p i \Big[ i e^{it} g(t)^{n-1}
+      + e^{it}(n-1) g(t)^{n-2} (p i e^{it}) \Big] \\
+&= n p \Big[ i^2 e^{it} g(t)^{n-1}
+      + (n-1)p i^2 e^{2it} g(t)^{n-2} \Big] \\
+&= -n p \Big[ e^{it} g(t)^{n-1}
+      + (n-1)p e^{2it} g(t)^{n-2} \Big]
+\end{aligned}
+$$
+
+
+## Função Característica
+
+
+Em $t=0$ ($g(0)=1$, $e^{0}=1$):
+
+$$
+\varphi_X''(0)
+= -n p \big[ 1\cdot 1^{n-1} + (n-1)p\cdot 1\cdot 1^{n-2} \big]
+= -n p \big[ 1 + (n-1)p \big]
+$$
+
+Então,
+
+$$
+E(X^2) = -\varphi_X''(0)
+= n p\big[1 + (n-1)p\big]
+= np + n(n-1)p^2
+$$
+
+
+## Função Característica
+
+Por fim, como $\text{Var}(X) = -\varphi_X''(0) - \left[\varphi_X'(0)\right]^2$
+
+
+$$
+\begin{aligned}
+\text{Var}(X)
+&= -\varphi_X''(0) - \left[\varphi_X'(0)\right]^2 \\
+&= \big[np + n(n-1)p^2\big] - (np)^2 \\
+&= np + n(n-1)p^2 - n^2p^2 \\
+&= np + \big(n^2 - n - n^2\big)p^2 \\
+&= np - np^2 \\
+&= np(1-p)
+\end{aligned}
+$$
+
+
+
+
+
 
 ## Função Característica
 
 
 
 ::: {.callout-note title="Exemplo 12"}
-Seja $X \sim N(\mu, \sigma^2)$. Encontre sua função característica.
+Seja $X \sim N(\mu, \sigma^2)$. Encontre sua função característica e, através dela, encontre $E(X)$ e $\text{Var}(X)$.
 :::
 
 
@@ -1691,4 +1809,77 @@ Portanto, segue que
 
 $$
 \varphi_X(t) = M_X(it) = \exp \Bigg(it\mu - \frac{\sigma^2 t^2}{2} \Bigg)
+$$
+
+
+
+## Função Característica
+
+Derivando:
+
+$$
+\varphi_X'(t)
+= \left(i\mu - \sigma^2 t\right)\,
+\exp\!\left(it\mu - \frac{\sigma^2 t^2}{2}\right)
+= \left(i\mu - \sigma^2 t\right)\varphi_X(t)
+$$
+
+Em $t=0$:
+
+$$
+\varphi_X(0) = 1, \qquad
+\varphi_X'(0) = i\mu
+$$
+
+Logo,
+
+$$
+E(X) = \frac{\varphi_X'(0)}{i} = \frac{i\mu}{i} = \mu
+$$
+
+
+
+## Função Característica
+
+
+Derivamos novamente:
+
+$$
+\begin{aligned}
+\varphi_X''(t)
+&= \frac{d}{dt}\big[(i\mu - \sigma^2 t)\varphi_X(t)\big] \\
+&= -\sigma^2 \varphi_X(t)
+   + (i\mu - \sigma^2 t)\varphi_X'(t) \\
+&= -\sigma^2 \varphi_X(t)
+   + (i\mu - \sigma^2 t)^2 \varphi_X(t)
+\end{aligned}
+$$
+
+Em $t=0$:
+$$
+\varphi_X(0) = 1,\qquad
+\varphi_X''(0) = -\sigma^2 + (i\mu)^2
+              = -\sigma^2 - \mu^2
+$$
+
+Portanto,
+$$
+E(X^2) = -\varphi_X''(0)
+       = \sigma^2 + \mu^2
+$$
+
+
+
+
+## Função Característica
+
+
+De forma que,
+
+
+$$
+\operatorname{Var}(X)
+= E(X^2) - [E(X)]^2
+= (\sigma^2 + \mu^2) - \mu^2
+= \sigma^2
 $$

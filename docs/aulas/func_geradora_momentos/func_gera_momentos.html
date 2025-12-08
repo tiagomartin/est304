@@ -1340,7 +1340,8 @@ M_Y(t) = \prod_{j = 1}^n M_{X_j}(t) = \big(1 - p + p e^{t}\big)^n
 <p><strong>Definição 04: Função Característica</strong></p>
 </div>
 <div class="callout-content">
-<p>A função característica de uma variável aleatória <span class="math inline">\(X\)</span> é definida por <span class="math display">\[
+<p>A função característica de uma variável aleatória <span class="math inline">\(X\)</span> é definida por</p>
+<p><span class="math display">\[
 \varphi_X(t) = E\!\left(e^{itX}\right) = E\Big[\cos(tX)\Big] + i\, E\Big[\, \text{sen}(tX)\Big],
 \qquad t \in \mathbb{R},
 \]</span> onde <span class="math inline">\(i = \sqrt{-1}.\)</span></p>
@@ -1362,8 +1363,7 @@ Diferentemente da fgm, que pode divergir,<br>
 Se <span class="math inline">\(\varphi_X(t) = \varphi_Y(t)\)</span> para todo <span class="math inline">\(t\)</span>, então<br>
 <span class="math display">\[
 X \stackrel{d}{=} Y.
-\]</span><br>
-(versão “complexa” do teorema da unicidade da fgm)</p></li>
+\]</span></p></li>
 </ol>
 </section>
 <section id="função-característica-4" class="slide level2">
@@ -1527,7 +1527,7 @@ f(x) = \frac{\lambda^\alpha}{\Gamma(\alpha)}x^{\alpha-1}e^{-\lambda x},
 <p><strong>Exemplo 11</strong></p>
 </div>
 <div class="callout-content">
-<p>Seja <span class="math inline">\(X \sim Binomial(n, p)\)</span>. Encontre sua função característica.</p>
+<p>Seja <span class="math inline">\(X \sim Binomial(n, p)\)</span>. Encontre sua função característica e, através dela, encontre <span class="math inline">\(E(X)\)</span> e <span class="math inline">\(\text{Var}(X)\)</span>.</p>
 </div>
 </div>
 </div>
@@ -1545,6 +1545,88 @@ M_X(t) = (1-p + p e^{t})^n
 </section>
 <section id="função-característica-13" class="slide level2">
 <h2>Função Característica</h2>
+<p>Em geral, se a função característica é <span class="math inline">\(\varphi_X(t)=E(e^{itX})\)</span>, então</p>
+<p><span class="math display">\[
+\varphi_X'(0) = i\,E(X)
+\quad \Rightarrow \quad
+E(X) = \frac{\varphi_X'(0)}{i}
+\]</span></p>
+<p>Note que,</p>
+<p><span class="math display">\[
+\varphi_X(t) = g(t)^n,
+\quad\text{onde}\quad
+g(t) = 1-p + pe^{it}
+\]</span></p>
+<p>e</p>
+<p><span class="math display">\[
+\varphi_X'(t) = n g(t)^{n-1} g'(t)
+= n (1-p+pe^{it})^{n-1} \, p i e^{it}
+\]</span></p>
+</section>
+<section id="função-característica-14" class="slide level2">
+<h2>Função Característica</h2>
+<p>Avaliando em <span class="math inline">\(t=0\)</span>:</p>
+<p><span class="math display">\[
+\varphi_X'(0) = n (1-p+pe^{i 0})^{n-1} \, p i e^{i\, 0} = n (1-p+pe^{0})^{n-1} \, p i e^{0} = n (1-p+p)^{n-1} \, p i = n p i
+\]</span></p>
+<p>Portanto,</p>
+<p><span class="math display">\[
+E(X) = \frac{\varphi_X'(0)}{i} = \frac{i np}{i} = np
+\]</span></p>
+</section>
+<section id="função-característica-15" class="slide level2">
+<h2>Função Característica</h2>
+<p>Já temos <span class="math display">\[
+\varphi_X'(t) = n p i e^{it}\, g(t)^{n-1},
+\quad g(t)=1-p+pe^{it}
+\]</span></p>
+<p>Derivando novamente (regra do produto):</p>
+<p><span class="math display">\[
+\begin{aligned}
+\varphi_X''(t)
+&amp;= n p i \Big[ i e^{it} g(t)^{n-1}
+      + e^{it}(n-1) g(t)^{n-2} g'(t) \Big] \\
+&amp;= n p i \Big[ i e^{it} g(t)^{n-1}
+      + e^{it}(n-1) g(t)^{n-2} (p i e^{it}) \Big] \\
+&amp;= n p \Big[ i^2 e^{it} g(t)^{n-1}
+      + (n-1)p i^2 e^{2it} g(t)^{n-2} \Big] \\
+&amp;= -n p \Big[ e^{it} g(t)^{n-1}
+      + (n-1)p e^{2it} g(t)^{n-2} \Big]
+\end{aligned}
+\]</span></p>
+</section>
+<section id="função-característica-16" class="slide level2">
+<h2>Função Característica</h2>
+<p>Em <span class="math inline">\(t=0\)</span> (<span class="math inline">\(g(0)=1\)</span>, <span class="math inline">\(e^{0}=1\)</span>):</p>
+<p><span class="math display">\[
+\varphi_X''(0)
+= -n p \big[ 1\cdot 1^{n-1} + (n-1)p\cdot 1\cdot 1^{n-2} \big]
+= -n p \big[ 1 + (n-1)p \big]
+\]</span></p>
+<p>Então,</p>
+<p><span class="math display">\[
+E(X^2) = -\varphi_X''(0)
+= n p\big[1 + (n-1)p\big]
+= np + n(n-1)p^2
+\]</span></p>
+</section>
+<section id="função-característica-17" class="slide level2">
+<h2>Função Característica</h2>
+<p>Por fim, como <span class="math inline">\(\text{Var}(X) = -\varphi_X''(0) - \left[\varphi_X'(0)\right]^2\)</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+\text{Var}(X)
+&amp;= -\varphi_X''(0) - \left[\varphi_X'(0)\right]^2 \\
+&amp;= \big[np + n(n-1)p^2\big] - (np)^2 \\
+&amp;= np + n(n-1)p^2 - n^2p^2 \\
+&amp;= np + \big(n^2 - n - n^2\big)p^2 \\
+&amp;= np - np^2 \\
+&amp;= np(1-p)
+\end{aligned}
+\]</span></p>
+</section>
+<section id="função-característica-18" class="slide level2">
+<h2>Função Característica</h2>
 <div title="Exemplo 12">
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
@@ -1555,7 +1637,7 @@ M_X(t) = (1-p + p e^{t})^n
 <p><strong>Exemplo 12</strong></p>
 </div>
 <div class="callout-content">
-<p>Seja <span class="math inline">\(X \sim N(\mu, \sigma^2)\)</span>. Encontre sua função característica.</p>
+<p>Seja <span class="math inline">\(X \sim N(\mu, \sigma^2)\)</span>. Encontre sua função característica e, através dela, encontre <span class="math inline">\(E(X)\)</span> e <span class="math inline">\(\text{Var}(X)\)</span>.</p>
 </div>
 </div>
 </div>
@@ -1567,9 +1649,61 @@ M_X(t) = (1-p + p e^{t})^n
 <p><span class="math display">\[
 \varphi_X(t) = M_X(it) = \exp \Bigg(it\mu - \frac{\sigma^2 t^2}{2} \Bigg)
 \]</span></p>
-
-
 </div>
+</section>
+<section id="função-característica-19" class="slide level2">
+<h2>Função Característica</h2>
+<p>Derivando:</p>
+<p><span class="math display">\[
+\varphi_X'(t)
+= \left(i\mu - \sigma^2 t\right)\,
+\exp\!\left(it\mu - \frac{\sigma^2 t^2}{2}\right)
+= \left(i\mu - \sigma^2 t\right)\varphi_X(t)
+\]</span></p>
+<p>Em <span class="math inline">\(t=0\)</span>:</p>
+<p><span class="math display">\[
+\varphi_X(0) = 1, \qquad
+\varphi_X'(0) = i\mu
+\]</span></p>
+<p>Logo,</p>
+<p><span class="math display">\[
+E(X) = \frac{\varphi_X'(0)}{i} = \frac{i\mu}{i} = \mu
+\]</span></p>
+</section>
+<section id="função-característica-20" class="slide level2">
+<h2>Função Característica</h2>
+<p>Derivamos novamente:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\varphi_X''(t)
+&amp;= \frac{d}{dt}\big[(i\mu - \sigma^2 t)\varphi_X(t)\big] \\
+&amp;= -\sigma^2 \varphi_X(t)
+   + (i\mu - \sigma^2 t)\varphi_X'(t) \\
+&amp;= -\sigma^2 \varphi_X(t)
+   + (i\mu - \sigma^2 t)^2 \varphi_X(t)
+\end{aligned}
+\]</span></p>
+<p>Em <span class="math inline">\(t=0\)</span>: <span class="math display">\[
+\varphi_X(0) = 1,\qquad
+\varphi_X''(0) = -\sigma^2 + (i\mu)^2
+              = -\sigma^2 - \mu^2
+\]</span></p>
+<p>Portanto, <span class="math display">\[
+E(X^2) = -\varphi_X''(0)
+       = \sigma^2 + \mu^2
+\]</span></p>
+</section>
+<section id="função-característica-21" class="slide level2">
+<h2>Função Característica</h2>
+<p>De forma que,</p>
+<p><span class="math display">\[
+\operatorname{Var}(X)
+= E(X^2) - [E(X)]^2
+= (\sigma^2 + \mu^2) - \mu^2
+= \sigma^2
+\]</span></p>
+
+
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
