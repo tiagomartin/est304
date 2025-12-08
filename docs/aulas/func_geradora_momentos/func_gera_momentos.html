@@ -498,14 +498,13 @@ E(X^k) = \left.\frac{d^k}{dt^k} M_X(t)\right|_{t=0},
 </section>
 <section id="função-geradora-de-momentos-8" class="slide level2">
 <h2>Função Geradora de Momentos</h2>
-<div id="tip-FGM">
-<div id="tip-FGM" class="callout callout-tip callout-titled callout-style-default">
+<div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Tip&nbsp;1: Dica Importante!</strong></p>
+<p><strong>Dica Importante!</strong></p>
 </div>
 <div class="callout-content">
 <p>Para qualquer variável aleatória <span class="math inline">\(X\)</span>:</p>
@@ -513,7 +512,6 @@ E(X^k) = \left.\frac{d^k}{dt^k} M_X(t)\right|_{t=0},
 M_X(0) = E(e^{0X}) = 1.
 \]</span></p>
 <p>Isso sempre deve ocorrer. Use esse fato para verificar se sua FGM está correta.</p>
-</div>
 </div>
 </div>
 </div>
@@ -555,7 +553,7 @@ M_X(t)
 <p><span class="math display">\[
 \boxed{M_X(t) = 1 - p + p e^{t}, \quad t \in \mathbb{R}}
 \]</span></p>
-<p>Veja que pela <a href="#/tip-FGM" class="quarto-xref">Tip&nbsp;1</a> <span class="math inline">\(M_X(0) = 1 - p + p e^{0} = 1 - p + p \times 1 = 1\)</span>. Assim,</p>
+<p>Veja que <span class="math inline">\(M_X(0) = 1 - p + p e^{0} = 1 - p + p \times 1 = 1\)</span>. Assim,</p>
 <ul>
 <li>Primeira derivada de <span class="math inline">\(M_X(t)\)</span>:</li>
 </ul>
@@ -634,7 +632,7 @@ M_X(t) = (1-p + p e^{t})^n
 <p><span class="math display">\[
 \boxed{M_X(t) = (1-p + p e^{t})^n,\quad t\in\mathbb{R}}
 \]</span></p>
-<p>Veja que pela <a href="#/tip-FGM" class="quarto-xref">Tip&nbsp;1</a> <span class="math inline">\(M_X(0) = (1-p + p e^{0})^n = (1 - p + p \times 1)^n = 1^n = 1\)</span>.</p>
+<p>Veja que, <span class="math inline">\(M_X(0) = (1-p + p e^{0})^n = (1 - p + p \times 1)^n = 1^n = 1\)</span>.</p>
 </section>
 <section id="função-geradora-de-momentos-15" class="slide level2">
 <h2>Função Geradora de Momentos</h2>
@@ -766,7 +764,7 @@ M_X(t) = \frac{p e^t}{1 - (1-p)e^{t}}
 <p><span class="math display">\[
 \boxed{M_X(t) = \frac{p e^{t}}{1-(1-p)e^{t}}, \quad \text{para } t &lt; \ln\Bigg(\frac{1}{1-p}\Bigg)}
 \]</span></p>
-<p>Note que, pela <a href="#/tip-FGM" class="quarto-xref">Tip&nbsp;1</a>, <span class="math inline">\(M_X(0) = \dfrac{p e^{0}}{1-(1-p)e^{0}} = \dfrac{p}{1-(1-p)} =  \dfrac{p}{p} =1\)</span></p>
+<p>Note que, <span class="math inline">\(M_X(0) = \dfrac{p e^{0}}{1-(1-p)e^{0}} = \dfrac{p}{1-(1-p)} =  \dfrac{p}{p} =1\)</span></p>
 <div class="fragment">
 <p>Sabemos que:</p>
 <p><span class="math display">\[
@@ -882,7 +880,7 @@ M_X(t) = e^{-\lambda} e^{\lambda e^t}
 <p>Portanto, a fgm de <span class="math inline">\(X\)</span> é <span class="math display">\[
 \boxed{M_X(t) = \exp\big(\lambda(e^t - 1)\big)}
 \]</span></p>
-<p>Note que, pela <a href="#/tip-FGM" class="quarto-xref">Tip&nbsp;1</a>, <span class="math inline">\(M_X(0) = \exp\big(\lambda(e^0 - 1)\big) = \exp\big(0\big) =  1\)</span></p>
+<p>Note que, <span class="math inline">\(M_X(0) = \exp\big(\lambda(e^0 - 1)\big) = \exp\big(0\big) =  1\)</span></p>
 <div class="fragment">
 <p>Vamos calcular as derivadas de ordem primeira e ordem segunda para calcular os respectivos momentos:</p>
 <p>Pela regra da cadeia,</p>
@@ -971,13 +969,13 @@ M_X(t) = E(e^{tX}) = \int_0^\infty e^{tx}\,\lambda e^{-\lambda x}\,dx = \int_0^\
 <p><span class="math display">\[
 \boxed{M_X(t) = \frac{\lambda}{\lambda - t}, \qquad t &lt; \lambda}
 \]</span></p>
-<p>Note que, pela <a href="#/tip-FGM" class="quarto-xref">Tip&nbsp;1</a>, $ M_X(0) = = 1$</p>
+<p>Note que, <span class="math inline">\(M_X(0) = \frac{\lambda}{\lambda - 0} =  1\)</span></p>
 </section>
 <section id="função-geradora-de-momentos-34" class="slide level2">
 <h2>Função Geradora de Momentos</h2>
 <p>Derivando,</p>
 <p><span class="math display">\[
-M_X'(t) = \frac{\lambda}{(\lambda - t)^2}
+  M_X'(t) = \frac{\lambda}{(\lambda - t)^2}
 \]</span></p>
 <p>Portanto,</p>
 <p><span class="math display">\[
@@ -1022,12 +1020,12 @@ E(X^2) = M_X''(0) = \frac{2\lambda}{\lambda^3} = \frac{2}{\lambda^2}
 <div class="fragment">
 <p><strong>Solução:</strong> Seja <span class="math inline">\(X \sim Gamma(\alpha, \lambda)\)</span>, cuja função densidade é</p>
 <p><span class="math display">\[
-f(x) = \frac{\lambda^\alpha}{\Gamma(\alpha)}x^{\alpha-1}e^{-\lambda x},
+  f(x) = \frac{\lambda^\alpha}{\Gamma(\alpha)}x^{\alpha-1}e^{-\lambda x},
 \qquad x&gt;0
 \]</span></p>
 <p>A função geradora de momentos é</p>
 <p><span class="math display">\[
-M_X(t)
+  M_X(t)
 = \int_0^\infty e^{tx}
 \frac{\lambda^\alpha}{\Gamma(\alpha)}x^{\alpha-1}e^{-\lambda x}\,dx
 = \frac{\lambda^\alpha}{\Gamma(\alpha)}
@@ -1054,7 +1052,7 @@ M_X(t)
 \cdot
 \frac{\Gamma(\alpha)}{(\lambda - t)^\alpha}
 = \left(\frac{\lambda}{\lambda - t}\right)^\alpha,
-\qquad t&lt;\lambda
+\qquad t &lt; \lambda
 \]</span></p>
 </section>
 <section id="função-geradora-de-momentos-38" class="slide level2">
@@ -1090,7 +1088,8 @@ M_X(t)
 </section>
 <section id="função-geradora-de-momentos-39" class="slide level2">
 <h2>Função Geradora de Momentos</h2>
-<p>Vamos usar a técnica de completar quadrados no expoente, <span class="math display">\[
+<p>Vamos usar a técnica de completar quadrados no expoente,</p>
+<p><span class="math display">\[
 \begin{aligned}
 tx - \frac{x^2}{2}
 &amp;= -\frac{1}{2}\big(x^2 - 2tx\big) = -\frac{1}{2}\big(x^2 - 2tx + t^2 - t^2\big) \\
@@ -1227,7 +1226,7 @@ M_Y(t) = M_X(ct) = \left(\frac{\lambda}{\lambda - ct}\right)^{\alpha},
 M_Y(t)
 = \left(\frac{\lambda}{\lambda - ct}\right)^{\alpha}
 = \left(\frac{\lambda/c}{(\lambda/c) - t}\right)^{\alpha},
-\qquad t &lt; \frac{\lambda}{c}.
+\qquad t &lt; \frac{\lambda}{c}
 \]</span></p>
 <p>Veja que trata-se da função geradora de momentos de uma variável aleatória com distribuição <span class="math inline">\(Gamma(\alpha,\lambda/c)\)</span>. Logo, <span class="math inline">\(Y \sim Gamma(\alpha,\lambda/c)\)</span>.</p>
 </section>

@@ -185,7 +185,7 @@
     "href": "aulas.html",
     "title": "Aulas",
     "section": "",
-    "text": "Esta página contém aulas que serão apresentadas ao longo do semestre. Você pode baixar as aulas em uma versão PDF.\n\n\n Outras Distribuições Contínuas \n Ver slides PDF \n\n\n Transformação de Variáveis Unidimensionais \n Ver slides PDF \n\n\n Função Geradora de Momentos \n\n\n\n\n Integral Dupla e Tripla \n\n\n\n\n Vetores Aleatórios",
+    "text": "Esta página contém aulas que serão apresentadas ao longo do semestre. Você pode baixar as aulas em uma versão PDF.\n\n\n Outras Distribuições Contínuas \n Ver slides PDF \n\n\n Transformação de Variáveis Unidimensionais \n Ver slides PDF \n\n\n Função Geradora de Momentos \n Ver slides PDF \n\n\n Integral Dupla e Tripla \n\n\n\n\n Vetores Aleatórios",
     "crumbs": [
       "Aulas"
     ]
@@ -1168,7 +1168,7 @@
     "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-8",
     "title": "Função Geradora de Momentos",
     "section": "Função Geradora de Momentos",
-    "text": "Função Geradora de Momentos\n\n\n\n\n\n\n\nTip 1: Dica Importante!\n\n\nPara qualquer variável aleatória \\(X\\):\n\\[\nM_X(0) = E(e^{0X}) = 1.\n\\]\nIsso sempre deve ocorrer. Use esse fato para verificar se sua FGM está correta."
+    "text": "Função Geradora de Momentos\n\n\n\n\n\n\nDica Importante!\n\n\nPara qualquer variável aleatória \\(X\\):\n\\[\nM_X(0) = E(e^{0X}) = 1.\n\\]\nIsso sempre deve ocorrer. Use esse fato para verificar se sua FGM está correta."
   },
   {
     "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-9",
@@ -1182,7 +1182,7 @@
     "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-10",
     "title": "Função Geradora de Momentos",
     "section": "Função Geradora de Momentos",
-    "text": "Função Geradora de Momentos\nPortanto,\n\\[\n\\boxed{M_X(t) = 1 - p + p e^{t}, \\quad t \\in \\mathbb{R}}\n\\]\nVeja que pela Tip 1 \\(M_X(0) = 1 - p + p e^{0} = 1 - p + p \\times 1 = 1\\). Assim,\n\nPrimeira derivada de \\(M_X(t)\\):\n\n\\[\nM_X'(t) = \\frac{d}{dt}\\big(1 - p + p e^{t}\\big)\n= p e^{t}\n\\]\nAvaliada em \\(t = 0\\), temos \\(E(X) = M_X'(0) = p e^{0} = p\\)"
+    "text": "Função Geradora de Momentos\nPortanto,\n\\[\n\\boxed{M_X(t) = 1 - p + p e^{t}, \\quad t \\in \\mathbb{R}}\n\\]\nVeja que \\(M_X(0) = 1 - p + p e^{0} = 1 - p + p \\times 1 = 1\\). Assim,\n\nPrimeira derivada de \\(M_X(t)\\):\n\n\\[\nM_X'(t) = \\frac{d}{dt}\\big(1 - p + p e^{t}\\big)\n= p e^{t}\n\\]\nAvaliada em \\(t = 0\\), temos \\(E(X) = M_X'(0) = p e^{0} = p\\)"
   },
   {
     "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-11",
@@ -1210,7 +1210,7 @@
     "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-14",
     "title": "Função Geradora de Momentos",
     "section": "Função Geradora de Momentos",
-    "text": "Função Geradora de Momentos\nAssim, tomando \\(a = p e^{t}\\) e \\(b = 1-p\\):\n\\[\nM_X(t) = (1-p + p e^{t})^n\n\\]\nPortanto,\n\\[\n\\boxed{M_X(t) = (1-p + p e^{t})^n,\\quad t\\in\\mathbb{R}}\n\\]\nVeja que pela Tip 1 \\(M_X(0) = (1-p + p e^{0})^n = (1 - p + p \\times 1)^n = 1^n = 1\\)."
+    "text": "Função Geradora de Momentos\nAssim, tomando \\(a = p e^{t}\\) e \\(b = 1-p\\):\n\\[\nM_X(t) = (1-p + p e^{t})^n\n\\]\nPortanto,\n\\[\n\\boxed{M_X(t) = (1-p + p e^{t})^n,\\quad t\\in\\mathbb{R}}\n\\]\nVeja que, \\(M_X(0) = (1-p + p e^{0})^n = (1 - p + p \\times 1)^n = 1^n = 1\\)."
   },
   {
     "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-15",
@@ -1595,7 +1595,7 @@
     "href": "cronograma.html",
     "title": "Cronograma da Disciplina",
     "section": "",
-    "text": "Esta página contém um esboço dos tópicos, conteúdos e tarefas para o semestre. Este cronograma será atualizado conforme o semestre avança.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSemana\nData\nTópico\nArtigo\nSlides\nEC\nLE\nScript\nMC\nProjeto\n\n\n\n\n6\nTer, 11/11\nOutras Distribuições Contínuas\n\n\n\n\n\n\n\n\n\n\nQui, 13/11\nOutras Distribuições Contínuas\n\n\n\n\n\n\n\n\n\n7\nTer, 18/11\nNão haverá aula\n\n\n\n\n\n\n\n\n\n\nQui, 20/11\nFeriado: não haverá aula\n\n\n\n\n\n\n\n\n\n8\nTer, 25/11\nOutras Distribuições Contínuas\n\n\n\n\n\n\n\n\n\n\nQui, 27/11\nTransformação de Variáveis Aleatórias\n\n\n\n\n\n\n\n\n\n9\nTer, 02/12\nTransformação de Variáveis Aleatórias\n\n\n\n\n\n\n\n\n\n\nQui, 04/12\nTransformação de Variáveis Aleatórias",
+    "text": "Esta página contém um esboço dos tópicos, conteúdos e tarefas para o semestre. Este cronograma será atualizado conforme o semestre avança.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSemana\nData\nTópico\nArtigo\nSlides\nEC\nLE\nScript\nMC\nProjeto\n\n\n\n\n6\nTer, 11/11\nOutras Distribuições Contínuas\n\n\n\n\n\n\n\n\n\n\nQui, 13/11\nOutras Distribuições Contínuas\n\n\n\n\n\n\n\n\n\n7\nTer, 18/11\nNão haverá aula\n\n\n\n\n\n\n\n\n\n\nQui, 20/11\nFeriado: não haverá aula\n\n\n\n\n\n\n\n\n\n8\nTer, 25/11\nOutras Distribuições Contínuas\n\n\n\n\n\n\n\n\n\n\nQui, 27/11\nTransformação de Variáveis Aleatórias\n\n\n\n\n\n\n\n\n\n9\nTer, 02/12\nTransformação de Variáveis Aleatórias\n\n\n\n\n\n\n\n\n\n\nQui, 04/12\nTransformação de Variáveis Aleatórias\n\n\n\n\n\n\n\n\n\n10\nTer, 09/12\nFunção Geradora de Momentos\n\n\n\n\n\n\n\n\n\n\nQui, 11/12\nFunção Geradora de Momentos",
     "crumbs": [
       "Cronograma da Disciplina"
     ]
@@ -1668,7 +1668,7 @@
     "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-22",
     "title": "Função Geradora de Momentos",
     "section": "Função Geradora de Momentos",
-    "text": "Função Geradora de Momentos\nPortanto,\n\\[\n\\boxed{M_X(t) = \\frac{p e^{t}}{1-(1-p)e^{t}}, \\quad \\text{para } t &lt; \\ln\\Bigg(\\frac{1}{1-p}\\Bigg)}\n\\]\nNote que, pela Tip 1, \\(M_X(0) = \\dfrac{p e^{0}}{1-(1-p)e^{0}} = \\dfrac{p}{1-(1-p)} =  \\dfrac{p}{p} =1\\)\n\nSabemos que:\n\\[\nE(X) = M_X'(0)\n\\]"
+    "text": "Função Geradora de Momentos\nPortanto,\n\\[\n\\boxed{M_X(t) = \\frac{p e^{t}}{1-(1-p)e^{t}}, \\quad \\text{para } t &lt; \\ln\\Bigg(\\frac{1}{1-p}\\Bigg)}\n\\]\nNote que, \\(M_X(0) = \\dfrac{p e^{0}}{1-(1-p)e^{0}} = \\dfrac{p}{1-(1-p)} =  \\dfrac{p}{p} =1\\)\n\nSabemos que:\n\\[\nE(X) = M_X'(0)\n\\]"
   },
   {
     "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-23",
@@ -1708,21 +1708,21 @@
   {
     "objectID": "programacao/semana-9.html",
     "href": "programacao/semana-9.html",
-    "title": "Semana 08",
+    "title": "Semana 09",
     "section": "",
     "text": "Transformação de variáveis Aleatórias \n\n\nVer slides PDF"
   },
   {
     "objectID": "programacao/semana-9.html#slides",
     "href": "programacao/semana-9.html#slides",
-    "title": "Semana 08",
+    "title": "Semana 09",
     "section": "",
     "text": "Transformação de variáveis Aleatórias \n\n\nVer slides PDF"
   },
   {
     "objectID": "programacao/semana-9.html#entrega-lista-de-exercícios-02",
     "href": "programacao/semana-9.html#entrega-lista-de-exercícios-02",
-    "title": "Semana 08",
+    "title": "Semana 09",
     "section": "Entrega lista de exercícios 02",
     "text": "Entrega lista de exercícios 02\n\n\n\n\n\n\nFique Atento!\n\n\n\n Lista de exercícios 02\nEntrega na sala de aula!\n\nData de entrega:\n\n18 de dezembro de 2025"
   },
@@ -1745,7 +1745,7 @@
     "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-29",
     "title": "Função Geradora de Momentos",
     "section": "Função Geradora de Momentos",
-    "text": "Função Geradora de Momentos\nPortanto, a fgm de \\(X\\) é \\[\n\\boxed{M_X(t) = \\exp\\big(\\lambda(e^t - 1)\\big)}\n\\]\nNote que, pela Tip 1, \\(M_X(0) = \\exp\\big(\\lambda(e^0 - 1)\\big) = \\exp\\big(0\\big) =  1\\)\n\nVamos calcular as derivadas de ordem primeira e ordem segunda para calcular os respectivos momentos:\nPela regra da cadeia,\n\\[\nM_X'(t) = \\exp\\big(\\lambda(e^t - 1)\\big)\\cdot \\lambda e^t\n        = \\lambda e^t\\, M_X(t)\n\\]"
+    "text": "Função Geradora de Momentos\nPortanto, a fgm de \\(X\\) é \\[\n\\boxed{M_X(t) = \\exp\\big(\\lambda(e^t - 1)\\big)}\n\\]\nNote que, \\(M_X(0) = \\exp\\big(\\lambda(e^0 - 1)\\big) = \\exp\\big(0\\big) =  1\\)\n\nVamos calcular as derivadas de ordem primeira e ordem segunda para calcular os respectivos momentos:\nPela regra da cadeia,\n\\[\nM_X'(t) = \\exp\\big(\\lambda(e^t - 1)\\big)\\cdot \\lambda e^t\n        = \\lambda e^t\\, M_X(t)\n\\]"
   },
   {
     "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-30",
@@ -1773,14 +1773,14 @@
     "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-33",
     "title": "Função Geradora de Momentos",
     "section": "Função Geradora de Momentos",
-    "text": "Função Geradora de Momentos\nAssim, como\n\\[\n\\int_0^\\infty \\lambda e^{-(\\lambda - t)x} =  \\lambda \\frac{e^{-(\\lambda - t)x}}{-(\\lambda - t)} \\Bigg|_0^{\\infty} = \\frac{\\lambda}{\\lambda - t}, \\,\\,\\,\\, \\lambda - t &gt; 0\n\\]\nLogo,\n\\[\n\\boxed{M_X(t) = \\frac{\\lambda}{\\lambda - t}, \\qquad t &lt; \\lambda}\n\\]\nNote que, pela Tip 1, $ M_X(0) = = 1$"
+    "text": "Função Geradora de Momentos\nAssim, como\n\\[\n\\int_0^\\infty \\lambda e^{-(\\lambda - t)x} =  \\lambda \\frac{e^{-(\\lambda - t)x}}{-(\\lambda - t)} \\Bigg|_0^{\\infty} = \\frac{\\lambda}{\\lambda - t}, \\,\\,\\,\\, \\lambda - t &gt; 0\n\\]\nLogo,\n\\[\n\\boxed{M_X(t) = \\frac{\\lambda}{\\lambda - t}, \\qquad t &lt; \\lambda}\n\\]\nNote que, \\(M_X(0) = \\frac{\\lambda}{\\lambda - 0} =  1\\)"
   },
   {
     "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-34",
     "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-34",
     "title": "Função Geradora de Momentos",
     "section": "Função Geradora de Momentos",
-    "text": "Função Geradora de Momentos\nDerivando,\n\\[\nM_X'(t) = \\frac{\\lambda}{(\\lambda - t)^2}\n\\]\nPortanto,\n\\[\nE(X) = M_X'(0) = \\frac{\\lambda}{\\lambda^2} = \\frac{1}{\\lambda}\n\\]"
+    "text": "Função Geradora de Momentos\nDerivando,\n\\[\n  M_X'(t) = \\frac{\\lambda}{(\\lambda - t)^2}\n\\]\nPortanto,\n\\[\nE(X) = M_X'(0) = \\frac{\\lambda}{\\lambda^2} = \\frac{1}{\\lambda}\n\\]"
   },
   {
     "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-35",
@@ -1794,14 +1794,14 @@
     "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-36",
     "title": "Função Geradora de Momentos",
     "section": "Função Geradora de Momentos",
-    "text": "Função Geradora de Momentos\n\n\n\n\n\n\n\nExemplo 07: Distribuição Gamma\n\n\nSeja \\(X \\sim Gamma(\\alpha, \\lambda)\\). Encontre sua função geradora de momentos.\n\n\n\n\n\nSolução: Seja \\(X \\sim Gamma(\\alpha, \\lambda)\\), cuja função densidade é\n\\[\nf(x) = \\frac{\\lambda^\\alpha}{\\Gamma(\\alpha)}x^{\\alpha-1}e^{-\\lambda x},\n\\qquad x&gt;0\n\\]\nA função geradora de momentos é\n\\[\nM_X(t)\n= \\int_0^\\infty e^{tx}\n\\frac{\\lambda^\\alpha}{\\Gamma(\\alpha)}x^{\\alpha-1}e^{-\\lambda x}\\,dx\n= \\frac{\\lambda^\\alpha}{\\Gamma(\\alpha)}\n\\int_0^\\infty x^{\\alpha-1}e^{-(\\lambda - t)x}\\,dx\n\\]"
+    "text": "Função Geradora de Momentos\n\n\n\n\n\n\n\nExemplo 07: Distribuição Gamma\n\n\nSeja \\(X \\sim Gamma(\\alpha, \\lambda)\\). Encontre sua função geradora de momentos.\n\n\n\n\n\nSolução: Seja \\(X \\sim Gamma(\\alpha, \\lambda)\\), cuja função densidade é\n\\[\n  f(x) = \\frac{\\lambda^\\alpha}{\\Gamma(\\alpha)}x^{\\alpha-1}e^{-\\lambda x},\n\\qquad x&gt;0\n\\]\nA função geradora de momentos é\n\\[\n  M_X(t)\n= \\int_0^\\infty e^{tx}\n\\frac{\\lambda^\\alpha}{\\Gamma(\\alpha)}x^{\\alpha-1}e^{-\\lambda x}\\,dx\n= \\frac{\\lambda^\\alpha}{\\Gamma(\\alpha)}\n\\int_0^\\infty x^{\\alpha-1}e^{-(\\lambda - t)x}\\,dx\n\\]"
   },
   {
     "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-37",
     "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-37",
     "title": "Função Geradora de Momentos",
     "section": "Função Geradora de Momentos",
-    "text": "Função Geradora de Momentos\nUsamos agora o resultado da função Gamma:\n\\[\n\\int_0^\\infty x^{\\alpha-1}e^{-bx}\\,dx\n= \\frac{\\Gamma(\\alpha)}{b^\\alpha}, \\qquad b&gt;0\n\\]\nAqui, \\(b = \\lambda - t\\) (precisamos de \\(\\lambda - t &gt; 0\\), isto é, \\(t&lt;\\lambda\\)). Logo,\n\\[\n\\int_0^\\infty x^{\\alpha-1}e^{-(\\lambda - t)x}\\,dx\n= \\frac{\\Gamma(\\alpha)}{(\\lambda - t)^\\alpha}\n\\]\nPortanto,\n\\[\nM_X(t)\n= \\frac{\\lambda^\\alpha}{\\Gamma(\\alpha)}\n\\cdot\n\\frac{\\Gamma(\\alpha)}{(\\lambda - t)^\\alpha}\n= \\left(\\frac{\\lambda}{\\lambda - t}\\right)^\\alpha,\n\\qquad t&lt;\\lambda\n\\]"
+    "text": "Função Geradora de Momentos\nUsamos agora o resultado da função Gamma:\n\\[\n\\int_0^\\infty x^{\\alpha-1}e^{-bx}\\,dx\n= \\frac{\\Gamma(\\alpha)}{b^\\alpha}, \\qquad b&gt;0\n\\]\nAqui, \\(b = \\lambda - t\\) (precisamos de \\(\\lambda - t &gt; 0\\), isto é, \\(t&lt;\\lambda\\)). Logo,\n\\[\n\\int_0^\\infty x^{\\alpha-1}e^{-(\\lambda - t)x}\\,dx\n= \\frac{\\Gamma(\\alpha)}{(\\lambda - t)^\\alpha}\n\\]\nPortanto,\n\\[\nM_X(t)\n= \\frac{\\lambda^\\alpha}{\\Gamma(\\alpha)}\n\\cdot\n\\frac{\\Gamma(\\alpha)}{(\\lambda - t)^\\alpha}\n= \\left(\\frac{\\lambda}{\\lambda - t}\\right)^\\alpha,\n\\qquad t &lt; \\lambda\n\\]"
   },
   {
     "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-38",
@@ -1815,7 +1815,7 @@
     "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-39",
     "title": "Função Geradora de Momentos",
     "section": "Função Geradora de Momentos",
-    "text": "Função Geradora de Momentos\nVamos usar a técnica de completar quadrados no expoente, \\[\n\\begin{aligned}\ntx - \\frac{x^2}{2}\n&= -\\frac{1}{2}\\big(x^2 - 2tx\\big) = -\\frac{1}{2}\\big(x^2 - 2tx + t^2 - t^2\\big) \\\\\n&= -\\frac{1}{2}\\big[(x - t)^2 - t^2\\big] = -\\frac{(x - t)^2}{2} + \\frac{t^2}{2}\n\\end{aligned}\n\\]\nAssim,\n\\[\\small\nM_X(t)\n= \\frac{1}{\\sqrt{2\\pi}}\\int_{-\\infty}^{\\infty}\n\\exp\\!\\left(-\\frac{(x - t)^2}{2} + \\frac{t^2}{2}\\right)\\,dx\n= \\exp\\!\\left(\\frac{t^2}{2}\\right)\n\\frac{1}{\\sqrt{2\\pi}}\\int_{-\\infty}^{\\infty}\n\\exp\\!\\left(-\\frac{(x - t)^2}{2}\\right)\\,dx\n\\]"
+    "text": "Função Geradora de Momentos\nVamos usar a técnica de completar quadrados no expoente,\n\\[\n\\begin{aligned}\ntx - \\frac{x^2}{2}\n&= -\\frac{1}{2}\\big(x^2 - 2tx\\big) = -\\frac{1}{2}\\big(x^2 - 2tx + t^2 - t^2\\big) \\\\\n&= -\\frac{1}{2}\\big[(x - t)^2 - t^2\\big] = -\\frac{(x - t)^2}{2} + \\frac{t^2}{2}\n\\end{aligned}\n\\]\nAssim,\n\\[\\small\nM_X(t)\n= \\frac{1}{\\sqrt{2\\pi}}\\int_{-\\infty}^{\\infty}\n\\exp\\!\\left(-\\frac{(x - t)^2}{2} + \\frac{t^2}{2}\\right)\\,dx\n= \\exp\\!\\left(\\frac{t^2}{2}\\right)\n\\frac{1}{\\sqrt{2\\pi}}\\int_{-\\infty}^{\\infty}\n\\exp\\!\\left(-\\frac{(x - t)^2}{2}\\right)\\,dx\n\\]"
   },
   {
     "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-40",
@@ -1864,7 +1864,7 @@
     "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-46",
     "title": "Função Geradora de Momentos",
     "section": "Função Geradora de Momentos",
-    "text": "Função Geradora de Momentos\nou seja,\n\\[\nM_Y(t)\n= \\left(\\frac{\\lambda}{\\lambda - ct}\\right)^{\\alpha}\n= \\left(\\frac{\\lambda/c}{(\\lambda/c) - t}\\right)^{\\alpha},\n\\qquad t &lt; \\frac{\\lambda}{c}.\n\\]\nVeja que trata-se da função geradora de momentos de uma variável aleatória com distribuição \\(Gamma(\\alpha,\\lambda/c)\\). Logo, \\(Y \\sim Gamma(\\alpha,\\lambda/c)\\)."
+    "text": "Função Geradora de Momentos\nou seja,\n\\[\nM_Y(t)\n= \\left(\\frac{\\lambda}{\\lambda - ct}\\right)^{\\alpha}\n= \\left(\\frac{\\lambda/c}{(\\lambda/c) - t}\\right)^{\\alpha},\n\\qquad t &lt; \\frac{\\lambda}{c}\n\\]\nVeja que trata-se da função geradora de momentos de uma variável aleatória com distribuição \\(Gamma(\\alpha,\\lambda/c)\\). Logo, \\(Y \\sim Gamma(\\alpha,\\lambda/c)\\)."
   },
   {
     "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-característica",
@@ -2040,5 +2040,19 @@
     "title": "Função Geradora de Momentos",
     "section": "Função Característica",
     "text": "Função Característica\nDe forma que,\n\\[\n\\operatorname{Var}(X)\n= E(X^2) - [E(X)]^2\n= (\\sigma^2 + \\mu^2) - \\mu^2\n= \\sigma^2\n\\]"
+  },
+  {
+    "objectID": "programacao/semana-10.html",
+    "href": "programacao/semana-10.html",
+    "title": "Semana 10",
+    "section": "",
+    "text": "Função Geradora de Momentos \n\n\nVer slides PDF"
+  },
+  {
+    "objectID": "programacao/semana-10.html#slides",
+    "href": "programacao/semana-10.html#slides",
+    "title": "Semana 10",
+    "section": "",
+    "text": "Função Geradora de Momentos \n\n\nVer slides PDF"
   }
 ]

@@ -447,7 +447,7 @@ o que mostra que o $k$-ésimo momento de $X$ é igual à derivada de ordem $k$ d
 
 
 
-::: {#tip-FGM .callout-tip}
+::: {.callout-tip}
 ## Dica Importante!
 
 Para qualquer variável aleatória $X$:
@@ -492,7 +492,7 @@ $$
 \boxed{M_X(t) = 1 - p + p e^{t}, \quad t \in \mathbb{R}}
 $$
 
-Veja que pela @tip-FGM $M_X(0) = 1 - p + p e^{0} = 1 - p + p \times 1 = 1$.  Assim, 
+Veja que $M_X(0) = 1 - p + p e^{0} = 1 - p + p \times 1 = 1$.  Assim, 
 
 
 - Primeira derivada de $M_X(t)$:
@@ -588,7 +588,7 @@ $$
 $$
 
 
-Veja que pela @tip-FGM $M_X(0) = (1-p + p e^{0})^n = (1 - p + p \times 1)^n = 1^n = 1$.   
+Veja que, $M_X(0) = (1-p + p e^{0})^n = (1 - p + p \times 1)^n = 1^n = 1$.   
 
 ## Função Geradora de Momentos
 
@@ -750,7 +750,7 @@ $$
 
 
 
-Note que, pela @tip-FGM, $M_X(0) = \dfrac{p e^{0}}{1-(1-p)e^{0}} = \dfrac{p}{1-(1-p)} =  \dfrac{p}{p} =1$
+Note que, $M_X(0) = \dfrac{p e^{0}}{1-(1-p)e^{0}} = \dfrac{p}{1-(1-p)} =  \dfrac{p}{p} =1$
 
 
 . . .
@@ -901,7 +901,7 @@ $$
 \boxed{M_X(t) = \exp\big(\lambda(e^t - 1)\big)}
 $$
 
-Note que, pela @tip-FGM, $M_X(0) = \exp\big(\lambda(e^0 - 1)\big) = \exp\big(0\big) =  1$
+Note que, $M_X(0) = \exp\big(\lambda(e^0 - 1)\big) = \exp\big(0\big) =  1$
 
 
 . . . 
@@ -1016,7 +1016,8 @@ $$
 $$
 
 
-Note que, pela @tip-FGM, $ M_X(0) = \frac{\lambda}{\lambda - 0} =  1$
+Note que, $M_X(0) = \frac{\lambda}{\lambda - 0} =  1$
+
 
 
 ## Função Geradora de Momentos
@@ -1025,7 +1026,7 @@ Note que, pela @tip-FGM, $ M_X(0) = \frac{\lambda}{\lambda - 0} =  1$
 Derivando,
 
 $$
-M_X'(t) = \frac{\lambda}{(\lambda - t)^2}
+  M_X'(t) = \frac{\lambda}{(\lambda - t)^2}
 $$
 
 Portanto,
@@ -1033,7 +1034,6 @@ Portanto,
 $$
 E(X) = M_X'(0) = \frac{\lambda}{\lambda^2} = \frac{1}{\lambda}
 $$
-
 
 ## Função Geradora de Momentos
 
@@ -1062,31 +1062,30 @@ $$
 = \frac{1}{\lambda^2}
 $$
 
-
-
+    
 
 ## Função Geradora de Momentos
 
 ::: {.callout-note title="Exemplo 07: Distribuição Gamma"}
 Seja $X \sim Gamma(\alpha, \lambda)$. Encontre sua função geradora de momentos.
 :::
-
-
-. . . 
+  
+  
+  . . . 
 
 **Solução:** Seja $X \sim Gamma(\alpha, \lambda)$, cuja função densidade é
 
 $$
-f(x) = \frac{\lambda^\alpha}{\Gamma(\alpha)}x^{\alpha-1}e^{-\lambda x},
+  f(x) = \frac{\lambda^\alpha}{\Gamma(\alpha)}x^{\alpha-1}e^{-\lambda x},
 \qquad x>0
 $$
-
-
-A função geradora de momentos é
+  
+  
+  A função geradora de momentos é
 
 
 $$
-M_X(t)
+  M_X(t)
 = \int_0^\infty e^{tx}
 \frac{\lambda^\alpha}{\Gamma(\alpha)}x^{\alpha-1}e^{-\lambda x}\,dx
 = \frac{\lambda^\alpha}{\Gamma(\alpha)}
@@ -1122,7 +1121,7 @@ M_X(t)
 \cdot
 \frac{\Gamma(\alpha)}{(\lambda - t)^\alpha}
 = \left(\frac{\lambda}{\lambda - t}\right)^\alpha,
-\qquad t<\lambda
+\qquad t < \lambda
 $$
 
 
@@ -1160,6 +1159,7 @@ $$
 ## Função Geradora de Momentos
 
 Vamos usar a técnica de completar quadrados no expoente,
+
 $$
 \begin{aligned}
 tx - \frac{x^2}{2}
@@ -1304,7 +1304,7 @@ $$
 M_Y(t)
 = \left(\frac{\lambda}{\lambda - ct}\right)^{\alpha}
 = \left(\frac{\lambda/c}{(\lambda/c) - t}\right)^{\alpha},
-\qquad t < \frac{\lambda}{c}.
+\qquad t < \frac{\lambda}{c}
 $$
 
 
@@ -1883,3 +1883,15 @@ $$
 = (\sigma^2 + \mu^2) - \mu^2
 = \sigma^2
 $$
+
+
+
+
+
+
+
+
+
+
+
+

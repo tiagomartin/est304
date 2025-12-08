@@ -174,8 +174,6 @@
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
-\newcounter{quartocallouttipno}
-\newcommand{\quartocallouttip}[1]{\refstepcounter{quartocallouttipno}\label{#1}}
 
 \usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
@@ -217,7 +215,7 @@ exemplo \textbf{coeficientes de assimetria} e \textbf{curtose}.
 
 \begin{frame}{Momentos}
 \phantomsection\label{momentos-1}
-\begin{tcolorbox}[enhanced jigsaw, opacityback=0, opacitybacktitle=0.6, toptitle=1mm, breakable, rightrule=.15mm, coltitle=black, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Definição 01: Momentos}, colframe=quarto-callout-note-color-frame, bottomtitle=1mm, leftrule=.75mm, titlerule=0mm, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, bottomrule=.15mm, toprule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Definição 01: Momentos}, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, leftrule=.75mm, bottomrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, titlerule=0mm, breakable, coltitle=black, left=2mm, opacitybacktitle=0.6]
 
 Seja \(X\) uma variável aleatória. Então, o \textbf{k-ésimo momento} de
 \(X\), denotado por \(\mu'_k\) é definido como,
@@ -284,7 +282,7 @@ Note que,
 
 \begin{frame}{Momentos}
 \phantomsection\label{momentos-4}
-\begin{tcolorbox}[enhanced jigsaw, opacityback=0, opacitybacktitle=0.6, toptitle=1mm, breakable, rightrule=.15mm, coltitle=black, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Exemplo 01: Momentos da distribuição Gamma}, colframe=quarto-callout-note-color-frame, bottomtitle=1mm, leftrule=.75mm, titlerule=0mm, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, bottomrule=.15mm, toprule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Exemplo 01: Momentos da distribuição Gamma}, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, leftrule=.75mm, bottomrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, titlerule=0mm, breakable, coltitle=black, left=2mm, opacitybacktitle=0.6]
 
 Encontre o \(k\)-ésimo momento de \(X \sim Gamma(\alpha, \lambda)\).
 
@@ -360,7 +358,7 @@ E(X^k)
 
 \begin{frame}{Momentos}
 \phantomsection\label{momentos-8}
-\begin{tcolorbox}[enhanced jigsaw, opacityback=0, opacitybacktitle=0.6, toptitle=1mm, breakable, rightrule=.15mm, coltitle=black, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Exemplo 02: Momentos da distribuição Weibull}, colframe=quarto-callout-note-color-frame, bottomtitle=1mm, leftrule=.75mm, titlerule=0mm, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, bottomrule=.15mm, toprule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Exemplo 02: Momentos da distribuição Weibull}, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, leftrule=.75mm, bottomrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, titlerule=0mm, breakable, coltitle=black, left=2mm, opacitybacktitle=0.6]
 
 Encontre o \(k\)-ésimo momento de \(X \sim Weibull(\alpha, \beta)\).
 
@@ -438,7 +436,7 @@ e^{-u}\,du = \alpha^k\,\,\Gamma\!\left(1+\frac{k}{\beta}\right)
 
 \begin{frame}{Função Geradora de Momentos}
 \phantomsection\label{funuxe7uxe3o-geradora-de-momentos}
-\begin{tcolorbox}[enhanced jigsaw, opacityback=0, opacitybacktitle=0.6, toptitle=1mm, breakable, rightrule=.15mm, coltitle=black, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Definição 02: Função Geradora de Momentos}, colframe=quarto-callout-note-color-frame, bottomtitle=1mm, leftrule=.75mm, titlerule=0mm, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, bottomrule=.15mm, toprule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Definição 02: Função Geradora de Momentos}, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, leftrule=.75mm, bottomrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, titlerule=0mm, breakable, coltitle=black, left=2mm, opacitybacktitle=0.6]
 
 Seja \(X\) uma variável aleatória qualquer. A \textbf{função geradora de
 momentos} (FGM) de \(X\), denotada por \(M_X\), é definida por
@@ -483,7 +481,7 @@ a variável for \textbf{discreta} ou \textbf{contínua}, isto é,
 
 \begin{frame}{Função Geradora de Momentos}
 \phantomsection\label{funuxe7uxe3o-geradora-de-momentos-2}
-\begin{tcolorbox}[enhanced jigsaw, opacityback=0, opacitybacktitle=0.6, toptitle=1mm, breakable, rightrule=.15mm, coltitle=black, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Teorema 01}, colframe=quarto-callout-note-color-frame, bottomtitle=1mm, leftrule=.75mm, titlerule=0mm, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, bottomrule=.15mm, toprule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Teorema 01}, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, leftrule=.75mm, bottomrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, titlerule=0mm, breakable, coltitle=black, left=2mm, opacitybacktitle=0.6]
 
 Suponha que a função geradora de momentos de \(X\) exista para
 \(|t| < \varepsilon\), \(\varepsilon > 0\). Então, \(E(X^k)\) existe
@@ -592,9 +590,7 @@ ordem \(k\) da função geradora de momentos avaliada em \(t=0\).
 
 \begin{frame}{Função Geradora de Momentos}
 \phantomsection\label{funuxe7uxe3o-geradora-de-momentos-8}
-\begin{tcolorbox}[enhanced jigsaw, opacityback=0, opacitybacktitle=0.6, toptitle=1mm, breakable, rightrule=.15mm, coltitle=black, colback=white, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip \ref*{tip-FGM}: Dica Importante!}, colframe=quarto-callout-tip-color-frame, bottomtitle=1mm, leftrule=.75mm, titlerule=0mm, arc=.35mm, colbacktitle=quarto-callout-tip-color!10!white, bottomrule=.15mm, toprule=.15mm, left=2mm]
-
-\quartocallouttip{tip-FGM} 
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, colback=white, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Dica Importante!}, rightrule=.15mm, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, leftrule=.75mm, bottomrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, titlerule=0mm, breakable, coltitle=black, left=2mm, opacitybacktitle=0.6]
 
 Para qualquer variável aleatória \(X\):
 
@@ -610,7 +606,7 @@ correta.
 
 \begin{frame}{Função Geradora de Momentos}
 \phantomsection\label{funuxe7uxe3o-geradora-de-momentos-9}
-\begin{tcolorbox}[enhanced jigsaw, opacityback=0, opacitybacktitle=0.6, toptitle=1mm, breakable, rightrule=.15mm, coltitle=black, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Exemplo 03: Distribuição de Bernoulli}, colframe=quarto-callout-note-color-frame, bottomtitle=1mm, leftrule=.75mm, titlerule=0mm, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, bottomrule=.15mm, toprule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Exemplo 03: Distribuição de Bernoulli}, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, leftrule=.75mm, bottomrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, titlerule=0mm, breakable, coltitle=black, left=2mm, opacitybacktitle=0.6]
 
 Seja \(X \sim Bernoulli(p)\). Encontre sua função geradora de momentos e
 a partir dela, encontre \(E(X)\) e \(\operatorname{Var}(X)\).
@@ -643,8 +639,7 @@ Portanto,
 \boxed{M_X(t) = 1 - p + p e^{t}, \quad t \in \mathbb{R}}
 \]
 
-Veja que pela Tip~\ref{tip-FGM}
-\(M_X(0) = 1 - p + p e^{0} = 1 - p + p \times 1 = 1\). Assim,
+Veja que \(M_X(0) = 1 - p + p e^{0} = 1 - p + p \times 1 = 1\). Assim,
 
 \begin{itemize}
 \tightlist
@@ -687,7 +682,7 @@ Assim,
 
 \begin{frame}{Função Geradora de Momentos}
 \phantomsection\label{funuxe7uxe3o-geradora-de-momentos-12}
-\begin{tcolorbox}[enhanced jigsaw, opacityback=0, opacitybacktitle=0.6, toptitle=1mm, breakable, rightrule=.15mm, coltitle=black, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Exemplo 03: Distribuição Binomial}, colframe=quarto-callout-note-color-frame, bottomtitle=1mm, leftrule=.75mm, titlerule=0mm, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, bottomrule=.15mm, toprule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Exemplo 03: Distribuição Binomial}, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, leftrule=.75mm, bottomrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, titlerule=0mm, breakable, coltitle=black, left=2mm, opacitybacktitle=0.6]
 
 Seja \(X \sim Binomial(n,p)\). Encontre sua função geradora de momentos
 e a partir dela, encontre \(E(X)\) e \(\operatorname{Var}(X)\).
@@ -740,7 +735,7 @@ Portanto,
 \boxed{M_X(t) = (1-p + p e^{t})^n,\quad t\in\mathbb{R}}
 \]
 
-Veja que pela Tip~\ref{tip-FGM}
+Veja que,
 \(M_X(0) = (1-p + p e^{0})^n = (1 - p + p \times 1)^n = 1^n = 1\).
 \end{frame}
 
@@ -831,7 +826,7 @@ De forma que,
 
 \begin{frame}{Função Geradora de Momentos}
 \phantomsection\label{funuxe7uxe3o-geradora-de-momentos-19}
-\begin{tcolorbox}[enhanced jigsaw, opacityback=0, opacitybacktitle=0.6, toptitle=1mm, breakable, rightrule=.15mm, coltitle=black, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Exemplo 04: Distribuição Geométrica}, colframe=quarto-callout-note-color-frame, bottomtitle=1mm, leftrule=.75mm, titlerule=0mm, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, bottomrule=.15mm, toprule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Exemplo 04: Distribuição Geométrica}, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, leftrule=.75mm, bottomrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, titlerule=0mm, breakable, coltitle=black, left=2mm, opacitybacktitle=0.6]
 
 Seja \(X \sim Geo(p)\). Encontre sua função geradora de momentos e a
 partir dela, encontre \(E(X)\) e \(\operatorname{Var}(X)\).
@@ -840,7 +835,1139 @@ partir dela, encontre \(E(X)\) e \(\operatorname{Var}(X)\).
 
 \pause
 
-\textbf{Solução:}
+\textbf{Solução:} Seja \(X \sim \text{Geo}(p)\), cuja função de
+probabilidade é
+
+\[
+P(X = k) = p(1-p)^{k-1}, \qquad k = 1,2,3,\dots
+\]
+
+Por definição, temos que,
+
+\[
+M_X(t)
+= E(e^{tX})
+= \sum_{k=1}^{\infty} e^{tk} p(1-p)^{k-1} = p \sum_{k=1}^{\infty} (e^t)^k (1-p)^{k-1}
+\]
+\end{frame}
+
+\begin{frame}{Função Geradora de Momentos}
+\phantomsection\label{funuxe7uxe3o-geradora-de-momentos-20}
+Reorganizando,
+
+\[
+M_X(t)
+= p e^t \sum_{k=1}^{\infty} \big[(1-p)e^{t}\big]^{\,k-1}
+\]
+
+A soma é uma série geométrica com razão
+
+\[
+r=(1-p)e^{t}
+\]
+
+A série converge se e somente se:
+
+\[
+|(1-p)e^{t}| < 1
+\]
+\end{frame}
+
+\begin{frame}{Função Geradora de Momentos}
+\phantomsection\label{funuxe7uxe3o-geradora-de-momentos-21}
+Usando a soma da série geométrica,
+
+\[
+\sum_{k=0}^{\infty} r^k = \frac{1}{1-r},
+\]
+
+temos:
+
+\[
+M_X(t) = \frac{p e^t}{1 - (1-p)e^{t}}
+\]
+\end{frame}
+
+\begin{frame}{Função Geradora de Momentos}
+\phantomsection\label{funuxe7uxe3o-geradora-de-momentos-22}
+Portanto,
+
+\[
+\boxed{M_X(t) = \frac{p e^{t}}{1-(1-p)e^{t}}, \quad \text{para } t < \ln\Bigg(\frac{1}{1-p}\Bigg)}
+\]
+
+Note que,
+\(M_X(0) = \dfrac{p e^{0}}{1-(1-p)e^{0}} = \dfrac{p}{1-(1-p)} =  \dfrac{p}{p} =1\)
+
+\pause
+
+Sabemos que:
+
+\[
+E(X) = M_X'(0)
+\]
+\end{frame}
+
+\begin{frame}{Função Geradora de Momentos}
+\phantomsection\label{funuxe7uxe3o-geradora-de-momentos-23}
+Vamos então encontrar a derivada de primeira ordem de
+
+\[
+M_X(t) = \frac{p e^{t}}{1 - (1-p)e^{t}}
+\]
+
+Use regra do quociente, temos
+
+\[
+M_X'(t)
+= \frac{p e^t \big[1 - (1-p)e^{t}\big] - p e^{t}\big[-(1-p)e^{t}\big]}{\big[1 - (1-p)e^{t}\big]^2}
+\]
+
+Simplificando o numerador:
+
+\[
+p e^{t}\left[1 - (1-p)e^{t} + (1-p)e^{t}\right]
+= p e^{t}
+\]
+\end{frame}
+
+\begin{frame}{Função Geradora de Momentos}
+\phantomsection\label{funuxe7uxe3o-geradora-de-momentos-24}
+Portanto,
+
+\[
+M_X'(t) = \frac{p e^{t}}{\left[1 - (1-p)e^{t}\right]^2}
+\]
+
+Avaliando em \(t=0\):
+
+\begin{itemize}
+\tightlist
+\item
+  \(e^0=1\)
+\item
+  \(1 - (1-p)e^{0} = 1-(1-p) = p\)
+\end{itemize}
+
+Logo,
+
+\[E(X) = M_X'(0)
+= \frac{p}{p^2}
+= \frac{1}{p}\]
+\end{frame}
+
+\begin{frame}{Função Geradora de Momentos}
+\phantomsection\label{funuxe7uxe3o-geradora-de-momentos-25}
+Encontrando \(\operatorname{Var}(X)\), usamos,
+
+\[
+\operatorname{Var}(X) = M_X''(0) - \Big[M_X'(0)\Big]^2
+\]
+
+A derivada segunda é dada por
+
+\[
+M_X''(t)
+= \frac{p e^{t}\big[1+(1-p)e^{t}\big]}{\left[1-(1-p)e^{t}\right]^3}
+\]
+
+de forma que
+
+\[M_X''(0)
+= \frac{p(1+(1-p))}{p^3}
+= \frac{p(2-p)}{p^3}
+= \frac{2-p}{p^2}\]
+\end{frame}
+
+\begin{frame}{Função Geradora de Momentos}
+\phantomsection\label{funuxe7uxe3o-geradora-de-momentos-26}
+e, portanto,
+
+\[\operatorname{Var}(X)
+= M_X''(0) - \Big[M_X'(0)\Big]^2
+= \frac{2-p}{p^2} - \left(\frac{1}{p}\right)^2
+= \frac{2-p-1}{p^2}
+= \frac{1-p}{p^2}\]
+
+\pause
+
+Veja que neste exemplo, a função geradora de momentos de \(X ∼ Geo(p)\)
+não está definida para todo \(t \in \mathbb{R}\), mas está bem definida
+para \(t < \ln\Big(\frac{1}{1-p}\Big)\). E como
+\(\ln\Big(\frac{1}{1-p}\Big) > 0\), a função geradora de momentos está
+bem definida para \(t\) em uma vizinhança de zero.
+\end{frame}
+
+\begin{frame}{Função Geradora de Momentos}
+\phantomsection\label{funuxe7uxe3o-geradora-de-momentos-27}
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Exemplo 05: Distribuição de Poisson}, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, leftrule=.75mm, bottomrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, titlerule=0mm, breakable, coltitle=black, left=2mm, opacitybacktitle=0.6]
+
+Seja \(X \sim Poisson(\lambda)\). Encontre sua função geradora de
+momentos e a partir dela, encontre \(E(X)\) e \(\operatorname{Var}(X)\).
+
+\end{tcolorbox}
+
+\pause
+
+\textbf{Solução:} Seja \(X \sim Poisson(\lambda)\), cuja função de
+probabilidade é
+
+\[
+P(X = k) = \frac{e^{-\lambda}\lambda^k}{k!}, \quad k = 0,1,2,\ldots
+\]
+
+Assim, a função geradora de momentos (fgm) de \(X\) é dada por,
+
+\[
+M_X(t) = \sum_{k=0}^\infty e^{tk}\,\frac{e^{-\lambda}\lambda^k}{k!}
+       = e^{-\lambda} \sum_{k=0}^\infty \frac{(\lambda e^t)^k}{k!}
+\]
+\end{frame}
+
+\begin{frame}{Função Geradora de Momentos}
+\phantomsection\label{funuxe7uxe3o-geradora-de-momentos-28}
+A série
+
+\[
+\sum_{k=0}^\infty \frac{(\lambda e^t)^k}{k!}
+\]
+
+é a expansão em série de Taylor de \(e^{\lambda e^t}\). Assim,
+
+\[
+M_X(t) = e^{-\lambda} e^{\lambda e^t}
+       = \exp\{\lambda(e^t - 1)\}
+\]
+\end{frame}
+
+\begin{frame}{Função Geradora de Momentos}
+\phantomsection\label{funuxe7uxe3o-geradora-de-momentos-29}
+Portanto, a fgm de \(X\) é \[
+\boxed{M_X(t) = \exp\big(\lambda(e^t - 1)\big)}
+\]
+
+Note que,
+\(M_X(0) = \exp\big(\lambda(e^0 - 1)\big) = \exp\big(0\big) =  1\)
+
+\pause
+
+Vamos calcular as derivadas de ordem primeira e ordem segunda para
+calcular os respectivos momentos:
+
+Pela regra da cadeia,
+
+\[
+M_X'(t) = \exp\big(\lambda(e^t - 1)\big)\cdot \lambda e^t
+        = \lambda e^t\, M_X(t)
+\]
+\end{frame}
+
+\begin{frame}{Função Geradora de Momentos}
+\phantomsection\label{funuxe7uxe3o-geradora-de-momentos-30}
+Logo,
+
+\[
+E(X) = M_X'(0) = \lambda e^0\, M_X(0) = \lambda \cdot 1 \cdot 1 = \lambda
+\]
+
+\pause
+
+A segunda derivada de \(M_X(t)\) é dada por:
+
+\[
+\begin{aligned}
+M_X''(t) 
+&= \frac{d}{dt}\big[\lambda e^t\, M_X(t)\big] \\
+&= \lambda e^t\, M_X(t) + \lambda e^t\, M_X'(t) \\
+&= \lambda e^t\, M_X(t) + \lambda e^t\,[\lambda e^t\, M_X(t)] \\
+&= \lambda e^t\, M_X(t)\,\big[1 + \lambda e^t\big]
+\end{aligned}
+\]
+\end{frame}
+
+\begin{frame}{Função Geradora de Momentos}
+\phantomsection\label{funuxe7uxe3o-geradora-de-momentos-31}
+Agora, avaliando em \(t=0\):
+
+\[
+\begin{aligned}
+M_X''(0) = \lambda e^0\, M_X(0)\,\big[1 + \lambda e^0\big] = \lambda \cdot 1 \cdot 1 \cdot (1+\lambda) = \lambda(1+\lambda)
+\end{aligned}
+\]
+
+Portanto,
+
+\[
+E(X^2) = M_X''(0) = \lambda(1+\lambda)
+\]
+
+Assim,
+
+\[
+\begin{aligned}
+\text{Var}(X) 
+&= M_X''(0) - \Big[M_X'(0)\Big]^2 \\
+&= \lambda(1+\lambda) - \lambda^2 \\
+&= \lambda
+\end{aligned}
+\]
+\end{frame}
+
+\begin{frame}{Função Geradora de Momentos}
+\phantomsection\label{funuxe7uxe3o-geradora-de-momentos-32}
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Exemplo 06: Distribuição Exponencial}, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, leftrule=.75mm, bottomrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, titlerule=0mm, breakable, coltitle=black, left=2mm, opacitybacktitle=0.6]
+
+Seja \(X \sim exp(\lambda)\). Encontre sua função geradora de momentos e
+a partir dela, encontre \(E(X)\) e \(\operatorname{Var}(X)\).
+
+\end{tcolorbox}
+
+\pause
+
+\textbf{Solução:} Seja \(X \sim exp(\lambda)\), cuja função densidade é
+
+\[
+f(x) = \lambda e^{-\lambda x}, \quad x > 0
+\]
+
+Neste caso, a função geradora de momentos (fgm) de \(X\) é definida por
+\[
+M_X(t) = E(e^{tX}) = \int_0^\infty e^{tx}\,\lambda e^{-\lambda x}\,dx = \int_0^\infty \lambda e^{-(\lambda - t)x} \, dx
+\]
+
+válida para \(t < \lambda\).
+\end{frame}
+
+\begin{frame}{Função Geradora de Momentos}
+\phantomsection\label{funuxe7uxe3o-geradora-de-momentos-33}
+Assim, como
+
+\[
+\int_0^\infty \lambda e^{-(\lambda - t)x} =  \lambda \frac{e^{-(\lambda - t)x}}{-(\lambda - t)} \Bigg|_0^{\infty} = \frac{\lambda}{\lambda - t}, \,\,\,\, \lambda - t > 0
+\]
+
+Logo,
+
+\[
+\boxed{M_X(t) = \frac{\lambda}{\lambda - t}, \qquad t < \lambda}
+\]
+
+Note que, \(M_X(0) = \frac{\lambda}{\lambda - 0} =  1\)
+\end{frame}
+
+\begin{frame}{Função Geradora de Momentos}
+\phantomsection\label{funuxe7uxe3o-geradora-de-momentos-34}
+Derivando,
+
+\[
+  M_X'(t) = \frac{\lambda}{(\lambda - t)^2}
+\]
+
+Portanto,
+
+\[
+E(X) = M_X'(0) = \frac{\lambda}{\lambda^2} = \frac{1}{\lambda}
+\]
+\end{frame}
+
+\begin{frame}{Função Geradora de Momentos}
+\phantomsection\label{funuxe7uxe3o-geradora-de-momentos-35}
+A segunda derivada é dada por,
+
+\[
+M_X''(t) = \frac{2\lambda}{(\lambda - t)^3}
+\]
+
+Logo,
+
+\[
+E(X^2) = M_X''(0) = \frac{2\lambda}{\lambda^3} = \frac{2}{\lambda^2}
+\]
+
+De forma que,
+
+\[
+\text{Var}(X)
+= E(X^2) - \Big[E(X) \Big]^2
+= \frac{2}{\lambda^2} - \frac{1}{\lambda^2}
+= \frac{1}{\lambda^2}
+\]
+\end{frame}
+
+\begin{frame}{Função Geradora de Momentos}
+\phantomsection\label{funuxe7uxe3o-geradora-de-momentos-36}
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Exemplo 07: Distribuição Gamma}, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, leftrule=.75mm, bottomrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, titlerule=0mm, breakable, coltitle=black, left=2mm, opacitybacktitle=0.6]
+
+Seja \(X \sim Gamma(\alpha, \lambda)\). Encontre sua função geradora de
+momentos.
+
+\end{tcolorbox}
+
+\pause
+
+\textbf{Solução:} Seja \(X \sim Gamma(\alpha, \lambda)\), cuja função
+densidade é
+
+\[
+  f(x) = \frac{\lambda^\alpha}{\Gamma(\alpha)}x^{\alpha-1}e^{-\lambda x},
+\qquad x>0
+\]
+
+A função geradora de momentos é
+
+\[
+  M_X(t)
+= \int_0^\infty e^{tx}
+\frac{\lambda^\alpha}{\Gamma(\alpha)}x^{\alpha-1}e^{-\lambda x}\,dx
+= \frac{\lambda^\alpha}{\Gamma(\alpha)}
+\int_0^\infty x^{\alpha-1}e^{-(\lambda - t)x}\,dx
+\]
+\end{frame}
+
+\begin{frame}{Função Geradora de Momentos}
+\phantomsection\label{funuxe7uxe3o-geradora-de-momentos-37}
+Usamos agora o resultado da função Gamma:
+
+\[
+\int_0^\infty x^{\alpha-1}e^{-bx}\,dx
+= \frac{\Gamma(\alpha)}{b^\alpha}, \qquad b>0
+\]
+
+Aqui, \(b = \lambda - t\) (precisamos de \(\lambda - t > 0\), isto é,
+\(t<\lambda\)). Logo,
+
+\[
+\int_0^\infty x^{\alpha-1}e^{-(\lambda - t)x}\,dx
+= \frac{\Gamma(\alpha)}{(\lambda - t)^\alpha}
+\]
+
+Portanto,
+
+\[
+M_X(t)
+= \frac{\lambda^\alpha}{\Gamma(\alpha)}
+\cdot
+\frac{\Gamma(\alpha)}{(\lambda - t)^\alpha}
+= \left(\frac{\lambda}{\lambda - t}\right)^\alpha,
+\qquad t < \lambda
+\]
+\end{frame}
+
+\begin{frame}{Função Geradora de Momentos}
+\phantomsection\label{funuxe7uxe3o-geradora-de-momentos-38}
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Exemplo 07: Distribuição Normal Padrão}, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, leftrule=.75mm, bottomrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, titlerule=0mm, breakable, coltitle=black, left=2mm, opacitybacktitle=0.6]
+
+Seja \(X \sim N(0, 1)\). Encontre sua função geradora de momentos.
+
+\end{tcolorbox}
+
+\pause
+
+\textbf{Solução:} Seja \(X \sim N(0, 1)\), cuja função densidade é
+
+\[
+f(x) = \frac{1}{\sqrt{2\pi}} e^{-x^2/2}, \qquad x \in \mathbb{R}
+\]
+
+Queremos encontrar a função geradora de momentos (fgm) dada por
+
+\[
+M_X(t)
+= \int_{-\infty}^{\infty} e^{tx}\,\frac{1}{\sqrt{2\pi}} e^{-x^2/2}\,dx
+= \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}
+\exp\Big(tx - \frac{x^2}{2}\Big)\,dx
+\]
+\end{frame}
+
+\begin{frame}{Função Geradora de Momentos}
+\phantomsection\label{funuxe7uxe3o-geradora-de-momentos-39}
+Vamos usar a técnica de completar quadrados no expoente,
+
+\[
+\begin{aligned}
+tx - \frac{x^2}{2}
+&= -\frac{1}{2}\big(x^2 - 2tx\big) = -\frac{1}{2}\big(x^2 - 2tx + t^2 - t^2\big) \\
+&= -\frac{1}{2}\big[(x - t)^2 - t^2\big] = -\frac{(x - t)^2}{2} + \frac{t^2}{2}
+\end{aligned}
+\]
+
+Assim,
+
+\[\small
+M_X(t)
+= \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}
+\exp\!\left(-\frac{(x - t)^2}{2} + \frac{t^2}{2}\right)\,dx
+= \exp\!\left(\frac{t^2}{2}\right)
+\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}
+\exp\!\left(-\frac{(x - t)^2}{2}\right)\,dx
+\]
+\end{frame}
+
+\begin{frame}{Função Geradora de Momentos}
+\phantomsection\label{funuxe7uxe3o-geradora-de-momentos-40}
+A integral
+
+\[
+\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}
+\exp\!\left(-\frac{(x - t)^2}{2}\right)\,dx
+\] é a área total sob a curva de uma normal \(N(t,1)\), e portanto é
+igual a \(1\).
+
+Logo, \[
+\boxed{M_X(t) = \exp\!\left(\frac{t^2}{2}\right), \qquad t \in \mathbb{R}}
+\]
+\end{frame}
+
+\begin{frame}{Função Geradora de Momentos}
+\phantomsection\label{funuxe7uxe3o-geradora-de-momentos-41}
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Proposição 01: Transformações Lineares}, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, leftrule=.75mm, bottomrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, titlerule=0mm, breakable, coltitle=black, left=2mm, opacitybacktitle=0.6]
+
+Seja \(X\) uma variável aleatória com função geradora de momentos
+\(M_X\). Seja \(Y = aX + b\). Então, a função geradora de momentos de
+\(Y\) é dada por
+
+\[M_Y(t) = e^{bt} M_X(at)\]
+
+\end{tcolorbox}
+
+\pause
+
+\textbf{Demonstração:}
+
+\[M_Y(t) = E(e^{tY}) = E(e^{t(aX+b)}) = E\Big(e^{atX} e^{bt} \Big) = e^{bt} E\Big(e^{atX}\Big) =  e^{bt} M_X(at)\]
+\end{frame}
+
+\begin{frame}{Função Geradora de Momentos}
+\phantomsection\label{funuxe7uxe3o-geradora-de-momentos-42}
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Exemplo 07: Distribuição Normal Padrão}, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, leftrule=.75mm, bottomrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, titlerule=0mm, breakable, coltitle=black, left=2mm, opacitybacktitle=0.6]
+
+Seja \(X \sim N(\mu, \sigma^2)\). Encontre sua função geradora de
+momentos.
+
+\end{tcolorbox}
+
+\pause
+
+\textbf{Solução:} Se \(X \sim N(\mu, \sigma^2)\), então
+\(X = \sigma Z + \mu\), em que \(Z\sim N(0,1)\), com função geradora de
+momentos dada por \(M_X(t) = \exp\!\left(\frac{t^2}{2}\right)\). Assim,
+
+\[M_X(t) = e^{\mu t} M_X(\sigma t) = e^{\mu t} \exp\!\left(\frac{(\sigma t)^2}{2}\right) = e^{\mu t} \exp\!\left(\frac{\sigma^2 t^2}{2}\right)\]
+\end{frame}
+
+\begin{frame}{Função Geradora de Momentos}
+\phantomsection\label{funuxe7uxe3o-geradora-de-momentos-43}
+Logo,
+
+Se \(X \sim N(\mu, \sigma^2)\), então
+
+\[\boxed{M_X(t)= \exp \Bigg(\mu t + \frac{\sigma^2 t^2}{2} \Bigg)}\]
+\end{frame}
+
+\begin{frame}{Função Geradora de Momentos}
+\phantomsection\label{funuxe7uxe3o-geradora-de-momentos-44}
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Teorema 02}, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, leftrule=.75mm, bottomrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, titlerule=0mm, breakable, coltitle=black, left=2mm, opacitybacktitle=0.6]
+
+Se duas variáveis aleatórias têm funções geradoras de momentos que
+existem, e são iguais, então elas têm a mesma função de distribuição.
+
+\end{tcolorbox}
+
+\pause
+
+A demonstração desse Teorema será omitida, pois ela usa conceitos não
+estudados neste curso. Veja que o Teorema 02 nos mostra que se duas
+variáveis aleatórias tem mesma função geradora de momentos então estas
+variáveis aleatórias são identicamente distribuídas.
+
+Isso significa que podemos identificar a distribuição de uma variável
+aleatória a partir da sua função geradora de momentos, assim como
+identificamos a distribuição da variável aleatória a partir da sua
+função de distribuição, função densidade ou função de probabilidade.
+\end{frame}
+
+\begin{frame}{Função Geradora de Momentos}
+\phantomsection\label{funuxe7uxe3o-geradora-de-momentos-45}
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Exemplo 08}, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, leftrule=.75mm, bottomrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, titlerule=0mm, breakable, coltitle=black, left=2mm, opacitybacktitle=0.6]
+
+Seja \(X \sim Gamma(\alpha, \lambda)\). Considere também
+\(Y = cX,\,\, c\in \mathbb{R}\). Mostre, a partir da função geradora de
+momentos, que \(Y \sim Gamma(\alpha, \lambda/c)\).
+
+\end{tcolorbox}
+
+\pause
+
+\textbf{Solução:} Por definição,
+
+\[
+M_Y(t) = E(e^{tY}) = E(e^{t(cX)}) = E(e^{(ct)X})
+\]
+
+Logo,
+
+\[
+M_Y(t) = M_X(ct) = \left(\frac{\lambda}{\lambda - ct}\right)^{\alpha},
+\qquad ct < \lambda \;\; \Rightarrow \;\; t < \frac{\lambda}{c}
+\]
+\end{frame}
+
+\begin{frame}{Função Geradora de Momentos}
+\phantomsection\label{funuxe7uxe3o-geradora-de-momentos-46}
+ou seja,
+
+\[
+M_Y(t)
+= \left(\frac{\lambda}{\lambda - ct}\right)^{\alpha}
+= \left(\frac{\lambda/c}{(\lambda/c) - t}\right)^{\alpha},
+\qquad t < \frac{\lambda}{c}
+\]
+
+Veja que trata-se da função geradora de momentos de uma variável
+aleatória com distribuição \(Gamma(\alpha,\lambda/c)\). Logo,
+\(Y \sim Gamma(\alpha,\lambda/c)\).
+\end{frame}
+
+\begin{frame}{Função Geradora de Momentos}
+\phantomsection\label{funuxe7uxe3o-geradora-de-momentos-47}
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Teorema 03: Soma de variáveis independentes}, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, leftrule=.75mm, bottomrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, titlerule=0mm, breakable, coltitle=black, left=2mm, opacitybacktitle=0.6]
+
+Sejam \(X_1, X_2, \cdots, X_n\) variáveis aleatórias independentes e
+funções geradoras de momentos, respectivamente, iguais a
+\(M_{X_j}(t), \,\, j = 1, 2, \cdots, n\) para \(t\) em alguma vizinhança
+de zero. Se \(Y = X_1 + X_2 + \cdots + X_n\), então a função geradora de
+momentos de \(Y\) existe e é dada por:
+
+\[M_Y(t) =  \prod_{j = 1}^n M_{X_j}(t)\]
+
+\end{tcolorbox}
+
+\pause
+
+\textbf{Demonstração:} Pela definição, temos
+
+\[
+\begin{aligned}
+M_Y(t) &= E(e^{t(X_1 + X_2 + \cdots + X_n)}) \\ &= E(e^{tX_1}e^{tX_2} \cdots e^{tX_n}) \\ &= E(e^{tX_1})E(e^{tX_2})\cdots E(e^{tX_n})
+\end{aligned}
+\] e daí segue o resultado desejado.
+\end{frame}
+
+\begin{frame}{Função Geradora de Momentos}
+\phantomsection\label{funuxe7uxe3o-geradora-de-momentos-48}
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Exemplo 09}, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, leftrule=.75mm, bottomrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, titlerule=0mm, breakable, coltitle=black, left=2mm, opacitybacktitle=0.6]
+
+Sejam \(X_1, X_2, \cdots, X_n\) variáveis aleatórias independentes com
+distribuição Bernoulli de parâmetro \(p\). Se
+\(Y = X_1 + X_2 + \cdots + X_n\), mostre, a partir da função geradora de
+momentos, que \(Y =  \sim Binomial(n,p)\).
+
+\end{tcolorbox}
+
+\pause
+
+\textbf{Solução:} Temos que se \(X_1, X_2, \cdots, X_n\) são variáveis
+aleatórias independentes com distribuição Bernoulli de parâmetro \(p\),
+então
+
+\[
+M_{X_j}(t) = 1 - p + p e^{t}, \quad j = 1,2, \cdots n
+\]
+\end{frame}
+
+\begin{frame}{Função Geradora de Momentos}
+\phantomsection\label{funuxe7uxe3o-geradora-de-momentos-49}
+Então, pelo \textbf{Teorema 03}, temos
+
+\[
+M_Y(t) = \prod_{j = 1}^n M_{X_j}(t) = \big(1 - p + p e^{t}\big)^n
+\]
+
+que corresponde à função geradora de momentos de uma variável aleatória
+Binomial com parâmetros \(n\) e \(p\). Logo, temos que
+\(X_1 + X_2 + \cdots + X_n \sim Binomial(n,p)\).
+\end{frame}
+
+\begin{frame}{Função Característica}
+\phantomsection\label{funuxe7uxe3o-caracteruxedstica}
+A \textbf{função característica} é uma das ferramentas mais importantes
+da Teoria das Probabilidades.
+
+\pause
+
+Ela desempenha um papel similar ao da função geradora de momentos (fgm),
+mas com vantagens significativas: \textbf{sempre existe}, determina
+unicamente a distribuição e facilita o estudo de somas de variáveis
+aleatórias.
+
+\pause
+
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Definição 03: Variáveis Aleatórias Complexas}, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, leftrule=.75mm, bottomrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, titlerule=0mm, breakable, coltitle=black, left=2mm, opacitybacktitle=0.6]
+
+Dizemos que uma variável aleatória \(X\) é complexa, se pode ser escrita
+como
+
+\[X = X^a + i \,X^b\]
+
+em que \(i = \sqrt{-1}\) e \(X^a\) e \(X^b\) são variáveis aleatórias
+reais.
+
+\end{tcolorbox}
+\end{frame}
+
+\begin{frame}{Função Característica}
+\phantomsection\label{funuxe7uxe3o-caracteruxedstica-1}
+Para o valor esperado de \(X\), no caso complexo, exigimos que as
+esperanças das duas partes sejam finitas. Assim, temos:
+
+\[E(X) = E(X^a) + i \, E(X^b)\]
+
+em que \(E(X^a)\) e \(E(X^b)\) são finitas.
+
+\pause
+
+Para efeitos práticos, podemos trabalhar funções complexas como se
+estivéssemos com funções reais.
+
+\pause
+
+As propriedades usuais de números complexos serão usadas. Sendo
+\(z = a + i\, b\), denotaremos por \(|z|\) seu módulo e por \(\bar{z}\)
+seu conjugado.
+\end{frame}
+
+\begin{frame}{Função Característica}
+\phantomsection\label{funuxe7uxe3o-caracteruxedstica-2}
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Definição 04: Função Característica}, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, leftrule=.75mm, bottomrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, titlerule=0mm, breakable, coltitle=black, left=2mm, opacitybacktitle=0.6]
+
+A função característica de uma variável aleatória \(X\) é definida por
+
+\[
+\varphi_X(t) = E\!\left(e^{itX}\right) = E\Big[\cos(tX)\Big] + i\, E\Big[\, \text{sen}(tX)\Big],
+\qquad t \in \mathbb{R},
+\] onde \(i = \sqrt{-1}.\)
+
+\end{tcolorbox}
+\end{frame}
+
+\begin{frame}{Função Característica}
+\phantomsection\label{funuxe7uxe3o-caracteruxedstica-3}
+\begin{block}{Observações importantes}
+\phantomsection\label{observauxe7uxf5es-importantes}
+\begin{enumerate}
+\item
+  \textbf{Sempre existe}\\
+  Diferentemente da fgm, que pode divergir,\\
+  \[
+  |e^{itX}| = 1 \quad \Rightarrow \quad |E(e^{itX})| \le 1.
+  \] Portanto, \(\varphi_X(t)\) está sempre bem definida.
+\item
+  \textbf{Determina unicamente a distribuição}\\
+  Se \(\varphi_X(t) = \varphi_Y(t)\) para todo \(t\), então\\
+  \[
+  X \stackrel{d}{=} Y.
+  \]
+\end{enumerate}
+\end{block}
+\end{frame}
+
+\begin{frame}{Função Característica}
+\phantomsection\label{funuxe7uxe3o-caracteruxedstica-4}
+\begin{block}{Observações importantes}
+\phantomsection\label{observauxe7uxf5es-importantes-1}
+\begin{enumerate}
+\setcounter{enumi}{2}
+\item
+  \textbf{É sempre contínua}\\
+  Aliás, é uniformemente contínua em toda a reta real.
+\item
+  \textbf{Normalização}\\
+  Como \(E(e^{it\cdot 0}) = 1\), temos \[
+  \varphi_X(0) = 1
+  \]
+\end{enumerate}
+\end{block}
+\end{frame}
+
+\begin{frame}{Função Característica}
+\phantomsection\label{funuxe7uxe3o-caracteruxedstica-5}
+\begin{block}{Relação com Momentos}
+\phantomsection\label{relauxe7uxe3o-com-momentos}
+Se \(X\) possui momentos até ordem \(k\), então:
+
+\[
+\varphi_X^{(n)}(0) = i^n E(X^n),
+\qquad n = 1,2,\dots,k.
+\]
+
+Em particular:
+
+\begin{itemize}
+\tightlist
+\item
+  \(E(X) = -i\,\varphi_X'(0)\)\\
+\item
+  \(\text{Var}(X) = -\varphi_X''(0) - \left[\varphi_X'(0)\right]^2\)
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Função Característica}
+\phantomsection\label{funuxe7uxe3o-caracteruxedstica-6}
+\begin{block}{Propriedade fundamental: soma de variáveis independentes}
+\phantomsection\label{propriedade-fundamental-soma-de-variuxe1veis-independentes}
+Se \(X\) e \(Y\) são independentes:
+
+\[
+\varphi_{X+Y}(t)
+= E(e^{it(X+Y)})
+= E(e^{itX})\,E(e^{itY})
+= \varphi_X(t)\,\varphi_Y(t).
+\]
+
+Esse resultado é crucial, por exemplo, para demonstrar o \textbf{Teorema
+Central do Limite}.
+\end{block}
+\end{frame}
+
+\begin{frame}{Função Característica}
+\phantomsection\label{funuxe7uxe3o-caracteruxedstica-7}
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Exemplo 10}, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, leftrule=.75mm, bottomrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, titlerule=0mm, breakable, coltitle=black, left=2mm, opacitybacktitle=0.6]
+
+Considere uma variável aleatória \(X\) com distribuição Uniforme
+Contínua no intervalo \([a,b]\). Encontre sua função característica.
+
+\end{tcolorbox}
+
+\pause
+
+\textbf{Solução:} Considere \(X \sim \text{U}(a,b)\), com \(a<b\). Temos
+que, sua função densidade é dada por
+
+\[
+f(x) = \frac{1}{b-a}, \qquad a \le x \le b
+\]
+
+Assim, a função característica de \(X\) é
+
+\[
+\varphi_X(t) = E(e^{itX})
+= \int_{-\infty}^{\infty} e^{itx} f(x)\,dx
+\]
+\end{frame}
+
+\begin{frame}{Função Característica}
+\phantomsection\label{funuxe7uxe3o-caracteruxedstica-8}
+Como \(f(x)\) é não nula apenas em \([a,b]\):
+
+\[
+\varphi_X(t)
+= \int_a^b e^{itx}\,\frac{1}{b-a}\,dx
+= \frac{1}{b-a} \int_a^b e^{itx}\,dx.
+\]
+
+mudança de variável: \(u = itx \Rightarrow du = it \, dx\) ou
+\(dx = \frac{1}{it} du\). Quando \(x = a \Rightarrow u = ita\), quando
+\(x = b \Rightarrow u = itb\). Assim,
+
+\[
+\varphi_X(t)
+= \frac{1}{b-a}
+\left[\frac{1}{it}e^{u}\right]_{ita}^{itb}
+= \frac{e^{itb} - e^{ita}}{it \big(b-a\big)},
+\qquad t \ne 0
+\]
+\end{frame}
+
+\begin{frame}{Função Característica}
+\phantomsection\label{funuxe7uxe3o-caracteruxedstica-9}
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Exemplo 11}, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, leftrule=.75mm, bottomrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, titlerule=0mm, breakable, coltitle=black, left=2mm, opacitybacktitle=0.6]
+
+Seja \(X \sim Gamma(\alpha, \lambda)\). Encontre sua função
+característica.
+
+\end{tcolorbox}
+
+\pause
+
+\textbf{Solução:} Se \(X \sim Gamma(\alpha, \lambda)\). Temos que sua
+função densidade é
+
+\[
+f(x) = \frac{\lambda^\alpha}{\Gamma(\alpha)}x^{\alpha-1}e^{-\lambda x},
+\qquad x>0
+\]
+
+Assim,
+
+A função característica de \(X\) é \[
+\varphi_X(t) = E(e^{itX})
+= \int_0^\infty e^{itx} f(x)\,dx
+\]
+\end{frame}
+
+\begin{frame}{Função Característica}
+\phantomsection\label{funuxe7uxe3o-caracteruxedstica-10}
+Substituindo a densidade:
+
+\[
+\varphi_X(t)
+= \int_0^\infty e^{itx}
+\frac{\lambda^\alpha}{\Gamma(\alpha)}x^{\alpha-1}e^{-\lambda x}\,dx
+= \frac{\lambda^\alpha}{\Gamma(\alpha)}
+\int_0^\infty x^{\alpha-1} e^{-(\lambda - it)x}\,dx
+\]
+
+Sabemos que,
+
+\[
+\int_0^\infty x^{\alpha-1}e^{-bx}\,dx = \frac{\Gamma(\alpha)}{b^\alpha}
+\]
+
+Assim,
+
+\[
+\varphi_X(t)
+= \frac{\lambda^\alpha}{\Gamma(\alpha)}
+\cdot
+\frac{\Gamma(\alpha)}{(\lambda - it)^\alpha}
+= \left(\frac{\lambda}{\lambda - it}\right)^\alpha
+\]
+\end{frame}
+
+\begin{frame}{Função Característica}
+\phantomsection\label{funuxe7uxe3o-caracteruxedstica-11}
+\begin{block}{Observações importantes}
+\phantomsection\label{observauxe7uxf5es-importantes-2}
+\begin{itemize}
+\item
+  A função característica \textbf{generaliza} a fgm para o plano
+  complexo.
+\item
+  Sempre que a fgm existir, vale: \[
+  \varphi_X(t) = M_X(it)
+  \]
+\item
+  Ambas determinam a distribuição, mas a função característica é
+  \textbf{mais poderosa}, pois \textbf{sempre existe} e se comporta
+  melhor em operações como soma de variáveis independentes.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Função Característica}
+\phantomsection\label{funuxe7uxe3o-caracteruxedstica-12}
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Exemplo 11}, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, leftrule=.75mm, bottomrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, titlerule=0mm, breakable, coltitle=black, left=2mm, opacitybacktitle=0.6]
+
+Seja \(X \sim Binomial(n, p)\). Encontre sua função característica e,
+através dela, encontre \(E(X)\) e \(\text{Var}(X)\).
+
+\end{tcolorbox}
+
+\pause
+
+\textbf{Solução:} Se \(X \sim Binomial(n, p)\), sua função geradora de
+momentos é dada por
+
+\[
+M_X(t) = (1-p + p e^{t})^n
+\]
+
+Portanto, segue que
+
+\[
+\varphi_X(t) = M_X(it) = (1-p + p e^{it})^n
+\]
+\end{frame}
+
+\begin{frame}{Função Característica}
+\phantomsection\label{funuxe7uxe3o-caracteruxedstica-13}
+Em geral, se a função característica é \(\varphi_X(t)=E(e^{itX})\),
+então
+
+\[
+\varphi_X'(0) = i\,E(X) 
+\quad \Rightarrow \quad
+E(X) = \frac{\varphi_X'(0)}{i}
+\]
+
+Note que,
+
+\[
+\varphi_X(t) = g(t)^n,
+\quad\text{onde}\quad
+g(t) = 1-p + pe^{it}
+\]
+
+e
+
+\[
+\varphi_X'(t) = n g(t)^{n-1} g'(t)
+= n (1-p+pe^{it})^{n-1} \, p i e^{it}
+\]
+\end{frame}
+
+\begin{frame}{Função Característica}
+\phantomsection\label{funuxe7uxe3o-caracteruxedstica-14}
+Avaliando em \(t=0\):
+
+\[
+\varphi_X'(0) = n (1-p+pe^{i 0})^{n-1} \, p i e^{i\, 0} = n (1-p+pe^{0})^{n-1} \, p i e^{0} = n (1-p+p)^{n-1} \, p i = n p i
+\]
+
+Portanto,
+
+\[
+E(X) = \frac{\varphi_X'(0)}{i} = \frac{i np}{i} = np
+\]
+\end{frame}
+
+\begin{frame}{Função Característica}
+\phantomsection\label{funuxe7uxe3o-caracteruxedstica-15}
+Já temos \[
+\varphi_X'(t) = n p i e^{it}\, g(t)^{n-1},
+\quad g(t)=1-p+pe^{it}
+\]
+
+Derivando novamente (regra do produto):
+
+\[
+\begin{aligned}
+\varphi_X''(t)
+&= n p i \Big[ i e^{it} g(t)^{n-1}
+      + e^{it}(n-1) g(t)^{n-2} g'(t) \Big] \\
+&= n p i \Big[ i e^{it} g(t)^{n-1}
+      + e^{it}(n-1) g(t)^{n-2} (p i e^{it}) \Big] \\
+&= n p \Big[ i^2 e^{it} g(t)^{n-1}
+      + (n-1)p i^2 e^{2it} g(t)^{n-2} \Big] \\
+&= -n p \Big[ e^{it} g(t)^{n-1}
+      + (n-1)p e^{2it} g(t)^{n-2} \Big]
+\end{aligned}
+\]
+\end{frame}
+
+\begin{frame}{Função Característica}
+\phantomsection\label{funuxe7uxe3o-caracteruxedstica-16}
+Em \(t=0\) (\(g(0)=1\), \(e^{0}=1\)):
+
+\[
+\varphi_X''(0)
+= -n p \big[ 1\cdot 1^{n-1} + (n-1)p\cdot 1\cdot 1^{n-2} \big]
+= -n p \big[ 1 + (n-1)p \big]
+\]
+
+Então,
+
+\[
+E(X^2) = -\varphi_X''(0)
+= n p\big[1 + (n-1)p\big]
+= np + n(n-1)p^2
+\]
+\end{frame}
+
+\begin{frame}{Função Característica}
+\phantomsection\label{funuxe7uxe3o-caracteruxedstica-17}
+Por fim, como
+\(\text{Var}(X) = -\varphi_X''(0) - \left[\varphi_X'(0)\right]^2\)
+
+\[
+\begin{aligned}
+\text{Var}(X)
+&= -\varphi_X''(0) - \left[\varphi_X'(0)\right]^2 \\
+&= \big[np + n(n-1)p^2\big] - (np)^2 \\
+&= np + n(n-1)p^2 - n^2p^2 \\
+&= np + \big(n^2 - n - n^2\big)p^2 \\
+&= np - np^2 \\
+&= np(1-p)
+\end{aligned}
+\]
+\end{frame}
+
+\begin{frame}{Função Característica}
+\phantomsection\label{funuxe7uxe3o-caracteruxedstica-18}
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Exemplo 12}, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, leftrule=.75mm, bottomrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, titlerule=0mm, breakable, coltitle=black, left=2mm, opacitybacktitle=0.6]
+
+Seja \(X \sim N(\mu, \sigma^2)\). Encontre sua função característica e,
+através dela, encontre \(E(X)\) e \(\text{Var}(X)\).
+
+\end{tcolorbox}
+
+\pause
+
+\textbf{Solução:} Se \(X \sim N(\mu, \sigma^2)\), sua função geradora de
+momentos é dada por
+
+\[M_X(t)= \exp \Bigg(\mu t + \frac{\sigma^2 t^2}{2} \Bigg)\]
+
+Portanto, segue que
+
+\[
+\varphi_X(t) = M_X(it) = \exp \Bigg(it\mu - \frac{\sigma^2 t^2}{2} \Bigg)
+\]
+\end{frame}
+
+\begin{frame}{Função Característica}
+\phantomsection\label{funuxe7uxe3o-caracteruxedstica-19}
+Derivando:
+
+\[
+\varphi_X'(t)
+= \left(i\mu - \sigma^2 t\right)\,
+\exp\!\left(it\mu - \frac{\sigma^2 t^2}{2}\right)
+= \left(i\mu - \sigma^2 t\right)\varphi_X(t)
+\]
+
+Em \(t=0\):
+
+\[
+\varphi_X(0) = 1, \qquad
+\varphi_X'(0) = i\mu
+\]
+
+Logo,
+
+\[
+E(X) = \frac{\varphi_X'(0)}{i} = \frac{i\mu}{i} = \mu
+\]
+\end{frame}
+
+\begin{frame}{Função Característica}
+\phantomsection\label{funuxe7uxe3o-caracteruxedstica-20}
+Derivamos novamente:
+
+\[
+\begin{aligned}
+\varphi_X''(t)
+&= \frac{d}{dt}\big[(i\mu - \sigma^2 t)\varphi_X(t)\big] \\
+&= -\sigma^2 \varphi_X(t)
+   + (i\mu - \sigma^2 t)\varphi_X'(t) \\
+&= -\sigma^2 \varphi_X(t)
+   + (i\mu - \sigma^2 t)^2 \varphi_X(t)
+\end{aligned}
+\]
+
+Em \(t=0\): \[
+\varphi_X(0) = 1,\qquad
+\varphi_X''(0) = -\sigma^2 + (i\mu)^2
+              = -\sigma^2 - \mu^2
+\]
+
+Portanto, \[
+E(X^2) = -\varphi_X''(0)
+       = \sigma^2 + \mu^2
+\]
+\end{frame}
+
+\begin{frame}{Função Característica}
+\phantomsection\label{funuxe7uxe3o-caracteruxedstica-21}
+De forma que,
+
+\[
+\operatorname{Var}(X)
+= E(X^2) - [E(X)]^2
+= (\sigma^2 + \mu^2) - \mu^2
+= \sigma^2
+\]
 \end{frame}
 
 

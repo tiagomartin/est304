@@ -70,7 +70,8 @@ Esta página contém aulas que serão apresentadas ao longo do semestre. Você p
 </span>
 
 <span>
-
+[Ver slides](/aulas/func_geradora_momentos/func_gera_momentos.html#/title-slide){.btn .btn-est304-main .btn-sm}
+[PDF](/aulas/func_geradora_momentos/func_gera_momentos.pdf){.btn .btn-est304-outline .btn-sm}
 </span>
 :::
 
