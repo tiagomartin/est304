@@ -1374,3 +1374,321 @@ A **função característica** é uma das ferramentas mais importantes da Teoria
 
 
 Ela desempenha um papel similar ao da função geradora de momentos (fgm), mas com vantagens significativas: **sempre existe**, determina unicamente a distribuição e facilita o estudo de somas de variáveis aleatórias.
+
+
+. . .
+
+::: {.callout-note title="Definição 03: Variáveis Aleatórias Complexas"}
+Dizemos que uma variável aleatória $X$ é complexa, se pode ser escrita como
+
+$$X = X^a + i \,X^b$$
+
+em que $i = \sqrt{-1}$ e $X^a$ e $X^b$ são variáveis aleatórias reais.
+:::
+
+
+
+
+## Função Característica
+
+Para o valor esperado de $X$, no caso complexo, exigimos que as esperanças das duas partes sejam finitas. Assim, temos:
+
+$$E(X) = E(X^a) + i \, E(X^b)$$
+
+em que $E(X^a)$ e $E(X^b)$ são finitas.
+
+
+. . .
+
+
+
+Para efeitos práticos, podemos trabalhar funções complexas como se estivéssemos com funções reais.
+
+
+. . .
+
+
+As propriedades usuais de números complexos serão usadas. Sendo $z = a + i\, b$, denotaremos por $|z|$ seu módulo e por $\bar{z}$ seu conjugado.
+
+
+
+## Função Característica
+
+
+::: {.callout-note title="Definição 04: Função Característica"}
+A função característica de uma variável aleatória $X$ é definida por
+$$
+\varphi_X(t) = E\!\left(e^{itX}\right) = E\Big[\cos(tX)\Big] + i\, E\Big[\, \text{sen}(tX)\Big],
+\qquad t \in \mathbb{R},
+$$
+onde $i = \sqrt{-1}.$
+:::
+
+
+
+## Função Característica
+
+### Observações importantes
+
+1. **Sempre existe**  
+   Diferentemente da fgm, que pode divergir,  
+   $$
+   |e^{itX}| = 1 \quad \Rightarrow \quad |E(e^{itX})| \le 1.
+   $$
+   Portanto, $\varphi_X(t)$ está sempre bem definida.
+
+2. **Determina unicamente a distribuição**  
+   Se $\varphi_X(t) = \varphi_Y(t)$ para todo $t$, então  
+   $$
+   X \stackrel{d}{=} Y.
+   $$  
+   (versão “complexa” do teorema da unicidade da fgm)
+   
+   
+## Função Característica
+
+### Observações importantes
+
+
+
+3. **É sempre contínua**  
+   Aliás, é uniformemente contínua em toda a reta real.
+
+4. **Normalização**  
+   Como $E(e^{it\cdot 0}) = 1$, temos
+   $$
+   \varphi_X(0) = 1
+   $$
+   
+   
+## Função Característica
+
+
+### Relação com Momentos
+
+Se $X$ possui momentos até ordem $k$, então:
+
+
+$$
+\varphi_X^{(n)}(0) = i^n E(X^n),
+\qquad n = 1,2,\dots,k.
+$$
+
+
+
+
+Em particular:
+
+
+- $E(X) = -i\,\varphi_X'(0)$  
+- $\text{Var}(X) = -\varphi_X''(0) - \left[\varphi_X'(0)\right]^2$
+
+
+
+
+## Função Característica
+
+### Propriedade fundamental: soma de variáveis independentes
+
+Se $X$ e $Y$ são independentes:
+
+
+$$
+\varphi_{X+Y}(t)
+= E(e^{it(X+Y)})
+= E(e^{itX})\,E(e^{itY})
+= \varphi_X(t)\,\varphi_Y(t).
+$$
+
+Esse resultado é crucial, por exemplo, para demonstrar o **Teorema Central do Limite**.
+
+
+
+## Função Característica
+
+
+
+::: {.callout-note title="Exemplo 10"}
+Considere uma variável aleatória $X$ com distribuição Uniforme Contínua no intervalo $[a,b]$. Encontre sua função característica.
+:::
+
+
+. . .
+
+
+**Solução:** Considere $X \sim \text{U}(a,b)$, com $a<b$. Temos que, sua função densidade é dada por
+
+
+$$
+f(x) = \frac{1}{b-a}, \qquad a \le x \le b
+$$
+
+
+
+Assim, a função característica de $X$ é
+
+
+$$
+\varphi_X(t) = E(e^{itX})
+= \int_{-\infty}^{\infty} e^{itx} f(x)\,dx
+$$
+
+
+
+
+## Função Característica
+
+Como $f(x)$ é não nula apenas em $[a,b]$:
+
+
+$$
+\varphi_X(t)
+= \int_a^b e^{itx}\,\frac{1}{b-a}\,dx
+= \frac{1}{b-a} \int_a^b e^{itx}\,dx.
+$$
+
+mudança de variável: $u = itx \Rightarrow du = it \, dx$ ou $dx = \frac{1}{it} du$. Quando $x = a \Rightarrow u = ita$, quando $x = b \Rightarrow u = itb$. Assim, 
+
+
+$$
+\varphi_X(t)
+= \frac{1}{b-a}
+\left[\frac{1}{it}e^{u}\right]_{ita}^{itb}
+= \frac{e^{itb} - e^{ita}}{it \big(b-a\big)},
+\qquad t \ne 0
+$$
+
+
+
+## Função Característica
+
+
+
+::: {.callout-note title="Exemplo 11"}
+Seja $X \sim Gamma(\alpha, \lambda)$. Encontre sua função característica.
+:::
+
+
+. . .
+
+
+**Solução:** Se $X \sim Gamma(\alpha, \lambda)$. Temos que sua função densidade é
+
+
+$$
+f(x) = \frac{\lambda^\alpha}{\Gamma(\alpha)}x^{\alpha-1}e^{-\lambda x},
+\qquad x>0
+$$
+
+
+Assim, 
+
+A função característica de $X$ é
+$$
+\varphi_X(t) = E(e^{itX})
+= \int_0^\infty e^{itx} f(x)\,dx
+$$
+
+
+
+## Função Característica
+
+Substituindo a densidade:
+
+
+$$
+\varphi_X(t)
+= \int_0^\infty e^{itx}
+\frac{\lambda^\alpha}{\Gamma(\alpha)}x^{\alpha-1}e^{-\lambda x}\,dx
+= \frac{\lambda^\alpha}{\Gamma(\alpha)}
+\int_0^\infty x^{\alpha-1} e^{-(\lambda - it)x}\,dx
+$$
+
+
+Sabemos que,
+
+
+$$
+\int_0^\infty x^{\alpha-1}e^{-bx}\,dx = \frac{\Gamma(\alpha)}{b^\alpha}
+$$
+
+Assim,
+
+
+
+$$
+\varphi_X(t)
+= \frac{\lambda^\alpha}{\Gamma(\alpha)}
+\cdot
+\frac{\Gamma(\alpha)}{(\lambda - it)^\alpha}
+= \left(\frac{\lambda}{\lambda - it}\right)^\alpha
+$$
+
+
+
+## Função Característica
+
+### Observações importantes
+
+
+- A função característica **generaliza** a fgm para o plano complexo.
+
+- Sempre que a fgm existir, vale:
+  $$
+  \varphi_X(t) = M_X(it)
+  $$
+  
+- Ambas determinam a distribuição, mas a função característica é **mais poderosa**, pois **sempre existe** e se comporta melhor em operações como soma de variáveis independentes.
+
+
+
+## Função Característica
+
+
+
+::: {.callout-note title="Exemplo 11"}
+Seja $X \sim Binomial(n, p)$. Encontre sua função característica.
+:::
+
+
+. . .
+
+
+**Solução:** Se $X \sim Binomial(n, p)$, sua função geradora de momentos é dada por
+
+$$
+M_X(t) = (1-p + p e^{t})^n
+$$
+
+
+Portanto, segue que
+
+$$
+\varphi_X(t) = M_X(it) = (1-p + p e^{it})^n
+$$
+
+
+
+## Função Característica
+
+
+
+::: {.callout-note title="Exemplo 12"}
+Seja $X \sim N(\mu, \sigma^2)$. Encontre sua função característica.
+:::
+
+
+. . .
+
+
+**Solução:** Se $X \sim N(\mu, \sigma^2)$, sua função geradora de momentos é dada por
+
+
+$$M_X(t)= \exp \Bigg(\mu t + \frac{\sigma^2 t^2}{2} \Bigg)$$
+
+
+Portanto, segue que
+
+$$
+\varphi_X(t) = M_X(it) = \exp \Bigg(it\mu - \frac{\sigma^2 t^2}{2} \Bigg)
+$$

@@ -1871,7 +1871,7 @@
     "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-característica",
     "title": "Função Geradora de Momentos",
     "section": "Função Característica",
-    "text": "Função Característica\nA função característica é uma das ferramentas mais importantes da Teoria das Probabilidades.\n\nEla desempenha um papel similar ao da função geradora de momentos (fgm), mas com vantagens significativas: sempre existe, determina unicamente a distribuição e facilita o estudo de somas de variáveis aleatórias."
+    "text": "Função Característica\nA função característica é uma das ferramentas mais importantes da Teoria das Probabilidades.\n\nEla desempenha um papel similar ao da função geradora de momentos (fgm), mas com vantagens significativas: sempre existe, determina unicamente a distribuição e facilita o estudo de somas de variáveis aleatórias.\n\n\n\n\n\n\n\n\n\nDefinição 03: Variáveis Aleatórias Complexas\n\n\nDizemos que uma variável aleatória \\(X\\) é complexa, se pode ser escrita como\n\\[X = X^a + i \\,X^b\\]\nem que \\(i = \\sqrt{-1}\\) e \\(X^a\\) e \\(X^b\\) são variáveis aleatórias reais."
   },
   {
     "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-47",
@@ -1893,5 +1893,96 @@
     "title": "Função Geradora de Momentos",
     "section": "Função Geradora de Momentos",
     "text": "Função Geradora de Momentos\nEntão, pelo Teorema 03, temos\n\\[\nM_Y(t) = \\prod_{j = 1}^n M_{X_j}(t) = \\big(1 - p + p e^{t}\\big)^n\n\\]\nque corresponde à função geradora de momentos de uma variável aleatória Binomial com parâmetros \\(n\\) e \\(p\\). Logo, temos que \\(X_1 + X_2 + \\cdots + X_n \\sim Binomial(n,p)\\)."
+  },
+  {
+    "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-característica-1",
+    "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-característica-1",
+    "title": "Função Geradora de Momentos",
+    "section": "Função Característica",
+    "text": "Função Característica\nPara o valor esperado de \\(X\\), no caso complexo, exigimos que as esperanças das duas partes sejam finitas. Assim, temos:\n\\[E(X) = E(X^a) + i \\, E(X^b)\\]\nem que \\(E(X^a)\\) e \\(E(X^b)\\) são finitas.\n\nPara efeitos práticos, podemos trabalhar funções complexas como se estivéssemos com funções reais.\n\n\nAs propriedades usuais de números complexos serão usadas. Sendo \\(z = a + i\\, b\\), denotaremos por \\(|z|\\) seu módulo e por \\(\\bar{z}\\) seu conjugado."
+  },
+  {
+    "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-característica-2",
+    "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-característica-2",
+    "title": "Função Geradora de Momentos",
+    "section": "Função Característica",
+    "text": "Função Característica\n\n\n\n\n\n\n\nDefinição 04: Função Característica\n\n\nA função característica de uma variável aleatória \\(X\\) é definida por \\[\n\\varphi_X(t) = E\\!\\left(e^{itX}\\right) = E\\Big[\\cos(tX)\\Big] + i\\, E\\Big[\\, \\text{sen}(tX)\\Big],\n\\qquad t \\in \\mathbb{R},\n\\] onde \\(i = \\sqrt{-1}.\\)"
+  },
+  {
+    "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-característica-3",
+    "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-característica-3",
+    "title": "Função Geradora de Momentos",
+    "section": "Função Característica",
+    "text": "Função Característica\nObservações importantes\n\nSempre existe\nDiferentemente da fgm, que pode divergir,\n\\[\n|e^{itX}| = 1 \\quad \\Rightarrow \\quad |E(e^{itX})| \\le 1.\n\\] Portanto, \\(\\varphi_X(t)\\) está sempre bem definida.\nDetermina unicamente a distribuição\nSe \\(\\varphi_X(t) = \\varphi_Y(t)\\) para todo \\(t\\), então\n\\[\nX \\stackrel{d}{=} Y.\n\\]\n(versão “complexa” do teorema da unicidade da fgm)"
+  },
+  {
+    "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-característica-4",
+    "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-característica-4",
+    "title": "Função Geradora de Momentos",
+    "section": "Função Característica",
+    "text": "Função Característica\nObservações importantes\n\nÉ sempre contínua\nAliás, é uniformemente contínua em toda a reta real.\nNormalização\nComo \\(E(e^{it\\cdot 0}) = 1\\), temos \\[\n\\varphi_X(0) = 1\n\\]"
+  },
+  {
+    "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-característica-5",
+    "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-característica-5",
+    "title": "Função Geradora de Momentos",
+    "section": "Função Característica",
+    "text": "Função Característica\nRelação com Momentos\nSe \\(X\\) possui momentos até ordem \\(k\\), então:\n\\[\n\\varphi_X^{(n)}(0) = i^n E(X^n),\n\\qquad n = 1,2,\\dots,k.\n\\]\nEm particular:\n\n\\(E(X) = -i\\,\\varphi_X'(0)\\)\n\n\\(\\text{Var}(X) = -\\varphi_X''(0) - \\left[\\varphi_X'(0)\\right]^2\\)"
+  },
+  {
+    "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-característica-6",
+    "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-característica-6",
+    "title": "Função Geradora de Momentos",
+    "section": "Função Característica",
+    "text": "Função Característica\nPropriedade fundamental: soma de variáveis independentes\nSe \\(X\\) e \\(Y\\) são independentes:\n\\[\n\\varphi_{X+Y}(t)\n= E(e^{it(X+Y)})\n= E(e^{itX})\\,E(e^{itY})\n= \\varphi_X(t)\\,\\varphi_Y(t).\n\\]\nEsse resultado é crucial, por exemplo, para demonstrar o Teorema Central do Limite."
+  },
+  {
+    "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-característica-7",
+    "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-característica-7",
+    "title": "Função Geradora de Momentos",
+    "section": "Função Característica",
+    "text": "Função Característica\n\n\n\n\n\n\n\nExemplo 10\n\n\nConsidere uma variável aleatória \\(X\\) com distribuição Uniforme Contínua no intervalo \\([a,b]\\). Encontre sua função característica.\n\n\n\n\n\nSolução: Considere \\(X \\sim \\text{U}(a,b)\\), com \\(a&lt;b\\). Temos que, sua função densidade é dada por\n\\[\nf(x) = \\frac{1}{b-a}, \\qquad a \\le x \\le b\n\\]\nAssim, a função característica de \\(X\\) é\n\\[\n\\varphi_X(t) = E(e^{itX})\n= \\int_{-\\infty}^{\\infty} e^{itx} f(x)\\,dx\n\\]"
+  },
+  {
+    "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-característica-8",
+    "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-característica-8",
+    "title": "Função Geradora de Momentos",
+    "section": "Função Característica",
+    "text": "Função Característica\nComo \\(f(x)\\) é não nula apenas em \\([a,b]\\):\n\\[\n\\varphi_X(t)\n= \\int_a^b e^{itx}\\,\\frac{1}{b-a}\\,dx\n= \\frac{1}{b-a} \\int_a^b e^{itx}\\,dx.\n\\]\nmudança de variável: \\(u = itx \\Rightarrow du = it \\, dx\\) ou \\(dx = \\frac{1}{it} du\\). Quando \\(x = a \\Rightarrow u = ita\\), quando \\(x = b \\Rightarrow u = itb\\). Assim,\n\\[\n\\varphi_X(t)\n= \\frac{1}{b-a}\n\\left[\\frac{1}{it}e^{u}\\right]_{ita}^{itb}\n= \\frac{e^{itb} - e^{ita}}{it \\big(b-a\\big)},\n\\qquad t \\ne 0\n\\]"
+  },
+  {
+    "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-característica-9",
+    "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-característica-9",
+    "title": "Função Geradora de Momentos",
+    "section": "Função Característica",
+    "text": "Função Característica\n\n\n\n\n\n\n\nExemplo 11\n\n\nSeja \\(X \\sim Gamma(\\alpha, \\lambda)\\). Encontre sua função característica.\n\n\n\n\n\nSolução: Se \\(X \\sim Gamma(\\alpha, \\lambda)\\). Temos que sua função densidade é\n\\[\nf(x) = \\frac{\\lambda^\\alpha}{\\Gamma(\\alpha)}x^{\\alpha-1}e^{-\\lambda x},\n\\qquad x&gt;0\n\\]\nAssim,\nA função característica de \\(X\\) é \\[\n\\varphi_X(t) = E(e^{itX})\n= \\int_0^\\infty e^{itx} f(x)\\,dx\n\\]"
+  },
+  {
+    "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-característica-10",
+    "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-característica-10",
+    "title": "Função Geradora de Momentos",
+    "section": "Função Característica",
+    "text": "Função Característica\nSubstituindo a densidade:\n\\[\n\\varphi_X(t)\n= \\int_0^\\infty e^{itx}\n\\frac{\\lambda^\\alpha}{\\Gamma(\\alpha)}x^{\\alpha-1}e^{-\\lambda x}\\,dx\n= \\frac{\\lambda^\\alpha}{\\Gamma(\\alpha)}\n\\int_0^\\infty x^{\\alpha-1} e^{-(\\lambda - it)x}\\,dx\n\\]\nSabemos que,\n\\[\n\\int_0^\\infty x^{\\alpha-1}e^{-bx}\\,dx = \\frac{\\Gamma(\\alpha)}{b^\\alpha}\n\\]\nAssim,\n\\[\n\\varphi_X(t)\n= \\frac{\\lambda^\\alpha}{\\Gamma(\\alpha)}\n\\cdot\n\\frac{\\Gamma(\\alpha)}{(\\lambda - it)^\\alpha}\n= \\left(\\frac{\\lambda}{\\lambda - it}\\right)^\\alpha\n\\]"
+  },
+  {
+    "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-característica-11",
+    "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-característica-11",
+    "title": "Função Geradora de Momentos",
+    "section": "Função Característica",
+    "text": "Função Característica\nObservações importantes\n\nA função característica generaliza a fgm para o plano complexo.\nSempre que a fgm existir, vale: \\[\n\\varphi_X(t) = M_X(it)\n\\]\nAmbas determinam a distribuição, mas a função característica é mais poderosa, pois sempre existe e se comporta melhor em operações como soma de variáveis independentes."
+  },
+  {
+    "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-característica-12",
+    "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-característica-12",
+    "title": "Função Geradora de Momentos",
+    "section": "Função Característica",
+    "text": "Função Característica\n\n\n\n\n\n\n\nExemplo 11\n\n\nSeja \\(X \\sim Binomial(n, p)\\). Encontre sua função característica.\n\n\n\n\n\nSolução: Se \\(X \\sim Binomial(n, p)\\), sua função geradora de momentos é dada por\n\\[\nM_X(t) = (1-p + p e^{t})^n\n\\]\nPortanto, segue que\n\\[\n\\varphi_X(t) = M_X(it) = (1-p + p e^{it})^n\n\\]"
+  },
+  {
+    "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-característica-13",
+    "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-característica-13",
+    "title": "Função Geradora de Momentos",
+    "section": "Função Característica",
+    "text": "Função Característica\n\n\n\n\n\n\n\nExemplo 12\n\n\nSeja \\(X \\sim N(\\mu, \\sigma^2)\\). Encontre sua função característica.\n\n\n\n\n\nSolução: Se \\(X \\sim N(\\mu, \\sigma^2)\\), sua função geradora de momentos é dada por\n\\[M_X(t)= \\exp \\Bigg(\\mu t + \\frac{\\sigma^2 t^2}{2} \\Bigg)\\]\nPortanto, segue que\n\\[\n\\varphi_X(t) = M_X(it) = \\exp \\Bigg(it\\mu - \\frac{\\sigma^2 t^2}{2} \\Bigg)\n\\]"
   }
 ]

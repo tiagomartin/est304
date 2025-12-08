@@ -1295,6 +1295,278 @@ M_Y(t) = \prod_{j = 1}^n M_{X_j}(t) = \big(1 - p + p e^{t}\big)^n
 <p>A <strong>função característica</strong> é uma das ferramentas mais importantes da Teoria das Probabilidades.</p>
 <div class="fragment">
 <p>Ela desempenha um papel similar ao da função geradora de momentos (fgm), mas com vantagens significativas: <strong>sempre existe</strong>, determina unicamente a distribuição e facilita o estudo de somas de variáveis aleatórias.</p>
+</div>
+<div class="fragment">
+<div title="Definição 03: Variáveis Aleatórias Complexas">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Definição 03: Variáveis Aleatórias Complexas</strong></p>
+</div>
+<div class="callout-content">
+<p>Dizemos que uma variável aleatória <span class="math inline">\(X\)</span> é complexa, se pode ser escrita como</p>
+<p><span class="math display">\[X = X^a + i \,X^b\]</span></p>
+<p>em que <span class="math inline">\(i = \sqrt{-1}\)</span> e <span class="math inline">\(X^a\)</span> e <span class="math inline">\(X^b\)</span> são variáveis aleatórias reais.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="função-característica-1" class="slide level2">
+<h2>Função Característica</h2>
+<p>Para o valor esperado de <span class="math inline">\(X\)</span>, no caso complexo, exigimos que as esperanças das duas partes sejam finitas. Assim, temos:</p>
+<p><span class="math display">\[E(X) = E(X^a) + i \, E(X^b)\]</span></p>
+<p>em que <span class="math inline">\(E(X^a)\)</span> e <span class="math inline">\(E(X^b)\)</span> são finitas.</p>
+<div class="fragment">
+<p>Para efeitos práticos, podemos trabalhar funções complexas como se estivéssemos com funções reais.</p>
+</div>
+<div class="fragment">
+<p>As propriedades usuais de números complexos serão usadas. Sendo <span class="math inline">\(z = a + i\, b\)</span>, denotaremos por <span class="math inline">\(|z|\)</span> seu módulo e por <span class="math inline">\(\bar{z}\)</span> seu conjugado.</p>
+</div>
+</section>
+<section id="função-característica-2" class="slide level2">
+<h2>Função Característica</h2>
+<div title="Definição 04: Função Característica">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Definição 04: Função Característica</strong></p>
+</div>
+<div class="callout-content">
+<p>A função característica de uma variável aleatória <span class="math inline">\(X\)</span> é definida por <span class="math display">\[
+\varphi_X(t) = E\!\left(e^{itX}\right) = E\Big[\cos(tX)\Big] + i\, E\Big[\, \text{sen}(tX)\Big],
+\qquad t \in \mathbb{R},
+\]</span> onde <span class="math inline">\(i = \sqrt{-1}.\)</span></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="função-característica-3" class="slide level2">
+<h2>Função Característica</h2>
+<h3 id="observações-importantes">Observações importantes</h3>
+<ol type="1">
+<li><p><strong>Sempre existe</strong><br>
+Diferentemente da fgm, que pode divergir,<br>
+<span class="math display">\[
+|e^{itX}| = 1 \quad \Rightarrow \quad |E(e^{itX})| \le 1.
+\]</span> Portanto, <span class="math inline">\(\varphi_X(t)\)</span> está sempre bem definida.</p></li>
+<li><p><strong>Determina unicamente a distribuição</strong><br>
+Se <span class="math inline">\(\varphi_X(t) = \varphi_Y(t)\)</span> para todo <span class="math inline">\(t\)</span>, então<br>
+<span class="math display">\[
+X \stackrel{d}{=} Y.
+\]</span><br>
+(versão “complexa” do teorema da unicidade da fgm)</p></li>
+</ol>
+</section>
+<section id="função-característica-4" class="slide level2">
+<h2>Função Característica</h2>
+<h3 id="observações-importantes-1">Observações importantes</h3>
+<ol start="3" type="1">
+<li><p><strong>É sempre contínua</strong><br>
+Aliás, é uniformemente contínua em toda a reta real.</p></li>
+<li><p><strong>Normalização</strong><br>
+Como <span class="math inline">\(E(e^{it\cdot 0}) = 1\)</span>, temos <span class="math display">\[
+\varphi_X(0) = 1
+\]</span></p></li>
+</ol>
+</section>
+<section id="função-característica-5" class="slide level2">
+<h2>Função Característica</h2>
+<h3 id="relação-com-momentos">Relação com Momentos</h3>
+<p>Se <span class="math inline">\(X\)</span> possui momentos até ordem <span class="math inline">\(k\)</span>, então:</p>
+<p><span class="math display">\[
+\varphi_X^{(n)}(0) = i^n E(X^n),
+\qquad n = 1,2,\dots,k.
+\]</span></p>
+<p>Em particular:</p>
+<ul>
+<li><span class="math inline">\(E(X) = -i\,\varphi_X'(0)\)</span><br>
+</li>
+<li><span class="math inline">\(\text{Var}(X) = -\varphi_X''(0) - \left[\varphi_X'(0)\right]^2\)</span></li>
+</ul>
+</section>
+<section id="função-característica-6" class="slide level2">
+<h2>Função Característica</h2>
+<h3 id="propriedade-fundamental-soma-de-variáveis-independentes">Propriedade fundamental: soma de variáveis independentes</h3>
+<p>Se <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> são independentes:</p>
+<p><span class="math display">\[
+\varphi_{X+Y}(t)
+= E(e^{it(X+Y)})
+= E(e^{itX})\,E(e^{itY})
+= \varphi_X(t)\,\varphi_Y(t).
+\]</span></p>
+<p>Esse resultado é crucial, por exemplo, para demonstrar o <strong>Teorema Central do Limite</strong>.</p>
+</section>
+<section id="função-característica-7" class="slide level2">
+<h2>Função Característica</h2>
+<div title="Exemplo 10">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Exemplo 10</strong></p>
+</div>
+<div class="callout-content">
+<p>Considere uma variável aleatória <span class="math inline">\(X\)</span> com distribuição Uniforme Contínua no intervalo <span class="math inline">\([a,b]\)</span>. Encontre sua função característica.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p><strong>Solução:</strong> Considere <span class="math inline">\(X \sim \text{U}(a,b)\)</span>, com <span class="math inline">\(a&lt;b\)</span>. Temos que, sua função densidade é dada por</p>
+<p><span class="math display">\[
+f(x) = \frac{1}{b-a}, \qquad a \le x \le b
+\]</span></p>
+<p>Assim, a função característica de <span class="math inline">\(X\)</span> é</p>
+<p><span class="math display">\[
+\varphi_X(t) = E(e^{itX})
+= \int_{-\infty}^{\infty} e^{itx} f(x)\,dx
+\]</span></p>
+</div>
+</section>
+<section id="função-característica-8" class="slide level2">
+<h2>Função Característica</h2>
+<p>Como <span class="math inline">\(f(x)\)</span> é não nula apenas em <span class="math inline">\([a,b]\)</span>:</p>
+<p><span class="math display">\[
+\varphi_X(t)
+= \int_a^b e^{itx}\,\frac{1}{b-a}\,dx
+= \frac{1}{b-a} \int_a^b e^{itx}\,dx.
+\]</span></p>
+<p>mudança de variável: <span class="math inline">\(u = itx \Rightarrow du = it \, dx\)</span> ou <span class="math inline">\(dx = \frac{1}{it} du\)</span>. Quando <span class="math inline">\(x = a \Rightarrow u = ita\)</span>, quando <span class="math inline">\(x = b \Rightarrow u = itb\)</span>. Assim,</p>
+<p><span class="math display">\[
+\varphi_X(t)
+= \frac{1}{b-a}
+\left[\frac{1}{it}e^{u}\right]_{ita}^{itb}
+= \frac{e^{itb} - e^{ita}}{it \big(b-a\big)},
+\qquad t \ne 0
+\]</span></p>
+</section>
+<section id="função-característica-9" class="slide level2">
+<h2>Função Característica</h2>
+<div title="Exemplo 11">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Exemplo 11</strong></p>
+</div>
+<div class="callout-content">
+<p>Seja <span class="math inline">\(X \sim Gamma(\alpha, \lambda)\)</span>. Encontre sua função característica.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p><strong>Solução:</strong> Se <span class="math inline">\(X \sim Gamma(\alpha, \lambda)\)</span>. Temos que sua função densidade é</p>
+<p><span class="math display">\[
+f(x) = \frac{\lambda^\alpha}{\Gamma(\alpha)}x^{\alpha-1}e^{-\lambda x},
+\qquad x&gt;0
+\]</span></p>
+<p>Assim,</p>
+<p>A função característica de <span class="math inline">\(X\)</span> é <span class="math display">\[
+\varphi_X(t) = E(e^{itX})
+= \int_0^\infty e^{itx} f(x)\,dx
+\]</span></p>
+</div>
+</section>
+<section id="função-característica-10" class="slide level2">
+<h2>Função Característica</h2>
+<p>Substituindo a densidade:</p>
+<p><span class="math display">\[
+\varphi_X(t)
+= \int_0^\infty e^{itx}
+\frac{\lambda^\alpha}{\Gamma(\alpha)}x^{\alpha-1}e^{-\lambda x}\,dx
+= \frac{\lambda^\alpha}{\Gamma(\alpha)}
+\int_0^\infty x^{\alpha-1} e^{-(\lambda - it)x}\,dx
+\]</span></p>
+<p>Sabemos que,</p>
+<p><span class="math display">\[
+\int_0^\infty x^{\alpha-1}e^{-bx}\,dx = \frac{\Gamma(\alpha)}{b^\alpha}
+\]</span></p>
+<p>Assim,</p>
+<p><span class="math display">\[
+\varphi_X(t)
+= \frac{\lambda^\alpha}{\Gamma(\alpha)}
+\cdot
+\frac{\Gamma(\alpha)}{(\lambda - it)^\alpha}
+= \left(\frac{\lambda}{\lambda - it}\right)^\alpha
+\]</span></p>
+</section>
+<section id="função-característica-11" class="slide level2">
+<h2>Função Característica</h2>
+<h3 id="observações-importantes-2">Observações importantes</h3>
+<ul>
+<li><p>A função característica <strong>generaliza</strong> a fgm para o plano complexo.</p></li>
+<li><p>Sempre que a fgm existir, vale: <span class="math display">\[
+\varphi_X(t) = M_X(it)
+\]</span></p></li>
+<li><p>Ambas determinam a distribuição, mas a função característica é <strong>mais poderosa</strong>, pois <strong>sempre existe</strong> e se comporta melhor em operações como soma de variáveis independentes.</p></li>
+</ul>
+</section>
+<section id="função-característica-12" class="slide level2">
+<h2>Função Característica</h2>
+<div title="Exemplo 11">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Exemplo 11</strong></p>
+</div>
+<div class="callout-content">
+<p>Seja <span class="math inline">\(X \sim Binomial(n, p)\)</span>. Encontre sua função característica.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p><strong>Solução:</strong> Se <span class="math inline">\(X \sim Binomial(n, p)\)</span>, sua função geradora de momentos é dada por</p>
+<p><span class="math display">\[
+M_X(t) = (1-p + p e^{t})^n
+\]</span></p>
+<p>Portanto, segue que</p>
+<p><span class="math display">\[
+\varphi_X(t) = M_X(it) = (1-p + p e^{it})^n
+\]</span></p>
+</div>
+</section>
+<section id="função-característica-13" class="slide level2">
+<h2>Função Característica</h2>
+<div title="Exemplo 12">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Exemplo 12</strong></p>
+</div>
+<div class="callout-content">
+<p>Seja <span class="math inline">\(X \sim N(\mu, \sigma^2)\)</span>. Encontre sua função característica.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p><strong>Solução:</strong> Se <span class="math inline">\(X \sim N(\mu, \sigma^2)\)</span>, sua função geradora de momentos é dada por</p>
+<p><span class="math display">\[M_X(t)= \exp \Bigg(\mu t + \frac{\sigma^2 t^2}{2} \Bigg)\]</span></p>
+<p>Portanto, segue que</p>
+<p><span class="math display">\[
+\varphi_X(t) = M_X(it) = \exp \Bigg(it\mu - \frac{\sigma^2 t^2}{2} \Bigg)
+\]</span></p>
 
 
 </div>
