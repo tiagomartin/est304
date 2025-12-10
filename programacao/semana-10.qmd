@@ -67,6 +67,22 @@ format:
 
 :::
 
+
+## Entrega lista de exercícios 03
+
+::: callout-important
+
+## Fique Atento!
+
+{{< fa file-lines size=lg >}} [Lista de exercícios 03](/exercicios/lista03.html "Lista de exercícios 03"){aria-label="Lista de exercícios 03"} 
+
+Entrega na sala de aula!
+
+-   Data de entrega:
+    -   20 de janeiro de 2026
+:::
+
+
 :::
 
 

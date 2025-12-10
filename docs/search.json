@@ -168,7 +168,7 @@
     "href": "exercicios.html",
     "title": "Listas de Exercícios",
     "section": "",
-    "text": "Esta página contém as listas de exercícios que serão apresentadas ao longo do semestre. Você pode baixar as listas em versão PDF.\n\n\n\n1. Revisão de Probabilidade I\n\n\n Ver lista PDF \n Entrega: 25/11/2025 \n\n\n\n\n2. Distribuições Contínuas\n\n\n Ver lista PDF \n Entrega: 18/12/2025",
+    "text": "Esta página contém as listas de exercícios que serão apresentadas ao longo do semestre. Você pode baixar as listas em versão PDF.\n\n\n\n1. Revisão de Probabilidade I\n\n\n Ver lista PDF \n Entrega: 25/11/2025 \n\n\n\n\n2. Distribuições Contínuas\n\n\n Ver lista PDF \n Entrega: 18/12/2025 \n\n\n\n\n3. Transformação de Variáveis Aleatórias\n\n\n Ver lista PDF \n Entrega: 20/01/2026 \n\n\n\n\n4. Função Geradora de Momentos\n\n\n Ver lista PDF \n Entrega: 29/01/2026",
     "crumbs": [
       "Listas de Exercícios"
     ]
@@ -2046,13 +2046,34 @@
     "href": "programacao/semana-10.html",
     "title": "Semana 10",
     "section": "",
-    "text": "Função Geradora de Momentos \n\n\nVer slides PDF"
+    "text": "Função Geradora de Momentos \n\n\nVer slides PDF\n\n\n\n\n\n\n\n\n\n\nFique Atento!\n\n\n\n Lista de exercícios 03\nEntrega na sala de aula!\n\nData de entrega:\n\n20 de janeiro de 2026"
   },
   {
     "objectID": "programacao/semana-10.html#slides",
     "href": "programacao/semana-10.html#slides",
     "title": "Semana 10",
     "section": "",
-    "text": "Função Geradora de Momentos \n\n\nVer slides PDF"
+    "text": "Função Geradora de Momentos \n\n\nVer slides PDF\n\n\n\n\n\n\n\n\n\n\nFique Atento!\n\n\n\n Lista de exercícios 03\nEntrega na sala de aula!\n\nData de entrega:\n\n20 de janeiro de 2026"
+  },
+  {
+    "objectID": "exercicios/lista03.html",
+    "href": "exercicios/lista03.html",
+    "title": "Transformação de Variáveis Aleatórias",
+    "section": "",
+    "text": "Data de entrega: 20 de janeiro de 2026\n\n\n\nSuponha que \\(X\\) seja uniformemente distribuída sobre \\((-1,1)\\). Seja \\(Y = 4-X^2\\). Achar a f.d.p. de \\(Y\\).\n\n\n\nSuponha que \\(X\\) seja uniformemente distribuída em \\((1,3)\\). Ache a f.d.p. das seguintes variáveis aleatórias:\n\n\n\\(Y = 3X+4\\)\n\\(Y=e^X\\)\n\n\n\nSuponha que a variável aleatória discreta \\(X\\) assuma os valores 1, 2 e 3 com igual probabilidade. Ache a distribuição de probabilidade de \\(Y = 2X+3\\).\n\n\n\nUm homem possui quatro chaves em seu bolso. Como está escuro, ele não consegue ver qual a chave correta para abrir a porta de sua casa, que se encontra trancada. Suponha que o homem não tenha controle das chaves que já foram experimentadas e, por isso, a cada nova tentativa ele escolhe, de forma aleatória, uma entre as quatro chaves. Defina a variável aleatória \\(X\\) = número de chaves experimentadas até conseguir abrir a porta (inclusive a chave correta).\n\n\nEncontre a função de probabilidade de \\(X\\).\nConsiderando as mesmas condições do experimento, defina agora \\(Y\\) = número de chaves erradas até abrir a porta. Escreva \\(Y\\) como função de \\(X\\).\nEncontre a função de probabilidade de \\(Y\\).\n\n\n\nSeja \\(X\\) a variável aleatória cuja função de distribuição está definida por\n\n\\[\nF_X(x)=\n\\begin{cases}\n0, & x &lt; -2;\\\\[4pt]\n\\frac{1}{8}, & -2 \\le x &lt; -1;\\\\[4pt]\n\\frac{1}{2}, & -1 \\le x &lt; 1;\\\\[4pt]\n\\frac{3}{4}, & 1 \\le x &lt; 2;\\\\[4pt]\n1, & x \\ge 2.\n\\end{cases}\n\\]\n\nEncontre a função de probabilidade da variável aleatória \\(X\\).\nDefina \\(Y = X^2\\). Encontre a função de probabilidade da variável aleatória \\(Y\\).\n\n\n\nSeja \\(X\\) variável aleatória com função de probabilidade dada por\n\n\\[\np_X(x)=\n\\begin{cases}\n\\dfrac{5 - x}{10}, & \\text{se } x = 1,2,3,4,\\\\[6pt]\n0, & \\text{caso contrário}.\n\\end{cases}\n\\]\nDefina \\(Y = 2 - X\\). Encontre a função de probabilidade da variável aleatória \\(Y\\).\n\n\nUm jogo é definido da seguinte forma: o jogador sorteia 3 bolas, com reposição, de uma urna que contém 5 bolas brancas, 3 bolas pretas e 2 bolas vermelhas. Para cada bola vermelha sorteada, o jogador ganha 1 ponto e, para cada bola preta sorteada, o jogador perde 1 ponto. Seja \\(X\\) a variável aleatória definida pelo número de pontos obtidos pelo jogador.\n\n\nEncontre a função de probabilidade da variável aleatória \\(X\\).\nSuponha que, se o jogador terminar uma partida com pontuação positiva, ele ganhe \\(R\\$2,00\\) por ponto positivo e se terminar com pontuação negativa, ele perca \\(R\\$1,00\\) por ponto negativo. Caso termine com pontuação nula, ele não ganha nem perca dinheiro algum. Seja \\(Y\\) a variável aleatória definida pelo total de dinheiro que o jogador ganhou (ou perdeu) ao final de uma partida. Encontre a função de probabilidade da variável aleatória \\(Y\\).\n\n\n\nSeja \\(X\\) uma variável aleatória cuja função densidade é definida por \\(f_X(x) = 2e^{−2x}\\), se \\(x &gt; 0\\). Seja \\(Y = 3X + 2\\). Encontre a função de distribuição de \\(Y\\).\n\n\n\nSuponha que a v.a. contínua \\(X\\) tenha função densidade de probabilidade\n\n\\[\nf_X(x) = e^{-x}, \\quad x &gt; 0.\n\\]\nDetermine a função densidade de probabilidade das seguintes variáveis aleatórias:\n\n\\(Y = X^3\\)\n\\(Z = \\dfrac{3}{(X+1)^2}\\)\n\n\n\nSuponha que o raio de uma esfera seja uma variável aleatória contínua. Em virtude de imprecisões no processo de fabricação, os raios das diferentes esferas podem ser diferentes. Suponha que o raio \\(R\\) tenha distribuição \\(\\text{Beta}(2,2)\\). Determine a função densidade de probabilidade do volume \\(V\\) e da área superficial da esfera, \\(A\\), bem como seus valores esperados.\n\n\n\nUma corrente elétrica oscilante \\(I\\) pode ser considerada uma v.a. uniformemente distribuída no intervalo \\((9,11)\\). Se essa corrente passar em um resistor de \\(2\\ \\Omega\\), qual será a função densidade de probabilidade da potência \\(P = 2 I^2?\\) E o valor esperado da potência?\n\n\n\nSeja \\(X\\) uma variável aleatória com distribuição \\(N(\\mu, \\sigma^2)\\). Determine a distribuição de \\(Y = e^X\\)."
+  },
+  {
+    "objectID": "exercicios/lista04.html",
+    "href": "exercicios/lista04.html",
+    "title": "Função Geradora de Momentos",
+    "section": "",
+    "text": "Data de entrega: 29 de janeiro de 2026\n\n\n\nSuponha que \\(X\\) tenha f.d.p. dada por\n\n\\[\nf_X(x) = 2x, \\quad 0 \\le x \\le 1\n\\]\n\nDetermine a função geradora de momentos (fgm) de \\(X\\).\nEmpregando a fgm, calcule \\(E(X)\\) e \\(V(X)\\).\n\n\n\nSuponha que \\(X\\) tenha a seguinte f.d.p.:\n\n\\[\nf_X(x) = \\lambda e^{-\\lambda (x-a)}, \\quad x \\ge a\n\\]\n\nDetermine a fgm de \\(X\\).\nEmpregando a fgm, ache \\(E(X)\\) e \\(V(X)\\).\n\n\n\nSeja \\(X\\) o resultado da jogada de uma moeda equilibrada.\n\n\nDetermine a fgm de \\(X\\).\nEmpregando a fgm, ache \\(E(X)\\) e \\(V(X)\\).\n\n\n\nSuponha que a variável aleatória contínua \\(X\\) tenha f.d.p. \\[\nf_X(x) = \\frac{1}{2} e^{-|x|}, \\quad -\\infty &lt; x &lt; \\infty\n\\]\n\n\nAche a fgm de \\(X\\).\nEmpregando a fgm, ache \\(E(X)\\) e \\(V(X)\\).\n\n\n\nEmpregue a fgm para mostrar que, se \\(X\\) e \\(Y\\) forem variáveis aleatórias independentes, com distribuições \\(N(\\mu_X,\\sigma_X^2)\\) e \\(N(\\mu_Y,\\sigma_Y^2)\\), respectivamente, então\n\n\\[\nZ = aX + bY\n\\]\nserá também normalmente distribuída, na qual \\(a\\) e \\(b\\) são constantes.\n\n\nSuponha que a fgm da variável aleatória \\(X\\) seja da forma\n\n\\[\nM_X(t) = (0{,}4 e^{t} + 0{,}6)^8.\n\\]\n\nQual será a fgm da variável aleatória \\(Y = 3X + 2\\)?\nCalcule \\(E(X)\\).\n\n\n\nSeja \\(\\varphi_X(t)\\) a função característica de uma variável aleatória \\(X\\). Mostre que, para qualquer que seja \\(X\\),\n\n\\[\n|\\varphi_X(t)| \\le 1\n\\]\n(o que garante que, diferentemente da função geratriz de momentos, a função característica sempre existe). Dica: use o fato de que se \\(z = a + ib\\), então o módulo de \\(z\\) é dado por \\(|z| = \\sqrt{a^2 + b^2}\\).\n\n\nA variável \\(X\\) tem densidade \\(f(x) = \\frac{1}{2} e^{-|x|}\\), \\(x\\) real. Mostre que sua função característica é dada por\n\n\\[\n\\varphi_X(t) = \\dfrac{1}{1 + t^2}\n\\]\n\n\nSeja \\(X\\) variável aleatória com densidade dada por\n\n\\[\nf(x)\n= \\tfrac12\\,\\mathbf{1}_{(-1,0)}(x)\n\\;+\\;\n\\left(\\tfrac14 + \\tfrac{x}{8}\\right)\\mathbf{1}_{(0,2)}(x)\n\\]\nObtenha a função característica de \\(X\\)."
+  },
+  {
+    "objectID": "programacao/semana-10.html#entrega-lista-de-exercícios-03",
+    "href": "programacao/semana-10.html#entrega-lista-de-exercícios-03",
+    "title": "Semana 10",
+    "section": "",
+    "text": "Fique Atento!\n\n\n\n Lista de exercícios 03\nEntrega na sala de aula!\n\nData de entrega:\n\n20 de janeiro de 2026"
   }
 ]

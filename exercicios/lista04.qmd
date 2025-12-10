@@ -1,0 +1,118 @@
+---
+title: "Função Geradora de Momentos"
+format:
+  html:
+    number-sections: true
+    toc: true
+    toc-depth: 2
+  pdf:
+    number-sections: true
+    toc: false
+    toc-depth: 2
+---
+
+<p align="center" style="font-size: 40px"> 
+`Data de entrega: 29 de janeiro de 2026`
+</p>
+
+
+---
+
+1) Suponha que $X$ tenha f.d.p. dada por
+
+$$
+f_X(x) = 2x, \quad 0 \le x \le 1
+$$
+
+(a) Determine a função geradora de momentos (fgm) de $X$.
+
+(b) Empregando a fgm, calcule $E(X)$ e $V(X)$.
+
+
+---
+
+2) Suponha que $X$ tenha a seguinte f.d.p.:
+
+$$
+f_X(x) = \lambda e^{-\lambda (x-a)}, \quad x \ge a
+$$
+
+
+(a) Determine a fgm de $X$.
+
+(b) Empregando a fgm, ache $E(X)$ e $V(X)$.
+
+---
+
+3) Seja $X$ o resultado da jogada de uma moeda equilibrada.
+
+(a) Determine a fgm de $X$.
+
+(b) Empregando a fgm, ache $E(X)$ e $V(X)$.
+
+---
+
+4) Suponha que a variável aleatória contínua $X$ tenha f.d.p.
+$$
+f_X(x) = \frac{1}{2} e^{-|x|}, \quad -\infty < x < \infty
+$$
+
+(a) Ache a fgm de $X$.
+
+(b) Empregando a fgm, ache $E(X)$ e $V(X)$.
+
+---
+
+
+5) Empregue a fgm para mostrar que, se $X$ e $Y$ forem variáveis aleatórias independentes, com distribuições $N(\mu_X,\sigma_X^2)$ e $N(\mu_Y,\sigma_Y^2)$, respectivamente, então
+
+$$
+Z = aX + bY
+$$
+
+será também normalmente distribuída, na qual $a$ e $b$ são constantes.
+
+---
+
+6) Suponha que a fgm da variável aleatória $X$ seja da forma
+
+$$
+M_X(t) = (0{,}4 e^{t} + 0{,}6)^8.
+$$
+
+(a) Qual será a fgm da variável aleatória $Y = 3X + 2$?
+
+(b) Calcule $E(X)$.
+
+
+---
+
+7) Seja $\varphi_X(t)$ a função característica de uma variável aleatória $X$. Mostre que, para qualquer que seja $X$,
+
+$$
+|\varphi_X(t)| \le 1
+$$
+
+(o que garante que, diferentemente da função geratriz de momentos, a função característica sempre existe). **Dica:** use o fato de que se $z = a + ib$, então o módulo de $z$ é dado por $|z| = \sqrt{a^2 + b^2}$.
+
+
+---
+
+8) A variável $X$ tem densidade $f(x) = \frac{1}{2} e^{-|x|}$, $x$ real. Mostre que sua função característica é dada por 
+
+$$
+\varphi_X(t) = \dfrac{1}{1 + t^2}
+$$
+
+---
+
+9) Seja $X$ variável aleatória com densidade dada por
+
+$$
+f(x)
+= \tfrac12\,\mathbf{1}_{(-1,0)}(x)
+\;+\;
+\left(\tfrac14 + \tfrac{x}{8}\right)\mathbf{1}_{(0,2)}(x)
+$$
+
+Obtenha a função característica de $X$.

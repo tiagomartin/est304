@@ -1,0 +1,114 @@
+---
+title: "Transformação de Variáveis Aleatórias"
+format:
+  html:
+    number-sections: true
+    toc: true
+    toc-depth: 2
+  pdf:
+    number-sections: true
+    toc: false
+    toc-depth: 2
+---
+
+<p align="center" style="font-size: 40px"> 
+`Data de entrega: 20 de janeiro de 2026`
+</p>
+
+
+---
+
+
+1) Suponha que $X$ seja uniformemente distribuída sobre $(-1,1)$. Seja $Y = 4-X^2$. Achar a f.d.p. de $Y$.
+
+---
+
+2) Suponha que $X$ seja uniformemente distribuída em $(1,3)$. Ache a f.d.p. das seguintes variáveis aleatórias:
+
+a) $Y = 3X+4$
+b) $Y=e^X$
+
+---
+
+3) Suponha que a variável aleatória discreta $X$ assuma os valores 1, 2 e 3 com igual probabilidade. Ache a distribuição de probabilidade de $Y = 2X+3$.
+
+
+---
+
+4) Um homem possui quatro chaves em seu bolso. Como está escuro, ele não consegue ver qual a chave correta para abrir a porta de sua casa, que se encontra trancada. Suponha que o homem não tenha controle das chaves que já foram experimentadas e, por isso, a cada nova tentativa ele escolhe, de forma aleatória, uma entre as quatro chaves. Defina a variável aleatória $X$ = número de chaves experimentadas até conseguir abrir a porta (inclusive a chave correta).
+
+
+a) Encontre a função de probabilidade de $X$.
+b) Considerando as mesmas condições do experimento, defina agora $Y$ = número de chaves erradas até abrir a porta. Escreva $Y$ como função de $X$.
+c) Encontre a função de probabilidade de $Y$.
+
+---
+
+5) Seja $X$ a variável aleatória cuja função de distribuição está definida por
+
+$$
+F_X(x)=
+\begin{cases}
+0, & x < -2;\\[4pt]
+\frac{1}{8}, & -2 \le x < -1;\\[4pt]
+\frac{1}{2}, & -1 \le x < 1;\\[4pt]
+\frac{3}{4}, & 1 \le x < 2;\\[4pt]
+1, & x \ge 2.
+\end{cases}
+$$
+
+
+a) Encontre a função de probabilidade da variável aleatória $X$.
+b) Defina $Y = X^2$. Encontre a função de probabilidade da variável aleatória $Y$.
+
+---
+
+6) Seja $X$ variável aleatória com função de probabilidade dada por
+
+$$
+p_X(x)=
+\begin{cases}
+\dfrac{5 - x}{10}, & \text{se } x = 1,2,3,4,\\[6pt]
+0, & \text{caso contrário}.
+\end{cases}
+$$
+
+Defina $Y = 2 - X$. Encontre a função de probabilidade da variável aleatória $Y$.
+
+---
+
+7) Um jogo é definido da seguinte forma: o jogador sorteia 3 bolas, com reposição, de uma urna que contém 5 bolas brancas, 3 bolas pretas e 2 bolas vermelhas. Para cada bola vermelha sorteada, o jogador ganha 1 ponto e, para cada bola preta sorteada, o jogador perde 1 ponto. Seja $X$ a variável aleatória definida pelo número de pontos obtidos pelo jogador.
+
+a) Encontre a função de probabilidade da variável aleatória $X$.
+b) Suponha que, se o jogador terminar uma partida com pontuação positiva, ele ganhe $R\$2,00$ por ponto positivo e se terminar com pontuação negativa, ele perca $R\$1,00$ por ponto negativo. Caso termine com pontuação nula, ele não ganha nem perca dinheiro algum. Seja $Y$ a variável aleatória definida pelo total de dinheiro que o jogador ganhou (ou perdeu) ao final de uma partida. Encontre a função de probabilidade da variável aleatória $Y$.
+
+
+---
+
+8) Seja $X$ uma variável aleatória cuja função densidade é definida por $f_X(x) = 2e^{−2x}$, se $x > 0$. Seja $Y = 3X + 2$. Encontre a função de distribuição de $Y$. 
+
+---
+
+9) Suponha que a v.a. contínua $X$ tenha função densidade de probabilidade
+
+$$
+f_X(x) = e^{-x}, \quad x > 0.
+$$
+
+Determine a função densidade de probabilidade das seguintes variáveis aleatórias:
+
+a) $Y = X^3$
+
+b) $Z = \dfrac{3}{(X+1)^2}$
+
+---
+
+10) Suponha que o raio de uma esfera seja uma variável aleatória contínua. Em virtude de imprecisões no processo de fabricação, os raios das diferentes esferas podem ser diferentes. Suponha que o raio $R$ tenha distribuição $\text{Beta}(2,2)$. Determine a função densidade de probabilidade do volume $V$ e da área superficial da esfera, $A$, bem como seus valores esperados.
+
+---
+
+11) Uma corrente elétrica oscilante $I$ pode ser considerada uma v.a. uniformemente distribuída no intervalo $(9,11)$. Se essa corrente passar em um resistor de $2\ \Omega$, qual será a função densidade de probabilidade da potência $P = 2 I^2?$  E o valor esperado da potência?
+
+---
+
+12) Seja $X$ uma variável aleatória com distribuição $N(\mu, \sigma^2)$. Determine a distribuição de $Y = e^X$.
