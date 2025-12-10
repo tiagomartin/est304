@@ -1042,7 +1042,7 @@
     "href": "aulas/func_geradora_momentos/func_gera_momentos.html#momentos-1",
     "title": "Função Geradora de Momentos",
     "section": "Momentos",
-    "text": "Momentos\n\n\n\n\n\n\n\nDefinição 01: Momentos\n\n\nSeja \\(X\\) uma variável aleatória. Então, o k-ésimo momento de \\(X\\), denotado por \\(\\mu'_k\\) é definido como,\n\\[\\mu'_k = E(X^k)\\]\ndesde que essa quantidade exista. O k-ésimo momento central de uma variável aleatória \\(X\\), denotado por \\(\\mu_k\\) é definido como,\n\\[\\mu^k = E\\Big[X - E(X)\\Big]^k\\]\nsempre que essa quantidade existir."
+    "text": "Momentos\n\n\n\n\n\n\n\nDefinição 01: Momentos\n\n\nSeja \\(X\\) uma variável aleatória. Então, o k-ésimo momento de \\(X\\), denotado por \\(\\mu'_k\\) é definido como,\n\\[\\mu'_k = E(X^k)\\]\ndesde que essa quantidade exista. O k-ésimo momento central de uma variável aleatória \\(X\\), denotado por \\(\\mu_k\\) é definido como,\n\\[\\mu_k = E\\Big[X - E(X)\\Big]^k\\]\nsempre que essa quantidade existir."
   },
   {
     "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#momentos-2",
@@ -1056,7 +1056,7 @@
     "href": "aulas/func_geradora_momentos/func_gera_momentos.html#momentos-3",
     "title": "Função Geradora de Momentos",
     "section": "Momentos",
-    "text": "Momentos\n\nSe \\(X\\) é uma variável aleatória discreta,\n\n\\[\\mu'_k = E(X^k) = \\sum_{i=1}^{\\infty} x_i^k p(x_i)\\]\n\n\nSe \\(X\\) é uma variável aleatória contínua,\n\n\\[\\mu'_k = E(X^k) = \\int_{-\\infty}^{\\infty} x_i^k f(x) \\, dx\\]"
+    "text": "Momentos\n\nSe \\(X\\) é uma variável aleatória discreta,\n\n\\[\\mu'_k = E(X^k) = \\sum_{i=1}^{\\infty} x_i^k p(x_i)\\]\n\n\nSe \\(X\\) é uma variável aleatória contínua,\n\n\\[\\mu'_k = E(X^k) = \\int_{-\\infty}^{\\infty} x^k f(x) \\, dx\\]"
   },
   {
     "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#momentos-4",
@@ -1091,7 +1091,7 @@
     "href": "aulas/func_geradora_momentos/func_gera_momentos.html#momentos-8",
     "title": "Função Geradora de Momentos",
     "section": "Momentos",
-    "text": "Momentos\n\n\n\n\n\n\n\nExemplo 02: Momentos da distribuição Weibull\n\n\nEncontre o \\(k\\)-ésimo momento de \\(X \\sim Weibull(\\alpha, \\beta)\\).\n\n\n\n\n\nSolução: Temos que, se \\(X \\sim Weibull(\\alpha, \\beta)\\), então sua função densidade é dada por,\n\\[\nf(x \\mid \\alpha,\\beta)=\n\\begin{cases}\n\\dfrac{\\beta}{\\alpha}\n\\left(\\dfrac{x}{\\alpha}\\right)^{\\beta-1}\n\\exp\\!\\left[-\\left(\\dfrac{x}{\\alpha}\\right)^{\\beta}\\right], & x\\ge 0,\\\\[6pt]\n0, & x&lt;0.\n\\end{cases}\n\\]"
+    "text": "Momentos\n\n\n\n\n\n\n\nExemplo 02: Momentos da distribuição Weibull\n\n\nEncontre o \\(k\\)-ésimo momento de \\(X \\sim Weibull(\\alpha, \\beta)\\).\n\n\n\n\n\nSolução: Temos que, se \\(X \\sim Weibull(\\alpha, \\beta)\\), então sua função densidade é dada por,\n\\[\nf(x \\mid \\alpha,\\beta)=\n\\begin{cases}\n\\dfrac{\\beta}{\\alpha}\n\\left(\\dfrac{x}{\\alpha}\\right)^{\\beta-1}\n\\exp\\!\\left[-\\left(\\dfrac{x}{\\alpha}\\right)^{\\beta}\\right], & x\\ge 0,\\\\[6pt]\n0, & x&lt;0\n\\end{cases}\n\\]"
   },
   {
     "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#momentos-9",
@@ -1112,7 +1112,7 @@
     "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos",
     "title": "Função Geradora de Momentos",
     "section": "Função Geradora de Momentos",
-    "text": "Função Geradora de Momentos\n\n\n\n\n\n\n\nDefinição 02: Função Geradora de Momentos\n\n\nSeja \\(X\\) uma variável aleatória qualquer. A função geradora de momentos (FGM) de \\(X\\), denotada por \\(M_X\\), é definida por\n\\[\nM_X(t)=E(e^{tX}),\n\\]\npara valores de \\(t\\) em um intervalo contendo \\(0\\) onde a experença exista.\n\n\n\n\nImportante: a função geradora de momentos é função de \\(t\\). Para ela existir basta que exista \\(\\varepsilon &gt; 0\\) tal que \\(E(e^{tX})\\) esteja bem definida para qualquer \\(t \\in (-\\varepsilon, \\varepsilon)\\)."
+    "text": "Função Geradora de Momentos\n\n\n\n\n\n\n\nDefinição 02: Função Geradora de Momentos\n\n\nSeja \\(X\\) uma variável aleatória qualquer. A função geradora de momentos (FGM) de \\(X\\), denotada por \\(M_X\\), é definida por\n\\[\nM_X(t)=E(e^{tX}),\n\\]\npara valores de \\(t\\) em um intervalo contendo \\(0\\) onde a experança exista.\n\n\n\n\nImportante: a função geradora de momentos é função de \\(t\\). Para ela existir basta que exista \\(\\varepsilon &gt; 0\\) tal que \\(E(e^{tX})\\) esteja bem definida para qualquer \\(t \\in (-\\varepsilon, \\varepsilon)\\)."
   },
   {
     "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-1",
@@ -1126,7 +1126,7 @@
     "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-2",
     "title": "Função Geradora de Momentos",
     "section": "Função Geradora de Momentos",
-    "text": "Função Geradora de Momentos\n\n\n\n\n\n\n\nTeorema 01\n\n\nSuponha que a função geradora de momentos de \\(X\\) exista para \\(|t| &lt; \\varepsilon\\), \\(\\varepsilon &gt; 0\\). Então, \\(E(X^k)\\) existe para \\(k = 1, 2, \\cdots\\) e temos:\n\\[E(X^k) = \\dfrac{d^k}{dt^k} M_X(t) \\Bigg|_{t=0}\\]\nou seja, o \\(k\\)-ésimo momento de \\(X\\) é igual à derivada de ordem \\(k\\) de \\(M_X(t)\\) avaliada em \\(t = 0\\).\n\n\n\n\nDemonstração: Suponha que a função geradora de momentos de \\(X\\) exista para todo \\(t\\) tal que \\(|t|&lt;\\varepsilon\\), com \\(\\varepsilon&gt;0\\), isto é,\n\\[\nM_X(t)=E(e^{tX})&lt;\\infty,\\qquad |t|&lt;\\varepsilon.\n\\]"
+    "text": "Função Geradora de Momentos\n\n\n\n\n\n\n\nTeorema 01\n\n\nSuponha que a função geradora de momentos de \\(X\\) exista para \\(|t| &lt; \\varepsilon\\), \\(\\varepsilon &gt; 0\\). Então, \\(E(X^k)\\) existe para \\(k = 1, 2, \\cdots\\) e temos:\n\\[E(X^k) = \\dfrac{d^k}{dt^k} M_X(t) \\Bigg|_{t=0}\\]\nou seja, o \\(k\\)-ésimo momento de \\(X\\) é igual à derivada de ordem \\(k\\) de \\(M_X(t)\\) avaliada em \\(t = 0\\).\n\n\n\n\nDemonstração: Suponha que a função geradora de momentos de \\(X\\) exista para todo \\(t\\) tal que \\(|t|&lt;\\varepsilon\\), com \\(\\varepsilon&gt;0\\), isto é,\n\\[\nM_X(t)=E(e^{tX})&lt;\\infty,\\qquad |t|&lt;\\varepsilon\n\\]"
   },
   {
     "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-3",
@@ -1885,7 +1885,7 @@
     "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-48",
     "title": "Função Geradora de Momentos",
     "section": "Função Geradora de Momentos",
-    "text": "Função Geradora de Momentos\n\n\n\n\n\n\n\nExemplo 09\n\n\nSejam \\(X_1, X_2, \\cdots, X_n\\) variáveis aleatórias independentes com distribuição Bernoulli de parâmetro \\(p\\). Se \\(Y = X_1 + X_2 + \\cdots + X_n\\), mostre, a partir da função geradora de momentos, que \\(Y =  \\sim Binomial(n,p)\\).\n\n\n\n\n\nSolução: Temos que se \\(X_1, X_2, \\cdots, X_n\\) são variáveis aleatórias independentes com distribuição Bernoulli de parâmetro \\(p\\), então\n\\[\nM_{X_j}(t) = 1 - p + p e^{t}, \\quad j = 1,2, \\cdots n\n\\]"
+    "text": "Função Geradora de Momentos\n\n\n\n\n\n\n\nExemplo 09\n\n\nSejam \\(X_1, X_2, \\cdots, X_n\\) variáveis aleatórias independentes com distribuição Bernoulli de parâmetro \\(p\\). Se \\(Y = X_1 + X_2 + \\cdots + X_n\\), mostre, a partir da função geradora de momentos, que \\(Y \\sim Binomial(n,p)\\).\n\n\n\n\n\nSolução: Temos que se \\(X_1, X_2, \\cdots, X_n\\) são variáveis aleatórias independentes com distribuição Bernoulli de parâmetro \\(p\\), então\n\\[\nM_{X_j}(t) = 1 - p + p e^{t}, \\quad j = 1,2, \\cdots n\n\\]"
   },
   {
     "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-49",

@@ -54,7 +54,7 @@ $$\mu'_k = E(X^k)$$
 
 desde que essa quantidade exista. O **k-ésimo momento central** de uma variável aleatória $X$, denotado por $\mu_k$ é definido como,
 
-$$\mu^k = E\Big[X - E(X)\Big]^k$$
+$$\mu_k = E\Big[X - E(X)\Big]^k$$
 
 sempre que essa quantidade existir.
 :::
@@ -93,7 +93,7 @@ $$\mu'_k = E(X^k) = \sum_{i=1}^{\infty} x_i^k p(x_i)$$
 
 - Se $X$ é uma variável aleatória contínua,
 
-$$\mu'_k = E(X^k) = \int_{-\infty}^{\infty} x_i^k f(x) \, dx$$
+$$\mu'_k = E(X^k) = \int_{-\infty}^{\infty} x^k f(x) \, dx$$
 
 
 
@@ -196,7 +196,7 @@ f(x \mid \alpha,\beta)=
 \dfrac{\beta}{\alpha}
 \left(\dfrac{x}{\alpha}\right)^{\beta-1}
 \exp\!\left[-\left(\dfrac{x}{\alpha}\right)^{\beta}\right], & x\ge 0,\\[6pt]
-0, & x<0.
+0, & x<0
 \end{cases}
 $$
 
@@ -271,7 +271,7 @@ $$
 M_X(t)=E(e^{tX}),
 $$
 
-para valores de $t$ em um intervalo contendo $0$ onde a experença exista.
+para valores de $t$ em um intervalo contendo $0$ onde a experança exista.
 :::
 
 
@@ -353,7 +353,7 @@ ou seja, o $k$-ésimo momento de $X$ é igual à derivada de ordem $k$ de $M_X(t
 **Demonstração:** Suponha que a função geradora de momentos de $X$ exista para todo $t$ tal que $|t|<\varepsilon$, com $\varepsilon>0$, isto é,
 
 $$
-M_X(t)=E(e^{tX})<\infty,\qquad |t|<\varepsilon.
+M_X(t)=E(e^{tX})<\infty,\qquad |t|<\varepsilon
 $$
 
 ## Função Geradora de Momentos
@@ -1339,7 +1339,7 @@ e daí segue o resultado desejado.
 
 
 ::: {.callout-note title="Exemplo 09"}
-Sejam $X_1, X_2, \cdots, X_n$ variáveis aleatórias independentes com distribuição Bernoulli de parâmetro $p$. Se $Y = X_1 + X_2 + \cdots + X_n$, mostre, a partir da função geradora de momentos, que $Y =  \sim Binomial(n,p)$.
+Sejam $X_1, X_2, \cdots, X_n$ variáveis aleatórias independentes com distribuição Bernoulli de parâmetro $p$. Se $Y = X_1 + X_2 + \cdots + X_n$, mostre, a partir da função geradora de momentos, que $Y \sim Binomial(n,p)$.
 :::
 
 

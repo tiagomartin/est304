@@ -160,7 +160,7 @@
 <p>Seja <span class="math inline">\(X\)</span> uma variável aleatória. Então, o <strong>k-ésimo momento</strong> de <span class="math inline">\(X\)</span>, denotado por <span class="math inline">\(\mu'_k\)</span> é definido como,</p>
 <p><span class="math display">\[\mu'_k = E(X^k)\]</span></p>
 <p>desde que essa quantidade exista. O <strong>k-ésimo momento central</strong> de uma variável aleatória <span class="math inline">\(X\)</span>, denotado por <span class="math inline">\(\mu_k\)</span> é definido como,</p>
-<p><span class="math display">\[\mu^k = E\Big[X - E(X)\Big]^k\]</span></p>
+<p><span class="math display">\[\mu_k = E\Big[X - E(X)\Big]^k\]</span></p>
 <p>sempre que essa quantidade existir.</p>
 </div>
 </div>
@@ -194,7 +194,7 @@
 <ul>
 <li>Se <span class="math inline">\(X\)</span> é uma variável aleatória contínua,</li>
 </ul>
-<p><span class="math display">\[\mu'_k = E(X^k) = \int_{-\infty}^{\infty} x_i^k f(x) \, dx\]</span></p>
+<p><span class="math display">\[\mu'_k = E(X^k) = \int_{-\infty}^{\infty} x^k f(x) \, dx\]</span></p>
 </div>
 </section>
 <section id="momentos-4" class="slide level2">
@@ -292,7 +292,7 @@ f(x \mid \alpha,\beta)=
 \dfrac{\beta}{\alpha}
 \left(\dfrac{x}{\alpha}\right)^{\beta-1}
 \exp\!\left[-\left(\dfrac{x}{\alpha}\right)^{\beta}\right], &amp; x\ge 0,\\[6pt]
-0, &amp; x&lt;0.
+0, &amp; x&lt;0
 \end{cases}
 \]</span></p>
 </div>
@@ -359,7 +359,7 @@ e^{-u}\,du = \alpha^k\,\,\Gamma\!\left(1+\frac{k}{\beta}\right)
 <p><span class="math display">\[
 M_X(t)=E(e^{tX}),
 \]</span></p>
-<p>para valores de <span class="math inline">\(t\)</span> em um intervalo contendo <span class="math inline">\(0\)</span> onde a experença exista.</p>
+<p>para valores de <span class="math inline">\(t\)</span> em um intervalo contendo <span class="math inline">\(0\)</span> onde a experança exista.</p>
 </div>
 </div>
 </div>
@@ -431,7 +431,7 @@ M_X(t)=E(e^{tX}),
 </div>
 <p><strong>Demonstração:</strong> Suponha que a função geradora de momentos de <span class="math inline">\(X\)</span> exista para todo <span class="math inline">\(t\)</span> tal que <span class="math inline">\(|t|&lt;\varepsilon\)</span>, com <span class="math inline">\(\varepsilon&gt;0\)</span>, isto é,</p>
 <p><span class="math display">\[
-M_X(t)=E(e^{tX})&lt;\infty,\qquad |t|&lt;\varepsilon.
+M_X(t)=E(e^{tX})&lt;\infty,\qquad |t|&lt;\varepsilon
 \]</span></p>
 </section>
 <section id="função-geradora-de-momentos-3" class="slide level2">
@@ -1269,7 +1269,7 @@ M_Y(t) &amp;= E(e^{t(X_1 + X_2 + \cdots + X_n)}) \\ &amp;= E(e^{tX_1}e^{tX_2} \c
 <p><strong>Exemplo 09</strong></p>
 </div>
 <div class="callout-content">
-<p>Sejam <span class="math inline">\(X_1, X_2, \cdots, X_n\)</span> variáveis aleatórias independentes com distribuição Bernoulli de parâmetro <span class="math inline">\(p\)</span>. Se <span class="math inline">\(Y = X_1 + X_2 + \cdots + X_n\)</span>, mostre, a partir da função geradora de momentos, que <span class="math inline">\(Y =  \sim Binomial(n,p)\)</span>.</p>
+<p>Sejam <span class="math inline">\(X_1, X_2, \cdots, X_n\)</span> variáveis aleatórias independentes com distribuição Bernoulli de parâmetro <span class="math inline">\(p\)</span>. Se <span class="math inline">\(Y = X_1 + X_2 + \cdots + X_n\)</span>, mostre, a partir da função geradora de momentos, que <span class="math inline">\(Y \sim Binomial(n,p)\)</span>.</p>
 </div>
 </div>
 </div>
