@@ -1196,7 +1196,7 @@
     "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-12",
     "title": "Função Geradora de Momentos",
     "section": "Função Geradora de Momentos",
-    "text": "Função Geradora de Momentos\n\n\n\n\n\n\n\nExemplo 03: Distribuição Binomial\n\n\nSeja \\(X \\sim Binomial(n,p)\\). Encontre sua função geradora de momentos e a partir dela, encontre \\(E(X)\\) e \\(\\operatorname{Var}(X)\\).\n\n\n\n\n\nSolução: Se \\(X \\sim Binomial(n,p)\\) então sua f.p. é dada por\n\\[\nP(X = k) = \\binom{n}{k} p^k (1-p)^{n-k}, \\qquad k=0,1,\\dots,n\n\\]\nPor definição,\n\\[\nM_X(t) = E(e^{tX}) = \\sum_{k=0}^{n} e^{tk} P(X = k)\n= \\sum_{k=0}^{n} e^{tk} \\binom{n}{k} p^k (1-p)^{n-k}\n\\]"
+    "text": "Função Geradora de Momentos\n\n\n\n\n\n\n\nExemplo 04: Distribuição Binomial\n\n\nSeja \\(X \\sim Binomial(n,p)\\). Encontre sua função geradora de momentos e a partir dela, encontre \\(E(X)\\) e \\(\\operatorname{Var}(X)\\).\n\n\n\n\n\nSolução: Se \\(X \\sim Binomial(n,p)\\) então sua f.p. é dada por\n\\[\nP(X = k) = \\binom{n}{k} p^k (1-p)^{n-k}, \\qquad k=0,1,\\dots,n\n\\]\nPor definição,\n\\[\nM_X(t) = E(e^{tX}) = \\sum_{k=0}^{n} e^{tk} P(X = k)\n= \\sum_{k=0}^{n} e^{tk} \\binom{n}{k} p^k (1-p)^{n-k}\n\\]"
   },
   {
     "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-13",
@@ -1245,7 +1245,7 @@
     "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-19",
     "title": "Função Geradora de Momentos",
     "section": "Função Geradora de Momentos",
-    "text": "Função Geradora de Momentos\n\n\n\n\n\n\n\nExemplo 04: Distribuição Geométrica\n\n\nSeja \\(X \\sim Geo(p)\\). Encontre sua função geradora de momentos e a partir dela, encontre \\(E(X)\\) e \\(\\operatorname{Var}(X)\\).\n\n\n\n\n\nSolução: Seja \\(X \\sim \\text{Geo}(p)\\), cuja função de probabilidade é\n\\[\nP(X = k) = p(1-p)^{k-1}, \\qquad k = 1,2,3,\\dots\n\\]\nPor definição, temos que,\n\\[\nM_X(t)\n= E(e^{tX})\n= \\sum_{k=1}^{\\infty} e^{tk} p(1-p)^{k-1} = p \\sum_{k=1}^{\\infty} (e^t)^k (1-p)^{k-1}\n\\]"
+    "text": "Função Geradora de Momentos\n\n\n\n\n\n\n\nExemplo 05: Distribuição Geométrica\n\n\nSeja \\(X \\sim Geo(p)\\). Encontre sua função geradora de momentos e a partir dela, encontre \\(E(X)\\) e \\(\\operatorname{Var}(X)\\).\n\n\n\n\n\nSolução: Seja \\(X \\sim \\text{Geo}(p)\\), cuja função de probabilidade é\n\\[\nP(X = k) = p(1-p)^{k-1}, \\qquad k = 1,2,3,\\dots\n\\]\nPor definição, temos que,\n\\[\nM_X(t)\n= E(e^{tX})\n= \\sum_{k=1}^{\\infty} e^{tk} p(1-p)^{k-1} = p \\sum_{k=1}^{\\infty} (e^t)^k (1-p)^{k-1}\n\\]"
   },
   {
     "objectID": "aulas/transformacoes/transformacoes.html#função-de-variável-aleatória",
@@ -1595,7 +1595,7 @@
     "href": "cronograma.html",
     "title": "Cronograma da Disciplina",
     "section": "",
-    "text": "Esta página contém um esboço dos tópicos, conteúdos e tarefas para o semestre. Este cronograma será atualizado conforme o semestre avança.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSemana\nData\nTópico\nArtigo\nSlides\nEC\nLE\nScript\nMC\nProjeto\n\n\n\n\n6\nTer, 11/11\nOutras Distribuições Contínuas\n\n\n\n\n\n\n\n\n\n\nQui, 13/11\nOutras Distribuições Contínuas\n\n\n\n\n\n\n\n\n\n7\nTer, 18/11\nNão haverá aula\n\n\n\n\n\n\n\n\n\n\nQui, 20/11\nFeriado: não haverá aula\n\n\n\n\n\n\n\n\n\n8\nTer, 25/11\nOutras Distribuições Contínuas\n\n\n\n\n\n\n\n\n\n\nQui, 27/11\nTransformação de Variáveis Aleatórias\n\n\n\n\n\n\n\n\n\n9\nTer, 02/12\nTransformação de Variáveis Aleatórias\n\n\n\n\n\n\n\n\n\n\nQui, 04/12\nTransformação de Variáveis Aleatórias\n\n\n\n\n\n\n\n\n\n10\nTer, 09/12\nFunção Geradora de Momentos\n\n\n\n\n\n\n\n\n\n\nQui, 11/12\nFunção Geradora de Momentos",
+    "text": "Esta página contém um esboço dos tópicos, conteúdos e tarefas para o semestre. Este cronograma será atualizado conforme o semestre avança.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSemana\nData\nTópico\nArtigo\nSlides\nEC\nLE\nScript\nMC\nProjeto\n\n\n\n\n6\nTer, 11/11\nOutras Distribuições Contínuas\n\n\n\n\n\n\n\n\n\n\nQui, 13/11\nOutras Distribuições Contínuas\n\n\n\n\n\n\n\n\n\n7\nTer, 18/11\nNão haverá aula\n\n\n\n\n\n\n\n\n\n\nQui, 20/11\nFeriado: não haverá aula\n\n\n\n\n\n\n\n\n\n8\nTer, 25/11\nOutras Distribuições Contínuas\n\n\n\n\n\n\n\n\n\n\nQui, 27/11\nTransformação de Variáveis Aleatórias\n\n\n\n\n\n\n\n\n\n9\nTer, 02/12\nTransformação de Variáveis Aleatórias\n\n\n\n\n\n\n\n\n\n\nQui, 04/12\nTransformação de Variáveis Aleatórias\n\n\n\n\n\n\n\n\n\n10\nTer, 09/12\nFunção Geradora de Momentos\n\n\n\n\n\n\n\n\n\n\nQui, 11/12\nFunção Geradora de Momentos\n\n\n\n\n\n\n\n\n\n11\nTer, 16/12\nFunção Geradora de Momentos\n\n\n\n\n\n\n\n\n\n\nQui, 18/12\nFunção Geradora de Momentos\n\n\n\n\n\n\n\n\n\n\n\n22/12 a 17/01 - Recesso Acadêmico",
     "crumbs": [
       "Cronograma da Disciplina"
     ]
@@ -1731,7 +1731,7 @@
     "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-27",
     "title": "Função Geradora de Momentos",
     "section": "Função Geradora de Momentos",
-    "text": "Função Geradora de Momentos\n\n\n\n\n\n\n\nExemplo 05: Distribuição de Poisson\n\n\nSeja \\(X \\sim Poisson(\\lambda)\\). Encontre sua função geradora de momentos e a partir dela, encontre \\(E(X)\\) e \\(\\operatorname{Var}(X)\\).\n\n\n\n\n\nSolução: Seja \\(X \\sim Poisson(\\lambda)\\), cuja função de probabilidade é\n\\[\nP(X = k) = \\frac{e^{-\\lambda}\\lambda^k}{k!}, \\quad k = 0,1,2,\\ldots\n\\]\nAssim, a função geradora de momentos (fgm) de \\(X\\) é dada por,\n\\[\nM_X(t) = \\sum_{k=0}^\\infty e^{tk}\\,\\frac{e^{-\\lambda}\\lambda^k}{k!}\n       = e^{-\\lambda} \\sum_{k=0}^\\infty \\frac{(\\lambda e^t)^k}{k!}\n\\]"
+    "text": "Função Geradora de Momentos\n\n\n\n\n\n\n\nExemplo 06: Distribuição de Poisson\n\n\nSeja \\(X \\sim Poisson(\\lambda)\\). Encontre sua função geradora de momentos e a partir dela, encontre \\(E(X)\\) e \\(\\operatorname{Var}(X)\\).\n\n\n\n\n\nSolução: Seja \\(X \\sim Poisson(\\lambda)\\), cuja função de probabilidade é\n\\[\nP(X = k) = \\frac{e^{-\\lambda}\\lambda^k}{k!}, \\quad k = 0,1,2,\\ldots\n\\]\nAssim, a função geradora de momentos (fgm) de \\(X\\) é dada por,\n\\[\nM_X(t) = \\sum_{k=0}^\\infty e^{tk}\\,\\frac{e^{-\\lambda}\\lambda^k}{k!}\n       = e^{-\\lambda} \\sum_{k=0}^\\infty \\frac{(\\lambda e^t)^k}{k!}\n\\]"
   },
   {
     "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-28",
@@ -1766,14 +1766,14 @@
     "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-32",
     "title": "Função Geradora de Momentos",
     "section": "Função Geradora de Momentos",
-    "text": "Função Geradora de Momentos\n\n\n\n\n\n\n\nExemplo 06: Distribuição Exponencial\n\n\nSeja \\(X \\sim exp(\\lambda)\\). Encontre sua função geradora de momentos e a partir dela, encontre \\(E(X)\\) e \\(\\operatorname{Var}(X)\\).\n\n\n\n\n\nSolução: Seja \\(X \\sim exp(\\lambda)\\), cuja função densidade é\n\\[\nf(x) = \\lambda e^{-\\lambda x}, \\quad x &gt; 0\n\\]\nNeste caso, a função geradora de momentos (fgm) de \\(X\\) é definida por \\[\nM_X(t) = E(e^{tX}) = \\int_0^\\infty e^{tx}\\,\\lambda e^{-\\lambda x}\\,dx = \\int_0^\\infty \\lambda e^{-(\\lambda - t)x} \\, dx\n\\]\nválida para \\(t &lt; \\lambda\\)."
+    "text": "Função Geradora de Momentos\nExemplo 07 - Distribuição Exponencial: Seja \\(X \\sim exp(\\lambda)\\). Encontre sua função geradora de momentos e a partir dela, encontre \\(E(X)\\) e \\(\\operatorname{Var}(X)\\).\n\nSolução: Seja \\(X \\sim exp(\\lambda)\\), cuja função densidade é\n\\[\nf(x) = \\lambda e^{-\\lambda x}, \\quad x &gt; 0\n\\]\nNeste caso, a função geradora de momentos (fgm) de \\(X\\) é definida por \\[\nM_X(t) = E(e^{tX}) = \\int_0^\\infty e^{tx}\\,\\lambda e^{-\\lambda x}\\,dx = \\int_0^\\infty \\lambda e^{-(\\lambda - t)x} \\, dx\n\\]\nválida para \\(t &lt; \\lambda\\)."
   },
   {
     "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-33",
     "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-33",
     "title": "Função Geradora de Momentos",
     "section": "Função Geradora de Momentos",
-    "text": "Função Geradora de Momentos\nAssim, como\n\\[\n\\int_0^\\infty \\lambda e^{-(\\lambda - t)x} =  \\lambda \\frac{e^{-(\\lambda - t)x}}{-(\\lambda - t)} \\Bigg|_0^{\\infty} = \\frac{\\lambda}{\\lambda - t}, \\,\\,\\,\\, \\lambda - t &gt; 0\n\\]\nLogo,\n\\[\n\\boxed{M_X(t) = \\frac{\\lambda}{\\lambda - t}, \\qquad t &lt; \\lambda}\n\\]\nNote que, \\(M_X(0) = \\frac{\\lambda}{\\lambda - 0} =  1\\)"
+    "text": "Função Geradora de Momentos\nAssim, como\n\\[\n\\int_0^\\infty \\lambda e^{-(\\lambda - t)x} \\,dx =  \\lambda \\frac{e^{-(\\lambda - t)x}}{-(\\lambda - t)} \\Bigg|_0^{\\infty} = \\frac{\\lambda}{\\lambda - t}, \\,\\,\\,\\, \\lambda - t &gt; 0\n\\]\nLogo,\n\\[\n\\boxed{M_X(t) = \\frac{\\lambda}{\\lambda - t}, \\qquad t &lt; \\lambda}\n\\]\nNote que, \\(M_X(0) = \\frac{\\lambda}{\\lambda - 0} =  1\\)"
   },
   {
     "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-34",
@@ -1794,7 +1794,7 @@
     "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-36",
     "title": "Função Geradora de Momentos",
     "section": "Função Geradora de Momentos",
-    "text": "Função Geradora de Momentos\n\n\n\n\n\n\n\nExemplo 07: Distribuição Gamma\n\n\nSeja \\(X \\sim Gamma(\\alpha, \\lambda)\\). Encontre sua função geradora de momentos.\n\n\n\n\n\nSolução: Seja \\(X \\sim Gamma(\\alpha, \\lambda)\\), cuja função densidade é\n\\[\n  f(x) = \\frac{\\lambda^\\alpha}{\\Gamma(\\alpha)}x^{\\alpha-1}e^{-\\lambda x},\n\\qquad x&gt;0\n\\]\nA função geradora de momentos é\n\\[\n  M_X(t)\n= \\int_0^\\infty e^{tx}\n\\frac{\\lambda^\\alpha}{\\Gamma(\\alpha)}x^{\\alpha-1}e^{-\\lambda x}\\,dx\n= \\frac{\\lambda^\\alpha}{\\Gamma(\\alpha)}\n\\int_0^\\infty x^{\\alpha-1}e^{-(\\lambda - t)x}\\,dx\n\\]"
+    "text": "Função Geradora de Momentos\nExemplo 08 - Distribuição Gamma: Seja \\(X \\sim Gamma(\\alpha, \\lambda)\\). Encontre sua função geradora de momentos.\n\nSolução: Seja \\(X \\sim Gamma(\\alpha, \\lambda)\\), cuja função densidade é\n\\[\n  f(x) = \\frac{\\lambda^\\alpha}{\\Gamma(\\alpha)}x^{\\alpha-1}e^{-\\lambda x},\n\\qquad x&gt;0\n\\]\nA função geradora de momentos é\n\\[\n  M_X(t)\n= \\int_0^\\infty e^{tx}\n\\frac{\\lambda^\\alpha}{\\Gamma(\\alpha)}x^{\\alpha-1}e^{-\\lambda x}\\,dx\n= \\frac{\\lambda^\\alpha}{\\Gamma(\\alpha)}\n\\int_0^\\infty x^{\\alpha-1}e^{-(\\lambda - t)x}\\,dx\n\\]"
   },
   {
     "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-37",
@@ -1808,7 +1808,7 @@
     "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-38",
     "title": "Função Geradora de Momentos",
     "section": "Função Geradora de Momentos",
-    "text": "Função Geradora de Momentos\n\n\n\n\n\n\n\nExemplo 07: Distribuição Normal Padrão\n\n\nSeja \\(X \\sim N(0, 1)\\). Encontre sua função geradora de momentos.\n\n\n\n\n\nSolução: Seja \\(X \\sim N(0, 1)\\), cuja função densidade é\n\\[\nf(x) = \\frac{1}{\\sqrt{2\\pi}} e^{-x^2/2}, \\qquad x \\in \\mathbb{R}\n\\]\nQueremos encontrar a função geradora de momentos (fgm) dada por\n\\[\nM_X(t)\n= \\int_{-\\infty}^{\\infty} e^{tx}\\,\\frac{1}{\\sqrt{2\\pi}} e^{-x^2/2}\\,dx\n= \\frac{1}{\\sqrt{2\\pi}}\\int_{-\\infty}^{\\infty}\n\\exp\\Big(tx - \\frac{x^2}{2}\\Big)\\,dx\n\\]"
+    "text": "Função Geradora de Momentos\nExemplo 09 - Distribuição Normal Padrão: Seja \\(X \\sim N(0, 1)\\). Encontre sua função geradora de momentos.\n\nSolução: Seja \\(X \\sim N(0, 1)\\), cuja função densidade é\n\\[\nf(x) = \\frac{1}{\\sqrt{2\\pi}} e^{-x^2/2}, \\qquad x \\in \\mathbb{R}\n\\]\nQueremos encontrar a função geradora de momentos (fgm) dada por\n\\[\nM_X(t)\n= \\int_{-\\infty}^{\\infty} e^{tx}\\,\\frac{1}{\\sqrt{2\\pi}} e^{-x^2/2}\\,dx\n= \\frac{1}{\\sqrt{2\\pi}}\\int_{-\\infty}^{\\infty}\n\\exp\\Big(tx - \\frac{x^2}{2}\\Big)\\,dx\n\\]"
   },
   {
     "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-39",
@@ -1829,14 +1829,14 @@
     "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-41",
     "title": "Função Geradora de Momentos",
     "section": "Função Geradora de Momentos",
-    "text": "Função Geradora de Momentos\n\n\n\n\n\n\n\nProposição 01: Transformações Lineares\n\n\nSeja \\(X\\) uma variável aleatória com função geradora de momentos \\(M_X\\). Seja \\(Y = aX + b\\). Então, a função geradora de momentos de \\(Y\\) é dada por\n\\[M_Y(t) = e^{bt} M_X(at)\\]\n\n\n\n\n\nDemonstração:\n\\[M_Y(t) = E(e^{tY}) = E(e^{t(aX+b)}) = E\\Big(e^{atX} e^{bt} \\Big) = e^{bt} E\\Big(e^{atX}\\Big) =  e^{bt} M_X(at)\\]"
+    "text": "Função Geradora de Momentos\nProposição 01 - Transformações Lineares: Seja \\(X\\) uma variável aleatória com função geradora de momentos \\(M_X\\). Seja \\(Y = aX + b\\). Então, a função geradora de momentos de \\(Y\\) é dada por\n\\[M_Y(t) = e^{bt} M_X(at)\\]\n\nDemonstração:\n\\[M_Y(t) = E(e^{tY}) = E(e^{t(aX+b)}) = E\\Big(e^{atX} e^{bt} \\Big) = e^{bt} E\\Big(e^{atX}\\Big) =  e^{bt} M_X(at)\\]"
   },
   {
     "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-42",
     "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-42",
     "title": "Função Geradora de Momentos",
     "section": "Função Geradora de Momentos",
-    "text": "Função Geradora de Momentos\n\n\n\n\n\n\n\nExemplo 07: Distribuição Normal Padrão\n\n\nSeja \\(X \\sim N(\\mu, \\sigma^2)\\). Encontre sua função geradora de momentos.\n\n\n\n\n\nSolução: Se \\(X \\sim N(\\mu, \\sigma^2)\\), então \\(X = \\sigma Z + \\mu\\), em que \\(Z\\sim N(0,1)\\), com função geradora de momentos dada por \\(M_X(t) = \\exp\\!\\left(\\frac{t^2}{2}\\right)\\). Assim,\n\\[M_X(t) = e^{\\mu t} M_X(\\sigma t) = e^{\\mu t} \\exp\\!\\left(\\frac{(\\sigma t)^2}{2}\\right) = e^{\\mu t} \\exp\\!\\left(\\frac{\\sigma^2 t^2}{2}\\right)\\]"
+    "text": "Função Geradora de Momentos\nExemplo 10 - Distribuição Normal: Seja \\(X \\sim N(\\mu, \\sigma^2)\\). Encontre sua função geradora de momentos.\n\nSolução: Se \\(X \\sim N(\\mu, \\sigma^2)\\), então \\(X = \\sigma Z + \\mu\\), em que \\(Z\\sim N(0,1)\\), com função geradora de momentos dada por \\(M_X(t) = \\exp\\!\\left(\\frac{t^2}{2}\\right)\\). Assim,\n\\[M_X(t) = e^{\\mu t} M_X(\\sigma t) = e^{\\mu t} \\exp\\!\\left(\\frac{(\\sigma t)^2}{2}\\right) = e^{\\mu t} \\exp\\!\\left(\\frac{\\sigma^2 t^2}{2}\\right)\\]"
   },
   {
     "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-43",
@@ -1850,14 +1850,14 @@
     "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-44",
     "title": "Função Geradora de Momentos",
     "section": "Função Geradora de Momentos",
-    "text": "Função Geradora de Momentos\n\n\n\n\n\n\n\nTeorema 02\n\n\nSe duas variáveis aleatórias têm funções geradoras de momentos que existem, e são iguais, então elas têm a mesma função de distribuição.\n\n\n\n\n\nA demonstração desse Teorema será omitida, pois ela usa conceitos não estudados neste curso. Veja que o Teorema 02 nos mostra que se duas variáveis aleatórias tem mesma função geradora de momentos então estas variáveis aleatórias são identicamente distribuídas.\nIsso significa que podemos identificar a distribuição de uma variável aleatória a partir da sua função geradora de momentos, assim como identificamos a distribuição da variável aleatória a partir da sua função de distribuição, função densidade ou função de probabilidade."
+    "text": "Função Geradora de Momentos\nTeorema 02: Se duas variáveis aleatórias têm funções geradoras de momentos que existem, e são iguais, então elas têm a mesma função de distribuição.\n\nA demonstração desse Teorema será omitida, pois ela usa conceitos não estudados neste curso. Veja que o Teorema 02 nos mostra que se duas variáveis aleatórias tem mesma função geradora de momentos então estas variáveis aleatórias são identicamente distribuídas.\nIsso significa que podemos identificar a distribuição de uma variável aleatória a partir da sua função geradora de momentos, assim como identificamos a distribuição da variável aleatória a partir da sua função de distribuição, função densidade ou função de probabilidade."
   },
   {
     "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-45",
     "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-45",
     "title": "Função Geradora de Momentos",
     "section": "Função Geradora de Momentos",
-    "text": "Função Geradora de Momentos\n\n\n\n\n\n\n\nExemplo 08\n\n\nSeja \\(X \\sim Gamma(\\alpha, \\lambda)\\). Considere também \\(Y = cX,\\,\\, c\\in \\mathbb{R}\\). Mostre, a partir da função geradora de momentos, que \\(Y \\sim Gamma(\\alpha, \\lambda/c)\\).\n\n\n\n\n\nSolução: Por definição,\n\\[\nM_Y(t) = E(e^{tY}) = E(e^{t(cX)}) = E(e^{(ct)X})\n\\]\nLogo,\n\\[\nM_Y(t) = M_X(ct) = \\left(\\frac{\\lambda}{\\lambda - ct}\\right)^{\\alpha},\n\\qquad ct &lt; \\lambda \\;\\; \\Rightarrow \\;\\; t &lt; \\frac{\\lambda}{c}\n\\]"
+    "text": "Função Geradora de Momentos\nExemplo 11: Seja \\(X \\sim Gamma(\\alpha, \\lambda)\\). Considere também \\(Y = cX,\\,\\, c\\in \\mathbb{R}\\). Mostre, a partir da função geradora de momentos, que \\(Y \\sim Gamma(\\alpha, \\lambda/c)\\).\n\nSolução: Por definição,\n\\[\nM_Y(t) = E(e^{tY}) = E(e^{t(cX)}) = E(e^{(ct)X})\n\\]\nLogo,\n\\[\nM_Y(t) = M_X(ct) = \\left(\\frac{\\lambda}{\\lambda - ct}\\right)^{\\alpha},\n\\qquad ct &lt; \\lambda \\;\\; \\Rightarrow \\;\\; t &lt; \\frac{\\lambda}{c}\n\\]"
   },
   {
     "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-46",
@@ -1871,21 +1871,21 @@
     "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-característica",
     "title": "Função Geradora de Momentos",
     "section": "Função Característica",
-    "text": "Função Característica\nA função característica é uma das ferramentas mais importantes da Teoria das Probabilidades.\n\nEla desempenha um papel similar ao da função geradora de momentos (fgm), mas com vantagens significativas: sempre existe, determina unicamente a distribuição e facilita o estudo de somas de variáveis aleatórias.\n\n\n\n\n\n\n\n\n\nDefinição 03: Variáveis Aleatórias Complexas\n\n\nDizemos que uma variável aleatória \\(X\\) é complexa, se pode ser escrita como\n\\[X = X^a + i \\,X^b\\]\nem que \\(i = \\sqrt{-1}\\) e \\(X^a\\) e \\(X^b\\) são variáveis aleatórias reais."
+    "text": "Função Característica\nA função característica é uma das ferramentas mais importantes da Teoria das Probabilidades.\n\nEla desempenha um papel similar ao da função geradora de momentos (fgm), mas com vantagens significativas: sempre existe, determina unicamente a distribuição e facilita o estudo de somas de variáveis aleatórias.\n\n\nDefinição 03 - Variáveis Aleatórias Complexas: Dizemos que uma variável aleatória \\(X\\) é complexa, se pode ser escrita como\n\\[X = X^a + i \\,X^b\\]\nem que \\(i = \\sqrt{-1}\\) e \\(X^a\\) e \\(X^b\\) são variáveis aleatórias reais."
   },
   {
     "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-47",
     "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-47",
     "title": "Função Geradora de Momentos",
     "section": "Função Geradora de Momentos",
-    "text": "Função Geradora de Momentos\n\n\n\n\n\n\n\nTeorema 03: Soma de variáveis independentes\n\n\nSejam \\(X_1, X_2, \\cdots, X_n\\) variáveis aleatórias independentes e funções geradoras de momentos, respectivamente, iguais a \\(M_{X_j}(t), \\,\\, j = 1, 2, \\cdots, n\\) para \\(t\\) em alguma vizinhança de zero. Se \\(Y = X_1 + X_2 + \\cdots + X_n\\), então a função geradora de momentos de \\(Y\\) existe e é dada por:\n\\[M_Y(t) =  \\prod_{j = 1}^n M_{X_j}(t)\\]\n\n\n\n\n\nDemonstração: Pela definição, temos\n\\[\n\\begin{aligned}\nM_Y(t) &= E(e^{t(X_1 + X_2 + \\cdots + X_n)}) \\\\ &= E(e^{tX_1}e^{tX_2} \\cdots e^{tX_n}) \\\\ &= E(e^{tX_1})E(e^{tX_2})\\cdots E(e^{tX_n})\n\\end{aligned}\n\\] e daí segue o resultado desejado."
+    "text": "Função Geradora de Momentos\nTeorema 03 - Soma de variáveis independentes: Sejam \\(X_1, X_2, \\cdots, X_n\\) variáveis aleatórias independentes e funções geradoras de momentos, respectivamente, iguais a \\(M_{X_j}(t), \\,\\, j = 1, 2, \\cdots, n\\) para \\(t\\) em alguma vizinhança de zero. Se \\(Y = X_1 + X_2 + \\cdots + X_n\\), então a função geradora de momentos de \\(Y\\) existe e é dada por:\n\\[M_Y(t) =  \\prod_{j = 1}^n M_{X_j}(t)\\]\n\nDemonstração: Pela definição, temos\n\\[\n\\begin{aligned}\nM_Y(t) &= E(e^{t(X_1 + X_2 + \\cdots + X_n)}) \\\\ &= E(e^{tX_1}e^{tX_2} \\cdots e^{tX_n}) \\\\ &= E(e^{tX_1})E(e^{tX_2})\\cdots E(e^{tX_n})\n\\end{aligned}\n\\] e daí segue o resultado desejado."
   },
   {
     "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-48",
     "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-48",
     "title": "Função Geradora de Momentos",
     "section": "Função Geradora de Momentos",
-    "text": "Função Geradora de Momentos\n\n\n\n\n\n\n\nExemplo 09\n\n\nSejam \\(X_1, X_2, \\cdots, X_n\\) variáveis aleatórias independentes com distribuição Bernoulli de parâmetro \\(p\\). Se \\(Y = X_1 + X_2 + \\cdots + X_n\\), mostre, a partir da função geradora de momentos, que \\(Y \\sim Binomial(n,p)\\).\n\n\n\n\n\nSolução: Temos que se \\(X_1, X_2, \\cdots, X_n\\) são variáveis aleatórias independentes com distribuição Bernoulli de parâmetro \\(p\\), então\n\\[\nM_{X_j}(t) = 1 - p + p e^{t}, \\quad j = 1,2, \\cdots n\n\\]"
+    "text": "Função Geradora de Momentos\nExemplo 12: Sejam \\(X_1, X_2, \\cdots, X_n\\) variáveis aleatórias independentes com distribuição Bernoulli de parâmetro \\(p\\). Se \\(Y = X_1 + X_2 + \\cdots + X_n\\), mostre, a partir da função geradora de momentos, que \\(Y \\sim Binomial(n,p)\\).\n\nSolução: Temos que se \\(X_1, X_2, \\cdots, X_n\\) são variáveis aleatórias independentes com distribuição Bernoulli de parâmetro \\(p\\), então\n\\[\nM_{X_j}(t) = 1 - p + p e^{t}, \\quad j = 1,2, \\cdots n\n\\]"
   },
   {
     "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-49",
@@ -1906,7 +1906,7 @@
     "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-característica-2",
     "title": "Função Geradora de Momentos",
     "section": "Função Característica",
-    "text": "Função Característica\n\n\n\n\n\n\n\nDefinição 04: Função Característica\n\n\nA função característica de uma variável aleatória \\(X\\) é definida por\n\\[\n\\varphi_X(t) = E\\!\\left(e^{itX}\\right) = E\\Big[\\cos(tX)\\Big] + i\\, E\\Big[\\, \\text{sen}(tX)\\Big],\n\\qquad t \\in \\mathbb{R},\n\\] onde \\(i = \\sqrt{-1}.\\)"
+    "text": "Função Característica\nDefinição 04 - Função Característica: A função característica de uma variável aleatória \\(X\\) é definida por\n\\[\n\\varphi_X(t) = E\\!\\left(e^{itX}\\right) = E\\Big[\\cos(tX)\\Big] + i\\, E\\Big[\\, \\text{sen}(tX)\\Big],\n\\qquad t \\in \\mathbb{R},\n\\] onde \\(i = \\sqrt{-1}.\\)"
   },
   {
     "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-característica-3",
@@ -1941,7 +1941,7 @@
     "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-característica-7",
     "title": "Função Geradora de Momentos",
     "section": "Função Característica",
-    "text": "Função Característica\n\n\n\n\n\n\n\nExemplo 10\n\n\nConsidere uma variável aleatória \\(X\\) com distribuição Uniforme Contínua no intervalo \\([a,b]\\). Encontre sua função característica.\n\n\n\n\n\nSolução: Considere \\(X \\sim \\text{U}(a,b)\\), com \\(a&lt;b\\). Temos que, sua função densidade é dada por\n\\[\nf(x) = \\frac{1}{b-a}, \\qquad a \\le x \\le b\n\\]\nAssim, a função característica de \\(X\\) é\n\\[\n\\varphi_X(t) = E(e^{itX})\n= \\int_{-\\infty}^{\\infty} e^{itx} f(x)\\,dx\n\\]"
+    "text": "Função Característica\nExemplo 13: Considere uma variável aleatória \\(X\\) com distribuição Uniforme Contínua no intervalo \\([a,b]\\). Encontre sua função característica.\n\nSolução: Considere \\(X \\sim \\text{U}(a,b)\\), com \\(a&lt;b\\). Temos que, sua função densidade é dada por\n\\[\nf(x) = \\frac{1}{b-a}, \\qquad a \\le x \\le b\n\\]\nAssim, a função característica de \\(X\\) é\n\\[\n\\varphi_X(t) = E(e^{itX})\n= \\int_{-\\infty}^{\\infty} e^{itx} f(x)\\,dx\n\\]"
   },
   {
     "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-característica-8",
@@ -1955,7 +1955,7 @@
     "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-característica-9",
     "title": "Função Geradora de Momentos",
     "section": "Função Característica",
-    "text": "Função Característica\n\n\n\n\n\n\n\nExemplo 11\n\n\nSeja \\(X \\sim Gamma(\\alpha, \\lambda)\\). Encontre sua função característica.\n\n\n\n\n\nSolução: Se \\(X \\sim Gamma(\\alpha, \\lambda)\\). Temos que sua função densidade é\n\\[\nf(x) = \\frac{\\lambda^\\alpha}{\\Gamma(\\alpha)}x^{\\alpha-1}e^{-\\lambda x},\n\\qquad x&gt;0\n\\]\nAssim,\nA função característica de \\(X\\) é \\[\n\\varphi_X(t) = E(e^{itX})\n= \\int_0^\\infty e^{itx} f(x)\\,dx\n\\]"
+    "text": "Função Característica\nExemplo 14: Seja \\(X \\sim Gamma(\\alpha, \\lambda)\\). Encontre sua função característica.\n\nSolução: Se \\(X \\sim Gamma(\\alpha, \\lambda)\\). Temos que sua função densidade é\n\\[\nf(x) = \\frac{\\lambda^\\alpha}{\\Gamma(\\alpha)}x^{\\alpha-1}e^{-\\lambda x},\n\\qquad x&gt;0\n\\]\nAssim,\nA função característica de \\(X\\) é \\[\n\\varphi_X(t) = E(e^{itX})\n= \\int_0^\\infty e^{itx} f(x)\\,dx\n\\]"
   },
   {
     "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-característica-10",
@@ -1976,7 +1976,7 @@
     "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-característica-12",
     "title": "Função Geradora de Momentos",
     "section": "Função Característica",
-    "text": "Função Característica\n\n\n\n\n\n\n\nExemplo 11\n\n\nSeja \\(X \\sim Binomial(n, p)\\). Encontre sua função característica e, através dela, encontre \\(E(X)\\) e \\(\\text{Var}(X)\\).\n\n\n\n\n\nSolução: Se \\(X \\sim Binomial(n, p)\\), sua função geradora de momentos é dada por\n\\[\nM_X(t) = (1-p + p e^{t})^n\n\\]\nPortanto, segue que\n\\[\n\\varphi_X(t) = M_X(it) = (1-p + p e^{it})^n\n\\]"
+    "text": "Função Característica\nExemplo 15: Seja \\(X \\sim Binomial(n, p)\\). Encontre sua função característica e, através dela, encontre \\(E(X)\\) e \\(\\text{Var}(X)\\).\n\nSolução: Se \\(X \\sim Binomial(n, p)\\), sua função geradora de momentos é dada por\n\\[\nM_X(t) = (1-p + p e^{t})^n\n\\]\nPortanto, segue que\n\\[\n\\varphi_X(t) = M_X(it) = (1-p + p e^{it})^n\n\\]"
   },
   {
     "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-característica-13",
@@ -2018,7 +2018,7 @@
     "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-característica-18",
     "title": "Função Geradora de Momentos",
     "section": "Função Característica",
-    "text": "Função Característica\n\n\n\n\n\n\n\nExemplo 12\n\n\nSeja \\(X \\sim N(\\mu, \\sigma^2)\\). Encontre sua função característica e, através dela, encontre \\(E(X)\\) e \\(\\text{Var}(X)\\).\n\n\n\n\n\nSolução: Se \\(X \\sim N(\\mu, \\sigma^2)\\), sua função geradora de momentos é dada por\n\\[M_X(t)= \\exp \\Bigg(\\mu t + \\frac{\\sigma^2 t^2}{2} \\Bigg)\\]\nPortanto, segue que\n\\[\n\\varphi_X(t) = M_X(it) = \\exp \\Bigg(it\\mu - \\frac{\\sigma^2 t^2}{2} \\Bigg)\n\\]"
+    "text": "Função Característica\nExemplo 16: Seja \\(X \\sim N(\\mu, \\sigma^2)\\). Encontre sua função característica e, através dela, encontre \\(E(X)\\) e \\(\\text{Var}(X)\\).\n\nSolução: Se \\(X \\sim N(\\mu, \\sigma^2)\\), sua função geradora de momentos é dada por\n\\[M_X(t)= \\exp \\Bigg(\\mu t + \\frac{\\sigma^2 t^2}{2} \\Bigg)\\]\nPortanto, segue que\n\\[\n\\varphi_X(t) = M_X(it) = \\exp \\Bigg(it\\mu - \\frac{\\sigma^2 t^2}{2} \\Bigg)\n\\]"
   },
   {
     "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-característica-19",
@@ -2075,5 +2075,33 @@
     "title": "Semana 10",
     "section": "",
     "text": "Fique Atento!\n\n\n\n Lista de exercícios 03\nEntrega na sala de aula!\n\nData de entrega:\n\n20 de janeiro de 2026"
+  },
+  {
+    "objectID": "programacao/semana-11.html",
+    "href": "programacao/semana-11.html",
+    "title": "Semana 11",
+    "section": "",
+    "text": "Função Geradora de Momentos \n\n\nVer slides PDF\n\n\n\n\n\n\n\n\n\n\nFique Atento!\n\n\n\n Lista de exercícios 03\nEntrega na sala de aula!\n\nData de entrega:\n\n20 de janeiro de 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nFique Atento!\n\n\n\n Lista de exercícios 04\nEntrega na sala de aula!\n\nData de entrega:\n\n29 de janeiro de 2026"
+  },
+  {
+    "objectID": "programacao/semana-11.html#slides",
+    "href": "programacao/semana-11.html#slides",
+    "title": "Semana 11",
+    "section": "",
+    "text": "Função Geradora de Momentos \n\n\nVer slides PDF\n\n\n\n\n\n\n\n\n\n\nFique Atento!\n\n\n\n Lista de exercícios 03\nEntrega na sala de aula!\n\nData de entrega:\n\n20 de janeiro de 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nFique Atento!\n\n\n\n Lista de exercícios 04\nEntrega na sala de aula!\n\nData de entrega:\n\n29 de janeiro de 2026"
+  },
+  {
+    "objectID": "programacao/semana-11.html#entrega-lista-de-exercícios-03",
+    "href": "programacao/semana-11.html#entrega-lista-de-exercícios-03",
+    "title": "Semana 11",
+    "section": "",
+    "text": "Fique Atento!\n\n\n\n Lista de exercícios 03\nEntrega na sala de aula!\n\nData de entrega:\n\n20 de janeiro de 2026"
+  },
+  {
+    "objectID": "programacao/semana-11.html#entrega-lista-de-exercícios-04",
+    "href": "programacao/semana-11.html#entrega-lista-de-exercícios-04",
+    "title": "Semana 11",
+    "section": "",
+    "text": "Fique Atento!\n\n\n\n Lista de exercícios 04\nEntrega na sala de aula!\n\nData de entrega:\n\n29 de janeiro de 2026"
   }
 ]

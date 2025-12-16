@@ -583,14 +583,14 @@ M_X''(t) = \frac{d}{dt}\big(M_X'(t)\big)
 </section>
 <section id="função-geradora-de-momentos-12" class="slide level2">
 <h2>Função Geradora de Momentos</h2>
-<div title="Exemplo 03: Distribuição Binomial">
+<div title="Exemplo 04: Distribuição Binomial">
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Exemplo 03: Distribuição Binomial</strong></p>
+<p><strong>Exemplo 04: Distribuição Binomial</strong></p>
 </div>
 <div class="callout-content">
 <p>Seja <span class="math inline">\(X \sim Binomial(n,p)\)</span>. Encontre sua função geradora de momentos e a partir dela, encontre <span class="math inline">\(E(X)\)</span> e <span class="math inline">\(\operatorname{Var}(X)\)</span>.</p>
@@ -703,14 +703,14 @@ M_X''(0)
 </section>
 <section id="função-geradora-de-momentos-19" class="slide level2">
 <h2>Função Geradora de Momentos</h2>
-<div title="Exemplo 04: Distribuição Geométrica">
+<div title="Exemplo 05: Distribuição Geométrica">
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Exemplo 04: Distribuição Geométrica</strong></p>
+<p><strong>Exemplo 05: Distribuição Geométrica</strong></p>
 </div>
 <div class="callout-content">
 <p>Seja <span class="math inline">\(X \sim Geo(p)\)</span>. Encontre sua função geradora de momentos e a partir dela, encontre <span class="math inline">\(E(X)\)</span> e <span class="math inline">\(\operatorname{Var}(X)\)</span>.</p>
@@ -836,14 +836,14 @@ M_X''(t)
 </section>
 <section id="função-geradora-de-momentos-27" class="slide level2">
 <h2>Função Geradora de Momentos</h2>
-<div title="Exemplo 05: Distribuição de Poisson">
+<div title="Exemplo 06: Distribuição de Poisson">
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Exemplo 05: Distribuição de Poisson</strong></p>
+<p><strong>Exemplo 06: Distribuição de Poisson</strong></p>
 </div>
 <div class="callout-content">
 <p>Seja <span class="math inline">\(X \sim Poisson(\lambda)\)</span>. Encontre sua função geradora de momentos e a partir dela, encontre <span class="math inline">\(E(X)\)</span> e <span class="math inline">\(\operatorname{Var}(X)\)</span>.</p>
@@ -933,21 +933,7 @@ E(X^2) = M_X''(0) = \lambda(1+\lambda)
 </section>
 <section id="função-geradora-de-momentos-32" class="slide level2">
 <h2>Função Geradora de Momentos</h2>
-<div title="Exemplo 06: Distribuição Exponencial">
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Exemplo 06: Distribuição Exponencial</strong></p>
-</div>
-<div class="callout-content">
-<p>Seja <span class="math inline">\(X \sim exp(\lambda)\)</span>. Encontre sua função geradora de momentos e a partir dela, encontre <span class="math inline">\(E(X)\)</span> e <span class="math inline">\(\operatorname{Var}(X)\)</span>.</p>
-</div>
-</div>
-</div>
-</div>
+<p><strong>Exemplo 07 - Distribuição Exponencial:</strong> Seja <span class="math inline">\(X \sim exp(\lambda)\)</span>. Encontre sua função geradora de momentos e a partir dela, encontre <span class="math inline">\(E(X)\)</span> e <span class="math inline">\(\operatorname{Var}(X)\)</span>.</p>
 <div class="fragment">
 <p><strong>Solução:</strong> Seja <span class="math inline">\(X \sim exp(\lambda)\)</span>, cuja função densidade é</p>
 <p><span class="math display">\[
@@ -963,7 +949,7 @@ M_X(t) = E(e^{tX}) = \int_0^\infty e^{tx}\,\lambda e^{-\lambda x}\,dx = \int_0^\
 <h2>Função Geradora de Momentos</h2>
 <p>Assim, como</p>
 <p><span class="math display">\[
-\int_0^\infty \lambda e^{-(\lambda - t)x} =  \lambda \frac{e^{-(\lambda - t)x}}{-(\lambda - t)} \Bigg|_0^{\infty} = \frac{\lambda}{\lambda - t}, \,\,\,\, \lambda - t &gt; 0
+\int_0^\infty \lambda e^{-(\lambda - t)x} \,dx =  \lambda \frac{e^{-(\lambda - t)x}}{-(\lambda - t)} \Bigg|_0^{\infty} = \frac{\lambda}{\lambda - t}, \,\,\,\, \lambda - t &gt; 0
 \]</span></p>
 <p>Logo,</p>
 <p><span class="math display">\[
@@ -1002,21 +988,7 @@ E(X^2) = M_X''(0) = \frac{2\lambda}{\lambda^3} = \frac{2}{\lambda^2}
 </section>
 <section id="função-geradora-de-momentos-36" class="slide level2">
 <h2>Função Geradora de Momentos</h2>
-<div title="Exemplo 07: Distribuição Gamma">
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Exemplo 07: Distribuição Gamma</strong></p>
-</div>
-<div class="callout-content">
-<p>Seja <span class="math inline">\(X \sim Gamma(\alpha, \lambda)\)</span>. Encontre sua função geradora de momentos.</p>
-</div>
-</div>
-</div>
-</div>
+<p><strong>Exemplo 08 - Distribuição Gamma:</strong> Seja <span class="math inline">\(X \sim Gamma(\alpha, \lambda)\)</span>. Encontre sua função geradora de momentos.</p>
 <div class="fragment">
 <p><strong>Solução:</strong> Seja <span class="math inline">\(X \sim Gamma(\alpha, \lambda)\)</span>, cuja função densidade é</p>
 <p><span class="math display">\[
@@ -1057,21 +1029,7 @@ M_X(t)
 </section>
 <section id="função-geradora-de-momentos-38" class="slide level2">
 <h2>Função Geradora de Momentos</h2>
-<div title="Exemplo 07: Distribuição Normal Padrão">
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Exemplo 07: Distribuição Normal Padrão</strong></p>
-</div>
-<div class="callout-content">
-<p>Seja <span class="math inline">\(X \sim N(0, 1)\)</span>. Encontre sua função geradora de momentos.</p>
-</div>
-</div>
-</div>
-</div>
+<p><strong>Exemplo 09 - Distribuição Normal Padrão:</strong> Seja <span class="math inline">\(X \sim N(0, 1)\)</span>. Encontre sua função geradora de momentos.</p>
 <div class="fragment">
 <p><strong>Solução:</strong> Seja <span class="math inline">\(X \sim N(0, 1)\)</span>, cuja função densidade é</p>
 <p><span class="math display">\[
@@ -1119,22 +1077,8 @@ M_X(t)
 </section>
 <section id="função-geradora-de-momentos-41" class="slide level2">
 <h2>Função Geradora de Momentos</h2>
-<div title="Proposição 01: Transformações Lineares">
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Proposição 01: Transformações Lineares</strong></p>
-</div>
-<div class="callout-content">
-<p>Seja <span class="math inline">\(X\)</span> uma variável aleatória com função geradora de momentos <span class="math inline">\(M_X\)</span>. Seja <span class="math inline">\(Y = aX + b\)</span>. Então, a função geradora de momentos de <span class="math inline">\(Y\)</span> é dada por</p>
+<p><strong>Proposição 01 - Transformações Lineares:</strong> Seja <span class="math inline">\(X\)</span> uma variável aleatória com função geradora de momentos <span class="math inline">\(M_X\)</span>. Seja <span class="math inline">\(Y = aX + b\)</span>. Então, a função geradora de momentos de <span class="math inline">\(Y\)</span> é dada por</p>
 <p><span class="math display">\[M_Y(t) = e^{bt} M_X(at)\]</span></p>
-</div>
-</div>
-</div>
-</div>
 <div class="fragment">
 <p><strong>Demonstração:</strong></p>
 <p><span class="math display">\[M_Y(t) = E(e^{tY}) = E(e^{t(aX+b)}) = E\Big(e^{atX} e^{bt} \Big) = e^{bt} E\Big(e^{atX}\Big) =  e^{bt} M_X(at)\]</span></p>
@@ -1142,21 +1086,7 @@ M_X(t)
 </section>
 <section id="função-geradora-de-momentos-42" class="slide level2">
 <h2>Função Geradora de Momentos</h2>
-<div title="Exemplo 07: Distribuição Normal Padrão">
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Exemplo 07: Distribuição Normal Padrão</strong></p>
-</div>
-<div class="callout-content">
-<p>Seja <span class="math inline">\(X \sim N(\mu, \sigma^2)\)</span>. Encontre sua função geradora de momentos.</p>
-</div>
-</div>
-</div>
-</div>
+<p><strong>Exemplo 10 - Distribuição Normal:</strong> Seja <span class="math inline">\(X \sim N(\mu, \sigma^2)\)</span>. Encontre sua função geradora de momentos.</p>
 <div class="fragment">
 <p><strong>Solução:</strong> Se <span class="math inline">\(X \sim N(\mu, \sigma^2)\)</span>, então <span class="math inline">\(X = \sigma Z + \mu\)</span>, em que <span class="math inline">\(Z\sim N(0,1)\)</span>, com função geradora de momentos dada por <span class="math inline">\(M_X(t) = \exp\!\left(\frac{t^2}{2}\right)\)</span>. Assim,</p>
 <p><span class="math display">\[M_X(t) = e^{\mu t} M_X(\sigma t) = e^{\mu t} \exp\!\left(\frac{(\sigma t)^2}{2}\right) = e^{\mu t} \exp\!\left(\frac{\sigma^2 t^2}{2}\right)\]</span></p>
@@ -1170,21 +1100,7 @@ M_X(t)
 </section>
 <section id="função-geradora-de-momentos-44" class="slide level2">
 <h2>Função Geradora de Momentos</h2>
-<div title="Teorema 02">
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Teorema 02</strong></p>
-</div>
-<div class="callout-content">
-<p>Se duas variáveis aleatórias têm funções geradoras de momentos que existem, e são iguais, então elas têm a mesma função de distribuição.</p>
-</div>
-</div>
-</div>
-</div>
+<p><strong>Teorema 02:</strong> Se duas variáveis aleatórias têm funções geradoras de momentos que existem, e são iguais, então elas têm a mesma função de distribuição.</p>
 <div class="fragment">
 <p>A demonstração desse Teorema será omitida, pois ela usa conceitos não estudados neste curso. Veja que o Teorema 02 nos mostra que se duas variáveis aleatórias tem mesma função geradora de momentos então estas variáveis aleatórias são identicamente distribuídas.</p>
 <p>Isso significa que podemos identificar a distribuição de uma variável aleatória a partir da sua função geradora de momentos, assim como identificamos a distribuição da variável aleatória a partir da sua função de distribuição, função densidade ou função de probabilidade.</p>
@@ -1192,21 +1108,7 @@ M_X(t)
 </section>
 <section id="função-geradora-de-momentos-45" class="slide level2">
 <h2>Função Geradora de Momentos</h2>
-<div title="Exemplo 08">
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Exemplo 08</strong></p>
-</div>
-<div class="callout-content">
-<p>Seja <span class="math inline">\(X \sim Gamma(\alpha, \lambda)\)</span>. Considere também <span class="math inline">\(Y = cX,\,\, c\in \mathbb{R}\)</span>. Mostre, a partir da função geradora de momentos, que <span class="math inline">\(Y \sim Gamma(\alpha, \lambda/c)\)</span>.</p>
-</div>
-</div>
-</div>
-</div>
+<p><strong>Exemplo 11:</strong> Seja <span class="math inline">\(X \sim Gamma(\alpha, \lambda)\)</span>. Considere também <span class="math inline">\(Y = cX,\,\, c\in \mathbb{R}\)</span>. Mostre, a partir da função geradora de momentos, que <span class="math inline">\(Y \sim Gamma(\alpha, \lambda/c)\)</span>.</p>
 <div class="fragment">
 <p><strong>Solução:</strong> Por definição,</p>
 <p><span class="math display">\[
@@ -1232,22 +1134,8 @@ M_Y(t)
 </section>
 <section id="função-geradora-de-momentos-47" class="slide level2">
 <h2>Função Geradora de Momentos</h2>
-<div title="Teorema 03: Soma de variáveis independentes">
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Teorema 03: Soma de variáveis independentes</strong></p>
-</div>
-<div class="callout-content">
-<p>Sejam <span class="math inline">\(X_1, X_2, \cdots, X_n\)</span> variáveis aleatórias independentes e funções geradoras de momentos, respectivamente, iguais a <span class="math inline">\(M_{X_j}(t), \,\, j = 1, 2, \cdots, n\)</span> para <span class="math inline">\(t\)</span> em alguma vizinhança de zero. Se <span class="math inline">\(Y = X_1 + X_2 + \cdots + X_n\)</span>, então a função geradora de momentos de <span class="math inline">\(Y\)</span> existe e é dada por:</p>
+<p><strong>Teorema 03 - Soma de variáveis independentes:</strong> Sejam <span class="math inline">\(X_1, X_2, \cdots, X_n\)</span> variáveis aleatórias independentes e funções geradoras de momentos, respectivamente, iguais a <span class="math inline">\(M_{X_j}(t), \,\, j = 1, 2, \cdots, n\)</span> para <span class="math inline">\(t\)</span> em alguma vizinhança de zero. Se <span class="math inline">\(Y = X_1 + X_2 + \cdots + X_n\)</span>, então a função geradora de momentos de <span class="math inline">\(Y\)</span> existe e é dada por:</p>
 <p><span class="math display">\[M_Y(t) =  \prod_{j = 1}^n M_{X_j}(t)\]</span></p>
-</div>
-</div>
-</div>
-</div>
 <div class="fragment">
 <p><strong>Demonstração:</strong> Pela definição, temos</p>
 <p><span class="math display">\[
@@ -1259,21 +1147,7 @@ M_Y(t) &amp;= E(e^{t(X_1 + X_2 + \cdots + X_n)}) \\ &amp;= E(e^{tX_1}e^{tX_2} \c
 </section>
 <section id="função-geradora-de-momentos-48" class="slide level2">
 <h2>Função Geradora de Momentos</h2>
-<div title="Exemplo 09">
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Exemplo 09</strong></p>
-</div>
-<div class="callout-content">
-<p>Sejam <span class="math inline">\(X_1, X_2, \cdots, X_n\)</span> variáveis aleatórias independentes com distribuição Bernoulli de parâmetro <span class="math inline">\(p\)</span>. Se <span class="math inline">\(Y = X_1 + X_2 + \cdots + X_n\)</span>, mostre, a partir da função geradora de momentos, que <span class="math inline">\(Y \sim Binomial(n,p)\)</span>.</p>
-</div>
-</div>
-</div>
-</div>
+<p><strong>Exemplo 12:</strong> Sejam <span class="math inline">\(X_1, X_2, \cdots, X_n\)</span> variáveis aleatórias independentes com distribuição Bernoulli de parâmetro <span class="math inline">\(p\)</span>. Se <span class="math inline">\(Y = X_1 + X_2 + \cdots + X_n\)</span>, mostre, a partir da função geradora de momentos, que <span class="math inline">\(Y \sim Binomial(n,p)\)</span>.</p>
 <div class="fragment">
 <p><strong>Solução:</strong> Temos que se <span class="math inline">\(X_1, X_2, \cdots, X_n\)</span> são variáveis aleatórias independentes com distribuição Bernoulli de parâmetro <span class="math inline">\(p\)</span>, então</p>
 <p><span class="math display">\[
@@ -1296,23 +1170,9 @@ M_Y(t) = \prod_{j = 1}^n M_{X_j}(t) = \big(1 - p + p e^{t}\big)^n
 <p>Ela desempenha um papel similar ao da função geradora de momentos (fgm), mas com vantagens significativas: <strong>sempre existe</strong>, determina unicamente a distribuição e facilita o estudo de somas de variáveis aleatórias.</p>
 </div>
 <div class="fragment">
-<div title="Definição 03: Variáveis Aleatórias Complexas">
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Definição 03: Variáveis Aleatórias Complexas</strong></p>
-</div>
-<div class="callout-content">
-<p>Dizemos que uma variável aleatória <span class="math inline">\(X\)</span> é complexa, se pode ser escrita como</p>
+<p><strong>Definição 03 - Variáveis Aleatórias Complexas:</strong> Dizemos que uma variável aleatória <span class="math inline">\(X\)</span> é complexa, se pode ser escrita como</p>
 <p><span class="math display">\[X = X^a + i \,X^b\]</span></p>
 <p>em que <span class="math inline">\(i = \sqrt{-1}\)</span> e <span class="math inline">\(X^a\)</span> e <span class="math inline">\(X^b\)</span> são variáveis aleatórias reais.</p>
-</div>
-</div>
-</div>
-</div>
 </div>
 </section>
 <section id="função-característica-1" class="slide level2">
@@ -1329,25 +1189,11 @@ M_Y(t) = \prod_{j = 1}^n M_{X_j}(t) = \big(1 - p + p e^{t}\big)^n
 </section>
 <section id="função-característica-2" class="slide level2">
 <h2>Função Característica</h2>
-<div title="Definição 04: Função Característica">
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Definição 04: Função Característica</strong></p>
-</div>
-<div class="callout-content">
-<p>A função característica de uma variável aleatória <span class="math inline">\(X\)</span> é definida por</p>
+<p><strong>Definição 04 - Função Característica:</strong> A função característica de uma variável aleatória <span class="math inline">\(X\)</span> é definida por</p>
 <p><span class="math display">\[
 \varphi_X(t) = E\!\left(e^{itX}\right) = E\Big[\cos(tX)\Big] + i\, E\Big[\, \text{sen}(tX)\Big],
 \qquad t \in \mathbb{R},
 \]</span> onde <span class="math inline">\(i = \sqrt{-1}.\)</span></p>
-</div>
-</div>
-</div>
-</div>
 </section>
 <section id="função-característica-3" class="slide level2">
 <h2>Função Característica</h2>
@@ -1406,21 +1252,7 @@ Como <span class="math inline">\(E(e^{it\cdot 0}) = 1\)</span>, temos <span clas
 </section>
 <section id="função-característica-7" class="slide level2">
 <h2>Função Característica</h2>
-<div title="Exemplo 10">
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Exemplo 10</strong></p>
-</div>
-<div class="callout-content">
-<p>Considere uma variável aleatória <span class="math inline">\(X\)</span> com distribuição Uniforme Contínua no intervalo <span class="math inline">\([a,b]\)</span>. Encontre sua função característica.</p>
-</div>
-</div>
-</div>
-</div>
+<p><strong>Exemplo 13:</strong> Considere uma variável aleatória <span class="math inline">\(X\)</span> com distribuição Uniforme Contínua no intervalo <span class="math inline">\([a,b]\)</span>. Encontre sua função característica.</p>
 <div class="fragment">
 <p><strong>Solução:</strong> Considere <span class="math inline">\(X \sim \text{U}(a,b)\)</span>, com <span class="math inline">\(a&lt;b\)</span>. Temos que, sua função densidade é dada por</p>
 <p><span class="math display">\[
@@ -1452,21 +1284,7 @@ f(x) = \frac{1}{b-a}, \qquad a \le x \le b
 </section>
 <section id="função-característica-9" class="slide level2">
 <h2>Função Característica</h2>
-<div title="Exemplo 11">
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Exemplo 11</strong></p>
-</div>
-<div class="callout-content">
-<p>Seja <span class="math inline">\(X \sim Gamma(\alpha, \lambda)\)</span>. Encontre sua função característica.</p>
-</div>
-</div>
-</div>
-</div>
+<p><strong>Exemplo 14:</strong> Seja <span class="math inline">\(X \sim Gamma(\alpha, \lambda)\)</span>. Encontre sua função característica.</p>
 <div class="fragment">
 <p><strong>Solução:</strong> Se <span class="math inline">\(X \sim Gamma(\alpha, \lambda)\)</span>. Temos que sua função densidade é</p>
 <p><span class="math display">\[
@@ -1516,21 +1334,7 @@ f(x) = \frac{\lambda^\alpha}{\Gamma(\alpha)}x^{\alpha-1}e^{-\lambda x},
 </section>
 <section id="função-característica-12" class="slide level2">
 <h2>Função Característica</h2>
-<div title="Exemplo 11">
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Exemplo 11</strong></p>
-</div>
-<div class="callout-content">
-<p>Seja <span class="math inline">\(X \sim Binomial(n, p)\)</span>. Encontre sua função característica e, através dela, encontre <span class="math inline">\(E(X)\)</span> e <span class="math inline">\(\text{Var}(X)\)</span>.</p>
-</div>
-</div>
-</div>
-</div>
+<p><strong>Exemplo 15:</strong> Seja <span class="math inline">\(X \sim Binomial(n, p)\)</span>. Encontre sua função característica e, através dela, encontre <span class="math inline">\(E(X)\)</span> e <span class="math inline">\(\text{Var}(X)\)</span>.</p>
 <div class="fragment">
 <p><strong>Solução:</strong> Se <span class="math inline">\(X \sim Binomial(n, p)\)</span>, sua função geradora de momentos é dada por</p>
 <p><span class="math display">\[
@@ -1626,21 +1430,7 @@ E(X^2) = -\varphi_X''(0)
 </section>
 <section id="função-característica-18" class="slide level2">
 <h2>Função Característica</h2>
-<div title="Exemplo 12">
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Exemplo 12</strong></p>
-</div>
-<div class="callout-content">
-<p>Seja <span class="math inline">\(X \sim N(\mu, \sigma^2)\)</span>. Encontre sua função característica e, através dela, encontre <span class="math inline">\(E(X)\)</span> e <span class="math inline">\(\text{Var}(X)\)</span>.</p>
-</div>
-</div>
-</div>
-</div>
+<p><strong>Exemplo 16:</strong> Seja <span class="math inline">\(X \sim N(\mu, \sigma^2)\)</span>. Encontre sua função característica e, através dela, encontre <span class="math inline">\(E(X)\)</span> e <span class="math inline">\(\text{Var}(X)\)</span>.</p>
 <div class="fragment">
 <p><strong>Solução:</strong> Se <span class="math inline">\(X \sim N(\mu, \sigma^2)\)</span>, sua função geradora de momentos é dada por</p>
 <p><span class="math display">\[M_X(t)= \exp \Bigg(\mu t + \frac{\sigma^2 t^2}{2} \Bigg)\]</span></p>

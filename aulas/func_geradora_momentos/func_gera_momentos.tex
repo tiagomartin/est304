@@ -215,7 +215,7 @@ exemplo \textbf{coeficientes de assimetria} e \textbf{curtose}.
 
 \begin{frame}{Momentos}
 \phantomsection\label{momentos-1}
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Definição 01: Momentos}, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, leftrule=.75mm, bottomrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, titlerule=0mm, breakable, coltitle=black, left=2mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, colback=white, arc=.35mm, bottomrule=.15mm, breakable, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Definição 01: Momentos}, bottomtitle=1mm, toptitle=1mm, opacityback=0, opacitybacktitle=0.6, leftrule=.75mm, toprule=.15mm, left=2mm, coltitle=black]
 
 Seja \(X\) uma variável aleatória. Então, o \textbf{k-ésimo momento} de
 \(X\), denotado por \(\mu'_k\) é definido como,
@@ -225,7 +225,7 @@ Seja \(X\) uma variável aleatória. Então, o \textbf{k-ésimo momento} de
 desde que essa quantidade exista. O \textbf{k-ésimo momento central} de
 uma variável aleatória \(X\), denotado por \(\mu_k\) é definido como,
 
-\[\mu^k = E\Big[X - E(X)\Big]^k\]
+\[\mu_k = E\Big[X - E(X)\Big]^k\]
 
 sempre que essa quantidade existir.
 
@@ -277,12 +277,12 @@ Note que,
   Se \(X\) é uma variável aleatória contínua,
 \end{itemize}
 
-\[\mu'_k = E(X^k) = \int_{-\infty}^{\infty} x_i^k f(x) \, dx\]
+\[\mu'_k = E(X^k) = \int_{-\infty}^{\infty} x^k f(x) \, dx\]
 \end{frame}
 
 \begin{frame}{Momentos}
 \phantomsection\label{momentos-4}
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Exemplo 01: Momentos da distribuição Gamma}, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, leftrule=.75mm, bottomrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, titlerule=0mm, breakable, coltitle=black, left=2mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, colback=white, arc=.35mm, bottomrule=.15mm, breakable, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Exemplo 01: Momentos da distribuição Gamma}, bottomtitle=1mm, toptitle=1mm, opacityback=0, opacitybacktitle=0.6, leftrule=.75mm, toprule=.15mm, left=2mm, coltitle=black]
 
 Encontre o \(k\)-ésimo momento de \(X \sim Gamma(\alpha, \lambda)\).
 
@@ -358,7 +358,7 @@ E(X^k)
 
 \begin{frame}{Momentos}
 \phantomsection\label{momentos-8}
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Exemplo 02: Momentos da distribuição Weibull}, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, leftrule=.75mm, bottomrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, titlerule=0mm, breakable, coltitle=black, left=2mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, colback=white, arc=.35mm, bottomrule=.15mm, breakable, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Exemplo 02: Momentos da distribuição Weibull}, bottomtitle=1mm, toptitle=1mm, opacityback=0, opacitybacktitle=0.6, leftrule=.75mm, toprule=.15mm, left=2mm, coltitle=black]
 
 Encontre o \(k\)-ésimo momento de \(X \sim Weibull(\alpha, \beta)\).
 
@@ -375,7 +375,7 @@ f(x \mid \alpha,\beta)=
 \dfrac{\beta}{\alpha}
 \left(\dfrac{x}{\alpha}\right)^{\beta-1}
 \exp\!\left[-\left(\dfrac{x}{\alpha}\right)^{\beta}\right], & x\ge 0,\\[6pt]
-0, & x<0.
+0, & x<0
 \end{cases}
 \]
 \end{frame}
@@ -436,7 +436,7 @@ e^{-u}\,du = \alpha^k\,\,\Gamma\!\left(1+\frac{k}{\beta}\right)
 
 \begin{frame}{Função Geradora de Momentos}
 \phantomsection\label{funuxe7uxe3o-geradora-de-momentos}
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Definição 02: Função Geradora de Momentos}, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, leftrule=.75mm, bottomrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, titlerule=0mm, breakable, coltitle=black, left=2mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, colback=white, arc=.35mm, bottomrule=.15mm, breakable, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Definição 02: Função Geradora de Momentos}, bottomtitle=1mm, toptitle=1mm, opacityback=0, opacitybacktitle=0.6, leftrule=.75mm, toprule=.15mm, left=2mm, coltitle=black]
 
 Seja \(X\) uma variável aleatória qualquer. A \textbf{função geradora de
 momentos} (FGM) de \(X\), denotada por \(M_X\), é definida por
@@ -445,7 +445,7 @@ momentos} (FGM) de \(X\), denotada por \(M_X\), é definida por
 M_X(t)=E(e^{tX}),
 \]
 
-para valores de \(t\) em um intervalo contendo \(0\) onde a experença
+para valores de \(t\) em um intervalo contendo \(0\) onde a experança
 exista.
 
 \end{tcolorbox}
@@ -481,7 +481,7 @@ a variável for \textbf{discreta} ou \textbf{contínua}, isto é,
 
 \begin{frame}{Função Geradora de Momentos}
 \phantomsection\label{funuxe7uxe3o-geradora-de-momentos-2}
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Teorema 01}, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, leftrule=.75mm, bottomrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, titlerule=0mm, breakable, coltitle=black, left=2mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, colback=white, arc=.35mm, bottomrule=.15mm, breakable, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Teorema 01}, bottomtitle=1mm, toptitle=1mm, opacityback=0, opacitybacktitle=0.6, leftrule=.75mm, toprule=.15mm, left=2mm, coltitle=black]
 
 Suponha que a função geradora de momentos de \(X\) exista para
 \(|t| < \varepsilon\), \(\varepsilon > 0\). Então, \(E(X^k)\) existe
@@ -499,7 +499,7 @@ ou seja, o \(k\)-ésimo momento de \(X\) é igual à derivada de ordem
 \(\varepsilon>0\), isto é,
 
 \[
-M_X(t)=E(e^{tX})<\infty,\qquad |t|<\varepsilon.
+M_X(t)=E(e^{tX})<\infty,\qquad |t|<\varepsilon
 \]
 \end{frame}
 
@@ -590,7 +590,7 @@ ordem \(k\) da função geradora de momentos avaliada em \(t=0\).
 
 \begin{frame}{Função Geradora de Momentos}
 \phantomsection\label{funuxe7uxe3o-geradora-de-momentos-8}
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, colback=white, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Dica Importante!}, rightrule=.15mm, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, leftrule=.75mm, bottomrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, titlerule=0mm, breakable, coltitle=black, left=2mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, colback=white, arc=.35mm, bottomrule=.15mm, breakable, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Dica Importante!}, bottomtitle=1mm, toptitle=1mm, opacityback=0, opacitybacktitle=0.6, leftrule=.75mm, toprule=.15mm, left=2mm, coltitle=black]
 
 Para qualquer variável aleatória \(X\):
 
@@ -606,7 +606,7 @@ correta.
 
 \begin{frame}{Função Geradora de Momentos}
 \phantomsection\label{funuxe7uxe3o-geradora-de-momentos-9}
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Exemplo 03: Distribuição de Bernoulli}, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, leftrule=.75mm, bottomrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, titlerule=0mm, breakable, coltitle=black, left=2mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, colback=white, arc=.35mm, bottomrule=.15mm, breakable, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Exemplo 03: Distribuição de Bernoulli}, bottomtitle=1mm, toptitle=1mm, opacityback=0, opacitybacktitle=0.6, leftrule=.75mm, toprule=.15mm, left=2mm, coltitle=black]
 
 Seja \(X \sim Bernoulli(p)\). Encontre sua função geradora de momentos e
 a partir dela, encontre \(E(X)\) e \(\operatorname{Var}(X)\).
@@ -682,7 +682,7 @@ Assim,
 
 \begin{frame}{Função Geradora de Momentos}
 \phantomsection\label{funuxe7uxe3o-geradora-de-momentos-12}
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Exemplo 03: Distribuição Binomial}, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, leftrule=.75mm, bottomrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, titlerule=0mm, breakable, coltitle=black, left=2mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, colback=white, arc=.35mm, bottomrule=.15mm, breakable, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Exemplo 04: Distribuição Binomial}, bottomtitle=1mm, toptitle=1mm, opacityback=0, opacitybacktitle=0.6, leftrule=.75mm, toprule=.15mm, left=2mm, coltitle=black]
 
 Seja \(X \sim Binomial(n,p)\). Encontre sua função geradora de momentos
 e a partir dela, encontre \(E(X)\) e \(\operatorname{Var}(X)\).
@@ -826,7 +826,7 @@ De forma que,
 
 \begin{frame}{Função Geradora de Momentos}
 \phantomsection\label{funuxe7uxe3o-geradora-de-momentos-19}
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Exemplo 04: Distribuição Geométrica}, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, leftrule=.75mm, bottomrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, titlerule=0mm, breakable, coltitle=black, left=2mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, colback=white, arc=.35mm, bottomrule=.15mm, breakable, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Exemplo 05: Distribuição Geométrica}, bottomtitle=1mm, toptitle=1mm, opacityback=0, opacitybacktitle=0.6, leftrule=.75mm, toprule=.15mm, left=2mm, coltitle=black]
 
 Seja \(X \sim Geo(p)\). Encontre sua função geradora de momentos e a
 partir dela, encontre \(E(X)\) e \(\operatorname{Var}(X)\).
@@ -1000,7 +1000,7 @@ bem definida para \(t\) em uma vizinhança de zero.
 
 \begin{frame}{Função Geradora de Momentos}
 \phantomsection\label{funuxe7uxe3o-geradora-de-momentos-27}
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Exemplo 05: Distribuição de Poisson}, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, leftrule=.75mm, bottomrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, titlerule=0mm, breakable, coltitle=black, left=2mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, colback=white, arc=.35mm, bottomrule=.15mm, breakable, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Exemplo 06: Distribuição de Poisson}, bottomtitle=1mm, toptitle=1mm, opacityback=0, opacitybacktitle=0.6, leftrule=.75mm, toprule=.15mm, left=2mm, coltitle=black]
 
 Seja \(X \sim Poisson(\lambda)\). Encontre sua função geradora de
 momentos e a partir dela, encontre \(E(X)\) e \(\operatorname{Var}(X)\).
@@ -1115,12 +1115,9 @@ Assim,
 
 \begin{frame}{Função Geradora de Momentos}
 \phantomsection\label{funuxe7uxe3o-geradora-de-momentos-32}
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Exemplo 06: Distribuição Exponencial}, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, leftrule=.75mm, bottomrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, titlerule=0mm, breakable, coltitle=black, left=2mm, opacitybacktitle=0.6]
-
-Seja \(X \sim exp(\lambda)\). Encontre sua função geradora de momentos e
-a partir dela, encontre \(E(X)\) e \(\operatorname{Var}(X)\).
-
-\end{tcolorbox}
+\textbf{Exemplo 07 - Distribuição Exponencial:} Seja
+\(X \sim exp(\lambda)\). Encontre sua função geradora de momentos e a
+partir dela, encontre \(E(X)\) e \(\operatorname{Var}(X)\).
 
 \pause
 
@@ -1143,7 +1140,7 @@ válida para \(t < \lambda\).
 Assim, como
 
 \[
-\int_0^\infty \lambda e^{-(\lambda - t)x} =  \lambda \frac{e^{-(\lambda - t)x}}{-(\lambda - t)} \Bigg|_0^{\infty} = \frac{\lambda}{\lambda - t}, \,\,\,\, \lambda - t > 0
+\int_0^\infty \lambda e^{-(\lambda - t)x} \,dx =  \lambda \frac{e^{-(\lambda - t)x}}{-(\lambda - t)} \Bigg|_0^{\infty} = \frac{\lambda}{\lambda - t}, \,\,\,\, \lambda - t > 0
 \]
 
 Logo,
@@ -1196,12 +1193,9 @@ De forma que,
 
 \begin{frame}{Função Geradora de Momentos}
 \phantomsection\label{funuxe7uxe3o-geradora-de-momentos-36}
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Exemplo 07: Distribuição Gamma}, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, leftrule=.75mm, bottomrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, titlerule=0mm, breakable, coltitle=black, left=2mm, opacitybacktitle=0.6]
-
-Seja \(X \sim Gamma(\alpha, \lambda)\). Encontre sua função geradora de
+\textbf{Exemplo 08 - Distribuição Gamma:} Seja
+\(X \sim Gamma(\alpha, \lambda)\). Encontre sua função geradora de
 momentos.
-
-\end{tcolorbox}
 
 \pause
 
@@ -1255,11 +1249,8 @@ M_X(t)
 
 \begin{frame}{Função Geradora de Momentos}
 \phantomsection\label{funuxe7uxe3o-geradora-de-momentos-38}
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Exemplo 07: Distribuição Normal Padrão}, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, leftrule=.75mm, bottomrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, titlerule=0mm, breakable, coltitle=black, left=2mm, opacitybacktitle=0.6]
-
-Seja \(X \sim N(0, 1)\). Encontre sua função geradora de momentos.
-
-\end{tcolorbox}
+\textbf{Exemplo 09 - Distribuição Normal Padrão:} Seja
+\(X \sim N(0, 1)\). Encontre sua função geradora de momentos.
 
 \pause
 
@@ -1320,15 +1311,11 @@ Logo, \[
 
 \begin{frame}{Função Geradora de Momentos}
 \phantomsection\label{funuxe7uxe3o-geradora-de-momentos-41}
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Proposição 01: Transformações Lineares}, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, leftrule=.75mm, bottomrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, titlerule=0mm, breakable, coltitle=black, left=2mm, opacitybacktitle=0.6]
-
-Seja \(X\) uma variável aleatória com função geradora de momentos
-\(M_X\). Seja \(Y = aX + b\). Então, a função geradora de momentos de
-\(Y\) é dada por
+\textbf{Proposição 01 - Transformações Lineares:} Seja \(X\) uma
+variável aleatória com função geradora de momentos \(M_X\). Seja
+\(Y = aX + b\). Então, a função geradora de momentos de \(Y\) é dada por
 
 \[M_Y(t) = e^{bt} M_X(at)\]
-
-\end{tcolorbox}
 
 \pause
 
@@ -1339,12 +1326,8 @@ Seja \(X\) uma variável aleatória com função geradora de momentos
 
 \begin{frame}{Função Geradora de Momentos}
 \phantomsection\label{funuxe7uxe3o-geradora-de-momentos-42}
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Exemplo 07: Distribuição Normal Padrão}, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, leftrule=.75mm, bottomrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, titlerule=0mm, breakable, coltitle=black, left=2mm, opacitybacktitle=0.6]
-
-Seja \(X \sim N(\mu, \sigma^2)\). Encontre sua função geradora de
-momentos.
-
-\end{tcolorbox}
+\textbf{Exemplo 10 - Distribuição Normal:} Seja
+\(X \sim N(\mu, \sigma^2)\). Encontre sua função geradora de momentos.
 
 \pause
 
@@ -1366,12 +1349,9 @@ Se \(X \sim N(\mu, \sigma^2)\), então
 
 \begin{frame}{Função Geradora de Momentos}
 \phantomsection\label{funuxe7uxe3o-geradora-de-momentos-44}
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Teorema 02}, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, leftrule=.75mm, bottomrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, titlerule=0mm, breakable, coltitle=black, left=2mm, opacitybacktitle=0.6]
-
-Se duas variáveis aleatórias têm funções geradoras de momentos que
-existem, e são iguais, então elas têm a mesma função de distribuição.
-
-\end{tcolorbox}
+\textbf{Teorema 02:} Se duas variáveis aleatórias têm funções geradoras
+de momentos que existem, e são iguais, então elas têm a mesma função de
+distribuição.
 
 \pause
 
@@ -1388,13 +1368,9 @@ função de distribuição, função densidade ou função de probabilidade.
 
 \begin{frame}{Função Geradora de Momentos}
 \phantomsection\label{funuxe7uxe3o-geradora-de-momentos-45}
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Exemplo 08}, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, leftrule=.75mm, bottomrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, titlerule=0mm, breakable, coltitle=black, left=2mm, opacitybacktitle=0.6]
-
-Seja \(X \sim Gamma(\alpha, \lambda)\). Considere também
-\(Y = cX,\,\, c\in \mathbb{R}\). Mostre, a partir da função geradora de
-momentos, que \(Y \sim Gamma(\alpha, \lambda/c)\).
-
-\end{tcolorbox}
+\textbf{Exemplo 11:} Seja \(X \sim Gamma(\alpha, \lambda)\). Considere
+também \(Y = cX,\,\, c\in \mathbb{R}\). Mostre, a partir da função
+geradora de momentos, que \(Y \sim Gamma(\alpha, \lambda/c)\).
 
 \pause
 
@@ -1430,17 +1406,14 @@ aleatória com distribuição \(Gamma(\alpha,\lambda/c)\). Logo,
 
 \begin{frame}{Função Geradora de Momentos}
 \phantomsection\label{funuxe7uxe3o-geradora-de-momentos-47}
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Teorema 03: Soma de variáveis independentes}, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, leftrule=.75mm, bottomrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, titlerule=0mm, breakable, coltitle=black, left=2mm, opacitybacktitle=0.6]
-
-Sejam \(X_1, X_2, \cdots, X_n\) variáveis aleatórias independentes e
-funções geradoras de momentos, respectivamente, iguais a
+\textbf{Teorema 03 - Soma de variáveis independentes:} Sejam
+\(X_1, X_2, \cdots, X_n\) variáveis aleatórias independentes e funções
+geradoras de momentos, respectivamente, iguais a
 \(M_{X_j}(t), \,\, j = 1, 2, \cdots, n\) para \(t\) em alguma vizinhança
 de zero. Se \(Y = X_1 + X_2 + \cdots + X_n\), então a função geradora de
 momentos de \(Y\) existe e é dada por:
 
 \[M_Y(t) =  \prod_{j = 1}^n M_{X_j}(t)\]
-
-\end{tcolorbox}
 
 \pause
 
@@ -1455,14 +1428,10 @@ M_Y(t) &= E(e^{t(X_1 + X_2 + \cdots + X_n)}) \\ &= E(e^{tX_1}e^{tX_2} \cdots e^{
 
 \begin{frame}{Função Geradora de Momentos}
 \phantomsection\label{funuxe7uxe3o-geradora-de-momentos-48}
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Exemplo 09}, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, leftrule=.75mm, bottomrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, titlerule=0mm, breakable, coltitle=black, left=2mm, opacitybacktitle=0.6]
-
-Sejam \(X_1, X_2, \cdots, X_n\) variáveis aleatórias independentes com
-distribuição Bernoulli de parâmetro \(p\). Se
-\(Y = X_1 + X_2 + \cdots + X_n\), mostre, a partir da função geradora de
-momentos, que \(Y =  \sim Binomial(n,p)\).
-
-\end{tcolorbox}
+\textbf{Exemplo 12:} Sejam \(X_1, X_2, \cdots, X_n\) variáveis
+aleatórias independentes com distribuição Bernoulli de parâmetro \(p\).
+Se \(Y = X_1 + X_2 + \cdots + X_n\), mostre, a partir da função geradora
+de momentos, que \(Y \sim Binomial(n,p)\).
 
 \pause
 
@@ -1502,17 +1471,13 @@ aleatórias.
 
 \pause
 
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Definição 03: Variáveis Aleatórias Complexas}, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, leftrule=.75mm, bottomrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, titlerule=0mm, breakable, coltitle=black, left=2mm, opacitybacktitle=0.6]
-
-Dizemos que uma variável aleatória \(X\) é complexa, se pode ser escrita
-como
+\textbf{Definição 03 - Variáveis Aleatórias Complexas:} Dizemos que uma
+variável aleatória \(X\) é complexa, se pode ser escrita como
 
 \[X = X^a + i \,X^b\]
 
 em que \(i = \sqrt{-1}\) e \(X^a\) e \(X^b\) são variáveis aleatórias
 reais.
-
-\end{tcolorbox}
 \end{frame}
 
 \begin{frame}{Função Característica}
@@ -1538,16 +1503,13 @@ seu conjugado.
 
 \begin{frame}{Função Característica}
 \phantomsection\label{funuxe7uxe3o-caracteruxedstica-2}
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Definição 04: Função Característica}, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, leftrule=.75mm, bottomrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, titlerule=0mm, breakable, coltitle=black, left=2mm, opacitybacktitle=0.6]
-
-A função característica de uma variável aleatória \(X\) é definida por
+\textbf{Definição 04 - Função Característica:} A função característica
+de uma variável aleatória \(X\) é definida por
 
 \[
 \varphi_X(t) = E\!\left(e^{itX}\right) = E\Big[\cos(tX)\Big] + i\, E\Big[\, \text{sen}(tX)\Big],
 \qquad t \in \mathbb{R},
 \] onde \(i = \sqrt{-1}.\)
-
-\end{tcolorbox}
 \end{frame}
 
 \begin{frame}{Função Característica}
@@ -1632,12 +1594,9 @@ Central do Limite}.
 
 \begin{frame}{Função Característica}
 \phantomsection\label{funuxe7uxe3o-caracteruxedstica-7}
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Exemplo 10}, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, leftrule=.75mm, bottomrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, titlerule=0mm, breakable, coltitle=black, left=2mm, opacitybacktitle=0.6]
-
-Considere uma variável aleatória \(X\) com distribuição Uniforme
-Contínua no intervalo \([a,b]\). Encontre sua função característica.
-
-\end{tcolorbox}
+\textbf{Exemplo 13:} Considere uma variável aleatória \(X\) com
+distribuição Uniforme Contínua no intervalo \([a,b]\). Encontre sua
+função característica.
 
 \pause
 
@@ -1681,12 +1640,8 @@ mudança de variável: \(u = itx \Rightarrow du = it \, dx\) ou
 
 \begin{frame}{Função Característica}
 \phantomsection\label{funuxe7uxe3o-caracteruxedstica-9}
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Exemplo 11}, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, leftrule=.75mm, bottomrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, titlerule=0mm, breakable, coltitle=black, left=2mm, opacitybacktitle=0.6]
-
-Seja \(X \sim Gamma(\alpha, \lambda)\). Encontre sua função
-característica.
-
-\end{tcolorbox}
+\textbf{Exemplo 14:} Seja \(X \sim Gamma(\alpha, \lambda)\). Encontre
+sua função característica.
 
 \pause
 
@@ -1757,12 +1712,8 @@ Assim,
 
 \begin{frame}{Função Característica}
 \phantomsection\label{funuxe7uxe3o-caracteruxedstica-12}
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Exemplo 11}, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, leftrule=.75mm, bottomrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, titlerule=0mm, breakable, coltitle=black, left=2mm, opacitybacktitle=0.6]
-
-Seja \(X \sim Binomial(n, p)\). Encontre sua função característica e,
-através dela, encontre \(E(X)\) e \(\text{Var}(X)\).
-
-\end{tcolorbox}
+\textbf{Exemplo 15:} Seja \(X \sim Binomial(n, p)\). Encontre sua função
+característica e, através dela, encontre \(E(X)\) e \(\text{Var}(X)\).
 
 \pause
 
@@ -1885,12 +1836,9 @@ Por fim, como
 
 \begin{frame}{Função Característica}
 \phantomsection\label{funuxe7uxe3o-caracteruxedstica-18}
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Exemplo 12}, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, leftrule=.75mm, bottomrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, titlerule=0mm, breakable, coltitle=black, left=2mm, opacitybacktitle=0.6]
-
-Seja \(X \sim N(\mu, \sigma^2)\). Encontre sua função característica e,
-através dela, encontre \(E(X)\) e \(\text{Var}(X)\).
-
-\end{tcolorbox}
+\textbf{Exemplo 16:} Seja \(X \sim N(\mu, \sigma^2)\). Encontre sua
+função característica e, através dela, encontre \(E(X)\) e
+\(\text{Var}(X)\).
 
 \pause
 

@@ -532,7 +532,7 @@ $$
 
 ## Função Geradora de Momentos
 
-::: {.callout-note title="Exemplo 03: Distribuição Binomial"}
+::: {.callout-note title="Exemplo 04: Distribuição Binomial"}
 Seja $X \sim Binomial(n,p)$. Encontre sua função geradora de momentos e a partir dela, encontre $E(X)$ e $\operatorname{Var}(X)$.
 :::
 
@@ -678,7 +678,7 @@ $$
 
 ## Função Geradora de Momentos
 
-::: {.callout-note title="Exemplo 04: Distribuição Geométrica"}
+::: {.callout-note title="Exemplo 05: Distribuição Geométrica"}
 Seja $X \sim Geo(p)$. Encontre sua função geradora de momentos e a partir dela, encontre $E(X)$ e $\operatorname{Var}(X)$.
 :::
 
@@ -857,7 +857,7 @@ Veja que neste exemplo, a função geradora de momentos de $X ∼ Geo(p)$ não e
 
 ## Função Geradora de Momentos
 
-::: {.callout-note title="Exemplo 05: Distribuição de Poisson"}
+::: {.callout-note title="Exemplo 06: Distribuição de Poisson"}
 Seja $X \sim Poisson(\lambda)$. Encontre sua função geradora de momentos e a partir dela, encontre $E(X)$ e $\operatorname{Var}(X)$.
 :::
 
@@ -978,9 +978,9 @@ $$
 
 ## Função Geradora de Momentos
 
-::: {.callout-note title="Exemplo 06: Distribuição Exponencial"}
-Seja $X \sim exp(\lambda)$. Encontre sua função geradora de momentos e a partir dela, encontre $E(X)$ e $\operatorname{Var}(X)$.
-:::
+
+**Exemplo 07 - Distribuição Exponencial:** Seja $X \sim exp(\lambda)$. Encontre sua função geradora de momentos e a partir dela, encontre $E(X)$ e $\operatorname{Var}(X)$.
+
 
 . . . 
 
@@ -1006,7 +1006,7 @@ válida para $t < \lambda$.
 Assim, como
 
 $$
-\int_0^\infty \lambda e^{-(\lambda - t)x} =  \lambda \frac{e^{-(\lambda - t)x}}{-(\lambda - t)} \Bigg|_0^{\infty} = \frac{\lambda}{\lambda - t}, \,\,\,\, \lambda - t > 0
+\int_0^\infty \lambda e^{-(\lambda - t)x} \,dx =  \lambda \frac{e^{-(\lambda - t)x}}{-(\lambda - t)} \Bigg|_0^{\infty} = \frac{\lambda}{\lambda - t}, \,\,\,\, \lambda - t > 0
 $$
 
 Logo,
@@ -1066,12 +1066,12 @@ $$
 
 ## Função Geradora de Momentos
 
-::: {.callout-note title="Exemplo 07: Distribuição Gamma"}
-Seja $X \sim Gamma(\alpha, \lambda)$. Encontre sua função geradora de momentos.
-:::
+
+**Exemplo 08 - Distribuição Gamma:** Seja $X \sim Gamma(\alpha, \lambda)$. Encontre sua função geradora de momentos.
+
   
   
-  . . . 
+. . . 
 
 **Solução:** Seja $X \sim Gamma(\alpha, \lambda)$, cuja função densidade é
 
@@ -1131,9 +1131,9 @@ $$
 
 ## Função Geradora de Momentos
 
-::: {.callout-note title="Exemplo 07: Distribuição Normal Padrão"}
-Seja $X \sim N(0, 1)$. Encontre sua função geradora de momentos.
-:::
+
+**Exemplo 09 - Distribuição Normal Padrão:** Seja $X \sim N(0, 1)$. Encontre sua função geradora de momentos.
+
 
 
 . . . 
@@ -1204,11 +1204,10 @@ $$
 
 ## Função Geradora de Momentos
 
-::: {.callout-note title="Proposição 01: Transformações Lineares"}
-Seja $X$ uma variável aleatória com função geradora de momentos $M_X$. Seja $Y = aX + b$. Então, a função geradora de momentos de $Y$ é dada por
+
+**Proposição 01 - Transformações Lineares:** Seja $X$ uma variável aleatória com função geradora de momentos $M_X$. Seja $Y = aX + b$. Então, a função geradora de momentos de $Y$ é dada por
 
 $$M_Y(t) = e^{bt} M_X(at)$$ 
-:::
 
 
 . . .
@@ -1225,9 +1224,7 @@ $$M_Y(t) = E(e^{tY}) = E(e^{t(aX+b)}) = E\Big(e^{atX} e^{bt} \Big) = e^{bt} E\Bi
 
 ## Função Geradora de Momentos
 
-::: {.callout-note title="Exemplo 07: Distribuição Normal Padrão"}
-Seja $X \sim N(\mu, \sigma^2)$. Encontre sua função geradora de momentos.
-:::
+**Exemplo 10 - Distribuição Normal:** Seja $X \sim N(\mu, \sigma^2)$. Encontre sua função geradora de momentos.
 
 
 . . . 
@@ -1253,9 +1250,9 @@ $$\boxed{M_X(t)= \exp \Bigg(\mu t + \frac{\sigma^2 t^2}{2} \Bigg)}$$
 
 ## Função Geradora de Momentos
 
-::: {.callout-note title="Teorema 02"}
-Se duas variáveis aleatórias têm funções geradoras de momentos que existem, e são iguais, então elas têm a mesma função de distribuição.
-:::
+
+**Teorema 02:** Se duas variáveis aleatórias têm funções geradoras de momentos que existem, e são iguais, então elas têm a mesma função de distribuição.
+
 
 
 . . .
@@ -1272,9 +1269,9 @@ variável aleatória a partir da sua função de distribuição, função densid
 ## Função Geradora de Momentos
 
 
-::: {.callout-note title="Exemplo 08"}
-Seja $X \sim Gamma(\alpha, \lambda)$. Considere também $Y = cX,\,\, c\in \mathbb{R}$. Mostre, a partir da função geradora de momentos, que $Y \sim Gamma(\alpha, \lambda/c)$.
-:::
+
+**Exemplo 11:** Seja $X \sim Gamma(\alpha, \lambda)$. Considere também $Y = cX,\,\, c\in \mathbb{R}$. Mostre, a partir da função geradora de momentos, que $Y \sim Gamma(\alpha, \lambda/c)$.
+
 
 
 . . . 
@@ -1315,11 +1312,11 @@ Veja que trata-se da função geradora de momentos de uma variável aleatória c
 
 ## Função Geradora de Momentos
 
-::: {.callout-note title="Teorema 03: Soma de variáveis independentes"}
-Sejam $X_1, X_2, \cdots, X_n$ variáveis aleatórias independentes e funções geradoras de momentos, respectivamente, iguais a $M_{X_j}(t), \,\, j = 1, 2, \cdots, n$ para $t$ em alguma vizinhança de zero. Se $Y = X_1 + X_2 + \cdots + X_n$, então a função geradora de momentos de $Y$ existe e é dada por:
+
+**Teorema 03 - Soma de variáveis independentes:** Sejam $X_1, X_2, \cdots, X_n$ variáveis aleatórias independentes e funções geradoras de momentos, respectivamente, iguais a $M_{X_j}(t), \,\, j = 1, 2, \cdots, n$ para $t$ em alguma vizinhança de zero. Se $Y = X_1 + X_2 + \cdots + X_n$, então a função geradora de momentos de $Y$ existe e é dada por:
 
 $$M_Y(t) =  \prod_{j = 1}^n M_{X_j}(t)$$
-:::
+
 
 
 . . .
@@ -1338,9 +1335,9 @@ e daí segue o resultado desejado.
 ## Função Geradora de Momentos
 
 
-::: {.callout-note title="Exemplo 09"}
-Sejam $X_1, X_2, \cdots, X_n$ variáveis aleatórias independentes com distribuição Bernoulli de parâmetro $p$. Se $Y = X_1 + X_2 + \cdots + X_n$, mostre, a partir da função geradora de momentos, que $Y \sim Binomial(n,p)$.
-:::
+
+**Exemplo 12:** Sejam $X_1, X_2, \cdots, X_n$ variáveis aleatórias independentes com distribuição Bernoulli de parâmetro $p$. Se $Y = X_1 + X_2 + \cdots + X_n$, mostre, a partir da função geradora de momentos, que $Y \sim Binomial(n,p)$.
+
 
 
 . . .
@@ -1378,13 +1375,13 @@ Ela desempenha um papel similar ao da função geradora de momentos (fgm), mas c
 
 . . .
 
-::: {.callout-note title="Definição 03: Variáveis Aleatórias Complexas"}
-Dizemos que uma variável aleatória $X$ é complexa, se pode ser escrita como
+
+**Definição 03 - Variáveis Aleatórias Complexas:** Dizemos que uma variável aleatória $X$ é complexa, se pode ser escrita como
 
 $$X = X^a + i \,X^b$$
 
 em que $i = \sqrt{-1}$ e $X^a$ e $X^b$ são variáveis aleatórias reais.
-:::
+
 
 
 
@@ -1415,16 +1412,14 @@ As propriedades usuais de números complexos serão usadas. Sendo $z = a + i\, b
 ## Função Característica
 
 
-::: {.callout-note title="Definição 04: Função Característica"}
 
-A função característica de uma variável aleatória $X$ é definida por
+**Definição 04 - Função Característica:** A função característica de uma variável aleatória $X$ é definida por
 
 $$
 \varphi_X(t) = E\!\left(e^{itX}\right) = E\Big[\cos(tX)\Big] + i\, E\Big[\, \text{sen}(tX)\Big],
 \qquad t \in \mathbb{R},
 $$
 onde $i = \sqrt{-1}.$
-:::
 
 
 
@@ -1509,9 +1504,8 @@ Esse resultado é crucial, por exemplo, para demonstrar o **Teorema Central do L
 
 
 
-::: {.callout-note title="Exemplo 10"}
-Considere uma variável aleatória $X$ com distribuição Uniforme Contínua no intervalo $[a,b]$. Encontre sua função característica.
-:::
+**Exemplo 13:** Considere uma variável aleatória $X$ com distribuição Uniforme Contínua no intervalo $[a,b]$. Encontre sua função característica.
+
 
 
 . . .
@@ -1565,9 +1559,8 @@ $$
 
 
 
-::: {.callout-note title="Exemplo 11"}
-Seja $X \sim Gamma(\alpha, \lambda)$. Encontre sua função característica.
-:::
+**Exemplo 14:** Seja $X \sim Gamma(\alpha, \lambda)$. Encontre sua função característica.
+
 
 
 . . .
@@ -1647,9 +1640,8 @@ $$
 
 
 
-::: {.callout-note title="Exemplo 11"}
-Seja $X \sim Binomial(n, p)$. Encontre sua função característica e, através dela, encontre $E(X)$ e $\text{Var}(X)$.
-:::
+**Exemplo 15:** Seja $X \sim Binomial(n, p)$. Encontre sua função característica e, através dela, encontre $E(X)$ e $\text{Var}(X)$.
+
 
 
 . . .
@@ -1791,9 +1783,8 @@ $$
 
 
 
-::: {.callout-note title="Exemplo 12"}
-Seja $X \sim N(\mu, \sigma^2)$. Encontre sua função característica e, através dela, encontre $E(X)$ e $\text{Var}(X)$.
-:::
+**Exemplo 16:** Seja $X \sim N(\mu, \sigma^2)$. Encontre sua função característica e, através dela, encontre $E(X)$ e $\text{Var}(X)$.
+
 
 
 . . .
