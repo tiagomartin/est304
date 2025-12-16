@@ -1878,21 +1878,21 @@
     "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-47",
     "title": "Função Geradora de Momentos",
     "section": "Função Geradora de Momentos",
-    "text": "Função Geradora de Momentos\nTeorema 03 - Soma de variáveis independentes: Sejam \\(X_1, X_2, \\cdots, X_n\\) variáveis aleatórias independentes e funções geradoras de momentos, respectivamente, iguais a \\(M_{X_j}(t), \\,\\, j = 1, 2, \\cdots, n\\) para \\(t\\) em alguma vizinhança de zero. Se \\(Y = X_1 + X_2 + \\cdots + X_n\\), então a função geradora de momentos de \\(Y\\) existe e é dada por:\n\\[M_Y(t) =  \\prod_{j = 1}^n M_{X_j}(t)\\]\n\nDemonstração: Pela definição, temos\n\\[\n\\begin{aligned}\nM_Y(t) &= E(e^{t(X_1 + X_2 + \\cdots + X_n)}) \\\\ &= E(e^{tX_1}e^{tX_2} \\cdots e^{tX_n}) \\\\ &= E(e^{tX_1})E(e^{tX_2})\\cdots E(e^{tX_n})\n\\end{aligned}\n\\] e daí segue o resultado desejado."
+    "text": "Função Geradora de Momentos\nTeorema 03 - Soma de variáveis independentes: Sejam \\(X_1, X_2, \\cdots, X_n\\) variáveis aleatórias independentes e funções geradoras de momentos, respectivamente, iguais a \\(M_{X_j}(t), \\,\\, j = 1, 2, \\cdots, n\\) para \\(t\\) em alguma vizinhança de zero. Se \\(Y = X_1 + X_2 + \\cdots + X_n\\), então a função geradora de momentos de \\(Y\\) existe e é dada por:\n\\[M_Y(t) =  \\prod_{j = 1}^n M_{X_j}(t)\\]"
   },
   {
     "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-48",
     "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-48",
     "title": "Função Geradora de Momentos",
     "section": "Função Geradora de Momentos",
-    "text": "Função Geradora de Momentos\nExemplo 12: Sejam \\(X_1, X_2, \\cdots, X_n\\) variáveis aleatórias independentes com distribuição Bernoulli de parâmetro \\(p\\). Se \\(Y = X_1 + X_2 + \\cdots + X_n\\), mostre, a partir da função geradora de momentos, que \\(Y \\sim Binomial(n,p)\\).\n\nSolução: Temos que se \\(X_1, X_2, \\cdots, X_n\\) são variáveis aleatórias independentes com distribuição Bernoulli de parâmetro \\(p\\), então\n\\[\nM_{X_j}(t) = 1 - p + p e^{t}, \\quad j = 1,2, \\cdots n\n\\]"
+    "text": "Função Geradora de Momentos\nDemonstração: Pela definição, temos\n\\[\n\\begin{aligned}\nM_Y(t) &= E(e^{t(X_1 + X_2 + \\cdots + X_n)}) \\\\ &= E(e^{tX_1}e^{tX_2} \\cdots e^{tX_n}) \\\\ &= E(e^{tX_1})E(e^{tX_2})\\cdots E(e^{tX_n})\n\\end{aligned}\n\\] e daí segue o resultado desejado."
   },
   {
     "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-49",
     "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-49",
     "title": "Função Geradora de Momentos",
     "section": "Função Geradora de Momentos",
-    "text": "Função Geradora de Momentos\nEntão, pelo Teorema 03, temos\n\\[\nM_Y(t) = \\prod_{j = 1}^n M_{X_j}(t) = \\big(1 - p + p e^{t}\\big)^n\n\\]\nque corresponde à função geradora de momentos de uma variável aleatória Binomial com parâmetros \\(n\\) e \\(p\\). Logo, temos que \\(X_1 + X_2 + \\cdots + X_n \\sim Binomial(n,p)\\)."
+    "text": "Função Geradora de Momentos\nExemplo 12: Sejam \\(X_1, X_2, \\cdots, X_n\\) variáveis aleatórias independentes com distribuição Bernoulli de parâmetro \\(p\\). Se \\(Y = X_1 + X_2 + \\cdots + X_n\\), mostre, a partir da função geradora de momentos, que \\(Y \\sim Binomial(n,p)\\).\n\nSolução: Temos que se \\(X_1, X_2, \\cdots, X_n\\) são variáveis aleatórias independentes com distribuição Bernoulli de parâmetro \\(p\\), então\n\\[\nM_{X_j}(t) = 1 - p + p e^{t}, \\quad j = 1,2, \\cdots n\n\\]"
   },
   {
     "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-característica-1",
@@ -2103,5 +2103,12 @@
     "title": "Semana 11",
     "section": "",
     "text": "Fique Atento!\n\n\n\n Lista de exercícios 04\nEntrega na sala de aula!\n\nData de entrega:\n\n29 de janeiro de 2026"
+  },
+  {
+    "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-50",
+    "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-50",
+    "title": "Função Geradora de Momentos",
+    "section": "Função Geradora de Momentos",
+    "text": "Função Geradora de Momentos\nEntão, pelo Teorema 03, temos\n\\[\nM_Y(t) = \\prod_{j = 1}^n M_{X_j}(t) = \\big(1 - p + p e^{t}\\big)^n\n\\]\nque corresponde à função geradora de momentos de uma variável aleatória Binomial com parâmetros \\(n\\) e \\(p\\). Logo, temos que \\(X_1 + X_2 + \\cdots + X_n \\sim Binomial(n,p)\\)."
   }
 ]

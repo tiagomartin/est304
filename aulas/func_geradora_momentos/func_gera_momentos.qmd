@@ -1319,7 +1319,7 @@ $$M_Y(t) =  \prod_{j = 1}^n M_{X_j}(t)$$
 
 
 
-. . .
+## Função Geradora de Momentos
 
 
 **Demonstração:** Pela definição, temos
