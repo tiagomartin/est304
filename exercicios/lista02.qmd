@@ -12,7 +12,7 @@ format:
 ---
 
 <p align="center" style="font-size: 40px"> 
-`Data de entrega: 18 de dezembro de 2025`
+`Data de entrega: 20 de janeiro de 2026`
 </p>
 
 

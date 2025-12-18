@@ -82,5 +82,5 @@ format:
 Entrega na sala de aula!
 
 -   Data de entrega:
-    -   18 de dezembro de 2025
+    -   20 de janeiro de 2026
 :::

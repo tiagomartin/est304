@@ -86,7 +86,7 @@ Esta página contém as listas de exercícios que serão apresentadas ao longo d
   </span>
 
   <span class="badge due-date-badge">
-    Entrega: 18/12/2025
+    Entrega: 20/01/2026
   </span>
 
 </div>
