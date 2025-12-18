@@ -1836,7 +1836,7 @@
     "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-42",
     "title": "Função Geradora de Momentos",
     "section": "Função Geradora de Momentos",
-    "text": "Função Geradora de Momentos\nExemplo 10 - Distribuição Normal: Seja \\(X \\sim N(\\mu, \\sigma^2)\\). Encontre sua função geradora de momentos.\n\nSolução: Se \\(X \\sim N(\\mu, \\sigma^2)\\), então \\(X = \\sigma Z + \\mu\\), em que \\(Z\\sim N(0,1)\\), com função geradora de momentos dada por \\(M_X(t) = \\exp\\!\\left(\\frac{t^2}{2}\\right)\\). Assim,\n\\[M_X(t) = e^{\\mu t} M_X(\\sigma t) = e^{\\mu t} \\exp\\!\\left(\\frac{(\\sigma t)^2}{2}\\right) = e^{\\mu t} \\exp\\!\\left(\\frac{\\sigma^2 t^2}{2}\\right)\\]"
+    "text": "Função Geradora de Momentos\nExemplo 10 - Distribuição Normal: Seja \\(X \\sim N(\\mu, \\sigma^2)\\). Encontre sua função geradora de momentos.\n\nSolução: Se \\(X \\sim N(\\mu, \\sigma^2)\\), então \\(X = \\sigma Z + \\mu\\), em que \\(Z\\sim N(0,1)\\), com função geradora de momentos dada por \\(M_Z(t) = \\exp\\!\\left(\\frac{t^2}{2}\\right)\\). Assim,\n\\[M_X(t) = e^{\\mu t} M_Z(\\sigma t) = e^{\\mu t} \\exp\\!\\left(\\frac{(\\sigma t)^2}{2}\\right) = e^{\\mu t} \\exp\\!\\left(\\frac{\\sigma^2 t^2}{2}\\right)\\]"
   },
   {
     "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-geradora-de-momentos-43",
@@ -1955,7 +1955,7 @@
     "href": "aulas/func_geradora_momentos/func_gera_momentos.html#função-característica-9",
     "title": "Função Geradora de Momentos",
     "section": "Função Característica",
-    "text": "Função Característica\nExemplo 14: Seja \\(X \\sim Gamma(\\alpha, \\lambda)\\). Encontre sua função característica.\n\nSolução: Se \\(X \\sim Gamma(\\alpha, \\lambda)\\). Temos que sua função densidade é\n\\[\nf(x) = \\frac{\\lambda^\\alpha}{\\Gamma(\\alpha)}x^{\\alpha-1}e^{-\\lambda x},\n\\qquad x&gt;0\n\\]\nAssim,\nA função característica de \\(X\\) é \\[\n\\varphi_X(t) = E(e^{itX})\n= \\int_0^\\infty e^{itx} f(x)\\,dx\n\\]"
+    "text": "Função Característica\nExemplo 14: Seja \\(X \\sim Gamma(\\alpha, \\lambda)\\). Encontre sua função característica.\n\nSolução: Se \\(X \\sim Gamma(\\alpha, \\lambda)\\). Temos que sua função densidade é\n\\[\nf(x) = \\frac{\\lambda^\\alpha}{\\Gamma(\\alpha)}x^{\\alpha-1}e^{-\\lambda x},\n\\qquad x&gt;0\n\\]\nAssim, a função característica de \\(X\\) é\n\\[\n\\varphi_X(t) = E(e^{itX})\n= \\int_0^\\infty e^{itx} f(x)\\,dx\n\\]"
   },
   {
     "objectID": "aulas/func_geradora_momentos/func_gera_momentos.html#função-característica-10",

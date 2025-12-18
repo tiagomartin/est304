@@ -1088,8 +1088,8 @@ M_X(t)
 <h2>Função Geradora de Momentos</h2>
 <p><strong>Exemplo 10 - Distribuição Normal:</strong> Seja <span class="math inline">\(X \sim N(\mu, \sigma^2)\)</span>. Encontre sua função geradora de momentos.</p>
 <div class="fragment">
-<p><strong>Solução:</strong> Se <span class="math inline">\(X \sim N(\mu, \sigma^2)\)</span>, então <span class="math inline">\(X = \sigma Z + \mu\)</span>, em que <span class="math inline">\(Z\sim N(0,1)\)</span>, com função geradora de momentos dada por <span class="math inline">\(M_X(t) = \exp\!\left(\frac{t^2}{2}\right)\)</span>. Assim,</p>
-<p><span class="math display">\[M_X(t) = e^{\mu t} M_X(\sigma t) = e^{\mu t} \exp\!\left(\frac{(\sigma t)^2}{2}\right) = e^{\mu t} \exp\!\left(\frac{\sigma^2 t^2}{2}\right)\]</span></p>
+<p><strong>Solução:</strong> Se <span class="math inline">\(X \sim N(\mu, \sigma^2)\)</span>, então <span class="math inline">\(X = \sigma Z + \mu\)</span>, em que <span class="math inline">\(Z\sim N(0,1)\)</span>, com função geradora de momentos dada por <span class="math inline">\(M_Z(t) = \exp\!\left(\frac{t^2}{2}\right)\)</span>. Assim,</p>
+<p><span class="math display">\[M_X(t) = e^{\mu t} M_Z(\sigma t) = e^{\mu t} \exp\!\left(\frac{(\sigma t)^2}{2}\right) = e^{\mu t} \exp\!\left(\frac{\sigma^2 t^2}{2}\right)\]</span></p>
 </div>
 </section>
 <section id="função-geradora-de-momentos-43" class="slide level2">
@@ -1292,8 +1292,8 @@ f(x) = \frac{1}{b-a}, \qquad a \le x \le b
 f(x) = \frac{\lambda^\alpha}{\Gamma(\alpha)}x^{\alpha-1}e^{-\lambda x},
 \qquad x&gt;0
 \]</span></p>
-<p>Assim,</p>
-<p>A função característica de <span class="math inline">\(X\)</span> é <span class="math display">\[
+<p>Assim, a função característica de <span class="math inline">\(X\)</span> é</p>
+<p><span class="math display">\[
 \varphi_X(t) = E(e^{itX})
 = \int_0^\infty e^{itx} f(x)\,dx
 \]</span></p>

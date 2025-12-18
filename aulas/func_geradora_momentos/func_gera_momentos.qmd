@@ -1229,9 +1229,9 @@ $$M_Y(t) = E(e^{tY}) = E(e^{t(aX+b)}) = E\Big(e^{atX} e^{bt} \Big) = e^{bt} E\Bi
 
 . . . 
 
-**Solução:** Se $X \sim N(\mu, \sigma^2)$, então $X = \sigma Z + \mu$, em que $Z\sim N(0,1)$, com função geradora de momentos dada por $M_X(t) = \exp\!\left(\frac{t^2}{2}\right)$. Assim,
+**Solução:** Se $X \sim N(\mu, \sigma^2)$, então $X = \sigma Z + \mu$, em que $Z\sim N(0,1)$, com função geradora de momentos dada por $M_Z(t) = \exp\!\left(\frac{t^2}{2}\right)$. Assim,
 
-$$M_X(t) = e^{\mu t} M_X(\sigma t) = e^{\mu t} \exp\!\left(\frac{(\sigma t)^2}{2}\right) = e^{\mu t} \exp\!\left(\frac{\sigma^2 t^2}{2}\right)$$
+$$M_X(t) = e^{\mu t} M_Z(\sigma t) = e^{\mu t} \exp\!\left(\frac{(\sigma t)^2}{2}\right) = e^{\mu t} \exp\!\left(\frac{\sigma^2 t^2}{2}\right)$$
 
 
 ## Função Geradora de Momentos
@@ -1575,9 +1575,8 @@ f(x) = \frac{\lambda^\alpha}{\Gamma(\alpha)}x^{\alpha-1}e^{-\lambda x},
 $$
 
 
-Assim, 
+Assim, a função característica de $X$ é
 
-A função característica de $X$ é
 $$
 \varphi_X(t) = E(e^{itX})
 = \int_0^\infty e^{itx} f(x)\,dx
