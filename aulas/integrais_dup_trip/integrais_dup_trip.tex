@@ -1,0 +1,599 @@
+% Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  ignorenonframetext,
+  aspectratio=169,
+]{beamer}
+\newif\ifbibliography
+\usepackage{pgfpages}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamercolor{caption name}{fg=normal text.fg}
+\beamertemplatenavigationsymbolsempty
+% remove section numbering
+\setbeamertemplate{part page}{
+  \centering
+  \begin{beamercolorbox}[sep=16pt,center]{part title}
+    \usebeamerfont{part title}\insertpart\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{section page}{
+  \centering
+  \begin{beamercolorbox}[sep=12pt,center]{section title}
+    \usebeamerfont{section title}\insertsection\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{subsection page}{
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center]{subsection title}
+    \usebeamerfont{subsection title}\insertsubsection\par
+  \end{beamercolorbox}
+}
+% Prevent slide breaks in the middle of a paragraph
+\widowpenalties 1 10000
+\raggedbottom
+\AtBeginPart{
+  \frame{\partpage}
+}
+\AtBeginSection{
+  \ifbibliography
+  \else
+    \frame{\sectionpage}
+  \fi
+}
+\AtBeginSubsection{
+  \frame{\subsectionpage}
+}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+
+
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+\usepackage{caption}
+% Make caption package work with longtable
+\makeatletter
+\def\fnum@table{\tablename~\thetable}
+\makeatother
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+
+
+
+
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+ 
+
+
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Integrais Duplas e Triplas},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+
+
+\title{Integrais Duplas e Triplas}
+\author{}
+\date{}
+
+\begin{document}
+\frame{\titlepage}
+
+
+\begin{frame}{Introdução}
+\phantomsection\label{introduuxe7uxe3o}
+Na teoria da probabilidade, especialmente quando lidamos com
+\textbf{vetores aleatórios contínuos}, as \textbf{integrais múltiplas}
+desempenham um papel central. Diferentemente do caso discreto, em que
+probabilidades são obtidas por somas, no caso contínuo as probabilidades
+são calculadas por integrais, que admitem uma interpretação geométrica
+natural como volumes sob superfícies.
+\end{frame}
+
+\begin{frame}{Integrais Duplas}
+\phantomsection\label{integrais-duplas}
+Seja \(f:\mathbb{R}^2 \to \mathbb{R}\) uma função não negativa e
+integrável em uma região \(R \subset \mathbb{R}^2\). A integral dupla de
+\(f\) sobre \(R\) é definida por
+
+\[
+\iint_R f(x,y)\,dA
+\]
+
+Geometricamente, essa integral representa o volume do sólido limitado
+superiormente pela superfície \(z=f(x,y)\), inferiormente pelo plano
+\(z=0\) e lateralmente pela região \(R\).
+\end{frame}
+
+\begin{frame}{Integrais Duplas}
+\phantomsection\label{integrais-duplas-1}
+\begin{center}
+\pandocbounded{\includegraphics[keepaspectratio]{../../images/repres_int_dupla.png}}
+\end{center}
+
+Aqui, \(R\) é a região sobre a qual integramos e \(dA\) é o elemento de
+área, uma versão infinitesimal de \(\delta A\).
+\end{frame}
+
+\begin{frame}{Integrais Duplas}
+\phantomsection\label{integrais-duplas-2}
+\begin{itemize}
+\tightlist
+\item
+  \(dA\) depende das coordenadas. Em coordenadas cartesianas, temos:
+\end{itemize}
+
+\begin{center}
+\pandocbounded{\includegraphics[keepaspectratio]{../../images/regiao_dA.png}}
+\end{center}
+
+Vemos claramente que \(\delta A = \delta x \delta y\), então, temos
+\(dA=dxdy\).
+\end{frame}
+
+\begin{frame}{Integrais Duplas}
+\phantomsection\label{integrais-duplas-3}
+Por conseguinte, esta integral é avaliada como:
+
+\[
+\iint_R f(x,y)\,dA = \iint_R f(x,y)\,dxdy
+\]
+
+\pause
+
+Na prática, integrais duplas são calculadas como \textbf{integrais
+iteradas}. Seja
+
+\[
+R=\{(x,y): a\le x\le b,\ c\le y\le d\}
+\]
+
+Assim, pelo \textbf{Teorema de Fubini}, a integral é:
+
+\[
+\iint_R f(x,y)\,dx\,dy
+=
+\int_{y=c}^{d}
+\left(
+\int_{x=a}^{b} f(x,y)\,dx
+\right)
+dy
+=
+\int_{x=a}^{b}
+\left(
+\int_{y=c}^{d} f(x,y)\,dy
+\right)
+dx
+\]
+\end{frame}
+
+\begin{frame}{Integrais Duplas}
+\phantomsection\label{integrais-duplas-4}
+Primeiro, calculamos a integral interna e depois a integral externa.
+Neste caso, a integral interna é em relação a \(x\). No entanto, a ordem
+de integração não importa, pois podemos calcular a integral em relação a
+\(y\) primeiro.
+\end{frame}
+
+\begin{frame}{Integrais Duplas}
+\phantomsection\label{integrais-duplas-5}
+\textbf{Exemplo 01:} Calcule
+
+\[
+\iint_{[0,1]\times[0,1]} (x+y)\,dx\,dy
+\]
+
+\pause
+
+\textbf{Solução:} Como \([0,1]\times[0,1]\) é um retângulo, podemos
+escrever a integral dupla como uma integral iterada:
+
+\[
+\iint_{[0,1]\times[0,1]} (x+y)\,dx\,dy
+=
+\int_{0}^{1}\int_{0}^{1} (x+y)\,dx\,dy
+\]
+\end{frame}
+
+\begin{frame}{Integrais Duplas}
+\phantomsection\label{integrais-duplas-6}
+\textbf{Passo 1:} integrar em relação a \(x\)
+
+Aqui \(y\) é constante. Então:
+
+\[
+\int_{0}^{1} (x+y)\,dx
+=
+\int_{0}^{1} x\,dx + \int_{0}^{1} y\,dx
+\]
+
+Calculando cada parte:
+
+\[
+\int_{0}^{1} x\,dx = \left.\frac{x^2}{2}\right|_{0}^{1}=\frac12,
+\qquad
+\int_{0}^{1} y\,dx = y\int_{0}^{1} 1\,dx = y(1-0)=y
+\]
+\end{frame}
+
+\begin{frame}{Integrais Duplas}
+\phantomsection\label{integrais-duplas-7}
+Logo, a integral interna é: \[
+\int_{0}^{1} (x+y)\,dx = \frac12 + y
+\]
+
+\pause
+
+\textbf{Passo 2:} integrar em relação a \(y\)
+
+Agora integramos o resultado de \(0\) a \(1\):
+
+\[
+\int_{0}^{1}\left(\frac12+y\right)\,dy
+=
+\int_{0}^{1}\frac12\,dy+\int_{0}^{1}y\,dy
+\]
+\end{frame}
+
+\begin{frame}{Integrais Duplas}
+\phantomsection\label{integrais-duplas-8}
+\[
+\int_{0}^{1}\frac12\,dy=\left.\frac{y}{2}\right|_{0}^{1}=\frac12,
+\qquad
+\int_{0}^{1}y\,dy=\left.\frac{y^2}{2}\right|_{0}^{1}=\frac12
+\]
+
+Somando: \[
+\int_{0}^{1}\left(\frac12+y\right)\,dy=\frac12+\frac12=1
+\]
+
+Logo,
+
+\[
+\iint_{[0,1]\times[0,1]} (x+y)\,dx\,dy = 1
+\]
+\end{frame}
+
+\begin{frame}{Integrais Duplas}
+\phantomsection\label{integrais-duplas-9}
+\textbf{Exemplo 02:} Na integral dupla seguinte, indicar a região \(R\)
+de integração e encontrar o seu valor:
+
+\[
+\int_{0}^{2}\int_{0}^{1} (1 + 2x + 2y)\,dy\,dx
+\]
+
+\pause
+
+\textbf{Solução:} A integral está escrita na forma iterada
+
+\[
+\int_{x=0}^{2}\int_{y=0}^{1} (\cdot)\,dy\,dx
+\]
+
+Logo, a região de integração é
+
+\[
+R = \{(x,y)\in\mathbb{R}^2 : 0 \le x \le 2,\ 0 \le y \le 1\}
+\]
+\end{frame}
+
+\begin{frame}{Integrais Duplas}
+\phantomsection\label{integrais-duplas-10}
+Trata-se de um \textbf{retângulo} no plano cartesiano, com base no
+intervalo \([0,2]\) do eixo \(x\) e altura no intervalo \([0,1]\) do
+eixo \(y\). Assim, mantendo \(x\) fixo, temos:
+
+\[
+\begin{aligned}
+\int_{0}^{1} (1 + 2x + 2y)\,dy &= \int_{0}^{1} 1\,dy + \int_{0}^{1} 2x\,dy + \int_{0}^{1} 2y\,dy \\ & = y \bigg|_0^1 + 2x\,y \bigg|_0^1 + 2\dfrac{y^2}{2}\bigg|_0^1 \\ &= 1 + 2x + 1 \\ & = 2 + 2x
+\end{aligned}
+\]
+\end{frame}
+
+\begin{frame}{Integrais Duplas}
+\phantomsection\label{integrais-duplas-11}
+vamos agora, integrar em relação a \(x\):
+
+\[
+\begin{aligned}
+\int_{0}^{2} (2 + 2x)\,dx &= \int_{0}^{2} 2\,dx + \int_{0}^{2} 2x\,dx \\ & = 2x \bigg|_0^2 + 2\dfrac{x^2}{2}\bigg|_0^2 \\ &= 4 + 4 \\ & = 8
+\end{aligned}
+\]
+\end{frame}
+
+\begin{frame}{Integrais Duplas}
+\phantomsection\label{integrais-duplas-12}
+Esse valor representa o \textbf{volume} do sólido limitado:
+
+\begin{itemize}
+\tightlist
+\item
+  inferiormente pelo plano \(z=0\),
+\item
+  superiormente pela superfície \(z=1+2x+2y\),
+\item
+  lateralmente pela região retangular \(R=[0,2]\times[0,1]\)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Integrais Duplas em Regiões Gerais}
+\phantomsection\label{integrais-duplas-em-regiuxf5es-gerais}
+Até agora, consideramos integrais duplas sobre regiões retangulares. No
+entanto, em muitas aplicações, especialmente em Probabilidade, a região
+de integração não é um retângulo, mas sim uma região mais geral do
+plano.
+
+\pause
+
+Nesses casos, a integral dupla continua sendo definida como
+
+\[
+\iint_R f(x,y)\,dx\,dy,
+\]
+
+mas o cálculo exige uma descrição adequada da região \(R\).
+\end{frame}
+
+\begin{frame}{Regiões Gerais no Plano}
+\phantomsection\label{regiuxf5es-gerais-no-plano}
+Uma \textbf{região geral} \(R \subset \mathbb{R}^2\) é qualquer
+subconjunto do plano que possa ser descrito por desigualdades envolvendo
+\(x\) e \(y\).
+
+\pause
+
+Na prática, trabalhamos principalmente com dois tipos de regiões:
+
+\begin{itemize}
+\tightlist
+\item
+  Regiões do tipo I (ou regiões \(x\))
+\item
+  Regiões do tipo II (ou regiões \(y\))
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Regiões Gerais no Plano}
+\phantomsection\label{regiuxf5es-gerais-no-plano-1}
+\begin{center}
+\pandocbounded{\includegraphics[keepaspectratio]{../../images/regioes_gerais.png}}
+\end{center}
+\end{frame}
+
+\begin{frame}{Regiões do Tipo I (Regiões \(x\))}
+\phantomsection\label{regiuxf5es-do-tipo-i-regiuxf5es-x}
+Uma região \(R\) é dita do tipo I se pode ser escrita na forma
+
+\[
+R = \{(x,y) : a \le x \le b,\ g_1(x) \le y \le g_2(x)\}
+\]
+
+Nesse caso, a integral dupla é calculada como
+
+\[
+\iint_R f(x,y)\,dx\,dy
+=
+\int_a^b \int_{g_1(x)}^{g_2(x)} f(x,y)\,dy\,dx
+\]
+
+\begin{block}{Interpretação geométrica}
+\phantomsection\label{interpretauxe7uxe3o-geomuxe9trica}
+\begin{itemize}
+\tightlist
+\item
+  \(x\) varia em um intervalo fixo \([a,b]\);
+\item
+  para cada \(x\), a variável \(y\) varia entre duas curvas.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Exemplo: Região do Tipo I}
+\phantomsection\label{exemplo-regiuxe3o-do-tipo-i}
+Considere a região limitada pelas curvas
+
+\[
+y = x^2 \quad \text{e} \quad y = x,
+\] com \(0 \le x \le 1\).
+
+A região é
+
+\[
+R = \{(x,y): 0 \le x \le 1,\ x^2 \le y \le x\}
+\]
+
+A integral dupla de \(f(x,y)\) sobre \(R\) é
+
+\[
+\iint_R f(x,y)\,dx\,dy
+=
+\int_0^1 \int_{x^2}^{x} f(x,y)\,dy\,dx
+\]
+\end{frame}
+
+\begin{frame}{Exemplo: Região do Tipo I}
+\phantomsection\label{exemplo-regiuxe3o-do-tipo-i-1}
+\pandocbounded{\includegraphics[keepaspectratio]{integrais_dup_trip_files/figure-beamer/unnamed-chunk-1-1.pdf}}
+\end{frame}
+
+\begin{frame}{Regiões do Tipo II (Regiões \(y\))}
+\phantomsection\label{regiuxf5es-do-tipo-ii-regiuxf5es-y}
+Uma região \(R\) é dita do tipo II se pode ser escrita como
+
+\[
+R = \{(x,y) : c \le y \le d,\ h_1(y) \le x \le h_2(y)\}
+\]
+
+Nesse caso,
+
+\[
+\iint_R f(x,y)\,dx\,dy
+=
+\int_c^d \int_{h_1(y)}^{h_2(y)} f(x,y)\,dx\,dy
+\]
+
+\begin{block}{Interpretação geométrica}
+\phantomsection\label{interpretauxe7uxe3o-geomuxe9trica-1}
+\begin{itemize}
+\tightlist
+\item
+  \(y\) varia em um intervalo fixo \([c,d]\);
+\item
+  para cada \(y\), a variável \(x\) varia entre duas curvas.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Exemplo: Região do Tipo II}
+\phantomsection\label{exemplo-regiuxe3o-do-tipo-ii}
+Considere a região limitada por
+
+\[
+x = y^2 \quad \text{e} \quad x = y,
+\] com \(0 \le y \le 1\).
+
+A região é
+
+\[
+R = \{(x,y): 0 \le y \le 1,\ y^2 \le x \le y\}
+\]
+
+A integral dupla de \(f(x,y)\) sobre \(R\) é \[
+\iint_R f(x,y)\,dx\,dy
+=
+\int_0^1 \int_{y^2}^{y} f(x,y)\,dx\,dy
+\]
+\end{frame}
+
+\begin{frame}{Exemplo: Região do Tipo II}
+\phantomsection\label{exemplo-regiuxe3o-do-tipo-ii-1}
+\pandocbounded{\includegraphics[keepaspectratio]{integrais_dup_trip_files/figure-beamer/unnamed-chunk-2-1.pdf}}
+\end{frame}
+
+\begin{frame}{Troca da Ordem de Integração}
+\phantomsection\label{troca-da-ordem-de-integrauxe7uxe3o}
+Uma mesma região \(R\) pode, muitas vezes, ser descrita tanto como
+região do tipo I quanto do tipo II.
+
+Trocar a ordem de integração significa reescrever
+
+\[
+\int_a^b \int_{g_1(x)}^{g_2(x)} f(x,y)\,dy\,dx
+\]
+
+na forma
+
+\[
+\int_c^d \int_{h_1(y)}^{h_2(y)} f(x,y)\,dx\,dy,
+\]
+
+mantendo a mesma região \(R\).
+\end{frame}
+
+\begin{frame}{Troca da Ordem de Integração}
+\phantomsection\label{troca-da-ordem-de-integrauxe7uxe3o-1}
+\pandocbounded{\includegraphics[keepaspectratio]{integrais_dup_trip_files/figure-beamer/unnamed-chunk-3-1.pdf}}
+\end{frame}
+
+
+
+
+\end{document}
