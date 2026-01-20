@@ -43,8 +43,8 @@ Esta página contém um esboço dos tópicos, conteúdos e tarefas para o semest
 | [11](programacao/semana-11.html) | Ter, 16/12 | Função Geradora de Momentos |  |[{{< fa file-powerpoint size=2xl >}}](/aulas/func_geradora_momentos/func_gera_momentos.html#/função-geradora-de-momentos-32 "Função Geradora de Momentos"){aria-label="Função Geradora de Momentos"}  |  |  |  |  |  |
 |  | Qui, 18/12 | Função Geradora de Momentos |  | [{{< fa file-powerpoint size=2xl >}}](/aulas/func_geradora_momentos/func_gera_momentos.html#/função-característica-2 "Função Geradora de Momentos"){aria-label="Função Geradora de Momentos"} |  |[{{< fa file-lines size=2xl >}}](/exercicios/lista04.html "Lista de Exercícios 04"){aria-label="Lista de Exercícios 04"}  |  |  |  |
 |  |  | **22/12 a 17/01  -  Recesso Acadêmico** |  |  |  |  |  |  |  |
-<!-- | [12](programacao/semana-12.html) | Ter, 22/07 | Recesso Acadêmico |  |  |  |  |  |  |  | -->
-<!-- |  | Qui, 24/07 | Recesso Acadêmico |  |  |  |  |  |  |  | -->
+| [12](programacao/semana-12.html) | Ter, 20/01 | Integrais Duplas e Triplas |  | [{{< fa file-powerpoint size=2xl >}}](/aulas/integrais_dup_trip/integrais_dup_trip.html#/title-slide "Integrais Duplas e Triplas"){aria-label="Integrais Duplas e Triplas"} |  |  |  |  |  |
+|  | Qui, 22/01 |  Integrais Duplas e Triplas |  | [{{< fa file-powerpoint size=2xl >}}](/aulas/integrais_dup_trip/integrais_dup_trip.html#/title-slide "Integrais Duplas e Triplas"){aria-label="Integrais Duplas e Triplas"} |  |  |  |  |  |
 <!-- | [13](programacao/semana-13.html) | Ter, 29/07 | Não haverá aula |  |  |  |  |  |  |  | -->
 <!-- |  | Qui, 31/07 | Reconhecimento de Padrões |  | [{{< fa file-powerpoint size=2xl >}}](/aulas/Reconhecimento_padroes/padroes.html#/métodos-não-hierárquicos "Métodos não hierárquicos"){aria-label="Métodos não hierárquicos"} |  |  |  |  |  | -->
 <!-- | [14](programacao/semana-14.html) | Ter, 05/08 | Reconhecimento de Padrões |  | [{{< fa file-powerpoint size=2xl >}}](/aulas/Reconhecimento_padroes/padroes.html#/método-mean-shift "Método Mean Shift"){aria-label="Método Mean Shift"} |  |  |  |  |  | -->

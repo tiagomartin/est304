@@ -81,7 +81,8 @@ Esta página contém aulas que serão apresentadas ao longo do semestre. Você p
 </span>
 
 <span>
-
+[Ver slides](/aulas/integrais_dup_trip/integrais_dup_trip.html){.btn .btn-est304-main .btn-sm}
+[PDF](/aulas/integrais_dup_trip/integrais_dup_trip.pdf){.btn .btn-est304-outline .btn-sm}
 </span>
 :::
 

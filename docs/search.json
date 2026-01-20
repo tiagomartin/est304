@@ -185,7 +185,7 @@
     "href": "aulas.html",
     "title": "Aulas",
     "section": "",
-    "text": "Esta página contém aulas que serão apresentadas ao longo do semestre. Você pode baixar as aulas em uma versão PDF.\n\n\n Outras Distribuições Contínuas \n Ver slides PDF \n\n\n Transformação de Variáveis Unidimensionais \n Ver slides PDF \n\n\n Função Geradora de Momentos \n Ver slides PDF \n\n\n Integral Dupla e Tripla \n\n\n\n\n Vetores Aleatórios",
+    "text": "Esta página contém aulas que serão apresentadas ao longo do semestre. Você pode baixar as aulas em uma versão PDF.\n\n\n Outras Distribuições Contínuas \n Ver slides PDF \n\n\n Transformação de Variáveis Unidimensionais \n Ver slides PDF \n\n\n Função Geradora de Momentos \n Ver slides PDF \n\n\n Integral Dupla e Tripla \n Ver slides PDF \n\n\n Vetores Aleatórios",
     "crumbs": [
       "Aulas"
     ]
@@ -1595,7 +1595,7 @@
     "href": "cronograma.html",
     "title": "Cronograma da Disciplina",
     "section": "",
-    "text": "Esta página contém um esboço dos tópicos, conteúdos e tarefas para o semestre. Este cronograma será atualizado conforme o semestre avança.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSemana\nData\nTópico\nArtigo\nSlides\nEC\nLE\nScript\nMC\nProjeto\n\n\n\n\n6\nTer, 11/11\nOutras Distribuições Contínuas\n\n\n\n\n\n\n\n\n\n\nQui, 13/11\nOutras Distribuições Contínuas\n\n\n\n\n\n\n\n\n\n7\nTer, 18/11\nNão haverá aula\n\n\n\n\n\n\n\n\n\n\nQui, 20/11\nFeriado: não haverá aula\n\n\n\n\n\n\n\n\n\n8\nTer, 25/11\nOutras Distribuições Contínuas\n\n\n\n\n\n\n\n\n\n\nQui, 27/11\nTransformação de Variáveis Aleatórias\n\n\n\n\n\n\n\n\n\n9\nTer, 02/12\nTransformação de Variáveis Aleatórias\n\n\n\n\n\n\n\n\n\n\nQui, 04/12\nTransformação de Variáveis Aleatórias\n\n\n\n\n\n\n\n\n\n10\nTer, 09/12\nFunção Geradora de Momentos\n\n\n\n\n\n\n\n\n\n\nQui, 11/12\nFunção Geradora de Momentos\n\n\n\n\n\n\n\n\n\n11\nTer, 16/12\nFunção Geradora de Momentos\n\n\n\n\n\n\n\n\n\n\nQui, 18/12\nFunção Geradora de Momentos\n\n\n\n\n\n\n\n\n\n\n\n22/12 a 17/01 - Recesso Acadêmico",
+    "text": "Esta página contém um esboço dos tópicos, conteúdos e tarefas para o semestre. Este cronograma será atualizado conforme o semestre avança.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSemana\nData\nTópico\nArtigo\nSlides\nEC\nLE\nScript\nMC\nProjeto\n\n\n\n\n6\nTer, 11/11\nOutras Distribuições Contínuas\n\n\n\n\n\n\n\n\n\n\nQui, 13/11\nOutras Distribuições Contínuas\n\n\n\n\n\n\n\n\n\n7\nTer, 18/11\nNão haverá aula\n\n\n\n\n\n\n\n\n\n\nQui, 20/11\nFeriado: não haverá aula\n\n\n\n\n\n\n\n\n\n8\nTer, 25/11\nOutras Distribuições Contínuas\n\n\n\n\n\n\n\n\n\n\nQui, 27/11\nTransformação de Variáveis Aleatórias\n\n\n\n\n\n\n\n\n\n9\nTer, 02/12\nTransformação de Variáveis Aleatórias\n\n\n\n\n\n\n\n\n\n\nQui, 04/12\nTransformação de Variáveis Aleatórias\n\n\n\n\n\n\n\n\n\n10\nTer, 09/12\nFunção Geradora de Momentos\n\n\n\n\n\n\n\n\n\n\nQui, 11/12\nFunção Geradora de Momentos\n\n\n\n\n\n\n\n\n\n11\nTer, 16/12\nFunção Geradora de Momentos\n\n\n\n\n\n\n\n\n\n\nQui, 18/12\nFunção Geradora de Momentos\n\n\n\n\n\n\n\n\n\n\n\n22/12 a 17/01 - Recesso Acadêmico\n\n\n\n\n\n\n\n\n\n12\nTer, 20/01\nIntegrais Duplas e Triplas\n\n\n\n\n\n\n\n\n\n\nQui, 22/01\nIntegrais Duplas e Triplas",
     "crumbs": [
       "Cronograma da Disciplina"
     ]
@@ -2572,5 +2572,19 @@
     "title": "Integrais Duplas e Triplas",
     "section": "Integral Dupla em Coordenadas Polares",
     "text": "Integral Dupla em Coordenadas Polares\nAssim, \\[\n\\iint_R \\sqrt{x^2+y^2}\\,dA\n=\n\\int_{0}^{2\\pi}\\int_{1}^{3} r\\cdot r\\,dr\\,d\\theta\n=\n\\int_{0}^{2\\pi}\\int_{1}^{3} r^2\\,dr\\,d\\theta\n\\]\nIntegral em \\(r\\)\n\\[\n\\int_{1}^{3} r^2\\,dr\n=\n\\left.\\frac{r^3}{3}\\right|_{1}^{3}\n=\n\\frac{27-1}{3}\n=\n\\frac{26}{3}\n\\]\nIntegral em \\(\\theta\\)\n\\[\n\\int_{0}^{2\\pi} \\frac{26}{3} d\\theta = 2\\pi = \\frac{26}{3} \\int_{0}^{2\\pi} d\\theta = \\frac{26}{3} \\cdot \\theta \\bigg|_0^{2\\pi} = \\frac{52 \\pi}{3}\n\\]"
+  },
+  {
+    "objectID": "programacao/semana-12.html",
+    "href": "programacao/semana-12.html",
+    "title": "Semana 12",
+    "section": "",
+    "text": "Integrais Duplas e Triplas \n\n\nVer slides PDF"
+  },
+  {
+    "objectID": "programacao/semana-12.html#slides",
+    "href": "programacao/semana-12.html#slides",
+    "title": "Semana 12",
+    "section": "",
+    "text": "Integrais Duplas e Triplas \n\n\nVer slides PDF"
   }
 ]
