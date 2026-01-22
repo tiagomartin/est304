@@ -1401,7 +1401,7 @@ $$
 $$
 \iint_R (x-y)\,dA,
 $$
-sendo $R$ o semi-círculo de centro na origem e raio $1$ (isto é, a região $x^2+y^2\le 1$ com $y\ge 0$).
+sendo $R$ o semi-círculo de centro na origem e raio $1$ (isto é, a região $x^2+y^2\le 1$ com $x\ge 0$).
 
 
 ```{r}
@@ -1414,45 +1414,31 @@ sendo $R$ o semi-círculo de centro na origem e raio $1$ (isto é, a região $x^
 
 library(ggplot2)
 
-# Semicírculo superior: x^2 + y^2 = 1, y >= 0
-theta <- seq(0, pi, length.out = 600)
-boundary <- data.frame(
-  x = cos(theta),
-  y = sin(theta)
-)
+# fronteira do círculo unitário
+theta <- seq(0, 2*pi, length.out = 800)
+circle <- data.frame(x = cos(theta), y = sin(theta))
 
-# Região sombreada (em função de x)
-x <- seq(-1, 1, length.out = 600)
+# região: 0<=x<=1, -sqrt(1-x^2) <= y <= sqrt(1-x^2)
+x <- seq(0, 1, length.out = 600)
 region <- data.frame(
   x = x,
-  y_lower = 0,
-  y_upper = sqrt(1 - x^2)
+  y_lower = -sqrt(1 - x^2),
+  y_upper =  sqrt(1 - x^2)
 )
 
 ggplot() +
-  # Região R
   geom_ribbon(
     data = region,
     aes(x = x, ymin = y_lower, ymax = y_upper),
-    fill = "lightskyblue1",
-    alpha = 0.7
+    fill = "lightskyblue1", alpha = 0.7
   ) +
-  # Fronteira circular
-  geom_path(
-    data = boundary,
-    aes(x = x, y = y),
-    linewidth = 1.2
-  ) +
-  # Eixos
-  geom_hline(yintercept = 0, linewidth = 1) +
+  geom_path(data = circle, aes(x = x, y = y), linewidth = 1.1) +
   geom_vline(xintercept = 0, linewidth = 1) +
-  # Ajustes visuais
-  coord_fixed(xlim = c(-1.1, 1.1), ylim = c(0, 1.1), expand = FALSE) +
+  geom_hline(yintercept = 0, linewidth = 1) +
+  coord_fixed(xlim = c(-1.1, 1.1), ylim = c(-1.1, 1.1), expand = FALSE) +
   labs(
-    title = "Região de integração R",
-    subtitle = "Semicírculo superior: x² + y² ≤ 1",
-    x = "x",
-    y = "y"
+    title = "Região R: semicircunferência à direita (x ≥ 0)",
+    x = "x", y = "y"
   ) +
   theme_classic(base_size = 12)
 ```
@@ -1482,7 +1468,7 @@ $$
 
 Como $R$ é o semicírculo superior de raio $1$, temos
 $$
-0\le r\le 1,\qquad 0\le \theta\le \pi
+0\le r\le 1,\qquad -\dfrac{\pi}{2}\le \theta\le \dfrac{\pi}{2}
 $$
 
 
@@ -1493,9 +1479,9 @@ De forma que,
 $$
 \iint_R (x-y)\,dA
 =
-\int_{0}^{\pi}\int_{0}^{1} r(\cos\theta-\text{sen }\theta)\,r\,dr\,d\theta
+\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\int_{0}^{1} r(\cos\theta-\text{sen }\theta)\,r\,dr\,d\theta
 =
-\int_{0}^{\pi}\int_{0}^{1} r^2(\cos\theta-\text{sen }\theta)\,dr\,d\theta
+\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\int_{0}^{1} r^2(\cos\theta-\text{sen }\theta)\,dr\,d\theta
 $$
 
 . . .
@@ -1515,7 +1501,7 @@ Integrando em relação a $\theta$
 
 $$
 \begin{aligned}
-\int_{0}^{\pi}\frac{1}{3}(\cos\theta-\text{sen }\theta)\,d\theta &= \frac13 \int_{0}^{\pi}\cos\theta\,d\theta - \frac13 \int_{0}^{\pi} \text{sen }\theta\,d\theta \\[6pt] &= \frac13 \text{sen }\theta \bigg|_{0}^{\pi} + \frac13 \cos\theta\bigg|_{0}^{\pi} \\[6pt] &= \frac13 (\text{sen }\pi - \text{sen } 0) + \frac13 (\cos \pi - \cos 0) \\[6pt] &= \frac13 \cdot 0 + \frac13(-1-1) = -\frac23
+\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\frac{1}{3}(\cos\theta-\text{sen }\theta)\,d\theta &= \frac13 \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\cos\theta\,d\theta - \frac13 \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \text{sen }\theta\,d\theta \\[6pt] &= \frac13 \text{sen }\theta \bigg|_{-\frac{\pi}{2}}^{\frac{\pi}{2}} + \frac13 \cos\theta\bigg|_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \\[6pt] &= \frac13 \Bigg(\text{sen }\bigg(\frac{\pi}{2}\bigg) - \text{sen } \bigg(-\frac{\pi}{2}\bigg)\Bigg) + \frac13 \Bigg(\cos \bigg(\frac{\pi}{2}\bigg) - \cos \bigg(-\frac{\pi}{2}\bigg)\Bigg) \\[6pt] &= \frac13 \cdot (1 - (-1)) + \frac13(0-0) = \frac23
 \end{aligned}
 $$
 
@@ -1648,7 +1634,7 @@ $$
 
 ### Integral em $\theta$
 $$
-\int_{0}^{2\pi} \frac{26}{3} d\theta = 2\pi = \frac{26}{3} \int_{0}^{2\pi} d\theta = \frac{26}{3} \cdot \theta \bigg|_0^{2\pi} = \frac{52 \pi}{3}
+\int_{0}^{2\pi} \frac{26}{3} d\theta = \frac{26}{3} \int_{0}^{2\pi} d\theta = \frac{26}{3} \cdot \theta \bigg|_0^{2\pi} = \frac{52 \pi}{3}
 $$
 
 

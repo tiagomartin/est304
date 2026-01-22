@@ -855,7 +855,7 @@ r
 <h2>Integral Dupla em Coordenadas Polares</h2>
 <p><strong>Exemplo 08:</strong> Calcule <span class="math display">\[
 \iint_R (x-y)\,dA,
-\]</span> sendo <span class="math inline">\(R\)</span> o semi-círculo de centro na origem e raio <span class="math inline">\(1\)</span> (isto é, a região <span class="math inline">\(x^2+y^2\le 1\)</span> com <span class="math inline">\(y\ge 0\)</span>).</p>
+\]</span> sendo <span class="math inline">\(R\)</span> o semi-círculo de centro na origem e raio <span class="math inline">\(1\)</span> (isto é, a região <span class="math inline">\(x^2+y^2\le 1\)</span> com <span class="math inline">\(x\ge 0\)</span>).</p>
 
 <img data-src="integrais_dup_trip_files/figure-revealjs/unnamed-chunk-7-1.png" class="quarto-figure quarto-figure-center r-stretch" width="576"></section>
 <section id="integral-dupla-em-coordenadas-polares-4" class="slide level2">
@@ -871,7 +871,7 @@ x-y = r\cos\theta - r\,\text{sen }\theta = r(\cos\theta-\text{sen }\theta)
 </div>
 <div class="fragment">
 <p>Como <span class="math inline">\(R\)</span> é o semicírculo superior de raio <span class="math inline">\(1\)</span>, temos <span class="math display">\[
-0\le r\le 1,\qquad 0\le \theta\le \pi
+0\le r\le 1,\qquad -\dfrac{\pi}{2}\le \theta\le \dfrac{\pi}{2}
 \]</span></p>
 </div>
 </section>
@@ -881,9 +881,9 @@ x-y = r\cos\theta - r\,\text{sen }\theta = r(\cos\theta-\text{sen }\theta)
 <p><span class="math display">\[
 \iint_R (x-y)\,dA
 =
-\int_{0}^{\pi}\int_{0}^{1} r(\cos\theta-\text{sen }\theta)\,r\,dr\,d\theta
+\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\int_{0}^{1} r(\cos\theta-\text{sen }\theta)\,r\,dr\,d\theta
 =
-\int_{0}^{\pi}\int_{0}^{1} r^2(\cos\theta-\text{sen }\theta)\,dr\,d\theta
+\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\int_{0}^{1} r^2(\cos\theta-\text{sen }\theta)\,dr\,d\theta
 \]</span></p>
 <div class="fragment">
 <p>Integrando em relação a <span class="math inline">\(r\)</span></p>
@@ -897,7 +897,7 @@ x-y = r\cos\theta - r\,\text{sen }\theta = r(\cos\theta-\text{sen }\theta)
 <p>Integrando em relação a <span class="math inline">\(\theta\)</span></p>
 <p><span class="math display">\[
 \begin{aligned}
-\int_{0}^{\pi}\frac{1}{3}(\cos\theta-\text{sen }\theta)\,d\theta &amp;= \frac13 \int_{0}^{\pi}\cos\theta\,d\theta - \frac13 \int_{0}^{\pi} \text{sen }\theta\,d\theta \\[6pt] &amp;= \frac13 \text{sen }\theta \bigg|_{0}^{\pi} + \frac13 \cos\theta\bigg|_{0}^{\pi} \\[6pt] &amp;= \frac13 (\text{sen }\pi - \text{sen } 0) + \frac13 (\cos \pi - \cos 0) \\[6pt] &amp;= \frac13 \cdot 0 + \frac13(-1-1) = -\frac23
+\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\frac{1}{3}(\cos\theta-\text{sen }\theta)\,d\theta &amp;= \frac13 \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\cos\theta\,d\theta - \frac13 \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \text{sen }\theta\,d\theta \\[6pt] &amp;= \frac13 \text{sen }\theta \bigg|_{-\frac{\pi}{2}}^{\frac{\pi}{2}} + \frac13 \cos\theta\bigg|_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \\[6pt] &amp;= \frac13 \Bigg(\text{sen }\bigg(\frac{\pi}{2}\bigg) - \text{sen } \bigg(-\frac{\pi}{2}\bigg)\Bigg) + \frac13 \Bigg(\cos \bigg(\frac{\pi}{2}\bigg) - \cos \bigg(-\frac{\pi}{2}\bigg)\Bigg) \\[6pt] &amp;= \frac13 \cdot (1 - (-1)) + \frac13(0-0) = \frac23
 \end{aligned}
 \]</span></p>
 </section>
@@ -942,7 +942,7 @@ x=r\cos\theta,\qquad y=r\,\text{sen }\theta,\qquad dA=dx\,dy=r\,dr\,d\theta
 \]</span></p>
 <h3 id="integral-em-theta">Integral em <span class="math inline">\(\theta\)</span></h3>
 <p><span class="math display">\[
-\int_{0}^{2\pi} \frac{26}{3} d\theta = 2\pi = \frac{26}{3} \int_{0}^{2\pi} d\theta = \frac{26}{3} \cdot \theta \bigg|_0^{2\pi} = \frac{52 \pi}{3}
+\int_{0}^{2\pi} \frac{26}{3} d\theta = \frac{26}{3} \int_{0}^{2\pi} d\theta = \frac{26}{3} \cdot \theta \bigg|_0^{2\pi} = \frac{52 \pi}{3}
 \]</span></p>
 
 
