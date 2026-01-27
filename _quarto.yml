@@ -34,7 +34,7 @@ website:
       - aulas.qmd
       #- estudos.qmd
       - exercicios.qmd
-      - resolucao.qmd
+      #- resolucao.qmd
       - formulario.qmd
       #- analises.qmd
       - plano.qmd
