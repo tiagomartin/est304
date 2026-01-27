@@ -1,0 +1,991 @@
+---
+title: "Resolução: Distribuições Contínuas"
+format:
+  html:
+    number-sections: true
+    toc: true
+    toc-depth: 2
+  pdf:
+    number-sections: true
+    toc: false
+    toc-depth: 2
+---
+
+
+**Exercício 01**
+
+::: {.callout-note title="Comentário — Fórmula-chave (Gamma)"}
+Sempre que aparecer uma integral do tipo  
+$$
+\int_0^\infty x^k e^{-ax}\,dx, \quad a>0,
+$$
+podemos usar a identidade
+$$
+\int_0^\infty x^k e^{-ax}\,dx = \frac{\Gamma(k+1)}{a^{k+1}}, \quad a>0
+$$
+:::
+
+(a) $\displaystyle \int_0^\infty x^2 e^{-3x}\,dx$
+
+**Passo 1 — Identificar parâmetros**  
+Aqui $k=2$ e $a=3$
+
+**Passo 2 — Aplicar a fórmula**
+$$
+\int_0^\infty x^2 e^{-3x}\,dx = \frac{\Gamma(3)}{3^3}
+$$
+
+**Passo 3 — Calcular $\Gamma(3)$**
+$$
+\Gamma(3)=2!=2
+$$
+
+**Conclusão**
+$$
+\boxed{\int_0^\infty x^2 e^{-3x}\,dx=\frac{2}{27}}
+$$
+
+---
+
+(b) $\displaystyle \int_0^\infty x^4 e^{-x/5}\,dx$
+
+**Passo 1 — Identificar parâmetros**  
+Note que $e^{-x/5}=e^{-(1/5)x}$. Logo $k=4$ e $a=\frac{1}{5}$
+
+**Passo 2 — Aplicar a fórmula**
+$$
+\int_0^\infty x^4 e^{-x/5}\,dx=\frac{\Gamma(5)}{(1/5)^5}
+$$
+
+**Passo 3 — Calcular $\Gamma(5)$**
+$$
+\Gamma(5)=4!=24
+$$
+
+**Conclusão**
+$$
+\boxed{
+\int_0^\infty x^4 e^{-x/5}\,dx
+=24\cdot 5^5
+=24\cdot 3125
+=75000
+}
+$$
+
+::: {.callout-warning title="Atenção — erro comum"}
+Não confunda o parâmetro $a$.  
+Em $e^{-x/5}$, vale **$a=1/5$** (e não $5$)
+:::
+
+---
+
+(c) $\displaystyle \int_0^\infty \sqrt{x}\,e^{-2x/3}\,dx$
+
+**Passo 1 — Reescrever $\sqrt{x}$ como potência**  
+$$
+\sqrt{x}=x^{1/2}
+$$
+Logo $k=\frac12$ e $a=\frac23$.
+
+**Passo 2 — Aplicar a fórmula**
+$$
+\int_0^\infty x^{1/2}e^{-(2/3)x}\,dx
+=\frac{\Gamma(3/2)}{(2/3)^{3/2}}
+$$
+
+**Passo 3 — Calcular $\Gamma(3/2)$**  
+Usando $\Gamma(x+1)=x\Gamma(x)$ e $\Gamma(1/2)=\sqrt{\pi}$:
+$$
+\Gamma\left(\frac32\right)
+=\frac12\Gamma\left(\frac12\right)
+=\frac{\sqrt{\pi}}{2}
+$$
+
+**Passo 4 — Simplificar $(2/3)^{-3/2}$**
+$$
+\frac{1}{(2/3)^{3/2}}=\left(\frac{3}{2}\right)^{3/2}
+$$
+
+**Conclusão**
+$$
+\boxed{
+\int_0^\infty \sqrt{x}\,e^{-2x/3}\,dx
+=\frac{\sqrt{\pi}}{2}\left(\frac{3}{2}\right)^{3/2}
+=\frac{3\sqrt{3\pi}}{4\sqrt{2}}
+}
+$$
+
+
+---
+
+
+
+**Exercício 02**
+
+::: {.callout-note title="Comentário — parametrização (taxa)"}
+Neste gabarito, $\mathrm{Gamma}(\alpha,\lambda)$ usa **$\lambda$ como taxa** (rate):
+$$
+f_X(x)=\frac{\lambda^\alpha}{\Gamma(\alpha)}x^{\alpha-1}e^{-\lambda x},\quad x>0.
+$$
+:::
+
+(a) Densidade $f_X(x)$
+
+**Passo 1 — Substituir $\alpha=3$ e $\lambda=1/2$**
+$$
+f_X(x)=\frac{(1/2)^3}{\Gamma(3)}x^{3-1}e^{-(1/2)x}
+=\frac{(1/2)^3}{\Gamma(3)}x^{2}e^{-x/2}
+$$
+
+**Passo 2 — Calcular $\Gamma(3)$**  
+Como $\Gamma(3)=2!=2$, temos:
+$$
+f_X(x)=\frac{1/8}{2}x^2e^{-x/2}=\boxed{\frac{1}{16}x^2e^{-x/2}},\quad x>0
+$$
+---
+
+(b) Função de distribuição $F_X(x)$
+
+Para $\alpha$ inteiro, vale a forma fechada:
+$$
+F_X(x)=1-e^{-\lambda x}\sum_{k=0}^{\alpha-1}\frac{(\lambda x)^k}{k!},\quad x\ge 0
+$$
+
+**Substituindo $\alpha=3$ e $\lambda=1/2$:**
+$$
+\boxed{
+F_X(x)=1-e^{-x/2}\left(1+\frac{x}{2}+\frac{1}{2}\left(\frac{x}{2}\right)^2\right)
+=1-e^{-x/2}\left(1+\frac{x}{2}+\frac{x^2}{8}\right)
+},\quad x\ge 0
+$$
+
+
+---
+
+
+
+(c) Verificação por derivação: $F'_X(x)=f_X(x)$
+
+**Passo 1 — Escrever como produto**  
+Defina
+$$
+g(x)=e^{-x/2},\qquad h(x)=1+\frac{x}{2}+\frac{x^2}{8},
+$$
+de modo que $F_X(x)=1-g(x)h(x)$
+
+**Passo 2 — Derivar com regra do produto**
+$$
+F_X'(x)=-\left(g'(x)h(x)+g(x)h'(x)\right)
+$$
+Como
+$$
+g'(x)=-\frac{1}{2}e^{-x/2},\qquad h'(x)=\frac{1}{2}+\frac{x}{4},
+$$
+segue:
+$$
+F_X'(x)= -\left[-\frac{1}{2}e^{-x/2}\left(1+\frac{x}{2}+\frac{x^2}{8}\right)
++e^{-x/2}\left(\frac{1}{2}+\frac{x}{4}\right)\right]
+$$
+
+**Passo 3 — Colocar $e^{-x/2}$ em evidência e simplificar**
+$$
+F_X'(x)=e^{-x/2}\left[\frac12\left(1+\frac{x}{2}+\frac{x^2}{8}\right)-\left(\frac12+\frac{x}{4}\right)\right]
+$$
+Note que
+$$
+\frac12\left(1+\frac{x}{2}+\frac{x^2}{8}\right)=\frac12+\frac{x}{4}+\frac{x^2}{16},
+$$
+logo o colchete vira $\frac{x^2}{16}$
+
+**Conclusão**
+$$
+\boxed{F_X'(x)=\frac{1}{16}x^2e^{-x/2}=f_X(x)}
+$$
+
+---
+
+**Exercício 03** 
+
+Dados: $E(X)=48$ e $DP(X)=24\Rightarrow \mathrm{Var}(X)=24^2=576$
+
+Para $X\sim\mathrm{Gamma}(\alpha,\lambda)$ (taxa):
+$$
+E(X)=\frac{\alpha}{\lambda},\qquad \mathrm{Var}(X)=\frac{\alpha}{\lambda^2}
+$$
+
+(a) Identificar $(\alpha,\lambda)$
+
+**Passo 1 — Encontrar $\lambda$**  
+Da relação $\mathrm{Var}(X)=\alpha/\lambda^2$ e $E(X)=\alpha/\lambda$, obtemos:
+$$
+\lambda=\frac{E(X)}{\mathrm{Var}(X)}=\frac{48}{576}=\boxed{\frac{1}{12}}
+$$
+
+**Passo 2 — Encontrar $\alpha$**
+$$
+\alpha=E(X)\lambda=48\cdot\frac{1}{12}=\boxed{4}
+$$
+
+Logo,
+$$
+\boxed{X\sim\mathrm{Gamma}(4,1/12)}
+$$
+
+::: {.callout-note title="Comentário — sobrevivência para $\alpha$ inteiro"}
+Se $\alpha$ é inteiro, então
+$$
+S(t)=P(X>t)=e^{-\lambda t}\sum_{k=0}^{\alpha-1}\frac{(\lambda t)^k}{k!}
+$$
+Aqui $\alpha=4$, então a soma vai até $k=3$.
+:::
+
+
+
+---
+
+
+
+(b) Calcular $P(X>60)$
+
+**Passo 1 — Calcular $\lambda t$**
+$$
+\lambda t=\frac{1}{12}\cdot 60=5
+$$
+
+**Passo 2 — Aplicar a fórmula de $S(t)$**
+$$
+P(X>60)=S(60)=e^{-5}\left(1+5+\frac{5^2}{2}+\frac{5^3}{6}\right)
+=e^{-5}\left(1+5+\frac{25}{2}+\frac{125}{6}\right)
+$$
+
+**Passo 3 — Somar os termos**
+$$
+1+5+\frac{25}{2}+\frac{125}{6}
+=\frac{6+30+75+125}{6}=\frac{236}{6}=\frac{118}{3}
+$$
+
+**Conclusão**
+$$
+\boxed{P(X>60)=\frac{118}{3}e^{-5}}
+$$
+
+
+---
+
+
+(c) Calcular $P(X>60\mid X>40)$
+
+::: {.callout-note title="Comentário — por que vira razão de sobrevivências?"}
+Como $\{X>60\}\subset\{X>40\}$, então:
+$$
+P(X>60\mid X>40)=\frac{P(X>60)}{P(X>40)}=\frac{S(60)}{S(40)}
+$$
+:::
+
+**Passo 1 — Calcular $S(40)$**  
+Primeiro:
+$$
+\lambda t=\frac{1}{12}\cdot 40=\frac{10}{3}
+$$
+Então
+$$
+S(40)=e^{-10/3}\left(1+\frac{10}{3}+\frac{(10/3)^2}{2}+\frac{(10/3)^3}{6}\right)
+$$
+Agora:
+$$
+\frac{(10/3)^2}{2}=\frac{100/9}{2}=\frac{50}{9},\qquad
+\frac{(10/3)^3}{6}=\frac{1000/27}{6}=\frac{500}{81}
+$$
+Logo:
+$$
+S(40)=e^{-10/3}\left(1+\frac{10}{3}+\frac{50}{9}+\frac{500}{81}\right)
+$$
+Em denominador $81$:
+$$
+1=\frac{81}{81},\ \ \frac{10}{3}=\frac{270}{81},\ \ \frac{50}{9}=\frac{450}{81},\ \ \frac{500}{81}=\frac{500}{81}
+$$
+Somando:
+$$
+\frac{81+270+450+500}{81}=\frac{1301}{81}
+$$
+Portanto:
+$$
+S(40)=\boxed{\frac{1301}{81}e^{-10/3}}
+$$
+
+**Passo 2 — Formar a razão $S(60)/S(40)$**
+$$
+\frac{S(60)}{S(40)}=
+\frac{\frac{118}{3}e^{-5}}{\frac{1301}{81}e^{-10/3}}
+=\frac{118}{3}\cdot\frac{81}{1301}\cdot e^{-5+10/3}
+$$
+Como $\frac{81}{3}=27$ e $-5+\frac{10}{3}=-\frac{5}{3}$:
+$$
+\boxed{P(X>60\mid X>40)=\frac{3186}{1301}e^{-5/3}}
+$$
+
+
+---
+
+
+(d) Três sistemas iid: probabilidade de pelo menos 2 passarem 60 dias
+
+Seja
+$$
+p=P(X>60)=\frac{118}{3}e^{-5}
+$$
+Se $N$ é o número (entre 3) que passam 60 dias, então $N\sim\mathrm{Bin}(3,p)$.
+
+**Passo 1 — Escrever $P(N\ge 2)$**
+$$
+P(N\ge 2)=P(N=2)+P(N=3)
+=\binom{3}{2}p^2(1-p)+p^3
+$$
+
+**Passo 2 — Simplificar**
+$$
+\binom{3}{2}p^2(1-p)+p^3
+=3p^2-3p^3+p^3
+=\boxed{3p^2-2p^3}
+$$
+
+---
+
+**Exercício 04**
+
+Compare com
+$$
+f(x)=\frac{\lambda^\alpha}{\Gamma(\alpha)}x^{\alpha-1}e^{-\lambda x}
+$$
+
+(a) $\frac{8}{3}x^3e^{-2x}$
+O expoente de $x$ é $3$, então $\alpha-1=3\Rightarrow \alpha=4$  
+O termo $e^{-2x}$ dá $\lambda=2$
+$$
+\boxed{\alpha=4,\ \lambda=2}
+$$
+
+
+---
+
+
+(b) $\frac{1}{4}xe^{-x/2}$
+Aqui $x^1$, então $\alpha-1=1\Rightarrow \alpha=2$  
+E $e^{-x/2}$ dá $\lambda=1/2$
+$$
+\boxed{\alpha=2,\ \lambda=\frac12}
+$$
+
+
+
+---
+
+
+
+(c) $\sqrt{\frac{3}{\pi x}}e^{-3x}$
+Reescreva:
+$$
+\sqrt{\frac{3}{\pi x}}=\frac{\sqrt{3}}{\sqrt{\pi}}x^{-1/2}
+$$
+Logo $x^{\alpha-1}=x^{-1/2}\Rightarrow \alpha-1=-1/2\Rightarrow \alpha=1/2$, e $e^{-3x}$ dá $\lambda=3$:
+$$
+\boxed{\alpha=\frac12,\ \lambda=3}
+$$
+
+
+---
+
+
+
+**Exercício 05** 
+
+::: {.callout-note title="Comentário — relação Beta–Gamma"}
+$$
+B(a,b)=\frac{\Gamma(a)\Gamma(b)}{\Gamma(a+b)},\qquad \Gamma\left(\frac12\right)=\sqrt{\pi}
+$$
+:::
+
+
+
+(a) $B(2,3)$
+$$
+B(2,3)=\frac{\Gamma(2)\Gamma(3)}{\Gamma(5)}=\frac{1!\,2!}{4!}=\boxed{\frac{1}{12}}
+$$
+
+---
+
+
+(b) $B(3,1)$
+$$
+B(3,1)=\frac{\Gamma(3)\Gamma(1)}{\Gamma(4)}=\frac{2!\,1}{3!}=\boxed{\frac{1}{3}}
+$$
+
+
+---
+
+
+(c) $B\left(\frac12,4\right)$
+Usando $\Gamma(4)=3!=6$ e $\Gamma(9/2)=\frac{7}{2}\frac{5}{2}\frac{3}{2}\frac{1}{2}\Gamma(1/2)=\frac{105}{16}\sqrt{\pi}$:
+$$
+B\left(\frac12,4\right)
+=\frac{\Gamma(1/2)\Gamma(4)}{\Gamma(9/2)}
+=\frac{\sqrt{\pi}\cdot 6}{(105/16)\sqrt{\pi}}
+=\boxed{\frac{32}{35}}
+$$
+
+
+---
+
+
+(d) $B\left(\frac32,\frac12\right)$
+Como $\Gamma(3/2)=\frac12\sqrt{\pi}$ e $\Gamma(2)=1! =1$:
+$$
+B\left(\frac32,\frac12\right)
+=\frac{\Gamma(3/2)\Gamma(1/2)}{\Gamma(2)}
+=\frac{\left(\frac12\sqrt{\pi}\right)\sqrt{\pi}}{1}
+=\boxed{\frac{\pi}{2}}
+$$
+
+
+---
+
+
+**Exercício 06**
+
+A densidade da Beta é
+$$
+f(x)=\frac{1}{B(a,b)}x^{a-1}(1-x)^{b-1},\quad 0<x<1
+$$
+
+(a) Densidade
+
+Como $B(2,3)=1/12$,
+$$
+\boxed{f(x)=12x(1-x)^2,\quad 0<x<1}
+$$
+
+
+---
+
+
+
+(b) Função de distribuição $F(x)$
+
+**Passo 1 — Expandir o integrando**
+$$
+12x(1-x)^2=12x(1-2x+x^2)=12x-24x^2+12x^3
+$$
+
+**Passo 2 — Integrar de 0 até $x$**
+$$
+F(x)=\int_0^x (12t-24t^2+12t^3)\,dt
+=\left(6t^2-8t^3+3t^4\right)\Big|_{0}^{x}
+$$
+
+**Conclusão**
+$$
+\boxed{F(x)=6x^2-8x^3+3x^4,\quad 0\le x\le 1}
+$$
+
+
+---
+
+
+
+(c) Esperança
+
+Para $X\sim\mathrm{Beta}(a,b)$:
+$$
+\boxed{E(X)=\frac{a}{a+b}}
+$$
+Logo,
+$$
+\boxed{E(X)=\frac{2}{5}=0,4}
+$$
+
+
+---
+
+
+
+(d) Variância
+
+Para $X\sim\mathrm{Beta}(a,b)$:
+$$
+\boxed{\mathrm{Var}(X)=\frac{ab}{(a+b)^2(a+b+1)}}
+$$
+Logo,
+$$
+\mathrm{Var}(X)=\frac{2\cdot 3}{5^2\cdot 6}=\frac{6}{150}=\boxed{\frac{1}{25}}=0,04
+$$
+
+
+---
+
+
+(e) Probabilidades
+
+(i) $P(X\ge E(X))$
+
+Como $E(X)=0,4$:
+$$
+P(X\ge E(X))=1-F(0,4)
+$$
+Calcule:
+$$
+F(0,4)=6(0,16)-8(0,064)+3(0,0256)=0,5248=\frac{328}{625}
+$$
+Logo:
+$$
+\boxed{P(X\ge E(X))=1-\frac{328}{625}=\frac{297}{625}}
+$$
+
+
+(ii) $P(X>E(X)\mid X<E(X)+DP(X))$
+
+Aqui $DP(X)=\sqrt{0,04}=0,2$ e $E+DP=0,6$. Então:
+$$
+P(X>0,4\mid X<0,6)=\frac{P(0,4<X<0,6)}{P(X<0,6)}
+=\frac{F(0,6)-F(0,4)}{F(0,6)}
+$$
+Calcule:
+$$
+F(0,6)=6(0,36)-8(0,216)+3(0,1296)=0,8208=\frac{513}{625}
+$$
+Portanto:
+$$
+\boxed{\frac{F(0,6)-F(0,4)}{F(0,6)}
+=\frac{\frac{513}{625}-\frac{328}{625}}{\frac{513}{625}}
+=\frac{185}{513}}
+$$
+
+
+---
+
+
+**Exercício 07** 
+
+Denote por $I_x(a,b)$ a Beta incompleta regularizada (a CDF da Beta).
+
+(a) Média
+
+Para Beta$(a,b)$:
+$$
+E(X)=\frac{a}{a+b}
+$$
+Logo:
+$$
+\boxed{E(X)=\frac{3/2}{3/2+3}=\frac{1}{3}}
+$$
+
+
+---
+
+
+
+(b) Probabilidade de “fora do padrão”
+
+Se
+$$
+A=\{X>0,5\}\cup\{X<0,1\},
+$$
+então:
+$$
+\boxed{
+P(A)=P(X<0,1)+P(X>0,5)
+=I_{0,1}\left(\frac32,3\right)+\left[1-I_{0,5}\left(\frac32,3\right)\right]
+}
+$$
+
+
+---
+
+
+(c) $P\left(X<\text{média}\mid A\right)$
+
+A média é $1/3$ e, dentro do evento $A$, o único trecho abaixo de $1/3$ é $X<0,1$. Logo:
+$$
+P\left(X<\frac13\mid A\right)=\frac{P(X<0,1)}{P(A)}
+$$
+Assim:
+$$
+\boxed{
+P\left(X<\frac13\mid A\right)=
+\frac{I_{0.1}\left(\frac32,3\right)}{
+I_{0.1}\left(\frac32,3\right)+1-I_{0.5}\left(\frac32,3\right)
+}
+}
+$$
+
+
+---
+
+
+
+(d) Até encontrar 3 fora do padrão: média de “dentro do padrão”
+
+Seja $p=P(A)$ a probabilidade de “fora do padrão”.  
+O número esperado de observações “dentro do padrão” antes de ocorrerem 3 “fora do padrão” é:
+$$
+\boxed{E(\text{dentro})=\frac{3(1-p)}{p}},\quad p=P(A)
+$$
+
+---
+
+**Exercício 08** 
+
+Compare com:
+$$
+f(x)=\frac{1}{B(a,b)}x^{a-1}(1-x)^{b-1},\quad 0<x<1
+$$
+
+(a) $105x^2(1-x)^4$
+Aqui $a-1=2\Rightarrow a=3$ e $b-1=4\Rightarrow b=5$:
+$$
+\boxed{(a,b)=(3,5)}
+$$
+
+---
+
+
+(b) $20(x^3-x^4)=20x^3(1-x)$
+Aqui $a-1=3\Rightarrow a=4$ e $b-1=1\Rightarrow b=2$:
+$$
+\boxed{(a,b)=(4,2)}
+$$
+
+
+---
+
+
+(c) $f(x)=\frac{1}{2\sqrt{x}}=\frac12 x^{-1/2}$
+Aqui $a-1=-1/2\Rightarrow a=1/2$ e $b-1=0\Rightarrow b=1$:
+$$
+\boxed{(a,b)=\left(\frac12,1\right)}
+$$
+
+---
+
+**Exercício 09**
+
+A Weibull (escala $\alpha$, forma $\beta$) tem:
+$$
+F(x)=1-e^{-(x/\alpha)^\beta},\quad x\ge 0,
+$$
+$$
+f(x)=\frac{\beta}{\alpha}\left(\frac{x}{\alpha}\right)^{\beta-1}e^{-(x/\alpha)^\beta},\quad x>0
+$$
+
+(a) Densidade
+
+Substituindo $\alpha=2$, $\beta=2$:
+$$
+f(x)=\frac{2}{2}\left(\frac{x}{2}\right)^{1}e^{-(x/2)^2}
+=\boxed{\frac{x}{2}e^{-x^2/4}},\quad x>0
+$$
+
+
+---
+
+
+(b) Distribuição
+$$
+\boxed{F(x)=1-e^{-x^2/4}},\quad x\ge 0
+$$
+
+
+---
+
+
+(c) Esperança
+
+Para Weibull:
+$$
+E(X)=\alpha\Gamma\left(1+\frac{1}{\beta}\right)
+$$
+Logo:
+$$
+E(X)=2\Gamma\left(\frac32\right)=2\cdot\frac{\sqrt{\pi}}{2}
+=\boxed{\sqrt{\pi}}
+$$
+
+::: {.callout-warning title="Atenção — correção importante"}
+$\Gamma(3/2)=\sqrt{\pi}/2$, portanto $2\Gamma(3/2)=\sqrt{\pi}$ (não $\pi$).
+:::
+
+
+---
+
+
+
+(d) Variância
+
+Para Weibull:
+$$
+\mathrm{Var}(X)=\alpha^2\left[\Gamma\left(1+\frac{2}{\beta}\right)-\Gamma^2\left(1+\frac{1}{\beta}\right)\right]
+$$
+Aqui:
+$$
+\mathrm{Var}(X)=4\left[\Gamma(2)-\Gamma^2\left(\frac32\right)\right]
+=4\left[1-\left(\frac{\sqrt{\pi}}{2}\right)^2\right]
+=\boxed{4-\pi}
+$$
+
+
+
+---
+
+
+(e) Probabilidades
+
+$$
+P(X>1)=e^{-(1/2)^2}=\boxed{e^{-1/4}}
+$$
+
+E
+$$
+P(X>1\mid X<2)=\frac{P(1<X<2)}{P(X<2)}
+=\frac{F(2)-F(1)}{F(2)}
+=\boxed{\frac{e^{-1/4}-e^{-1}}{1-e^{-1}}}
+$$
+
+---
+
+
+
+**Exercício 10** 
+
+(a) Esperança
+$$
+\boxed{E(X)=\alpha\Gamma\left(1+\frac{1}{4}\right)=\frac12\,\Gamma\left(\frac54\right)}
+$$
+
+
+---
+
+
+(b) Desvio-padrão
+
+Primeiro:
+$$
+\mathrm{Var}(X)=\alpha^2\left[\Gamma\left(1+\frac{2}{4}\right)-\Gamma^2\left(1+\frac{1}{4}\right)\right]
+=\frac14\left[\Gamma\left(\frac32\right)-\Gamma^2\left(\frac54\right)\right]
+$$
+Logo:
+$$
+\boxed{DP(X)=\frac12\sqrt{\Gamma(3/2)-\Gamma(5/4)^2}}
+$$
+
+
+---
+
+
+(c) $P(X>10)$
+$$
+P(X>10)=\exp\left(-(10/0.5)^4\right)=\exp(-20^4)=\boxed{e^{-160000}}
+$$
+
+
+---
+
+
+(d) $P(X>8\mid X>5)$
+$$
+P(X>8\mid X>5)=\frac{S(8)}{S(5)}
+=\exp\left(-\left(\frac{8}{0.5}\right)^4+\left(\frac{5}{0.5}\right)^4\right)
+=\exp(-(16^4-10^4))
+=\boxed{e^{-55536}}
+$$
+
+---
+
+
+(e) Percentil 90
+Se $F(t)=0.9$, então $e^{-(t/\alpha)^\beta}=0.1$ e:
+$$
+(t/\alpha)^\beta=\ln 10
+\quad\Rightarrow\quad
+\boxed{t=\alpha(\ln 10)^{1/4}=\frac12(\ln 10)^{1/4}}
+$$
+
+
+---
+
+
+
+**Exercício 11** 
+
+
+(a) $\frac{3}{8}x^2e^{-x^3/8}$
+Como o expoente no termo exponencial é $x^3/8$, temos $\beta=3$ e $\alpha^3=8\Rightarrow \alpha=2$:
+$$
+\boxed{(\alpha,\beta)=(2,3)}
+$$
+
+---
+
+
+(b) Caso do tipo $f(x)=\frac{1}{4}x^{-1/2}e^{-\sqrt{x}/2}$
+Se o expoente é $-(x/\alpha)^{1/2}=-\sqrt{x}/2$, então $\sqrt{x/\alpha}=\sqrt{x}/2\Rightarrow \alpha=4$ e $\beta=1/2$:
+$$
+\boxed{(\alpha,\beta)=\left(4,\frac12\right)}
+$$
+
+---
+
+
+(c) $18xe^{-9x^2}$
+Como o expoente é $-9x^2$, temos $\beta=2$ e $(x/\alpha)^2=9x^2\Rightarrow 1/\alpha^2=9\Rightarrow \alpha=1/3$:
+$$
+\boxed{(\alpha,\beta)=\left(\frac13,2\right)}
+$$
+
+
+---
+
+
+**Exercício 12** 
+
+Considere
+$$
+f(x)=\frac{\beta^\alpha}{\Gamma(\alpha)}(x-a)^{\alpha-1}e^{-\beta(x-a)}\mathbf{1}_{(a,\infty)}(x)
+$$
+
+**Passo 1 — Integrar em $\mathbb{R}$ (só conta $x>a$)**
+$$
+\int_{-\infty}^{\infty}f(x)\,dx=\int_a^\infty f(x)\,dx
+$$
+
+**Passo 2 — Substituição $u=x-a$**
+$$
+\int_a^\infty f(x)\,dx=\frac{\beta^\alpha}{\Gamma(\alpha)}\int_0^\infty u^{\alpha-1}e^{-\beta u}\,du
+$$
+
+**Passo 3 — Substituição $v=\beta u$**
+Se $v=\beta u$, então $du=dv/\beta$ e:
+$$
+\frac{\beta^\alpha}{\Gamma(\alpha)}\int_0^\infty \left(\frac{v}{\beta}\right)^{\alpha-1}e^{-v}\frac{dv}{\beta}
+=\frac{1}{\Gamma(\alpha)}\int_0^\infty v^{\alpha-1}e^{-v}\,dv
+=\frac{\Gamma(\alpha)}{\Gamma(\alpha)}=1
+$$
+
+**Conclusão**
+$$
+\boxed{\int_{-\infty}^{\infty}f(x)\,dx=1}
+$$
+
+
+---
+
+
+**Exercício 13**
+
+Para $a=b=1$:
+$$
+f(x)=\frac{1}{B(1,1)}x^{0}(1-x)^0\mathbf{1}_{(0,1)}(x)
+$$
+Como
+$$
+B(1,1)=\frac{\Gamma(1)\Gamma(1)}{\Gamma(2)}=\frac{1\cdot 1}{1}=1,
+$$
+segue:
+$$
+\boxed{f(x)=1,\quad 0<x<1,}
+$$
+que é a densidade de $U(0,1)$.
+
+
+
+---
+
+
+
+**Exercício 14** 
+
+Se $X\sim\mathrm{Gamma}(\alpha,\lambda)$ (taxa), então:
+$$
+E(X)=\int_0^\infty x\frac{\lambda^\alpha}{\Gamma(\alpha)}x^{\alpha-1}e^{-\lambda x}\,dx
+=\frac{\lambda^\alpha}{\Gamma(\alpha)}\int_0^\infty x^{\alpha}e^{-\lambda x}\,dx
+$$
+Pela identidade:
+$$
+\int_0^\infty x^{\alpha}e^{-\lambda x}\,dx=\frac{\Gamma(\alpha+1)}{\lambda^{\alpha+1}}
+$$
+Logo:
+$$
+E(X)=\frac{\lambda^\alpha}{\Gamma(\alpha)}\cdot\frac{\Gamma(\alpha+1)}{\lambda^{\alpha+1}}
+=\frac{\alpha}{\lambda}
+$$
+
+Agora:
+$$
+E(X^2)=\frac{\lambda^\alpha}{\Gamma(\alpha)}\int_0^\infty x^{\alpha+1}e^{-\lambda x}\,dx
+=\frac{\lambda^\alpha}{\Gamma(\alpha)}\cdot\frac{\Gamma(\alpha+2)}{\lambda^{\alpha+2}}
+=\frac{\alpha(\alpha+1)}{\lambda^2}
+$$
+Então:
+$$
+\mathrm{Var}(X)=E(X^2)-E(X)^2
+=\frac{\alpha(\alpha+1)}{\lambda^2}-\frac{\alpha^2}{\lambda^2}
+=\boxed{\frac{\alpha}{\lambda^2}}
+$$
+
+
+---
+
+
+**Exercício 15**
+
+Se $X\sim\mathrm{Beta}(a,b)$:
+$$
+E(X)=\int_0^1 x\frac{1}{B(a,b)}x^{a-1}(1-x)^{b-1}\,dx
+=\frac{1}{B(a,b)}\int_0^1 x^{a}(1-x)^{b-1}\,dx
+=\frac{B(a+1,b)}{B(a,b)}
+$$
+Usando $B(a,b)=\frac{\Gamma(a)\Gamma(b)}{\Gamma(a+b)}$:
+$$
+E(X)=\frac{\Gamma(a+1)\Gamma(b)\Gamma(a+b)}{\Gamma(a)\Gamma(b)\Gamma(a+b+1)}
+=\boxed{\frac{a}{a+b}}
+$$
+
+Além disso:
+$$
+E(X^2)=\frac{B(a+2,b)}{B(a,b)}
+=\frac{a(a+1)}{(a+b)(a+b+1)}
+$$
+Logo:
+$$
+\mathrm{Var}(X)=E(X^2)-E(X)^2
+=\boxed{\frac{ab}{(a+b)^2(a+b+1)}}
+$$
+
+
+
+---
+
+
+
+**Exercício 16**
+
+Se $X\sim\mathrm{Weibull}(\alpha,\beta)$, defina
+$$
+Y=\left(\frac{X}{\alpha}\right)^\beta
+$$
+Então $Y\sim\mathrm{Exp}(1)$ e $X=\alpha Y^{1/\beta}$
+
+Para $r>-1$:
+$$
+E(X^r)=\alpha^r E\left(Y^{r/\beta}\right)
+=\alpha^r\Gamma\left(1+\frac{r}{\beta}\right)
+$$
+
+Em particular:
+$$
+\boxed{E(X)=\alpha\Gamma\left(1+\frac{1}{\beta}\right)}
+$$
+e
+$$
+E(X^2)=\alpha^2\Gamma\left(1+\frac{2}{\beta}\right)
+\quad\Rightarrow\quad
+\boxed{\mathrm{Var}(X)=\alpha^2\left[\Gamma\left(1+\frac{2}{\beta}\right)-\Gamma^2\left(1+\frac{1}{\beta}\right)\right]}
+$$

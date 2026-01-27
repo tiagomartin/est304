@@ -1,0 +1,350 @@
+---
+title: "Resolução: Função Geradora de Momentos"
+format:
+  html:
+    number-sections: true
+    toc: true
+    toc-depth: 2
+  pdf:
+    number-sections: true
+    toc: false
+    toc-depth: 2
+---
+
+
+**Exercício 01**
+
+(a) FGM $M_X(t)$
+
+Por definição:
+$$
+M_X(t)=E(e^{tX})=\int_0^1 e^{tx}\,2x\,dx
+$$
+
+Integração por partes: escolha $u=2x$ e $dv=e^{tx}dx$, então $du=2dx$ e $v=\frac{1}{t}e^{tx}$.
+Assim:
+$$
+M_X(t)=\left.\frac{2x}{t}e^{tx}\right|_0^1-\int_0^1\frac{2}{t}e^{tx}\,dx
+=\frac{2}{t}e^t-\frac{2}{t^2}(e^t-1)
+$$
+Logo:
+$$
+\boxed{M_X(t)=\frac{2}{t^2}\left[1+(t-1)e^t\right]},\quad t\ne 0,
+$$
+e por continuidade $M_X(0)=1$.
+
+
+
+---
+
+
+
+(b) $E(X)$ e $\mathrm{Var}(X)$ via fgm
+
+Expansão de $e^t$ em série (até ordem $t^2$):
+$$
+e^t=1+t+\frac{t^2}{2}+\frac{t^3}{6}+O(t^4)
+$$
+Então:
+$$
+1+(t-1)e^t=1+(t-1)\left(1+t+\frac{t^2}{2}+\frac{t^3}{6}+O(t^4)\right)
+=\frac{t^2}{2}+\frac{t^3}{3}+\frac{t^4}{8}+O(t^5)
+$$
+Logo:
+$$
+M_X(t)=\frac{2}{t^2}\left(\frac{t^2}{2}+\frac{t^3}{3}+\frac{t^4}{8}+O(t^5)\right)
+=1+\frac{2}{3}t+\frac{1}{4}t^2+O(t^3)
+$$
+
+Como $M_X(t)=1+E(X)t+\frac{E(X^2)}{2}t^2+O(t^3)$, obtemos:
+$$
+\boxed{E(X)=\frac{2}{3}},\qquad \frac{E(X^2)}{2}=\frac14\Rightarrow \boxed{E(X^2)=\frac12}
+$$
+Então:
+$$
+\boxed{\mathrm{Var}(X)=E(X^2)-E(X)^2=\frac12-\left(\frac23\right)^2=\frac{1}{18}}
+$$
+
+---
+
+
+
+**Exercício 02**
+
+Observe que $X=a+Y$ com $Y\sim\mathrm{Exp}(\lambda)$.
+
+
+(a) FGM de $X$
+
+$$
+M_X(t)=E(e^{tX})=E(e^{t(a+Y)})=e^{at}E(e^{tY})
+$$
+Para $Y\sim\mathrm{Exp}(\lambda)$:
+$$
+E(e^{tY})=\frac{\lambda}{\lambda-t},\quad t<\lambda
+$$
+Logo:
+$$
+\boxed{M_X(t)=e^{at}\frac{\lambda}{\lambda-t}},\quad t<\lambda
+$$
+
+
+---
+
+
+
+(b) $E(X)$ e $\mathrm{Var}(X)$
+
+Como $X=a+Y$:
+$$
+\boxed{E(X)=a+\frac{1}{\lambda}},\qquad
+\boxed{\mathrm{Var}(X)=\frac{1}{\lambda^2}}
+$$
+
+
+
+---
+
+
+
+**Exercício 03** 
+
+::: {.callout-note title="Comentário — convenção"}
+Assumo $X=1$ para “cara” e $X=0$ para “coroa”, então $X\sim\mathrm{Bernoulli}(1/2)$.
+:::
+
+(a) FGM de $X$
+$$
+M_X(t)=E(e^{tX})=\frac12 e^{t\cdot 1}+\frac12 e^{t\cdot 0}
+=\boxed{\frac{1+e^t}{2}}
+$$
+
+
+---
+
+
+(b) $E(X)$ e $\mathrm{Var}(X)$
+Para Bernoulli($p$), $E(X)=p$ e $\mathrm{Var}(X)=p(1-p)$. Com $p=1/2$:
+$$
+\boxed{E(X)=\frac12},\qquad \boxed{\mathrm{Var}(X)=\frac14}
+$$
+
+
+---
+
+
+
+**Exercício 04** 
+
+(a) FGM de $X$
+
+Para $|t|<1$:
+$$
+M_X(t)=\int_{-\infty}^{\infty} e^{tx}\frac12 e^{-|x|}\,dx
+=\frac12\left(\int_{-\infty}^{0} e^{(t+1)x}\,dx+\int_{0}^{\infty} e^{(t-1)x}\,dx\right)
+$$
+As integrais convergem se $t+1>0$ e $t-1<0$, isto é, $|t|<1$.
+
+Calculando:
+$$
+\int_{-\infty}^{0} e^{(t+1)x}\,dx=\frac{1}{t+1},\qquad
+\int_{0}^{\infty} e^{(t-1)x}\,dx=\frac{1}{1-t}
+$$
+Logo:
+$$
+M_X(t)=\frac12\left(\frac{1}{t+1}+\frac{1}{1-t}\right)
+=\frac12\left(\frac{1-t+t+1}{1-t^2}\right)
+=\boxed{\frac{1}{1-t^2}},\quad |t|<1
+$$
+
+
+---
+
+
+
+(b) $E(X)$ e $\mathrm{Var}(X)$
+
+Como $M_X(t)=(1-t^2)^{-1}$:
+$$
+M_X'(t)=\frac{2t}{(1-t^2)^2}\Rightarrow M_X'(0)=0 \Rightarrow \boxed{E(X)=0}
+$$
+Além disso:
+$$
+M_X''(t)=\frac{2}{(1-t^2)^2}+\frac{8t^2}{(1-t^2)^3}\Rightarrow M_X''(0)=2 \Rightarrow \boxed{E(X^2)=2}
+$$
+Então:
+$$
+\boxed{\mathrm{Var}(X)=2-0^2=2}
+$$
+
+
+---
+
+
+
+**Exercício 05**
+
+Se $X\sim N(\mu_X,\sigma_X^2)$ e $Y\sim N(\mu_Y,\sigma_Y^2)$ independentes, então:
+$$
+M_X(t)=\exp\left(\mu_X t+\frac{\sigma_X^2 t^2}{2}\right),\qquad
+M_Y(t)=\exp\left(\mu_Y t+\frac{\sigma_Y^2 t^2}{2}\right)
+$$
+
+Para $Z=aX+bY$:
+$$
+M_Z(t)=E(e^{t(aX+bY)})=E(e^{(at)X})E(e^{(bt)Y})=M_X(at)M_Y(bt)
+$$
+Logo:
+$$
+M_Z(t)=\exp\left(a\mu_X t+\frac{a^2\sigma_X^2 t^2}{2}\right)\exp\left(b\mu_Y t+\frac{b^2\sigma_Y^2 t^2}{2}\right)
+$$
+$$
+=\exp\left((a\mu_X+b\mu_Y)t+\frac{(a^2\sigma_X^2+b^2\sigma_Y^2)t^2}{2}\right)
+$$
+
+Isso é a fgm de uma normal com:
+$$
+\boxed{Z\sim N(a\mu_X+b\mu_Y,\ a^2\sigma_X^2+b^2\sigma_Y^2)}
+$$
+
+
+
+---
+
+
+
+**Exercício 06** 
+
+(a) FGM de $Y=3X+2$
+
+Usando a propriedade:
+$$
+M_{cX+d}(t)=e^{dt}M_X(ct),
+$$
+temos:
+$$
+\boxed{M_Y(t)=e^{2t}M_X(3t)=e^{2t}\left(0.4e^{3t}+0.6\right)^8}
+$$
+
+---
+
+
+
+(b) Calcular $E(X)$
+
+Observe que $(pe^t+1-p)^n$ é a fgm de $\mathrm{Bin}(n,p)$. Aqui $n=8$, $p=0,4$.
+
+Então:
+$$
+\boxed{E(X)=np=8\cdot 0,4=3,2}
+$$
+
+
+---
+
+
+
+**Exercício 07**
+
+Por definição:
+$$
+\varphi_X(t)=E(e^{itX})=E(\cos(tX)+i\sin(tX))
+$$
+Escreva:
+$$
+\varphi_X(t)=a+ib,\quad a=E(\cos(tX)),\ b=E(\sin(tX))
+$$
+Então:
+$$
+|\varphi_X(t)|=\sqrt{a^2+b^2}
+$$
+
+Pela desigualdade $[E(U)]^2\le E(U^2)$:
+$$
+a^2\le E(\cos^2(tX)),\qquad b^2\le E(\sin^2(tX))
+$$
+Somando:
+$$
+a^2+b^2\le E(\cos^2(tX)+\sin^2(tX))=E(1)=1
+$$
+Logo:
+$$
+\boxed{|\varphi_X(t)|\le 1}
+$$
+
+
+
+---
+
+
+
+**Exercício 08** 
+
+$$
+\varphi_X(t)=\int_{-\infty}^{\infty}e^{itx}\frac12 e^{-|x|}\,dx
+=\frac12\left(\int_{-\infty}^{0} e^{(1+it)x}\,dx+\int_{0}^{\infty} e^{-(1-it)x}\,dx\right)
+$$
+Calculando:
+$$
+\int_{-\infty}^{0} e^{(1+it)x}\,dx=\frac{1}{1+it},\qquad
+\int_{0}^{\infty} e^{-(1-it)x}\,dx=\frac{1}{1-it}
+$$
+Logo:
+$$
+\varphi_X(t)=\frac12\left(\frac{1}{1+it}+\frac{1}{1-it}\right)
+=\frac12\left(\frac{(1-it)+(1+it)}{1+t^2}\right)
+=\boxed{\frac{1}{1+t^2}}
+$$
+
+
+---
+
+
+
+**Exercício 09**
+
+Densidade:
+$$
+f(x)=\frac12\,\mathbf{1}_{(-1,0)}(x)+\left(\frac14+\frac{x}{8}\right)\mathbf{1}_{(0,2)}(x)
+$$
+
+Então:
+$$
+\varphi_X(t)=\int_{-\infty}^{\infty} e^{itx}f(x)\,dx
+=\frac12\int_{-1}^{0} e^{itx}\,dx+\int_{0}^{2}\left(\frac14+\frac{x}{8}\right)e^{itx}\,dx
+$$
+
+**Parte 1:**
+$$
+\frac12\int_{-1}^{0} e^{itx}\,dx
+=\frac12\left[\frac{e^{itx}}{it}\right]_{-1}^{0}
+=\frac12\cdot\frac{1-e^{-it}}{it}
+$$
+
+**Parte 2 (termo constante):**
+$$
+\frac14\int_{0}^{2} e^{itx}\,dx
+=\frac14\left[\frac{e^{itx}}{it}\right]_{0}^{2}
+=\frac14\cdot\frac{e^{2it}-1}{it}.
+$$
+
+**Parte 2 (termo linear):**
+Usamos $\int x e^{itx}\,dx = e^{itx}\left(\frac{x}{it}-\frac{1}{(it)^2}\right)$.
+Logo:
+$$
+\frac18\int_{0}^{2} x e^{itx}\,dx
+=\frac18\left[e^{itx}\left(\frac{x}{it}-\frac{1}{(it)^2}\right)\right]_{0}^{2}
+=\frac18\left(e^{2it}\left(\frac{2}{it}-\frac{1}{(it)^2}\right)+\frac{1}{(it)^2}\right)
+$$
+
+Somando tudo (para $t\ne 0$):
+$$
+\boxed{
+\varphi_X(t)=
+\frac12\cdot\frac{1-e^{-it}}{it}
++\frac14\cdot\frac{e^{2it}-1}{it}
++\frac18\left(e^{2it}\left(\frac{2}{it}-\frac{1}{(it)^2}\right)+\frac{1}{(it)^2}\right),
+\quad t\ne 0
+}
+$$
+E, por definição, $\boxed{\varphi_X(0)=1}$.

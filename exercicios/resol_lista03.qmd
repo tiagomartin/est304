@@ -1,0 +1,543 @@
+---
+title: "Resolução: Transformação de Variáveis Aleatórias"
+format:
+  html:
+    number-sections: true
+    toc: true
+    toc-depth: 2
+  pdf:
+    number-sections: true
+    toc: false
+    toc-depth: 2
+---
+
+
+**Exercício 01**
+
+Como $X\in(-1,1)$, então $X^2\in(0,1)$ e, portanto, $Y=4-X^2\in(3,4)$.
+
+Para $3<y<4$:
+$$
+F_Y(y)=P(Y\le y)=P(4-X^2\le y)=P(X^2\ge 4-y)=P(|X|\ge \sqrt{4-y})
+$$
+Logo,
+$$
+F_Y(y)=1-P(|X|<\sqrt{4-y})
+$$
+Como $X$ é uniforme em $(-1,1)$, $P(|X|<a)=a$ para $0<a<1$. Assim,
+$$
+F_Y(y)=1-\sqrt{4-y},\quad 3<y<4
+$$
+
+Derivando:
+$$
+f_Y(y)=F_Y'(y)=\frac{1}{2\sqrt{4-y}},\quad 3<y<4,
+$$
+e $f_Y(y)=0$ fora desse intervalo.
+
+::: {.callout-warning title="Atenção"}
+A transformação $y=4-x^2$ **não é monótona** em $(-1,1)$. Aqui o método via CDF é o mais seguro.
+:::
+
+
+---
+
+
+**Exercício 02**
+
+A densidade de $X$ é $f_X(x)=\frac{1}{2}$ para $1<x<3$.
+
+(a) $Y=3X+4$
+
+**Passo 1 — suporte**  
+Se $1<x<3$, então $7<y<13$
+
+**Passo 2 — inversa e jacobiano**  
+$x=\frac{y-4}{3}$ e $\frac{dx}{dy}=\frac{1}{3}$
+
+**Passo 3 — densidade**
+$$
+f_Y(y)=f_X\!\left(\frac{y-4}{3}\right)\left|\frac{dx}{dy}\right|
+=\frac12\cdot\frac13=\frac16,\quad 7<y<13
+$$
+Logo,
+$$
+\boxed{f_Y(y)=\frac{1}{6}\,\,\mathbf{1}_{(7,13)}(y)}
+$$
+
+
+
+---
+
+
+
+
+(b) $Y=e^X$
+
+**Passo 1 — suporte**  
+Se $1<x<3$, então $e<y<e^3$
+
+**Passo 2 — inversa e jacobiano**  
+$x=\ln y$ e $\frac{dx}{dy}=\frac{1}{y}$
+
+**Passo 3 — densidade**
+$$
+f_Y(y)=f_X(\ln y)\left|\frac{1}{y}\right|
+=\frac12\cdot\frac{1}{y},\quad e<y<e^3
+$$
+Logo,
+$$
+\boxed{f_Y(y)=\frac{1}{2y}\,\,\mathbf{1}_{(e,e^3)}(y)}
+$$
+
+---
+
+
+
+**Exercício 03** 
+
+$P(X=1)=P(X=2)=P(X=3)=\frac13$
+
+Transformando:
+- se $X=1$, $Y=5$;
+- se $X=2$, $Y=7$;
+- se $X=3$, $Y=9$.
+
+Logo,
+$$
+\boxed{P(Y=5)=P(Y=7)=P(Y=9)=\frac13}
+$$
+
+
+
+---
+
+
+
+**Exercício 04**
+
+Defina $X=$ número de tentativas até abrir (inclui a correta). Em cada tentativa, probabilidade de sucesso $p=\frac14$.
+
+(a) Função de probabilidade de $X$
+
+$X$ é geométrica (suporte $\{1,2,\dots\}$):
+$$
+\boxed{P(X=k)=\left(\frac34\right)^{k-1}\frac14,\quad k=1,2,\dots}
+$$
+
+---
+
+
+(b) $Y=$ número de chaves erradas até abrir; escrever $Y$ em função de $X$
+
+Se a abertura ocorre na $X$-ésima tentativa, então houve $X-1$ erros:
+$$
+\boxed{Y=X-1}
+$$
+
+---
+
+
+(c) Função de probabilidade de $Y$
+
+Como $Y=X-1$, então $Y\in\{0,1,2,\dots\}$ e
+$$
+\boxed{P(Y=y)=\left(\frac34\right)^y\frac14,\quad y=0,1,2,\dots}
+$$
+
+---
+
+
+**Exercício 05**
+
+A CDF é:
+$$
+F_X(x)=
+\begin{cases}
+0, & x<-2,\\
+\frac18, & -2\le x<-1,\\
+\frac12, & -1\le x<1,\\
+\frac34, & 1\le x<2,\\
+1, & x\ge 2
+\end{cases}
+$$
+
+(a) Função de probabilidade de $X$
+
+Os saltos dão as massas:
+- em $x=-2$: $P(X=-2)=\frac18-0=\frac18$;
+- em $x=-1$: $P(X=-1)=\frac12-\frac18=\frac38$;
+- em $x=1$: $P(X=1)=\frac34-\frac12=\frac14$;
+- em $x=2$: $P(X=2)=1-\frac34=\frac14$.
+
+Logo,
+$$
+\boxed{
+P(X=-2)=\frac18,\;
+P(X=-1)=\frac38,\;
+P(X=1)=\frac14,\;
+P(X=2)=\frac14
+}
+$$
+
+
+---
+
+
+(b) $Y=X^2$: função de probabilidade de $Y$
+
+Os valores possíveis:
+- $Y=1$ quando $X=\pm 1$;
+- $Y=4$ quando $X=\pm 2$ (aqui só temos $-2$ e $2$)
+
+Então:
+$$
+P(Y=1)=P(X=-1)+P(X=1)=\frac38+\frac14=\frac58,
+$$
+$$
+P(Y=4)=P(X=-2)+P(X=2)=\frac18+\frac14=\frac38
+$$
+Logo,
+$$
+\boxed{P(Y=1)=\frac58,\quad P(Y=4)=\frac38}
+$$
+
+
+
+---
+
+
+
+**Exercício 06**
+
+Primeiro:
+$$
+P(X=1)=\frac{4}{10},\;
+P(X=2)=\frac{3}{10},\;
+P(X=3)=\frac{2}{10},\;
+P(X=4)=\frac{1}{10}
+$$
+
+Como $Y=2-X$:
+- $X=1\Rightarrow Y=1$ com prob. $4/10$;
+- $X=2\Rightarrow Y=0$ com prob. $3/10$;
+- $X=3\Rightarrow Y=-1$ com prob. $2/10$;
+- $X=4\Rightarrow Y=-2$ com prob. $1/10$
+
+Logo,
+$$
+\boxed{
+P(Y=1)=\frac{4}{10},\;
+P(Y=0)=\frac{3}{10},\;
+P(Y=-1)=\frac{2}{10},\;
+P(Y=-2)=\frac{1}{10}
+}
+$$
+
+
+---
+
+
+**Exercício 07**
+
+Probabilidades por sorteio:
+- vermelha: $p_R=\frac{2}{10}=0.2$ (ganha $+1$ ponto),
+- preta: $p_B=\frac{3}{10}=0.3$ (perde $-1$ ponto),
+- branca: $p_W=\frac{5}{10}=0.5$ (0 ponto)
+
+Sejam $r,b,w$ as contagens em 3 sorteios ($r+b+w=3$).  
+Então $P(r,b,w)=\frac{3!}{r!b!w!}p_R^r p_B^b p_W^w$ e a pontuação é $X=r-b$.
+
+
+(a) Função de probabilidade de $X$
+
+Os valores possíveis são $-3,-2,-1,0,1,2,3$. A distribuição resulta em:
+$$
+\boxed{
+\begin{aligned}
+P(X=-3)&=0,027,\\
+P(X=-2)&=0,135,\\
+P(X=-1)&=0,279,\\
+P(X=0)&=0,305,\\
+P(X=1)&=0,186,\\
+P(X=2)&=0,060,\\
+P(X=3)&=0,008
+\end{aligned}}
+$$
+
+::: {.callout-note title="Comentário"}
+A forma “estrutural” é: somar $P(r,b,w)$ sobre todas as triplas $(r,b,w)$ que dão o mesmo $x=r-b$.
+:::
+
+
+---
+
+
+(b) $Y=$ dinheiro ganho/perdido
+
+Regra:
+- se $X>0$, ganha $R\$2$ por ponto positivo $\Rightarrow Y=2X$;
+- se $X<0$, perde $R\$1$ por ponto negativo $\Rightarrow Y=X$ (pois $X$ já é negativo);
+- se $X=0$, $Y=0$
+
+Assim:
+$$
+Y=
+\begin{cases}
+X, & X<0,\\
+0, & X=0,\\
+2X, & X>0
+\end{cases}
+$$
+
+Logo, o suporte de $Y$ é $\{-3,-2,-1,0,2,4,6\}$ e:
+$$
+\boxed{
+\begin{aligned}
+P(Y=-3)&=P(X=-3)=0,027,\\
+P(Y=-2)&=P(X=-2)=0,135,\\
+P(Y=-1)&=P(X=-1)=0,279,\\
+P(Y=0)&=P(X=0)=0,305,\\
+P(Y=2)&=P(X=1)=0,186,\\
+P(Y=4)&=P(X=2)=0,060,\\
+P(Y=6)&=P(X=3)=0,008
+\end{aligned}}
+$$
+
+---
+
+
+**Exercício 08**
+
+Como $X$ é exponencial com taxa $2$:
+$$
+F_X(x)=1-e^{-2x},\quad x\ge 0
+$$
+
+Como $Y=3X+2$ (monótona crescente):
+- se $y<2$, $P(Y\le y)=0$;
+- se $y\ge 2$:
+$$
+F_Y(y)=P(Y\le y)=P\left(X\le \frac{y-2}{3}\right)=F_X\left(\frac{y-2}{3}\right)
+=1-\exp\left(-\frac{2(y-2)}{3}\right)
+$$
+
+Logo,
+$$
+\boxed{
+F_Y(y)=
+\begin{cases}
+0, & y<2,\\
+1-\exp\left(-\frac{2(y-2)}{3}\right), & y\ge 2
+\end{cases}}
+$$
+
+
+---
+
+
+
+**Exercício 09** 
+
+(a) $Y=X^3$
+
+Transformação monótona crescente em $x>0$.  
+Inversa: $x=y^{1/3}$, com $\frac{dx}{dy}=\frac{1}{3}y^{-2/3}$.
+
+Então:
+$$
+f_Y(y)=f_X(y^{1/3})\left|\frac{dx}{dy}\right|
+=e^{-y^{1/3}}\cdot \frac{1}{3}y^{-2/3},\quad y>0
+$$
+Logo,
+$$
+\boxed{f_Y(y)=\frac{1}{3y^{2/3}}e^{-y^{1/3}},\quad y>0}
+$$
+
+
+---
+
+
+(b) $Z=\frac{3}{(X+1)^2}$
+
+Para $x>0$, $z=3/(x+1)^2$ é **decrescente** e o suporte é:
+$$
+x\downarrow 0 \Rightarrow z\uparrow 3,\qquad x\to\infty \Rightarrow z\downarrow 0,
+$$
+logo $0<z<3$.
+
+Inversa:
+$$
+z=\frac{3}{(x+1)^2}
+\Rightarrow x+1=\sqrt{\frac{3}{z}}
+\Rightarrow x=\sqrt{\frac{3}{z}}-1
+$$
+Derivada:
+$$
+\frac{dx}{dz}=-\frac{\sqrt{3}}{2}z^{-3/2}
+\Rightarrow \left|\frac{dx}{dz}\right|=\frac{\sqrt{3}}{2}z^{-3/2}
+$$
+Então:
+$$
+f_Z(z)=f_X\!\left(\sqrt{\frac{3}{z}}-1\right)\left|\frac{dx}{dz}\right|
+=\exp\left(-\sqrt{\frac{3}{z}}+1\right)\cdot \frac{\sqrt{3}}{2}z^{-3/2},
+\quad 0<z<3
+$$
+Logo,
+$$
+\boxed{
+f_Z(z)=\frac{\sqrt{3}}{2}z^{-3/2}\exp\left(1-\sqrt{\frac{3}{z}}\right),\quad 0<z<3
+}
+$$
+
+---
+
+
+**Exercício 10** 
+
+A densidade de $R$ é:
+$$
+f_R(r)=\frac{1}{B(2,2)}r^{1}(1-r)^{1}=6r(1-r),\quad 0<r<1
+$$
+
+### (a) Volume $V=\frac{4\pi}{3}R^3$
+
+Defina $c=\frac{4\pi}{3}$, então $v=cr^3$ e $0<v<c$
+
+Inversa: $r=(v/c)^{1/3}$ e:
+$$
+\frac{dr}{dv}=\frac{1}{3}c^{-1/3}v^{-2/3}
+$$
+Logo:
+$$
+f_V(v)=f_R\!\left((v/c)^{1/3}\right)\left|\frac{dr}{dv}\right|
+=6\left(\frac{v}{c}\right)^{1/3}\left(1-\left(\frac{v}{c}\right)^{1/3}\right)
+\cdot \frac{1}{3}c^{-1/3}v^{-2/3}
+$$
+Simplificando:
+$$
+\boxed{
+f_V(v)=2c^{-2/3}v^{-1/3}\left(1-\left(\frac{v}{c}\right)^{1/3}\right),
+\quad 0<v<c,\ \ c=\frac{4\pi}{3}
+}
+$$
+
+Esperança:
+$$
+E(V)=c\,E(R^3)
+$$
+Para Beta$(2,2)$:
+$$
+E(R^3)=\frac{2\cdot 3\cdot 4}{4\cdot 5\cdot 6}=\frac{1}{5}
+$$
+Logo:
+$$
+\boxed{E(V)=\frac{4\pi}{3}\cdot \frac{1}{5}=\frac{4\pi}{15}}
+$$
+
+
+---
+
+
+(b) Área $A=4\pi R^2$
+
+Defina $d=4\pi$, então $a=dr^2$ e $0<a<d$.
+
+Inversa: $r=\sqrt{a/d}$ e:
+$$
+\frac{dr}{da}=\frac{1}{2\sqrt{da}}
+$$
+Então:
+$$
+f_A(a)=f_R\!\left(\sqrt{\frac{a}{d}}\right)\left|\frac{dr}{da}\right|
+=6\sqrt{\frac{a}{d}}\left(1-\sqrt{\frac{a}{d}}\right)\cdot \frac{1}{2\sqrt{da}}
+$$
+Como $\sqrt{a/d}/\sqrt{da}=1/d$, fica:
+$$
+\boxed{
+f_A(a)=\frac{3}{d}\left(1-\sqrt{\frac{a}{d}}\right),\quad 0<a<d,\ \ d=4\pi
+}
+$$
+
+Esperança:
+$$
+E(A)=d\,E(R^2)
+$$
+Para Beta$(2,2)$:
+$$
+E(R^2)=\frac{2\cdot 3}{4\cdot 5}=\frac{3}{10}
+$$
+Logo:
+$$
+\boxed{E(A)=4\pi\cdot \frac{3}{10}=\frac{6\pi}{5}}
+$$
+
+
+
+---
+
+
+
+**Exercício 11**
+
+A densidade de $I$ é $f_I(i)=\frac{1}{2}$ para $9<i<11$.
+
+Como $P=2I^2$ é crescente para $I>0$, o suporte é:
+$$
+p\in(2\cdot 9^2,\ 2\cdot 11^2)=(162,\ 242)
+$$
+Inversa:
+$$
+i=\sqrt{\frac{p}{2}}
+$$
+Derivada:
+$$
+\frac{di}{dp}=\frac{1}{2\sqrt{2p}}
+$$
+Logo:
+$$
+f_P(p)=f_I\!\left(\sqrt{\frac{p}{2}}\right)\left|\frac{di}{dp}\right|
+=\frac12\cdot \frac{1}{2\sqrt{2p}}
+=\boxed{\frac{1}{4\sqrt{2p}}},\quad 162<p<242
+$$
+
+Esperança:
+$$
+E(P)=2E(I^2)
+$$
+Para $I\sim U(a,b)$:
+$$
+E(I^2)=\frac{a^2+ab+b^2}{3}
+$$
+Com $a=9,b=11$:
+$$
+E(I^2)=\frac{81+99+121}{3}=\frac{301}{3}
+\Rightarrow \boxed{E(P)=2\cdot\frac{301}{3}=\frac{602}{3}}
+$$
+
+
+
+---
+
+
+
+**Exercício 12** 
+
+Como $\ln Y=X\sim N(\mu,\sigma^2)$, então $Y$ é lognormal:
+$$
+\boxed{Y\sim\mathrm{LogNormal}(\mu,\sigma^2)}
+$$
+
+Densidade:
+$$
+\boxed{
+f_Y(y)=\frac{1}{y\sigma\sqrt{2\pi}}
+\exp\left(-\frac{(\ln y-\mu)^2}{2\sigma^2}\right),\quad y>0
+}
+$$
+
+Também:
+$$
+\boxed{E(Y)=\exp\left(\mu+\frac{\sigma^2}{2}\right)},\qquad
+\boxed{\mathrm{Var}(Y)=\left(e^{\sigma^2}-1\right)e^{2\mu+\sigma^2}}
+$$
