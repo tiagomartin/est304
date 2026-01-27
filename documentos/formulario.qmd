@@ -1,0 +1,175 @@
+---
+title: "Formulário — Probabilidade II"
+lang: pt-BR
+
+number-sections: false
+toc: false
+
+format:
+  pdf:
+    pdf-engine: xelatex
+    geometry: margin=1.5cm
+    fontsize: 9pt
+    include-in-header:
+      text: |
+        \usepackage{multicol}
+        \setlength{\columnsep}{0.6cm}
+        \usepackage{amsmath,amssymb}
+  html:
+    toc: false
+
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+\begin{multicols}{2}
+
+\section*{Notação}
+$F_X(x)=P(X\le x)$; \;
+$S(x)=P(X>x)=1-F_X(x)$; \;
+$M_X(t)=E(e^{tX})$.
+
+\section*{Função Gamma}
+$$
+\Gamma(\alpha)=\int_0^\infty x^{\alpha-1}e^{-x}\,dx,\quad \alpha>0
+$$
+$$
+\Gamma(\alpha+1)=\alpha\Gamma(\alpha),\quad
+\Gamma(n)=(n-1)!,\ n\in\mathbb{N}
+$$
+$$
+\Gamma\!\left(\tfrac12\right)=\sqrt{\pi},\quad
+\Gamma\!\left(\tfrac32\right)=\tfrac12\sqrt{\pi}
+$$
+$$
+\int_0^\infty x^k e^{-ax}\,dx=\frac{\Gamma(k+1)}{a^{k+1}},\quad a>0
+$$
+
+\section*{Função Beta}
+$$
+B(a,b)=\int_0^1 x^{a-1}(1-x)^{b-1}\,dx,\quad a,b>0
+$$
+$$
+B(a,b)=\frac{\Gamma(a)\Gamma(b)}{\Gamma(a+b)}
+$$
+$$
+B(a+1,b)=\frac{a}{a+b}B(a,b),\quad
+B(a,b+1)=\frac{b}{a+b}B(a,b)
+$$
+
+\section*{FGM}
+$$
+M_X(t)=E(e^{tX}),\quad M_X(0)=1
+$$
+$$
+E(X)=M_X'(0),\quad E(X^2)=M_X''(0)
+$$
+$$
+\mathrm{Var}(X)=M_X''(0)-[M_X'(0)]^2
+$$
+$$
+M_{aX+b}(t)=e^{bt}M_X(at)
+$$
+
+\section*{Gamma $\Gamma(\alpha,\lambda)$ (taxa)}
+$$
+f(x)=\frac{\lambda^\alpha}{\Gamma(\alpha)}x^{\alpha-1}e^{-\lambda x},\quad x\ge0
+$$
+$$
+E(X)=\frac{\alpha}{\lambda},\quad
+\mathrm{Var}(X)=\frac{\alpha}{\lambda^2}
+$$
+$$
+M_X(t)=\left(\frac{\lambda}{\lambda-t}\right)^\alpha,\quad t<\lambda
+$$
+$$
+S(t)=e^{-\lambda t}\sum_{k=0}^{\alpha-1}\frac{(\lambda t)^k}{k!},\quad \alpha\in\mathbb{N}
+$$
+\textbf{Se } $X_i\stackrel{iid}{\sim}\Gamma(\alpha_i,\lambda)$:
+$$
+\sum_i X_i\sim \Gamma\Big(\sum_i \alpha_i,\lambda\Big)
+$$
+
+\section*{Qui-quadrado $\chi^2_\nu$}
+$$
+X\sim\chi^2_\nu \Longleftrightarrow X\sim\Gamma\left(\tfrac{\nu}{2},\tfrac12\right)
+$$
+$$
+f(x)=\frac{1}{2^{\nu/2}\Gamma(\nu/2)}x^{\nu/2-1}e^{-x/2},\quad x\ge0
+$$
+$$
+E(X)=\nu,\quad \mathrm{Var}(X)=2\nu
+$$
+$$
+M_X(t)=(1-2t)^{-\nu/2},\quad t<\tfrac12
+$$
+\textbf{Se } $Z_i\stackrel{iid}{\sim}N(0,1)$:
+$$
+\sum_{i=1}^\nu Z_i^2\sim \chi^2_\nu
+$$
+\textbf{Se } $X\sim\chi^2_{\nu_1}$, $Y\sim\chi^2_{\nu_2}$ indep.:
+$$
+X+Y\sim\chi^2_{\nu_1+\nu_2}
+$$
+
+\section*{Beta $\mathrm{Beta}(a,b)$}
+$$
+f(x)=\frac{1}{B(a,b)}x^{a-1}(1-x)^{b-1},\quad 0<x<1
+$$
+$$
+E(X)=\frac{a}{a+b}
+$$
+$$
+\mathrm{Var}(X)=\frac{ab}{(a+b)^2(a+b+1)}
+$$
+$$
+\mathrm{Beta}(1,1)=U(0,1)
+$$
+
+\section*{Weibull $(\alpha,\beta)$}
+$$
+f(x)=\frac{\beta}{\alpha}\left(\frac{x}{\alpha}\right)^{\beta-1}e^{-(x/\alpha)^\beta},\quad x\ge0
+$$
+$$
+F(x)=1-e^{-(x/\alpha)^\beta},\quad
+S(x)=e^{-(x/\alpha)^\beta}
+$$
+$$
+E(X)=\alpha\Gamma\left(1+\frac{1}{\beta}\right)
+$$
+$$
+\mathrm{Var}(X)=\alpha^2\left[\Gamma\left(1+\frac{2}{\beta}\right)-\Gamma^2\left(1+\frac{1}{\beta}\right)\right]
+$$
+$$
+t_p:\ F(t_p)=p \Rightarrow t_p=\alpha[-\ln(1-p)]^{1/\beta}
+$$
+\textbf{Se } $Y=(X/\alpha)^\beta$:
+$$
+Y\sim \mathrm{Exp}(1)
+$$
+
+\section*{Transformações (1D)}
+\textbf{Monótona: } $Y=g(X)$ inversível
+$$
+f_Y(y)=f_X(g^{-1}(y))\left|\frac{d}{dy}g^{-1}(y)\right|
+$$
+\textbf{Linear: } $Y=aX+b$, $a\ne0$
+$$
+f_Y(y)=\frac{1}{|a|}f_X\!\left(\frac{y-b}{a}\right)
+$$
+$$
+E(Y)=aE(X)+b,\quad \mathrm{Var}(Y)=a^2\mathrm{Var}(X)
+$$
+\textbf{Não-monótona:}
+$$
+f_Y(y)=\sum_{x_i:\ g(x_i)=y} f_X(x_i)\left|\frac{1}{g'(x_i)}\right|
+$$
+
+\section*{Taylor}
+$$
+e^t=1+t+\frac{t^2}{2}+\frac{t^3}{6}+O(t^4)
+$$
+
+\end{multicols}
