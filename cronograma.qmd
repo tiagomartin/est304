@@ -45,7 +45,7 @@ Esta página contém um esboço dos tópicos, conteúdos e tarefas para o semest
 |  |  | **22/12 a 17/01  -  Recesso Acadêmico** |  |  |  |  |  |  |  |
 | [12](programacao/semana-12.html) | Ter, 20/01 | Integrais Duplas e Triplas |  | [{{< fa file-powerpoint size=2xl >}}](/aulas/integrais_dup_trip/integrais_dup_trip.html#/title-slide "Integrais Duplas e Triplas"){aria-label="Integrais Duplas e Triplas"} |  |  |  |  |  |
 |  | Qui, 22/01 |  Integrais Duplas e Triplas |  | [{{< fa file-powerpoint size=2xl >}}](/aulas/integrais_dup_trip/integrais_dup_trip.html#/title-slide "Integrais Duplas e Triplas"){aria-label="Integrais Duplas e Triplas"} |  |  |  |  |  |
-| [13](programacao/semana-13.html) | Ter, 27/01 | Aula de Exercícios |  |  |  |  |  |  |  |
+| [13](programacao/semana-13.html) | Ter, 27/01 | Tira dúvidas |  |  |  |  |  |  |  |
 |  | Qui, 29/01 | Primeira Prova |  |  |  |  |  |  |  |
 <!-- | [14](programacao/semana-14.html) | Ter, 05/08 | Reconhecimento de Padrões |  | [{{< fa file-powerpoint size=2xl >}}](/aulas/Reconhecimento_padroes/padroes.html#/método-mean-shift "Método Mean Shift"){aria-label="Método Mean Shift"} |  |  |  |  |  | -->
 <!-- |  | Qui, 07/08 | Reconhecendo padrões usando a base de dados Space Titanic |  |  |  |  | [{{< fa brands r-project size=2xl >}}](analise_dados/space_titanic_cluster.html "Script análise de dados"){aria-label="Script análise de dados"} |  | [{{< fa list-check size=2xl >}}](/projeto/projeto_avaliativo.html#fase-4-reconhecimento-de-padrões-e-segmentação-de-clientes "Projeto: fase 4"){aria-label="Projeto: fase 4"} | -->

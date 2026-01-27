@@ -1164,7 +1164,7 @@ Como \(|J(r,\theta)|=r\), obtemos a forma operacional:
 \textbf{Exemplo 08:} Calcule \[
 \iint_R (x-y)\,dA,
 \] sendo \(R\) o semi-círculo de centro na origem e raio \(1\) (isto é,
-a região \(x^2+y^2\le 1\) com \(y\ge 0\)).
+a região \(x^2+y^2\le 1\) com \(x\ge 0\)).
 
 \begin{center}
 \pandocbounded{\includegraphics[keepaspectratio]{integrais_dup_trip_files/figure-beamer/unnamed-chunk-7-1.pdf}}
@@ -1188,7 +1188,7 @@ x-y = r\cos\theta - r\,\text{sen }\theta = r(\cos\theta-\text{sen }\theta)
 \pause
 
 Como \(R\) é o semicírculo superior de raio \(1\), temos \[
-0\le r\le 1,\qquad 0\le \theta\le \pi
+0\le r\le 1,\qquad -\dfrac{\pi}{2}\le \theta\le \dfrac{\pi}{2}
 \]
 \end{frame}
 
@@ -1199,9 +1199,9 @@ De forma que,
 \[
 \iint_R (x-y)\,dA
 =
-\int_{0}^{\pi}\int_{0}^{1} r(\cos\theta-\text{sen }\theta)\,r\,dr\,d\theta
+\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\int_{0}^{1} r(\cos\theta-\text{sen }\theta)\,r\,dr\,d\theta
 =
-\int_{0}^{\pi}\int_{0}^{1} r^2(\cos\theta-\text{sen }\theta)\,dr\,d\theta
+\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\int_{0}^{1} r^2(\cos\theta-\text{sen }\theta)\,dr\,d\theta
 \]
 
 \pause
@@ -1219,7 +1219,7 @@ Integrando em relação a \(\theta\)
 
 \[
 \begin{aligned}
-\int_{0}^{\pi}\frac{1}{3}(\cos\theta-\text{sen }\theta)\,d\theta &= \frac13 \int_{0}^{\pi}\cos\theta\,d\theta - \frac13 \int_{0}^{\pi} \text{sen }\theta\,d\theta \\[6pt] &= \frac13 \text{sen }\theta \bigg|_{0}^{\pi} + \frac13 \cos\theta\bigg|_{0}^{\pi} \\[6pt] &= \frac13 (\text{sen }\pi - \text{sen } 0) + \frac13 (\cos \pi - \cos 0) \\[6pt] &= \frac13 \cdot 0 + \frac13(-1-1) = -\frac23
+\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\frac{1}{3}(\cos\theta-\text{sen }\theta)\,d\theta &= \frac13 \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\cos\theta\,d\theta - \frac13 \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \text{sen }\theta\,d\theta \\[6pt] &= \frac13 \text{sen }\theta \bigg|_{-\frac{\pi}{2}}^{\frac{\pi}{2}} + \frac13 \cos\theta\bigg|_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \\[6pt] &= \frac13 \Bigg(\text{sen }\bigg(\frac{\pi}{2}\bigg) - \text{sen } \bigg(-\frac{\pi}{2}\bigg)\Bigg) + \frac13 \Bigg(\cos \bigg(\frac{\pi}{2}\bigg) - \cos \bigg(-\frac{\pi}{2}\bigg)\Bigg) \\[6pt] &= \frac13 \cdot (1 - (-1)) + \frac13(0-0) = \frac23
 \end{aligned}
 \]
 \end{frame}
@@ -1279,7 +1279,7 @@ Assim, \[
 \begin{block}{Integral em \(\theta\)}
 \phantomsection\label{integral-em-theta}
 \[
-\int_{0}^{2\pi} \frac{26}{3} d\theta = 2\pi = \frac{26}{3} \int_{0}^{2\pi} d\theta = \frac{26}{3} \cdot \theta \bigg|_0^{2\pi} = \frac{52 \pi}{3}
+\int_{0}^{2\pi} \frac{26}{3} d\theta = \frac{26}{3} \int_{0}^{2\pi} d\theta = \frac{26}{3} \cdot \theta \bigg|_0^{2\pi} = \frac{52 \pi}{3}
 \]
 \end{block}
 \end{frame}
