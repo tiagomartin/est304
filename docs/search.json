@@ -2740,5 +2740,15 @@
     "title": "Formulário — Probabilidade II",
     "section": "Transformação Linear",
     "text": "Transformação Linear\nSe \\(Y=aX+b\\), \\(a\\ne 0\\):\n\\[\nf_Y(y)=\n\\frac{1}{|a|}\nf_X\\!\\left(\\frac{y-b}{a}\\right)\n\\]\n\\[\nE(Y)=aE(X)+b\n\\]\n\\[\n\\mathrm{Var}(Y)=a^2\\mathrm{Var}(X)\n\\]"
+  },
+  {
+    "objectID": "resolucao.html",
+    "href": "resolucao.html",
+    "title": "Resolução das Listas de Exercícios",
+    "section": "",
+    "text": "Esta página contém as resoluções das listas de exercícios que serão apresentadas ao longo do semestre. Você pode baixar as listas em versão PDF.\n\n\n\n2. Distribuições Contínuas\n\n\n Ver lista PDF \n\n\n\n\n3. Transformação de Variáveis Aleatórias\n\n\n Ver lista PDF \n\n\n\n\n4. Função Geradora de Momentos\n\n\n Ver lista PDF",
+    "crumbs": [
+      "Resolução das Listas de Exercícios"
+    ]
   }
 ]

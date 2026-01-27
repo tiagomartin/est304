@@ -1,0 +1,106 @@
+---
+title: "Resolução das Listas de Exercícios"
+format:
+  html:
+    theme: cosmo
+    include-in-header:
+      text: |
+        <style>
+        /* Estilos visuais EST304 sem quebrar tipografia do Quarto */
+        .aulas-list .list-group-item {
+          border-left: 4px solid #2761E3;
+          padding-top: 0.8rem;
+          padding-bottom: 0.8rem;
+        }
+        .aulas-list .list-group-item:hover {
+          background-color: #F2F2F2;
+        }
+        .disciplina-badge {
+          background-color: #2761E3;
+        }
+        .btn-est304-main {
+          background-color: #2761E3;
+          border-color: #2761E3;
+          color: #fff;
+        }
+        .btn-est304-main:hover {
+          background-color: #789CEB;
+          border-color: #789CEB;
+          color: #fff;
+        }
+        .btn-est304-outline {
+          color: #2761E3;
+          border-color: #2761E3;
+        }
+        .btn-est304-outline:hover {
+          background-color: #2761E3;
+          color: #fff;
+        }
+        .due-date-badge {
+          color: red;
+          border-color: #7F2E2F;
+          font-size: 16pt;  
+          font-weight: 600;
+          padding: 4px 8px;
+        }
+        </style>
+---
+
+Esta página contém as resoluções das listas de exercícios que serão apresentadas ao longo do semestre. Você pode baixar as listas em versão PDF.
+
+::: {.list-group .aulas-list}
+
+::: {.list-group-item .d-flex .justify-content-between .align-items-center}
+
+<div>
+  <span class="fw-bold">2. Distribuições Contínuas</span>
+</div>
+
+<div class="d-flex align-items-center gap-3">
+
+  <span>
+    <a href="exercicios/resol_lista02.html" class="btn btn-est304-main btn-sm">Ver lista</a>
+    <a href="exercicios/resol_lista02.pdf" class="btn btn-est304-outline btn-sm">PDF</a>
+  </span>
+
+</div>
+
+:::
+
+
+::: {.list-group-item .d-flex .justify-content-between .align-items-center}
+
+<div>
+  <span class="fw-bold">3. Transformação de Variáveis Aleatórias</span>
+</div>
+
+<div class="d-flex align-items-center gap-3">
+
+  <span>
+    <a href="exercicios/resol_lista03.html" class="btn btn-est304-main btn-sm">Ver lista</a>
+    <a href="exercicios/resol_lista03.pdf" class="btn btn-est304-outline btn-sm">PDF</a>
+  </span>
+
+</div>
+
+:::
+
+
+::: {.list-group-item .d-flex .justify-content-between .align-items-center}
+
+<div>
+  <span class="fw-bold">4. Função Geradora de Momentos</span>
+</div>
+
+<div class="d-flex align-items-center gap-3">
+
+  <span>
+    <a href="exercicios/resol_lista04.html" class="btn btn-est304-main btn-sm">Ver lista</a>
+    <a href="exercicios/resol_lista04.pdf" class="btn btn-est304-outline btn-sm">PDF</a>
+  </span>
+
+</div>
+
+:::
+
+:::
