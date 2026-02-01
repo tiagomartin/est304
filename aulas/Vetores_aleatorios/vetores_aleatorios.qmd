@@ -614,14 +614,18 @@ $$
 
 As marginais são:
 $$
-P(Y=0)=\frac{4}{10},\quad P(Y=1)=\frac{6}{10},\\
-P(X=0)=\frac{3}{10},\quad P(X=1)=\frac{6}{10},\quad P(X=2)=\frac{1}{10}
+\begin{aligned}
+P(Y=0)&=\frac{4}{10},\quad P(Y=1)=\frac{6}{10},\\
+P(X=0)&=\frac{3}{10},\quad P(X=1)=\frac{6}{10},\quad P(X=2)=\frac{1}{10}
+\end{aligned}
 $$
 
 E as esperanças condicionais já calculadas:
 $$
-E(X\mid Y=0)=\frac{5}{4},\qquad E(X\mid Y=1)=\frac{1}{2},\\
-E(Y\mid X=0)=1,\qquad E(Y\mid X=1)=\frac{1}{2},\qquad E(Y\mid X=2)=0
+\begin{aligned}
+E(X\mid Y=0)&=\frac{5}{4},\qquad E(X\mid Y=1)=\frac{1}{2},\\
+E(Y\mid X=0)&=1,\qquad E(Y\mid X=1)=\frac{1}{2},\qquad E(Y\mid X=2)=0
+\end{aligned}
 $$
 
 
@@ -774,7 +778,7 @@ Considere o par $(x,y)=(0,0)$:
 
 - Da tabela conjunta:
 $$
-P(X=0, Y=0)=0 
+P(X=0, Y=0)=0
 $$
 
 - Pelo produto das marginais:
@@ -824,7 +828,7 @@ $$
 
 Usando o teorema anterior, temos que
 
-$$ 
+$$
 \begin{aligned}
 E(X + Y)
 &= \sum_x \sum_y (x + y)\,P(X = x,\; Y = y) \\
@@ -1103,7 +1107,7 @@ $$
 
 De fato,
 
-Se $X$ e $Y$ são independentes, então 
+Se $X$ e $Y$ são independentes, então
 
 $$P(X = x,\; Y = y) = P(X = x)\,P(Y = y)$$
 
@@ -1366,7 +1370,7 @@ o que completa a demonstração.
 ## Funções de Variáveis Aleatórias
 
 
-Voltando ao exemplo da urna, 
+Voltando ao exemplo da urna,
 
 $$\small
 \begin{array}{c|ccc|c}
@@ -1507,7 +1511,7 @@ $$
 Numericamente,
 
 $$
-\boxed{\operatorname{Corr}(X,Y)\approx -0,79}
+\operatorname{Cor}(X,Y)\approx -0,79
 $$
 
 
@@ -1521,7 +1525,7 @@ $$
 . . .
 
 
-Podemos pensar que um **vetor aleatório bidimensional contínuo** é um vetor formado por **duas variáveis aleatórias contínuas** definidas no **mesmo espaço amostral**. 
+Podemos pensar que um **vetor aleatório bidimensional contínuo** é um vetor formado por **duas variáveis aleatórias contínuas** definidas no **mesmo espaço amostral**.
 
 
 . . .
@@ -1583,7 +1587,7 @@ $$
 
 $$\small
 \begin{aligned}
-\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty} f(x,y)\,dx\,dy 
+\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty} f(x,y)\,dx\,dy
 &= \int_0^2 \int_0^1 \left(x^2 + \frac{xy}{3}\right)\,dx\,dy \\[6pt]
 &= \int_0^2 \left[\int_0^1 x^2\,dx + \int_0^1 \frac{xy}{3}\,dx \right] dy \\[6pt]
 &= \int_0^2 \left[\frac{x^3}{3}\Bigg|_0^1 + \frac{yx^2}{6}\Bigg|_0^1\right] dy = \int_0^2 \left(\frac{1}{3} + \frac{y}{6}\right) dy \\[6pt]
@@ -1796,7 +1800,7 @@ $$
 . . .
 
 
-Note que, assim como no caso discreto, para cada valor $y$ de $Y$, temos um valor diferente de $E_X(X\mid Y=y)$, e para cada valor $x$ de $X$, temos um valor diferente de $E_Y(Y\mid X=x)$. 
+Note que, assim como no caso discreto, para cada valor $y$ de $Y$, temos um valor diferente de $E_X(X\mid Y=y)$, e para cada valor $x$ de $X$, temos um valor diferente de $E_Y(Y\mid X=x)$.
 
 
 ## Distribuições e Esperanças Condicionais
@@ -1818,8 +1822,10 @@ $$
 Como $X$ e $Y$ são variáveis aleatórias, essas funções definem novas variáveis aleatórias $g(Y)$ e $h(X)$, cujas esperanças são calculadas como
 
 $$
-E_Y[g(Y)] = \int g(y)\,f_Y(y)\,dy \\
-E_X[h(X)] = \int h(x)\,f_X(x)\,dx
+\begin{aligned}
+E_Y[g(Y)] &= \int g(y)\,f_Y(y)\,dy \\
+E_X[h(X)] &= \int h(x)\,f_X(x)\,dx
+\end{aligned}
 $$
 
 ## Distribuições e Esperanças Condicionais
@@ -1844,7 +1850,7 @@ $$
 
 ## Distribuições e Esperanças Condicionais
 
-Analogamente, 
+Analogamente,
 
 $$
 \begin{aligned}
@@ -2561,7 +2567,7 @@ $$
 O Jacobiano da transformação inversa $(u,v)\mapsto(x,y)$ é
 
 $$
-J = 
+J =
 \begin{vmatrix}
 \dfrac{\partial x}{\partial u} & \dfrac{\partial x}{\partial v} \\[8pt]
 \dfrac{\partial y}{\partial u} & \dfrac{\partial y}{\partial v}
@@ -2746,7 +2752,7 @@ $$U = X + Y \quad \text{e} \quad V = \frac{Y}{X}$$
 . . .
 
 
-Como $X$ e $Y$ são independentes, e com distribuição Exponencial$(1)$, 
+Como $X$ e $Y$ são independentes, e com distribuição Exponencial$(1)$,
 
 $$
 f_X(x)=e^{-x}\mathbf{I}_{\{x\ge 0\}},\qquad
@@ -2811,7 +2817,7 @@ O Jacobiano dessa transformação é:
 
 $$
 \begin{aligned}
-J &= 
+J &=
 \begin{vmatrix}
 \dfrac{\partial x}{\partial u} & \dfrac{\partial x}{\partial v} \\[8pt]
 \dfrac{\partial y}{\partial u} & \dfrac{\partial y}{\partial v}
@@ -2822,7 +2828,7 @@ J &=
 \dfrac{v}{1+v} & \dfrac{u}{(1+v)^2}
 \end{vmatrix}
 = \frac{1}{1+v}\cdot\frac{u}{(1+v)^2}
--\left(-\frac{u}{(1+v)^2}\right)\cdot\frac{v}{1+v} \\[10pt] 
+-\left(-\frac{u}{(1+v)^2}\right)\cdot\frac{v}{1+v} \\[10pt]
 &= \frac{u}{(1+v)^2}
 \end{aligned}
 $$
