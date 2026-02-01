@@ -2596,5 +2596,1034 @@
     "crumbs": [
       "Resolução das Listas de Exercícios"
     ]
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#introdução",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#introdução",
+    "title": "Vetores Aleatórios",
+    "section": "Introdução",
+    "text": "Introdução\nEm muitas situações, é comum que um experimento aleatório gere mais de uma variável de interesse e, quase sempre, o interesse estará em estudar o comportamento simultâneo de 2 ou mais variáveis, em busca de relações, associações.\nTorna-se necessário, então, conhecer o comportamento probabilístico conjunto de tais variáveis."
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#variáveis-aleatórias-multidimensionais",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#variáveis-aleatórias-multidimensionais",
+    "title": "Vetores Aleatórios",
+    "section": "Variáveis Aleatórias Multidimensionais",
+    "text": "Variáveis Aleatórias Multidimensionais\nDefinição: Sejam \\(\\varepsilon\\) um experimento e \\(S\\) um espaço amostral associado a \\(\\varepsilon\\). Sejam \\(X = X(s)\\) e \\(Y = Y(s)\\) duas funções, cada uma associando um número real a cada resultado \\(s \\in S\\). Denominaremos \\((X, Y)\\) uma variável aleatória bidimensional (também chamada vetor aleatório)."
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#variáveis-aleatórias-multidimensionais-1",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#variáveis-aleatórias-multidimensionais-1",
+    "title": "Vetores Aleatórios",
+    "section": "Variáveis Aleatórias Multidimensionais",
+    "text": "Variáveis Aleatórias Multidimensionais\nSe \\(X_1 = X_1(s)\\), \\(X_2 = X_2(s)\\), \\(\\ldots\\), \\(X_n = X_n(s)\\) forem \\(n\\) funções, cada uma associando um número real a cada resultado \\(s \\in S\\), denominaremos \\((X_1, \\ldots, X_n)\\) uma variável aleatória \\(n\\)-dimensional (ou um vetor aleatório \\(n\\)-dimensional)."
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#variáveis-aleatórias-multidimensionais-2",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#variáveis-aleatórias-multidimensionais-2",
+    "title": "Vetores Aleatórios",
+    "section": "Variáveis Aleatórias Multidimensionais",
+    "text": "Variáveis Aleatórias Multidimensionais\nDefinição: \\((X, Y)\\) será uma variável aleatória discreta bidimensional se os valores possíveis de \\((X, Y)\\) forem finitos ou infinitos numeráveis. Isto é, os valores possíveis de \\((X, Y)\\) possam ser representados por \\((x_i, y_j)\\), \\(i = 1, 2, \\ldots, n, \\ldots\\), \\(j = 1, 2, \\ldots, m, \\ldots\\)\n\\((X, Y)\\) será uma variável aleatória contínua bidimensional se \\((X, Y)\\) puder tomar todos os valores em algum conjunto não numerável do plano euclidiano. Por exemplo, se \\((X, Y)\\) tomar todos os valores no retângulo \\(\\{(x, y) \\mid a \\leq x \\leq b,\\; c \\leq y \\leq d\\}\\), então \\((X, Y)\\) é uma variável aleatória bidimensional contínua."
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#variáveis-aleatórias-multidimensionais-discretas",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#variáveis-aleatórias-multidimensionais-discretas",
+    "title": "Vetores Aleatórios",
+    "section": "Variáveis Aleatórias Multidimensionais Discretas",
+    "text": "Variáveis Aleatórias Multidimensionais Discretas\nDefinição: \\((X, Y)\\) será uma variável aleatória discreta bidimensional se os valores possíveis de \\((X, Y)\\) forem finitos ou infinitos numeráveis. Isto é, os valores possíveis de \\((X, Y)\\) possam ser representados por \\((x_i, y_j)\\), \\(i = 1, 2, \\ldots, n, \\ldots\\), \\(j = 1, 2, \\ldots, m, \\ldots\\)\n\nPodemos pensar que um vetor aleatório bidimensional discreto é um vetor formado por duas variáveis aleatórias discretas definidas no mesmo espaço amostral.\n\n\nDe forma análoga, podemos definir um vetor aleatório \\(n\\)−dimensional discreto como sendo um vetor formado por \\(n\\) variáveis aleatórias discretas definidas no mesmo espaço amostral."
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#variáveis-aleatórias-multidimensionais-discretas-1",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#variáveis-aleatórias-multidimensionais-discretas-1",
+    "title": "Vetores Aleatórios",
+    "section": "Variáveis Aleatórias Multidimensionais Discretas",
+    "text": "Variáveis Aleatórias Multidimensionais Discretas\n\\((X, Y)\\) será uma variável aleatória contínua bidimensional se \\((X, Y)\\) puder tomar todos os valores em algum conjunto não numerável do plano euclidiano. Por exemplo, se \\((X, Y)\\) tomar todos os valores no retângulo \\(\\{(x, y) \\mid a \\leq x \\leq b,\\; c \\leq y \\leq d\\}\\), então \\((X, Y)\\) é uma variável aleatória bidimensional contínua."
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#função-de-probabilidade-conjunta",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#função-de-probabilidade-conjunta",
+    "title": "Vetores Aleatórios",
+    "section": "Função de Probabilidade Conjunta",
+    "text": "Função de Probabilidade Conjunta\nDefinição: Seja \\((X, Y)\\) uma variável aleatória discreta bidimensional. A cada resultado possível \\((x_i, y_j)\\) associaremos um número \\(p(x_i, y_j)\\) representando\n\\(P(X = x_i,\\; Y = y_j)\\) e satisfazendo as seguintes condições:\n\n\\(p(x_i, y_j) \\geq 0\\), para todo \\((x_i, y_j)\\);\n\\(\\displaystyle \\sum_{j=1}^{\\infty} \\sum_{i=1}^{\\infty} p(x_i, y_j) = 1\\)\n\n\nA função \\(p\\) definida para todo \\((x_i, y_j)\\) no contradomínio de \\((X, Y)\\) é denominada função de probabilidade conjunta de \\((X, Y)\\).\n\n\nO conjunto dos termos \\(\\{(x_i, y_j,\\; p(x_i, y_j)),\\; i = 1, 2, \\ldots,\\; j = 1, 2, \\ldots\\}\\) é denominado distribuição de probabilidade conjunta de \\((X, Y)\\)."
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#função-de-probabilidade-conjunta-1",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#função-de-probabilidade-conjunta-1",
+    "title": "Vetores Aleatórios",
+    "section": "Função de Probabilidade Conjunta",
+    "text": "Função de Probabilidade Conjunta\nPara vetores \\(n\\)-dimensionais, a função de probabilidade conjunta é \\(P(X_1 = x_1,\\; X_2 = x_2,\\; \\ldots,\\; X_n = x_n)\\) e satisfaz\n\\[\n\\sum_{x_1} \\sum_{x_2} \\cdots \\sum_{x_n}\nP(X_1 = x_1,\\; X_2 = x_2,\\; \\ldots,\\; X_n = x_n) = 1\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#função-de-probabilidade-conjunta-2",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#função-de-probabilidade-conjunta-2",
+    "title": "Vetores Aleatórios",
+    "section": "Função de Probabilidade Conjunta",
+    "text": "Função de Probabilidade Conjunta\nExemplo: Considere o experimento aleatório que consiste em sortear duas bolas, sem reposição, de uma urna que contém 3 bolas vermelhas (V) e 2 bolas brancas (B). Defina as seguintes variáveis aleatórias:\n\n\\(X\\): o número de bolas brancas observadas.\n\\(Y\\): a cor da segunda bola sorteada, em que \\(1\\) se a bola for V e \\(0\\), se for B.\n\n\nTemos que, o espaço amostral do experimento\n\\[\nS = \\{(1B, 2B), (1B, 2V), (1V, 2B), (1V, 2V)\\}\n\\]\n\n\nNote que,\n\\[X=\\{0,1,2\\}, \\quad \\text{e} \\quad Y=\\{0,1\\}\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#função-de-probabilidade-conjunta-3",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#função-de-probabilidade-conjunta-3",
+    "title": "Vetores Aleatórios",
+    "section": "Função de Probabilidade Conjunta",
+    "text": "Função de Probabilidade Conjunta\nAlém disso,\n\\[\nP(1B, 2B) \\;=\\; P(X = 2, Y = 0) = P(1B)\\,P(2B \\mid 1B)\n= \\frac{2}{5} \\times \\frac{1}{4}\n= \\frac{1}{10}\n\\]\n\\[\nP(1B, 2V) \\;=\\; P(X = 1, Y = 1) = P(1B)\\,P(2V \\mid 1B)\n= \\frac{2}{5} \\times \\frac{3}{4}\n= \\frac{3}{10}\n\\]\n\\[\nP(1V, 2B) \\;=\\; P(X = 1, Y = 0) = P(1V)\\,P(2B \\mid 1V)\n= \\frac{3}{5} \\times \\frac{2}{4}\n= \\frac{3}{10}\n\\]\n\\[\nP(1V, 2V) \\;=\\; P(X = 0, Y = 1) = P(1V)\\,P(2V \\mid 1V)\n= \\frac{3}{5} \\times \\frac{2}{4}\n= \\frac{3}{10}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#função-de-probabilidade-conjunta-4",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#função-de-probabilidade-conjunta-4",
+    "title": "Vetores Aleatórios",
+    "section": "Função de Probabilidade Conjunta",
+    "text": "Função de Probabilidade Conjunta\nTemos então, a distribuição conjunta de \\((X,Y)\\)\n\\[\n\\begin{array}{c|ccc}\n\\hline\nY \\backslash X & 0 & 1 & 2 \\\\\n\\hline\n0 & 0 & \\dfrac{3}{10} & \\dfrac{1}{10} \\\\\n1 & \\dfrac{3}{10} & \\dfrac{3}{10} & 0 \\\\\n\\hline\n\\end{array}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-marginais",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-marginais",
+    "title": "Vetores Aleatórios",
+    "section": "Distribuições Marginais",
+    "text": "Distribuições Marginais\nSeja \\((X, Y)\\) um vetor aleatório discreto com distribuição conjunta \\(p(x_i, y_j)\\).\n\n\nA distribuição marginal de \\(X\\) é definida como\n\n\\[\nP(X = x) = \\sum_y p(x, y) = \\sum_y P(X = x, Y = y), \\qquad \\forall x\n\\]\n\n\n\nAnalogamente, a distribuição marginal de \\(Y\\) é definida como\n\n\\[\nP(Y = y) = \\sum_x p(x, y) = \\sum_x P(X = x, Y = y), \\qquad \\forall y\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-marginais-1",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-marginais-1",
+    "title": "Vetores Aleatórios",
+    "section": "Distribuições Marginais",
+    "text": "Distribuições Marginais\nEm geral, se \\((X_1, X_2, \\ldots, X_n)\\) é um vetor aleatório \\(n\\)-dimensional, então\n\\[\\small\nP(X_i = x_i)\n=\n\\sum_{x_1} \\cdots \\sum_{x_{i-1}} \\sum_{x_{i+1}} \\cdots \\sum_{x_n}\nP(X_1 = x_1, \\ldots, X_{i-1} = x_{i-1}, X_{i+1} = x_{i+1}, \\ldots, X_n = x_n)\n\\]\n\nNo nosso exemplo,\n\\[\n\\begin{array}{c|ccc|c}\n\\hline\nY \\backslash X & 0 & 1 & 2 & P(Y=y) \\\\\n\\hline\n0 & 0 & \\dfrac{3}{10} & \\dfrac{1}{10} & \\dfrac{4}{10} \\\\\n1 & \\dfrac{3}{10} & \\dfrac{3}{10} & 0 & \\dfrac{6}{10} \\\\\n\\hline\nP(X=x) & \\dfrac{3}{10} & \\dfrac{6}{10} & \\dfrac{1}{10} & 1 \\\\\n\\hline\n\\end{array}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-marginais-2",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-marginais-2",
+    "title": "Vetores Aleatórios",
+    "section": "Distribuições Marginais",
+    "text": "Distribuições Marginais"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#função-de-distribuição-acumulada",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#função-de-distribuição-acumulada",
+    "title": "Vetores Aleatórios",
+    "section": "Função de Distribuição Acumulada",
+    "text": "Função de Distribuição Acumulada\nSeja \\((X, Y)\\) uma variável aleatória bidimensional. A função de distribuição acumulada (fd) \\(F\\) da variável aleatória bidimensional \\((X, Y)\\) é definida por\n\\[\nF(x, y) = P(X \\leq x,\\; Y \\leq y) = \\sum_{x' \\le x} \\sum_{y' \\le y} p(x',y')\n\\]\n\nDe forma análoga, para vetores \\(n\\)-dimensionais,\n\\[\n\\begin{aligned}\nF(x_1, x_2, \\ldots, x_n)\n&=\nP(X_1 \\le x_1,\\; X_2 \\le x_2,\\; \\ldots,\\; X_n \\le x_n) \\\\[6pt]\n&= \\sum_{x_1' \\le x_1}\n\\sum_{x_2' \\le x_2}\n\\cdots\n\\sum_{x_n' \\le x_n}\nP(X_1 = x_1',\\; X_2 = x_2',\\; \\ldots,\\; X_n = x_n')\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#função-de-distribuição-acumulada-1",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#função-de-distribuição-acumulada-1",
+    "title": "Vetores Aleatórios",
+    "section": "Função de Distribuição Acumulada",
+    "text": "Função de Distribuição Acumulada\nConsidere a distribuição conjunta \\(p(x,y) = P(X = x, Y = y)\\) do exemplo da urna:\n\\[\n\\begin{array}{c|ccc}\n\\hline\nY \\backslash X & 0 & 1 & 2 \\\\\n\\hline\n0 & 0 & \\dfrac{3}{10} & \\dfrac{1}{10} \\\\\n1 & \\dfrac{3}{10} & \\dfrac{3}{10} & 0 \\\\\n\\hline\n\\end{array}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#função-de-distribuição-acumulada-2",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#função-de-distribuição-acumulada-2",
+    "title": "Vetores Aleatórios",
+    "section": "Função de Distribuição Acumulada",
+    "text": "Função de Distribuição Acumulada\nPara \\(y = 0\\)\n\\[\\small\n\\begin{aligned}\nF(0,0) &= P(X \\le 0, Y \\le 0) = p(0,0) = 0 \\\\\nF(1,0) &= P(X \\le 1, Y \\le 0) = p(0,0) + p(1,0)\n= 0 + \\frac{3}{10}\n= \\frac{3}{10} \\\\\nF(2,0) &= P(X \\le 2, Y \\le 0) = p(0,0) + p(1,0) + p(2,0)\n= 0 + \\frac{3}{10} + \\frac{1}{10}\n= \\frac{4}{10}\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#função-de-distribuição-acumulada-3",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#função-de-distribuição-acumulada-3",
+    "title": "Vetores Aleatórios",
+    "section": "Função de Distribuição Acumulada",
+    "text": "Função de Distribuição Acumulada\nPara \\(y = 1\\)\n\\[\\small\n\\begin{aligned}\nF(0,1) &= P(X \\le 0, Y \\le 1) = p(0,0) + p(0,1) = 0 + \\frac{3}{10} = \\frac{3}{10}\\\\\nF(1,1) &= P(X \\le 1, Y \\le 1) = p(0,0) + p(1,0) + p(0,1) + p(1,1) = 0 + \\frac{3}{10} + \\frac{3}{10} + \\frac{3}{10} = \\frac{9}{10} \\\\\nF(2,1) &= P(X \\le 2, Y \\le 1) = p(0,0) + p(1,0) + p(2,0) + p(0,1) + p(1,1) + p(2,1) \\\\ &= 0 + \\frac{3}{10} + \\frac{1}{10} + \\frac{3}{10} + \\frac{3}{10} + 0 =  1\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#função-de-distribuição-acumulada-4",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#função-de-distribuição-acumulada-4",
+    "title": "Vetores Aleatórios",
+    "section": "Função de Distribuição Acumulada",
+    "text": "Função de Distribuição Acumulada\nTabela final dos valores da fda\n\\[\n\\begin{array}{c|ccc}\n\\hline\ny \\backslash x & 0 & 1 & 2 \\\\\n\\hline\n0 & 0 & \\dfrac{3}{10} & \\dfrac{4}{10} \\\\\n1 & \\dfrac{3}{10} & \\dfrac{9}{10} & 1 \\\\\n\\hline\n\\end{array}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#section",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#section",
+    "title": "Vetores Aleatórios",
+    "section": "",
+    "text": "Por que \\(\\operatorname{Var}(X^*) = 1\\)?\nPor definição, a variável aleatória padronizada \\(X^*\\) é dada por\n\\[\nX^* = \\frac{X - E(X)}{\\sigma_X},\n\\]\nonde \\(\\sigma_X = \\sqrt{\\operatorname{Var}(X)}\\) é o desvio-padrão de \\(X\\).\nUsando as propriedades da variância, temos:\n\nSubtração de uma constante não altera a variância: \\[\n\\operatorname{Var}(X - E(X)) = \\operatorname{Var}(X).\n\\]\nFator constante sai ao quadrado: \\[\n\\operatorname{Var}(aX) = a^2 \\operatorname{Var}(X).\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-condicionais",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-condicionais",
+    "title": "Vetores Aleatórios",
+    "section": "Distribuições Condicionais",
+    "text": "Distribuições Condicionais\nSeja \\((X, Y)\\) um vetor aleatório discreto com distribuição conjunta \\(p(x,y)\\). A distribuição condicional de \\(X\\) dado \\(Y = y\\) é definida como\n\\[\nP(X = x \\mid Y = y)\n=\n\\frac{P(X = x,\\; Y = y)}{P(Y = y)},\n\\qquad \\forall x\n\\]\n\nAnalogamente, define-se a distribuição condicional de \\(Y\\) dado \\(X = x\\) como\n\\[\nP(Y = y \\mid X = x)\n=\n\\frac{P(X = x,\\; Y = y)}{P(X = x)},\n\\qquad \\forall y\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-condicionais-1",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-condicionais-1",
+    "title": "Vetores Aleatórios",
+    "section": "Distribuições Condicionais",
+    "text": "Distribuições Condicionais\nNote que existe uma distribuição condicional de \\(X\\) para cada valor \\(y\\) e uma distribuição condicional de \\(Y\\) para cada valor \\(x\\).\n\nAssim, se \\(X\\) assume \\(n\\) valores distintos e \\(Y\\) assume \\(m\\) valores distintos, teremos ao todo \\(n + m\\) distribuições condicionais."
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-condicionais-2",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-condicionais-2",
+    "title": "Vetores Aleatórios",
+    "section": "Distribuições Condicionais",
+    "text": "Distribuições Condicionais\nVoltando ao exemplo, note que temos as distribuições condicionais \\(X \\mid Y = 0\\) e \\(X \\mid Y = 1\\). Analogamente, temos as distribuições condicionais\n\\(Y \\mid X = 0\\), \\(Y \\mid X = 1\\) e \\(Y \\mid X = 2\\).\n\\[\n\\begin{array}{c|ccc|c}\n\\hline\nY \\backslash X & 0 & 1 & 2 & P(Y=y) \\\\\n\\hline\n0 & 0 & \\dfrac{3}{10} & \\dfrac{1}{10} & \\dfrac{4}{10} \\\\\n1 & \\dfrac{3}{10} & \\dfrac{3}{10} & 0 & \\dfrac{6}{10} \\\\\n\\hline\nP(X=x) & \\dfrac{3}{10} & \\dfrac{6}{10} & \\dfrac{1}{10} & 1 \\\\\n\\hline\n\\end{array}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-condicionais-3",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-condicionais-3",
+    "title": "Vetores Aleatórios",
+    "section": "Distribuições Condicionais",
+    "text": "Distribuições Condicionais\nAssim,\n\\[\n\\begin{aligned}\nP(X = 0 \\mid Y = 0) &= \\frac{P(X = 0,\\; Y = 0)}{P(Y = 0)} = \\frac{0}{2/5} = 0 \\\\[6pt]\nP(X = 1 \\mid Y = 0) &= \\frac{P(X = 1,\\; Y = 0)}{P(Y = 0)} = \\frac{3/10}{2/5} = \\frac{3}{4} \\\\[6pt]\nP(X = 2 \\mid Y = 0) &= \\frac{P(X = 2,\\; Y = 0)}{P(Y = 0)} = \\frac{1/10}{2/5} = \\frac{1}{4}\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-condicionais-4",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-condicionais-4",
+    "title": "Vetores Aleatórios",
+    "section": "Distribuições Condicionais",
+    "text": "Distribuições Condicionais\nAnalogamente, temos que\n\\[\n\\begin{aligned}\nP(X = 0 \\mid Y = 1) &= \\frac{P(X = 0,\\; Y = 1)}{P(Y = 1)} = \\frac{3/10}{3/5} = \\frac{1}{2}\\\\[6pt]\nP(X = 1 \\mid Y = 1) &= \\frac{P(X = 1,\\; Y = 1)}{P(Y = 1)} = \\frac{3/10}{3/5} = \\frac{1}{2}\\\\[6pt]\nP(X = 2 \\mid Y = 1) &= \\frac{P(X = 2,\\; Y = 1)}{P(Y = 1)} = 0\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#esperança-condicional",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#esperança-condicional",
+    "title": "Vetores Aleatórios",
+    "section": "Esperança Condicional",
+    "text": "Esperança Condicional\nPara cada uma das distribuições condicionais, podemos calcular a respectiva esperança condicional:\n\\[\nE_X(X \\mid Y = y)\n=\n\\sum_x x\\, P(X = x \\mid Y = y)\n\\]\n\\[\nE_Y(Y \\mid X = x)\n=\n\\sum_y y\\, P(Y = y \\mid X = x)\n\\]\n\nObservação: Note que o subscrito \\(X\\) indica que a variável aleatória é \\(X\\) e, portanto, estamos calculando a média (ou esperança) dos valores que \\(X\\) assume fixado o valor \\(y\\). Observação análoga vale para o subscrito \\(Y\\)."
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#esperança-condicional-1",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#esperança-condicional-1",
+    "title": "Vetores Aleatórios",
+    "section": "Esperança Condicional",
+    "text": "Esperança Condicional\nVoltando ao exemplo, vamos encontrar \\(E(X \\mid Y = 0)\\):\n\\[\n\\begin{aligned}\nE(X \\mid Y = 0)\n&= \\sum_x x\\,P(X=x\\mid Y=0) \\\\\n&= 0\\cdot 0 + 1\\cdot \\frac{3}{4} + 2\\cdot \\frac{1}{4} \\\\\n&= \\frac{3}{4} + \\frac{2}{4} \\\\\n&= \\frac{5}{4}\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#esperança-condicional-2",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#esperança-condicional-2",
+    "title": "Vetores Aleatórios",
+    "section": "Esperança Condicional",
+    "text": "Esperança Condicional\nDe forma análoga, vamos encontrar \\(E(X \\mid Y = 1)\\):\n\\[\n\\begin{aligned}\nE(X \\mid Y = 1)\n&= \\sum_x x\\,P(X=x\\mid Y=1) \\\\\n&= 0\\cdot \\frac{1}{2} + 1\\cdot \\frac{1}{2} + 2\\cdot 0 \\\\\n&= \\frac{1}{2}\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#esperança-condicional-3",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#esperança-condicional-3",
+    "title": "Vetores Aleatórios",
+    "section": "Esperança Condicional",
+    "text": "Esperança Condicional\nAnalogamente,\n\\[\n\\begin{aligned}\nE(Y\\mid X=0) &= \\sum_y y\\,P(Y=y\\mid X=0) = 0\\cdot 0 + 1\\cdot 1 = 1\\\\[6pt]\nE(Y\\mid X=1) &= \\sum_y y\\,P(Y=y\\mid X=1) = 0\\cdot \\frac{1}{2} + 1\\cdot \\frac{1}{2} = \\frac{1}{2} \\\\[6pt]\nE(Y\\mid X=2) &= \\sum_y y\\,P(Y=y\\mid X=2) = 0\\cdot 1 + 1\\cdot 0 = 0\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#esperança-condicional-4",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#esperança-condicional-4",
+    "title": "Vetores Aleatórios",
+    "section": "Esperança Condicional",
+    "text": "Esperança Condicional\nNote que, para cada valor \\(y\\) de \\(Y\\), temos um valor diferente de \\(E(X \\mid Y = y)\\) e, para cada valor \\(x\\) de \\(X\\), temos um valor diferente de \\(E(Y \\mid X = x)\\).\n\nSendo assim, podemos definir uma função \\(g\\) que associa, a cada valor \\(y\\) de \\(Y\\), o valor \\(g(y) = E(X \\mid Y = y)\\) e outra função \\(h\\) que associa, a cada valor \\(x\\) de \\(X\\), o valor \\(h(x) = E(Y \\mid X = x)\\), ou seja,\n\\[\ng:\\; y \\longmapsto g(y) = E(X \\mid Y = y)\n\\]\n\\[\nh:\\; x \\longmapsto h(x) = E(Y \\mid X = x)\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#esperança-condicional-5",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#esperança-condicional-5",
+    "title": "Vetores Aleatórios",
+    "section": "Esperança Condicional",
+    "text": "Esperança Condicional\nComo \\(X\\) e \\(Y\\) são variáveis aleatórias, resulta que essas funções definem novas variáveis aleatórias \\(g(Y)\\) e \\(h(X)\\) e suas esperanças podem também ser calculadas.\n\nVamos denotar essas esperanças por \\(E_Y[g(Y)]\\) e \\(E_X[h(X)]\\), que são calculadas como\n\\[\nE_Y[g(Y)] = \\sum_y g(y)\\,P(Y = y)\n\\]\n\\[\nE_X[h(X)] = \\sum_x h(x)\\,P(X = x)\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#esperança-condicional-6",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#esperança-condicional-6",
+    "title": "Vetores Aleatórios",
+    "section": "Esperança Condicional",
+    "text": "Esperança Condicional\nAssim, usando a definição da esperança condicional, temos que\n\\[\\small\n\\begin{aligned}\nE_Y[g(Y)]\n&= \\sum_y g(y)\\,P(Y = y) = \\sum_y E_X(X \\mid Y = y)\\,P(Y = y) \\\\\n&= \\sum_y \\sum_x x\\,P(X = x \\mid Y = y)\\,P(Y = y) \\\\\n&= \\sum_y \\sum_x x\\,\\frac{P(X = x,\\; Y = y)}{P(Y = y)}\\,P(Y = y) \\\\\n&= \\sum_y \\sum_x x\\,P(X = x,\\; Y = y) \\\\\n&= \\sum_x x \\sum_y P(X = x,\\; Y = y) \\\\\n&= \\sum_x x\\,P(X = x) = E(X)\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#esperança-condicional-7",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#esperança-condicional-7",
+    "title": "Vetores Aleatórios",
+    "section": "Esperança Condicional",
+    "text": "Esperança Condicional\nDe forma análoga, temos que\n\\[\\small\n\\begin{aligned}\nE_X[h(X)] &= \\sum_x h(x)\\,P(X = x) = \\sum_x E_Y(Y \\mid X = x)\\,P(X = x) \\\\\n&= \\sum_x \\sum_y y\\,P(Y = y \\mid X = x)\\,P(X = x) \\\\\n&= \\sum_x \\sum_y y\\,\\frac{P(X = x,\\; Y = y)}{P(X = x)}\\,P(X = x) \\\\\n&= \\sum_x \\sum_y y\\,P(X = x,\\; Y = y) \\\\\n&= \\sum_y y \\sum_x P(X = x,\\; Y = y) \\\\\n&= \\sum_y y\\,P(Y = y) = E(Y)\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#esperança-condicional-8",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#esperança-condicional-8",
+    "title": "Vetores Aleatórios",
+    "section": "Esperança Condicional",
+    "text": "Esperança Condicional\nResumindo:\n\\[\nE_Y\\!\\left[E_X(X \\mid Y)\\right] = E(X)\n\\]\n\\[\nE_X\\!\\left[E_Y(Y \\mid X)\\right] = E(Y)\n\\]\nEsse resultado estabelece a Lei da Esperança Total."
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#esperança-condicional-9",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#esperança-condicional-9",
+    "title": "Vetores Aleatórios",
+    "section": "Esperança Condicional",
+    "text": "Esperança Condicional\nNo exemplo, \\(Y\\in\\{0,1\\}\\) e \\(X\\in\\{0,1,2\\}\\), com distribuição conjunta:\n\\[\n\\begin{array}{c|ccc}\n\\hline\nY \\backslash X & 0 & 1 & 2 \\\\\n\\hline\n0 & 0 & \\dfrac{3}{10} & \\dfrac{1}{10} \\\\\n1 & \\dfrac{3}{10} & \\dfrac{3}{10} & 0 \\\\\n\\hline\n\\end{array}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#esperança-condicional-10",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#esperança-condicional-10",
+    "title": "Vetores Aleatórios",
+    "section": "Esperança Condicional",
+    "text": "Esperança Condicional\nAs marginais são: \\[\nP(Y=0)=\\frac{4}{10},\\quad P(Y=1)=\\frac{6}{10},\\\\\nP(X=0)=\\frac{3}{10},\\quad P(X=1)=\\frac{6}{10},\\quad P(X=2)=\\frac{1}{10}\n\\]\nE as esperanças condicionais já calculadas: \\[\nE(X\\mid Y=0)=\\frac{5}{4},\\qquad E(X\\mid Y=1)=\\frac{1}{2},\\\\\nE(Y\\mid X=0)=1,\\qquad E(Y\\mid X=1)=\\frac{1}{2},\\qquad E(Y\\mid X=2)=0\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#função-de-distribuição-acumulada-5",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#função-de-distribuição-acumulada-5",
+    "title": "Vetores Aleatórios",
+    "section": "Função de Distribuição Acumulada",
+    "text": "Função de Distribuição Acumulada\n\\[\nF(x,y)=P(X\\le x,\\;Y\\le y)=\n\\begin{cases}\n0, & y&lt;0 \\ \\text{ou}\\ x&lt;0,\\\\[6pt]\n0, & 0\\le y&lt;1,\\; 0\\le x&lt;1,\\\\[6pt]\n\\dfrac{3}{10}, & 0\\le y&lt;1,\\; 1\\le x&lt;2,\\\\[6pt]\n\\dfrac{2}{5}, & 0\\le y&lt;1,\\; x\\ge 2,\\\\[8pt]\n\\dfrac{3}{10}, & y\\ge 1,\\; 0\\le x&lt;1,\\\\[6pt]\n\\dfrac{9}{10}, & y\\ge 1,\\; 1\\le x&lt;2,\\\\[6pt]\n1, & y\\ge 1,\\; x\\ge 2\n\\end{cases}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#esperança-condicional-11",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#esperança-condicional-11",
+    "title": "Vetores Aleatórios",
+    "section": "Esperança Condicional",
+    "text": "Esperança Condicional\nPrimeiro, calculemos \\(E(X)\\) diretamente pela marginal de \\(X\\):\n\\[\n\\begin{aligned}\nE(X)\n&= \\sum_x x\\,P(X=x) \\\\\n&= 0\\cdot\\frac{3}{10} + 1\\cdot\\frac{6}{10} + 2\\cdot\\frac{1}{10} \\\\\n&= \\frac{6}{10} + \\frac{2}{10} \\\\\n&= \\frac{8}{10} = \\frac{4}{5}\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#esperança-condicional-12",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#esperança-condicional-12",
+    "title": "Vetores Aleatórios",
+    "section": "Esperança Condicional",
+    "text": "Esperança Condicional\nAgora, calculemos \\(E_Y[E(X\\mid Y)]\\):\n\\[\n\\begin{aligned}\nE_Y[E(X\\mid Y)]\n&= \\sum_y E(X\\mid Y=y)\\,P(Y=y) \\\\\n&= E(X\\mid Y=0)\\,P(Y=0) + E(X\\mid Y=1)\\,P(Y=1) \\\\\n&= \\frac{5}{4}\\cdot\\frac{4}{10} + \\frac{1}{2}\\cdot\\frac{6}{10} \\\\\n&= \\frac{5}{10} + \\frac{3}{10} \\\\\n&= \\frac{8}{10} = \\frac{4}{5}\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#esperança-condicional-13",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#esperança-condicional-13",
+    "title": "Vetores Aleatórios",
+    "section": "Esperança Condicional",
+    "text": "Esperança Condicional\nLogo, \\[\nE_Y[E_X(X\\mid Y)] = \\frac{4}{5} = E(X)\n\\]\n\nDe forma análoga,\n\\[\n\\begin{aligned}\nE(Y)\n&= \\sum_y y\\,P(Y=y) \\\\\n&= 0\\cdot\\frac{4}{10} + 1\\cdot\\frac{6}{10} \\\\\n&= \\frac{6}{10} = \\frac{3}{5}\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#esperança-condicional-14",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#esperança-condicional-14",
+    "title": "Vetores Aleatórios",
+    "section": "Esperança Condicional",
+    "text": "Esperança Condicional\ne,\n\\[\\small\n\\begin{aligned}\nE_X[E(Y\\mid X)]\n&= \\sum_x E(Y\\mid X=x)\\,P(X=x) \\\\\n&= E(Y\\mid X=0)\\,P(X=0) + E(Y\\mid X=1)\\,P(X=1) + E(Y\\mid X=2)\\,P(X=2) \\\\\n&= 1\\cdot\\frac{3}{10} + \\frac{1}{2}\\cdot\\frac{6}{10} + 0\\cdot\\frac{1}{10} \\\\\n&= \\frac{3}{10} + \\frac{3}{10} \\\\\n&= \\frac{6}{10} = \\frac{3}{5}\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#esperança-condicional-15",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#esperança-condicional-15",
+    "title": "Vetores Aleatórios",
+    "section": "Esperança Condicional",
+    "text": "Esperança Condicional\nLogo, \\[\nE_X[E_Y(Y\\mid X)] = \\frac{3}{5} = E(Y)\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#independência-de-variáveis-aleatórias",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#independência-de-variáveis-aleatórias",
+    "title": "Vetores Aleatórios",
+    "section": "Independência de Variáveis Aleatórias",
+    "text": "Independência de Variáveis Aleatórias\nDefinição (Independência de variáveis aleatórias discretas): Seja \\((X, Y)\\) um vetor aleatório discreto com distribuição conjunta \\(p(x,y) = P(X = x,\\; Y = y)\\). Dizemos que \\(X\\) e \\(Y\\) são independentes se, e somente se,\n\\[\nP(X = x,\\; Y = y) = P(X = x)\\,P(Y = y),\n\\qquad \\forall x,\\; y\n\\]\nOu seja, a distribuição conjunta é o produto das distribuições marginais.\nDe forma análoga, para vetores \\(n\\)-dimensionais,\n\\[\nP(X_1 = x_1,\\; X_2 = x_2,\\; \\ldots,\\; X_n = x_n)\n=\n\\prod_{i=1}^n P(X_i = x_i),\n\\qquad \\forall\\, x_1, x_2, \\ldots, x_n\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#independência-de-variáveis-aleatórias-1",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#independência-de-variáveis-aleatórias-1",
+    "title": "Vetores Aleatórios",
+    "section": "Independência de Variáveis Aleatórias",
+    "text": "Independência de Variáveis Aleatórias\nLembrando a distribuição conjunta do exemplo:\n\\[\n\\begin{array}{c|ccc}\n\\hline\nY \\backslash X & 0 & 1 & 2 \\\\\n\\hline\n0 & 0 & \\dfrac{3}{10} & \\dfrac{1}{10} \\\\\n1 & \\dfrac{3}{10} & \\dfrac{3}{10} & 0 \\\\\n\\hline\n\\end{array}\n\\]\nAs marginais são:\n\\[\nP(X=0)=\\frac{3}{10},\\quad P(X=1)=\\frac{6}{10},\\quad P(X=2)=\\frac{1}{10}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#independência-de-variáveis-aleatórias-2",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#independência-de-variáveis-aleatórias-2",
+    "title": "Vetores Aleatórios",
+    "section": "Independência de Variáveis Aleatórias",
+    "text": "Independência de Variáveis Aleatórias\ne,\n\\[\nP(Y=0)=\\frac{4}{10},\\quad P(Y=1)=\\frac{6}{10}\n\\]\nPela definição, \\(X\\) e \\(Y\\) seriam independentes se, para todo \\(x\\) e \\(y\\),\n\\[\nP(X=x,Y=y)=P(X=x)\\,P(Y=y)\n\\] mas,\nConsidere o par \\((x,y)=(0,0)\\):"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#independência-de-variáveis-aleatórias-3",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#independência-de-variáveis-aleatórias-3",
+    "title": "Vetores Aleatórios",
+    "section": "Independência de Variáveis Aleatórias",
+    "text": "Independência de Variáveis Aleatórias\n\nDa tabela conjunta: \\[\nP(X=0, Y=0)=0\n\\]\nPelo produto das marginais: \\[\nP(X=0)\\,P(Y=0)=\\frac{3}{10}\\cdot\\frac{4}{10}=\\frac{12}{100}=\\frac{3}{25}\n\\]\n\nComo \\[\nP(X=0, Y=0)\\neq P(X=0)\\,P(Y=0),\n\\] concluímos que \\(X\\) e \\(Y\\) não são independentes."
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias",
+    "title": "Vetores Aleatórios",
+    "section": "Funções de Variáveis Aleatórias",
+    "text": "Funções de Variáveis Aleatórias\nTEOREMA 01: Seja \\((X, Y)\\) um vetor aleatório discreto com função de probabilidade conjunta \\(P(X = x,\\; Y = y)\\). Seja \\(h:\\mathbb{R}^2 \\to \\mathbb{R}\\) uma função real tal que cada par \\((x, y)\\) é levado a \\(h(x, y)\\). Então,\n\\[\nE[h(X,Y)] = \\sum_i \\sum_j h(x_i, y_j)\\,P(X = x_i,\\; Y = y_j)\n\\]\nDe forma análoga, para vetores \\(n\\)-dimensionais,\n\\[\nE\\!\\left[h(X_1,\\ldots,X_n)\\right]\n=\n\\sum_{x_1}\\sum_{x_2}\\cdots\\sum_{x_n}\nh(x_1,\\ldots,x_n)\\,p(x_1,\\ldots,x_n)\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-1",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-1",
+    "title": "Vetores Aleatórios",
+    "section": "Funções de Variáveis Aleatórias",
+    "text": "Funções de Variáveis Aleatórias\nTEOREMA 02: Seja \\((X, Y)\\) um vetor aleatório discreto com função de probabilidade conjunta \\(P(X = x,\\; Y = y)\\). Seja \\(h:\\mathbb{R}^2 \\to \\mathbb{R}\\) uma função real tal que \\(h(x, y) = x + y\\). Então,\n\\[\nE(X + Y) = E(X) + E(Y)\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-2",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-2",
+    "title": "Vetores Aleatórios",
+    "section": "Funções de Variáveis Aleatórias",
+    "text": "Funções de Variáveis Aleatórias\nUsando o teorema anterior, temos que\n\\[\n\\begin{aligned}\nE(X + Y)\n&= \\sum_x \\sum_y (x + y)\\,P(X = x,\\; Y = y) \\\\\n&= \\sum_x \\sum_y x\\,P(X = x,\\; Y = y)\n   + \\sum_x \\sum_y y\\,P(X = x,\\; Y = y) \\\\\n&= \\sum_x x \\sum_y P(X = x,\\; Y = y)\n   + \\sum_y y \\sum_x P(X = x,\\; Y = y) \\\\\n&= \\sum_x x\\,P(X = x)\n   + \\sum_y y\\,P(Y = y) \\\\\n&= E(X) + E(Y)\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-3",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-3",
+    "title": "Vetores Aleatórios",
+    "section": "Funções de Variáveis Aleatórias",
+    "text": "Funções de Variáveis Aleatórias\nNo exemplo da urna, a distribuição conjunta é:\n\\[\n\\begin{array}{c|ccc}\n\\hline\nY \\backslash X & 0 & 1 & 2 \\\\\n\\hline\n0 & 0 & \\dfrac{3}{10} & \\dfrac{1}{10} \\\\\n1 & \\dfrac{3}{10} & \\dfrac{3}{10} & 0 \\\\\n\\hline\n\\end{array}\n\\]\nAs marginais são: \\[\nP(X=0)=\\frac{3}{10},\\quad P(X=1)=\\frac{6}{10},\\quad P(X=2)=\\frac{1}{10}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-4",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-4",
+    "title": "Vetores Aleatórios",
+    "section": "Funções de Variáveis Aleatórias",
+    "text": "Funções de Variáveis Aleatórias\ne,\n\\[\nP(Y=0)=\\frac{4}{10},\\quad P(Y=1)=\\frac{6}{10}\n\\]\n\nTemos então,\n\\[\n\\begin{aligned}\nE(X)\n&= \\sum_x x\\,P(X=x) \\\\\n&= 0\\cdot\\frac{3}{10} + 1\\cdot\\frac{6}{10} + 2\\cdot\\frac{1}{10} \\\\\n&= \\frac{6}{10} + \\frac{2}{10} = \\frac{8}{10}=\\frac{4}{5}\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-5",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-5",
+    "title": "Vetores Aleatórios",
+    "section": "Funções de Variáveis Aleatórias",
+    "text": "Funções de Variáveis Aleatórias\ne,\n\\[\n\\begin{aligned}\nE(Y)\n&= \\sum_y y\\,P(Y=y) \\\\\n&= 0\\cdot\\frac{4}{10} + 1\\cdot\\frac{6}{10} = \\frac{6}{10}=\\frac{3}{5}\n\\end{aligned}\n\\]\n\nLogo,\n\\[\nE(X)+E(Y)=\\frac{4}{5}+\\frac{3}{5}=\\frac{7}{5}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-6",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-6",
+    "title": "Vetores Aleatórios",
+    "section": "Funções de Variáveis Aleatórias",
+    "text": "Funções de Variáveis Aleatórias\nNote que, como \\(E(X+Y)=\\sum_{x,y} (x+y)\\,P(X=x,Y=y)\\), temos:\n\\[\\small\n\\begin{aligned}\nE(X+Y)\n&= (1+0)\\cdot\\frac{3}{10}\n+ (2+0)\\cdot\\frac{1}{10}\n+ (0+1)\\cdot\\frac{3}{10}\n+ (1+1)\\cdot\\frac{3}{10} \\\\\n&= 1\\cdot\\frac{3}{10}\n+ 2\\cdot\\frac{1}{10}\n+ 1\\cdot\\frac{3}{10}\n+ 2\\cdot\\frac{3}{10} \\\\\n&= \\frac{3}{10}+\\frac{2}{10}+\\frac{3}{10}+\\frac{6}{10} \\\\\n&= \\frac{14}{10}=\\frac{7}{5}\n\\end{aligned}\n\\]\nPortanto, de acordo com Teorema 02,\n\\[\\small\nE(X+Y)=\\frac{7}{5}=E(X)+E(Y)\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-7",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-7",
+    "title": "Vetores Aleatórios",
+    "section": "Funções de Variáveis Aleatórias",
+    "text": "Funções de Variáveis Aleatórias\nUsando definições e propriedades da esperança e da variância, vamos estudar a variância da soma de duas variáveis aleatórias.\n\n\\[\n\\begin{aligned}\n\\operatorname{Var}(X+Y)\n&= E\\,\\left[(X+Y)-E(X+Y)\\right]^2 \\\\\n&= E\\,\\left[X+Y-E(X)-E(Y)\\right]^2 \\\\\n&= E\\,\\left[(X-E(X))+(Y-E(Y))\\right]^2 \\\\\n&= E\\,\\left[(X-E(X))^2\\right] + E\\,\\left[(Y-E(Y))^2\\right] + 2E\\,\\left[(X-E(X))(Y-E(Y))\\right] \\\\\n&= \\operatorname{Var}(X) + \\operatorname{Var}(Y)\n+ 2E\\,\\left[(X-E(X))(Y-E(Y))\\right]\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-8",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-8",
+    "title": "Vetores Aleatórios",
+    "section": "Funções de Variáveis Aleatórias",
+    "text": "Funções de Variáveis Aleatórias\nObserve que, na variância da soma, aparece um termo envolvendo a esperança do produto dos desvios em torno das médias. Esse termo define a covariância de duas variáveis aleatórias. Note ainda, que as variáveis \\[\nX' = X - E(X) \\quad \\text{e} \\quad Y' = Y - E(Y)\n\\] são variáveis aleatórias ambas com média zero, isto é,\n\\[\nE(X') = E(Y') = 0\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-9",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-9",
+    "title": "Vetores Aleatórios",
+    "section": "Funções de Variáveis Aleatórias",
+    "text": "Funções de Variáveis Aleatórias\nDefinição (Covariância): A covariância entre duas variáveis aleatórias \\(X\\) e \\(Y\\) é definida por\n\\[\n\\operatorname{Cov}(X,Y)\n=\nE\\!\\left[(X - E(X))(Y - E(Y))\\right]\n\\]\n\nSubstituindo essa definição na expressão da variância da soma de duas variáveis aleatórias, obtém-se o seguinte resultado.\nResultado 01: A variância da soma de duas variáveis aleatórias é dada por\n\\[\n\\operatorname{Var}(X + Y) = \\operatorname{Var}(X) + \\operatorname{Var}(Y) + 2\\,\\operatorname{Cov}(X,Y)\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-10",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-10",
+    "title": "Vetores Aleatórios",
+    "section": "Funções de Variáveis Aleatórias",
+    "text": "Funções de Variáveis Aleatórias\nUma forma alternativa de cálculo da covariância resulta de\n\\[\n\\begin{aligned}\nE[(X - E(X))(Y - E(Y))]\n&= E[XY - X E(Y) - Y E(X) + E(X)E(Y)] \\\\\n&= E(XY) - E[X E(Y)] - E[Y E(X)] + E(X)E(Y) \\\\\n&= E(XY) - E(Y)E(X) - E(X)E(Y) + E(X)E(Y) \\\\\n&= E(XY) - E(X)E(Y)\n\\end{aligned}\n\\]\nAqui usamos que \\(E(kX) = kE(X)\\) e também que \\(E(k) = k\\). Logo,\n\\[\n\\operatorname{Cov}(X,Y) = E(XY) - E(X)E(Y)\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-11",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-11",
+    "title": "Vetores Aleatórios",
+    "section": "Funções de Variáveis Aleatórias",
+    "text": "Funções de Variáveis Aleatórias\nPropriedades da covariância\n\n\\(\\operatorname{Cov}(aX + b,\\; cY + d) = ac\\,\\operatorname{Cov}(X,Y)\\)\n\nDe fato,\n\\[\n\\begin{aligned}\n\\operatorname{Cov}(aX + b,\\; cY + d)\n&= E\\!\\left[(aX + b - E(aX + b))(cY + d - E(cY + d))\\right] \\\\\n&= E\\!\\left[(aX + b - aE(X) - b)(cY + d - cE(Y) - d)\\right] \\\\\n&= E\\!\\left[a(X - E(X))\\,c(Y - E(Y))\\right] \\\\\n&= ac\\,E\\!\\left[(X - E(X))(Y - E(Y))\\right] \\\\\n&= ac\\,\\operatorname{Cov}(X,Y)\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-12",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-12",
+    "title": "Vetores Aleatórios",
+    "section": "Funções de Variáveis Aleatórias",
+    "text": "Funções de Variáveis Aleatórias\nPropriedades da covariância\n\n\\(\\operatorname{Cov}(X + Y,\\; Z + W)\n= \\operatorname{Cov}(X,Z) + \\operatorname{Cov}(X,W) + \\operatorname{Cov}(Y,Z) + \\operatorname{Cov}(Y,W)\\)\n\nDe fato,\n\\[\n\\begin{aligned}\n\\operatorname{Cov}(X + Y,\\; Z + W)\n&= E\\!\\left[(X + Y)(Z + W)\\right] - E(X + Y)\\,E(Z + W) \\\\\n&= E(XZ + XW + YZ + YW)\n   - [E(X) + E(Y)][E(Z) + E(W)] \\\\\n&= E(XZ) + E(XW) + E(YZ) + E(YW) \\\\\n&\\quad - E(X)E(Z) - E(X)E(W) - E(Y)E(Z) - E(Y)E(W) \\\\\n&= [E(XZ) - E(X)E(Z)]\n+ [E(XW) - E(X)E(W)] \\\\\n&\\quad + [E(YZ) - E(Y)E(Z)]\n+ [E(YW) - E(Y)E(W)] \\\\\n&= \\operatorname{Cov}(X,Z)\n+ \\operatorname{Cov}(X,W)\n+ \\operatorname{Cov}(Y,Z)\n+ \\operatorname{Cov}(Y,W)\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-13",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-13",
+    "title": "Vetores Aleatórios",
+    "section": "Funções de Variáveis Aleatórias",
+    "text": "Funções de Variáveis Aleatórias\nPropriedades da covariância\n\n\\[\\operatorname{Var}(X - Y)=\\operatorname{Var}(X)+\\operatorname{Var}(Y)-2\\,\\operatorname{Cov}(X,Y)\\]\n\nDe fato,\n\\[\n\\begin{aligned}\n\\operatorname{Var}(X - Y)\n&= \\operatorname{Var}[X + (-Y)] \\\\\n&= \\operatorname{Var}(X) + \\operatorname{Var}(Y)\n   + 2\\,\\operatorname{Cov}(X,\\,-Y) \\\\\n&= \\operatorname{Var}(X) + \\operatorname{Var}(Y)\n   + 2(-1)\\operatorname{Cov}(X,Y) \\\\\n&= \\operatorname{Var}(X) + \\operatorname{Var}(Y)\n   - 2\\,\\operatorname{Cov}(X,Y)\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-14",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-14",
+    "title": "Vetores Aleatórios",
+    "section": "Funções de Variáveis Aleatórias",
+    "text": "Funções de Variáveis Aleatórias\nResultado 02: Se \\(X\\) e \\(Y\\) são variáveis aleatórias independentes, então \\[\n\\operatorname{Cov}(X,Y) = 0\n\\]\nDe fato,\nSe \\(X\\) e \\(Y\\) são independentes, então\n\\[P(X = x,\\; Y = y) = P(X = x)\\,P(Y = y)\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-15",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-15",
+    "title": "Vetores Aleatórios",
+    "section": "Funções de Variáveis Aleatórias",
+    "text": "Funções de Variáveis Aleatórias\nNesse caso,\n\\[\\small\n\\begin{aligned}\nE(XY)\n&= \\sum_x \\sum_y xy\\,P(X = x,\\; Y = y) \\\\\n&= \\sum_x \\sum_y xy\\,P(X = x)\\,P(Y = y) \\\\\n&= \\left(\\sum_x x\\,P(X = x)\\right)\n   \\left(\\sum_y y\\,P(Y = y)\\right) \\\\\n&= E(X)\\,E(Y)\n\\end{aligned}\n\\]\nLogo,\n\\[\\small\n\\operatorname{Cov}(X,Y)\n= E(XY) - E(X)E(Y)\n= 0\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-16",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-16",
+    "title": "Vetores Aleatórios",
+    "section": "Funções de Variáveis Aleatórias",
+    "text": "Funções de Variáveis Aleatórias\nNote que a recíproca desse resultado não é verdadeira, isto é, covariância nula não significa independência entre as variáveis."
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-17",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-17",
+    "title": "Vetores Aleatórios",
+    "section": "Funções de Variáveis Aleatórias",
+    "text": "Funções de Variáveis Aleatórias\nComo exemplo, consideremos a seguinte distribuição de probabilidade conjunta:\nDistribuição conjunta \\(p(x,y)\\) (com marginais)\n\n\n\n\n\n\n\n\n\n\n\\(Y\\backslash X\\)\n\\(0\\)\n\\(1\\)\n\\(2\\)\n\\(p_Y(y)\\)\n\n\n\n\n\\(1\\)\n\\(\\dfrac{3}{20}\\)\n\\(\\dfrac{3}{20}\\)\n\\(\\dfrac{2}{20}\\)\n\\(\\dfrac{2}{5}\\)\n\n\n\\(2\\)\n\\(\\dfrac{1}{20}\\)\n\\(\\dfrac{1}{20}\\)\n\\(\\dfrac{2}{20}\\)\n\\(\\dfrac{1}{5}\\)\n\n\n\\(3\\)\n\\(\\dfrac{4}{20}\\)\n\\(\\dfrac{1}{20}\\)\n\\(\\dfrac{3}{20}\\)\n\\(\\dfrac{2}{5}\\)\n\n\n\\(p_X(x)\\)\n\\(\\dfrac{2}{5}\\)\n\\(\\dfrac{1}{4}\\)\n\\(\\dfrac{7}{20}\\)\n\\(1\\)"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-18",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-18",
+    "title": "Vetores Aleatórios",
+    "section": "Funções de Variáveis Aleatórias",
+    "text": "Funções de Variáveis Aleatórias\nPara essa distribuição, temos:\n\\[\nE(X)\n= 0\\cdot\\frac{2}{5} + 1\\cdot\\frac{1}{4} + 2\\cdot\\frac{7}{20}\n= \\frac{19}{20}\n\\]\n\\[\nE(Y)\n= 1\\cdot\\frac{2}{5} + 2\\cdot\\frac{1}{5} + 3\\cdot\\frac{2}{5}\n= 2\n\\]\n\nAlém disso,\n\\[\n\\begin{aligned}\nE(XY)\n&= 0\\cdot1\\cdot\\frac{3}{20}\n+ 1\\cdot1\\cdot\\frac{3}{20}\n+ 2\\cdot1\\cdot\\frac{2}{20} + 0\\cdot2\\cdot\\frac{1}{20}\n+ 1\\cdot2\\cdot\\frac{1}{20}\\\\\n&+ 2\\cdot2\\cdot\\frac{2}{20} + 0\\cdot3\\cdot\\frac{4}{20}\n+ 1\\cdot3\\cdot\\frac{1}{20}\n+ 2\\cdot3\\cdot\\frac{3}{20} = \\frac{38}{20}\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-19",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-19",
+    "title": "Vetores Aleatórios",
+    "section": "Funções de Variáveis Aleatórias",
+    "text": "Funções de Variáveis Aleatórias\nObserva-se que\n\\[\nE(XY) = \\frac{38}{20}\n= \\frac{19}{20}\\cdot 2\n= E(X)\\,E(Y)\n\\]\n\nLogo,\n\\[\n\\operatorname{Cov}(X,Y)\n= E(XY) - E(X)E(Y)\n= 0\n\\]\n\n\nEntretanto, \\(X\\) e \\(Y\\) não são independentes, pois, por exemplo,\n\\[\nP(X = 0,\\; Y = 1)\n= \\frac{3}{20}\n\\neq\nP(X = 0)\\,P(Y = 1)\n= \\frac{2}{5}\\cdot\\frac{2}{5}\n= \\frac{8}{20}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-20",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-20",
+    "title": "Vetores Aleatórios",
+    "section": "Funções de Variáveis Aleatórias",
+    "text": "Funções de Variáveis Aleatórias\nDefinição (Coeficiente de Correlação): O coeficiente de correlação entre duas variáveis aleatórias \\(X\\) e \\(Y\\) é a covariância entre as variáveis padronizadas, ou seja,\n\\[\n\\operatorname{Cor}(X,Y)\n=\nE\\!\\left(\\frac{X - E(X)}{\\sigma_X} \\right)\\, \\left(\\frac{Y - E(Y)}{\\sigma_Y}\\right)\n=\n\\frac{\\operatorname{Cov}(X,Y)}{\\sigma_X\\,\\sigma_Y},\n\\]\nonde \\(\\sigma_X\\) e \\(\\sigma_Y\\) são os desvios-padrão de \\(X\\) e \\(Y\\), respectivamente.\n\nTEOREMA 03: Dadas duas variáveis aleatórias \\(X\\) e \\(Y\\) com esperança, variância e covariância finitas, então\n\\[\n-1 \\le \\operatorname{Cor}(X,Y) \\le 1\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-21",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-21",
+    "title": "Vetores Aleatórios",
+    "section": "Funções de Variáveis Aleatórias",
+    "text": "Funções de Variáveis Aleatórias\nDemonstração\nSejam\n\\[\nX^* = \\frac{X - E(X)}{\\sigma_X},\n\\qquad\nY^* = \\frac{Y - E(Y)}{\\sigma_Y},\n\\]\nas variáveis aleatórias padronizadas.\nDas propriedades de esperança e variância, sabemos que\n\\[\nE(X^*) = E(Y^*) = 0\n\\quad \\text{e} \\quad\n\\operatorname{Var}(X^*) = \\operatorname{Var}(Y^*) = 1\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-22",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-22",
+    "title": "Vetores Aleatórios",
+    "section": "Funções de Variáveis Aleatórias",
+    "text": "Funções de Variáveis Aleatórias\nSabemos também que a variância de qualquer variável aleatória é não-negativa. Em particular,\n\\[\n\\operatorname{Var}(X^* + Y^*) \\ge 0\n\\]\nLogo,\n\\[\n\\begin{aligned}\n\\operatorname{Var}(X^* + Y^*)\n&= \\operatorname{Var}(X^*) + \\operatorname{Var}(Y^*)\n   + 2\\,\\operatorname{Cov}(X^*,Y^*) \\\\\n&= 1 + 1 + 2\\,\\operatorname{Cov}(X^*,Y^*) \\\\\n&\\ge 0,\n\\end{aligned}\n\\]\no que implica\n\\[\n\\operatorname{Cov}(X^*,Y^*) \\ge -1\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-23",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-23",
+    "title": "Vetores Aleatórios",
+    "section": "Funções de Variáveis Aleatórias",
+    "text": "Funções de Variáveis Aleatórias\nAnalogamente, considerando\n\\[\n\\operatorname{Var}(X^* - Y^*) \\ge 0,\n\\]\ntemos\n\\[\n\\begin{aligned}\n\\operatorname{Var}(X^* - Y^*)\n&= \\operatorname{Var}(X^*) + \\operatorname{Var}(Y^*)\n   - 2\\,\\operatorname{Cov}(X^*,Y^*) \\\\\n&= 1 + 1 - 2\\,\\operatorname{Cov}(X^*,Y^*) \\\\\n&\\ge 0,\n\\end{aligned}\n\\]\no que implica\n\\[\n\\operatorname{Cov}(X^*,Y^*) \\le 1\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-24",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-24",
+    "title": "Vetores Aleatórios",
+    "section": "Funções de Variáveis Aleatórias",
+    "text": "Funções de Variáveis Aleatórias\nPortanto,\n\\[\n-1 \\le \\operatorname{Cov}(X^*,Y^*) \\le 1\n\\]\nMas, por definição,\n\\[\n\\operatorname{Cov}(X^*,Y^*) = \\operatorname{Cor}(X,Y),\n\\]\no que completa a demonstração."
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#section-1",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#section-1",
+    "title": "Vetores Aleatórios",
+    "section": "",
+    "text": "Aplicando essas propriedades,\n\\[\n\\begin{aligned}\n\\operatorname{Var}(X^*)\n&= \\operatorname{Var}\\!\\left(\\frac{X - E(X)}{\\sigma_X}\\right) \\\\\n&= \\frac{1}{\\sigma_X^2}\\,\\operatorname{Var}(X - E(X)) \\\\\n&= \\frac{1}{\\sigma_X^2}\\,\\operatorname{Var}(X) \\\\\n&= \\frac{1}{\\sigma_X^2}\\,\\sigma_X^2 \\\\\n&= 1.\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-25",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-25",
+    "title": "Vetores Aleatórios",
+    "section": "Funções de Variáveis Aleatórias",
+    "text": "Funções de Variáveis Aleatórias\nVoltando ao exemplo da urna,\n\\[\\small\n\\begin{array}{c|ccc|c}\n\\hline\nY \\backslash X & 0 & 1 & 2 & P(Y=y) \\\\\n\\hline\n0 & 0 & \\dfrac{1}{10} & \\dfrac{3}{10} & \\dfrac{4}{10} \\\\\n1 & \\dfrac{3}{10} & \\dfrac{3}{10} & 0 & \\dfrac{6}{10} \\\\\n\\hline\nP(X=x) & \\dfrac{3}{10} & \\dfrac{4}{10} & \\dfrac{3}{10} & 1 \\\\\n\\hline\n\\end{array}\n\\]\n\nTemos,\n\\[\\small\n\\begin{aligned}\nE(X)\n&= 0\\cdot\\frac{3}{10} + 1\\cdot\\frac{4}{10} + 2\\cdot\\frac{3}{10} = \\frac{4}{10} + \\frac{6}{10} = 1\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-26",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-26",
+    "title": "Vetores Aleatórios",
+    "section": "Funções de Variáveis Aleatórias",
+    "text": "Funções de Variáveis Aleatórias\nDa mesma forma,\n\\[\n\\begin{aligned}\nE(Y)\n&= 0\\cdot\\frac{4}{10} + 1\\cdot\\frac{6}{10} = \\frac{6}{10} = \\frac{3}{5}\n\\end{aligned}\n\\]\n\nSomando apenas os termos não nulos da distribuição conjunta:\n\\[\n\\begin{aligned}\nE(XY) = (1\\cdot 1)\\frac{3}{10} = \\frac{3}{10}\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-27",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-27",
+    "title": "Vetores Aleatórios",
+    "section": "Funções de Variáveis Aleatórias",
+    "text": "Funções de Variáveis Aleatórias\nUsando a fórmula alternativa da covariância,\n\\[\n\\operatorname{Cov}(X,Y) = E(XY) - E(X)E(Y),\n\\]\ntemos\n\\[\n\\begin{aligned}\n\\operatorname{Cov}(X,Y)\n&= \\frac{3}{10} - 1\\cdot\\frac{3}{5} \\\\\n&= \\frac{3}{10} - \\frac{6}{10} \\\\\n&= -\\frac{3}{10}\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-28",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-28",
+    "title": "Vetores Aleatórios",
+    "section": "Funções de Variáveis Aleatórias",
+    "text": "Funções de Variáveis Aleatórias\n\nVariância de \\(X\\)\n\n\\[\n\\begin{aligned}\nE(X^2)\n&= 0^2\\cdot\\frac{3}{10}\n+ 1^2\\cdot\\frac{4}{10}\n+ 2^2\\cdot\\frac{3}{10} \\\\\n&= \\frac{4}{10} + \\frac{12}{10}\n= \\frac{16}{10}\n\\end{aligned}\n\\]\n\\[\n\\operatorname{Var}(X)\n= E(X^2) - [E(X)]^2\n= \\frac{16}{10} - 1\n= \\frac{6}{10}\n= \\frac{3}{5}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-29",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-29",
+    "title": "Vetores Aleatórios",
+    "section": "Funções de Variáveis Aleatórias",
+    "text": "Funções de Variáveis Aleatórias\n\nVariância de \\(Y\\)\n\nComo \\(Y\\) é Bernoulli com \\(P(Y=1)=\\frac{3}{5}\\),\n\\[\n\\operatorname{Var}(Y)\n= \\frac{3}{5}\\left(1-\\frac{3}{5}\\right)\n= \\frac{6}{25}\n\\]\nLogo,\n\\[\n\\sigma_X = \\sqrt{\\frac{3}{5}},\n\\qquad\n\\sigma_Y = \\sqrt{\\frac{6}{25}}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-30",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-30",
+    "title": "Vetores Aleatórios",
+    "section": "Funções de Variáveis Aleatórias",
+    "text": "Funções de Variáveis Aleatórias\nPor definição,\n\\[\n\\operatorname{Cor}(X,Y)\n=\n\\frac{\\operatorname{Cov}(X,Y)}{\\sigma_X\\,\\sigma_Y}\n\\]\nSubstituindo os valores obtidos,\n\\[\n\\begin{aligned}\n\\operatorname{Cor}(X,Y)&= \\frac{-\\frac{3}{10}}{\\sqrt{\\frac{3}{5}}\\;\\sqrt{\\frac{6}{25}}}= -\\frac{3}{10}\\sqrt{\\frac{125}{18}}\n\\end{aligned}\n\\]\nNumericamente,\n\\[\n\\boxed{\\operatorname{Corr}(X,Y)\\approx -0,79}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#variáveis-aleatórias-multidimensionais-contínuas",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#variáveis-aleatórias-multidimensionais-contínuas",
+    "title": "Vetores Aleatórios",
+    "section": "Variáveis Aleatórias Multidimensionais Contínuas",
+    "text": "Variáveis Aleatórias Multidimensionais Contínuas\nDefinição: \\((X, Y)\\) será uma variável aleatória contínua bidimensional se \\((X, Y)\\) puder tomar todos os valores em algum conjunto não numerável do plano euclidiano. Por exemplo, se \\((X, Y)\\) tomar todos os valores em uma região \\(R\\), poderemos dizer que \\((X, Y)\\) é uma variável aleatória bidimensional contínua.\n\nPodemos pensar que um vetor aleatório bidimensional contínuo é um vetor formado por duas variáveis aleatórias contínuas definidas no mesmo espaço amostral.\n\n\nDe forma análoga, podemos definir um vetor aleatório \\(n\\)−dimensional contínuo como sendo um vetor formado por \\(n\\) variáveis aleatórias contínuas definidas no mesmo espaço amostral."
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#função-densidade-conjunta",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#função-densidade-conjunta",
+    "title": "Vetores Aleatórios",
+    "section": "Função Densidade Conjunta",
+    "text": "Função Densidade Conjunta\nSeja \\((X,Y)\\) um vetor aleatório contínuo. A função densidade conjunta \\(f(x,y)\\) é uma função que satisfaz as seguintes propriedades:\n\n\\(f(x,y) \\ge 0\\)\n\\(\\int_{-\\infty}^{+\\infty}\\int_{-\\infty}^{+\\infty} f(x,y)\\,dx\\,dy = 1\\)\n\\(P(a \\le X \\le b,\\; c \\le Y \\le d)=\\int_c^d \\int_a^b f(x,y)\\,dx\\,dy\\)"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#função-densidade-conjunta-1",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#função-densidade-conjunta-1",
+    "title": "Vetores Aleatórios",
+    "section": "Função Densidade Conjunta",
+    "text": "Função Densidade Conjunta\nExemplo: Suponhamos que a variável aleatória contínua bidimensional \\((X,Y)\\) tenha fdp conjunta dada por\n\\[\nf(x,y)=\n\\begin{cases}\nx^2 + \\dfrac{xy}{3}, & 0 \\le x \\le 1,\\;\\; 0 \\le y \\le 2, \\\\[8pt]\n0, & \\text{caso contrário}.\n\\end{cases}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#função-densidade-conjunta-2",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#função-densidade-conjunta-2",
+    "title": "Vetores Aleatórios",
+    "section": "Função Densidade Conjunta",
+    "text": "Função Densidade Conjunta\n\nVamos verificar que a função densidade conjunta \\(f(x,y)\\) satisfaz a condição de não-negatividade:\n\nNa região limitada por \\(0 \\le x \\le 1 \\, \\text{e} \\, 0 \\le y \\le 2\\), temos:\n\n\\(x^2 \\ge 0\\), pois o quadrado de qualquer número real é não-negativo;\n\\(\\dfrac{xy}{3} \\ge 0\\), pois \\(x \\ge 0\\) e \\(y \\ge 0\\).\n\nLogo, a soma desses termos também é não-negativa:\n\\[\nx^2 + \\frac{xy}{3} \\ge 0\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#função-densidade-conjunta-3",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#função-densidade-conjunta-3",
+    "title": "Vetores Aleatórios",
+    "section": "Função Densidade Conjunta",
+    "text": "Função Densidade Conjunta\n\nVerifiquemos se a função densidade conjunta satisfaz \\(\\int_{-\\infty}^{+\\infty}\\int_{-\\infty}^{+\\infty} f(x,y)\\,dx\\,dy = 1\\)\n\n\\[\\small\n\\begin{aligned}\n\\int_{-\\infty}^{+\\infty}\\int_{-\\infty}^{+\\infty} f(x,y)\\,dx\\,dy\n&= \\int_0^2 \\int_0^1 \\left(x^2 + \\frac{xy}{3}\\right)\\,dx\\,dy \\\\[6pt]\n&= \\int_0^2 \\left[\\int_0^1 x^2\\,dx + \\int_0^1 \\frac{xy}{3}\\,dx \\right] dy \\\\[6pt]\n&= \\int_0^2 \\left[\\frac{x^3}{3}\\Bigg|_0^1 + \\frac{yx^2}{6}\\Bigg|_0^1\\right] dy = \\int_0^2 \\left(\\frac{1}{3} + \\frac{y}{6}\\right) dy \\\\[6pt]\n&= \\int_0^2 \\frac{1}{3} dy + \\int_0^2 \\frac{y}{6} dy = \\frac{y}{3}\\Bigg|_0^2 + \\frac{y^2}{12}\\Bigg|_0^2 = \\frac23+\\frac13 = 1\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#densidades-marginais",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#densidades-marginais",
+    "title": "Vetores Aleatórios",
+    "section": "Densidades Marginais",
+    "text": "Densidades Marginais\nAs densidades marginais de \\(X\\) e \\(Y\\) são definidas por:\n\\[\nf_X(x) = \\int f(x,y)\\,dy,\n\\]\n\\[\nf_Y(y) = \\int f(x,y)\\,dx\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#densidades-marginais-1",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#densidades-marginais-1",
+    "title": "Vetores Aleatórios",
+    "section": "Densidades Marginais",
+    "text": "Densidades Marginais\nVoltando ao exemplo, vamos encontrar as densidades marginais \\(f_X(x)\\) e \\(f_Y(y)\\):\n\nDensidade marginal de \\(X\\): Por definição,\n\n\\[\nf_X(x)=\\int_{-\\infty}^{+\\infty} f(x,y)\\,dy\n\\]\nComo o suporte em \\(y\\) é \\(0\\le y\\le 2\\), para \\(0\\le x\\le 1\\):\n\\[\n\\begin{aligned}\nf_X(x)\n&=\\int_0^2 \\left(x^2+\\frac{xy}{3}\\right)\\,dy =\\int_0^2 x^2\\,dy+\\int_0^2 \\frac{xy}{3}\\,dy \\\\\n&= x^2(2-0) + \\frac{x}{3}\\left[\\frac{y^2}{2}\\right]_0^2 = 2x^2 + \\frac{x}{3}\\cdot\\frac{4}{2} = 2x^2 + \\frac{2x}{3}\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#densidades-marginais-2",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#densidades-marginais-2",
+    "title": "Vetores Aleatórios",
+    "section": "Densidades Marginais",
+    "text": "Densidades Marginais\nLogo,\n\\[\nf_X(x)=\n\\begin{cases}\n2x^2 + \\dfrac{2x}{3}, & 0 \\le x \\le 1,\\\\[8pt]\n0, & \\text{caso contrário}\n\\end{cases}\n\\]\n\n\nDensidade marginal de \\(Y\\): De forma análoga,\n\n\\[\nf_Y(y)=\\int_{-\\infty}^{+\\infty} f(x,y)\\,dx\n\\]\nComo o suporte em \\(x\\) é \\(0\\le x\\le 1\\), para \\(0\\le y\\le 2\\):"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#densidades-marginais-3",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#densidades-marginais-3",
+    "title": "Vetores Aleatórios",
+    "section": "Densidades Marginais",
+    "text": "Densidades Marginais\n\\[\n\\begin{aligned}\nf_Y(y)\n&=\\int_0^1 \\left(x^2+\\frac{xy}{3}\\right)\\,dx =\\int_0^1 x^2\\,dx+\\int_0^1 \\frac{xy}{3}\\,dx \\\\\n&=\\left[\\frac{x^3}{3}\\right]_0^1 + \\frac{y}{3}\\left[\\frac{x^2}{2}\\right]_0^1 =\\frac{1}{3} + \\frac{y}{3}\\cdot\\frac{1}{2} =\\frac{1}{3}+\\frac{y}{6}\n\\end{aligned}\n\\]\n\nLogo,\n\\[\nf_Y(y)=\n\\begin{cases}\n\\dfrac{1}{3}+\\dfrac{y}{6}, & 0 \\le y \\le 2,\\\\[8pt]\n0, & \\text{caso contrário}\n\\end{cases}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-e-esperança-condicional",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-e-esperança-condicional",
+    "title": "Vetores Aleatórios",
+    "section": "Distribuições e Esperança Condicional",
+    "text": "Distribuições e Esperança Condicional\nPor definição, temos que\n\\[\nf_{X\\mid Y}(x\\mid y)=\\frac{f(x,y)}{f_Y(y)}\n\\]\nNote que, para cada \\(y\\) temos uma densidade condicional diferente. Analogamente,\n\\[\nf_{Y\\mid X}(y\\mid x)=\\frac{f(x,y)}{f_X(x)}\n\\]\ne para cada \\(x\\) temos uma densidade condicional diferente."
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-e-esperança-condicional-1",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-e-esperança-condicional-1",
+    "title": "Vetores Aleatórios",
+    "section": "Distribuições e Esperança Condicional",
+    "text": "Distribuições e Esperança Condicional\nNo nosso exemplo, a densidade conjunta é\n\\[\nf(x,y)=\n\\begin{cases}\nx^2+\\dfrac{xy}{3}, & 0\\le x\\le 1,\\; 0\\le y\\le 2,\\\\[6pt]\n0, & \\text{caso contrário}\n\\end{cases}\n\\]\ne as marginais são,\n\\[\nf_X(x)=\n\\begin{cases}\n2x^2+\\dfrac{2x}{3}, & 0\\le x\\le 1,\\\\[6pt]\n0, & \\text{caso contrário},\n\\end{cases}\n\\qquad\nf_Y(y)=\n\\begin{cases}\n\\dfrac{1}{3}+\\dfrac{y}{6}=\\dfrac{y+2}{6}, & 0\\le y\\le 2,\\\\[6pt]\n0, & \\text{caso contrário}\n\\end{cases}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-e-esperança-condicional-2",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-e-esperança-condicional-2",
+    "title": "Vetores Aleatórios",
+    "section": "Distribuições e Esperança Condicional",
+    "text": "Distribuições e Esperança Condicional\nAssim, para \\(0\\le y\\le 2\\),\n\\[\nf_{X\\mid Y}(x\\mid y)=\\frac{f(x,y)}{f_Y(y)}\n=\\frac{x^2+\\frac{xy}{3}}{\\frac{y+2}{6}}\n=\\frac{6x^2+2xy}{y+2}\n=\\frac{2x(3x+y)}{y+2}\n\\]\nLogo,\n\\[\nf_{X\\mid Y}(x\\mid y)=\n\\begin{cases}\n\\dfrac{2x(3x+y)}{y+2}, & 0\\le x\\le 1,\\; 0\\le y\\le 2,\\\\[10pt]\n0, & \\text{caso contrário}\n\\end{cases}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-e-esperança-condicional-3",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-e-esperança-condicional-3",
+    "title": "Vetores Aleatórios",
+    "section": "Distribuições e Esperança Condicional",
+    "text": "Distribuições e Esperança Condicional\nDe forma análoga, para \\(0&lt;x\\le 1\\) (note que \\(f_X(0)=0\\), mas isso ocorre com probabilidade zero),\n\\[\nf_{Y\\mid X}(y\\mid x)=\\frac{f(x,y)}{f_X(x)}\n=\\frac{x^2+\\frac{xy}{3}}{2x^2+\\frac{2x}{3}}\n=\\frac{x+\\frac{y}{3}}{2x+\\frac{2}{3}}\n=\\frac{3x+y}{6x+2}\n=\\frac{3x+y}{2(3x+1)}\n\\]\nLogo,\n\\[\nf_{Y\\mid X}(y\\mid x)=\n\\begin{cases}\n\\dfrac{3x+y}{2(3x+1)}, & 0\\le y\\le 2,\\; 0&lt;x\\le 1,\\\\[10pt]\n0, & \\text{caso contrário}\n\\end{cases}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-e-esperança-condicional-4",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-e-esperança-condicional-4",
+    "title": "Vetores Aleatórios",
+    "section": "Distribuições e Esperança Condicional",
+    "text": "Distribuições e Esperança Condicional\nComo no caso discreto, definem-se as seguintes esperanças condicionais:\n\\[\nE_X(X\\mid Y=y)=\\int x\\,f_{X\\mid Y}(x\\mid y)\\,dx\n=\\int x\\,\\frac{f(x,y)}{f_Y(y)}\\,dx\n\\]\n\\[\nE_Y(Y\\mid X=x)=\\int y\\,f_{Y\\mid X}(y\\mid x)\\,dy\n=\\int y\\,\\frac{f(x,y)}{f_X(x)}\\,dy\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-e-esperanças-condicionais",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-e-esperanças-condicionais",
+    "title": "Vetores Aleatórios",
+    "section": "Distribuições e Esperanças Condicionais",
+    "text": "Distribuições e Esperanças Condicionais\nPor definição, temos que\n\\[\nf_{X\\mid Y}(x\\mid y)=\\frac{f(x,y)}{f_Y(y)}\n\\]\nNote que, para cada \\(y\\) temos uma densidade condicional diferente. Analogamente,\n\\[\nf_{Y\\mid X}(y\\mid x)=\\frac{f(x,y)}{f_X(x)}\n\\]\ne para cada \\(x\\) temos uma densidade condicional diferente."
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-e-esperanças-condicionais-1",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-e-esperanças-condicionais-1",
+    "title": "Vetores Aleatórios",
+    "section": "Distribuições e Esperanças Condicionais",
+    "text": "Distribuições e Esperanças Condicionais\nNo nosso exemplo, a densidade conjunta é\n\\[\nf(x,y)=\n\\begin{cases}\nx^2+\\dfrac{xy}{3}, & 0\\le x\\le 1,\\; 0\\le y\\le 2,\\\\[6pt]\n0, & \\text{caso contrário}\n\\end{cases}\n\\]\ne as marginais são,\n\\[\nf_X(x)=\n\\begin{cases}\n2x^2+\\dfrac{2x}{3}, & 0\\le x\\le 1,\\\\[6pt]\n0, & \\text{caso contrário},\n\\end{cases}\n\\qquad\nf_Y(y)=\n\\begin{cases}\n\\dfrac{1}{3}+\\dfrac{y}{6}=\\dfrac{y+2}{6}, & 0\\le y\\le 2,\\\\[6pt]\n0, & \\text{caso contrário}\n\\end{cases}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-e-esperanças-condicionais-2",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-e-esperanças-condicionais-2",
+    "title": "Vetores Aleatórios",
+    "section": "Distribuições e Esperanças Condicionais",
+    "text": "Distribuições e Esperanças Condicionais\nAssim, para \\(0\\le y\\le 2\\),\n\\[\nf_{X\\mid Y}(x\\mid y)=\\frac{f(x,y)}{f_Y(y)}\n=\\frac{x^2+\\frac{xy}{3}}{\\frac{y+2}{6}}\n=\\frac{6x^2+2xy}{y+2}\n=\\frac{2x(3x+y)}{y+2}\n\\]\nLogo,\n\\[\nf_{X\\mid Y}(x\\mid y)=\n\\begin{cases}\n\\dfrac{2x(3x+y)}{y+2}, & 0\\le x\\le 1,\\; 0\\le y\\le 2,\\\\[10pt]\n0, & \\text{caso contrário}\n\\end{cases}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-e-esperanças-condicionais-3",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-e-esperanças-condicionais-3",
+    "title": "Vetores Aleatórios",
+    "section": "Distribuições e Esperanças Condicionais",
+    "text": "Distribuições e Esperanças Condicionais\nDe forma análoga, para \\(0&lt;x\\le 1\\) (note que \\(f_X(0)=0\\), mas isso ocorre com probabilidade zero),\n\\[\nf_{Y\\mid X}(y\\mid x)=\\frac{f(x,y)}{f_X(x)}\n=\\frac{x^2+\\frac{xy}{3}}{2x^2+\\frac{2x}{3}}\n=\\frac{x+\\frac{y}{3}}{2x+\\frac{2}{3}}\n=\\frac{3x+y}{6x+2}\n=\\frac{3x+y}{2(3x+1)}\n\\]\nLogo,\n\\[\nf_{Y\\mid X}(y\\mid x)=\n\\begin{cases}\n\\dfrac{3x+y}{2(3x+1)}, & 0\\le y\\le 2,\\; 0&lt;x\\le 1,\\\\[10pt]\n0, & \\text{caso contrário}\n\\end{cases}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-e-esperanças-condicionais-4",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-e-esperanças-condicionais-4",
+    "title": "Vetores Aleatórios",
+    "section": "Distribuições e Esperanças Condicionais",
+    "text": "Distribuições e Esperanças Condicionais\nComo no caso discreto, definem-se as seguintes esperanças condicionais:\n\\[\nE_X(X\\mid Y=y)=\\int x\\,f_{X\\mid Y}(x\\mid y)\\,dx\n=\\int x\\,\\frac{f(x,y)}{f_Y(y)}\\,dx\n\\]\n\\[\nE_Y(Y\\mid X=x)=\\int y\\,f_{Y\\mid X}(y\\mid x)\\,dy\n=\\int y\\,\\frac{f(x,y)}{f_X(x)}\\,dy\n\\]\n\nNote que, assim como no caso discreto, para cada valor \\(y\\) de \\(Y\\), temos um valor diferente de \\(E_X(X\\mid Y=y)\\), e para cada valor \\(x\\) de \\(X\\), temos um valor diferente de \\(E_Y(Y\\mid X=x)\\)."
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-e-esperanças-condicionais-5",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-e-esperanças-condicionais-5",
+    "title": "Vetores Aleatórios",
+    "section": "Distribuições e Esperanças Condicionais",
+    "text": "Distribuições e Esperanças Condicionais\nLogo, aqui também podemos definir uma função \\(g\\) que associa a cada valor de \\(Y\\) o valor \\(E_X(X\\mid Y=y)\\) e outra função \\(h\\) que associa a cada valor de \\(X\\) o valor \\(E_Y(Y\\mid X=x)\\), ou seja,\n\\[\n\\begin{aligned}\ng:\\; & y \\longmapsto g(y) = E_X(X\\mid Y=y), \\\\\nh:\\; & x \\longmapsto h(x) = E_Y(Y\\mid X=x)\n\\end{aligned}\n\\]\nComo \\(X\\) e \\(Y\\) são variáveis aleatórias, essas funções definem novas variáveis aleatórias \\(g(Y)\\) e \\(h(X)\\), cujas esperanças são calculadas como\n\\[\nE_Y[g(Y)] = \\int g(y)\\,f_Y(y)\\,dy \\\\\nE_X[h(X)] = \\int h(x)\\,f_X(x)\\,dx\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-e-esperanças-condicionais-6",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-e-esperanças-condicionais-6",
+    "title": "Vetores Aleatórios",
+    "section": "Distribuições e Esperanças Condicionais",
+    "text": "Distribuições e Esperanças Condicionais\nUsando a definição de esperança condicional, temos que\n\\[\n\\begin{aligned}\nE_Y[g(Y)]\n&= \\int g(y)\\,f_Y(y)\\,dy = \\int E_X(X\\mid Y=y)\\,f_Y(y)\\,dy \\\\\n&= \\int \\left(\\int x\\,\\frac{f(x,y)}{f_Y(y)}\\,dx\\right) f_Y(y)\\,dy = \\int\\!\\!\\int x\\,f(x,y)\\,dx\\,dy \\\\\n&= \\int x \\left(\\int f(x,y)\\,dy\\right) dx = \\int x\\,f_X(x)\\,dx = E(X)\n\\end{aligned}\n\\]\nOu seja,\n\\[\nE_Y\\!\\left[E_X(X\\mid Y)\\right] = E(X)\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-e-esperanças-condicionais-7",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-e-esperanças-condicionais-7",
+    "title": "Vetores Aleatórios",
+    "section": "Distribuições e Esperanças Condicionais",
+    "text": "Distribuições e Esperanças Condicionais\nAnalogamente,\n\\[\n\\begin{aligned}\nE_X[h(X)]\n&= \\int h(x)\\,f_X(x)\\,dx = \\int E_Y(Y\\mid X=x)\\,f_X(x)\\,dx \\\\\n&= \\int \\left(\\int y\\,\\frac{f(x,y)}{f_X(x)}\\,dy\\right) f_X(x)\\,dx = \\int\\!\\!\\int y\\,f(x,y)\\,dy\\,dx \\\\\n&= \\int y \\left(\\int f(x,y)\\,dx\\right) dy = \\int y\\,f_Y(y)\\,dy = E(Y)\n\\end{aligned}\n\\]\nOu seja,\n\\[\nE_X\\!\\left[E_Y(Y\\mid X)\\right] = E(Y)\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-e-esperanças-condicionais-8",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-e-esperanças-condicionais-8",
+    "title": "Vetores Aleatórios",
+    "section": "Distribuições e Esperanças Condicionais",
+    "text": "Distribuições e Esperanças Condicionais\nEsses resultados correspondem à Lei da Esperança Total no caso contínuo, em perfeita analogia com o caso discreto.\n\nPara nosso exemplo, temos:\n\\[\nf(x,y)=\n\\begin{cases}\nx^2+\\dfrac{xy}{3}, & 0\\le x\\le 1,\\; 0\\le y\\le 2,\\\\[6pt]\n0, & \\text{caso contrário}\n\\end{cases}\n\\]\ne as marginais são\n\\[\\small\nf_X(x)=\n\\begin{cases}\n2x^2+\\dfrac{2x}{3}, & 0\\le x\\le 1,\\\\[6pt]\n0, & \\text{caso contrário},\n\\end{cases}\n\\qquad\nf_Y(y)=\n\\begin{cases}\n\\dfrac{1}{3}+\\dfrac{y}{6}=\\dfrac{y+2}{6}, & 0\\le y\\le 2,\\\\[6pt]\n0, & \\text{caso contrário}\n\\end{cases}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-e-esperanças-condicionais-9",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-e-esperanças-condicionais-9",
+    "title": "Vetores Aleatórios",
+    "section": "Distribuições e Esperanças Condicionais",
+    "text": "Distribuições e Esperanças Condicionais\n\nVamos verificar que \\(E_Y[E(X\\mid Y)] = E(X)\\):\n\nA densidade condicional é\n\\[\\small\nf_{X\\mid Y}(x\\mid y)\n=\\frac{f(x,y)}{f_Y(y)}\n=\\frac{x^2+\\frac{xy}{3}}{\\frac{y+2}{6}}\n=\\frac{6x^2+2xy}{y+2},\n\\qquad 0\\le x\\le 1,\\; 0\\le y\\le 2\n\\]\nLogo,\n\\[\\small\n\\begin{aligned}\ng(y)=E(X\\mid Y=y)\n&=\\int_0^1 x\\,f_{X\\mid Y}(x\\mid y)\\,dx =\\int_0^1 x\\,\\frac{6x^2+2xy}{y+2}\\,dx =\\frac{1}{y+2}\\int_0^1 (6x^3+2y x^2)\\,dx \\\\ &=\\frac{1}{y+2}\\left(6\\cdot\\frac{1}{4}+2y\\cdot\\frac{1}{3}\\right) =\\frac{1}{y+2}\\left(\\frac{3}{2}+\\frac{2y}{3}\\right) =\\frac{4y+9}{6(y+2)},\n\\qquad 0\\le y\\le 2\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-e-esperanças-condicionais-10",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-e-esperanças-condicionais-10",
+    "title": "Vetores Aleatórios",
+    "section": "Distribuições e Esperanças Condicionais",
+    "text": "Distribuições e Esperanças Condicionais\nDe forma que,\n\\[\n\\begin{aligned}\nE_Y[g(Y)]\n&=\\int_0^2 g(y)\\,f_Y(y)\\,dy =\\int_0^2 \\frac{4y+9}{6(y+2)}\\cdot\\frac{y+2}{6}\\,dy \\\\\n&=\\int_0^2 \\frac{4y+9}{36}\\,dy =\\frac{1}{36}\\left[2y^2+9y\\right]_0^2 =\\frac{1}{36}(8+18) =\\frac{26}{36} =\\frac{13}{18}\n\\end{aligned}\n\\]\n\nNote que\n\\[\n\\begin{aligned}\nE(X)\n&=\\int_0^1 x\\,f_X(x)\\,dx\n=\\int_0^1 x\\left(2x^2+\\frac{2x}{3}\\right)\\,dx =\\int_0^1 \\left(2x^3+\\frac{2}{3}x^2\\right)\\,dx \\\\\n&=2\\cdot\\frac{1}{4}+\\frac{2}{3}\\cdot\\frac{1}{3}\n=\\frac{1}{2}+\\frac{2}{9}\n=\\frac{13}{18}\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-e-esperanças-condicionais-11",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-e-esperanças-condicionais-11",
+    "title": "Vetores Aleatórios",
+    "section": "Distribuições e Esperanças Condicionais",
+    "text": "Distribuições e Esperanças Condicionais\nPortanto,\n\\[\nE_Y[E(X\\mid Y)] = \\frac{13}{18} = E(X)\n\\]\n\n\nVerificar \\(E_X[E(Y\\mid X)] = E(Y)\\)\n\nA densidade condicional é\n\\[\nf_{Y\\mid X}(y\\mid x)\n=\\frac{f(x,y)}{f_X(x)}\n=\\frac{x^2+\\frac{xy}{3}}{2x^2+\\frac{2x}{3}}\n=\\frac{3x+y}{2(3x+1)},\n\\qquad 0\\le y\\le 2,\\; 0&lt;x\\le 1\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-e-esperanças-condicionais-12",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-e-esperanças-condicionais-12",
+    "title": "Vetores Aleatórios",
+    "section": "Distribuições e Esperanças Condicionais",
+    "text": "Distribuições e Esperanças Condicionais\nLogo,\n\\[\n\\begin{aligned}\nh(x)=E(Y\\mid X=x)\n&=\\int_0^2 y\\,f_{Y\\mid X}(y\\mid x)\\,dy =\\int_0^2 y\\,\\frac{3x+y}{2(3x+1)}\\,dy \\\\\n&=\\frac{1}{2(3x+1)}\\int_0^2 (3xy+y^2)\\,dy =\\frac{1}{2(3x+1)}\n\\left(3x\\cdot\\frac{y^2}{2}\\Big|_0^2+\\frac{y^3}{3}\\Big|_0^2\\right) \\\\\n&=\\frac{1}{2(3x+1)}\\left(3x\\cdot 2+\\frac{8}{3}\\right) =\\frac{9x+4}{3(3x+1)},\n\\qquad 0&lt;x\\le 1\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-e-esperanças-condicionais-13",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-e-esperanças-condicionais-13",
+    "title": "Vetores Aleatórios",
+    "section": "Distribuições e Esperanças Condicionais",
+    "text": "Distribuições e Esperanças Condicionais\nNote que \\[\nf_X(x)=2x^2+\\frac{2x}{3}=\\frac{2x(3x+1)}{3}\n\\]\nEntão,\n\\[\n\\begin{aligned}\nE_X[h(X)]\n&=\\int_0^1 h(x)\\,f_X(x)\\,dx =\\int_0^1 \\frac{9x+4}{3(3x+1)}\\cdot\\frac{2x(3x+1)}{3}\\,dx \\\\\n&=\\int_0^1 \\frac{2x(9x+4)}{9}\\,dx =\\frac{1}{9}\\int_0^1 (18x^2+8x)\\,dx \\\\\n&=\\frac{1}{9}\\left(18\\cdot\\frac{1}{3}+8\\cdot\\frac{1}{2}\\right) =\\frac{1}{9}(6+4) = \\frac{10}{9}\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-e-esperanças-condicionais-14",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#distribuições-e-esperanças-condicionais-14",
+    "title": "Vetores Aleatórios",
+    "section": "Distribuições e Esperanças Condicionais",
+    "text": "Distribuições e Esperanças Condicionais\nAlém disso,\n\\[\n\\begin{aligned}\nE(Y)\n&=\\int_0^2 y\\,f_Y(y)\\,dy\n=\\int_0^2 y\\cdot\\frac{y+2}{6}\\,dy \\\\\n&=\\frac{1}{6}\\int_0^2 (y^2+2y)\\,dy \\\\\n&=\\frac{1}{6}\\left(\\frac{8}{3}+4\\right)\n=\\frac{1}{6}\\cdot\\frac{20}{3}\n=\\frac{10}{9}\n\\end{aligned}\n\\]\nPortanto,\n\\[\nE_X[E(Y\\mid X)] = \\frac{10}{9} = E(Y)\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#independência-de-variáveis-aleatórias-contínuas",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#independência-de-variáveis-aleatórias-contínuas",
+    "title": "Vetores Aleatórios",
+    "section": "Independência de Variáveis Aleatórias Contínuas",
+    "text": "Independência de Variáveis Aleatórias Contínuas\nA definição de independência de variáveis aleatórias contínuas é análoga à definição no caso discreto.\n\nDefinição (Independência de variáveis aleatórias contínuas): Seja \\((X,Y)\\) um vetor aleatório contínuo com função densidade conjunta \\(f(x,y)\\). Sejam \\(f_X(x)\\) e \\(f_Y(y)\\) as densidades marginais de \\(X\\) e \\(Y\\), respectivamente. Então, diz-se que \\(X\\) e \\(Y\\) são variáveis aleatórias independentes se\n\\[\nf(x,y)=f_X(x)\\,f_Y(y),\n\\qquad \\forall\\,x,y\n\\]\nOu seja, a densidade conjunta é o produto das densidades marginais para todo par \\((x,y)\\) no domínio de definição."
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#independência-de-variáveis-aleatórias-contínuas-1",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#independência-de-variáveis-aleatórias-contínuas-1",
+    "title": "Vetores Aleatórios",
+    "section": "Independência de Variáveis Aleatórias Contínuas",
+    "text": "Independência de Variáveis Aleatórias Contínuas\nNo exemplo, a densidade conjunta é\n\\[\\small\nf(x,y)=\n\\begin{cases}\nx^2+\\dfrac{xy}{3}, & 0\\le x\\le 1,\\; 0\\le y\\le 2,\\\\[6pt]\n0, & \\text{caso contrário}\n\\end{cases}\n\\]\nAs marginais são\n\\[\\small\nf_X(x)=\n\\begin{cases}\n2x^2+\\dfrac{2x}{3}, & 0\\le x\\le 1,\\\\[6pt]\n0, & \\text{caso contrário},\n\\end{cases}\n\\qquad\nf_Y(y)=\n\\begin{cases}\n\\dfrac{1}{3}+\\dfrac{y}{6}=\\dfrac{y+2}{6}, & 0\\le y\\le 2,\\\\[6pt]\n0, & \\text{caso contrário}\n\\end{cases}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#independência-de-variáveis-aleatórias-contínuas-2",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#independência-de-variáveis-aleatórias-contínuas-2",
+    "title": "Vetores Aleatórios",
+    "section": "Independência de Variáveis Aleatórias Contínuas",
+    "text": "Independência de Variáveis Aleatórias Contínuas\nPela definição, \\(X\\) e \\(Y\\) seriam independentes se\n\\[\nf(x,y)=f_X(x)\\,f_Y(y)\\quad \\text{para todo } (x,y)\n\\]\n\nPara \\(0\\le x\\le 1\\) e \\(0\\le y\\le 2\\),\n\\[\\small\n\\begin{aligned}\nf_X(x)f_Y(y)\n&=\\left(2x^2+\\frac{2x}{3}\\right)\\left(\\frac{y+2}{6}\\right) =\\frac{y+2}{3}\\left(x^2+\\frac{x}{3}\\right) \\\\[4pt] &=\\frac{y+2}{3}x^2+\\frac{y+2}{9}x =\\left(\\frac{y}{3}+\\frac{2}{3}\\right)x^2+\\left(\\frac{y}{9}+\\frac{2}{9}\\right)x \\\\[4pt] &\\neq x^2+\\dfrac{xy}{3} = f(x,y)\n\\end{aligned}\n\\]\nAssim, concluímos que \\(X\\) e \\(Y\\) não são independentes."
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-contínuas",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-contínuas",
+    "title": "Vetores Aleatórios",
+    "section": "Funções de Variáveis Aleatórias Contínuas",
+    "text": "Funções de Variáveis Aleatórias Contínuas\nAssim como no caso discreto, conhecida a densidade conjunta de \\((X,Y)\\), podemos ter interesse em estudar a densidade de uma variável aleatória definida como uma função \\(h(X,Y)\\), em que \\(h\\) é uma função real, isto é, \\(h:\\mathbb{R}^2 \\to \\mathbb{R}\\)."
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-contínuas-1",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-contínuas-1",
+    "title": "Vetores Aleatórios",
+    "section": "Funções de Variáveis Aleatórias Contínuas",
+    "text": "Funções de Variáveis Aleatórias Contínuas\nTEOREMA 04: Sejam \\(X\\) e \\(Y\\) variáveis aleatórias contínuas com densidade conjunta \\(f(x,y)\\) e seja \\(h:\\mathbb{R}^2 \\to \\mathbb{R}\\) uma função qualquer. Então,\n\\[\nE[h(X,Y)] = \\int\\!\\!\\int h(x,y)\\,f(x,y)\\,dx\\,dy\n\\]\n\nTEOREMA 05: Sejam \\(X\\) e \\(Y\\) variáveis aleatórias contínuas com densidade conjunta \\(f(x,y)\\) e seja \\(h:\\mathbb{R}^2 \\to \\mathbb{R}\\) uma função definida por \\(h(X,Y)=aX+bY\\), com \\(a\\) e \\(b\\) números reais quaisquer. Então,\n\\[\nE[h(X,Y)] = a\\,E(X) + b\\,E(Y)\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-contínuas-2",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-contínuas-2",
+    "title": "Vetores Aleatórios",
+    "section": "Funções de Variáveis Aleatórias Contínuas",
+    "text": "Funções de Variáveis Aleatórias Contínuas\nNo nosso exemplo, a densidade conjunta é\n\\[\nf(x,y)=\n\\begin{cases}\nx^2+\\dfrac{xy}{3}, & 0\\le x\\le 1,\\; 0\\le y\\le 2,\\\\[6pt]\n0, & \\text{caso contrário}\n\\end{cases}\n\\]\n\nPelo Teorema 05, para a combinação linear \\[\nh(X,Y)=aX+bY,\n\\] vale \\[\nE[h(X,Y)] = aE(X)+bE(Y)\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-contínuas-3",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-contínuas-3",
+    "title": "Vetores Aleatórios",
+    "section": "Funções de Variáveis Aleatórias Contínuas",
+    "text": "Funções de Variáveis Aleatórias Contínuas\nTemos que a marginal de \\(X\\) é \\[\nf_X(x)=2x^2+\\frac{2x}{3}, \\qquad 0\\le x\\le 1\n\\]\nLogo,\n\\[\n\\begin{aligned}\nE(X)\n&=\\int_0^1 x\\,f_X(x)\\,dx =\\int_0^1 x\\left(2x^2+\\frac{2x}{3}\\right)\\,dx \\\\\n&=\\int_0^1 \\left(2x^3+\\frac{2}{3}x^2\\right)\\,dx =2\\cdot\\frac{1}{4}+\\frac{2}{3}\\cdot\\frac{1}{3} \\\\\n&=\\frac{1}{2}+\\frac{2}{9}\n=\\frac{13}{18}\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-contínuas-4",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-contínuas-4",
+    "title": "Vetores Aleatórios",
+    "section": "Funções de Variáveis Aleatórias Contínuas",
+    "text": "Funções de Variáveis Aleatórias Contínuas\nA marginal de \\(Y\\) é \\[\nf_Y(y)=\\frac{1}{3}+\\frac{y}{6}=\\frac{y+2}{6}, \\qquad 0\\le y\\le 2\n\\]\nLogo,\n\\[\n\\begin{aligned}\nE(Y)\n&=\\int_0^2 y\\,f_Y(y)\\,dy =\\int_0^2 y\\left(\\frac{y+2}{6}\\right)\\,dy \\\\\n&=\\frac{1}{6}\\int_0^2 (y^2+2y)\\,dy =\\frac{1}{6}\\left(\\frac{8}{3}+4\\right) \\\\\n&=\\frac{1}{6}\\cdot\\frac{20}{3} =\\frac{10}{9}\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#transformações-bivariadas",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#transformações-bivariadas",
+    "title": "Vetores Aleatórios",
+    "section": "Transformações Bivariadas",
+    "text": "Transformações Bivariadas\nExemplo: Considere o nosso vetor aleatório contínuo \\((X,Y)\\) com densidade conjunta\n\\[\nf_{X,Y}(x,y)=\n\\begin{cases}\nx^2+\\dfrac{xy}{3}, & 0\\le x\\le 1,\\; 0\\le y\\le 2,\\\\[6pt]\n0, & \\text{caso contrário}\n\\end{cases}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-contínuas-5",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-contínuas-5",
+    "title": "Vetores Aleatórios",
+    "section": "Funções de Variáveis Aleatórias Contínuas",
+    "text": "Funções de Variáveis Aleatórias Contínuas\nEscolhendo, por exemplo, \\[\na=2 \\quad \\text{e} \\quad b=-3,\n\\] temos \\[\nh(X,Y)=2X-3Y\n\\]\nPelo Teorema 05,\n\\[\n\\begin{aligned}\nE(2X-3Y)\n&=2E(X)-3E(Y) =2\\cdot\\frac{13}{18}-3\\cdot\\frac{10}{9} \\\\\n&=\\frac{13}{9}-\\frac{30}{9} = -\\frac{17}{9}\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-contínuas-6",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-contínuas-6",
+    "title": "Vetores Aleatórios",
+    "section": "Funções de Variáveis Aleatórias Contínuas",
+    "text": "Funções de Variáveis Aleatórias Contínuas\nPelo Teorema 04,\n\\[\nE(2X-3Y)=\\int_0^2\\int_0^1 (2x-3y)\\left(x^2+\\frac{xy}{3}\\right)\\,dx\\,dy\n\\]\n\nTemos que,\n\\[\n\\begin{aligned}\n(2x-3y)\\left(x^2+\\frac{xy}{3}\\right)\n&= (2x)x^2 + (2x)\\frac{xy}{3} - (3y)x^2 - (3y)\\frac{xy}{3} \\\\\n&= 2x^3 + \\frac{2}{3}x^2y - 3x^2y - xy^2 \\\\\n&= 2x^3 - \\frac{7}{3}x^2y - xy^2\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-contínuas-7",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-contínuas-7",
+    "title": "Vetores Aleatórios",
+    "section": "Funções de Variáveis Aleatórias Contínuas",
+    "text": "Funções de Variáveis Aleatórias Contínuas\n\nIntegral interna em \\(x\\) (de \\(0\\) a \\(1\\))\n\n\\[\n\\begin{aligned}\n\\int_{0}^{1}\\left(2x^3 - \\frac{7}{3}x^2y - xy^2\\right)\\,dx\n&= \\int_{0}^{1}2x^3\\,dx \\;-\\;\\frac{7}{3}y\\int_{0}^{1}x^2\\,dx \\;-\\;y^2\\int_{0}^{1}x\\,dx \\\\\n&= 2\\cdot\\frac{1}{4} \\;-\\;\\frac{7}{3}y\\cdot\\frac{1}{3}\\;-\\;y^2\\cdot\\frac{1}{2} \\\\\n&= \\frac{1}{2} - \\frac{7}{9}y - \\frac{1}{2}y^2\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-contínuas-8",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-contínuas-8",
+    "title": "Vetores Aleatórios",
+    "section": "Funções de Variáveis Aleatórias Contínuas",
+    "text": "Funções de Variáveis Aleatórias Contínuas\n\nIntegral externa em \\(y\\) (de \\(0\\) a \\(2\\))\n\n\\[\n\\begin{aligned}\n\\int_{0}^{2}\\left(\\frac{1}{2} - \\frac{7}{9}y - \\frac{1}{2}y^2\\right)\\,dy\n&= \\int_{0}^{2}\\frac{1}{2}\\,dy \\;-\\;\\frac{7}{9}\\int_{0}^{2}y\\,dy \\;-\\;\\frac{1}{2}\\int_{0}^{2}y^2\\,dy \\\\\n&= \\frac{1}{2}\\cdot 2 \\;-\\;\\frac{7}{9}\\cdot\\frac{2^2}{2} \\;-\\;\\frac{1}{2}\\cdot\\frac{2^3}{3} \\\\\n&= 1 - \\frac{14}{9} - \\frac{4}{3} = 1 - \\frac{14}{9} - \\frac{12}{9} = -\\frac{17}{9}\n\\end{aligned}\n\\]\n\nLogo, verificamos numericamente a linearidade:\n\\[\nE(aX+bY)=aE(X)+bE(Y)\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-contínuas-9",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-contínuas-9",
+    "title": "Vetores Aleatórios",
+    "section": "Funções de Variáveis Aleatórias Contínuas",
+    "text": "Funções de Variáveis Aleatórias Contínuas\nAs definições de covariância e correlação são as mesmas vistas para o caso discreto. A covariância entre \\(X\\) e \\(Y\\) é definida por\n\\[\n\\operatorname{Cov}(X,Y)\n=\nE[(X - E(X))(Y - E(Y))]\n=\nE(XY) - E(X)E(Y)\n\\]\n\nO coeficiente de correlação é definido por\n\\[\n\\operatorname{Cor}(X,Y)\n=\nE\\!\\left(\n\\frac{X - E(X)}{\\sigma_X}\\right)\n\\left(\\frac{Y - E(Y)}{\\sigma_Y}\n\\right)\n=\n\\frac{\\operatorname{Cov}(X,Y)}{\\sigma_X\\,\\sigma_Y}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-contínuas-10",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-contínuas-10",
+    "title": "Vetores Aleatórios",
+    "section": "Funções de Variáveis Aleatórias Contínuas",
+    "text": "Funções de Variáveis Aleatórias Contínuas\nValem todas as propriedades vistas anteriormente para o caso discreto. Em particular, se \\(X\\) e \\(Y\\) são variáveis aleatórias contínuas independentes, então\n\\[\n\\operatorname{Cov}(X,Y)=0\n\\]\nA recíproca, em geral, não é verdadeira, uma vez que a covariância mede apenas a relação linear entre as variáveis."
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-contínuas-11",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-contínuas-11",
+    "title": "Vetores Aleatórios",
+    "section": "Funções de Variáveis Aleatórias Contínuas",
+    "text": "Funções de Variáveis Aleatórias Contínuas\nNo nosso exemplo,\n\\[\nf(x,y)=\n\\begin{cases}\nx^2+\\dfrac{xy}{3}, & 0\\le x\\le 1,\\; 0\\le y\\le 2,\\\\[6pt]\n0, & \\text{caso contrário}\n\\end{cases}\n\\]\nJá obtivemos\n\\[\nE(X)=\\frac{13}{18},\n\\qquad\nE(Y)=\\frac{10}{9}\n\\]\nA seguir calculamos \\(E(XY)\\), \\(\\operatorname{Cov}(X,Y)\\) e \\(\\operatorname{Cor}(X,Y)\\)."
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-contínuas-12",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-contínuas-12",
+    "title": "Vetores Aleatórios",
+    "section": "Funções de Variáveis Aleatórias Contínuas",
+    "text": "Funções de Variáveis Aleatórias Contínuas\n\nCálculo de \\(E(XY)\\)\n\nPor definição,\n\\[\nE(XY)=\\int_0^2\\int_0^1 xy\\,f(x,y)\\,dx\\,dy\n=\\int_0^2\\int_0^1 xy\\left(x^2+\\frac{xy}{3}\\right)\\,dx\\,dy\n\\]\nExpandindo:\n\\[\nxy\\left(x^2+\\frac{xy}{3}\\right)=x^3y+\\frac{x^2y^2}{3}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-contínuas-13",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-contínuas-13",
+    "title": "Vetores Aleatórios",
+    "section": "Funções de Variáveis Aleatórias Contínuas",
+    "text": "Funções de Variáveis Aleatórias Contínuas\nEntão, \\[\n\\begin{aligned}\nE(XY)\n&=\\int_0^2\\int_0^1 \\left(x^3y+\\frac{x^2y^2}{3}\\right)\\,dx\\,dy =\\int_0^2\\left[y\\int_0^1 x^3\\,dx+\\frac{y^2}{3}\\int_0^1 x^2\\,dx\\right]dy \\\\\n&=\\int_0^2\\left[y\\cdot\\frac14+\\frac{y^2}{3}\\cdot\\frac13\\right]dy =\\int_0^2\\left(\\frac{y}{4}+\\frac{y^2}{9}\\right)dy =\\left[\\frac{y^2}{8}+\\frac{y^3}{27}\\right]_0^2 \\\\\n&=\\frac{4}{8}+\\frac{8}{27}\n=\\frac12+\\frac{8}{27}\n=\\frac{43}{54}\n\\end{aligned}\n\\]\n\n\nCovariância: Temos que\n\n\\[\n\\operatorname{Cov}(X,Y)=E(XY)-E(X)E(Y)\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-contínuas-14",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-contínuas-14",
+    "title": "Vetores Aleatórios",
+    "section": "Funções de Variáveis Aleatórias Contínuas",
+    "text": "Funções de Variáveis Aleatórias Contínuas\nEntão,\n\\[\n\\begin{aligned}\n\\operatorname{Cov}(X,Y)\n&=\\frac{43}{54}-\\left(\\frac{13}{18}\\right)\\left(\\frac{10}{9}\\right) \\\\\n&=\\frac{43}{54}-\\frac{130}{162}\n=\\frac{129}{162}-\\frac{130}{162}\n=-\\frac{1}{162}\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-contínuas-15",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-contínuas-15",
+    "title": "Vetores Aleatórios",
+    "section": "Funções de Variáveis Aleatórias Contínuas",
+    "text": "Funções de Variáveis Aleatórias Contínuas\n\nCorrelação\n\nPara a correlação, precisamos das variâncias. Primeiro, vamos calcular \\(E(X^2)\\):\n\\[\n\\begin{aligned}\nE(X^2)\n&=\\int_0^2\\int_0^1 x^2 f(x,y)\\,dx\\,dy =\\int_0^2\\int_0^1 x^2\\left(x^2+\\frac{xy}{3}\\right)\\,dx\\,dy \\\\\n&=\\int_0^2\\int_0^1 \\left(x^4+\\frac{x^3y}{3}\\right)\\,dx\\,dy =\\int_0^2\\left[\\frac{1}{5}+\\frac{y}{3}\\cdot\\frac{1}{4}\\right]dy \\\\\n&=\\int_0^2\\left(\\frac{1}{5}+\\frac{y}{12}\\right)dy\n=\\left[\\frac{y}{5}+\\frac{y^2}{24}\\right]_0^2 =\\frac{2}{5}+\\frac{4}{24}\n=\\frac{2}{5}+\\frac{1}{6}\n=\\frac{17}{30}\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-contínuas-16",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-contínuas-16",
+    "title": "Vetores Aleatórios",
+    "section": "Funções de Variáveis Aleatórias Contínuas",
+    "text": "Funções de Variáveis Aleatórias Contínuas\nEntão,\n\\[\\small\n\\operatorname{Var}(X)=E(X^2)-[E(X)]^2\n=\\frac{17}{30}-\\left(\\frac{13}{18}\\right)^2\n=\\frac{73}{1620}\n\\]\n\nAgora, vamos calcular \\(E(Y^2)\\):\n\\[\\small\n\\begin{aligned}\nE(Y^2)\n&=\\int_0^2\\int_0^1 y^2 f(x,y)\\,dx\\,dy =\\int_0^2\\int_0^1 y^2\\left(x^2+\\frac{xy}{3}\\right)\\,dx\\,dy \\\\\n&=\\int_0^2\\left[y^2\\int_0^1 x^2\\,dx+\\frac{y^3}{3}\\int_0^1 x\\,dx\\right]dy =\\int_0^2\\left(y^2\\cdot\\frac13+\\frac{y^3}{3}\\cdot\\frac12\\right)dy \\\\\n&=\\int_0^2\\left(\\frac{y^2}{3}+\\frac{y^3}{6}\\right)dy =\\left[\\frac{y^3}{9}+\\frac{y^4}{24}\\right]_0^2\n=\\frac{8}{9}+\\frac{16}{24}\n=\\frac{8}{9}+\\frac{2}{3}\n=\\frac{14}{9}\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-contínuas-17",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-contínuas-17",
+    "title": "Vetores Aleatórios",
+    "section": "Funções de Variáveis Aleatórias Contínuas",
+    "text": "Funções de Variáveis Aleatórias Contínuas\nEntão,\n\\[\n\\operatorname{Var}(Y)=E(Y^2)-[E(Y)]^2\n=\\frac{14}{9}-\\left(\\frac{10}{9}\\right)^2\n=\\frac{26}{81}\n\\]\nLogo,\n\\[\n\\sigma_X=\\sqrt{\\frac{73}{1620}},\n\\qquad\n\\sigma_Y=\\sqrt{\\frac{26}{81}}=\\frac{\\sqrt{26}}{9}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-contínuas-18",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-contínuas-18",
+    "title": "Vetores Aleatórios",
+    "section": "Funções de Variáveis Aleatórias Contínuas",
+    "text": "Funções de Variáveis Aleatórias Contínuas\nCoeficiente de correlação\nPor definição,\n\\[\n\\operatorname{Cor}(X,Y)=\\frac{\\operatorname{Cov}(X,Y)}{\\sigma_X\\sigma_Y}\n=\\frac{-\\frac{1}{162}}{\\sqrt{\\frac{73}{1620}}\\;\\sqrt{\\frac{26}{81}}}\n\\]\nSimplificando, obtém-se\n\\[\n\\operatorname{Cor}(X,Y)= -\\frac{\\sqrt{9490}}{1898}\\approx -0.0513\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-contínuas-19",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-contínuas-19",
+    "title": "Vetores Aleatórios",
+    "section": "Funções de Variáveis Aleatórias Contínuas",
+    "text": "Funções de Variáveis Aleatórias Contínuas\nVamos definir uma transformação invertível:\n\\[\nU = X,\n\\qquad\nV = X+Y\n\\]\n\nDa definição,\n\\[\nu=x,\n\\qquad\nv=x+y\n\\;\\Rightarrow\\;\nx=u,\\quad y=v-u\n\\]\nLogo, a inversa é\n\\[\n(x,y) = (u,\\; v-u)\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-contínuas-20",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-contínuas-20",
+    "title": "Vetores Aleatórios",
+    "section": "Funções de Variáveis Aleatórias Contínuas",
+    "text": "Funções de Variáveis Aleatórias Contínuas\nO Jacobiano da transformação inversa \\((u,v)\\mapsto(x,y)\\) é\n\\[\nJ =\n\\begin{vmatrix}\n\\dfrac{\\partial x}{\\partial u} & \\dfrac{\\partial x}{\\partial v} \\\\[8pt]\n\\dfrac{\\partial y}{\\partial u} & \\dfrac{\\partial y}{\\partial v}\n\\end{vmatrix}\n=\n\\begin{vmatrix}\n1 & 0 \\\\\n-1 & 1\n\\end{vmatrix}\n= 1\n\\]\nAssim, \\(|J|=1\\). Como \\(0\\le x\\le 1\\) e \\(0\\le y\\le 2\\), então:\n\n\\(u=x \\in [0,1]\\);\n\\(y=v-u \\in [0,2] \\Rightarrow 0\\le v-u\\le 2 \\Rightarrow u \\le v \\le u+2\\)"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-contínuas-21",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-contínuas-21",
+    "title": "Vetores Aleatórios",
+    "section": "Funções de Variáveis Aleatórias Contínuas",
+    "text": "Funções de Variáveis Aleatórias Contínuas\nPortanto, o suporte é\n\\[\n0\\le u\\le 1,\n\\qquad\nu \\le v \\le u+2\n\\]\n\nPelo método do Jacobiano,\n\\[\nf_{U,V}(u,v)= f_{X,Y}(x,y)\\,|J|\n= f_{X,Y}(u,\\;v-u)\\cdot 1,\n\\]\nisto é,\n\\[\n\\begin{aligned}\nf_{U,V}(u,v)\n&=\nu^2 + \\frac{u(v-u)}{3} \\\\\n&=\nu^2 + \\frac{uv-u^2}{3}\n=\n\\frac{2u^2+uv}{3}\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-contínuas-22",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#funções-de-variáveis-aleatórias-contínuas-22",
+    "title": "Vetores Aleatórios",
+    "section": "Funções de Variáveis Aleatórias Contínuas",
+    "text": "Funções de Variáveis Aleatórias Contínuas\nLogo,\n\\[\nf_{U,V}(u,v)=\n\\begin{cases}\n\\dfrac{2u^2+uv}{3}, & 0\\le u\\le 1,\\; u\\le v\\le u+2,\\\\[8pt]\n0, & \\text{caso contrário}\n\\end{cases}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#transformações-bivariadas-1",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#transformações-bivariadas-1",
+    "title": "Vetores Aleatórios",
+    "section": "Transformações Bivariadas",
+    "text": "Transformações Bivariadas\nVamos definir uma transformação invertível:\n\\[\nU = X,\n\\qquad\nV = X+Y\n\\]\n\nDa definição,\n\\[\nu=x,\n\\qquad\nv=x+y\n\\;\\Rightarrow\\;\nx=u,\\quad y=v-u\n\\]\nLogo, a inversa é\n\\[\n(x,y) = (u,\\; v-u)\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#transformações-bivariadas-2",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#transformações-bivariadas-2",
+    "title": "Vetores Aleatórios",
+    "section": "Transformações Bivariadas",
+    "text": "Transformações Bivariadas\nO Jacobiano da transformação inversa \\((u,v)\\mapsto(x,y)\\) é\n\\[\nJ =\n\\begin{vmatrix}\n\\dfrac{\\partial x}{\\partial u} & \\dfrac{\\partial x}{\\partial v} \\\\[8pt]\n\\dfrac{\\partial y}{\\partial u} & \\dfrac{\\partial y}{\\partial v}\n\\end{vmatrix}\n=\n\\begin{vmatrix}\n1 & 0 \\\\\n-1 & 1\n\\end{vmatrix}\n= 1\n\\]\nAssim, \\(|J|=1\\). Como \\(0\\le x\\le 1\\) e \\(0\\le y\\le 2\\), então:\n\n\\(u=x \\in [0,1]\\);\n\\(y=v-u \\in [0,2] \\Rightarrow 0\\le v-u\\le 2 \\Rightarrow u \\le v \\le u+2\\)"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#transformações-bivariadas-3",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#transformações-bivariadas-3",
+    "title": "Vetores Aleatórios",
+    "section": "Transformações Bivariadas",
+    "text": "Transformações Bivariadas\nPortanto, o suporte é\n\\[\n0\\le u\\le 1,\n\\qquad\nu \\le v \\le u+2\n\\]\n\nPelo método do Jacobiano,\n\\[\nf_{U,V}(u,v)= f_{X,Y}(x,y)\\,|J|\n= f_{X,Y}(u,\\;v-u)\\cdot 1,\n\\]\nisto é,\n\\[\n\\begin{aligned}\nf_{U,V}(u,v)\n&=\nu^2 + \\frac{u(v-u)}{3} \\\\\n&=\nu^2 + \\frac{uv-u^2}{3}\n=\n\\frac{2u^2+uv}{3}\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#transformações-bivariadas-4",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#transformações-bivariadas-4",
+    "title": "Vetores Aleatórios",
+    "section": "Transformações Bivariadas",
+    "text": "Transformações Bivariadas\nLogo,\n\\[\nf_{U,V}(u,v)=\n\\begin{cases}\n\\dfrac{2u^2+uv}{3}, & 0\\le u\\le 1,\\; u\\le v\\le u+2,\\\\[8pt]\n0, & \\text{caso contrário}\n\\end{cases}\n\\]\n\n\nValidade da função densidade\n\nNão-negatividade\nNo suporte da distribuição temos \\[\nu\\ge 0 \\quad \\text{e} \\quad v\\ge u\\ge 0\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#transformações-bivariadas-5",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#transformações-bivariadas-5",
+    "title": "Vetores Aleatórios",
+    "section": "Transformações Bivariadas",
+    "text": "Transformações Bivariadas\nLogo, \\[\n2u^2 \\ge 0\n\\qquad \\text{e} \\qquad\nuv \\ge 0\n\\]\nPortanto, \\[\n2u^2+uv \\ge 0\n\\quad \\Rightarrow \\quad\nf_{U,V}(u,v)\\ge 0\n\\]\nem todo o suporte.\nFora do suporte, \\(f_{U,V}(u,v)=0\\), o que também satisfaz a condição."
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#transformações-bivariadas-6",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#transformações-bivariadas-6",
+    "title": "Vetores Aleatórios",
+    "section": "Transformações Bivariadas",
+    "text": "Transformações Bivariadas\nDevemos verificar que\n\\[\n\\int_{-\\infty}^{\\infty}\\int_{-\\infty}^{\\infty}\nf_{U,V}(u,v)\\,dv\\,du = 1\n\\]\nComo o suporte é \\[\n0\\le u\\le 1, \\qquad u\\le v\\le u+2,\n\\] temos\n\\[\n\\begin{aligned}\n\\int_0^1\\int_u^{u+2} \\frac{2u^2+uv}{3}\\,dv\\,du\n&= \\int_0^1 \\frac{1}{3}\n\\left[\n\\int_u^{u+2} (2u^2+uv)\\,dv\n\\right] du\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#transformações-bivariadas-7",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#transformações-bivariadas-7",
+    "title": "Vetores Aleatórios",
+    "section": "Transformações Bivariadas",
+    "text": "Transformações Bivariadas\nIntegral interna em \\(v\\)\n\\[\n\\begin{aligned}\n\\int_u^{u+2} (2u^2+uv)\\,dv\n&= 2u^2(v)\\Big|_u^{u+2}\n+ u\\frac{v^2}{2}\\Big|_u^{u+2} \\\\\n&= 2u^2(2) + \\frac{u}{2}\\left[(u+2)^2-u^2\\right] \\\\\n&= 4u^2 + \\frac{u}{2}(4u+4) \\\\\n&= 4u^2 + 2u^2 + 2u \\\\\n&= 6u^2 + 2u\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#transformações-bivariadas-8",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#transformações-bivariadas-8",
+    "title": "Vetores Aleatórios",
+    "section": "Transformações Bivariadas",
+    "text": "Transformações Bivariadas\nIntegral externa em \\(u\\)\n\\[\n\\begin{aligned}\n\\int_0^1 \\frac{1}{3}(6u^2+2u)\\,du\n&= \\frac{1}{3}\\int_0^1 (6u^2+2u)\\,du \\\\\n&= \\frac{1}{3}\\left(6\\cdot\\frac{1}{3}+2\\cdot\\frac{1}{2}\\right) \\\\\n&= \\frac{1}{3}(2+1) \\\\\n&= 1\n\\end{aligned}\n\\]\nLogo, \\(f_{U,V}(u,v)\\)é uma função densidade de probabilidade conjunta válida."
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#transformações-bivariadas-9",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#transformações-bivariadas-9",
+    "title": "Vetores Aleatórios",
+    "section": "Transformações Bivariadas",
+    "text": "Transformações Bivariadas\nExemplo: Sejam \\(X\\) e \\(Y\\) variáveis aleatórias independentes com distribuição exponencial com parâmetro igual a 1, isto é, com densidade de probabilidade \\(f_X(x) = e^{-x}\\), para \\(x \\ge 0\\) e igual a zero no complementar. Determinar a densidade conjunta de:\n\\[U = X + Y \\quad \\text{e} \\quad V = \\frac{Y}{X}\\]\n\nComo \\(X\\) e \\(Y\\) são independentes, e com distribuição Exponencial\\((1)\\),\n\\[\nf_X(x)=e^{-x}\\mathbf{I}_{\\{x\\ge 0\\}},\\qquad\nf_Y(y)=e^{-y}\\mathbf{I}_{\\{y\\ge 0\\}}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#transformações-bivariadas-10",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#transformações-bivariadas-10",
+    "title": "Vetores Aleatórios",
+    "section": "Transformações Bivariadas",
+    "text": "Transformações Bivariadas\nE a densidade conjunta é dada por\n\\[\nf_{X,Y}(x,y)=e^{-(x+y)}\\mathbf{I}_{\\{x\\ge 0,\\;y\\ge 0\\}}\n\\]\nDefina a transformação \\[\nU=X+Y,\\qquad V=\\frac{Y}{X}\n\\]\n\nDe \\(V=\\dfrac{Y}{X}\\), obtemos \\(Y=VX\\). Substituindo em \\(U=X+Y\\):\n\\[\nU = X + VX = X(1+V)\n\\quad\\Rightarrow\\quad\nX=\\frac{U}{1+V}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#transformações-bivariadas-11",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#transformações-bivariadas-11",
+    "title": "Vetores Aleatórios",
+    "section": "Transformações Bivariadas",
+    "text": "Transformações Bivariadas\nEntão, \\[\nY=VX = V\\frac{U}{1+V}=\\frac{UV}{1+V}\n\\]\nComo \\(X&gt;0\\) e \\(Y&gt;0\\), temos necessariamente \\[\nU&gt;0\n\\quad\\text{e}\\quad\nV&gt;0\n\\]\n\nTemos então, que a inversa é \\[\nx(u,v)=\\frac{u}{1+v},\\qquad\ny(u,v)=\\frac{uv}{1+v}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#transformações-bivariadas-12",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#transformações-bivariadas-12",
+    "title": "Vetores Aleatórios",
+    "section": "Transformações Bivariadas",
+    "text": "Transformações Bivariadas\nO Jacobiano dessa transformação é:\n\\[\n\\begin{aligned}\nJ &=\n\\begin{vmatrix}\n\\dfrac{\\partial x}{\\partial u} & \\dfrac{\\partial x}{\\partial v} \\\\[8pt]\n\\dfrac{\\partial y}{\\partial u} & \\dfrac{\\partial y}{\\partial v}\n\\end{vmatrix}\n=\n\\begin{vmatrix}\n\\dfrac{1}{1+v} & -\\dfrac{u}{(1+v)^2} \\\\[10pt]\n\\dfrac{v}{1+v} & \\dfrac{u}{(1+v)^2}\n\\end{vmatrix}\n= \\frac{1}{1+v}\\cdot\\frac{u}{(1+v)^2}\n-\\left(-\\frac{u}{(1+v)^2}\\right)\\cdot\\frac{v}{1+v} \\\\[10pt]\n&= \\frac{u}{(1+v)^2}\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "aulas/Vetores_aleatorios/vetores_aleatorios.html#transformações-bivariadas-13",
+    "href": "aulas/Vetores_aleatorios/vetores_aleatorios.html#transformações-bivariadas-13",
+    "title": "Vetores Aleatórios",
+    "section": "Transformações Bivariadas",
+    "text": "Transformações Bivariadas\nPelo método do Jacobiano,\n\\[\nf_{U,V}(u,v)=f_{X,Y}(x(u,v),y(u,v))\\cdot |J|\n\\]\nComo \\(x(u,v)+y(u,v)=\\dfrac{u}{1+v}+\\dfrac{uv}{1+v}=u\\), segue que\n\\[\nf_{X,Y}(x(u,v),y(u,v))=e^{-u}\n\\]\nPortanto,\n\\[\nf_{U,V}(u,v)= e^{-u}\\cdot \\frac{u}{(1+v)^2},\n\\qquad u&gt;0,\\; v&gt;0\n\\]"
   }
 ]

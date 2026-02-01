@@ -1,0 +1,2851 @@
+---
+title: "Vetores Aleatórios"
+format: 
+  revealjs:
+    width: 1600
+    height: 900
+    footer: ""
+    theme: quartomonothemer.scss
+    slide-number: c/t
+    show-slide-number: all
+    preview-links: auto
+    self-contained: false
+    embed-resources: false
+  beamer:          # Slides em PDF (LaTeX/Beamer)
+    aspectratio: 169   # 16:9
+    keep-tex: true     # opcional, guarda o .tex gerado
+incremental: false
+code-link: true
+bibliography: references.bib
+title-slide-attributes:
+    data-background-image: /images/back.png
+    data-background-size: cover
+    data-background-opacity: "0.3"
+execute:
+  echo: true
+  freeze: auto
+---
+
+
+## Introdução
+
+Em muitas situações, é comum que um experimento aleatório gere mais de uma variável de interesse e, quase sempre, o interesse estará em estudar o comportamento simultâneo de
+2 ou mais variáveis, em busca de relações, associações. 
+
+
+
+Torna-se necessário, então, conhecer o comportamento probabilístico conjunto de tais variáveis.
+
+
+
+## Variáveis Aleatórias Multidimensionais
+
+
+**Definição:** Sejam $\varepsilon$ um experimento e $S$ um espaço amostral associado a $\varepsilon$. Sejam $X = X(s)$ e $Y = Y(s)$ duas funções, cada uma associando um número real a cada resultado $s \in S$. Denominaremos $(X, Y)$ uma **variável aleatória bidimensional** (também chamada **vetor aleatório**).
+
+
+![](/images/vetor_2D.png){fig-align="center"}
+
+
+## Variáveis Aleatórias Multidimensionais
+
+
+Se $X_1 = X_1(s)$, $X_2 = X_2(s)$, $\ldots$, $X_n = X_n(s)$ forem $n$ funções, cada uma associando um número real a cada resultado $s \in S$, denominaremos $(X_1, \ldots, X_n)$ uma **variável aleatória $n$-dimensional** (ou um **vetor aleatório $n$-dimensional**).
+
+
+# Caso discreto
+
+
+## Variáveis Aleatórias Multidimensionais Discretas
+
+
+**Definição:** $(X, Y)$ será uma **variável aleatória discreta bidimensional** se os valores possíveis de $(X, Y)$ forem finitos ou infinitos numeráveis. Isto é, os valores possíveis de $(X, Y)$ possam ser representados por $(x_i, y_j)$, $i = 1, 2, \ldots, n, \ldots$, $j = 1, 2, \ldots, m, \ldots$
+
+
+. . .
+
+
+Podemos pensar que um **vetor aleatório bidimensional discreto** é um vetor formado por **duas variáveis aleatórias discretas** definidas no **mesmo espaço amostral**. 
+
+
+. . .
+
+De forma análoga, podemos definir um **vetor aleatório $n$−dimensional discreto** como sendo um vetor formado por **$n$ variáveis aleatórias discretas** definidas no **mesmo espaço amostral**.
+
+
+
+## Função de Probabilidade Conjunta
+
+**Definição:** Seja $(X, Y)$ uma **variável aleatória discreta bidimensional**. A cada resultado possível $(x_i, y_j)$ associaremos um número $p(x_i, y_j)$ representando  
+$P(X = x_i,\; Y = y_j)$ e satisfazendo as seguintes condições:
+
+1. $p(x_i, y_j) \geq 0$, para todo $(x_i, y_j)$;
+
+2. $\displaystyle \sum_{j=1}^{\infty} \sum_{i=1}^{\infty} p(x_i, y_j) = 1$
+
+. . .
+
+A função $p$ definida para todo $(x_i, y_j)$ no contradomínio de $(X, Y)$ é denominada **função de probabilidade conjunta** de $(X, Y)$. 
+
+. . .
+
+
+O conjunto dos termos $\{(x_i, y_j,\; p(x_i, y_j)),\; i = 1, 2, \ldots,\; j = 1, 2, \ldots\}$ é denominado **distribuição de probabilidade conjunta** de $(X, Y)$.
+
+
+
+## Função de Probabilidade Conjunta
+
+Para vetores $n$-dimensionais, a função de probabilidade conjunta é $P(X_1 = x_1,\; X_2 = x_2,\; \ldots,\; X_n = x_n)$ e satisfaz 
+
+$$
+\sum_{x_1} \sum_{x_2} \cdots \sum_{x_n}
+P(X_1 = x_1,\; X_2 = x_2,\; \ldots,\; X_n = x_n) = 1
+$$
+
+
+
+## Função de Probabilidade Conjunta
+
+
+**Exemplo:** Considere o experimento aleatório que consiste em sortear duas bolas, sem reposição, de uma urna que contém 3 bolas vermelhas (V) e 2 bolas brancas (B). Defina as seguintes variáveis aleatórias:
+
+- $X$: o número de bolas brancas observadas. 
+  
+
+
+- $Y$: a cor da segunda bola sorteada, em que $1$ se a bola for V e $0$, se for B.
+
+
+
+. . .
+
+
+Temos que, o espaço amostral do experimento
+
+$$
+S = \{(1B, 2B), (1B, 2V), (1V, 2B), (1V, 2V)\}
+$$
+
+. . .
+
+
+Note que, 
+
+
+$$X=\{0,1,2\}, \quad \text{e} \quad Y=\{0,1\}$$
+
+
+## Função de Probabilidade Conjunta
+
+Além disso,
+
+$$
+P(1B, 2B) \;=\; P(X = 2, Y = 0) = P(1B)\,P(2B \mid 1B)
+= \frac{2}{5} \times \frac{1}{4}
+= \frac{1}{10}
+$$
+
+$$
+P(1B, 2V) \;=\; P(X = 1, Y = 1) = P(1B)\,P(2V \mid 1B)
+= \frac{2}{5} \times \frac{3}{4}
+= \frac{3}{10}
+$$
+
+$$
+P(1V, 2B) \;=\; P(X = 1, Y = 0) = P(1V)\,P(2B \mid 1V)
+= \frac{3}{5} \times \frac{2}{4}
+= \frac{3}{10}
+$$
+
+$$
+P(1V, 2V) \;=\; P(X = 0, Y = 1) = P(1V)\,P(2V \mid 1V)
+= \frac{3}{5} \times \frac{2}{4}
+= \frac{3}{10}
+$$
+
+
+
+## Função de Probabilidade Conjunta
+
+Temos então, a distribuição conjunta de $(X,Y)$
+
+$$
+\begin{array}{c|ccc}
+\hline
+Y \backslash X & 0 & 1 & 2 \\
+\hline
+0 & 0 & \dfrac{3}{10} & \dfrac{1}{10} \\
+1 & \dfrac{3}{10} & \dfrac{3}{10} & 0 \\
+\hline
+\end{array}
+$$
+
+
+## Função de Distribuição Acumulada
+
+
+Seja $(X, Y)$ uma **variável aleatória bidimensional**. A **função de distribuição acumulada (fd)** $F$ da variável aleatória bidimensional $(X, Y)$ é definida por
+
+$$
+F(x, y) = P(X \leq x,\; Y \leq y) = \sum_{x' \le x} \sum_{y' \le y} p(x',y')
+$$
+
+
+. . .
+
+
+De forma análoga, para vetores $n$-dimensionais, 
+
+
+
+$$
+\begin{aligned}
+F(x_1, x_2, \ldots, x_n)
+&=
+P(X_1 \le x_1,\; X_2 \le x_2,\; \ldots,\; X_n \le x_n) \\[6pt]
+&= \sum_{x_1' \le x_1}
+\sum_{x_2' \le x_2}
+\cdots
+\sum_{x_n' \le x_n}
+P(X_1 = x_1',\; X_2 = x_2',\; \ldots,\; X_n = x_n')
+\end{aligned}
+$$
+
+
+## Função de Distribuição Acumulada
+
+Considere a distribuição conjunta $p(x,y) = P(X = x, Y = y)$ do exemplo da urna:
+
+$$
+\begin{array}{c|ccc}
+\hline
+Y \backslash X & 0 & 1 & 2 \\
+\hline
+0 & 0 & \dfrac{3}{10} & \dfrac{1}{10} \\
+1 & \dfrac{3}{10} & \dfrac{3}{10} & 0 \\
+\hline
+\end{array}
+$$
+
+
+## Função de Distribuição Acumulada
+
+### Para $y = 0$
+
+
+$$\small
+\begin{aligned}
+F(0,0) &= P(X \le 0, Y \le 0) = p(0,0) = 0 \\
+F(1,0) &= P(X \le 1, Y \le 0) = p(0,0) + p(1,0)
+= 0 + \frac{3}{10}
+= \frac{3}{10} \\
+F(2,0) &= P(X \le 2, Y \le 0) = p(0,0) + p(1,0) + p(2,0)
+= 0 + \frac{3}{10} + \frac{1}{10}
+= \frac{4}{10}
+\end{aligned}
+$$
+
+## Função de Distribuição Acumulada
+
+
+
+### Para $y = 1$
+
+$$\small
+\begin{aligned}
+F(0,1) &= P(X \le 0, Y \le 1) = p(0,0) + p(0,1) = 0 + \frac{3}{10} = \frac{3}{10}\\
+F(1,1) &= P(X \le 1, Y \le 1) = p(0,0) + p(1,0) + p(0,1) + p(1,1) = 0 + \frac{3}{10} + \frac{3}{10} + \frac{3}{10} = \frac{9}{10} \\
+F(2,1) &= P(X \le 2, Y \le 1) = p(0,0) + p(1,0) + p(2,0) + p(0,1) + p(1,1) + p(2,1) \\ &= 0 + \frac{3}{10} + \frac{1}{10} + \frac{3}{10} + \frac{3}{10} + 0 =  1
+\end{aligned}
+$$
+
+
+## Função de Distribuição Acumulada
+
+
+
+### Tabela final dos valores da fda
+
+$$
+\begin{array}{c|ccc}
+\hline
+y \backslash x & 0 & 1 & 2 \\
+\hline
+0 & 0 & \dfrac{3}{10} & \dfrac{4}{10} \\
+1 & \dfrac{3}{10} & \dfrac{9}{10} & 1 \\
+\hline
+\end{array}
+$$
+
+
+## Função de Distribuição Acumulada
+
+$$
+F(x,y)=P(X\le x,\;Y\le y)=
+\begin{cases}
+0, & y<0 \ \text{ou}\ x<0,\\[6pt]
+0, & 0\le y<1,\; 0\le x<1,\\[6pt]
+\dfrac{3}{10}, & 0\le y<1,\; 1\le x<2,\\[6pt]
+\dfrac{2}{5}, & 0\le y<1,\; x\ge 2,\\[8pt]
+\dfrac{3}{10}, & y\ge 1,\; 0\le x<1,\\[6pt]
+\dfrac{9}{10}, & y\ge 1,\; 1\le x<2,\\[6pt]
+1, & y\ge 1,\; x\ge 2
+\end{cases}
+$$
+
+## Distribuições Marginais
+
+
+Seja $(X, Y)$ um **vetor aleatório discreto** com distribuição conjunta $p(x_i, y_j)$.  
+ 
+. . .
+
+
+- A **distribuição marginal de $X$** é definida como
+
+$$
+P(X = x) = \sum_y p(x, y) = \sum_y P(X = x, Y = y), \qquad \forall x
+$$
+
+. . .
+
+
+- Analogamente, a **distribuição marginal de $Y$** é definida como
+
+$$
+P(Y = y) = \sum_x p(x, y) = \sum_x P(X = x, Y = y), \qquad \forall y
+$$
+
+
+
+## Distribuições Marginais
+
+
+Em geral, se $(X_1, X_2, \ldots, X_n)$ é um **vetor aleatório $n$-dimensional**, então
+
+$$\small
+P(X_i = x_i)
+=
+\sum_{x_1} \cdots \sum_{x_{i-1}} \sum_{x_{i+1}} \cdots \sum_{x_n}
+P(X_1 = x_1, \ldots, X_{i-1} = x_{i-1}, X_{i+1} = x_{i+1}, \ldots, X_n = x_n)
+$$
+
+. . .
+
+No nosso exemplo,
+
+
+$$
+\begin{array}{c|ccc|c}
+\hline
+Y \backslash X & 0 & 1 & 2 & P(Y=y) \\
+\hline
+0 & 0 & \dfrac{3}{10} & \dfrac{1}{10} & \dfrac{4}{10} \\
+1 & \dfrac{3}{10} & \dfrac{3}{10} & 0 & \dfrac{6}{10} \\
+\hline
+P(X=x) & \dfrac{3}{10} & \dfrac{6}{10} & \dfrac{1}{10} & 1 \\
+\hline
+\end{array}
+$$
+
+
+## Distribuições Condicionais
+
+Seja $(X, Y)$ um **vetor aleatório discreto** com distribuição conjunta $p(x,y)$. A **distribuição condicional de $X$ dado $Y = y$** é definida como
+
+$$
+P(X = x \mid Y = y)
+=
+\frac{P(X = x,\; Y = y)}{P(Y = y)},
+\qquad \forall x
+$$
+
+. . .
+
+
+
+Analogamente, define-se a **distribuição condicional de $Y$ dado $X = x$** como
+
+$$
+P(Y = y \mid X = x)
+=
+\frac{P(X = x,\; Y = y)}{P(X = x)},
+\qquad \forall y
+$$
+
+
+## Distribuições Condicionais
+
+
+
+Note que existe uma distribuição condicional de $X$ para cada valor $y$ e uma distribuição condicional de $Y$ para cada valor $x$.  
+
+
+. . .
+
+
+Assim, se $X$ assume $n$ valores distintos e $Y$ assume $m$ valores distintos, teremos ao todo $n + m$ **distribuições condicionais**.
+
+
+
+## Distribuições Condicionais
+
+Voltando ao exemplo, note que temos as distribuições condicionais $X \mid Y = 0$ e $X \mid Y = 1$. Analogamente, temos as distribuições condicionais  
+$Y \mid X = 0$, $Y \mid X = 1$ e $Y \mid X = 2$.
+
+
+
+$$
+\begin{array}{c|ccc|c}
+\hline
+Y \backslash X & 0 & 1 & 2 & P(Y=y) \\
+\hline
+0 & 0 & \dfrac{3}{10} & \dfrac{1}{10} & \dfrac{4}{10} \\
+1 & \dfrac{3}{10} & \dfrac{3}{10} & 0 & \dfrac{6}{10} \\
+\hline
+P(X=x) & \dfrac{3}{10} & \dfrac{6}{10} & \dfrac{1}{10} & 1 \\
+\hline
+\end{array}
+$$
+
+## Distribuições Condicionais
+
+Assim, 
+
+$$
+\begin{aligned}
+P(X = 0 \mid Y = 0) &= \frac{P(X = 0,\; Y = 0)}{P(Y = 0)} = \frac{0}{2/5} = 0 \\[6pt]
+P(X = 1 \mid Y = 0) &= \frac{P(X = 1,\; Y = 0)}{P(Y = 0)} = \frac{3/10}{2/5} = \frac{3}{4} \\[6pt]
+P(X = 2 \mid Y = 0) &= \frac{P(X = 2,\; Y = 0)}{P(Y = 0)} = \frac{1/10}{2/5} = \frac{1}{4}
+\end{aligned}
+$$
+
+
+## Distribuições Condicionais
+
+
+
+Analogamente, temos que
+
+$$
+\begin{aligned}
+P(X = 0 \mid Y = 1) &= \frac{P(X = 0,\; Y = 1)}{P(Y = 1)} = \frac{3/10}{3/5} = \frac{1}{2}\\[6pt]
+P(X = 1 \mid Y = 1) &= \frac{P(X = 1,\; Y = 1)}{P(Y = 1)} = \frac{3/10}{3/5} = \frac{1}{2}\\[6pt]
+P(X = 2 \mid Y = 1) &= \frac{P(X = 2,\; Y = 1)}{P(Y = 1)} = 0
+\end{aligned}
+$$
+
+## Esperança Condicional
+
+Para cada uma das distribuições condicionais, podemos calcular a respectiva **esperança condicional**:
+
+$$
+E_X(X \mid Y = y)
+=
+\sum_x x\, P(X = x \mid Y = y)
+$$
+
+$$
+E_Y(Y \mid X = x)
+=
+\sum_y y\, P(Y = y \mid X = x)
+$$
+
+. . .
+
+
+**Observação:** Note que o subscrito $X$ indica que a variável aleatória é $X$ e, portanto, estamos calculando a média (ou esperança) dos valores que $X$ assume fixado o valor $y$. Observação análoga vale para o subscrito $Y$.
+
+
+
+
+## Esperança Condicional
+
+Voltando ao exemplo, vamos encontrar $E(X \mid Y = 0)$:
+
+$$
+\begin{aligned}
+E(X \mid Y = 0)
+&= \sum_x x\,P(X=x\mid Y=0) \\
+&= 0\cdot 0 + 1\cdot \frac{3}{4} + 2\cdot \frac{1}{4} \\
+&= \frac{3}{4} + \frac{2}{4} \\
+&= \frac{5}{4}
+\end{aligned}
+$$
+
+
+## Esperança Condicional
+
+De forma análoga, vamos encontrar $E(X \mid Y = 1)$:
+
+$$
+\begin{aligned}
+E(X \mid Y = 1)
+&= \sum_x x\,P(X=x\mid Y=1) \\
+&= 0\cdot \frac{1}{2} + 1\cdot \frac{1}{2} + 2\cdot 0 \\
+&= \frac{1}{2}
+\end{aligned}
+$$
+
+## Esperança Condicional
+
+Analogamente,
+
+$$
+\begin{aligned}
+E(Y\mid X=0) &= \sum_y y\,P(Y=y\mid X=0) = 0\cdot 0 + 1\cdot 1 = 1\\[6pt]
+E(Y\mid X=1) &= \sum_y y\,P(Y=y\mid X=1) = 0\cdot \frac{1}{2} + 1\cdot \frac{1}{2} = \frac{1}{2} \\[6pt]
+E(Y\mid X=2) &= \sum_y y\,P(Y=y\mid X=2) = 0\cdot 1 + 1\cdot 0 = 0
+\end{aligned}
+$$
+
+
+## Esperança Condicional
+
+
+Note que, para cada valor $y$ de $Y$, temos um valor diferente de $E(X \mid Y = y)$ e, para cada valor $x$ de $X$, temos um valor diferente de $E(Y \mid X = x)$.
+
+
+. . .
+
+
+Sendo assim, podemos definir uma **função** $g$ que associa, a cada valor $y$ de $Y$, o valor $g(y) = E(X \mid Y = y)$ e outra **função** $h$ que associa, a cada valor $x$ de $X$, o valor $h(x) = E(Y \mid X = x)$, ou seja,
+
+$$
+g:\; y \longmapsto g(y) = E(X \mid Y = y)
+$$
+
+$$
+h:\; x \longmapsto h(x) = E(Y \mid X = x)
+$$
+
+
+## Esperança Condicional
+
+Como $X$ e $Y$ são variáveis aleatórias, resulta que essas funções definem novas variáveis aleatórias $g(Y)$ e $h(X)$ e suas esperanças podem também ser calculadas.
+
+
+. . .
+
+
+Vamos denotar essas esperanças por $E_Y[g(Y)]$ e $E_X[h(X)]$, que são calculadas como
+
+$$
+E_Y[g(Y)] = \sum_y g(y)\,P(Y = y)
+$$
+
+$$
+E_X[h(X)] = \sum_x h(x)\,P(X = x)
+$$
+
+
+
+
+## Esperança Condicional
+
+Assim, usando a definição da esperança condicional, temos que
+
+$$\small
+\begin{aligned}
+E_Y[g(Y)]
+&= \sum_y g(y)\,P(Y = y) = \sum_y E_X(X \mid Y = y)\,P(Y = y) \\
+&= \sum_y \sum_x x\,P(X = x \mid Y = y)\,P(Y = y) \\
+&= \sum_y \sum_x x\,\frac{P(X = x,\; Y = y)}{P(Y = y)}\,P(Y = y) \\
+&= \sum_y \sum_x x\,P(X = x,\; Y = y) \\
+&= \sum_x x \sum_y P(X = x,\; Y = y) \\
+&= \sum_x x\,P(X = x) = E(X)
+\end{aligned}
+$$
+
+## Esperança Condicional
+
+De forma análoga, temos que
+
+$$\small
+\begin{aligned}
+E_X[h(X)] &= \sum_x h(x)\,P(X = x) = \sum_x E_Y(Y \mid X = x)\,P(X = x) \\
+&= \sum_x \sum_y y\,P(Y = y \mid X = x)\,P(X = x) \\
+&= \sum_x \sum_y y\,\frac{P(X = x,\; Y = y)}{P(X = x)}\,P(X = x) \\
+&= \sum_x \sum_y y\,P(X = x,\; Y = y) \\
+&= \sum_y y \sum_x P(X = x,\; Y = y) \\
+&= \sum_y y\,P(Y = y) = E(Y)
+\end{aligned}
+$$
+
+
+## Esperança Condicional
+
+**Resumindo:**
+
+$$
+E_Y\!\left[E_X(X \mid Y)\right] = E(X)
+$$
+
+$$
+E_X\!\left[E_Y(Y \mid X)\right] = E(Y)
+$$
+
+
+
+
+Esse resultado estabelece a **Lei da Esperança Total**.
+
+
+
+## Esperança Condicional
+
+
+No exemplo, $Y\in\{0,1\}$ e $X\in\{0,1,2\}$, com distribuição conjunta:
+
+$$
+\begin{array}{c|ccc}
+\hline
+Y \backslash X & 0 & 1 & 2 \\
+\hline
+0 & 0 & \dfrac{3}{10} & \dfrac{1}{10} \\
+1 & \dfrac{3}{10} & \dfrac{3}{10} & 0 \\
+\hline
+\end{array}
+$$
+
+## Esperança Condicional
+
+
+As marginais são:
+$$
+P(Y=0)=\frac{4}{10},\quad P(Y=1)=\frac{6}{10},\\
+P(X=0)=\frac{3}{10},\quad P(X=1)=\frac{6}{10},\quad P(X=2)=\frac{1}{10}
+$$
+
+E as esperanças condicionais já calculadas:
+$$
+E(X\mid Y=0)=\frac{5}{4},\qquad E(X\mid Y=1)=\frac{1}{2},\\
+E(Y\mid X=0)=1,\qquad E(Y\mid X=1)=\frac{1}{2},\qquad E(Y\mid X=2)=0
+$$
+
+
+
+## Esperança Condicional
+
+Primeiro, calculemos $E(X)$ diretamente pela marginal de $X$:
+
+$$
+\begin{aligned}
+E(X)
+&= \sum_x x\,P(X=x) \\
+&= 0\cdot\frac{3}{10} + 1\cdot\frac{6}{10} + 2\cdot\frac{1}{10} \\
+&= \frac{6}{10} + \frac{2}{10} \\
+&= \frac{8}{10} = \frac{4}{5}
+\end{aligned}
+$$
+
+
+## Esperança Condicional
+
+Agora, calculemos $E_Y[E(X\mid Y)]$:
+
+$$
+\begin{aligned}
+E_Y[E(X\mid Y)]
+&= \sum_y E(X\mid Y=y)\,P(Y=y) \\
+&= E(X\mid Y=0)\,P(Y=0) + E(X\mid Y=1)\,P(Y=1) \\
+&= \frac{5}{4}\cdot\frac{4}{10} + \frac{1}{2}\cdot\frac{6}{10} \\
+&= \frac{5}{10} + \frac{3}{10} \\
+&= \frac{8}{10} = \frac{4}{5}
+\end{aligned}
+$$
+
+
+
+## Esperança Condicional
+
+Logo,
+$$
+E_Y[E_X(X\mid Y)] = \frac{4}{5} = E(X)
+$$
+
+
+. . .
+
+
+De forma análoga,
+
+$$
+\begin{aligned}
+E(Y)
+&= \sum_y y\,P(Y=y) \\
+&= 0\cdot\frac{4}{10} + 1\cdot\frac{6}{10} \\
+&= \frac{6}{10} = \frac{3}{5}
+\end{aligned}
+$$
+
+
+
+## Esperança Condicional
+
+
+e,
+
+$$\small
+\begin{aligned}
+E_X[E(Y\mid X)]
+&= \sum_x E(Y\mid X=x)\,P(X=x) \\
+&= E(Y\mid X=0)\,P(X=0) + E(Y\mid X=1)\,P(X=1) + E(Y\mid X=2)\,P(X=2) \\
+&= 1\cdot\frac{3}{10} + \frac{1}{2}\cdot\frac{6}{10} + 0\cdot\frac{1}{10} \\
+&= \frac{3}{10} + \frac{3}{10} \\
+&= \frac{6}{10} = \frac{3}{5}
+\end{aligned}
+$$
+
+
+## Esperança Condicional
+
+Logo,
+$$
+E_X[E_Y(Y\mid X)] = \frac{3}{5} = E(Y)
+$$
+
+
+## Independência de Variáveis Aleatórias
+
+
+**Definição (Independência de variáveis aleatórias discretas):** Seja $(X, Y)$ um **vetor aleatório discreto** com distribuição conjunta $p(x,y) = P(X = x,\; Y = y)$. Dizemos que $X$ e $Y$ são **independentes** se, e somente se,
+
+$$
+P(X = x,\; Y = y) = P(X = x)\,P(Y = y),
+\qquad \forall x,\; y
+$$
+
+Ou seja, a **distribuição conjunta** é o **produto das distribuições marginais**.
+
+
+De forma análoga, para vetores $n$-dimensionais,
+
+$$
+P(X_1 = x_1,\; X_2 = x_2,\; \ldots,\; X_n = x_n)
+=
+\prod_{i=1}^n P(X_i = x_i),
+\qquad \forall\, x_1, x_2, \ldots, x_n
+$$
+
+
+## Independência de Variáveis Aleatórias
+
+Lembrando a distribuição conjunta do exemplo:
+
+$$
+\begin{array}{c|ccc}
+\hline
+Y \backslash X & 0 & 1 & 2 \\
+\hline
+0 & 0 & \dfrac{3}{10} & \dfrac{1}{10} \\
+1 & \dfrac{3}{10} & \dfrac{3}{10} & 0 \\
+\hline
+\end{array}
+$$
+
+As marginais são:
+
+$$
+P(X=0)=\frac{3}{10},\quad P(X=1)=\frac{6}{10},\quad P(X=2)=\frac{1}{10}
+$$
+
+
+## Independência de Variáveis Aleatórias
+
+e,
+
+$$
+P(Y=0)=\frac{4}{10},\quad P(Y=1)=\frac{6}{10}
+$$
+
+Pela definição, $X$ e $Y$ seriam independentes se, para todo $x$ e $y$,
+
+$$
+P(X=x,Y=y)=P(X=x)\,P(Y=y)
+$$
+mas,
+
+Considere o par $(x,y)=(0,0)$:
+
+
+## Independência de Variáveis Aleatórias
+
+- Da tabela conjunta:
+$$
+P(X=0, Y=0)=0 
+$$
+
+- Pelo produto das marginais:
+$$
+P(X=0)\,P(Y=0)=\frac{3}{10}\cdot\frac{4}{10}=\frac{12}{100}=\frac{3}{25}
+$$
+
+Como
+$$
+P(X=0, Y=0)\neq P(X=0)\,P(Y=0),
+$$
+concluímos que **$X$ e $Y$ não são independentes**.
+
+
+
+## Funções de Variáveis Aleatórias
+
+**TEOREMA 01:**  Seja $(X, Y)$ um **vetor aleatório discreto** com função de probabilidade conjunta $P(X = x,\; Y = y)$. Seja $h:\mathbb{R}^2 \to \mathbb{R}$ uma função real tal que cada par $(x, y)$ é levado a $h(x, y)$. Então,
+
+$$
+E[h(X,Y)] = \sum_i \sum_j h(x_i, y_j)\,P(X = x_i,\; Y = y_j)
+$$
+
+
+De forma análoga, para vetores $n$-dimensionais,
+
+
+$$
+E\!\left[h(X_1,\ldots,X_n)\right]
+=
+\sum_{x_1}\sum_{x_2}\cdots\sum_{x_n}
+h(x_1,\ldots,x_n)\,p(x_1,\ldots,x_n)
+$$
+
+
+## Funções de Variáveis Aleatórias
+
+**TEOREMA 02:** Seja $(X, Y)$ um **vetor aleatório discreto** com função de probabilidade conjunta $P(X = x,\; Y = y)$.  Seja $h:\mathbb{R}^2 \to \mathbb{R}$ uma função real tal que $h(x, y) = x + y$. Então,
+
+$$
+E(X + Y) = E(X) + E(Y)
+$$
+
+
+## Funções de Variáveis Aleatórias
+
+
+Usando o teorema anterior, temos que
+
+$$ 
+\begin{aligned}
+E(X + Y)
+&= \sum_x \sum_y (x + y)\,P(X = x,\; Y = y) \\
+&= \sum_x \sum_y x\,P(X = x,\; Y = y)
+   + \sum_x \sum_y y\,P(X = x,\; Y = y) \\
+&= \sum_x x \sum_y P(X = x,\; Y = y)
+   + \sum_y y \sum_x P(X = x,\; Y = y) \\
+&= \sum_x x\,P(X = x)
+   + \sum_y y\,P(Y = y) \\
+&= E(X) + E(Y)
+\end{aligned}
+$$
+
+
+## Funções de Variáveis Aleatórias
+
+
+No exemplo da urna, a distribuição conjunta é:
+
+$$
+\begin{array}{c|ccc}
+\hline
+Y \backslash X & 0 & 1 & 2 \\
+\hline
+0 & 0 & \dfrac{3}{10} & \dfrac{1}{10} \\
+1 & \dfrac{3}{10} & \dfrac{3}{10} & 0 \\
+\hline
+\end{array}
+$$
+
+
+As marginais são:
+$$
+P(X=0)=\frac{3}{10},\quad P(X=1)=\frac{6}{10},\quad P(X=2)=\frac{1}{10}
+$$
+
+
+## Funções de Variáveis Aleatórias
+
+
+e,
+
+
+$$
+P(Y=0)=\frac{4}{10},\quad P(Y=1)=\frac{6}{10}
+$$
+
+. . .
+
+
+Temos então,
+
+$$
+\begin{aligned}
+E(X)
+&= \sum_x x\,P(X=x) \\
+&= 0\cdot\frac{3}{10} + 1\cdot\frac{6}{10} + 2\cdot\frac{1}{10} \\
+&= \frac{6}{10} + \frac{2}{10} = \frac{8}{10}=\frac{4}{5}
+\end{aligned}
+$$
+
+
+## Funções de Variáveis Aleatórias
+
+
+e,
+
+
+$$
+\begin{aligned}
+E(Y)
+&= \sum_y y\,P(Y=y) \\
+&= 0\cdot\frac{4}{10} + 1\cdot\frac{6}{10} = \frac{6}{10}=\frac{3}{5}
+\end{aligned}
+$$
+
+
+. . .
+
+
+Logo,
+
+$$
+E(X)+E(Y)=\frac{4}{5}+\frac{3}{5}=\frac{7}{5}
+$$
+
+
+
+
+## Funções de Variáveis Aleatórias
+
+Note que, como $E(X+Y)=\sum_{x,y} (x+y)\,P(X=x,Y=y)$, temos:
+
+$$\small
+\begin{aligned}
+E(X+Y)
+&= (1+0)\cdot\frac{3}{10}
++ (2+0)\cdot\frac{1}{10}
++ (0+1)\cdot\frac{3}{10}
++ (1+1)\cdot\frac{3}{10} \\
+&= 1\cdot\frac{3}{10}
++ 2\cdot\frac{1}{10}
++ 1\cdot\frac{3}{10}
++ 2\cdot\frac{3}{10} \\
+&= \frac{3}{10}+\frac{2}{10}+\frac{3}{10}+\frac{6}{10} \\
+&= \frac{14}{10}=\frac{7}{5}
+\end{aligned}
+$$
+
+
+Portanto, de acordo com Teorema 02,
+
+$$\small
+E(X+Y)=\frac{7}{5}=E(X)+E(Y)
+$$
+
+
+
+## Funções de Variáveis Aleatórias
+
+
+Usando definições e propriedades da esperança e da variância, vamos estudar a **variância da soma de duas variáveis aleatórias**.
+
+. . .
+
+
+$$
+\begin{aligned}
+\operatorname{Var}(X+Y)
+&= E\,\left[(X+Y)-E(X+Y)\right]^2 \\
+&= E\,\left[X+Y-E(X)-E(Y)\right]^2 \\
+&= E\,\left[(X-E(X))+(Y-E(Y))\right]^2 \\
+&= E\,\left[(X-E(X))^2\right] + E\,\left[(Y-E(Y))^2\right] + 2E\,\left[(X-E(X))(Y-E(Y))\right] \\
+&= \operatorname{Var}(X) + \operatorname{Var}(Y)
+ + 2E\,\left[(X-E(X))(Y-E(Y))\right]
+\end{aligned}
+$$
+
+
+## Funções de Variáveis Aleatórias
+
+
+Observe que, na variância da soma, aparece um termo envolvendo a **esperança do produto dos desvios em torno das médias**. Esse termo define a **covariância** de duas variáveis aleatórias. Note ainda, que as variáveis
+$$
+X' = X - E(X) \quad \text{e} \quad Y' = Y - E(Y)
+$$
+são variáveis aleatórias ambas com média zero, isto é,
+
+$$
+E(X') = E(Y') = 0
+$$
+
+
+## Funções de Variáveis Aleatórias
+
+**Definição (Covariância):** A **covariância** entre duas variáveis aleatórias $X$ e $Y$ é definida por
+
+$$
+\operatorname{Cov}(X,Y)
+=
+E\!\left[(X - E(X))(Y - E(Y))\right]
+$$
+
+. . .
+
+
+Substituindo essa definição na expressão da variância da soma de duas variáveis aleatórias, obtém-se o seguinte resultado.
+
+**Resultado 01:** A variância da soma de duas variáveis aleatórias é dada por
+
+$$
+\operatorname{Var}(X + Y) = \operatorname{Var}(X) + \operatorname{Var}(Y) + 2\,\operatorname{Cov}(X,Y)
+$$
+
+
+## Funções de Variáveis Aleatórias
+
+Uma forma alternativa de cálculo da covariância resulta de
+
+$$
+\begin{aligned}
+E[(X - E(X))(Y - E(Y))]
+&= E[XY - X E(Y) - Y E(X) + E(X)E(Y)] \\
+&= E(XY) - E[X E(Y)] - E[Y E(X)] + E(X)E(Y) \\
+&= E(XY) - E(Y)E(X) - E(X)E(Y) + E(X)E(Y) \\
+&= E(XY) - E(X)E(Y)
+\end{aligned}
+$$
+
+Aqui usamos que $E(kX) = kE(X)$ e também que $E(k) = k$. Logo,
+
+$$
+\operatorname{Cov}(X,Y) = E(XY) - E(X)E(Y)
+$$
+
+
+## Funções de Variáveis Aleatórias
+
+### Propriedades da covariância
+
+1. **$\operatorname{Cov}(aX + b,\; cY + d) = ac\,\operatorname{Cov}(X,Y)$**
+
+De fato,
+
+$$
+\begin{aligned}
+\operatorname{Cov}(aX + b,\; cY + d)
+&= E\!\left[(aX + b - E(aX + b))(cY + d - E(cY + d))\right] \\
+&= E\!\left[(aX + b - aE(X) - b)(cY + d - cE(Y) - d)\right] \\
+&= E\!\left[a(X - E(X))\,c(Y - E(Y))\right] \\
+&= ac\,E\!\left[(X - E(X))(Y - E(Y))\right] \\
+&= ac\,\operatorname{Cov}(X,Y)
+\end{aligned}
+$$
+
+
+
+## Funções de Variáveis Aleatórias
+
+### Propriedades da covariância
+
+2. **$\operatorname{Cov}(X + Y,\; Z + W)
+= \operatorname{Cov}(X,Z) + \operatorname{Cov}(X,W) + \operatorname{Cov}(Y,Z) + \operatorname{Cov}(Y,W)$**
+
+De fato,
+
+$$
+\begin{aligned}
+\operatorname{Cov}(X + Y,\; Z + W)
+&= E\!\left[(X + Y)(Z + W)\right] - E(X + Y)\,E(Z + W) \\
+&= E(XZ + XW + YZ + YW)
+   - [E(X) + E(Y)][E(Z) + E(W)] \\
+&= E(XZ) + E(XW) + E(YZ) + E(YW) \\
+&\quad - E(X)E(Z) - E(X)E(W) - E(Y)E(Z) - E(Y)E(W) \\
+&= [E(XZ) - E(X)E(Z)]
+ + [E(XW) - E(X)E(W)] \\
+&\quad + [E(YZ) - E(Y)E(Z)]
+ + [E(YW) - E(Y)E(W)] \\
+&= \operatorname{Cov}(X,Z)
+ + \operatorname{Cov}(X,W)
+ + \operatorname{Cov}(Y,Z)
+ + \operatorname{Cov}(Y,W)
+\end{aligned}
+$$
+
+
+
+## Funções de Variáveis Aleatórias
+
+### Propriedades da covariância
+
+3. **$$\operatorname{Var}(X - Y)=\operatorname{Var}(X)+\operatorname{Var}(Y)-2\,\operatorname{Cov}(X,Y)$$**
+
+De fato,
+
+$$
+\begin{aligned}
+\operatorname{Var}(X - Y)
+&= \operatorname{Var}[X + (-Y)] \\
+&= \operatorname{Var}(X) + \operatorname{Var}(Y)
+   + 2\,\operatorname{Cov}(X,\,-Y) \\
+&= \operatorname{Var}(X) + \operatorname{Var}(Y)
+   + 2(-1)\operatorname{Cov}(X,Y) \\
+&= \operatorname{Var}(X) + \operatorname{Var}(Y)
+   - 2\,\operatorname{Cov}(X,Y)
+\end{aligned}
+$$
+
+
+## Funções de Variáveis Aleatórias
+
+**Resultado 02:**  Se $X$ e $Y$ são variáveis aleatórias **independentes**, então
+$$
+\operatorname{Cov}(X,Y) = 0
+$$
+
+De fato,
+
+Se $X$ e $Y$ são independentes, então 
+
+$$P(X = x,\; Y = y) = P(X = x)\,P(Y = y)$$
+
+
+## Funções de Variáveis Aleatórias
+
+Nesse caso,
+
+$$\small
+\begin{aligned}
+E(XY)
+&= \sum_x \sum_y xy\,P(X = x,\; Y = y) \\
+&= \sum_x \sum_y xy\,P(X = x)\,P(Y = y) \\
+&= \left(\sum_x x\,P(X = x)\right)
+   \left(\sum_y y\,P(Y = y)\right) \\
+&= E(X)\,E(Y)
+\end{aligned}
+$$
+
+Logo,
+
+$$\small
+\operatorname{Cov}(X,Y)
+= E(XY) - E(X)E(Y)
+= 0
+$$
+
+
+
+## Funções de Variáveis Aleatórias
+
+
+
+Note que a recíproca desse resultado **não é verdadeira**, isto é, **covariância nula não significa independência** entre as variáveis.
+
+
+
+## Funções de Variáveis Aleatórias
+
+
+Como exemplo, consideremos a seguinte distribuição de probabilidade conjunta:
+
+**Distribuição conjunta $p(x,y)$ (com marginais)**
+
+| $Y\backslash X$ | $0$ | $1$ | $2$ | $p_Y(y)$ |
+|---:|---:|---:|---:|---:|
+| $1$ | $\dfrac{3}{20}$ | $\dfrac{3}{20}$ | $\dfrac{2}{20}$ | $\dfrac{2}{5}$ |
+| $2$ | $\dfrac{1}{20}$ | $\dfrac{1}{20}$ | $\dfrac{2}{20}$ | $\dfrac{1}{5}$ |
+| $3$ | $\dfrac{4}{20}$ | $\dfrac{1}{20}$ | $\dfrac{3}{20}$ | $\dfrac{2}{5}$ |
+| $p_X(x)$ | $\dfrac{2}{5}$ | $\dfrac{1}{4}$ | $\dfrac{7}{20}$ | $1$ |
+
+
+
+
+## Funções de Variáveis Aleatórias
+
+Para essa distribuição, temos:
+
+$$
+E(X)
+= 0\cdot\frac{2}{5} + 1\cdot\frac{1}{4} + 2\cdot\frac{7}{20}
+= \frac{19}{20}
+$$
+
+$$
+E(Y)
+= 1\cdot\frac{2}{5} + 2\cdot\frac{1}{5} + 3\cdot\frac{2}{5}
+= 2
+$$
+
+
+. . .
+
+
+Além disso,
+
+$$
+\begin{aligned}
+E(XY)
+&= 0\cdot1\cdot\frac{3}{20}
+ + 1\cdot1\cdot\frac{3}{20}
+ + 2\cdot1\cdot\frac{2}{20} + 0\cdot2\cdot\frac{1}{20}
+ + 1\cdot2\cdot\frac{1}{20}\\
+ &+ 2\cdot2\cdot\frac{2}{20} + 0\cdot3\cdot\frac{4}{20}
+ + 1\cdot3\cdot\frac{1}{20}
+ + 2\cdot3\cdot\frac{3}{20} = \frac{38}{20}
+\end{aligned}
+$$
+
+
+## Funções de Variáveis Aleatórias
+
+Observa-se que
+
+$$
+E(XY) = \frac{38}{20}
+= \frac{19}{20}\cdot 2
+= E(X)\,E(Y)
+$$
+
+
+. . .
+
+
+
+Logo,
+
+$$
+\operatorname{Cov}(X,Y)
+= E(XY) - E(X)E(Y)
+= 0
+$$
+
+
+. . .
+
+
+
+Entretanto, $X$ e $Y$ **não são independentes**, pois, por exemplo,
+
+$$
+P(X = 0,\; Y = 1)
+= \frac{3}{20}
+\neq
+P(X = 0)\,P(Y = 1)
+= \frac{2}{5}\cdot\frac{2}{5}
+= \frac{8}{20}
+$$
+
+
+
+## Funções de Variáveis Aleatórias
+
+
+**Definição (Coeficiente de Correlação):** O **coeficiente de correlação** entre duas variáveis aleatórias $X$ e $Y$ é a covariância entre as variáveis padronizadas, ou seja,
+
+$$
+\operatorname{Cor}(X,Y)
+=
+E\!\left(\frac{X - E(X)}{\sigma_X} \right)\, \left(\frac{Y - E(Y)}{\sigma_Y}\right)
+=
+\frac{\operatorname{Cov}(X,Y)}{\sigma_X\,\sigma_Y},
+$$
+
+onde $\sigma_X$ e $\sigma_Y$ são os **desvios-padrão** de $X$ e $Y$, respectivamente.
+
+
+. . .
+
+
+**TEOREMA 03:** Dadas duas variáveis aleatórias $X$ e $Y$ com esperança, variância e covariância finitas, então
+
+$$
+-1 \le \operatorname{Cor}(X,Y) \le 1
+$$
+
+
+
+## Funções de Variáveis Aleatórias
+
+**Demonstração**
+
+Sejam
+
+$$
+X^* = \frac{X - E(X)}{\sigma_X},
+\qquad
+Y^* = \frac{Y - E(Y)}{\sigma_Y},
+$$
+
+as variáveis aleatórias **padronizadas**.
+
+Das propriedades de esperança e variância, sabemos que
+
+$$
+E(X^*) = E(Y^*) = 0
+\quad \text{e} \quad
+\operatorname{Var}(X^*) = \operatorname{Var}(Y^*) = 1
+$$
+
+
+## Funções de Variáveis Aleatórias
+
+
+
+Sabemos também que a variância de qualquer variável aleatória é não-negativa. Em particular,
+
+$$
+\operatorname{Var}(X^* + Y^*) \ge 0
+$$
+
+Logo,
+
+$$
+\begin{aligned}
+\operatorname{Var}(X^* + Y^*)
+&= \operatorname{Var}(X^*) + \operatorname{Var}(Y^*)
+   + 2\,\operatorname{Cov}(X^*,Y^*) \\
+&= 1 + 1 + 2\,\operatorname{Cov}(X^*,Y^*) \\
+&\ge 0,
+\end{aligned}
+$$
+
+o que implica
+
+$$
+\operatorname{Cov}(X^*,Y^*) \ge -1
+$$
+
+
+## Funções de Variáveis Aleatórias
+
+
+Analogamente, considerando
+
+$$
+\operatorname{Var}(X^* - Y^*) \ge 0,
+$$
+
+temos
+
+$$
+\begin{aligned}
+\operatorname{Var}(X^* - Y^*)
+&= \operatorname{Var}(X^*) + \operatorname{Var}(Y^*)
+   - 2\,\operatorname{Cov}(X^*,Y^*) \\
+&= 1 + 1 - 2\,\operatorname{Cov}(X^*,Y^*) \\
+&\ge 0,
+\end{aligned}
+$$
+
+o que implica
+
+$$
+\operatorname{Cov}(X^*,Y^*) \le 1
+$$
+
+
+## Funções de Variáveis Aleatórias
+
+
+
+Portanto,
+
+$$
+-1 \le \operatorname{Cov}(X^*,Y^*) \le 1
+$$
+
+Mas, por definição,
+
+$$
+\operatorname{Cov}(X^*,Y^*) = \operatorname{Cor}(X,Y),
+$$
+
+o que completa a demonstração.
+
+
+
+
+## Funções de Variáveis Aleatórias
+
+
+Voltando ao exemplo da urna, 
+
+$$\small
+\begin{array}{c|ccc|c}
+\hline
+Y \backslash X & 0 & 1 & 2 & P(Y=y) \\
+\hline
+0 & 0 & \dfrac{1}{10} & \dfrac{3}{10} & \dfrac{4}{10} \\
+1 & \dfrac{3}{10} & \dfrac{3}{10} & 0 & \dfrac{6}{10} \\
+\hline
+P(X=x) & \dfrac{3}{10} & \dfrac{4}{10} & \dfrac{3}{10} & 1 \\
+\hline
+\end{array}
+$$
+
+. . .
+
+Temos,
+
+$$\small
+\begin{aligned}
+E(X)
+&= 0\cdot\frac{3}{10} + 1\cdot\frac{4}{10} + 2\cdot\frac{3}{10} = \frac{4}{10} + \frac{6}{10} = 1
+\end{aligned}
+$$
+
+
+## Funções de Variáveis Aleatórias
+
+Da mesma forma,
+
+$$
+\begin{aligned}
+E(Y)
+&= 0\cdot\frac{4}{10} + 1\cdot\frac{6}{10} = \frac{6}{10} = \frac{3}{5}
+\end{aligned}
+$$
+
+. . .
+
+
+Somando apenas os termos não nulos da distribuição conjunta:
+
+$$
+\begin{aligned}
+E(XY) = (1\cdot 1)\frac{3}{10} = \frac{3}{10}
+\end{aligned}
+$$
+
+
+## Funções de Variáveis Aleatórias
+
+Usando a fórmula alternativa da covariância,
+
+$$
+\operatorname{Cov}(X,Y) = E(XY) - E(X)E(Y),
+$$
+
+temos
+
+$$
+\begin{aligned}
+\operatorname{Cov}(X,Y)
+&= \frac{3}{10} - 1\cdot\frac{3}{5} \\
+&= \frac{3}{10} - \frac{6}{10} \\
+&= -\frac{3}{10}
+\end{aligned}
+$$
+
+
+## Funções de Variáveis Aleatórias
+
+
+- Variância de $X$
+
+$$
+\begin{aligned}
+E(X^2)
+&= 0^2\cdot\frac{3}{10}
+ + 1^2\cdot\frac{4}{10}
+ + 2^2\cdot\frac{3}{10} \\
+&= \frac{4}{10} + \frac{12}{10}
+= \frac{16}{10}
+\end{aligned}
+$$
+
+$$
+\operatorname{Var}(X)
+= E(X^2) - [E(X)]^2
+= \frac{16}{10} - 1
+= \frac{6}{10}
+= \frac{3}{5}
+$$
+
+
+## Funções de Variáveis Aleatórias
+
+
+- Variância de $Y$
+
+
+Como $Y$ é Bernoulli com $P(Y=1)=\frac{3}{5}$,
+
+$$
+\operatorname{Var}(Y)
+= \frac{3}{5}\left(1-\frac{3}{5}\right)
+= \frac{6}{25}
+$$
+
+Logo,
+
+$$
+\sigma_X = \sqrt{\frac{3}{5}},
+\qquad
+\sigma_Y = \sqrt{\frac{6}{25}}
+$$
+
+
+## Funções de Variáveis Aleatórias
+
+
+
+Por definição,
+
+$$
+\operatorname{Cor}(X,Y)
+=
+\frac{\operatorname{Cov}(X,Y)}{\sigma_X\,\sigma_Y}
+$$
+
+Substituindo os valores obtidos,
+
+$$
+\begin{aligned}
+\operatorname{Cor}(X,Y)&= \frac{-\frac{3}{10}}{\sqrt{\frac{3}{5}}\;\sqrt{\frac{6}{25}}}= -\frac{3}{10}\sqrt{\frac{125}{18}}
+\end{aligned}
+$$
+
+Numericamente,
+
+$$
+\boxed{\operatorname{Corr}(X,Y)\approx -0,79}
+$$
+
+
+
+# Caso contínuo
+
+## Variáveis Aleatórias Multidimensionais Contínuas
+
+**Definição:** $(X, Y)$ será uma **variável aleatória contínua bidimensional** se $(X, Y)$ puder tomar todos os valores em algum conjunto não numerável do plano euclidiano. Por exemplo, se $(X, Y)$ tomar todos os valores em uma região $R$, poderemos dizer que $(X, Y)$ é uma **variável aleatória bidimensional contínua**.
+
+. . .
+
+
+Podemos pensar que um **vetor aleatório bidimensional contínuo** é um vetor formado por **duas variáveis aleatórias contínuas** definidas no **mesmo espaço amostral**. 
+
+
+. . .
+
+De forma análoga, podemos definir um **vetor aleatório $n$−dimensional contínuo** como sendo um vetor formado por **$n$ variáveis aleatórias contínuas** definidas no **mesmo espaço amostral**.
+
+
+
+## Função Densidade Conjunta
+
+
+Seja $(X,Y)$ um **vetor aleatório contínuo**. A função densidade conjunta $f(x,y)$ é uma função que satisfaz as seguintes propriedades:
+
+1. $f(x,y) \ge 0$
+
+2. $\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty} f(x,y)\,dx\,dy = 1$
+
+3. $P(a \le X \le b,\; c \le Y \le d)=\int_c^d \int_a^b f(x,y)\,dx\,dy$
+
+
+
+## Função Densidade Conjunta
+
+**Exemplo:** Suponhamos que a variável aleatória contínua bidimensional $(X,Y)$ tenha fdp conjunta dada por
+
+$$
+f(x,y)=
+\begin{cases}
+x^2 + \dfrac{xy}{3}, & 0 \le x \le 1,\;\; 0 \le y \le 2, \\[8pt]
+0, & \text{caso contrário}.
+\end{cases}
+$$
+
+
+## Função Densidade Conjunta
+
+
+
+1. Vamos verificar que a função densidade conjunta $f(x,y)$ satisfaz a condição de não-negatividade:
+
+Na região limitada por $0 \le x \le 1 \, \text{e} \, 0 \le y \le 2$, temos:
+
+- $x^2 \ge 0$, pois o quadrado de qualquer número real é não-negativo;
+- $\dfrac{xy}{3} \ge 0$, pois $x \ge 0$ e $y \ge 0$.
+
+Logo, a soma desses termos também é não-negativa:
+
+$$
+x^2 + \frac{xy}{3} \ge 0
+$$
+
+
+
+
+## Função Densidade Conjunta
+
+2. Verifiquemos se a função densidade conjunta satisfaz $\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty} f(x,y)\,dx\,dy = 1$
+
+
+$$\small
+\begin{aligned}
+\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty} f(x,y)\,dx\,dy 
+&= \int_0^2 \int_0^1 \left(x^2 + \frac{xy}{3}\right)\,dx\,dy \\[6pt]
+&= \int_0^2 \left[\int_0^1 x^2\,dx + \int_0^1 \frac{xy}{3}\,dx \right] dy \\[6pt]
+&= \int_0^2 \left[\frac{x^3}{3}\Bigg|_0^1 + \frac{yx^2}{6}\Bigg|_0^1\right] dy = \int_0^2 \left(\frac{1}{3} + \frac{y}{6}\right) dy \\[6pt]
+&= \int_0^2 \frac{1}{3} dy + \int_0^2 \frac{y}{6} dy = \frac{y}{3}\Bigg|_0^2 + \frac{y^2}{12}\Bigg|_0^2 = \frac23+\frac13 = 1
+\end{aligned}
+$$
+
+## Densidades Marginais
+
+
+As **densidades marginais** de $X$ e $Y$ são definidas por:
+
+$$
+f_X(x) = \int f(x,y)\,dy,
+$$
+
+$$
+f_Y(y) = \int f(x,y)\,dx
+$$
+
+
+## Densidades Marginais
+
+Voltando ao exemplo, vamos encontrar as densidades marginais $f_X(x)$ e $f_Y(y)$:
+
+
+- **Densidade marginal de $X$:** Por definição,
+
+$$
+f_X(x)=\int_{-\infty}^{+\infty} f(x,y)\,dy
+$$
+
+Como o suporte em $y$ é $0\le y\le 2$, para $0\le x\le 1$:
+
+
+$$
+\begin{aligned}
+f_X(x)
+&=\int_0^2 \left(x^2+\frac{xy}{3}\right)\,dy =\int_0^2 x^2\,dy+\int_0^2 \frac{xy}{3}\,dy \\
+&= x^2(2-0) + \frac{x}{3}\left[\frac{y^2}{2}\right]_0^2 = 2x^2 + \frac{x}{3}\cdot\frac{4}{2} = 2x^2 + \frac{2x}{3}
+\end{aligned}
+$$
+
+
+## Densidades Marginais
+
+
+Logo,
+
+$$
+f_X(x)=
+\begin{cases}
+2x^2 + \dfrac{2x}{3}, & 0 \le x \le 1,\\[8pt]
+0, & \text{caso contrário}
+\end{cases}
+$$
+
+
+. . .
+
+
+- **Densidade marginal de $Y$:** De forma análoga,
+
+$$
+f_Y(y)=\int_{-\infty}^{+\infty} f(x,y)\,dx
+$$
+
+Como o suporte em $x$ é $0\le x\le 1$, para $0\le y\le 2$:
+
+
+## Densidades Marginais
+
+
+$$
+\begin{aligned}
+f_Y(y)
+&=\int_0^1 \left(x^2+\frac{xy}{3}\right)\,dx =\int_0^1 x^2\,dx+\int_0^1 \frac{xy}{3}\,dx \\
+&=\left[\frac{x^3}{3}\right]_0^1 + \frac{y}{3}\left[\frac{x^2}{2}\right]_0^1 =\frac{1}{3} + \frac{y}{3}\cdot\frac{1}{2} =\frac{1}{3}+\frac{y}{6}
+\end{aligned}
+$$
+
+
+. . .
+
+
+Logo,
+
+$$
+f_Y(y)=
+\begin{cases}
+\dfrac{1}{3}+\dfrac{y}{6}, & 0 \le y \le 2,\\[8pt]
+0, & \text{caso contrário}
+\end{cases}
+$$
+
+
+## Distribuições e Esperanças Condicionais
+
+
+Por definição, temos que
+
+$$
+f_{X\mid Y}(x\mid y)=\frac{f(x,y)}{f_Y(y)}
+$$
+
+Note que, para cada $y$ temos uma densidade condicional diferente. Analogamente,
+
+$$
+f_{Y\mid X}(y\mid x)=\frac{f(x,y)}{f_X(x)}
+$$
+
+e para cada $x$ temos uma densidade condicional diferente.
+
+
+
+## Distribuições e Esperanças Condicionais
+
+No nosso exemplo, a densidade conjunta é
+
+$$
+f(x,y)=
+\begin{cases}
+x^2+\dfrac{xy}{3}, & 0\le x\le 1,\; 0\le y\le 2,\\[6pt]
+0, & \text{caso contrário}
+\end{cases}
+$$
+
+e as marginais são,
+
+
+$$
+f_X(x)=
+\begin{cases}
+2x^2+\dfrac{2x}{3}, & 0\le x\le 1,\\[6pt]
+0, & \text{caso contrário},
+\end{cases}
+\qquad
+f_Y(y)=
+\begin{cases}
+\dfrac{1}{3}+\dfrac{y}{6}=\dfrac{y+2}{6}, & 0\le y\le 2,\\[6pt]
+0, & \text{caso contrário}
+\end{cases}
+$$
+
+
+## Distribuições e Esperanças Condicionais
+
+
+Assim, para $0\le y\le 2$,
+
+$$
+f_{X\mid Y}(x\mid y)=\frac{f(x,y)}{f_Y(y)}
+=\frac{x^2+\frac{xy}{3}}{\frac{y+2}{6}}
+=\frac{6x^2+2xy}{y+2}
+=\frac{2x(3x+y)}{y+2}
+$$
+
+Logo,
+
+$$
+f_{X\mid Y}(x\mid y)=
+\begin{cases}
+\dfrac{2x(3x+y)}{y+2}, & 0\le x\le 1,\; 0\le y\le 2,\\[10pt]
+0, & \text{caso contrário}
+\end{cases}
+$$
+
+
+## Distribuições e Esperanças Condicionais
+
+De forma análoga, para $0<x\le 1$ (note que $f_X(0)=0$, mas isso ocorre com probabilidade zero),
+
+$$
+f_{Y\mid X}(y\mid x)=\frac{f(x,y)}{f_X(x)}
+=\frac{x^2+\frac{xy}{3}}{2x^2+\frac{2x}{3}}
+=\frac{x+\frac{y}{3}}{2x+\frac{2}{3}}
+=\frac{3x+y}{6x+2}
+=\frac{3x+y}{2(3x+1)}
+$$
+
+
+Logo,
+
+$$
+f_{Y\mid X}(y\mid x)=
+\begin{cases}
+\dfrac{3x+y}{2(3x+1)}, & 0\le y\le 2,\; 0<x\le 1,\\[10pt]
+0, & \text{caso contrário}
+\end{cases}
+$$
+
+
+## Distribuições e Esperanças Condicionais
+
+
+Como no caso discreto, definem-se as seguintes esperanças condicionais:
+
+$$
+E_X(X\mid Y=y)=\int x\,f_{X\mid Y}(x\mid y)\,dx
+=\int x\,\frac{f(x,y)}{f_Y(y)}\,dx
+$$
+
+$$
+E_Y(Y\mid X=x)=\int y\,f_{Y\mid X}(y\mid x)\,dy
+=\int y\,\frac{f(x,y)}{f_X(x)}\,dy
+$$
+
+
+
+. . .
+
+
+Note que, assim como no caso discreto, para cada valor $y$ de $Y$, temos um valor diferente de $E_X(X\mid Y=y)$, e para cada valor $x$ de $X$, temos um valor diferente de $E_Y(Y\mid X=x)$. 
+
+
+## Distribuições e Esperanças Condicionais
+
+Logo, aqui também podemos definir uma função $g$ que associa a cada valor de $Y$ o valor $E_X(X\mid Y=y)$ e outra função $h$ que associa a cada valor de $X$ o valor $E_Y(Y\mid X=x)$, ou seja,
+
+
+
+
+
+$$
+\begin{aligned}
+g:\; & y \longmapsto g(y) = E_X(X\mid Y=y), \\
+h:\; & x \longmapsto h(x) = E_Y(Y\mid X=x)
+\end{aligned}
+$$
+
+
+Como $X$ e $Y$ são variáveis aleatórias, essas funções definem novas variáveis aleatórias $g(Y)$ e $h(X)$, cujas esperanças são calculadas como
+
+$$
+E_Y[g(Y)] = \int g(y)\,f_Y(y)\,dy \\
+E_X[h(X)] = \int h(x)\,f_X(x)\,dx
+$$
+
+## Distribuições e Esperanças Condicionais
+
+Usando a definição de esperança condicional, temos que
+
+$$
+\begin{aligned}
+E_Y[g(Y)]
+&= \int g(y)\,f_Y(y)\,dy = \int E_X(X\mid Y=y)\,f_Y(y)\,dy \\
+&= \int \left(\int x\,\frac{f(x,y)}{f_Y(y)}\,dx\right) f_Y(y)\,dy = \int\!\!\int x\,f(x,y)\,dx\,dy \\
+&= \int x \left(\int f(x,y)\,dy\right) dx = \int x\,f_X(x)\,dx = E(X)
+\end{aligned}
+$$
+
+Ou seja,
+
+$$
+E_Y\!\left[E_X(X\mid Y)\right] = E(X)
+$$
+
+
+## Distribuições e Esperanças Condicionais
+
+Analogamente, 
+
+$$
+\begin{aligned}
+E_X[h(X)]
+&= \int h(x)\,f_X(x)\,dx = \int E_Y(Y\mid X=x)\,f_X(x)\,dx \\
+&= \int \left(\int y\,\frac{f(x,y)}{f_X(x)}\,dy\right) f_X(x)\,dx = \int\!\!\int y\,f(x,y)\,dy\,dx \\
+&= \int y \left(\int f(x,y)\,dx\right) dy = \int y\,f_Y(y)\,dy = E(Y)
+\end{aligned}
+$$
+
+Ou seja,
+
+$$
+E_X\!\left[E_Y(Y\mid X)\right] = E(Y)
+$$
+
+
+## Distribuições e Esperanças Condicionais
+
+
+Esses resultados correspondem à **Lei da Esperança Total** no caso contínuo, em perfeita analogia com o caso discreto.
+
+. . .
+
+Para nosso exemplo, temos:
+
+$$
+f(x,y)=
+\begin{cases}
+x^2+\dfrac{xy}{3}, & 0\le x\le 1,\; 0\le y\le 2,\\[6pt]
+0, & \text{caso contrário}
+\end{cases}
+$$
+
+e as marginais são
+
+$$\small
+f_X(x)=
+\begin{cases}
+2x^2+\dfrac{2x}{3}, & 0\le x\le 1,\\[6pt]
+0, & \text{caso contrário},
+\end{cases}
+\qquad
+f_Y(y)=
+\begin{cases}
+\dfrac{1}{3}+\dfrac{y}{6}=\dfrac{y+2}{6}, & 0\le y\le 2,\\[6pt]
+0, & \text{caso contrário}
+\end{cases}
+$$
+
+
+## Distribuições e Esperanças Condicionais
+
+
+- Vamos verificar que $E_Y[E(X\mid Y)] = E(X)$:
+
+
+A densidade condicional é
+
+$$\small
+f_{X\mid Y}(x\mid y)
+=\frac{f(x,y)}{f_Y(y)}
+=\frac{x^2+\frac{xy}{3}}{\frac{y+2}{6}}
+=\frac{6x^2+2xy}{y+2},
+\qquad 0\le x\le 1,\; 0\le y\le 2
+$$
+
+
+Logo,
+
+$$\small
+\begin{aligned}
+g(y)=E(X\mid Y=y)
+&=\int_0^1 x\,f_{X\mid Y}(x\mid y)\,dx =\int_0^1 x\,\frac{6x^2+2xy}{y+2}\,dx =\frac{1}{y+2}\int_0^1 (6x^3+2y x^2)\,dx \\ &=\frac{1}{y+2}\left(6\cdot\frac{1}{4}+2y\cdot\frac{1}{3}\right) =\frac{1}{y+2}\left(\frac{3}{2}+\frac{2y}{3}\right) =\frac{4y+9}{6(y+2)},
+\qquad 0\le y\le 2
+\end{aligned}
+$$
+
+
+
+## Distribuições e Esperanças Condicionais
+
+De forma que,
+
+$$
+\begin{aligned}
+E_Y[g(Y)]
+&=\int_0^2 g(y)\,f_Y(y)\,dy =\int_0^2 \frac{4y+9}{6(y+2)}\cdot\frac{y+2}{6}\,dy \\
+&=\int_0^2 \frac{4y+9}{36}\,dy =\frac{1}{36}\left[2y^2+9y\right]_0^2 =\frac{1}{36}(8+18) =\frac{26}{36} =\frac{13}{18}
+\end{aligned}
+$$
+
+
+. . .
+
+
+Note que
+
+$$
+\begin{aligned}
+E(X)
+&=\int_0^1 x\,f_X(x)\,dx
+=\int_0^1 x\left(2x^2+\frac{2x}{3}\right)\,dx =\int_0^1 \left(2x^3+\frac{2}{3}x^2\right)\,dx \\
+&=2\cdot\frac{1}{4}+\frac{2}{3}\cdot\frac{1}{3}
+=\frac{1}{2}+\frac{2}{9}
+=\frac{13}{18}
+\end{aligned}
+$$
+
+
+## Distribuições e Esperanças Condicionais
+
+
+Portanto,
+
+$$
+E_Y[E(X\mid Y)] = \frac{13}{18} = E(X)
+$$
+
+. . .
+
+
+- Verificar $E_X[E(Y\mid X)] = E(Y)$
+
+
+A densidade condicional é
+
+$$
+f_{Y\mid X}(y\mid x)
+=\frac{f(x,y)}{f_X(x)}
+=\frac{x^2+\frac{xy}{3}}{2x^2+\frac{2x}{3}}
+=\frac{3x+y}{2(3x+1)},
+\qquad 0\le y\le 2,\; 0<x\le 1
+$$
+
+
+
+## Distribuições e Esperanças Condicionais
+
+Logo,
+
+$$
+\begin{aligned}
+h(x)=E(Y\mid X=x)
+&=\int_0^2 y\,f_{Y\mid X}(y\mid x)\,dy =\int_0^2 y\,\frac{3x+y}{2(3x+1)}\,dy \\
+&=\frac{1}{2(3x+1)}\int_0^2 (3xy+y^2)\,dy =\frac{1}{2(3x+1)}
+\left(3x\cdot\frac{y^2}{2}\Big|_0^2+\frac{y^3}{3}\Big|_0^2\right) \\
+&=\frac{1}{2(3x+1)}\left(3x\cdot 2+\frac{8}{3}\right) =\frac{9x+4}{3(3x+1)},
+\qquad 0<x\le 1
+\end{aligned}
+$$
+
+
+
+
+## Distribuições e Esperanças Condicionais
+
+Note que
+$$
+f_X(x)=2x^2+\frac{2x}{3}=\frac{2x(3x+1)}{3}
+$$
+
+Então,
+
+$$
+\begin{aligned}
+E_X[h(X)]
+&=\int_0^1 h(x)\,f_X(x)\,dx =\int_0^1 \frac{9x+4}{3(3x+1)}\cdot\frac{2x(3x+1)}{3}\,dx \\
+&=\int_0^1 \frac{2x(9x+4)}{9}\,dx =\frac{1}{9}\int_0^1 (18x^2+8x)\,dx \\
+&=\frac{1}{9}\left(18\cdot\frac{1}{3}+8\cdot\frac{1}{2}\right) =\frac{1}{9}(6+4) = \frac{10}{9}
+\end{aligned}
+$$
+
+
+
+## Distribuições e Esperanças Condicionais
+
+Além disso,
+
+$$
+\begin{aligned}
+E(Y)
+&=\int_0^2 y\,f_Y(y)\,dy
+=\int_0^2 y\cdot\frac{y+2}{6}\,dy \\
+&=\frac{1}{6}\int_0^2 (y^2+2y)\,dy \\
+&=\frac{1}{6}\left(\frac{8}{3}+4\right)
+=\frac{1}{6}\cdot\frac{20}{3}
+=\frac{10}{9}
+\end{aligned}
+$$
+
+Portanto,
+
+$$
+E_X[E(Y\mid X)] = \frac{10}{9} = E(Y)
+$$
+
+
+
+
+## Independência de Variáveis Aleatórias Contínuas
+
+A definição de independência de variáveis aleatórias contínuas é análoga à definição no caso discreto.
+
+. . .
+
+
+**Definição (Independência de variáveis aleatórias contínuas):** Seja $(X,Y)$ um **vetor aleatório contínuo** com função densidade conjunta $f(x,y)$. Sejam $f_X(x)$ e $f_Y(y)$ as densidades marginais de $X$ e $Y$, respectivamente. Então, diz-se que $X$ e $Y$ são **variáveis aleatórias independentes** se
+
+$$
+f(x,y)=f_X(x)\,f_Y(y),
+\qquad \forall\,x,y
+$$
+
+Ou seja, a **densidade conjunta** é o **produto das densidades marginais** para todo par $(x,y)$ no domínio de definição.
+
+
+
+## Independência de Variáveis Aleatórias Contínuas
+
+
+No exemplo, a densidade conjunta é
+
+$$\small
+f(x,y)=
+\begin{cases}
+x^2+\dfrac{xy}{3}, & 0\le x\le 1,\; 0\le y\le 2,\\[6pt]
+0, & \text{caso contrário}
+\end{cases}
+$$
+
+As marginais são
+
+$$\small
+f_X(x)=
+\begin{cases}
+2x^2+\dfrac{2x}{3}, & 0\le x\le 1,\\[6pt]
+0, & \text{caso contrário},
+\end{cases}
+\qquad
+f_Y(y)=
+\begin{cases}
+\dfrac{1}{3}+\dfrac{y}{6}=\dfrac{y+2}{6}, & 0\le y\le 2,\\[6pt]
+0, & \text{caso contrário}
+\end{cases}
+$$
+
+
+## Independência de Variáveis Aleatórias Contínuas
+
+
+Pela definição, $X$ e $Y$ seriam independentes se
+
+$$
+f(x,y)=f_X(x)\,f_Y(y)\quad \text{para todo } (x,y)
+$$
+
+
+. . .
+
+
+Para $0\le x\le 1$ e $0\le y\le 2$,
+
+$$\small
+\begin{aligned}
+f_X(x)f_Y(y)
+&=\left(2x^2+\frac{2x}{3}\right)\left(\frac{y+2}{6}\right) =\frac{y+2}{3}\left(x^2+\frac{x}{3}\right) \\[4pt] &=\frac{y+2}{3}x^2+\frac{y+2}{9}x =\left(\frac{y}{3}+\frac{2}{3}\right)x^2+\left(\frac{y}{9}+\frac{2}{9}\right)x \\[4pt] &\neq x^2+\dfrac{xy}{3} = f(x,y)
+\end{aligned}
+$$
+
+Assim, concluímos que **$X$ e $Y$ não são independentes**.
+
+
+
+
+## Funções de Variáveis Aleatórias Contínuas
+
+Assim como no caso discreto, conhecida a densidade conjunta de $(X,Y)$, podemos ter interesse em estudar a densidade de uma variável aleatória definida como uma função $h(X,Y)$, em que $h$ é uma função real, isto é, $h:\mathbb{R}^2 \to \mathbb{R}$.
+
+
+## Funções de Variáveis Aleatórias Contínuas
+
+**TEOREMA 04:**  Sejam $X$ e $Y$ variáveis aleatórias contínuas com densidade conjunta $f(x,y)$ e seja $h:\mathbb{R}^2 \to \mathbb{R}$ uma função qualquer. Então,
+
+$$
+E[h(X,Y)] = \int\!\!\int h(x,y)\,f(x,y)\,dx\,dy
+$$
+
+. . .
+
+**TEOREMA 05:**  Sejam $X$ e $Y$ variáveis aleatórias contínuas com densidade conjunta $f(x,y)$ e seja $h:\mathbb{R}^2 \to \mathbb{R}$ uma função definida por
+$h(X,Y)=aX+bY$, com $a$ e $b$ números reais quaisquer. Então,
+
+$$
+E[h(X,Y)] = a\,E(X) + b\,E(Y)
+$$
+
+
+## Funções de Variáveis Aleatórias Contínuas
+
+No nosso exemplo, a densidade conjunta é
+
+$$
+f(x,y)=
+\begin{cases}
+x^2+\dfrac{xy}{3}, & 0\le x\le 1,\; 0\le y\le 2,\\[6pt]
+0, & \text{caso contrário}
+\end{cases}
+$$
+
+. . .
+
+
+Pelo Teorema 05, para a combinação linear
+$$
+h(X,Y)=aX+bY,
+$$
+vale
+$$
+E[h(X,Y)] = aE(X)+bE(Y)
+$$
+
+
+
+## Funções de Variáveis Aleatórias Contínuas
+
+
+Temos que a marginal de $X$ é
+$$
+f_X(x)=2x^2+\frac{2x}{3}, \qquad 0\le x\le 1
+$$
+
+Logo,
+
+$$
+\begin{aligned}
+E(X)
+&=\int_0^1 x\,f_X(x)\,dx =\int_0^1 x\left(2x^2+\frac{2x}{3}\right)\,dx \\
+&=\int_0^1 \left(2x^3+\frac{2}{3}x^2\right)\,dx =2\cdot\frac{1}{4}+\frac{2}{3}\cdot\frac{1}{3} \\
+&=\frac{1}{2}+\frac{2}{9}
+=\frac{13}{18}
+\end{aligned}
+$$
+
+
+
+## Funções de Variáveis Aleatórias Contínuas
+
+
+
+A marginal de $Y$ é
+$$
+f_Y(y)=\frac{1}{3}+\frac{y}{6}=\frac{y+2}{6}, \qquad 0\le y\le 2
+$$
+
+Logo,
+
+$$
+\begin{aligned}
+E(Y)
+&=\int_0^2 y\,f_Y(y)\,dy =\int_0^2 y\left(\frac{y+2}{6}\right)\,dy \\
+&=\frac{1}{6}\int_0^2 (y^2+2y)\,dy =\frac{1}{6}\left(\frac{8}{3}+4\right) \\
+&=\frac{1}{6}\cdot\frac{20}{3} =\frac{10}{9}
+\end{aligned}
+$$
+
+
+## Funções de Variáveis Aleatórias Contínuas
+
+Escolhendo, por exemplo,
+$$
+a=2 \quad \text{e} \quad b=-3,
+$$
+temos
+$$
+h(X,Y)=2X-3Y
+$$
+
+Pelo Teorema 05,
+
+$$
+\begin{aligned}
+E(2X-3Y)
+&=2E(X)-3E(Y) =2\cdot\frac{13}{18}-3\cdot\frac{10}{9} \\
+&=\frac{13}{9}-\frac{30}{9} = -\frac{17}{9}
+\end{aligned}
+$$
+
+
+## Funções de Variáveis Aleatórias Contínuas
+
+Pelo Teorema 04,
+
+$$
+E(2X-3Y)=\int_0^2\int_0^1 (2x-3y)\left(x^2+\frac{xy}{3}\right)\,dx\,dy
+$$
+
+. . .
+
+
+Temos que,
+
+$$
+\begin{aligned}
+(2x-3y)\left(x^2+\frac{xy}{3}\right)
+&= (2x)x^2 + (2x)\frac{xy}{3} - (3y)x^2 - (3y)\frac{xy}{3} \\
+&= 2x^3 + \frac{2}{3}x^2y - 3x^2y - xy^2 \\
+&= 2x^3 - \frac{7}{3}x^2y - xy^2
+\end{aligned}
+$$
+
+
+## Funções de Variáveis Aleatórias Contínuas
+
+
+- Integral interna em $x$ (de $0$ a $1$)
+
+$$
+\begin{aligned}
+\int_{0}^{1}\left(2x^3 - \frac{7}{3}x^2y - xy^2\right)\,dx
+&= \int_{0}^{1}2x^3\,dx \;-\;\frac{7}{3}y\int_{0}^{1}x^2\,dx \;-\;y^2\int_{0}^{1}x\,dx \\
+&= 2\cdot\frac{1}{4} \;-\;\frac{7}{3}y\cdot\frac{1}{3}\;-\;y^2\cdot\frac{1}{2} \\
+&= \frac{1}{2} - \frac{7}{9}y - \frac{1}{2}y^2
+\end{aligned}
+$$
+
+
+## Funções de Variáveis Aleatórias Contínuas
+
+- Integral externa em $y$ (de $0$ a $2$)
+
+$$
+\begin{aligned}
+\int_{0}^{2}\left(\frac{1}{2} - \frac{7}{9}y - \frac{1}{2}y^2\right)\,dy
+&= \int_{0}^{2}\frac{1}{2}\,dy \;-\;\frac{7}{9}\int_{0}^{2}y\,dy \;-\;\frac{1}{2}\int_{0}^{2}y^2\,dy \\
+&= \frac{1}{2}\cdot 2 \;-\;\frac{7}{9}\cdot\frac{2^2}{2} \;-\;\frac{1}{2}\cdot\frac{2^3}{3} \\
+&= 1 - \frac{14}{9} - \frac{4}{3} = 1 - \frac{14}{9} - \frac{12}{9} = -\frac{17}{9}
+\end{aligned}
+$$
+
+. . .
+
+Logo, verificamos numericamente a linearidade:
+
+$$
+E(aX+bY)=aE(X)+bE(Y)
+$$
+
+
+## Funções de Variáveis Aleatórias Contínuas
+
+
+As definições de **covariância** e **correlação** são as mesmas vistas para o caso discreto. A covariância entre $X$ e $Y$ é definida por
+
+$$
+\operatorname{Cov}(X,Y)
+=
+E[(X - E(X))(Y - E(Y))]
+=
+E(XY) - E(X)E(Y)
+$$
+
+. . .
+
+
+O coeficiente de correlação é definido por
+
+$$
+\operatorname{Cor}(X,Y)
+=
+E\!\left(
+\frac{X - E(X)}{\sigma_X}\right)
+\left(\frac{Y - E(Y)}{\sigma_Y}
+\right)
+=
+\frac{\operatorname{Cov}(X,Y)}{\sigma_X\,\sigma_Y}
+$$
+
+
+
+
+## Funções de Variáveis Aleatórias Contínuas
+
+Valem todas as propriedades vistas anteriormente para o caso discreto. Em particular, se $X$ e $Y$ são variáveis aleatórias contínuas **independentes**,
+então
+
+$$
+\operatorname{Cov}(X,Y)=0
+$$
+
+A recíproca, em geral, **não é verdadeira**, uma vez que a covariância mede apenas a **relação linear** entre as variáveis.
+
+
+
+## Funções de Variáveis Aleatórias Contínuas
+
+
+No nosso exemplo,
+
+$$
+f(x,y)=
+\begin{cases}
+x^2+\dfrac{xy}{3}, & 0\le x\le 1,\; 0\le y\le 2,\\[6pt]
+0, & \text{caso contrário}
+\end{cases}
+$$
+
+Já obtivemos
+
+$$
+E(X)=\frac{13}{18},
+\qquad
+E(Y)=\frac{10}{9}
+$$
+
+A seguir calculamos $E(XY)$, $\operatorname{Cov}(X,Y)$ e $\operatorname{Cor}(X,Y)$.
+
+
+
+
+## Funções de Variáveis Aleatórias Contínuas
+
+
+- Cálculo de $E(XY)$
+
+Por definição,
+
+$$
+E(XY)=\int_0^2\int_0^1 xy\,f(x,y)\,dx\,dy
+=\int_0^2\int_0^1 xy\left(x^2+\frac{xy}{3}\right)\,dx\,dy
+$$
+
+Expandindo:
+
+$$
+xy\left(x^2+\frac{xy}{3}\right)=x^3y+\frac{x^2y^2}{3}
+$$
+
+## Funções de Variáveis Aleatórias Contínuas
+
+
+Então,
+$$
+\begin{aligned}
+E(XY)
+&=\int_0^2\int_0^1 \left(x^3y+\frac{x^2y^2}{3}\right)\,dx\,dy =\int_0^2\left[y\int_0^1 x^3\,dx+\frac{y^2}{3}\int_0^1 x^2\,dx\right]dy \\
+&=\int_0^2\left[y\cdot\frac14+\frac{y^2}{3}\cdot\frac13\right]dy =\int_0^2\left(\frac{y}{4}+\frac{y^2}{9}\right)dy =\left[\frac{y^2}{8}+\frac{y^3}{27}\right]_0^2 \\
+&=\frac{4}{8}+\frac{8}{27}
+=\frac12+\frac{8}{27}
+=\frac{43}{54}
+\end{aligned}
+$$
+
+. . .
+
+
+- Covariância: Temos que
+
+$$
+\operatorname{Cov}(X,Y)=E(XY)-E(X)E(Y)
+$$
+
+
+## Funções de Variáveis Aleatórias Contínuas
+
+Então,
+
+$$
+\begin{aligned}
+\operatorname{Cov}(X,Y)
+&=\frac{43}{54}-\left(\frac{13}{18}\right)\left(\frac{10}{9}\right) \\
+&=\frac{43}{54}-\frac{130}{162}
+=\frac{129}{162}-\frac{130}{162}
+=-\frac{1}{162}
+\end{aligned}
+$$
+
+
+## Funções de Variáveis Aleatórias Contínuas
+
+- Correlação
+
+Para a correlação, precisamos das variâncias. Primeiro, vamos calcular $E(X^2)$:
+
+$$
+\begin{aligned}
+E(X^2)
+&=\int_0^2\int_0^1 x^2 f(x,y)\,dx\,dy =\int_0^2\int_0^1 x^2\left(x^2+\frac{xy}{3}\right)\,dx\,dy \\
+&=\int_0^2\int_0^1 \left(x^4+\frac{x^3y}{3}\right)\,dx\,dy =\int_0^2\left[\frac{1}{5}+\frac{y}{3}\cdot\frac{1}{4}\right]dy \\
+&=\int_0^2\left(\frac{1}{5}+\frac{y}{12}\right)dy
+=\left[\frac{y}{5}+\frac{y^2}{24}\right]_0^2 =\frac{2}{5}+\frac{4}{24}
+=\frac{2}{5}+\frac{1}{6}
+=\frac{17}{30}
+\end{aligned}
+$$
+
+
+## Funções de Variáveis Aleatórias Contínuas
+
+
+Então,
+
+$$\small
+\operatorname{Var}(X)=E(X^2)-[E(X)]^2
+=\frac{17}{30}-\left(\frac{13}{18}\right)^2
+=\frac{73}{1620}
+$$
+
+. . .
+
+
+Agora, vamos calcular $E(Y^2)$:
+
+$$\small
+\begin{aligned}
+E(Y^2)
+&=\int_0^2\int_0^1 y^2 f(x,y)\,dx\,dy =\int_0^2\int_0^1 y^2\left(x^2+\frac{xy}{3}\right)\,dx\,dy \\
+&=\int_0^2\left[y^2\int_0^1 x^2\,dx+\frac{y^3}{3}\int_0^1 x\,dx\right]dy =\int_0^2\left(y^2\cdot\frac13+\frac{y^3}{3}\cdot\frac12\right)dy \\
+&=\int_0^2\left(\frac{y^2}{3}+\frac{y^3}{6}\right)dy =\left[\frac{y^3}{9}+\frac{y^4}{24}\right]_0^2
+=\frac{8}{9}+\frac{16}{24}
+=\frac{8}{9}+\frac{2}{3}
+=\frac{14}{9}
+\end{aligned}
+$$
+
+## Funções de Variáveis Aleatórias Contínuas
+
+Então,
+
+$$
+\operatorname{Var}(Y)=E(Y^2)-[E(Y)]^2
+=\frac{14}{9}-\left(\frac{10}{9}\right)^2
+=\frac{26}{81}
+$$
+
+Logo,
+
+$$
+\sigma_X=\sqrt{\frac{73}{1620}},
+\qquad
+\sigma_Y=\sqrt{\frac{26}{81}}=\frac{\sqrt{26}}{9}
+$$
+
+
+## Funções de Variáveis Aleatórias Contínuas
+
+### Coeficiente de correlação
+
+Por definição,
+
+$$
+\operatorname{Cor}(X,Y)=\frac{\operatorname{Cov}(X,Y)}{\sigma_X\sigma_Y}
+=\frac{-\frac{1}{162}}{\sqrt{\frac{73}{1620}}\;\sqrt{\frac{26}{81}}}
+$$
+
+Simplificando, obtém-se
+
+$$
+\operatorname{Cor}(X,Y)= -\frac{\sqrt{9490}}{1898}\approx -0.0513
+$$
+
+
+
+
+## Transformações Bivariadas
+
+
+**Exemplo:** Considere o nosso vetor aleatório contínuo $(X,Y)$ com densidade conjunta
+
+$$
+f_{X,Y}(x,y)=
+\begin{cases}
+x^2+\dfrac{xy}{3}, & 0\le x\le 1,\; 0\le y\le 2,\\[6pt]
+0, & \text{caso contrário}
+\end{cases}
+$$
+
+
+
+## Transformações Bivariadas
+
+
+Vamos definir uma transformação **invertível**:
+
+$$
+U = X,
+\qquad
+V = X+Y
+$$
+
+. . .
+
+
+Da definição,
+
+$$
+u=x,
+\qquad
+v=x+y
+\;\Rightarrow\;
+x=u,\quad y=v-u
+$$
+
+Logo, a inversa é
+
+$$
+(x,y) = (u,\; v-u)
+$$
+
+
+## Transformações Bivariadas
+
+
+O Jacobiano da transformação inversa $(u,v)\mapsto(x,y)$ é
+
+$$
+J = 
+\begin{vmatrix}
+\dfrac{\partial x}{\partial u} & \dfrac{\partial x}{\partial v} \\[8pt]
+\dfrac{\partial y}{\partial u} & \dfrac{\partial y}{\partial v}
+\end{vmatrix}
+=
+\begin{vmatrix}
+1 & 0 \\
+-1 & 1
+\end{vmatrix}
+= 1
+$$
+
+Assim, $|J|=1$. Como $0\le x\le 1$ e $0\le y\le 2$, então:
+
+- $u=x \in [0,1]$;
+- $y=v-u \in [0,2] \Rightarrow 0\le v-u\le 2 \Rightarrow u \le v \le u+2$
+
+
+
+## Transformações Bivariadas
+
+
+
+Portanto, o suporte é
+
+$$
+0\le u\le 1,
+\qquad
+u \le v \le u+2
+$$
+
+. . .
+
+
+Pelo método do Jacobiano,
+
+$$
+f_{U,V}(u,v)= f_{X,Y}(x,y)\,|J|
+= f_{X,Y}(u,\;v-u)\cdot 1,
+$$
+
+isto é,
+
+$$
+\begin{aligned}
+f_{U,V}(u,v)
+&=
+u^2 + \frac{u(v-u)}{3} \\
+&=
+u^2 + \frac{uv-u^2}{3}
+=
+\frac{2u^2+uv}{3}
+\end{aligned}
+$$
+
+## Transformações Bivariadas
+
+
+Logo,
+
+$$
+f_{U,V}(u,v)=
+\begin{cases}
+\dfrac{2u^2+uv}{3}, & 0\le u\le 1,\; u\le v\le u+2,\\[8pt]
+0, & \text{caso contrário}
+\end{cases}
+$$
+
+
+. . .
+
+
+- Validade da função densidade
+
+
+**Não-negatividade**
+
+No suporte da distribuição temos
+$$
+u\ge 0 \quad \text{e} \quad v\ge u\ge 0
+$$
+
+
+## Transformações Bivariadas
+
+Logo,
+$$
+2u^2 \ge 0
+\qquad \text{e} \qquad
+uv \ge 0
+$$
+
+Portanto,
+$$
+2u^2+uv \ge 0
+\quad \Rightarrow \quad
+f_{U,V}(u,v)\ge 0
+$$
+
+
+em todo o suporte.
+
+Fora do suporte, $f_{U,V}(u,v)=0$, o que também satisfaz a condição.
+
+
+
+## Transformações Bivariadas
+
+
+Devemos verificar que
+
+$$
+\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}
+f_{U,V}(u,v)\,dv\,du = 1
+$$
+
+Como o suporte é
+$$
+0\le u\le 1, \qquad u\le v\le u+2,
+$$
+temos
+
+
+$$
+\begin{aligned}
+\int_0^1\int_u^{u+2} \frac{2u^2+uv}{3}\,dv\,du
+&= \int_0^1 \frac{1}{3}
+\left[
+\int_u^{u+2} (2u^2+uv)\,dv
+\right] du
+\end{aligned}
+$$
+
+
+
+## Transformações Bivariadas
+
+
+### Integral interna em $v$
+
+$$
+\begin{aligned}
+\int_u^{u+2} (2u^2+uv)\,dv
+&= 2u^2(v)\Big|_u^{u+2}
+ + u\frac{v^2}{2}\Big|_u^{u+2} \\
+&= 2u^2(2) + \frac{u}{2}\left[(u+2)^2-u^2\right] \\
+&= 4u^2 + \frac{u}{2}(4u+4) \\
+&= 4u^2 + 2u^2 + 2u \\
+&= 6u^2 + 2u
+\end{aligned}
+$$
+
+
+## Transformações Bivariadas
+
+
+### Integral externa em $u$
+
+$$
+\begin{aligned}
+\int_0^1 \frac{1}{3}(6u^2+2u)\,du
+&= \frac{1}{3}\int_0^1 (6u^2+2u)\,du \\
+&= \frac{1}{3}\left(6\cdot\frac{1}{3}+2\cdot\frac{1}{2}\right) \\
+&= \frac{1}{3}(2+1) \\
+&= 1
+\end{aligned}
+$$
+
+
+Logo, $f_{U,V}(u,v)$é uma função densidade de probabilidade conjunta válida.
+
+
+
+
+## Transformações Bivariadas
+
+**Exemplo:** Sejam $X$ e $Y$ variáveis aleatórias independentes com distribuição exponencial com parâmetro igual a 1, isto é, com densidade de probabilidade $f_X(x) = e^{-x}$, para $x \ge 0$ e igual a zero no complementar. Determinar a densidade conjunta de:
+
+$$U = X + Y \quad \text{e} \quad V = \frac{Y}{X}$$
+
+
+. . .
+
+
+Como $X$ e $Y$ são independentes, e com distribuição Exponencial$(1)$, 
+
+$$
+f_X(x)=e^{-x}\mathbf{I}_{\{x\ge 0\}},\qquad
+f_Y(y)=e^{-y}\mathbf{I}_{\{y\ge 0\}}
+$$
+
+
+## Transformações Bivariadas
+
+E a densidade conjunta é dada por
+
+$$
+f_{X,Y}(x,y)=e^{-(x+y)}\mathbf{I}_{\{x\ge 0,\;y\ge 0\}}
+$$
+
+Defina a transformação
+$$
+U=X+Y,\qquad V=\frac{Y}{X}
+$$
+
+. . .
+
+
+De $V=\dfrac{Y}{X}$, obtemos $Y=VX$. Substituindo em $U=X+Y$:
+
+$$
+U = X + VX = X(1+V)
+\quad\Rightarrow\quad
+X=\frac{U}{1+V}
+$$
+
+
+## Transformações Bivariadas
+
+
+Então,
+$$
+Y=VX = V\frac{U}{1+V}=\frac{UV}{1+V}
+$$
+
+Como $X>0$ e $Y>0$, temos necessariamente
+$$
+U>0
+\quad\text{e}\quad
+V>0
+$$
+
+. . .
+
+
+Temos então, que a inversa é
+$$
+x(u,v)=\frac{u}{1+v},\qquad
+y(u,v)=\frac{uv}{1+v}
+$$
+
+## Transformações Bivariadas
+
+O Jacobiano dessa transformação é:
+
+
+
+$$
+\begin{aligned}
+J &= 
+\begin{vmatrix}
+\dfrac{\partial x}{\partial u} & \dfrac{\partial x}{\partial v} \\[8pt]
+\dfrac{\partial y}{\partial u} & \dfrac{\partial y}{\partial v}
+\end{vmatrix}
+=
+\begin{vmatrix}
+\dfrac{1}{1+v} & -\dfrac{u}{(1+v)^2} \\[10pt]
+\dfrac{v}{1+v} & \dfrac{u}{(1+v)^2}
+\end{vmatrix}
+= \frac{1}{1+v}\cdot\frac{u}{(1+v)^2}
+-\left(-\frac{u}{(1+v)^2}\right)\cdot\frac{v}{1+v} \\[10pt] 
+&= \frac{u}{(1+v)^2}
+\end{aligned}
+$$
+
+
+## Transformações Bivariadas
+
+Pelo método do Jacobiano,
+
+$$
+f_{U,V}(u,v)=f_{X,Y}(x(u,v),y(u,v))\cdot |J|
+$$
+
+Como $x(u,v)+y(u,v)=\dfrac{u}{1+v}+\dfrac{uv}{1+v}=u$, segue que
+
+$$
+f_{X,Y}(x(u,v),y(u,v))=e^{-u}
+$$
+
+
+Portanto,
+
+$$
+f_{U,V}(u,v)= e^{-u}\cdot \frac{u}{(1+v)^2},
+\qquad u>0,\; v>0
+$$
