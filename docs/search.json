@@ -2467,7 +2467,7 @@
     "href": "cronograma.html",
     "title": "Cronograma da Disciplina",
     "section": "",
-    "text": "Esta página contém um esboço dos tópicos, conteúdos e tarefas para o semestre. Este cronograma será atualizado conforme o semestre avança.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSemana\nData\nTópico\nArtigo\nSlides\nEC\nLE\nScript\nMC\nProjeto\n\n\n\n\n6\nTer, 11/11\nOutras Distribuições Contínuas\n\n\n\n\n\n\n\n\n\n\nQui, 13/11\nOutras Distribuições Contínuas\n\n\n\n\n\n\n\n\n\n7\nTer, 18/11\nNão haverá aula\n\n\n\n\n\n\n\n\n\n\nQui, 20/11\nFeriado: não haverá aula\n\n\n\n\n\n\n\n\n\n8\nTer, 25/11\nOutras Distribuições Contínuas\n\n\n\n\n\n\n\n\n\n\nQui, 27/11\nTransformação de Variáveis Aleatórias\n\n\n\n\n\n\n\n\n\n9\nTer, 02/12\nTransformação de Variáveis Aleatórias\n\n\n\n\n\n\n\n\n\n\nQui, 04/12\nTransformação de Variáveis Aleatórias\n\n\n\n\n\n\n\n\n\n10\nTer, 09/12\nFunção Geradora de Momentos\n\n\n\n\n\n\n\n\n\n\nQui, 11/12\nFunção Geradora de Momentos\n\n\n\n\n\n\n\n\n\n11\nTer, 16/12\nFunção Geradora de Momentos\n\n\n\n\n\n\n\n\n\n\nQui, 18/12\nFunção Geradora de Momentos\n\n\n\n\n\n\n\n\n\n\n\n22/12 a 17/01 - Recesso Acadêmico\n\n\n\n\n\n\n\n\n\n12\nTer, 20/01\nIntegrais Duplas e Triplas\n\n\n\n\n\n\n\n\n\n\nQui, 22/01\nIntegrais Duplas e Triplas\n\n\n\n\n\n\n\n\n\n13\nTer, 27/01\nTira dúvidas\n\n\n\n\n\n\n\n\n\n\nQui, 29/01\nPrimeira Prova\n\n\n\n\n\n\n\n\n\n14\nTer, 03/02\nVetores Aleatórios\n\n\n\n\n\n\n\n\n\n\nQui, 05/02\nVetores Aleatórios",
+    "text": "Esta página contém um esboço dos tópicos, conteúdos e tarefas para o semestre. Este cronograma será atualizado conforme o semestre avança.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSemana\nData\nTópico\nArtigo\nSlides\nEC\nLE\nScript\nMC\nProjeto\n\n\n\n\n6\nTer, 11/11\nOutras Distribuições Contínuas\n\n\n\n\n\n\n\n\n\n\nQui, 13/11\nOutras Distribuições Contínuas\n\n\n\n\n\n\n\n\n\n7\nTer, 18/11\nNão haverá aula\n\n\n\n\n\n\n\n\n\n\nQui, 20/11\nFeriado: não haverá aula\n\n\n\n\n\n\n\n\n\n8\nTer, 25/11\nOutras Distribuições Contínuas\n\n\n\n\n\n\n\n\n\n\nQui, 27/11\nTransformação de Variáveis Aleatórias\n\n\n\n\n\n\n\n\n\n9\nTer, 02/12\nTransformação de Variáveis Aleatórias\n\n\n\n\n\n\n\n\n\n\nQui, 04/12\nTransformação de Variáveis Aleatórias\n\n\n\n\n\n\n\n\n\n10\nTer, 09/12\nFunção Geradora de Momentos\n\n\n\n\n\n\n\n\n\n\nQui, 11/12\nFunção Geradora de Momentos\n\n\n\n\n\n\n\n\n\n11\nTer, 16/12\nFunção Geradora de Momentos\n\n\n\n\n\n\n\n\n\n\nQui, 18/12\nFunção Geradora de Momentos\n\n\n\n\n\n\n\n\n\n\n\n22/12 a 17/01 - Recesso Acadêmico\n\n\n\n\n\n\n\n\n\n12\nTer, 20/01\nIntegrais Duplas e Triplas\n\n\n\n\n\n\n\n\n\n\nQui, 22/01\nIntegrais Duplas e Triplas\n\n\n\n\n\n\n\n\n\n13\nTer, 27/01\nTira dúvidas\n\n\n\n\n\n\n\n\n\n\nQui, 29/01\nPrimeira Prova\n\n\n\n\n\n\n\n\n\n14\nTer, 03/02\nVetores Aleatórios\n\n\n\n\n\n\n\n\n\n\nQui, 05/02\nVetores Aleatórios\n\n\n\n\n\n\n\n\n\n15\nTer, 10/02\nVetores Aleatórios\n\n\n\n\n\n\n\n\n\n\nQui, 12/02\nVetores Aleatórios",
     "crumbs": [
       "Cronograma da Disciplina"
     ]
@@ -3637,6 +3637,30 @@
     "objectID": "programacao/semana-14.html#slides",
     "href": "programacao/semana-14.html#slides",
     "title": "Semana 14",
+    "section": "",
+    "text": "Vetores Aleatórios \n\n\nVer slides PDF"
+  },
+  {
+    "objectID": "notas.html",
+    "href": "notas.html",
+    "title": "Notas",
+    "section": "",
+    "text": "Matrícula\nP1\n\n\n\n\n24.2.4178\n-\n\n\n24.2.4053\n85,0\n\n\n23.2.4043\n-\n\n\n23.2.4023\n-\n\n\n24.2.4047\n-\n\n\n24.2.4051\n-\n\n\n24.2.4144\n-\n\n\n23.2.6301\n116,0\n\n\n24.2.4059\n111,0\n\n\n24.2.4057\n70,0\n\n\n23.2.6292\n-\n\n\n21.1.4094\n-\n\n\n24.2.4177\n102,0\n\n\n21.2.4157\n-\n\n\n24.2.4993\n-\n\n\n24.2.4095\n60,0\n\n\n25.1.4988\n102,0\n\n\n24.1.4979\n60,0\n\n\n22.2.4113\n-\n\n\n24.2.4056\n97,0",
+    "crumbs": [
+      "Notas"
+    ]
+  },
+  {
+    "objectID": "programacao/semana-15.html",
+    "href": "programacao/semana-15.html",
+    "title": "Semana 15",
+    "section": "",
+    "text": "Vetores Aleatórios \n\n\nVer slides PDF"
+  },
+  {
+    "objectID": "programacao/semana-15.html#slides",
+    "href": "programacao/semana-15.html#slides",
+    "title": "Semana 15",
     "section": "",
     "text": "Vetores Aleatórios \n\n\nVer slides PDF"
   }
