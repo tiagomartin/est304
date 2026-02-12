@@ -1,0 +1,236 @@
+---
+title: "Vetores Aleatórios"
+format:
+  html:
+    number-sections: true
+    toc: true
+    toc-depth: 2
+  pdf:
+    number-sections: true
+    toc: false
+    toc-depth: 2
+---
+
+<p align="center" style="font-size: 40px"> 
+`Data de entrega: 26 de fevereiro de 2026`
+</p>
+
+
+---
+
+1. A tabela abaixo dá a **distribuição conjunta** de $X$ e $Y$:
+
+| $Y \backslash X$ | 1   | 2   | 3   |
+|:----------------:|:---:|:---:|:---:|
+| 0                | 0,1 | 0,1 | 0,1 |
+| 1                | 0,2 | 0,0 | 0,3 |
+| 2                | 0,0 | 0,1 | 0,1 |
+
+(a) Determine as distribuições marginais de $X$ e $Y$.
+
+(b) Calcule a esperança e a variância de cada uma das variáveis $X$ e $Y$.  
+
+(c) Verifique se $X$ e $Y$ são independentes, justificando sua resposta.  
+
+(d) Calcule $P(X=1\mid Y=0)$ e $P(Y=2\mid X=3)$.  
+
+(e) Calcule $P(X\le 2)$ e $P(X=2,\; Y\le 1)$.  
+
+(f) Calcule a covariância e a correlação entre $X$ e $Y$.  
+
+
+---
+
+2. Sejam $X$ e $Y$ variáveis aleatórias com
+
+$$
+E(X)=E(Y)=0
+\qquad \text{e} \qquad
+\operatorname{Var}(X)=\operatorname{Var}(Y)=1
+$$
+
+Prove que
+
+$$
+\operatorname{Corr}(U,V)=0,
+$$
+
+onde
+
+$$
+U=X+Y
+\qquad \text{e} \qquad
+V=X-Y
+$$
+
+---
+
+3. Um aluno faz um teste de múltipla escolha com **4 questões do tipo Verdadeiro–Falso**. Suponha que o aluno esteja “chutando” todas as questões, uma vez que ele não estudou a matéria da prova. Defina as seguintes variáveis aleatórias:
+
+- $X_1$ = número de acertos entre as duas primeiras questões da prova  
+- $Y_1$ = número de acertos entre as duas últimas questões da prova  
+- $X_2$ = número de acertos entre as três primeiras questões da prova  
+- $Y_2$ = número de acertos entre as três últimas questões da prova  
+
+
+
+a) Construa uma tabela com o espaço amostral associado a este experimento, listando todas as possibilidades de acerto e os valores de $X_1$, $Y_1$, $X_2$, $Y_2$ e suas probabilidades.
+
+b) Construa a função de distribuição conjunta de $(X_1,Y_1)$ com as respectivas marginais.
+
+c) Construa a função de distribuição conjunta de $(X_2,Y_2)$ com as respectivas marginais.
+
+d) Verifique se $X_1$ e $Y_1$ são independentes.  
+
+e) Verifique se $X_2$ e $Y_2$ são independentes.  
+
+f) Por que já era de se esperar as diferenças observadas em (d) e (e)?
+
+g) Calcule a covariância entre $X_1$ e $Y_1$.  
+
+h) Calcule a covariância entre $X_2$ e $Y_2$.  
+
+i) Calcule as seguintes distribuições condicionais com suas esperanças condicionais:
+
+$$
+X_2\mid Y_2=0,\qquad
+X_2\mid Y_2=1,\qquad
+X_2\mid Y_2=2,\qquad
+X_2\mid Y_2=3
+$$
+
+j) Calcule $E\!\left[E(X_2\mid Y_2)\right]$.
+
+
+---
+
+4. Sejam $X$ e $Y$ variáveis aleatórias contínuas com densidade conjunta dada por
+
+$$
+f(x,y)=4xy, \qquad 0<x<1,\; 0<y<1,
+$$
+
+e $f(x,y)=0$ fora desse domínio.
+
+Verifique se $X$ e $Y$ são independentes.
+
+
+---
+
+
+5. Sejam $X$ e $Y$ variáveis aleatórias contínuas com a seguinte função densidade conjunta:
+
+$$
+f(x,y)=
+\begin{cases}
+c\,x, & 0<y<x,\;\; y<1-x,\\[6pt]
+0, & \text{caso contrário}
+\end{cases}
+$$
+
+a) Qual o valor de $c$ para que a função acima seja realmente uma função densidade conjunta?
+
+b) Encontre a distribuição marginal de $X$. Encontre $E(X)$ e $Var(X)$.
+
+c) Encontre a distribuição marginal de $Y$. Encontre $E(Y)$ e $Var(Y)$.
+
+d) Calcule a distribuição condicional de $X$ dado $Y = y$ e sua esperança $g(y) = E(X|Y=y)$.
+
+e) Calcule a distribuição condicional de $Y$ dado $X = x$ e sua esperança $h(x) = E(Y|X=x)$.
+
+f) Encontre $Cov(X,Y)$ e $Cor(X,Y)$.
+
+
+---
+
+6. Seja $(X,Y)$ um vetor aleatório com função densidade conjunta dada por
+
+$$
+f(x,y)=
+\begin{cases}
+\dfrac{1}{8}\,x(x-y), & 0<x<2,\;\; -x<y<x,\\[8pt]
+0, & \text{caso contrário}
+\end{cases}
+$$
+
+a) Verifique se a função acima realmente é uma função densidade conjunta.
+
+b) Encontre as densidades marginais e suas esperanças.
+
+c) Encontre a distribuição condicional de $Y$ dado $X=x$. 
+
+c) Encontre a distribuição condicional de $X$ dado $Y=y$. 
+
+
+---
+
+7. Seja $(X,Y)$ um vetor aleatório cuja função densidade é **constante** na região $A\subset \mathbb{R}^2$ definida por
+
+$$
+A=\{(x,y)\,:\,0<y<x,\; x+y<1\}
+$$
+
+Determine:
+
+(a) a função densidade conjunta de $X$ e $Y$.
+
+(b) as marginais $f_X$ e $f_Y$.
+
+(c) $E(X)$, $E(Y)$, $\operatorname{Var}(X)$, $\operatorname{Var}(Y)$.
+
+(d) $P(X<0{,}5,\; Y>0{,}25)$.
+
+(e) $P(X+Y>1/2)$.
+
+(f) a covariância e a correlação entre $X$ e $Y$.
+
+---
+
+8. Seja $(X,Y)$ um vetor aleatório cuja função densidade é **constante** na região $A\subset \mathbb{R}^2$ definida por
+
+$$
+A=\{(x,y)\,:\,0<x<1,\; x+y<1\}
+$$
+
+Determine:
+
+(a) a função densidade conjunta de $X$ e $Y$.
+
+(b) as marginais $f_X$ e $f_Y$.
+
+(c) $E(X)$, $E(Y)$, $\operatorname{Var}(X)$, $\operatorname{Var}(Y)$.
+
+(d) $P(X<0{,}5,\; Y>0{,}5)$.
+
+(e) a covariância e a correlação entre $X$ e $Y$.
+
+---
+
+9. Considere a seguinte função densidade conjunta das variáveis aleatórias $X$ e $Y$:
+
+$$
+f(x,y)=
+\begin{cases}
+e^{-y}, & 0<x<y,\\[6pt]
+0, & \text{caso contrário}
+\end{cases}
+$$
+
+(a) Obtenha as densidades marginais de $X$ e $Y$, identificando as respectivas
+distribuições de probabilidade.
+
+(b) Verifique se $X$ e $Y$ são independentes, justificando sua resposta.
+
+
+---
+
+10. Se $X$ e $Y$ são variáveis aleatórias independentes com funções densidades iguais a $f(x) = e^{-x}$ para $x>0$, obtenha a densidade conjunta de $U = X+Y$ e $V=3X+2Y$. Neste caso, $U$ e $V$ são independentes?
+
+
+
+
+
+
+
+
+

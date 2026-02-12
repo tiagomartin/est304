@@ -66,3 +66,24 @@ format:
 </div>
 
 :::
+
+
+## Entrega lista de exercícios 05
+
+::: callout-important
+
+## Fique Atento!
+
+{{< fa file-lines size=lg >}} [Lista de exercícios 05](/exercicios/lista05.html "Lista de exercícios 05"){aria-label="Lista de exercícios 05"} 
+
+Entrega na sala de aula!
+
+-   Data de entrega:
+    -   26 de fevereiro de 2026
+:::
+
+
+
+
+
+:::
