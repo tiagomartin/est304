@@ -1,0 +1,50 @@
+---
+title: "Semana 17"
+format:
+  html:
+    theme: cosmo
+    include-in-header:
+      text: |
+        <style>
+        /* Estilos visuais EST304 sem quebrar tipografia do Quarto */
+        .aulas-list .list-group-item {
+          border-left: 4px solid #2761E3;
+          padding-top: 0.8rem;
+          padding-bottom: 0.8rem;
+        }
+        .aulas-list .list-group-item:hover {
+          background-color: #F2F2F2;
+        }
+        .disciplina-badge {
+          background-color: #2761E3;
+        }
+        .btn-est304-main {
+          background-color: #2761E3;
+          border-color: #2761E3;
+          color: #fff;
+        }
+        .btn-est304-main:hover {
+          background-color: #789CEB;
+          border-color: #789CEB;
+          color: #fff;
+        }
+        .btn-est304-outline {
+          color: #2761E3;
+          border-color: #2761E3;
+        }
+        .btn-est304-outline:hover {
+          background-color: #2761E3;
+          color: #fff;
+        }
+        .due-date-badge {
+          color: red;
+          border-color: #7F2E2F;
+          font-size: 16pt;  
+          font-weight: 600;
+          padding: 4px 8px;
+        }
+        </style>
+---
+
+
+<span style='font-size:50px;'>&#128221; Segunda Prova!</span>
