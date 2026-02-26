@@ -3593,5 +3593,19 @@
     "crumbs": [
       "Resolução das Listas de Exercícios"
     ]
+  },
+  {
+    "objectID": "exercicios/resol_lista05.html",
+    "href": "exercicios/resol_lista05.html",
+    "title": "Resolução: Exercício 07 - Vetores Aleatórios",
+    "section": "",
+    "text": "Seja \\((X,Y)\\) um vetor aleatório cuja função densidade é constante na região \\(A\\subset \\mathbb{R}^2\\) definida por\n\\[\nA=\\{(x,y)\\,:\\,0&lt;y&lt;x,\\; x+y&lt;1\\}\n\\]\nDetermine:"
+  },
+  {
+    "objectID": "exercicios/resol_lista05.html#gráfico-da-região-a",
+    "href": "exercicios/resol_lista05.html#gráfico-da-região-a",
+    "title": "Resolução: Exercício 07 - Vetores Aleatórios",
+    "section": "1 Gráfico da região A",
+    "text": "1 Gráfico da região A\nA região é definida por:\n\n\\(0 &lt; y &lt; x\\)\n\\(x + y &lt; 1\\)\n\nAs restrições geométricas significam:\n\n\\(0&lt;y\\): os pontos estão acima do eixo \\(x\\) (sem incluir a fronteira)\n\\(y&lt;x\\): os pontos estão abaixo da reta \\(y=x\\)\n\\(x+y&lt;1\\): os pontos estão abaixo da reta \\(y=1-x\\)\n\nLogo, \\(A\\) é a interseção dessas três regiões no primeiro quadrante.\n\n\n\n\n\n\n\n\n\n\n1.1 Limites de integração: escrevendo \\(y\\) em função de \\(x\\)\nFixando um valor de \\(x\\), as condições sobre \\(y\\) tornam-se: \\[\n0&lt;y,\\qquad y&lt;x,\\qquad y&lt;1-x\n\\]\nPortanto, \\[\n0&lt;y&lt;\\min(x,\\,1-x)\n\\]\nPara determinar corretamente os limites, precisamos comparar \\(x\\) e \\(1-x\\):\n\nSe \\(0&lt;x&lt;\\tfrac12\\), então \\(x&lt;1-x\\)\nAssim, o limite superior de \\(y\\) é \\(y=x\\)\nSe \\(\\tfrac12&lt;x&lt;1\\), então \\(1-x&lt;x\\).\nAssim, o limite superior de \\(y\\) é \\(y=1-x\\)\n\nLogo, a região deve ser particionada em dois subconjuntos:\n\\[\n\\begin{cases}\n0&lt;x&lt;\\tfrac12, \\quad 0&lt;y&lt;x,\\\\[6pt]\n\\tfrac12&lt;x&lt;1, \\quad 0&lt;y&lt;1-x\n\\end{cases}\n\\]\nEssa divisão é essencial porque o “teto” da região muda exatamente no ponto onde as retas \\[\ny=x \\quad \\text{e} \\quad y=1-x\n\\] se intersectam, isto é, em \\[\nx=\\tfrac12,\\quad y=\\tfrac12\n\\]\nEssa análise geométrica será usada em todas as integrais duplas seguintes."
   }
 ]
